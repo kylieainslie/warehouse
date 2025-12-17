@@ -1,0 +1,8 @@
+/.quarto/
+**/*.quarto_ipynb
+_site/
+node_modules/
+
+# R generated files
+*.rds
+data/warehouse.sqlite

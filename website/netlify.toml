@@ -1,0 +1,50 @@
+# Netlify configuration for The Warehouse
+
+[build]
+  # Build command - render Quarto site
+  command = "quarto render"
+  # Output directory
+  publish = "_site"
+
+[build.environment]
+  # Node version for functions
+  NODE_VERSION = "18"
+
+[functions]
+  # Directory containing serverless functions
+  directory = "netlify/functions"
+
+# Redirect API calls to functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA-style routing for Quarto
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/data/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Environment variables documentation
+# Set these in Netlify Dashboard > Site Settings > Environment Variables:
+# - ANTHROPIC_API_KEY: Your Claude API key from console.anthropic.com

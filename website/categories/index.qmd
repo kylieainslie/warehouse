@@ -2,6 +2,44 @@
 title: "Browse Categories"
 ---
 
+## How It Works
+
+1. **Search by function** - Describe what you want to do
+2. **Browse quality scores** - See tests, documentation, maintenance status
+3. **Read real reviews** - Learn from other users' experiences
+4. **Find the right package** - Install with confidence
+
+---
+
+## Featured Categories
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### 📊 Epidemiology
+Find packages for outbreak analysis, disease modeling, and public health research.
+
+[Browse Epidemiology →](epidemiology.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### 🔧 Data Manipulation
+Clean, transform, and wrangle data with powerful tools.
+
+[Browse Data Tools →](data-manipulation.qmd)
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### 📈 Visualization
+Create beautiful, informative graphics and interactive plots.
+
+[Browse Visualization →](visualization.qmd)
+:::
+
+:::
+
+---
+
 ## Explore R Packages by Category
 
 Browse packages organized by what they do, not alphabetically.

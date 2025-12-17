@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - js/**
+    - data/**
 
 website:
   title: "The Warehouse"
@@ -12,15 +15,13 @@ website:
       - href: index.qmd
         text: Home
       - href: categories/index.qmd
-        text: Browse Categories
+        text: Browse
       - href: about.qmd
         text: About
     right:
       - href: submit.qmd
         text: Submit Package
         icon: plus-circle
-      - icon: github
-        href: https://github.com/YOUR_USERNAME/warehouse
         
   sidebar:
     - title: "Categories"
@@ -42,8 +43,7 @@ website:
 
 format:
   html:
-    theme: 
-      light: [cosmo, custom.scss]
+    theme: cosmo
     css: styles.css
     toc: true
     code-copy: true

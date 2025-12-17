@@ -1,0 +1,8 @@
+{
+  "name": "warehouse-functions",
+  "version": "1.0.0",
+  "description": "Netlify functions for The Warehouse",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0"
+  }
+}

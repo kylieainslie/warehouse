@@ -1,110 +1,40 @@
 ---
-title: "The Warehouse"
-subtitle: "Find R packages by what they do, not what they're called"
-page-layout: full
+title: ""
+include-in-header:
+  - text: |
+      <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 ---
 
-::: {.hero-banner}
-## Search by Function
+<div class="google-style-home">
 
-<div class="search-container">
-  <input type="text" id="package-search" class="search-input" 
-         placeholder='Try: "estimate serial interval" or "clean column names"'>
-  <button class="search-button" onclick="searchPackages()">Search</button>
+<div class="logo-container">
+<img src="images/the_warehouse_logo.png" alt="The Warehouse" class="warehouse-logo-img">
+<h1 class="warehouse-logo-text">The Warehouse</h1>
+<p class="tagline">Find R packages by what they do</p>
 </div>
 
-<div id="search-results" class="search-results"></div>
-:::
-
-## Featured Categories
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-### 📊 Epidemiology
-Find packages for outbreak analysis, disease modeling, and public health research.
-
-[Browse Epidemiology →](categories/epidemiology.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### 🔧 Data Manipulation
-Clean, transform, and wrangle data with powerful tools.
-
-[Browse Data Tools →](categories/data-manipulation.qmd)
-:::
-
-::: {.g-col-12 .g-col-md-4}
-### 📈 Visualization
-Create beautiful, informative graphics and interactive plots.
-
-[Browse Visualization →](categories/visualization.qmd)
-:::
-
-:::
-
-## How It Works
-
-1. **Search by function** - Describe what you want to do
-2. **Browse quality scores** - See tests, documentation, maintenance status
-3. **Read real reviews** - Learn from other users' experiences
-4. **Find the right package** - Install with confidence
-
-## Recent Additions
-
-```{r}
-#| echo: false
-#| message: false
-
-# This will show recent packages once we have the database
-# For now, placeholder
-
-library(knitr)
-
-recent <- data.frame(
-  Package = c("EpiEstim", "janitor", "gt"),
-  Title = c("Estimate reproduction numbers", "Simple tools for data cleaning", "Easily create presentation-ready tables"),
-  Score = c("92/100", "91/100", "95/100"),
-  Source = c("CRAN", "CRAN", "CRAN")
-)
-
-kable(recent)
-```
-
-[View all packages →](categories/index.qmd)
-
----
-
-<div class="stats-banner">
-**Currently indexing:** CRAN • GitHub • Bioconductor | **Community reviews:** Coming soon
+<div class="search-container-google">
+<input type="text" id="package-search" class="search-input-google"
+       placeholder='Try: "estimate serial interval" or "interactive plots"'
+       autofocus>
+<span id="search-status" class="search-status"></span>
+<div class="search-buttons">
+<button class="search-button-google" onclick="handleSearch()">Search Packages</button>
+<button class="browse-button-google" onclick="window.location.href='categories/'">Browse Categories</button>
+</div>
 </div>
 
-<script>
-function searchPackages() {
-  const query = document.getElementById('package-search').value;
-  const results = document.getElementById('search-results');
-  
-  // Placeholder - will implement real search later
-  if (query.length > 0) {
-    results.innerHTML = `
-      <div class="alert alert-info">
-        <strong>Search functionality coming soon!</strong><br>
-        You searched for: "${query}"<br>
-        For now, please <a href="categories/index.qmd">browse categories</a>.
-      </div>
-    `;
-  }
-}
+<div id="search-results" class="search-results-google"></div>
 
-// Allow Enter key to search
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('package-search');
-  if (searchInput) {
-    searchInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        searchPackages();
-      }
-    });
-  }
-});
-</script>
+<div class="quick-links">
+<a href="about.qmd">About</a> •
+<a href="submit.qmd">Submit Package</a> •
+<a href="categories/">Browse All</a>
+</div>
+
+</div>
+
+<script src="js/search.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/chatbot.js"></script>
