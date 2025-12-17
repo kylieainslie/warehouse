@@ -1,0 +1,75 @@
+---
+title: "Browse Categories"
+---
+
+## Explore R Packages by Category
+
+Browse packages organized by what they do, not alphabetically.
+
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### 📊 Analysis & Modeling
+
+- [Epidemiology](epidemiology.qmd) - Outbreak analysis, disease modeling
+- [Statistical Modeling](statistical-modeling.qmd) - Regression, inference
+- [Machine Learning](machine-learning.qmd) - Predictive modeling, ML
+- [Time Series](time-series.qmd) - Temporal analysis, forecasting
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### 🔧 Data Tools
+
+- [Data Manipulation](data-manipulation.qmd) - Clean, transform, wrangle
+- [Data Import/Export](data-import.qmd) - Read and write data
+- [Data Validation](data-validation.qmd) - Check data quality
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### 📈 Visualization
+
+- [Visualization](visualization.qmd) - Graphics and plotting
+- [Interactive Viz](interactive-viz.qmd) - Dashboards, widgets
+- [Reporting](reporting.qmd) - Rmarkdown, documents
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### 🌐 Data Sources
+
+- [Web Scraping](web-scraping.qmd) - Extract web data
+- [API Clients](api-clients.qmd) - Access web APIs
+- [Databases](databases.qmd) - Connect to databases
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### 🧬 Domain-Specific
+
+- [Bioinformatics](bioinformatics.qmd) - Genomics, proteomics
+- [Spatial Analysis](spatial.qmd) - Geographic data, GIS
+- [Finance](finance.qmd) - Financial modeling, trading
+- [Text Mining](text-mining.qmd) - NLP, text analysis
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
+### ⚙️ Development
+
+- [Package Development](package-dev.qmd) - Build R packages
+- [Testing](testing.qmd) - Unit tests, test frameworks
+- [Performance](performance.qmd) - Speed optimization
+:::
+
+:::
+
+---
+
+## Can't Find What You're Looking For?
+
+Try the [search function](../index.qmd) or [submit a package](../submit.qmd) to help us grow!
+
+---
+
+<div class="stats">
+**Total packages:** ~500 (growing) | **Categories:** 20+ | **Sources:** CRAN, GitHub, Bioconductor
+</div>

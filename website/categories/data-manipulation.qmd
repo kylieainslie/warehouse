@@ -1,0 +1,18 @@
+---
+title: "Data Manipulation Packages"
+---
+
+## 🔧 Data Manipulation & Wrangling
+
+Find packages for cleaning, transforming, and reshaping data.
+
+**Coming soon:** Full package listings with quality scores and reviews.
+
+## Popular Packages
+
+- **dplyr** - Grammar of data manipulation
+- **data.table** - Fast data manipulation
+- **tidyr** - Tidy data principles
+- **janitor** - Simple data cleaning
+
+[Submit a package →](../submit.qmd)

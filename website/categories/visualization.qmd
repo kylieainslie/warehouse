@@ -1,0 +1,18 @@
+---
+title: "Visualization Packages"
+---
+
+## 📈 Visualization & Graphics
+
+Create beautiful, informative graphics and interactive plots.
+
+**Coming soon:** Full package listings with quality scores and reviews.
+
+## Popular Packages
+
+- **ggplot2** - Grammar of graphics
+- **plotly** - Interactive web graphics
+- **patchwork** - Compose plots together
+- **gganimate** - Animate ggplot2
+
+[Submit a package →](../submit.qmd)

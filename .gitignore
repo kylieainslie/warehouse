@@ -1,0 +1,22 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Data (large files)
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+
+# Quarto
+/.quarto/
+/_site/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.Renviron
+.env

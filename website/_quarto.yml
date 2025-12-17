@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "The Warehouse"
+  description: "Function-first R package discovery"
+  
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - href: categories/index.qmd
+        text: Browse Categories
+      - href: about.qmd
+        text: About
+    right:
+      - href: submit.qmd
+        text: Submit Package
+        icon: plus-circle
+      - icon: github
+        href: https://github.com/YOUR_USERNAME/warehouse
+        
+  sidebar:
+    - title: "Categories"
+      style: "docked"
+      background: light
+      contents:
+        - section: "Analysis"
+          contents:
+            - categories/epidemiology.qmd
+            - categories/statistical-modeling.qmd
+            - categories/machine-learning.qmd
+        - section: "Data"
+          contents:
+            - categories/data-manipulation.qmd
+            - categories/data-import.qmd
+        - section: "Visualization"
+          contents:
+            - categories/visualization.qmd
+
+format:
+  html:
+    theme: 
+      light: [cosmo, custom.scss]
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap

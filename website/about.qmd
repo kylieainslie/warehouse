@@ -1,0 +1,64 @@
+---
+title: "About The Warehouse"
+---
+
+## What is The Warehouse?
+
+The Warehouse is a **function-first R package directory** that helps you find packages by what they do, not just by their names.
+
+### The Problem
+
+With over 22,000 packages on CRAN alone, finding the right package for your task is overwhelming:
+
+- Searching by keywords often misses relevant packages
+- No easy way to compare similar packages
+- Quality indicators are scattered or missing
+- GitHub-only packages are hard to discover
+
+### Our Solution
+
+The Warehouse provides:
+
+- **Function-first search**: "estimate serial interval" → find all relevant packages
+- **Quality scores**: Automated assessment of tests, documentation, and maintenance
+- **All sources**: CRAN, GitHub, Bioconductor in one place
+- **Community reviews**: Real user experiences and recommendations
+- **Smart categorization**: Browse by what packages actually do
+
+## How We Calculate Quality Scores
+
+Quality scores (0-100) are calculated from:
+
+- **Documentation (30%)**: README, vignettes, pkgdown site
+- **Testing (20%)**: Test coverage and CI status  
+- **Maintenance (25%)**: Update frequency and active development
+- **Community (25%)**: GitHub stars, downloads, user ratings
+
+[Learn more about our methodology →](#methodology)
+
+## Open Source & Free
+
+The Warehouse is:
+
+- ✅ Completely free to use
+- ✅ Open source (MIT license)
+- ✅ Community-driven
+- ✅ Supported by [Posit, PBC](https://posit.co)
+
+## Get Involved
+
+- **Submit packages**: [Add your package →](submit.qmd)
+- **Leave reviews**: Help others find great packages
+- **Contribute**: [GitHub repository →](https://github.com/YOUR_USERNAME/warehouse)
+- **Report issues**: Found a problem? Let us know!
+
+## Contact
+
+Questions or feedback? Reach out:
+
+- GitHub: [github.com/YOUR_USERNAME/warehouse](https://github.com/YOUR_USERNAME/warehouse)
+- Email: your.email@example.com
+
+---
+
+*The Warehouse is a prototype project demonstrating function-first package discovery for R and beyond.*

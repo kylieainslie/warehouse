@@ -1,0 +1,191 @@
+---
+title: "Submit a Package"
+---
+
+## Submit Your R Package
+
+Help grow The Warehouse by submitting your package! We accept packages from:
+
+- ✅ CRAN (auto-indexed, but you can add details)
+- ✅ GitHub
+- ✅ Bioconductor
+- ✅ GitLab, Bitbucket, or private repos
+
+---
+
+<form id="submission-form" class="submission-form">
+
+### Package Information
+
+<div class="form-group">
+  <label for="package-name">Package Name *</label>
+  <input type="text" id="package-name" name="package-name" required
+         placeholder="e.g., EpiEstim">
+</div>
+
+<div class="form-group">
+  <label for="package-url">Package URL *</label>
+  <input type="url" id="package-url" name="package-url" required
+         placeholder="https://github.com/username/package">
+  <small>GitHub, CRAN, or other repository URL</small>
+</div>
+
+<div class="form-group">
+  <label for="title">Short Description *</label>
+  <input type="text" id="title" name="title" required
+         placeholder="One-line description of what your package does">
+</div>
+
+<div class="form-group">
+  <label for="description">Detailed Description</label>
+  <textarea id="description" name="description" rows="4"
+            placeholder="What problem does your package solve? What makes it unique?"></textarea>
+</div>
+
+### Categorization
+
+<div class="form-group">
+  <label for="category">Primary Category *</label>
+  <select id="category" name="category" required>
+    <option value="">Select a category...</option>
+    <option value="epidemiology">Epidemiology</option>
+    <option value="data-manipulation">Data Manipulation</option>
+    <option value="visualization">Visualization</option>
+    <option value="statistical-modeling">Statistical Modeling</option>
+    <option value="machine-learning">Machine Learning</option>
+    <option value="time-series">Time Series</option>
+    <option value="spatial">Spatial Analysis</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="keywords">Keywords (comma-separated)</label>
+  <input type="text" id="keywords" name="keywords"
+         placeholder="e.g., outbreak, R0, serial interval, epidemic">
+</div>
+
+<div class="form-group">
+  <label for="use-cases">Common Use Cases</label>
+  <textarea id="use-cases" name="use-cases" rows="3"
+            placeholder="What specific tasks is your package good for? e.g., 'Estimate serial interval from case data'"></textarea>
+</div>
+
+### Documentation
+
+<div class="form-group">
+  <label for="readme-url">README URL</label>
+  <input type="url" id="readme-url" name="readme-url"
+         placeholder="Direct link to README">
+</div>
+
+<div class="form-group">
+  <label for="docs-url">Documentation Website</label>
+  <input type="url" id="docs-url" name="docs-url"
+         placeholder="pkgdown site or other documentation">
+</div>
+
+<div class="form-group">
+  <label for="vignettes">Vignettes</label>
+  <input type="text" id="vignettes" name="vignettes"
+         placeholder="List vignette titles or URLs">
+</div>
+
+<div class="form-group">
+  <label for="paper-doi">Related Paper (DOI)</label>
+  <input type="text" id="paper-doi" name="paper-doi"
+         placeholder="10.xxxx/xxxxx">
+</div>
+
+### Installation
+
+<div class="form-group">
+  <label for="install-command">Installation Command *</label>
+  <textarea id="install-command" name="install-command" rows="2" required
+            placeholder="install.packages('packagename')">install.packages("packagename")</textarea>
+</div>
+
+### Quality Indicators
+
+<div class="form-group">
+  <label>Does your package have:</label>
+  <label class="checkbox">
+    <input type="checkbox" name="has-tests" value="yes"> Automated tests
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" name="has-ci" value="yes"> Continuous Integration (GitHub Actions, Travis, etc.)
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" name="has-vignettes" value="yes"> Vignettes or tutorials
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" name="has-pkgdown" value="yes"> pkgdown documentation site
+  </label>
+</div>
+
+### Contact Information
+
+<div class="form-group">
+  <label for="submitter-name">Your Name *</label>
+  <input type="text" id="submitter-name" name="submitter-name" required
+         placeholder="John Doe">
+</div>
+
+<div class="form-group">
+  <label for="submitter-email">Your Email *</label>
+  <input type="email" id="submitter-email" name="submitter-email" required
+         placeholder="you@example.com">
+  <small>We'll contact you if we have questions. Not displayed publicly.</small>
+</div>
+
+<div class="form-group">
+  <label for="relationship">Relationship to Package *</label>
+  <select id="relationship" name="relationship" required>
+    <option value="">Select...</option>
+    <option value="author">Package author/maintainer</option>
+    <option value="contributor">Contributor</option>
+    <option value="user">User/advocate</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+
+### Additional Context
+
+<div class="form-group">
+  <label for="similar-packages">Similar Packages</label>
+  <input type="text" id="similar-packages" name="similar-packages"
+         placeholder="List related packages (helps with categorization)">
+</div>
+
+<div class="form-group">
+  <label for="unique-features">What Makes This Package Unique?</label>
+  <textarea id="unique-features" name="unique-features" rows="3"
+            placeholder="How does this package differ from alternatives?"></textarea>
+</div>
+
+---
+
+<div class="form-group">
+  <button type="submit" class="submit-button">Submit Package</button>
+</div>
+
+<div id="form-status" class="form-status"></div>
+
+</form>
+
+<script>
+document.getElementById('submission-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const status = document.getElementById('form-status');
+  status.innerHTML = '<div class="alert alert-info">Submission functionality coming soon! For now, please email submissions to: your.email@example.com</div>';
+  
+  // In production, this would send to Formspree or your backend
+  // const formData = new FormData(this);
+  // fetch('https://formspree.io/f/YOUR_ID', {
+  //   method: 'POST',
+  //   body: formData,
+  //   headers: {'Accept': 'application/json'}
+  // }).then(response => { ... });
+});
+</script>

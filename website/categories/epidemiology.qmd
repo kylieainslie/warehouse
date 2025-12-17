@@ -1,0 +1,94 @@
+---
+title: "Epidemiology Packages"
+---
+
+## 📊 Epidemiology & Public Health
+
+Find R packages for outbreak analysis, disease modeling, epidemic forecasting, and public health research.
+
+---
+
+## Featured Packages
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(knitr)
+library(dplyr)
+
+# Placeholder data - will come from database later
+packages <- tribble(
+  ~Package, ~Title, ~Quality, ~Source, ~UseCase,
+  "EpiEstim", "Estimate time-varying reproduction numbers", "92/100", "CRAN + GitHub", "R₀ estimation",
+  "epiparameter", "Library of epidemiological parameters", "88/100", "CRAN", "Parameter databases",
+  "incidence2", "Compute, handle and visualise incidence", "90/100", "CRAN", "Epidemic curves",
+  "epicontacts", "Contact tracing and outbreak analysis", "85/100", "CRAN", "Contact networks",
+  "epitrix", "Small helpers and tricks for epidemics analysis", "87/100", "CRAN", "Utility functions"
+)
+
+kable(packages, format = "html")
+```
+
+---
+
+## Common Use Cases
+
+### Estimating Serial Intervals
+
+For estimating the serial interval distribution from outbreak data:
+
+- **EpiEstim** - Bayesian framework for R₀ estimation
+- **epiparameter** - Access validated parameter distributions
+- **epitrix** - Helper functions for serial interval calculations
+
+**Example workflow:**
+```r
+library(EpiEstim)
+library(incidence2)
+
+# Prepare incidence data
+incid <- incidence(dates, interval = 1)
+
+# Estimate R
+res <- estimate_R(incid, method = "parametric_si",
+                  config = make_config(mean_si = 4.7, std_si = 2.9))
+```
+
+### Outbreak Visualization
+
+For creating epidemic curves and visualizing outbreak data:
+
+- **incidence2** - Modern incidence computation and visualization
+- **epicontacts** - Network visualization for contact tracing
+- **ggplot2** - (General) Customizable graphics
+
+### Contact Tracing
+
+For analyzing contact networks and transmission chains:
+
+- **epicontacts** - Build and analyze contact networks
+- **outbreaks** - Example outbreak datasets
+
+---
+
+## Related Categories
+
+- [Statistical Modeling](statistical-modeling.qmd) - General statistical methods
+- [Time Series](time-series.qmd) - Temporal analysis
+- [Visualization](visualization.qmd) - Data visualization tools
+
+---
+
+## Resources
+
+- [RECON (R Epidemics Consortium)](https://www.repidemicsconsortium.org/)
+- [Epiverse-TRACE](https://epiverse-trace.github.io/)
+- [CRAN Task View: Epidemiology](https://cran.r-project.org/web/views/Epidemiology.html)
+
+---
+
+<div class="contribute-note">
+**Know a great epidemiology package?** [Submit it →](../submit.qmd)
+</div>

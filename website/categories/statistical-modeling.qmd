@@ -1,0 +1,11 @@
+---
+title: "Statistical Modeling Packages"
+---
+
+## 📊 Statistical Modeling
+
+Packages for regression, inference, and statistical analysis.
+
+**Coming soon:** Full package listings with quality scores and reviews.
+
+[Submit a package →](../submit.qmd)
