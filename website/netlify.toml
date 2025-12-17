@@ -28,13 +28,6 @@ package = "@netlify/plugin-functions-install-core"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# SPA-style routing for Quarto
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # Headers for security and caching
 [[headers]]
   for = "/*"
