@@ -10,26 +10,13 @@ Find R packages for outbreak analysis, disease modeling, epidemic forecasting, a
 
 ## Featured Packages
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-library(knitr)
-library(dplyr)
-
-# Placeholder data - will come from database later
-packages <- tribble(
-  ~Package, ~Title, ~Quality, ~Source, ~UseCase,
-  "EpiEstim", "Estimate time-varying reproduction numbers", "92/100", "CRAN + GitHub", "R₀ estimation",
-  "epiparameter", "Library of epidemiological parameters", "88/100", "CRAN", "Parameter databases",
-  "incidence2", "Compute, handle and visualise incidence", "90/100", "CRAN", "Epidemic curves",
-  "epicontacts", "Contact tracing and outbreak analysis", "85/100", "CRAN", "Contact networks",
-  "epitrix", "Small helpers and tricks for epidemics analysis", "87/100", "CRAN", "Utility functions"
-)
-
-kable(packages, format = "html")
-```
+| Package | Title | Quality | Source | Use Case |
+|---------|-------|---------|--------|----------|
+| [EpiEstim](https://cran.r-project.org/package=EpiEstim) | Estimate time-varying reproduction numbers | 92/100 | CRAN + GitHub | R₀ estimation |
+| [epiparameter](https://epiverse-trace.github.io/epiparameter/) | Library of epidemiological parameters | 88/100 | CRAN | Parameter databases |
+| [incidence2](https://www.reconverse.org/incidence2/) | Compute, handle and visualise incidence | 90/100 | CRAN | Epidemic curves |
+| [epicontacts](https://www.repidemicsconsortium.org/epicontacts/) | Contact tracing and outbreak analysis | 85/100 | CRAN | Contact networks |
+| [epitrix](https://www.repidemicsconsortium.org/epitrix/) | Small helpers and tricks for epidemics analysis | 87/100 | CRAN | Utility functions |
 
 ---
 
