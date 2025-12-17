@@ -1,5 +1,8 @@
 # Netlify configuration for The Warehouse
 
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"
+
 [build]
   # Build command - install Quarto then render
   command = """
