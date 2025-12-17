@@ -1,8 +1,13 @@
 # Netlify configuration for The Warehouse
 
 [build]
-  # Build command - render Quarto site
-  command = "quarto render"
+  # Build command - install Quarto then render
+  command = """
+    curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && \
+    dpkg -x quarto-linux-amd64.deb . && \
+    export PATH=$PWD/opt/quarto/bin:$PATH && \
+    quarto render
+  """
   # Output directory
   publish = "_site"
 
