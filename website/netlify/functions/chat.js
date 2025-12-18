@@ -166,6 +166,17 @@ exports.handler = async function(event, context) {
       };
     }
 
+    // Handle billing/credit issues
+    if (error.status === 400 && error.message && error.message.includes('credit balance')) {
+      return {
+        statusCode: 503,
+        body: JSON.stringify({
+          error: 'Service temporarily unavailable',
+          response: 'The chat assistant is temporarily unavailable. Please use the search bar above to find packages.'
+        })
+      };
+    }
+
     // Return more detailed error for debugging
     return {
       statusCode: 500,
