@@ -141,6 +141,9 @@ exports.handler = async function(event, context) {
 
   } catch (error) {
     console.error('Chat function error:', error);
+    console.error('Error name:', error.name);
+    console.error('Error message:', error.message);
+    console.error('Error status:', error.status);
 
     // Handle specific error types
     if (error.status === 401) {
@@ -163,11 +166,13 @@ exports.handler = async function(event, context) {
       };
     }
 
+    // Return more detailed error for debugging
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        response: 'Sorry, something went wrong. Please try again later.'
+        error: error.name || 'Internal server error',
+        response: 'Sorry, something went wrong. Please try again later.',
+        debug: error.message
       })
     };
   }
