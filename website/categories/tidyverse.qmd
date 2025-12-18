@@ -1,0 +1,35 @@
+---
+title: "Tidyverse Packages"
+---
+
+<div id="category-packages" data-category="tidyverse"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+  const container = document.getElementById('category-packages');
+  try {
+    const response = await fetch('/data/categories/tidyverse.json');
+    if (!response.ok) throw new Error('Failed to load');
+    const data = await response.json();
+
+    container.innerHTML = `
+      <p class="results-count">Found ${data.packages.length} packages</p>
+      <div class="package-list">
+        ${data.packages.slice(0, 50).map(pkg => `
+          <div class="package-card">
+            <div class="package-header">
+              <h3 class="package-title">
+                <a href="${pkg.repository || pkg.url || '#'}" target="_blank">${pkg.package_name}</a>
+              </h3>
+              <span class="package-score">${pkg.score ? pkg.score.toFixed(1) : 'N/A'}</span>
+            </div>
+            <p class="package-description">${pkg.title || 'No description'}</p>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  } catch (e) {
+    container.innerHTML = '<p>Unable to load packages. <a href="index.qmd">Browse all categories</a>.</p>';
+  }
+});
+</script>

@@ -1,113 +1,61 @@
 ---
-title: "Browse Categories"
+title: "Browse Packages"
 ---
 
-## How It Works
+<div class="category-grid">
 
-1. **Search by function** - Describe what you want to do
-2. **Browse quality scores** - See tests, documentation, maintenance status
-3. **Read real reviews** - Learn from other users' experiences
-4. **Find the right package** - Install with confidence
+<a href="../index.qmd" class="category-tile general">
+<div class="tile-icon">📦</div>
+<div class="tile-name">All Packages</div>
+<div class="tile-count">22,232 packages</div>
+</a>
 
----
+<a href="epidemiology.qmd" class="category-tile epidemiology">
+<div class="tile-icon">🦠</div>
+<div class="tile-name">Epidemiology</div>
+<div class="tile-count">178 packages</div>
+</a>
 
-## Featured Categories
+<a href="ropensci.qmd" class="category-tile ropensci">
+<div class="tile-icon">🔬</div>
+<div class="tile-name">rOpenSci</div>
+<div class="tile-count">362 packages</div>
+</a>
 
-::: {.grid}
+<a href="tidyverse.qmd" class="category-tile tidyverse">
+<div class="tile-icon">🧹</div>
+<div class="tile-name">Tidyverse</div>
+<div class="tile-count">214 packages</div>
+</a>
 
-::: {.g-col-12 .g-col-md-4}
-### 📊 Epidemiology
-Find packages for outbreak analysis, disease modeling, and public health research.
+<a href="visualization.qmd" class="category-tile visualization">
+<div class="tile-icon">📊</div>
+<div class="tile-name">Visualization</div>
+<div class="tile-count">103 packages</div>
+</a>
 
-[Browse Epidemiology →](epidemiology.qmd)
-:::
+<a href="spatial.qmd" class="category-tile spatial">
+<div class="tile-icon">🗺️</div>
+<div class="tile-name">Spatial</div>
+<div class="tile-count">33 packages</div>
+</a>
 
-::: {.g-col-12 .g-col-md-4}
-### 🔧 Data Manipulation
-Clean, transform, and wrangle data with powerful tools.
+<a href="statistics.qmd" class="category-tile statistics">
+<div class="tile-icon">📈</div>
+<div class="tile-name">Statistics</div>
+<div class="tile-count">32 packages</div>
+</a>
 
-[Browse Data Tools →](data-manipulation.qmd)
-:::
+<a href="pharmacometrics.qmd" class="category-tile pharmacometrics">
+<div class="tile-icon">💊</div>
+<div class="tile-name">Pharmacometrics</div>
+<div class="tile-count">23 packages</div>
+</a>
 
-::: {.g-col-12 .g-col-md-4}
-### 📈 Visualization
-Create beautiful, informative graphics and interactive plots.
+<a href="infrastructure.qmd" class="category-tile infrastructure">
+<div class="tile-icon">⚙️</div>
+<div class="tile-name">Infrastructure</div>
+<div class="tile-count">168 packages</div>
+</a>
 
-[Browse Visualization →](visualization.qmd)
-:::
-
-:::
-
----
-
-## Explore R Packages by Category
-
-Browse packages organized by what they do, not alphabetically.
-
----
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### 📊 Analysis & Modeling
-
-- [Epidemiology](epidemiology.qmd) - Outbreak analysis, disease modeling
-- [Statistical Modeling](statistical-modeling.qmd) - Regression, inference
-- [Machine Learning](machine-learning.qmd) - Predictive modeling, ML
-- [Time Series](time-series.qmd) - Temporal analysis, forecasting
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### 🔧 Data Tools
-
-- [Data Manipulation](data-manipulation.qmd) - Clean, transform, wrangle
-- [Data Import/Export](data-import.qmd) - Read and write data
-- [Data Validation](data-validation.qmd) - Check data quality
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### 📈 Visualization
-
-- [Visualization](visualization.qmd) - Graphics and plotting
-- [Interactive Viz](interactive-viz.qmd) - Dashboards, widgets
-- [Reporting](reporting.qmd) - Rmarkdown, documents
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### 🌐 Data Sources
-
-- [Web Scraping](web-scraping.qmd) - Extract web data
-- [API Clients](api-clients.qmd) - Access web APIs
-- [Databases](databases.qmd) - Connect to databases
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### 🧬 Domain-Specific
-
-- [Bioinformatics](bioinformatics.qmd) - Genomics, proteomics
-- [Spatial Analysis](spatial.qmd) - Geographic data, GIS
-- [Finance](finance.qmd) - Financial modeling, trading
-- [Text Mining](text-mining.qmd) - NLP, text analysis
-:::
-
-::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
-### ⚙️ Development
-
-- [Package Development](package-dev.qmd) - Build R packages
-- [Testing](testing.qmd) - Unit tests, test frameworks
-- [Performance](performance.qmd) - Speed optimization
-:::
-
-:::
-
----
-
-## Can't Find What You're Looking For?
-
-Try the [search function](../index.qmd) or [submit a package](../submit.qmd) to help us grow!
-
----
-
-<div class="stats">
-**Total packages:** ~500 (growing) | **Categories:** 20+ | **Sources:** CRAN, GitHub, Bioconductor
 </div>

@@ -1053,3 +1053,88 @@ tr:hover {
     max-height: none;
   }
 }
+
+/* ================================
+   Category Tiles (Browse Page)
+   ================================ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid #e9ecef;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-height: 160px;
+}
+
+.category-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+  text-decoration: none;
+}
+
+.tile-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tile-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.tile-count {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+/* Category-specific accent colors on hover */
+.category-tile.epidemiology:hover { border-color: #e53e3e; }
+.category-tile.ropensci:hover { border-color: #38a169; }
+.category-tile.tidyverse:hover { border-color: #3182ce; }
+.category-tile.visualization:hover { border-color: #805ad5; }
+.category-tile.spatial:hover { border-color: #d69e2e; }
+.category-tile.statistics:hover { border-color: #319795; }
+.category-tile.pharmacometrics:hover { border-color: #ed64a6; }
+.category-tile.infrastructure:hover { border-color: #4a5568; }
+.category-tile.general:hover { border-color: #667eea; }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .category-tile {
+    padding: 1.5rem 1rem;
+    min-height: 140px;
+  }
+  
+  .tile-icon {
+    font-size: 2rem;
+  }
+  
+  .tile-name {
+    font-size: 1rem;
+  }
+}
