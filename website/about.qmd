@@ -43,21 +43,20 @@ The Warehouse is:
 - ✅ Completely free to use
 - ✅ Open source (MIT license)
 - ✅ Community-driven
-- ✅ Supported by [Posit, PBC](https://posit.co)
+
 
 ## Get Involved
 
 - **Submit packages**: [Add your package →](submit.qmd)
 - **Leave reviews**: Help others find great packages
-- **Contribute**: [GitHub repository →](https://github.com/YOUR_USERNAME/warehouse)
+- **Contribute**: [GitHub repository →](https://github.com/kylieainslie/warehouse)
 - **Report issues**: Found a problem? Let us know!
 
 ## Contact
 
 Questions or feedback? Reach out:
 
-- GitHub: [github.com/YOUR_USERNAME/warehouse](https://github.com/YOUR_USERNAME/warehouse)
-- Email: your.email@example.com
+- GitHub: [github.com/kylieainslie/warehouse](https://github.com/kylieainslie/warehouse)
 
 ---
 
