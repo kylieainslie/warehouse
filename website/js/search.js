@@ -5,20 +5,24 @@ let searchIndex = null;
 let fuse = null;
 let isSearchReady = false;
 
-// Fuse.js configuration optimized for package search
+// Fuse.js configuration based on Elasticsearch/BM25 field boosting patterns
+// Reference: Elasticsearch best practices use title^3, description^1, keywords^1.5
+// Adapted for functionality-first package discovery
 const fuseOptions = {
   keys: [
-    { name: 'package_name', weight: 0.3 },
-    { name: 'title', weight: 0.25 },
-    { name: 'description', weight: 0.2 },
-    { name: 'search_text', weight: 0.15 },
-    { name: 'exports', weight: 0.1 }
+    { name: 'title', weight: 3.0 },           // ^3 boost (standard for titles)
+    { name: 'description', weight: 1.0 },     // ^1 baseline (detailed content)
+    { name: 'topics', weight: 1.5 },          // ^1.5 boost (keywords/tags)
+    { name: 'exports', weight: 1.0 },         // ^1 (function names as content)
+    { name: 'package_name', weight: 2.0 }     // ^2 (npm-style: name still matters for exact matches)
   ],
-  threshold: 0.4,
+  threshold: 0.4,            // Fuzzy matching threshold
+  distance: 100,             // BM25-like: prefer matches closer together
   includeScore: true,
   includeMatches: true,
   minMatchCharLength: 2,
-  ignoreLocation: true,
+  ignoreLocation: true,      // Don't penalize position in field
+  findAllMatches: true,
   useExtendedSearch: true
 };
 
@@ -58,29 +62,40 @@ async function initSearch() {
 }
 
 // Perform search and return results
+// Ranking based on npm search algorithm pattern:
+// 1. Text relevance (from Fuse.js with BM25-style field weights)
+// 2. Quality score (like npm's quality metric)
+// 3. Popularity (stars, like npm's popularity metric)
 function searchPackages(query) {
   if (!fuse || !query || query.trim().length < 2) {
     return [];
   }
 
-  const results = fuse.search(query.trim(), { limit: 50 });
+  const results = fuse.search(query.trim(), { limit: 100 });
 
   return results.map(r => {
     // Get original package data with arrays intact
     const original = searchIndex.packages.find(p => p.id === r.item.id) || r.item;
+
     return {
       ...original,
-      searchScore: r.score,
+      searchScore: r.score,  // Fuse.js score (lower = better match)
       matches: r.matches
     };
   }).sort((a, b) => {
-    // Sort by package score (highest first), then by search relevance
-    const scoreA = a.score || 0;
-    const scoreB = b.score || 0;
-    if (scoreB !== scoreA) return scoreB - scoreA;
-    // If scores equal, use Fuse search relevance (lower is better)
-    return (a.searchScore || 0) - (b.searchScore || 0);
-  });
+    // Primary: Fuse.js relevance score (lower = more relevant)
+    // This already incorporates field weights (title^3, description^1, etc.)
+    const relevanceDiff = (a.searchScore || 1) - (b.searchScore || 1);
+    if (Math.abs(relevanceDiff) > 0.1) return relevanceDiff;
+
+    // Secondary: Quality score (like npm's quality metric)
+    const qualityA = a.score || 0;
+    const qualityB = b.score || 0;
+    if (qualityB !== qualityA) return qualityB - qualityA;
+
+    // Tertiary: Popularity via stars (like npm's popularity metric)
+    return (b.stars || 0) - (a.stars || 0);
+  }).slice(0, 50);
 }
 
 // Render search results to DOM
