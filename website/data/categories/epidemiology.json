@@ -1,6 +1,6 @@
 [
   {
-    "id": 1577,
+    "id": 493,
     "package_name": "dqrng",
     "title": "Fast Pseudo Random Number Generators",
     "description": "Several fast random number generators are provided as C++\nheader only libraries: The PCG family by O'Neill (2014\n<https://www.cs.hmc.edu/tr/hmc-cs-2014-0905.pdf>) as well as\nthe Xoroshiro / Xoshiro family by Blackman and Vigna (2021\n<doi:10.1145/3460772>). In addition fast functions for\ngenerating random numbers according to a uniform, normal and\nexponential distribution are included. The latter two use the\nZiggurat algorithm originally proposed by Marsaglia and Tsang\n(2000, <doi:10.18637/jss.v005.i08>). The fast sampling methods\nsupport unweighted sampling both with and without replacement.\nThese functions are exported to R and as a C++ interface and\nare enabled for use with the default 64 bit generator from the\nPCG family, Xoroshiro128+/++/** and Xoshiro256+/++/** as well\nas the 64 bit version of the 20 rounds Threefry engine (Salmon\net al., 2011, <doi:10.1145/2063384.2063405>) as provided by the\npackage 'sitmo'.",
@@ -35,7 +35,188 @@
     "stars": 43
   },
   {
-    "id": 368,
+    "id": 49,
+    "package_name": "EpiNow2",
+    "title": "Estimate Real-Time Case Counts and Time-Varying Epidemiological\nParameters",
+    "description": "Estimates the time-varying reproduction number, rate of\nspread, and doubling time using a range of open-source tools\n(Abbott et al. (2020) <doi:10.12688/wellcomeopenres.16006.1>),\nand current best practices (Gostic et al. (2020)\n<doi:10.1101/2020.06.18.20134858>).  It aims to help users\navoid some of the limitations of naive implementations in a\nframework that is informed by community feedback and is\nactively supported.",
+    "version": "1.7.1.9000",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "https://epiforecasts.io/EpiNow2/,\nhttps://epiforecasts.io/EpiNow2/dev/,\nhttps://github.com/epiforecasts/EpiNow2",
+    "exports": [
+      ["add_breakpoints"],
+      ["apply_tolerance"],
+      ["backcalc_opts"],
+      ["bootstrapped_dist_fit"],
+      ["bound_dist"],
+      ["calc_CrI"],
+      ["calc_CrIs"],
+      ["calc_summary_measures"],
+      ["calc_summary_stats"],
+      ["clean_nowcasts"],
+      ["collapse"],
+      ["convert_to_logmean"],
+      ["convert_to_logsd"],
+      ["convolve_and_scale"],
+      ["delay_opts"],
+      ["discretise"],
+      ["discretize"],
+      ["dist_fit"],
+      ["dist_skel"],
+      ["epinow"],
+      ["epinow2_cmdstan_model"],
+      ["estimate_delay"],
+      ["estimate_infections"],
+      ["estimate_secondary"],
+      ["estimate_truncation"],
+      ["expose_stan_fns"],
+      ["extract_CrIs"],
+      ["extract_inits"],
+      ["extract_samples"],
+      ["extract_stan_param"],
+      ["fill_missing"],
+      ["filter_leading_zeros"],
+      ["fix_dist"],
+      ["fix_parameters"],
+      ["Fixed"],
+      ["forecast_infections"],
+      ["forecast_opts"],
+      ["forecast_secondary"],
+      ["Gamma"],
+      ["generation_time_opts"],
+      ["get_distribution"],
+      ["get_parameters"],
+      ["get_pmf"],
+      ["get_predictions"],
+      ["get_regional_results"],
+      ["get_samples"],
+      ["gp_opts"],
+      ["growth_to_R"],
+      ["gt_opts"],
+      ["is_constrained"],
+      ["LogNormal"],
+      ["make_conf"],
+      ["map_prob_change"],
+      ["new_dist_spec"],
+      ["NonParametric"],
+      ["Normal"],
+      ["obs_opts"],
+      ["opts_list"],
+      ["plot_estimates"],
+      ["plot_summary"],
+      ["R_to_growth"],
+      ["regional_epinow"],
+      ["regional_runtimes"],
+      ["regional_summary"],
+      ["report_plots"],
+      ["report_summary"],
+      ["rt_opts"],
+      ["secondary_opts"],
+      ["set_dt_single_thread"],
+      ["setup_default_logging"],
+      ["setup_future"],
+      ["setup_logging"],
+      ["simulate_infections"],
+      ["simulate_secondary"],
+      ["stan_laplace_opts"],
+      ["stan_opts"],
+      ["stan_pathfinder_opts"],
+      ["stan_sampling_opts"],
+      ["stan_vb_opts"],
+      ["trunc_opts"],
+      ["update_secondary_args"]
+    ],
+    "topics": [
+      ["backcalculation"],
+      ["covid-19"],
+      ["gaussian-processes"],
+      ["open-source"],
+      ["reproduction-number"],
+      ["stan"],
+      ["cpp"]
+    ],
+    "score": 12.2162,
+    "stars": 132
+  },
+  {
+    "id": 1184,
+    "package_name": "scoringutils",
+    "title": "Utilities for Scoring and Assessing Predictions",
+    "description": "Facilitate the evaluation of forecasts in a convenient\nframework based on data.table. It allows user to to check their\nforecasts and diagnose issues, to visualise forecasts and\nmissing data, to transform data before scoring, to handle\nmissing forecasts, to aggregate scores, and to visualise the\nresults of the evaluation. The package mostly focuses on the\nevaluation of probabilistic forecasts and allows evaluating\nseveral different forecast types and input formats. Find more\ninformation about the package in the Vignettes as well as in\nthe accompanying paper, <doi:10.48550/arXiv.2205.07090>.",
+    "version": "2.1.2",
+    "maintainer": "Nikos Bosse <nikosbosse@gmail.com>",
+    "url": "https://doi.org/10.48550/arXiv.2205.07090,\nhttps://epiforecasts.io/scoringutils/,\nhttps://github.com/epiforecasts/scoringutils",
+    "exports": [
+      ["add_relative_skill"],
+      ["ae_median_quantile"],
+      ["ae_median_sample"],
+      ["as_forecast_binary"],
+      ["as_forecast_nominal"],
+      ["as_forecast_ordinal"],
+      ["as_forecast_point"],
+      ["as_forecast_quantile"],
+      ["as_forecast_sample"],
+      ["assert_forecast"],
+      ["bias_quantile"],
+      ["bias_sample"],
+      ["brier_score"],
+      ["crps_sample"],
+      ["dispersion_quantile"],
+      ["dispersion_sample"],
+      ["dss_sample"],
+      ["get_correlations"],
+      ["get_coverage"],
+      ["get_duplicate_forecasts"],
+      ["get_forecast_counts"],
+      ["get_forecast_unit"],
+      ["get_metrics"],
+      ["get_pairwise_comparisons"],
+      ["get_pit_histogram"],
+      ["interval_coverage"],
+      ["is_forecast"],
+      ["is_forecast_binary"],
+      ["is_forecast_nominal"],
+      ["is_forecast_ordinal"],
+      ["is_forecast_point"],
+      ["is_forecast_quantile"],
+      ["is_forecast_sample"],
+      ["log_shift"],
+      ["logs_binary"],
+      ["logs_categorical"],
+      ["logs_sample"],
+      ["mad_sample"],
+      ["new_forecast"],
+      ["overprediction_quantile"],
+      ["overprediction_sample"],
+      ["pit_histogram_sample"],
+      ["plot_correlations"],
+      ["plot_forecast_counts"],
+      ["plot_heatmap"],
+      ["plot_interval_coverage"],
+      ["plot_pairwise_comparisons"],
+      ["plot_quantile_coverage"],
+      ["plot_wis"],
+      ["quantile_score"],
+      ["rps_ordinal"],
+      ["score"],
+      ["se_mean_sample"],
+      ["select_metrics"],
+      ["summarise_scores"],
+      ["summarize_scores"],
+      ["theme_scoringutils"],
+      ["transform_forecasts"],
+      ["underprediction_quantile"],
+      ["underprediction_sample"],
+      ["wis"]
+    ],
+    "topics": [
+      ["forecast-evaluation"],
+      ["forecasting"]
+    ],
+    "score": 11.3713,
+    "stars": 60
+  },
+  {
+    "id": 48,
     "package_name": "EpiEstim",
     "title": "Estimate Time Varying Reproduction Numbers from Epidemic Curves",
     "description": "Tools to quantify transmissibility throughout an epidemic\nfrom the analysis of time series of incidence as described in\nCori et al. (2013) <doi:10.1093/aje/kwt133> and Wallinga and\nTeunis (2004) <doi:10.1093/aje/kwh255>.",
@@ -79,7 +260,7 @@
     "stars": 101
   },
   {
-    "id": 2212,
+    "id": 900,
     "package_name": "odin",
     "title": "ODE Generation and Integration",
     "description": "Generate systems of ordinary differential equations (ODE)\nand integrate them, using a domain specific language (DSL).\nThe DSL uses R's syntax, but compiles to C in order to\nefficiently solve the system.  A solver is not provided, but\ninstead interfaces to the packages 'deSolve' and 'dde' are\ngenerated.  With these, while solving the differential\nequations, no allocations are done and the calculations remain\nentirely in compiled code.  Alternatively, a model can be\ntranspiled to R for use in contexts where a C compiler is not\npresent.  After compilation, models can be inspected to return\ninformation about parameters and outputs, or intermediate\nvalues after calculations. 'odin' is not targeted at any\nparticular domain and is suitable for any system that can be\nexpressed primarily as mathematical expressions.  Additional\nsupport is provided for working with delays (delay differential\nequations, DDE), using interpolated functions during\ninterpolation, and for integrating quantities that represent\narrays.",
@@ -108,7 +289,7 @@
     "stars": 106
   },
   {
-    "id": 2243,
+    "id": 915,
     "package_name": "orderly",
     "title": "Lightweight Reproducible Reporting",
     "description": "Distributed reproducible computing framework, adopting\nideas from git, docker and other software.  By defining a\nlightweight interface around the inputs and outputs of an\nanalysis, a lot of the repetitive work for reproducible\nresearch can be automated.  We define a simple format for\norganising and describing work that facilitates collaborative\nreproducible research and acknowledges that all analyses are\nrun multiple times over their lifespans.",
@@ -174,7 +355,7 @@
     "stars": 10
   },
   {
-    "id": 1624,
+    "id": 532,
     "package_name": "epiparameter",
     "title": "Classes and Helper Functions for Working with Epidemiological\nParameters",
     "description": "Classes and helper functions for loading, extracting,\nconverting, manipulating, plotting and aggregating\nepidemiological parameters for infectious diseases.\nEpidemiological parameters extracted from the literature are\nloaded from the 'epiparameterDB' R package.",
@@ -224,7 +405,37 @@
     "stars": 34
   },
   {
-    "id": 1973,
+    "id": 1243,
+    "package_name": "socialmixr",
+    "title": "Social Mixing Matrices for Infectious Disease Modelling",
+    "description": "Provides methods for sampling contact matrices from diary\ndata for use in infectious disease modelling, as discussed in\nMossong et al. (2008) <doi:10.1371/journal.pmed.0050074>.",
+    "version": "0.4.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "https://github.com/epiforecasts/socialmixr,\nhttps://epiforecasts.io/socialmixr/",
+    "exports": [
+      ["check"],
+      ["clean"],
+      ["contact_matrix"],
+      ["download_survey"],
+      ["get_citation"],
+      ["get_survey"],
+      ["limits_to_agegroups"],
+      ["list_surveys"],
+      ["load_survey"],
+      ["matrix_plot"],
+      ["pop_age"],
+      ["reduce_agegroups"],
+      ["survey"],
+      ["survey_countries"],
+      ["wpp_age"],
+      ["wpp_countries"]
+    ],
+    "topics": [],
+    "score": 9.3621,
+    "stars": 42
+  },
+  {
+    "id": 761,
     "package_name": "linelist",
     "title": "Tagging and Validating Epidemiological Data",
     "description": "Provides tools to help storing and handling case line list\ndata. The 'linelist' class adds a tagging system to classical\n'data.frame' objects to identify key epidemiological data such\nas dates of symptom onset, epidemiological case definition,\nage, gender or disease outcome. Once tagged, these variables\ncan be seamlessly used in downstream analyses, making data\npipelines more robust and reliable.",
@@ -259,7 +470,155 @@
     "stars": 10
   },
   {
-    "id": 2123,
+    "id": 531,
+    "package_name": "epinowcast",
+    "title": "A Bayesian Framework for Real-time Infectious Disease\nSurveillance",
+    "description": "A modular Bayesian framework for real-time infectious\ndisease surveillance. Provides tools for nowcasting,\nreproduction number estimation, delay estimation, and\nforecasting from data subject to reporting delays,\nright-truncation, missing data, and incomplete ascertainment.\nUsers can build models suited to their setting using a flexible\nformula interface supporting fixed effects, random effects,\nrandom walks, and time-varying parameters, with options\nincluding parametric and non-parametric delay distributions\nwith optional modifiers (via discrete-time hazard models),\nrenewal processes, observation models, missing data imputation,\nand stratified analyses with partial pooling. By jointly\nestimating disease dynamics and reporting patterns, our\nframework enables earlier and more reliable detection of\ntrends. While designed with epidemiological applications in\nmind, the framework can be applied to any right-truncated time\nseries count data.",
+    "version": "0.4.0",
+    "maintainer": "Sam Abbott <contact@samabbott.co.uk>",
+    "url": "https://package.epinowcast.org,\nhttps://github.com/epinowcast/epinowcast/",
+    "exports": [
+      ["add_pmfs"],
+      ["as_forecast_sample"],
+      ["check_max_delay"],
+      ["coerce_date"],
+      ["convolution_matrix"],
+      ["enw_add_cumulative"],
+      ["enw_add_cumulative_membership"],
+      ["enw_add_delay"],
+      ["enw_add_incidence"],
+      ["enw_add_latest_obs_to_nowcast"],
+      ["enw_add_max_reported"],
+      ["enw_add_metaobs_features"],
+      ["enw_add_pooling_effect"],
+      ["enw_aggregate_cumulative"],
+      ["enw_assign_group"],
+      ["enw_complete_dates"],
+      ["enw_construct_data"],
+      ["enw_design"],
+      ["enw_effects_metadata"],
+      ["enw_example"],
+      ["enw_expectation"],
+      ["enw_extend_date"],
+      ["enw_filter_delay"],
+      ["enw_filter_reference_dates"],
+      ["enw_filter_report_dates"],
+      ["enw_fit_opts"],
+      ["enw_flag_observed_observations"],
+      ["enw_formula"],
+      ["enw_formula_as_data_list"],
+      ["enw_get_cache"],
+      ["enw_impute_na_observations"],
+      ["enw_incidence_to_linelist"],
+      ["enw_latest_data"],
+      ["enw_linelist_to_incidence"],
+      ["enw_manual_formula"],
+      ["enw_metadata"],
+      ["enw_metadata_delay"],
+      ["enw_missing"],
+      ["enw_missing_reference"],
+      ["enw_model"],
+      ["enw_nowcast_samples"],
+      ["enw_nowcast_summary"],
+      ["enw_obs"],
+      ["enw_one_hot_encode_feature"],
+      ["enw_pathfinder"],
+      ["enw_plot_nowcast_quantiles"],
+      ["enw_plot_obs"],
+      ["enw_plot_pp_quantiles"],
+      ["enw_plot_quantiles"],
+      ["enw_plot_theme"],
+      ["enw_posterior"],
+      ["enw_pp_summary"],
+      ["enw_preprocess_data"],
+      ["enw_priors_as_data_list"],
+      ["enw_quantiles_to_long"],
+      ["enw_reference"],
+      ["enw_replace_priors"],
+      ["enw_report"],
+      ["enw_reporting_triangle"],
+      ["enw_reporting_triangle_to_long"],
+      ["enw_sample"],
+      ["enw_set_cache"],
+      ["enw_simulate_missing_reference"],
+      ["enw_stan_to_r"],
+      ["enw_summarise_samples"],
+      ["enw_unset_cache"],
+      ["epinowcast"],
+      ["extract_sparse_matrix"],
+      ["re"],
+      ["rw"]
+    ],
+    "topics": [
+      ["cmdstanr"],
+      ["effective-reproduction-number-estimation"],
+      ["epidemiology"],
+      ["infectious-disease-surveillance"],
+      ["nowcasting"],
+      ["outbreak-analysis"],
+      ["pandemic-preparedness"],
+      ["real-time-infectious-disease-modelling"],
+      ["stan"]
+    ],
+    "score": 8.4145,
+    "stars": 62
+  },
+  {
+    "id": 1058,
+    "package_name": "rbi",
+    "title": "Interface to 'LibBi'",
+    "description": "Provides a complete interface to 'LibBi', a library for\nBayesian inference (see <https://libbi.org> and Murray, 2015\n<doi:10.18637/jss.v067.i10> for more information). This\nincludes functions for manipulating 'LibBi' models, for reading\nand writing 'LibBi' input/output files, for converting 'LibBi'\noutput to provide traces for use with the coda package, and for\nrunning 'LibBi' to conduct inference.",
+    "version": "1.0.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "https://github.com/sbfnk/rbi",
+    "exports": [
+      ["add_block"],
+      ["attach_data"],
+      ["bi_contents"],
+      ["bi_file_summary"],
+      ["bi_generate_dataset"],
+      ["bi_model"],
+      ["bi_read"],
+      ["bi_write"],
+      ["enable_outputs"],
+      ["extract_sample"],
+      ["filter"],
+      ["fix"],
+      ["flatten"],
+      ["generate_dataset"],
+      ["get_block"],
+      ["get_const"],
+      ["get_dims"],
+      ["get_name"],
+      ["get_traces"],
+      ["insert_lines"],
+      ["installed_libbi_version"],
+      ["join"],
+      ["libbi"],
+      ["locate_libbi"],
+      ["optimise"],
+      ["predict"],
+      ["print_log"],
+      ["read_libbi"],
+      ["remove_lines"],
+      ["replace_all"],
+      ["rewrite"],
+      ["run"],
+      ["sample"],
+      ["sample_obs"],
+      ["save_libbi"],
+      ["set_name"],
+      ["simulate"],
+      ["update"],
+      ["var_names"],
+      ["write_model"]
+    ],
+    "topics": [],
+    "score": 8.3515,
+    "stars": 24
+  },
+  {
+    "id": 840,
     "package_name": "monty",
     "title": "Monte Carlo Models",
     "description": "Experimental sources for the next generation of mcstate,\nnow called 'monty', which will support much of the old mcstate\nfunctionality but new things like better parameter interfaces,\nHamiltonian Monte Carlo, and other features.",
@@ -362,7 +721,7 @@
     "stars": 7
   },
   {
-    "id": 1372,
+    "id": 356,
     "package_name": "cfr",
     "title": "Estimate Disease Severity and Case Ascertainment",
     "description": "Estimate the severity of a disease and ascertainment of\ncases, as discussed in Nishiura et al. (2009)\n<doi:10.1371/journal.pone.0006852>.",
@@ -390,7 +749,7 @@
     "stars": 15
   },
   {
-    "id": 1587,
+    "id": 501,
     "package_name": "dust",
     "title": "Iterate Multiple Realisations of Stochastic Models",
     "description": "An Engine for simulation of stochastic models. Includes\nsupport for running stochastic models in parallel, either with\nshared or varying parameters. Simulations are run efficiently\nin compiled code and can be run with a fraction of simulated\nstates returned to R, allowing control over memory usage.\nSupport is provided for building bootstrap particle filter for\nperforming Sequential Monte Carlo (e.g., Gordon et al. 1993\n<doi:10.1049/ip-f-2.1993.0015>). The core of the simulation\nengine is the 'xoshiro256**' algorithm (Blackman and Vigna\n<arXiv:1805.01407>), and the package is further described in\nFitzJohn et al 2021 <doi:10.12688/wellcomeopenres.16466.2>.",
@@ -422,7 +781,7 @@
     "stars": 20
   },
   {
-    "id": 2663,
+    "id": 1228,
     "package_name": "simulist",
     "title": "Simulate Disease Outbreak Line List and Contacts Data",
     "description": "Tools to simulate realistic raw case data for an epidemic\nin the form of line lists and contacts using a branching\nprocess. Simulated outbreaks are parameterised with\nepidemiological parameters and can have age-structured\npopulations, age-stratified hospitalisation and death risk and\ntime-varying case fatality risk.",
@@ -448,7 +807,7 @@
     "stars": 10
   },
   {
-    "id": 2010,
+    "id": 786,
     "package_name": "malariasimulation",
     "title": "An individual based model for malaria",
     "description": "Specifies the latest and greatest malaria model.",
@@ -507,7 +866,7 @@
     "stars": 20
   },
   {
-    "id": 2448,
+    "id": 1072,
     "package_name": "readepi",
     "title": "Read Data from Relational Database Management Systems and Health\nInformation Systems",
     "description": "Import Data from Relational Database Management Systems\n(RDBMS) and Health Information Systems ('HIS'). The current\nversion of the package supports importing data from RDBMS\nincluding 'MS SQL', 'MySQL', 'PostGRESQL', and 'SQLite', as\nwell as from two HIS platforms: 'DHIS2' and 'SORMAS'.",
@@ -542,7 +901,7 @@
     "stars": 6
   },
   {
-    "id": 2246,
+    "id": 918,
     "package_name": "orderly1",
     "title": "Lightweight Reproducible Reporting",
     "description": "Order, create and store reports from R.  By defining a\nlightweight interface around the inputs and outputs of an\nanalysis, a lot of the repetitive work for reproducible\nresearch can be automated.  We define a simple format for\norganising and describing work that facilitates collaborative\nreproducible research and acknowledges that all analyses are\nrun multiple times over their lifespans.",
@@ -607,7 +966,7 @@
     "stars": 116
   },
   {
-    "id": 2670,
+    "id": 1231,
     "package_name": "sivirep",
     "title": "Data Wrangling and Automated Reports from 'SIVIGILA' Source",
     "description": "Data wrangling, pre-processing, and generating automated\nreports from Colombia's epidemiological surveillance system,\n'SIVIGILA' <https://portalsivigila.ins.gov.co/>. It provides a\ncustomizable R Markdown template for analysis and automatic\ngeneration of epidemiological reports that can be adapted to\nlocal, regional, and national contexts. This tool offers a\nstandardized and reproducible workflow that helps to reduce\nmanual labor and potential errors in report generation,\nimproving their efficiency and consistency.",
@@ -686,7 +1045,7 @@
     "stars": 42
   },
   {
-    "id": 1675,
+    "id": 571,
     "package_name": "finalsize",
     "title": "Calculate the Final Size of an Epidemic",
     "description": "Calculate the final size of a\nsusceptible-infectious-recovered epidemic in a population with\ndemographic variation in contact patterns and susceptibility to\ndisease, as discussed in Miller (2012)\n<doi:10.1007/s11538-012-9749-6>.",
@@ -712,7 +1071,7 @@
     "stars": 15
   },
   {
-    "id": 1618,
+    "id": 526,
     "package_name": "epichains",
     "title": "Simulating and Analysing Transmission Chain Statistics Using\nBranching Process Models",
     "description": "Provides methods to simulate and analyse the size and\nlength of branching processes with an arbitrary offspring\ndistribution. These can be used, for example, to analyse the\ndistribution of chain sizes or length of infectious disease\noutbreaks, as discussed in Farrington et al. (2003)\n<doi:10.1093/biostatistics/4.2.279>.",
@@ -742,7 +1101,7 @@
     "stars": 8
   },
   {
-    "id": 1401,
+    "id": 372,
     "package_name": "cleanepi",
     "title": "Clean and Standardize Epidemiological Data",
     "description": "Cleaning and standardizing tabular data package, tailored\nspecifically for curating epidemiological data. It streamlines\nvarious data cleaning tasks that are typically expected when\nworking with datasets in epidemiology. It returns the processed\ndata in the same format, and generates a comprehensive report\ndetailing the outcomes of each cleaning task.",
@@ -781,7 +1140,7 @@
     "stars": 10
   },
   {
-    "id": 1620,
+    "id": 528,
     "package_name": "epidemics",
     "title": "Composable Epidemic Scenario Modelling",
     "description": "A library of compartmental epidemic models taken from the\npublished literature, and classes to represent affected\npopulations, public health response measures including\nnon-pharmaceutical interventions on social contacts,\nnon-pharmaceutical and pharmaceutical interventions that affect\ndisease transmissibility, vaccination regimes, and disease\nseasonality, which can be combined to compose epidemic scenario\nmodels.",
@@ -828,7 +1187,7 @@
     "stars": 13
   },
   {
-    "id": 1588,
+    "id": 502,
     "package_name": "dust2",
     "title": "Next Generation dust",
     "description": "Experimental sources for the next generation of dust,\nwhich will properly adopt the particle filter, have support for\npartial parameter updates, support for multiple parameter sets\nand hopefully better GPU/MPI support.",
@@ -881,7 +1240,7 @@
     "stars": 0
   },
   {
-    "id": 1826,
+    "id": 664,
     "package_name": "grates",
     "title": "Grouped Date Classes",
     "description": "Provides a coherent interface and implementation for\ncreating grouped date classes.",
@@ -953,7 +1312,7 @@
     "stars": 20
   },
   {
-    "id": 2033,
+    "id": 803,
     "package_name": "mcstate",
     "title": "Monte Carlo Methods for State Space Models",
     "description": "Implements Monte Carlo methods for state-space models such\nas 'SIR' models in epidemiology. Particle MCMC (pmcmc) and SMC2\nmethods are planned. This package is particularly designed to\nwork with odin/dust models, but we will see how general it\nbecomes.",
@@ -1001,7 +1360,7 @@
     "stars": 19
   },
   {
-    "id": 2883,
+    "id": 1406,
     "package_name": "vaccineff",
     "title": "Estimate Vaccine Effectiveness Based on Different Study Designs",
     "description": "Provides tools for estimating vaccine effectiveness and\nrelated metrics. The 'vaccineff_data' class manages key\nfeatures for preparing, visualizing, and organizing cohort\ndata, as well as estimating vaccine effectiveness. The results\nand model performance are assessed using the 'vaccineff' class.",
@@ -1022,7 +1381,7 @@
     "stars": 16
   },
   {
-    "id": 2216,
+    "id": 904,
     "package_name": "odin2",
     "title": "Next generation odin",
     "description": "Temporary package for rewriting odin.",
@@ -1042,7 +1401,7 @@
     "stars": 9
   },
   {
-    "id": 1919,
+    "id": 709,
     "package_name": "individual",
     "title": "Framework for Specifying and Simulating Individual Based Models",
     "description": "A framework which provides users a set of useful primitive\nelements for specifying individual based simulation models,\nwith special attention models for infectious disease\nepidemiology. Users build models by specifying variables for\neach characteristic of individuals in the simulated population\nby using data structures exposed by the package. The package\nprovides efficient methods for finding subsets of individuals\nbased on these variables, or cohorts. Cohorts can then be\ntargeted for variable updates or scheduled for events. Variable\nupdates queued during a time step are executed at the end of a\ndiscrete time step, and the code places no restrictions on how\nindividuals are allowed to interact. These data structures are\ndesigned to provide an intuitive way for users to turn their\nconceptual model of a system into executable code, which is\nfast and memory efficient.",
@@ -1084,7 +1443,7 @@
     "stars": 32
   },
   {
-    "id": 2167,
+    "id": 866,
     "package_name": "naomi",
     "title": "Naomi Model for Subnational HIV Estimates",
     "description": "This package implements the Naomi model for subnational\nHIV estimates.",
@@ -1196,7 +1555,7 @@
     "stars": 9
   },
   {
-    "id": 1918,
+    "id": 708,
     "package_name": "incidence2",
     "title": "Compute, Handle and Plot Incidence of Dated Events",
     "description": "Provides functions and classes to compute, handle and\nvisualise incidence from dated events for a defined time\ninterval. Dates can be provided in various standard formats.\nThe class 'incidence2' is used to store computed incidence and\ncan be easily manipulated, subsetted, and plotted.",
@@ -1249,7 +1608,7 @@
     "stars": 17
   },
   {
-    "id": 2749,
+    "id": 1282,
     "package_name": "superspreading",
     "title": "Understand Individual-Level Variation in Infectious Disease\nTransmission",
     "description": "Estimate and understand individual-level variation in\ntransmission. Implements density and cumulative compound\nPoisson discrete distribution functions (Kremer et al. (2021)\n<doi:10.1038/s41598-021-93578-x>), as well as functions to\ncalculate infectious disease outbreak statistics given\nepidemiological parameters on individual-level transmission;\nincluding the probability of an outbreak becoming an\nepidemic/extinct (Kucharski et al. (2020)\n<doi:10.1016/S1473-3099(20)30144-4>), or the cluster size\nstatistics, e.g. what proportion of cases cause X\\% of\ntransmission (Lloyd-Smith et al. (2005)\n<doi:10.1038/nature04153>).",
@@ -1279,7 +1638,53 @@
     "stars": 5
   },
   {
-    "id": 2259,
+    "id": 433,
+    "package_name": "daedalus",
+    "title": "Model Health, Social, and Economic Costs of a Pandemic",
+    "description": "Model the health, education, and economic costs of\ndirectly transmitted respiratory virus pandemics, under\ndifferent scenarios of prior vaccine investment, policy\ninterventions, and public behavioural change, using the\n'DAEDALUS' integrated health-economics model adapted from Haw\net al. (2022) <doi:10.1038/s43588-022-00233-0>.",
+    "version": "0.3.2",
+    "maintainer": "Pratik Gupte <p.gupte24@imperial.ac.uk>",
+    "url": "https://github.com/jameel-institute/daedalus,\nhttps://jameel-institute.github.io/daedalus/",
+    "exports": [
+      ["daedalus"],
+      ["daedalus_country"],
+      ["daedalus_infection"],
+      ["daedalus_multi_infection"],
+      ["daedalus_new_behaviour"],
+      ["daedalus_npi"],
+      ["daedalus_old_behaviour"],
+      ["daedalus_timed_npi"],
+      ["daedalus_vaccination"],
+      ["get_costs"],
+      ["get_data"],
+      ["get_epidemic_summary"],
+      ["get_fiscal_costs"],
+      ["get_incidence"],
+      ["get_life_years_lost"],
+      ["get_new_vaccinations"],
+      ["is_daedalus_behaviour"],
+      ["is_daedalus_country"],
+      ["is_daedalus_infection"],
+      ["is_daedalus_npi"],
+      ["is_daedalus_vaccination"],
+      ["set_data"]
+    ],
+    "topics": [
+      ["decision-support"],
+      ["epidemiological-models"],
+      ["health-economics"],
+      ["pandemic-preparedness"],
+      ["public-health"],
+      ["rcpp"],
+      ["sdg-3"],
+      ["cpp"],
+      ["openmp"]
+    ],
+    "score": 7.0527,
+    "stars": 6
+  },
+  {
+    "id": 932,
     "package_name": "outbreaks",
     "title": "A Collection of Disease Outbreak Data",
     "description": "Empirical or simulated disease outbreak data, provided\neither as RData or as text files.",
@@ -1292,7 +1697,7 @@
     "stars": 52
   },
   {
-    "id": 2885,
+    "id": 1411,
     "package_name": "vaultr",
     "title": "Vault Client for Secrets and Sensitive Data",
     "description": "Provides an interface to a 'HashiCorp' vault server over\nits http API (typically these are self-hosted; see\n<https://www.vaultproject.io>).  This allows for secure storage\nand retrieval of secrets over a network, such as tokens,\npasswords and certificates.  Authentication with vault is\nsupported through several backends including user name/password\nand authentication via 'GitHub'.",
@@ -1309,7 +1714,7 @@
     "stars": 25
   },
   {
-    "id": 1522,
+    "id": 450,
     "package_name": "dde",
     "title": "Solve Delay Differential Equations",
     "description": "Solves ordinary and delay differential equations, where\nthe objective function is written in either R or C.  Suitable\nonly for non-stiff equations, the solver uses a\n'Dormand-Prince' method that allows interpolation of the\nsolution at any point.  This approach is as described by\nHairer, Norsett and Wanner (1993) <ISBN:3540604529>.  Support\nis also included for iterating difference equations.",
@@ -1333,7 +1738,7 @@
     "stars": 17
   },
   {
-    "id": 245,
+    "id": 21,
     "package_name": "ColOpenData",
     "title": "Download Colombian Demographic, Climate and Geospatial Data",
     "description": "Downloads wrangled Colombian socioeconomic,\ngeospatial,population and climate data from DANE\n<https://www.dane.gov.co/> (National Administrative Department\nof Statistics) and IDEAM <https://ideam.gov.co> (Institute of\nHydrology, Meteorology and Environmental Studies). It solves\nthe problem of Colombian data being issued in different web\npages and sources by using functions that allow the user to\nselect the desired database and download it without having to\ndo the exhausting acquisition process.",
@@ -1373,7 +1778,27 @@
     "stars": 11
   },
   {
-    "id": 1628,
+    "id": 1059,
+    "package_name": "rbi.helpers",
+    "title": "'rbi' Helper Functions",
+    "description": "Contains a collection of helper functions to use with\n'rbi', the R interface to 'LibBi', described in Murray et al.\n(2015) <doi:10.18637/jss.v067.i10>. It contains functions to\nadapt the proposal distribution and number of particles in\nparticle Markov-Chain Monte Carlo, as well as calculating the\nDeviance Information Criterion (DIC) and converting between\ntimes in 'LibBi' results and R time/dates.",
+    "version": "0.4.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "https://libbi.org, https://github.com/sbfnk/rbi,\nhttps://github.com/sbfnk/rbi.helpers",
+    "exports": [
+      ["acceptance_rate"],
+      ["adapt_particles"],
+      ["adapt_proposal"],
+      ["DIC"],
+      ["numeric_to_time"],
+      ["time_to_numeric"]
+    ],
+    "topics": [],
+    "score": 6.5051,
+    "stars": 4
+  },
+  {
+    "id": 534,
     "package_name": "epireview",
     "title": "Tools to update and summarise the latest pathogen data from the\nPathogen Epidemiology Review Group (PERG)",
     "description": "Contains the latest open access pathogen data from the\nPathogen Epidemiology Review Group (PERG). Tools are available\nto update pathogen databases with new peer-reviewed data as it\nbecomes available, and to summarise the latest data using\ntables and figures.",
@@ -1429,7 +1854,7 @@
     "stars": 32
   },
   {
-    "id": 1856,
+    "id": 684,
     "package_name": "hipercow",
     "title": "High Performance Computing",
     "description": "Set up cluster environments and jobs. Moo.",
@@ -1506,7 +1931,7 @@
     "stars": 1
   },
   {
-    "id": 2535,
+    "id": 1144,
     "package_name": "rrq",
     "title": "Simple Redis Queue",
     "description": "Simple Redis queue in R.",
@@ -1589,7 +2014,7 @@
     "stars": 24
   },
   {
-    "id": 1581,
+    "id": 495,
     "package_name": "drjacoby",
     "title": "Flexible Markov Chain Monte Carlo via Reparameterization",
     "description": "drjacoby is an R package for performing Bayesian inference\nvia Markov chain monte carlo (MCMC). In addition to being\nhighly flexible it implements some advanced techniques that can\nimprove mixing in tricky situations.",
@@ -1619,7 +2044,7 @@
     "stars": 12
   },
   {
-    "id": 1392,
+    "id": 364,
     "package_name": "cinterpolate",
     "title": "Interpolation From C",
     "description": "Simple interpolation methods designed to be used from C\ncode. Supports constant, linear and spline interpolation. An R\nwrapper is included but this package is primarily designed to\nbe used from C code using 'LinkingTo'.  The spline calculations\nare classical cubic interpolation, e.g., Forsythe, Malcolm and\nMoler (1977) <ISBN: 9780131653320>.",
@@ -1637,7 +2062,7 @@
     "stars": 8
   },
   {
-    "id": 1615,
+    "id": 524,
     "package_name": "epiCo",
     "title": "Statistical and Viz Tools for Vector-Borne Diseases in Colombia",
     "description": "Provides statistical and visualization tools for the\nanalysis of demographic indicators, and spatio-temporal\nbehavior and characterization of outbreaks of vector-borne\ndiseases (VBDs) in Colombia. It implements travel times\nestimated in Bravo-Vega C., Santos-Vega M., & Cordovez J.M.\n(2022), and the endemic channel method (Bortman, M.  (1999)\n<https://iris.paho.org/handle/10665.2/8562>).",
@@ -1671,7 +2096,7 @@
     "stars": 13
   },
   {
-    "id": 1625,
+    "id": 533,
     "package_name": "epiparameterDB",
     "title": "Database of Epidemiological Parameters",
     "description": "A data package containing a database of epidemiological\nparameters. It stores the data for the 'epiparameter' R\npackage. Epidemiological parameter estimates are extracted from\nthe literature.",
@@ -1688,7 +2113,7 @@
     "stars": 2
   },
   {
-    "id": 2471,
+    "id": 1089,
     "package_name": "reportfactory",
     "title": "Lightweight Infrastructure for Handling Multiple R Markdown\nDocuments",
     "description": "Provides an infrastructure for handling multiple R\nMarkdown reports, including automated curation and\ntime-stamping of outputs, parameterisation and provision of\nhelper functions to manage dependencies.",
@@ -1715,7 +2140,7 @@
     "stars": 83
   },
   {
-    "id": 2213,
+    "id": 901,
     "package_name": "odin.dust",
     "title": "Compile Odin to Dust",
     "description": "Less painful than it sounds, this package compiles an odin\nmodel to use dust, our new stochastic model system. Supports\nonly a subset of odin models (discrete time stochastic models\nwith no interpolation and no delays).",
@@ -1733,7 +2158,7 @@
     "stars": 3
   },
   {
-    "id": 2247,
+    "id": 919,
     "package_name": "orderly2",
     "title": "Compatibility Wrapper for 'orderly'",
     "description": "Acts as an installable package that can be used with\nrepositories that reference 'orderly2', rather than orderly.",
@@ -1798,7 +2223,7 @@
     "stars": 10
   },
   {
-    "id": 2116,
+    "id": 825,
     "package_name": "mockr",
     "title": "Mocking in R",
     "description": "Provides a means to mock a package function, i.e.,\ntemporarily substitute it for testing. Designed as a drop-in\nreplacement for the now deprecated 'testthat::with_mock()' and\n'testthat::local_mock()'.",
@@ -1815,7 +2240,101 @@
     "stars": 0
   },
   {
-    "id": 2857,
+    "id": 818,
+    "package_name": "mitey",
+    "title": "Serial Interval and Case Reproduction Number Estimation",
+    "description": "Provides methods to estimate serial intervals and\ntime-varying case reproduction numbers from infectious disease\noutbreak data. Serial intervals measure the time between\nsymptom onset in linked transmission pairs, while case\nreproduction numbers quantify how many secondary cases each\ninfected individual generates over time. These parameters are\nessential for understanding transmission dynamics, evaluating\ncontrol measures, and informing public health responses. The\npackage implements the maximum likelihood framework from Vink\net al. (2014) <doi:10.1093/aje/kwu209> for serial interval\nestimation and the retrospective method from Wallinga &\nLipsitch (2007) <doi:10.1098/rspb.2006.3754> for reproduction\nnumber estimation. Originally developed for scabies\ntransmission analysis but applicable to other infectious\ndiseases including influenza, COVID-19, and emerging pathogens.\nDesigned for epidemiologists, public health researchers, and\ninfectious disease modelers working with outbreak surveillance\ndata.",
+    "version": "0.2.0.9000",
+    "maintainer": "Kylie Ainslie <ainslie.kylie@gmail.com>",
+    "url": "https://github.com/kylieainslie/mitey,\nhttps://kylieainslie.github.io/mitey/",
+    "exports": [
+      ["calculate_si_probability_matrix"],
+      ["calculate_truncation_correction"],
+      ["conv_tri_dist"],
+      ["create_day_diff_matrix"],
+      ["f_gam"],
+      ["f_norm"],
+      ["f0"],
+      ["flower"],
+      ["fupper"],
+      ["generate_synthetic_epidemic"],
+      ["integrate_component"],
+      ["integrate_components_wrapper"],
+      ["plot_si_fit"],
+      ["si_estim"],
+      ["wallinga_lipsitch"],
+      ["weighted_var"],
+      ["wt_loglik"]
+    ],
+    "topics": [],
+    "score": 5.7559,
+    "stars": 6
+  },
+  {
+    "id": 418,
+    "package_name": "covidregionaldata",
+    "title": "Subnational Data for COVID-19 Epidemiology",
+    "description": "An interface to subnational and national level COVID-19\ndata sourced from both official sources, such as Public Health\nEngland in the UK, and from other COVID-19 data collections,\nincluding the World Health Organisation (WHO), European Centre\nfor Disease Prevention and Control (ECDC), John Hopkins\nUniversity (JHU), Google Open Data and others. Designed to\nstreamline COVID-19 data extraction, cleaning, and processing\nfrom a range of data sources in an open and transparent way.\nThis allows users to inspect and scrutinise the data, and tools\nused to process it, at every step. For all countries supported,\ndata includes a daily time-series of cases. Wherever available\ndata is also provided for deaths, hospitalisations, and tests.\nNational level data are also supported using a range of\nsources.",
+    "version": "0.9.3",
+    "maintainer": "Sam Abbott <sam.abbott@lshtm.ac.uk>",
+    "url": "https://epiforecasts.io/covidregionaldata/,\nhttps://github.com/epiforecasts/covidregionaldata/",
+    "exports": [
+      ["%>%"],
+      ["Belgium"],
+      ["Brazil"],
+      ["Canada"],
+      ["Colombia"],
+      ["CountryDataClass"],
+      ["Covid19DataHub"],
+      ["Cuba"],
+      ["DataClass"],
+      ["ECDC"],
+      ["Estonia"],
+      ["expect_clean_cols"],
+      ["expect_columns_contain_data"],
+      ["expect_processed_cols"],
+      ["France"],
+      ["Germany"],
+      ["get_available_datasets"],
+      ["get_national_data"],
+      ["get_regional_data"],
+      ["Google"],
+      ["India"],
+      ["initialise_dataclass"],
+      ["Italy"],
+      ["JHU"],
+      ["JRC"],
+      ["Lithuania"],
+      ["make_github_workflow"],
+      ["make_new_data_source"],
+      ["Mexico"],
+      ["Netherlands"],
+      ["reset_cache"],
+      ["SouthAfrica"],
+      ["start_using_memoise"],
+      ["stop_using_memoise"],
+      ["Switzerland"],
+      ["test_cleaning"],
+      ["test_download"],
+      ["test_download_JSON"],
+      ["test_processing"],
+      ["test_return"],
+      ["UK"],
+      ["USA"],
+      ["WHO"]
+    ],
+    "topics": [
+      ["covid-19"],
+      ["data"],
+      ["open-science"],
+      ["r6"],
+      ["regional-data"]
+    ],
+    "score": 5.6649,
+    "stars": 37
+  },
+  {
+    "id": 1385,
     "package_name": "trending",
     "title": "Model Temporal Trends",
     "description": "Provides a coherent interface to multiple modelling tools\nfor fitting trends along with a standardised approach for\ngenerating confidence and prediction intervals.",
@@ -1844,7 +2363,7 @@
     "stars": 8
   },
   {
-    "id": 1511,
+    "id": 438,
     "package_name": "datamodelr",
     "title": "Define and Plot Data Model Diagrams",
     "description": "Data model definition with YAML file, extract from R data\nframes, reverse-engineering from PostgreSQL and SQL Server and\nrendering with DiagrammeR/graphviz.",
@@ -1885,7 +2404,57 @@
     "stars": 288
   },
   {
-    "id": 1960,
+    "id": 587,
+    "package_name": "forecast.vocs",
+    "title": "Forecast Case and Sequence Notifications using Variant of\nConcern Strain Dynamics",
+    "description": "Contains models and tools to produce short-term forecasts\nfor both case and sequence notifications assuming circulation\nof either one or two variants. Tools are also provided to allow\nthe evaluation of the use of sequence data for short-term\nforecasts in both real-world settings and in user generated\nscenarios.",
+    "version": "0.9.0",
+    "maintainer": "Sam Abbott <sam.abbott@lshtm.ac.uk>",
+    "url": "https://epiforecasts.io/forecast.vocs/,\nhttps://github.com/epiforecasts/forecast.vocs/",
+    "exports": [
+      ["add_forecast_dates"],
+      ["bp_launch_shinystan"],
+      ["check_observations"],
+      ["define_scenarios"],
+      ["extract_forecast_dates"],
+      ["filter_by_availability"],
+      ["forecast"],
+      ["forecast_across_dates"],
+      ["forecast_across_scenarios"],
+      ["fv_as_data_list"],
+      ["fv_dow_period"],
+      ["fv_example"],
+      ["fv_extract_forecast"],
+      ["fv_inits"],
+      ["fv_model"],
+      ["fv_posterior"],
+      ["fv_sample"],
+      ["fv_score_forecast"],
+      ["fv_tidy_posterior"],
+      ["generate_obs"],
+      ["generate_obs_scenario"],
+      ["latest_obs"],
+      ["plot_cases"],
+      ["plot_default"],
+      ["plot_growth"],
+      ["plot_posterior"],
+      ["plot_rt"],
+      ["plot_theme"],
+      ["plot_voc_advantage"],
+      ["plot_voc_frac"],
+      ["quantiles_to_long"],
+      ["sample_sequences"],
+      ["save_plots"],
+      ["unnest_posterior"],
+      ["update_obs_availability"],
+      ["update_voc_label"]
+    ],
+    "topics": [],
+    "score": 5.2455,
+    "stars": 8
+  },
+  {
+    "id": 752,
     "package_name": "leapfrog",
     "title": "Multistate Population Projection Model for Demographic and HIV\nEstimation",
     "description": "Leapfrog is a multistate population projection model for\nestimating population, demographic indicators, and HIV\nepidemic. The model combines a standard cohort component model\nof population projection (CCMPP) with a multistate model for\nHIV infection, disease progression, and treatment. Statistical\ntools are implemented for joint inference from multiple\ndemographic and epidemiologic data sources.",
@@ -1912,7 +2481,7 @@
     "stars": 0
   },
   {
-    "id": 2893,
+    "id": 1417,
     "package_name": "vimpact",
     "title": "Vaccine Impact Calculation",
     "description": "VIMC IMPACT CALCULATION PACKAGE. This package is mainly\nfor the VIMC Science Team to investigate vaccination impact.",
@@ -1941,7 +2510,7 @@
     "stars": 4
   },
   {
-    "id": 1637,
+    "id": 536,
     "package_name": "eppasm",
     "title": "Age-structured EPP Model for HIV Epidemic Estimates",
     "description": "Age-structured EPP Model for HIV Epidemic Estimates.",
@@ -2004,7 +2573,7 @@
     "stars": 6
   },
   {
-    "id": 1719,
+    "id": 591,
     "package_name": "frogger",
     "title": "Multistate Population Projection Model for Demographic and HIV\nEstimation",
     "description": "Leapfrog is a multistate population projection model for\nestimating population, demographic indicators, and HIV\nepidemic. The model combines a standard cohort component model\nof population projection (CCMPP) with a multistate model for\nHIV infection, disease progression, and treatment. Statistical\ntools are implemented for joint inference from multiple\ndemographic and epidemiologic data sources.",
@@ -2034,7 +2603,28 @@
     "stars": 0
   },
   {
-    "id": 1854,
+    "id": 776,
+    "package_name": "lopensemble",
+    "title": "Create Mixture Models From Predictive Samples",
+    "description": "The `lopensemble` package provides an easy way to combine\npredictions from individual time series or panel data models to\nan ensemble. `lopensemble` stacks (Yuling Yao, Aki Vehtari,\nDaniel Simpson, and Andrew Gelman (2018)\n<doi:10.1214/17-BA1091>) Models according to the Continuous\nRanked Probability Score (CRPS) (Tilmann Gneiting & Adrian E\nRaftery (2007) <doi:10.1198/016214506000001437>) over k-step\nahead predictions. It is therefore especially suited for\ntimeseries and panel data. A function for leave-one-out CRPS\nmay be added in the future. Predictions need to be predictive\ndistributions represented by predictive samples. Usually, these\nwill be sets of posterior predictive simulation draws generated\nby an MCMC algorithm. Given some training data with true\nobserved values as well as predictive samples generated from\ndifferent models, `crps_weights` finds the optimal (in the\nsense of minimizing expected cross-validation predictive error)\nweights to form an ensemble from these models. Using these\nweights, `mixture_from_samples` can then provide samples from\nthe optimal model mixture by drawing from the predictice\nsamples of the individual models in the correct proportion.\nThis gives a mixture model solely based on predictive samples\nand is in this regard superior to other ensembling techniques\nlike Bayesian Model Averaging.",
+    "version": "0.1.2",
+    "maintainer": "Nikos Bosse <nikosbosse@gmail.com>",
+    "url": "",
+    "exports": [
+      ["crps_weights"],
+      ["mixture_from_samples"]
+    ],
+    "topics": [
+      ["crps"],
+      ["ensembles"],
+      ["forecasting"],
+      ["stacking"]
+    ],
+    "score": 5.0334,
+    "stars": 6
+  },
+  {
+    "id": 683,
     "package_name": "hintr",
     "title": "R API for calling naomi district level HIV model",
     "description": "R API for calling naomi district level HIV model.",
@@ -2051,7 +2641,27 @@
     "stars": 2
   },
   {
-    "id": 2723,
+    "id": 945,
+    "package_name": "paramix",
+    "title": "Aggregate and Disaggregate Continuous Parameters for\nCompartmental Models",
+    "description": "A convenient framework for aggregating and disaggregating\ncontinuously varying parameters (for example, case fatality\nratio, with age) for proper parametrization of lower-resolution\ncompartmental models (for example, with broad age categories)\nand subsequent upscaling of model outputs to high resolution\n(for example, as needed when calculating age-sensitive measures\nlike years-life-lost).",
+    "version": "0.0.2",
+    "maintainer": "Carl Pearson <carl.ab.pearson@gmail.com>",
+    "url": "https://cmmid.github.io/paramix/",
+    "exports": [
+      ["alembic"],
+      ["blend"],
+      ["distill"],
+      ["distill_summary"],
+      ["interpolate_opts"],
+      ["parameter_summary"]
+    ],
+    "topics": [],
+    "score": 4.8451,
+    "stars": 2
+  },
+  {
+    "id": 1263,
     "package_name": "squire",
     "title": "SEIR transmission model of COVID-19",
     "description": "An extended model of the SEIR model used in the Imperial\nCollege London Report into the global impact of COVID-19 and\nstrategies for mitigation and suppression\n(https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/).\nExtensions now include healthcare treatment pathways and excess\nmortality.",
@@ -2097,7 +2707,87 @@
     "stars": 52
   },
   {
-    "id": 2205,
+    "id": 50,
+    "package_name": "EpiSoon",
+    "title": "Forecast Cases Using Reproduction Numbers",
+    "description": "To forecast the time-varying reproduction number and use\nthis to forecast reported case counts. Includes tools to\nevaluate a range of models across samples and time series using\nproper scoring rules.",
+    "version": "0.3.1",
+    "maintainer": "Sam Abbott <contact@samabbott.co.uk>",
+    "url": "",
+    "exports": [
+      ["%>%"],
+      ["brms_model"],
+      ["bsts_model"],
+      ["compare_models"],
+      ["compare_timeseries"],
+      ["draw_from_si_prob"],
+      ["evaluate_model"],
+      ["fable_model"],
+      ["forecast_cases"],
+      ["forecast_cases_directly"],
+      ["forecast_model"],
+      ["forecast_rt"],
+      ["forecastHybrid_model"],
+      ["iterative_case_forecast"],
+      ["iterative_direct_case_forecast"],
+      ["iterative_rt_forecast"],
+      ["lopensemble_model"],
+      ["plot_compare_timeseries"],
+      ["plot_forecast"],
+      ["plot_forecast_evaluation"],
+      ["plot_scores"],
+      ["predict_cases"],
+      ["predict_current_cases"],
+      ["score_case_forecast"],
+      ["score_forecast"],
+      ["summarise_case_forecast"],
+      ["summarise_forecast"],
+      ["summarise_scores"]
+    ],
+    "topics": [
+      ["case-forecasts"],
+      ["forecasts"]
+    ],
+    "score": 4.7871,
+    "stars": 7
+  },
+  {
+    "id": 1043,
+    "package_name": "quantgen",
+    "title": "Tools for generalized quantile modeling",
+    "description": "Tools for generalized quantile modeling: regularized\nquantile regression (with generalized lasso penalties and\nnoncrossing constraints), cross-validation, quantile\nextrapolation, and quantile ensembles.",
+    "version": "1.0.0",
+    "maintainer": "Ryan Tibshirani <ryantibs@cmu.edu>",
+    "url": "https://ryantibs.github.io/quantgen/,\nhttps://github.com/ryantibs/quantgen/",
+    "exports": [
+      ["combine_into_array"],
+      ["cv_quantile_genlasso"],
+      ["cv_quantile_lasso"],
+      ["exp_pad"],
+      ["get_diff_mat"],
+      ["get_lambda_max"],
+      ["get_lambda_seq"],
+      ["log_pad"],
+      ["quantile_ensemble"],
+      ["quantile_extrapolate"],
+      ["quantile_genlasso"],
+      ["quantile_genlasso_grid"],
+      ["quantile_genlasso_objective"],
+      ["quantile_lasso"],
+      ["quantile_lasso_grid"],
+      ["quantile_lasso_objective"],
+      ["quantile_loss"],
+      ["refit_quantile_genlasso"],
+      ["refit_quantile_lasso"],
+      ["sigmd_pad"],
+      ["unif_jitter"]
+    ],
+    "topics": [],
+    "score": 4.7655,
+    "stars": 15
+  },
+  {
+    "id": 893,
     "package_name": "numberize",
     "title": "Convert Words to Numbers in Multiple Languages",
     "description": "Converts written out numbers into their equivalent\nnumbers. Supports numbers written out in English, French, or\nSpanish.",
@@ -2114,7 +2804,34 @@
     "stars": 4
   },
   {
-    "id": 2353,
+    "id": 415,
+    "package_name": "covid19.nhs.data",
+    "title": "Covid 19 England Hospital Admissions",
+    "description": "Facilitates access to data on English Covid-19 hospital\nadmissions aggregated to a range of spatial scales.",
+    "version": "0.1.0",
+    "maintainer": "Sophie Meakin <sophie.meakin@lshtm.ac.uk>",
+    "url": "https://epiforecasts.io/covid19.nhs.data,\nhttps://github.com/epiforecasts/covid19.nhs.data",
+    "exports": [
+      ["%>%"],
+      ["download_trust_data"],
+      ["get_admissions"],
+      ["get_names"],
+      ["map_admissions"],
+      ["summarise_mapping"]
+    ],
+    "topics": [
+      ["covid19"],
+      ["hospitalisations"],
+      ["local-authority"],
+      ["nhs"],
+      ["openscience"],
+      ["uk"]
+    ],
+    "score": 4.6355,
+    "stars": 8
+  },
+  {
+    "id": 1004,
     "package_name": "porcelain",
     "title": "Turn a Package into an HTTP API",
     "description": "Wrapper around the plumber package to turn a package into\nan HTTP API. This adds some conventions that we find useful,\nsuch as some testing infrastructure and automatic validation of\nresponses against a json schema.",
@@ -2144,7 +2861,49 @@
     "stars": 4
   },
   {
-    "id": 2840,
+    "id": 876,
+    "package_name": "nfidd",
+    "title": "Material to support course on nowcasting and forecasting of\ninfectious disease dynamics",
+    "description": "Resources to support a short course on nowcasting and\nforecasting of infectious disease dynamics.",
+    "version": "1.1.2.9000",
+    "maintainer": "NFIDD course contributors <epiforecasts@gmail.com>",
+    "url": "https://github.com/nfidd/nfidd",
+    "exports": [
+      ["add_delays"],
+      ["censored_delay_pmf"],
+      ["condition_onsets_by_report"],
+      ["convolve_with_delay"],
+      ["geometric_diff_ar"],
+      ["geometric_random_walk"],
+      ["make_daily_infections"],
+      ["make_gen_time_pmf"],
+      ["make_ip_pmf"],
+      ["nfidd_cmdstan_model"],
+      ["nfidd_load_stan_functions"],
+      ["nfidd_sample"],
+      ["nfidd_stan_function_files"],
+      ["nfidd_stan_functions"],
+      ["nfidd_stan_models"],
+      ["nfidd_stan_path"],
+      ["renewal"],
+      ["simulate_onsets"],
+      ["summarise_lognormal"]
+    ],
+    "topics": [
+      ["delay-estimation"],
+      ["epidemics"],
+      ["forecasting"],
+      ["infectious-disease-dynamics"],
+      ["learning"],
+      ["nowcasting"],
+      ["outbreak-analysis"],
+      ["outbreaks"]
+    ],
+    "score": 4.4393,
+    "stars": 22
+  },
+  {
+    "id": 1371,
     "package_name": "traduire",
     "title": "Internationalisation on the Fly",
     "description": "Internationalisation ('i18n') support for R, switching\nlanguages at runtime, based on the 'i18next' 'JavaScript'\nlibrary. This provides an alternative approach to\ninternationalisation than supported directly by R.",
@@ -2170,7 +2929,7 @@
     "stars": 6
   },
   {
-    "id": 2133,
+    "id": 845,
     "package_name": "mpoxseir",
     "title": "Stochastic compartmental model of mpox transmission",
     "description": "Stochastic compartmental model of mpox transmission in\nodin.dust.",
@@ -2198,7 +2957,59 @@
     "stars": 3
   },
   {
-    "id": 1812,
+    "id": 435,
+    "package_name": "daedalus.data",
+    "title": "DAEDALUS Data",
+    "description": "Package to handel input data for the daedalus model.",
+    "version": "0.0.3",
+    "maintainer": "Pablo Perez-Guzman <p.perez-guzman@imperial.ac.uk>",
+    "url": "https://github.com/jameel-institute/daedalus.data,\nhttps://jameel-institute.github.io/daedalus.data/",
+    "exports": [],
+    "topics": [],
+    "score": 4.1761,
+    "stars": 0
+  },
+  {
+    "id": 416,
+    "package_name": "covid19swiss",
+    "title": "COVID-19 Cases in Switzerland and Principality of Liechtenstein",
+    "description": "Provides a daily summary of the Coronavirus (COVID-19)\ncases in Switzerland cantons and Principality of Liechtenstein.\nData source: Specialist Unit for Open Government Data Canton of\nZurich <https://www.zh.ch/de/politik-staat/opendata.html>.",
+    "version": "0.1.0",
+    "maintainer": "Rami Krispin <rami.krispin@gmail.com>",
+    "url": "https://github.com/Covid19R/covid19swiss",
+    "exports": [
+      ["get_info_covid19swiss"],
+      ["refresh_covid19swiss"],
+      ["update_swiss_data"]
+    ],
+    "topics": [],
+    "score": 4,
+    "stars": 0
+  },
+  {
+    "id": 286,
+    "package_name": "beers",
+    "title": "Calculate Beers Ordinary Interpolation",
+    "description": "Calculate Beers Interpolation (both Ordinary and Modified\nmethod); a six-term formula which minimizes the fifth\ndifferences of the interpolated results. See p877 of The\nMethods and Materials of Demography, Volume 2, referring to\nBeers, The Record of the American Institute of Actuaries, 34,\nPart I (69):59-60, June 1945.",
+    "version": "0.1.0",
+    "maintainer": "Wes Hinsley <w.hinsley@imperial.ac.uk>",
+    "url": "",
+    "exports": [
+      ["beers_int_modified"],
+      ["beers_int_ordinary"],
+      ["beers_sub_modified"],
+      ["beers_sub_ordinary"]
+    ],
+    "topics": [
+      ["demography"],
+      ["interpolation"],
+      ["subdivision"]
+    ],
+    "score": 3.9542,
+    "stars": 2
+  },
+  {
+    "id": 649,
     "package_name": "gonovax",
     "title": "Deterministic Compartmental Model of Gonorrhoea with Vaccination",
     "description": "Model for gonorrhoea vaccination, using odin.",
@@ -2265,33 +3076,11 @@
       ["transform_fixed"]
     ],
     "topics": [],
-    "score": 4.2041,
+    "score": 3.9031,
     "stars": 4
   },
   {
-    "id": 1278,
-    "package_name": "beers",
-    "title": "Calculate Beers Ordinary Interpolation",
-    "description": "Calculate Beers Interpolation (both Ordinary and Modified\nmethod); a six-term formula which minimizes the fifth\ndifferences of the interpolated results. See p877 of The\nMethods and Materials of Demography, Volume 2, referring to\nBeers, The Record of the American Institute of Actuaries, 34,\nPart I (69):59-60, June 1945.",
-    "version": "0.1.0",
-    "maintainer": "Wes Hinsley <w.hinsley@imperial.ac.uk>",
-    "url": "",
-    "exports": [
-      ["beers_int_modified"],
-      ["beers_int_ordinary"],
-      ["beers_sub_modified"],
-      ["beers_sub_ordinary"]
-    ],
-    "topics": [
-      ["demography"],
-      ["interpolation"],
-      ["subdivision"]
-    ],
-    "score": 3.9542,
-    "stars": 2
-  },
-  {
-    "id": 2169,
+    "id": 868,
     "package_name": "naomi.resources",
     "title": "Data dependencies for Naomi output generation",
     "description": "Makes data for Naomi output generation as an R package.",
@@ -2308,7 +3097,7 @@
     "stars": 0
   },
   {
-    "id": 1679,
+    "id": 577,
     "package_name": "first90",
     "title": "The first90 model",
     "description": "Implements the Shiny90 model for estimating progress\ntowards the UNAIDS \"first 90\" target for HIV awareness of\nstatus in sub-Saharan Africa.",
@@ -2400,7 +3189,7 @@
     "stars": 5
   },
   {
-    "id": 2835,
+    "id": 1369,
     "package_name": "tracetheme",
     "title": "A 'ggplot2' Theme and Scale Using 'Epiverse-TRACE' Visual Style",
     "description": "A 'ggplot2' theme and scale using 'Epiverse-TRACE' visual\nstyle, colour scheme, and visualisation guidelines.",
@@ -2415,7 +3204,7 @@
     "stars": 1
   },
   {
-    "id": 2122,
+    "id": 839,
     "package_name": "montagu",
     "title": "Interface with 'montagu'",
     "description": "Client for interacting with the montagu API, and\nauthentication with the montagu OrderlyWeb instance.  This\npackage is part of montagu.",
@@ -2473,7 +3262,7 @@
     "stars": 2
   },
   {
-    "id": 2707,
+    "id": 1259,
     "package_name": "specio",
     "title": "Read Spectrum Files",
     "description": "Read data from Spectrum PJNZ file into R consumable format\nfor EPP.",
@@ -2499,7 +3288,7 @@
     "stars": 1
   },
   {
-    "id": 2168,
+    "id": 867,
     "package_name": "naomi.options",
     "title": "Contains model and calibration options and helper functions for\nNaomi",
     "description": "Contains model and calibration option JSON and default\nvalues and helper functions for Naomi.",
@@ -2516,7 +3305,7 @@
     "stars": 0
   },
   {
-    "id": 2008,
+    "id": 784,
     "package_name": "malariaEquilibrium",
     "title": "Return equilibrium solution to malaria transmission model",
     "description": "Often we are interested in the state of a given malaria\ntransmission model at equibrium. However, some models (e.g. the\nGriffin et al. 2014 model) are quite complex, and can result in\nequilibrium solutions that are fairly in-depth. In these\nsituations it is useful to have a \"canonical\" equilibrium\nsolution that is tried and tested, and can be used reliably by\nmultiple users. This package aims to be a place for hosting\nthese canonical solutions, and for storing useful tests, checks\nand plotting functions for exploring a given solution.",
@@ -2536,7 +3325,7 @@
     "stars": 3
   },
   {
-    "id": 2244,
+    "id": 916,
     "package_name": "orderly.db",
     "title": "Database Support for 'orderly'",
     "description": "Access databases from 'orderly' while running reports.\nIncludes the basic 'SQL' support originally included in\n'orderly' for establishing connections and setting up data for\nuse within a report.",
@@ -2553,7 +3342,7 @@
     "stars": 0
   },
   {
-    "id": 2351,
+    "id": 1002,
     "package_name": "popim",
     "title": "POPulation IMmunity: Run a Demographic Model of Vaccine Exposure\nOver Time",
     "description": "Tools for setting up an age-structured population,\napplying vaccination activities to it, and tracking\nvaccine-induced immunity through time.",
@@ -2579,7 +3368,7 @@
     "stars": 1
   },
   {
-    "id": 2856,
+    "id": 1384,
     "package_name": "trendeval",
     "title": "Evaluate Trending Models",
     "description": "Provides a coherent interface for evaluating models fit\nwith the trending package.  This package is part of the RECON\n(<https://www.repidemicsconsortium.org/>) toolkit for outbreak\nanalysis.",
@@ -2603,7 +3392,7 @@
     "stars": 2
   },
   {
-    "id": 1857,
+    "id": 685,
     "package_name": "hipercow.dide",
     "title": "HPC Support for the DIDE cluster",
     "description": "Drivers for using the DIDE cluster on windows and linux\ncompute nodes, via the hipercow package. Typically the user\nwill install that package directly and this once they are\nrequested to.",
@@ -2616,7 +3405,22 @@
     "stars": 1
   },
   {
-    "id": 2382,
+    "id": 1037,
+    "package_name": "qrensemble",
+    "title": "Forecast ensembles using Quantile Regression Average (QRA)",
+    "description": "Performs quantile regression average",
+    "version": "0.1.3",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "",
+    "exports": [
+      ["qra"]
+    ],
+    "topics": [],
+    "score": 3.1761,
+    "stars": 3
+  },
+  {
+    "id": 1023,
     "package_name": "provisionr",
     "title": "Provision a Library",
     "description": "Provision a set of packages into a new library, possibly\nfor use on a different architecture.",
@@ -2640,7 +3444,7 @@
     "stars": 26
   },
   {
-    "id": 1537,
+    "id": 458,
     "package_name": "demogsurv",
     "title": "Demographic analysis of DHS and other household surveys",
     "description": "This package includes tools for calculating demographic\nindicators from household survey data. Initially developed for\nfor processing and analysis from Demographic and Health Surveys\n(DHS) and Multiple Indicator Cluster Surveys (MICS). The\npackage provides tools to calculate standard child mortality,\nadult mortality, and fertility indicators stratified\narbitrarily by age group, calendar period, pre-survey time\nperiods, birth cohorts and other survey variables (e.g.\nresidence, region, wealth status, education, etc.).\nDesign-based standard errors and sample correlations are\navailable for all indicators via Taylor linearisation or\njackknife.",
@@ -2660,7 +3464,7 @@
     "stars": 7
   },
   {
-    "id": 2191,
+    "id": 885,
     "package_name": "nomad",
     "title": "Create Portable R Repositories",
     "description": "Collects together all the bits required to easily install\npackages from R in situations with limited internet.",
@@ -2677,7 +3481,7 @@
     "stars": 8
   },
   {
-    "id": 2214,
+    "id": 902,
     "package_name": "odin.js",
     "title": "'odin' 'JavaScript' support",
     "description": "Create 'JavaScript' differential equation models from an\n'odin' model specification.",
@@ -2695,7 +3499,26 @@
     "stars": 5
   },
   {
-    "id": 2248,
+    "id": 177,
+    "package_name": "RtD3",
+    "title": "Rt Visualization in D3",
+    "description": "An R interface for the JavaScript library\nrt_vis(<https://github.com/hamishgibbs/rt_vis>).",
+    "version": "0.0.0.9000",
+    "maintainer": "Hamish Gibbs <lshhg2@lshtm.ac.uk>",
+    "url": "",
+    "exports": [
+      ["getSubregionalUrls"],
+      ["readInEpiNow2"],
+      ["rendersummaryWidget"],
+      ["summaryWidget"],
+      ["summaryWidgetOutput"]
+    ],
+    "topics": [],
+    "score": 2.7782,
+    "stars": 6
+  },
+  {
+    "id": 920,
     "package_name": "orderlyweb",
     "title": "Orderly Support for 'OrderlyWeb'",
     "description": "Client for 'OrderlyWeb' for use from the 'orderly1'\npackage.  Allows downloading of reports, running remote reports\nand other interaction with the remote report repository.",
@@ -2712,7 +3535,7 @@
     "stars": 0
   },
   {
-    "id": 1534,
+    "id": 456,
     "package_name": "defer",
     "title": "Defer Errors",
     "description": "Create errors that can be deferred until later.  With\ndeferrable errors, collections of errors that are not\nimmediately fatal can be collected and reported back at once.",
@@ -2729,7 +3552,7 @@
     "stars": 9
   },
   {
-    "id": 1052,
+    "id": 199,
     "package_name": "SpectrumUtils",
     "title": "Utilities for reading Spectrum files",
     "description": "Spectrum (https://avenirhealth.org/software-spectrum.php)\nis a suite of policy models. The SpectrumUtils package provides\nan R interface for loading information from these files into R.",
@@ -2897,7 +3720,7 @@
     "stars": 0
   },
   {
-    "id": 1636,
+    "id": 535,
     "package_name": "epp",
     "title": "R Implementation of the EPP model for HIV epidemic estimates.",
     "description": "This implements the EPP r-spline and r-trend models for\nHIV epidemic estimates.",
@@ -2932,7 +3755,7 @@
     "stars": 4
   },
   {
-    "id": 2132,
+    "id": 841,
     "package_name": "moz.utils",
     "title": "Utility functions",
     "description": "Utility functions, for useful utilitarian uses.",
@@ -2987,7 +3810,7 @@
     "stars": 0
   },
   {
-    "id": 1445,
+    "id": 393,
     "package_name": "conan2",
     "title": "Conan the Librarian",
     "description": "Create libraries. For us, there is no spring. Just the\nwind that smells fresh before the storm.",
@@ -3007,7 +3830,7 @@
     "stars": 0
   },
   {
-    "id": 1987,
+    "id": 772,
     "package_name": "logwatch",
     "title": "Watch Logs Run",
     "description": "Watch a log, streaming progress to the console.",
@@ -3022,7 +3845,7 @@
     "stars": 0
   },
   {
-    "id": 2763,
+    "id": 1293,
     "package_name": "syncr",
     "title": "Synchronise Directories",
     "description": "Syncronise directories using rsync.",
@@ -3042,7 +3865,32 @@
     "stars": 9
   },
   {
-    "id": 1937,
+    "id": 701,
+    "package_name": "idbrms",
+    "title": "Infectious Disease Modelling Using brms",
+    "description": "Infectious disease modelling using brms.",
+    "version": "0.0.0.9000",
+    "maintainer": "Sam Abbott <sam.abbott@lshtm.ac.uk>",
+    "url": "",
+    "exports": [
+      ["expose_idbrms_stan_fns"],
+      ["id_formula"],
+      ["id_priors"],
+      ["id_stancode"],
+      ["idbrm"],
+      ["idbrms_stan_chunk"],
+      ["prepare"]
+    ],
+    "topics": [
+      ["brms"],
+      ["infectious-disease-models"],
+      ["opensource"]
+    ],
+    "score": 2.6021,
+    "stars": 4
+  },
+  {
+    "id": 722,
     "package_name": "jenner",
     "title": "Internal Montagu Helpers",
     "description": "Helpers for Montagu.",
@@ -3070,7 +3918,7 @@
     "stars": 0
   },
   {
-    "id": 2795,
+    "id": 1319,
     "package_name": "testthat.buildkite",
     "title": "A testthat reporter for buildkite",
     "description": "A testthat reporter that prints progress output in a\nformat for use in buildkite logs.",
@@ -3085,7 +3933,7 @@
     "stars": 0
   },
   {
-    "id": 2009,
+    "id": 785,
     "package_name": "malariaEquilibriumVivax",
     "title": "Return equilibrium solution to malaria transmission model (P.\nvivax)",
     "description": "Often we are interested in the state of a given malaria\ntransmission model at equilibrium. However, some models (e.g.\nthe Griffin et al. 2014 model, the White et al. 2018 model) are\nquite complex, and can result in equilibrium solutions that are\nfairly in-depth. In these situations it is useful to have a\n\"canonical\" equilibrium solution that is tried and tested, and\ncan be used reliably by multiple users. This package complement\nthe malariaEquilibriumVivax package to store canonical\nequilibrium solutions for Plasmodium vivax malaria models.",
@@ -3102,7 +3950,37 @@
     "stars": 0
   },
   {
-    "id": 1234,
+    "id": 47,
+    "package_name": "EpiAwareR",
+    "title": "R Interface to the EpiAware Compositional Infectious Disease\nModelling Framework",
+    "description": "Provides an R interface to the Julia-based EpiAware\ncompositional infectious disease modelling framework. EpiAwareR\nenables R users to build flexible epidemiological models by\ncomposing reusable components for latent processes, infection\ndynamics, and observation models without requiring Julia\nexpertise.",
+    "version": "0.1.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "https://github.com/sbfnk/EpiAware",
+    "exports": [
+      ["AR"],
+      ["epiaware_available"],
+      ["epiaware_call"],
+      ["epiaware_setup_julia"],
+      ["EpiProblem"],
+      ["exponential"],
+      ["fit"],
+      ["gamma_dist"],
+      ["halfnorm"],
+      ["LatentDelay"],
+      ["lognorm"],
+      ["NegativeBinomialError"],
+      ["norm"],
+      ["nuts_sampler"],
+      ["Renewal"],
+      ["truncnorm"]
+    ],
+    "topics": [],
+    "score": 2.3979,
+    "stars": 5
+  },
+  {
+    "id": 258,
     "package_name": "assessr",
     "title": "Performance metrics for probabilitic forecasts",
     "description": "This package implements various metrics for assessing the\nperformance of probabilitic forecasts.",
@@ -3125,7 +4003,7 @@
     "stars": 0
   },
   {
-    "id": 2798,
+    "id": 1334,
     "package_name": "threemc",
     "title": "(Matt's) Multi-Level Model of Male Circumcision in Sub-Saharan\nAfrica",
     "description": "Functions and datasets to support, and extend to other\nSub-Saharan African countries, Thomas, M. et. al., 2021, A\nmulti-level model for estimating region-age-time-type specific\nmale circumcision coverage from household survey and health\nsystem data in South Africa, <arXiv:2108.091422>.",
@@ -3158,7 +4036,7 @@
     "stars": 0
   },
   {
-    "id": 1444,
+    "id": 392,
     "package_name": "conan",
     "title": "Conan the Librarian",
     "description": "Create libraries. For us, there is no spring. Just the\nwind that smells fresh before the storm.",
@@ -3178,7 +4056,53 @@
     "stars": 4
   },
   {
-    "id": 1846,
+    "id": 434,
+    "package_name": "daedalus.compare",
+    "title": "Run Multiple Scenarios of the Daedalus Model",
+    "description": "Run multiple pandemic response scenarios using the\ndaedalus package and access epidemiological and economic\noutcomes.",
+    "version": "0.0.3",
+    "maintainer": "Pratik Gupte <pratik.gupte@lshtm.ac.uk>",
+    "url": "https://github.com/jameel-institute/daedalus.compare",
+    "exports": [
+      ["ci"],
+      ["get_cost_data"],
+      ["get_econ_cost_data"],
+      ["get_epicurve_data"],
+      ["get_summary_data"],
+      ["make_infection_samples"],
+      ["NAMES_VECTOR_INF_PARAMS"],
+      ["run_scenarios"]
+    ],
+    "topics": [
+      ["decision-support"],
+      ["epidemiological-models"],
+      ["health-economics"],
+      ["public-heal"],
+      ["r-pack"],
+      ["sdg-3"]
+    ],
+    "score": 2.301,
+    "stars": 0
+  },
+  {
+    "id": 530,
+    "package_name": "epimixr",
+    "title": "Epidemiological analysis using social mixing matrices",
+    "description": "Provides methods to conduct epidemiological analysis using\nsocial mixing matrices, such as calculating contact-adjusted\nimmunity levels or age distributions of epidemics.",
+    "version": "0.1.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "",
+    "exports": [
+      ["adjust_immunity"],
+      ["epidemic_age_dist"],
+      ["project_immunity"]
+    ],
+    "topics": [],
+    "score": 2.301,
+    "stars": 4
+  },
+  {
+    "id": 680,
     "package_name": "heartbeatr",
     "title": "Heartbeat Support using 'Redis'",
     "description": "Simple heartbeat support for R using 'Redis'. A heartbeat\nis a background thread that acts as a dead-man's switch. It\nwill create a key on Redis that will automatically expire after\na number of seconds and then periodically refresh that key,\neven when the R process is busy. If the process dies for some\nreason, then the key will disappear. A heartbeat can be used to\ndetect loss of worker processes on shared systems.",
@@ -3197,7 +4121,7 @@
     "stars": 2
   },
   {
-    "id": 2117,
+    "id": 827,
     "package_name": "mode",
     "title": "Solve Multiple ODEs",
     "description": "Solve multiple ODEs in parallel.",
@@ -3213,7 +4137,7 @@
     "stars": 0
   },
   {
-    "id": 2245,
+    "id": 917,
     "package_name": "orderly.sharedfile",
     "title": "Package Title Here",
     "description": "Access files in shared locations from orderly.",
@@ -3228,7 +4152,7 @@
     "stars": 1
   },
   {
-    "id": 1205,
+    "id": 239,
     "package_name": "anclik",
     "title": "Likelihood for ANC Sentinel Surveillance Data",
     "description": "This implements the random effects likelihood for ANC HIV\nprevalence described by Alkema, Raftery, Clark Ann Appl Stat\n2007 (http://dx.doi.org/10.1214/07-AOAS111). This is\nimplemented in the EPP model used by UNAIDS for generating HIV\nepidemic trends:\nhttp://www.unaids.org/en/dataanalysis/datatools/spectrumepp2013.",
@@ -3251,7 +4175,7 @@
     "stars": 0
   },
   {
-    "id": 1329,
+    "id": 326,
     "package_name": "buildr",
     "title": "buildr",
     "description": "Simple package build server.",
@@ -3271,7 +4195,7 @@
     "stars": 2
   },
   {
-    "id": 1659,
+    "id": 560,
     "package_name": "fakerbase",
     "title": "Fake Database Tables For Unit Testing",
     "description": "Connect to a Postgres database and generate a suite of\nfunctions that can be used to mock database tables for unit\ntesting.",
@@ -3287,7 +4211,7 @@
     "stars": 0
   },
   {
-    "id": 1938,
+    "id": 724,
     "package_name": "jointlyr",
     "title": "Joint estimation of initial incidence and reproduction number",
     "description": "Provides a Stan implementation of a method to jointly\nestimate incidence and reproduction number.",
@@ -3304,7 +4228,35 @@
     "stars": 0
   },
   {
-    "id": 1347,
+    "id": 1271,
+    "package_name": "stanedit",
+    "title": "Facilitate editing of stan models",
+    "description": "Provides functionality for extracting particular bits of\nstan models as well as removing and adding lines.",
+    "version": "0.1.0",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "",
+    "exports": [
+      ["add_block"],
+      ["find_block"],
+      ["find_declaration"],
+      ["get_block"],
+      ["get_declaration"],
+      ["get_vars"],
+      ["insert_lines"],
+      ["move"],
+      ["remove_lines"],
+      ["stanedit"],
+      ["write_model"]
+    ],
+    "topics": [
+      ["probabilistic-programming"],
+      ["stan"]
+    ],
+    "score": 2,
+    "stars": 2
+  },
+  {
+    "id": 342,
     "package_name": "cart",
     "title": "Malaria Cartographic Information",
     "description": "Extract population, prevalence and vector cartographic\ninformation for use with malarisimulation.",
@@ -3331,7 +4283,20 @@
     "stars": 1
   },
   {
-    "id": 2922,
+    "id": 720,
+    "package_name": "jameelinst.rpkg.theme",
+    "title": "A 'pkgdown' Template for Jameel Institute Packages",
+    "description": "Package website colours and logos taken from the Imperial\nCollege London and Jameel Institute brand guidelines.",
+    "version": "0.0.0.9000",
+    "maintainer": "Pratik Gupte <p.gupte24@imperial.ac.uk>",
+    "url": "https://github.com/j-idea/jameel-institute/jameelinst.rpkg.theme,\nhttps://jameel-institute.github.io/jameelinst.rpkg.theme",
+    "exports": [],
+    "topics": [],
+    "score": 1.699,
+    "stars": 0
+  },
+  {
+    "id": 1440,
     "package_name": "weighter",
     "title": "Model averaging",
     "description": "This package implementes model averaging.",
@@ -3350,7 +4315,7 @@
     "stars": 1
   },
   {
-    "id": 1230,
+    "id": 253,
     "package_name": "ascertainr",
     "title": "Case Ascertainment Model",
     "description": "This pacakge implements a case asecertainment model.",
@@ -3371,7 +4336,7 @@
     "stars": 2
   },
   {
-    "id": 1550,
+    "id": 467,
     "package_name": "dfertility",
     "title": "District level estimation of age-specific fertility",
     "description": "This package estimates district-level estimates of\nage-specific fertility from nationally representative household\nsurvey data.",
@@ -3418,7 +4383,7 @@
     "stars": 1
   },
   {
-    "id": 2501,
+    "id": 1113,
     "package_name": "rincewind",
     "title": "Utilities for processing forecasts matrices",
     "description": "This package contains utility functions for processing\nforecasts matrices.",
@@ -3457,7 +4422,436 @@
     "stars": 1
   },
   {
-    "id": 2170,
+    "id": 1,
+    "package_name": "ALERT",
+    "title": "The Above Local Elevated Respiratory illness Threshold (ALERT) Algorithm",
+    "description": "A program that helps hospitals prospectively determine the start and end to a period of elevated influenza incidence in a community.",
+    "version": "0.1",
+    "maintainer": "Nicholas G Reich <nick@umass.edu>",
+    "url": "https://github.com/reichlab/ALERT",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 9
+  },
+  {
+    "id": 34,
+    "package_name": "DRLm",
+    "title": "Dose-Response models currently for Listeria monocytogenes",
+    "description": "This package provides the functions of the Dose-Response model for Listeria monocytogenes from WHO 2024.",
+    "version": "0.1.1",
+    "maintainer": "Regis Pouillot <rpouillot.work@gmail.com>",
+    "url": "https://github.com/WorldHealthOrganization/DRLm",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 62,
+    "package_name": "ForecastFramework",
+    "title": "A Basis for Modular Model Creation",
+    "description": "Create modular models.  Quickly prototype models whose input includes (multiple) time series data.  Create pieces of model use cases separately, and swap out particular models as desired. Create modeling competitions, data processing pipelines, and re-useable models.",
+    "version": "0.10.2",
+    "maintainer": "Joshua Kaminsky <jkaminsky@jhu.edu>",
+    "url": "https://github.com/HopkinsIDD/ForecastFramework",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 12
+  },
+  {
+    "id": 80,
+    "package_name": "IDSpatialStats",
+    "title": "Estimate Global Clustering in Infectious Disease",
+    "description": "Implements various novel and standard clustering statistics and",
+    "version": "0.4.0",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/IDSpatialStats",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 6
+  },
+  {
+    "id": 101,
+    "package_name": "OutbreakExtractR",
+    "title": "Extract outbreaks",
+    "description": "This package",
+    "version": "1.0.0",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/OutbreakExtractR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 205,
+    "package_name": "TSIRsim",
+    "title": "Simulating TSIR models",
+    "description": "Code for simulating TSIR models.",
+    "version": "0.0.1",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/TSIRsim",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 242,
+    "package_name": "anthro",
+    "title": "Computation of the WHO Child Growth Standards",
+    "description": "Provides WHO Child Growth Standards (z-scores) with",
+    "version": "1.0.1.9000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/anthro",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 40
+  },
+  {
+    "id": 243,
+    "package_name": "anthroplus",
+    "title": "Computation of the WHO 2007 References for School-Age Children and",
+    "description": "Provides WHO 2007 References for School-age Children and",
+    "version": "1.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/anthroplus",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 5
+  },
+  {
+    "id": 305,
+    "package_name": "bmat",
+    "title": "bmat",
+    "description": "BMat and BMis, maternal mortality estimation.",
+    "version": "1.0.0",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/bmat",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 10
+  },
+  {
+    "id": 343,
+    "package_name": "casecountapp",
+    "title": "Create an interactive application to view case count data",
+    "description": "Functions to create, view, and deploy interactive applications of multi-resolution geographical case count time series data.",
+    "version": "0.0.2",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/casecountapp",
+    "exports": [],
+    "topics": ["case-counts", "eios", "r", "visualization"],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 344,
+    "package_name": "cdcFlu20172018",
+    "title": "code for cdc flu contest 2017-2018",
+    "description": "code for cdc flu contest 2017-2018",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/2017-2018-cdc-flu-contest",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 3
+  },
+  {
+    "id": 345,
+    "package_name": "cdcFlu20182019",
+    "title": "Code for Reich Lab entries in CDC flu contest 2018-2019",
+    "description": "code for cdc flu contest 2018-2019",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/2018-2019-cdc-flu-contest",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 346,
+    "package_name": "cdcForecastUtils",
+    "title": "Utility functions for CDC forecasts",
+    "description": "Utility functions for generating and plotting forecasts from a variety of models for infectious disease forecasting challenges run by the CDC.",
+    "version": "0.1.9.6",
+    "maintainer": "Nutcha Wattanachit <nwattanachit@umass.edu>",
+    "url": "https://github.com/reichlab/cdcForecastUtils",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 4
+  },
+  {
+    "id": 347,
+    "package_name": "cdcfluforecasts",
+    "title": "Code for Kernel of Truth entries in CDC FluSight Challenge",
+    "description": "code for cdc flu contest 2019-2020",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/cdcfluforecasts",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 348,
+    "package_name": "cdcfluutils",
+    "title": "Utility functions for CDC flu forecasts for team Kernel of Truth",
+    "description": "Utility functions for generating and plotting forecasts from a variety of",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/cdcfluutils",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 414,
+    "package_name": "covid19.forecasts.uk",
+    "title": "",
+    "description": "",
+    "version": "",
+    "maintainer": "Sebastian Funk <sebastian.funk@lshtm.ac.uk>",
+    "url": "",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 417,
+    "package_name": "covidImportation",
+    "title": "Estimating the Number of Imported COVID-19 Cases",
+    "description": "What the package does (one paragraph).",
+    "version": "1.7",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/covidImportation",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 3
+  },
+  {
+    "id": 460,
+    "package_name": "densitystackr",
+    "title": "Flexible model stacking for models that output predictive distributions.",
+    "description": "Flexible model stacking for models that output predictive distributions.",
+    "version": "0.0.1",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/densitystackr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 489,
+    "package_name": "doseresponsemodels",
+    "title": "Dose-Response models currently for Listeria monocytogenes",
+    "description": "This package provides the functions of the Dose-Response model for Listeria monocytogenes from WHO 2024.",
+    "version": "0.1.2",
+    "maintainer": "Regis Pouillot <rpouillot.work@gmail.com>",
+    "url": "https://github.com/WorldHealthOrganization/doseresponsemodels",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 529,
+    "package_name": "epikinetics",
+    "title": "Biomarker Kinetics Modelling",
+    "description": "Fit kinetic curves to biomarker data, using a Bayesian hierarchical model.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/seroanalytics/epikinetics",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 3
+  },
+  {
+    "id": 572,
+    "package_name": "finderquery",
+    "title": "Utilities for Building EIOS Finder Queries",
+    "description": "Provides utilities for building EIOS Finder queries in a simple and intuitive way.",
+    "version": "0.1.0",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/finderquery",
+    "exports": [],
+    "topics": "eios",
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 588,
+    "package_name": "forecastTools",
+    "title": "Evaluation of time-series forecasts",
+    "description": "An R package with tools for managing, evaluating forecasts of time-series",
+    "version": "0.0.1",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/forecastTools",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 606,
+    "package_name": "geocard",
+    "title": "Create case counts \"card\" visualizations for a geographic entity",
+    "description": "Create an interactive visualization of the progression of case counts for a given geographic entity. Used in COVID-19 case counts displays.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/geocard",
+    "exports": [],
+    "topics": ["case-counts", "eios"],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 616,
+    "package_name": "geoutils",
+    "title": "Geographic metadata for unifying multi-source data",
+    "description": "Contains datasets with metadata for geographic entities (continents, WHO regions, countries/territories, etc.) with specified standards for codes and names, used for unifying data reported from multiple sources.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/geoutils",
+    "exports": [],
+    "topics": ["eios", "geography", "r"],
+    "score": "NA",
+    "stars": 4
+  },
+  {
+    "id": 644,
+    "package_name": "globaltoolbox",
+    "title": "Identify Location Names and Link with Other Data",
+    "description": "Allows users to standardize location names, and use those standardized names to extract data about the location.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/globaltoolbox",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 645,
+    "package_name": "globaltoolboxlite",
+    "title": "Identify Location Names and Link with Other Data, lite version",
+    "description": "Allows users to standardize location names.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/globaltoolboxlite",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 648,
+    "package_name": "godataR",
+    "title": "Connecting R with the Go.Data Application",
+    "description": "A set of functions to connect R to Go.Data.",
+    "version": "2.0.0",
+    "maintainer": "The WHO Go.Data Team <godata@who.int>",
+    "url": "https://github.com/WorldHealthOrganization/godataR",
+    "exports": [],
+    "topics": ["api", "covid19", "epidemiology", "godata", "r-analytics"],
+    "score": "NA",
+    "stars": 13
+  },
+  {
+    "id": 687,
+    "package_name": "hitRcovid",
+    "title": "Loads, filters, and analyzes the HIT-COVID database",
+    "description": "Loads the HIT-COVID database and contains functions to filter and visualize the intervention data and pair it with epidemiological information. The Health Intervention Tracking for COVID-19 (HIT-COVID) project tracks the implementation and relaxation of public health and social measures (PHSMs) taken by governments to slow transmission of SARS-COV-2 globally. Each change in policy and corresponding date is documented at the first-level  administrative unit (e.g., states, districts) and nationally for all countries with more detailed  geographic resolution in some locations (e.g., counties in the US). For a detailed description of the methods see Zheng et al. (2020) <doi:10.1038/s41597-020-00610-2>.",
+    "version": "0.0.0.9000",
+    "maintainer": "Andrew Azman <azman@jhu.edu>",
+    "url": "https://github.com/HopkinsIDD/hitRcovid",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 694,
+    "package_name": "hubEnsembles",
+    "title": "Building Simple Ensembles from Hub Forecasts",
+    "description": "",
+    "version": "0.0.0.9000",
+    "maintainer": "Nicholas G. Reich <nick@umass.edu>",
+    "url": "https://github.com/reichlab/hubEnsembles",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 702,
+    "package_name": "idforecastutils",
+    "title": "Utility functions for general infectious disease forecasting use",
+    "description": "A set of utility functions for various infectious disease forecasting models, exercises, and rounds.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/idforecastutils",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 736,
+    "package_name": "kcde",
+    "title": "Kernel conditional density estimation with flexible kernel",
+    "description": "A flexible implementation of kernel conditional density estimation.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/kcde",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 4
+  },
+  {
+    "id": 740,
+    "package_name": "lab2godata",
+    "title": "Record linkage between raw lab data and Go.Data records",
+    "description": "A set of functions match lab data to existing case or lab records in Go.Data.  The matching case or lab record IDs are appended to the lab data, thus facilitating bulk import into Go.Data.",
+    "version": "1.0.0",
+    "maintainer": "The WHO Go.Data Team <godata@who.int>",
+    "url": "https://github.com/WorldHealthOrganization/lab2godata",
+    "exports": [],
+    "topics": ["godata", "laboratory-automation", "r", "rshiny-application"],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 813,
+    "package_name": "micronutrients",
+    "title": "What the Package Does (One Line, Title Case)",
+    "description": "What the package does (one paragraph).",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/MNSurveyAnalyserCRAN",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 869,
     "package_name": "naomi.utils",
     "title": "",
     "description": "",
@@ -3470,7 +4864,7 @@
     "stars": 0
   },
   {
-    "id": 2215,
+    "id": 903,
     "package_name": "odin.ui",
     "title": "",
     "description": "",
@@ -3483,7 +4877,85 @@
     "stars": 0
   },
   {
-    "id": 2640,
+    "id": 955,
+    "package_name": "pdtmvn",
+    "title": "Partially discretized truncated multivariate normal distribution",
+    "description": "Sampling, density, distribution, and quantile functions for the partially discretized truncated multivariate normal distribution",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/pdtmvn",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 965,
+    "package_name": "phylosamp",
+    "title": "Sample Size Calculations for Molecular and Phylogenetic Studies",
+    "description": "Implements novel tools for estimating sample sizes needed for phylogenetic studies, including",
+    "version": "1.0.1",
+    "maintainer": "Justin Lessler <jlessler@unc.edu>",
+    "url": "https://github.com/HopkinsIDD/phylosamp",
+    "exports": [],
+    "topics": ["package", "phylogenetics", "r", "sampling"],
+    "score": "NA",
+    "stars": 13
+  },
+  {
+    "id": 1010,
+    "package_name": "predx",
+    "title": "Tools for working with predictions",
+    "description": "This package facilitates working with predictions. It includes robust, specific, and validated prediction classes (prediction distribution types), tools for converting and efficiently storing prediction data (CSV <-> R <-> JSON), and basic tools for analyzing predictions.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/cdcepi/predx",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 6
+  },
+  {
+    "id": 1036,
+    "package_name": "qraLm",
+    "title": "Functions to develop quantitative risk assessment for Listeria monocytogenes in foods",
+    "description": "qraLm: A R package for quantitative risk assessment for Listeria monocytogenes in foods.",
+    "version": "0.1.2",
+    "maintainer": "Vasco Cadavez <vcadavez@ipb.pt>",
+    "url": "https://github.com/WorldHealthOrganization/qraLm",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 1178,
+    "package_name": "sarimaTD",
+    "title": "SARIMA Models with Transformations and Seasonal Differencing",
+    "description": "A set of wrapper functions around the forecast package to simplify",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/sarimaTD",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 4
+  },
+  {
+    "id": 1189,
+    "package_name": "seroCOP-api",
+    "title": "Minimal API for seroCOP Model Fitting",
+    "description": "A lightweight Plumber API that exposes a /fit endpoint to run brms-based seroCOP fits on a server and return JSON summaries and plots.",
+    "version": "0.1.0",
+    "maintainer": "",
+    "url": "https://github.com/seroanalytics/seroCOP-api",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 1191,
     "package_name": "serofoi",
     "title": "",
     "description": "",
@@ -3494,5 +4966,174 @@
     "topics": [],
     "score": "NA",
     "stars": 0
+  },
+  {
+    "id": 1192,
+    "package_name": "serojump",
+    "title": "A serological inference package using reversible jump mcmc",
+    "description": "The `serojump` package provides tools for fitting serological models to antibody kinetics data using reversible-jump Markov Chain Monte Carlo (RJ-MCMC). It enables researchers to model the dynamics of antibody levels in response to infections, incorporating both observational and antibody kinetics models. The package supports the inclusion of priors and various exposure scenarios, making it highly flexible for serological data analysis.",
+    "version": "0.1.0",
+    "maintainer": "",
+    "url": "https://github.com/seroanalytics/serojump",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 3
+  },
+  {
+    "id": 1193,
+    "package_name": "serosim",
+    "title": "Serosurvey simulation",
+    "description": "serosim is an open source R package designed to aid inference",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/seroanalytics/serosim",
+    "exports": [],
+    "topics": ["antibodies", "infectious-disease-epidemiology", "serological-surveys", "serology", "serosurvey", "simulation-framework"],
+    "score": "NA",
+    "stars": 7
+  },
+  {
+    "id": 1194,
+    "package_name": "serosolver",
+    "title": "Inference Framework for Serological Data",
+    "description": "Given a table of serological data for a population, infers the",
+    "version": "1.1.1",
+    "maintainer": "James Hay <jameshay218@gmail.com>",
+    "url": "https://github.com/seroanalytics/serosolver",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 19
+  },
+  {
+    "id": 1195,
+    "package_name": "serovizr",
+    "title": "R API for SeroViz app",
+    "description": "\"R API for SeroViz app.\"",
+    "version": "0.0.0",
+    "maintainer": "",
+    "url": "https://github.com/seroanalytics/serovizr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 1226,
+    "package_name": "simplets",
+    "title": "Simple models for time series forecasting",
+    "description": "Simple models for time series forecasting",
+    "version": "0.0.0.1000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/simplets",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 1256,
+    "package_name": "spatialtau",
+    "title": "A function to estimate global clustering in infectious disease",
+    "description": "",
+    "version": "0.1",
+    "maintainer": "Shaun Truelove <shauntruelove@jhu.edu>",
+    "url": "https://github.com/HopkinsIDD/spatialtau",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 1267,
+    "package_name": "ssr",
+    "title": "Prediction via kernel conditional density estimation with non-product kernel specifications",
+    "description": "What the package does (one paragraph)",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/dengue-ssr-prediction",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 1268,
+    "package_name": "ssrFlu",
+    "title": "Runs state-space reconstruction for CDC flu challenge",
+    "description": "Runs state-space reconstruction for CDC flu challenge",
+    "version": "0.0.1",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/ssr-influenza-competition",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 1276,
+    "package_name": "stepsWHSapp",
+    "title": "WHO STEPS Depression Self-assessment Tool",
+    "description": "The tool generates a real-time assessment of potential depression based on World Health Survey (WHS) algorithm, which is used in STEPS Depressive symptoms module.",
+    "version": "0.0.1.0000",
+    "maintainer": "",
+    "url": "https://github.com/WorldHealthOrganization/stepsWHSapp",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
+  },
+  {
+    "id": 1386,
+    "package_name": "trendsEnsemble",
+    "title": "Functions to Create the UMass-trends_ensemble Model",
+    "description": "A collection of functions used to create the UMass-trends_ensemble,",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/trendsEnsemble",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 1393,
+    "package_name": "tti",
+    "title": "Test-trace-isolate Recursive Equations",
+    "description": "Recursive equations to calculate cumulative percentage of",
+    "version": "0.1.0",
+    "maintainer": "",
+    "url": "https://github.com/HopkinsIDD/tti",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 1457,
+    "package_name": "xgbstack",
+    "title": "Flexible model stacking via gradient boosting for models that output predictive distributions.",
+    "description": "Flexible model stacking via gradient boosting for models that output predictive distributions.",
+    "version": "0.0.0.9000",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/xgbstack",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 1
+  },
+  {
+    "id": 1477,
+    "package_name": "zoltr",
+    "title": "Interface to the 'Zoltar' Forecast Repository API",
+    "description": "'Zoltar' <https://www.zoltardata.com/> is a website that provides a repository of model forecast results",
+    "version": "1.0.2",
+    "maintainer": "",
+    "url": "https://github.com/reichlab/zoltr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 2
   }
 ]

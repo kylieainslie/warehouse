@@ -63,7 +63,7 @@ function searchPackages(query) {
     return [];
   }
 
-  const results = fuse.search(query.trim(), { limit: 20 });
+  const results = fuse.search(query.trim(), { limit: 50 });
 
   return results.map(r => {
     // Get original package data with arrays intact
@@ -73,6 +73,13 @@ function searchPackages(query) {
       searchScore: r.score,
       matches: r.matches
     };
+  }).sort((a, b) => {
+    // Sort by package score (highest first), then by search relevance
+    const scoreA = a.score || 0;
+    const scoreB = b.score || 0;
+    if (scoreB !== scoreA) return scoreB - scoreA;
+    // If scores equal, use Fuse search relevance (lower is better)
+    return (a.searchScore || 0) - (b.searchScore || 0);
   });
 }
 
