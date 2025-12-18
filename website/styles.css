@@ -418,18 +418,19 @@ tr:hover {
    Enhanced Package Cards
    ================================ */
 .package-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
 }
 
 .package-card {
   border: 1px solid #e1e4e8;
   border-radius: 8px;
   padding: 1.25rem;
-  margin-bottom: 1rem;
   background: white;
   transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .package-card:hover {
@@ -540,7 +541,7 @@ tr:hover {
 .package-actions {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: auto;
   padding-top: 0.75rem;
   border-top: 1px solid #e9ecef;
 }
