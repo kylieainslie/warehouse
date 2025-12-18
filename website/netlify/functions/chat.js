@@ -2,13 +2,6 @@
 // Netlify serverless function to proxy Claude API requests
 
 const Anthropic = require('@anthropic-ai/sdk');
-const fs = require('fs');
-const path = require('path');
-
-// Initialize Anthropic client
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY
-});
 
 // System prompt for the package recommendation assistant
 const SYSTEM_PROMPT = `You are The Warehouse's R package assistant, helping users find the right R packages for their data analysis tasks.
@@ -77,6 +70,11 @@ exports.handler = async function(event, context) {
   }
 
   try {
+    // Initialize Anthropic client inside handler (env vars available here)
+    const anthropic = new Anthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY
+    });
+
     const body = JSON.parse(event.body);
     const { message, history = [] } = body;
 
