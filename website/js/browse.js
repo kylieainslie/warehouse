@@ -149,7 +149,7 @@ function renderCategoryCard(category) {
 
   return `
     <div class="category-card" data-category="${category.id}">
-      <a href="${category.id}.qmd" class="category-card-link">
+      <a href="/categories/${category.id}.qmd" class="category-card-link">
         <div class="card-header">
           <span class="card-emoji">${category.emoji}</span>
           <div class="card-title-area">
