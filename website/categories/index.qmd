@@ -1,61 +1,35 @@
 ---
 title: "Browse Packages"
+include-in-header:
+  - text: |
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 ---
 
-<div class="category-grid">
+<div class="browse-page">
 
-<a href="../index.qmd" class="category-tile general">
-<div class="tile-icon">📦</div>
-<div class="tile-name">All Packages</div>
-<div class="tile-count">22,232 packages</div>
-</a>
+<div class="browse-header">
+<p class="browse-subtitle">Explore R packages organized by category</p>
+</div>
 
-<a href="epidemiology.qmd" class="category-tile epidemiology">
-<div class="tile-icon">🦠</div>
-<div class="tile-name">Epidemiology</div>
-<div class="tile-count">178 packages</div>
-</a>
+<div class="browse-controls">
+<div class="browse-actions">
+<button class="browse-action-btn" onclick="expandAllSections()">
+<i class="bi bi-arrows-expand"></i> Expand All
+</button>
+<button class="browse-action-btn" onclick="collapseAllSections()">
+<i class="bi bi-arrows-collapse"></i> Collapse All
+</button>
+</div>
+</div>
 
-<a href="ropensci.qmd" class="category-tile ropensci">
-<div class="tile-icon">🔬</div>
-<div class="tile-name">rOpenSci</div>
-<div class="tile-count">362 packages</div>
-</a>
-
-<a href="tidyverse.qmd" class="category-tile tidyverse">
-<div class="tile-icon">🧹</div>
-<div class="tile-name">Tidyverse</div>
-<div class="tile-count">214 packages</div>
-</a>
-
-<a href="visualization.qmd" class="category-tile visualization">
-<div class="tile-icon">📊</div>
-<div class="tile-name">Visualization</div>
-<div class="tile-count">103 packages</div>
-</a>
-
-<a href="spatial.qmd" class="category-tile spatial">
-<div class="tile-icon">🗺️</div>
-<div class="tile-name">Spatial</div>
-<div class="tile-count">33 packages</div>
-</a>
-
-<a href="statistics.qmd" class="category-tile statistics">
-<div class="tile-icon">📈</div>
-<div class="tile-name">Statistics</div>
-<div class="tile-count">32 packages</div>
-</a>
-
-<a href="pharmacometrics.qmd" class="category-tile pharmacometrics">
-<div class="tile-icon">💊</div>
-<div class="tile-name">Pharmacometrics</div>
-<div class="tile-count">23 packages</div>
-</a>
-
-<a href="infrastructure.qmd" class="category-tile infrastructure">
-<div class="tile-icon">⚙️</div>
-<div class="tile-name">Infrastructure</div>
-<div class="tile-count">168 packages</div>
-</a>
+<div id="browse-container" class="browse-container">
+<!-- Dynamic content loaded by browse.js -->
+<div class="browse-loading">
+<div class="loading-spinner"></div>
+<p>Loading categories...</p>
+</div>
+</div>
 
 </div>
+
+<script src="../js/browse.js"></script>
