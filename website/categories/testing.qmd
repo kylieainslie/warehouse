@@ -1,14 +1,14 @@
 ---
-title: "Epidemiology Packages"
+title: "Testing Packages"
 ---
 
-<div id="category-packages" data-category="epidemiology"></div>
+<div id="category-packages" data-category="testing"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', async function() {
   const container = document.getElementById('category-packages');
   try {
-    const response = await fetch('../data/categories/epidemiology.json');
+    const response = await fetch('../data/categories/testing.json');
     if (!response.ok) throw new Error('Failed to load');
     const data = await response.json();
 

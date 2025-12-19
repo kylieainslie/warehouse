@@ -8,7 +8,7 @@ title: "rOpenSci Packages"
 document.addEventListener('DOMContentLoaded', async function() {
   const container = document.getElementById('category-packages');
   try {
-    const response = await fetch('/data/categories/ropensci.json');
+    const response = await fetch('../data/categories/ropensci.json');
     if (!response.ok) throw new Error('Failed to load');
     const data = await response.json();
 
