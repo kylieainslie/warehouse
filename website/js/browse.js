@@ -77,45 +77,56 @@ function getPackageLogoUrl(pkg) {
   return `https://r-universe.dev/${pkg.package_name}/logo.png`;
 }
 
+// Fetch subcategories for a given section
+async function loadSubcategories(sectionId) {
+  try {
+    const response = await fetch(`/categories/${sectionId}.json`);
+    if (!response.ok) throw new Error(`Failed to load subcategories for ${sectionId}`);
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return []; // Return empty array if fetch fails
+  }
+}
+
+// Render a single section, including its subcategories
+async function renderSection(section) {
+  const sectionEl = document.createElement('section');
+  sectionEl.className = 'category-section';
+
+  // Section header
+  const header = document.createElement('h2');
+  header.textContent = section.title;
+  sectionEl.appendChild(header);
+
+  // Container for subcategories
+  const subcatDiv = document.createElement('div');
+  subcatDiv.className = 'subcategories';
+  sectionEl.appendChild(subcatDiv);
+
+  // Load and render subcategories
+  const subcategories = await loadSubcategories(section.id);
+  subcategories.forEach(sub => {
+    const subEl = document.createElement('div');
+    subEl.className = 'subcategory';
+    subEl.innerHTML = `<a href="${sub.url}">${sub.title}</a>`;
+    subcatDiv.appendChild(subEl);
+  });
+
+  return sectionEl;
+}
+
 // Render the entire browse page
-function renderBrowsePage() {
+async function renderBrowsePage() {
   const container = document.getElementById('browse-container');
   if (!container || !categoriesData) return;
 
-  const sectionsHtml = categoriesData.sections.map(section =>
-    renderSection(section)
-  ).join('');
+  container.innerHTML = ''; // Clear existing content
 
-  container.innerHTML = sectionsHtml;
-}
-
-// Render a single section with its categories
-function renderSection(section) {
-  const categoryCount = section.categories.length;
-  const isExpanded = section.expanded;
-
-  const categoriesHtml = section.categories.map(cat =>
-    renderCategoryCard(cat)
-  ).join('');
-
-  return `
-    <div class="browse-section" data-section-id="${section.id}">
-      <button class="section-header ${isExpanded ? 'expanded' : ''}"
-              onclick="toggleSection('${section.id}')"
-              aria-expanded="${isExpanded}">
-        <span class="section-chevron">
-          <i class="bi bi-chevron-right"></i>
-        </span>
-        <span class="section-name">${section.name}</span>
-        <span class="section-count">${categoryCount} categories</span>
-      </button>
-      <div class="section-content ${isExpanded ? 'expanded' : ''}">
-        <div class="category-cards">
-          ${categoriesHtml}
-        </div>
-      </div>
-    </div>
-  `;
+  for (const section of categoriesData.sections) {
+    const sectionEl = await renderSection(section);
+    container.appendChild(sectionEl);
+  }
 }
 
 // Render a single category card with Discover-style featured packages
