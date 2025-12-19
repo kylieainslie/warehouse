@@ -1,0 +1,305 @@
+{
+  "sections": [
+    {
+      "id": "data-science",
+      "name": "Data Science & Analysis",
+      "expanded": false,
+      "categories": [
+        {
+          "id": "data-wrangling",
+          "name": "Data Wrangling",
+          "emoji": "🧹",
+          "description": "Transform, clean, and reshape data with tidyverse and beyond",
+          "featured": ["dplyr", "tidyr", "data.table"]
+        },
+        {
+          "id": "visualization",
+          "name": "Visualization",
+          "emoji": "📊",
+          "description": "Charts, plots, dashboards, and publication-ready graphics",
+          "featured": ["ggplot2", "plotly", "highcharter"]
+        },
+        {
+          "id": "machine-learning",
+          "name": "Machine Learning",
+          "emoji": "🤖",
+          "description": "Predictive modeling, classification, clustering, and deep learning",
+          "featured": ["tidymodels", "caret", "mlr3"]
+        },
+        {
+          "id": "statistics",
+          "name": "Statistics",
+          "emoji": "📈",
+          "description": "Hypothesis testing, regression, and Bayesian inference",
+          "featured": ["brms", "lme4", "rstanarm"]
+        },
+        {
+          "id": "time-series",
+          "name": "Time Series",
+          "emoji": "⏱️",
+          "description": "Forecasting, temporal analysis, and seasonal decomposition",
+          "featured": ["forecast", "tseries", "prophet"]
+        },
+        {
+          "id": "text-mining",
+          "name": "Text Mining",
+          "emoji": "📝",
+          "description": "NLP, sentiment analysis, topic modeling, and text processing",
+          "featured": ["tidytext", "quanteda", "text2vec"]
+        },
+        {
+          "id": "databases",
+          "name": "Databases",
+          "emoji": "🗄️",
+          "description": "Connect to SQL, NoSQL, and cloud databases",
+          "featured": ["DBI", "dbplyr", "RPostgres"]
+        }
+      ]
+    },
+    {
+      "id": "domain-specific",
+      "name": "Domain-Specific",
+      "expanded": true,
+      "categories": [
+        {
+          "id": "epidemiology",
+          "name": "Epidemiology",
+          "emoji": "🦠",
+          "description": "Disease modeling, outbreak analysis, and public health surveillance",
+          "featured": ["EpiEstim", "incidence2", "epiparameter"]
+        },
+        {
+          "id": "genomics",
+          "name": "Genomics",
+          "emoji": "🧬",
+          "description": "Bioinformatics, sequence analysis, and gene expression",
+          "featured": ["Biostrings", "DESeq2", "GenomicRanges"]
+        },
+        {
+          "id": "ecology",
+          "name": "Ecology",
+          "emoji": "🌿",
+          "description": "Species distribution, biodiversity, and environmental modeling",
+          "featured": ["vegan", "ape", "phyloseq"]
+        },
+        {
+          "id": "finance",
+          "name": "Finance",
+          "emoji": "💹",
+          "description": "Quantitative finance, risk analysis, and portfolio optimization",
+          "featured": ["quantmod", "PerformanceAnalytics", "tidyquant"]
+        },
+        {
+          "id": "pharmacometrics",
+          "name": "Pharmacometrics",
+          "emoji": "💊",
+          "description": "PK/PD modeling, drug development, and clinical trials",
+          "featured": ["nlmixr2", "mrgsolve", "PKPDsim"]
+        },
+        {
+          "id": "psychology",
+          "name": "Psychology",
+          "emoji": "🧠",
+          "description": "Psychometrics, experimental design, and behavioral analysis",
+          "featured": ["psych", "lavaan", "lme4"]
+        },
+        {
+          "id": "sports-analytics",
+          "name": "Sports Analytics",
+          "emoji": "⚽",
+          "description": "Player statistics, game analysis, and performance metrics",
+          "featured": ["nflverse", "baseballr", "hoopR"]
+        },
+        {
+          "id": "social-science",
+          "name": "Social Science",
+          "emoji": "👥",
+          "description": "Survey analysis, network analysis, and demographic research",
+          "featured": ["survey", "igraph", "srvyr"]
+        }
+      ]
+    },
+    {
+      "id": "geospatial",
+      "name": "Geospatial",
+      "expanded": false,
+      "categories": [
+        {
+          "id": "mapping",
+          "name": "Mapping",
+          "emoji": "🗺️",
+          "description": "Interactive maps, leaflet, and cartography",
+          "featured": ["leaflet", "tmap", "mapview"]
+        },
+        {
+          "id": "spatial-analysis",
+          "name": "Spatial Analysis",
+          "emoji": "📍",
+          "description": "Geostatistics, spatial modeling, and raster/vector data",
+          "featured": ["sf", "terra", "stars"]
+        },
+        {
+          "id": "remote-sensing",
+          "name": "Remote Sensing",
+          "emoji": "🛰️",
+          "description": "Satellite imagery, earth observation, and GIS",
+          "featured": ["raster", "sits", "getSpatialData"]
+        }
+      ]
+    },
+    {
+      "id": "web-apis",
+      "name": "Web & APIs",
+      "expanded": false,
+      "categories": [
+        {
+          "id": "web-scraping",
+          "name": "Web Scraping",
+          "emoji": "🕷️",
+          "description": "Extract data from websites and HTML documents",
+          "featured": ["rvest", "httr2", "polite"]
+        },
+        {
+          "id": "api-clients",
+          "name": "API Clients",
+          "emoji": "🔌",
+          "description": "Connect to REST APIs, web services, and data sources",
+          "featured": ["httr2", "jsonlite", "curl"]
+        },
+        {
+          "id": "shiny",
+          "name": "Shiny",
+          "emoji": "✨",
+          "description": "Interactive web applications and dashboards",
+          "featured": ["shiny", "shinydashboard", "golem"]
+        },
+        {
+          "id": "reporting",
+          "name": "Reporting",
+          "emoji": "📄",
+          "description": "R Markdown, Quarto, and automated reports",
+          "featured": ["rmarkdown", "knitr", "officer"]
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "expanded": false,
+      "categories": [
+        {
+          "id": "package-development",
+          "name": "Package Development",
+          "emoji": "📦",
+          "description": "Create, test, and document R packages",
+          "featured": ["devtools", "usethis", "roxygen2"]
+        },
+        {
+          "id": "testing",
+          "name": "Testing",
+          "emoji": "✅",
+          "description": "Unit testing, CI/CD, and code quality",
+          "featured": ["testthat", "covr", "lintr"]
+        },
+        {
+          "id": "performance",
+          "name": "Performance",
+          "emoji": "⚡",
+          "description": "Profiling, optimization, and parallel computing",
+          "featured": ["Rcpp", "future", "bench"]
+        },
+        {
+          "id": "infrastructure",
+          "name": "Infrastructure",
+          "emoji": "⚙️",
+          "description": "DevOps, deployment, and system administration",
+          "featured": ["renv", "pak", "rig"]
+        }
+      ]
+    },
+    {
+      "id": "curated-collections",
+      "name": "Curated Collections",
+      "expanded": false,
+      "categories": [
+        {
+          "id": "tidyverse",
+          "name": "Tidyverse",
+          "emoji": "🧹",
+          "description": "The tidyverse ecosystem for modern data science",
+          "featured": ["dplyr", "ggplot2", "tidyr"]
+        },
+        {
+          "id": "ropensci",
+          "name": "rOpenSci",
+          "emoji": "🔬",
+          "description": "Peer-reviewed packages for reproducible research",
+          "featured": ["targets", "tarchetypes", "rnoaa"]
+        },
+        {
+          "id": "bioconductor",
+          "name": "Bioconductor",
+          "emoji": "🧫",
+          "description": "Bioinformatics tools from the Bioconductor project",
+          "featured": ["GenomicRanges", "Biostrings", "DESeq2"]
+        },
+        {
+          "id": "posit",
+          "name": "Posit/RStudio",
+          "emoji": "🔷",
+          "description": "Official packages from Posit (formerly RStudio)",
+          "featured": ["shiny", "rmarkdown", "tidyverse"]
+        },
+        {
+          "id": "easystats",
+          "name": "easystats",
+          "emoji": "📐",
+          "description": "User-friendly statistical analysis and reporting",
+          "featured": ["report", "performance", "see"]
+        },
+        {
+          "id": "r-lib",
+          "name": "r-lib",
+          "emoji": "🛠️",
+          "description": "Core infrastructure packages for R developers",
+          "featured": ["cli", "rlang", "vctrs"]
+        },
+        {
+          "id": "mlverse",
+          "name": "mlverse",
+          "emoji": "🧠",
+          "description": "Machine learning ecosystem (tidymodels, torch, etc.)",
+          "featured": ["tidymodels", "torch", "brulee"]
+        },
+        {
+          "id": "r-spatial",
+          "name": "r-spatial",
+          "emoji": "🌍",
+          "description": "The r-spatial ecosystem for geospatial analysis",
+          "featured": ["sf", "terra", "stars"]
+        },
+        {
+          "id": "fastverse",
+          "name": "fastverse",
+          "emoji": "⚡",
+          "description": "High-performance data manipulation packages",
+          "featured": ["collapse", "data.table", "kit"]
+        },
+        {
+          "id": "epiverse-trace",
+          "name": "Epiverse-TRACE",
+          "emoji": "🦠",
+          "description": "Outbreak analytics tools from Epiverse",
+          "featured": ["EpiEstim", "epiparameter", "cfr"]
+        },
+        {
+          "id": "stan",
+          "name": "Stan",
+          "emoji": "📊",
+          "description": "Bayesian modeling with Stan and friends",
+          "featured": ["rstan", "brms", "rstanarm"]
+        }
+      ]
+    }
+  ]
+}
