@@ -27,6 +27,22 @@ include-in-header:
 
 <div id="search-results" class="search-results-google"></div>
 
+<div id="discover-section" class="discover-section">
+<h2 class="discover-title">Discover</h2>
+<div class="discover-tabs">
+<button class="discover-tab active" data-tab="trending" onclick="switchDiscoverTab('trending')">
+<i class="bi bi-fire"></i> Trending
+</button>
+<button class="discover-tab" data-tab="new" onclick="switchDiscoverTab('new')">
+<i class="bi bi-clock"></i> New
+</button>
+<button class="discover-tab" data-tab="rising" onclick="switchDiscoverTab('rising')">
+<i class="bi bi-star"></i> Rising Stars
+</button>
+</div>
+<div id="discover-packages"></div>
+</div>
+
 <div class="quick-links">
 <a href="about.qmd">About</a> •
 <a href="submit.qmd">Submit Package</a> •
@@ -38,3 +54,4 @@ include-in-header:
 <script src="js/search.js"></script>
 <script src="js/feedback.js"></script>
 <script src="js/chatbot.js"></script>
+<script src="js/discover.js"></script>
