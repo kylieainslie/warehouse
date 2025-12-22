@@ -1,78 +1,143 @@
 ---
 title: "Data Manipulation Packages"
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>
+        .letter-btn { background: none; border: none; color: #666; cursor: pointer; font-weight: 500; padding: 0 4px; font-size: 0.9rem; }
+        .letter-btn:hover { color: #333; }
+        .letter-btn.active { color: #000; font-weight: 700; }
+        #package-search { width: 100%; max-width: 400px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; margin-bottom: 1em; }
+        .package-card { position: relative; z-index: 1; }
+        .package-card:hover { z-index: 1000; }
+        .package-logo { width: 32px; height: 32px; margin-right: 8px; vertical-align: middle; border-radius: 4px; }
+        .package-title { display: flex; align-items: center; }
+        .package-card:hover .package-tooltip { display: block; }
+        .package-tooltip { display: none; position: absolute; background: #333; color: #fff; padding: 8px 12px; border-radius: 4px; font-size: 0.85rem; max-width: 300px; z-index: 1001; top: 100%; left: 0; margin-top: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        </style>
 ---
 
-<div id="search-container">
-  <input type="text" id="package-search" placeholder="Search packages..." />
-</div>
-
+```{=html}
+<input type="text" id="package-search" placeholder="Search packages..." />
 <div id="alphabet-filter" style="margin: 0.5em 0;"></div>
-
-<div id="category-packages" data-category="data-manipulation"></div>
+<div id="category-packages">Loading packages...</div>
 
 <script>
-document.addEventListener('DOMContentLoaded', async function() {
-  const container = document.getElementById('category-packages');
-  const searchInput = document.getElementById('package-search');
-  const alphabetContainer = document.getElementById('alphabet-filter');
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('category-packages');
+  var searchInput = document.getElementById('package-search');
+  var alphabetContainer = document.getElementById('alphabet-filter');
 
-  let packages = [];
-  let activeLetter = null;
+  var packages = [];
+  var activeLetter = null;
+
+  function getLogoUrl(pkg) {
+    var name = pkg.package_name;
+    var universe = pkg.source_universe || 'cran';
+    if (universe && universe !== 'cran' && universe !== 'cran-direct') {
+      return 'https://' + universe + '.r-universe.dev/' + name + '/logo/small';
+    }
+    return 'https://r-universe.dev/' + name + '/logo/small';
+  }
+
+  function escapeHtml(text) {
+    if (!text) return '';
+    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function getPackageUrl(pkg) {
+    var url = pkg.url || '';
+    var urls = url.split(/[,\n]/).map(function(u) { return u.trim(); }).filter(function(u) { return u; });
+    return urls[0] || '#';
+  }
 
   function renderPackages(list) {
-    container.innerHTML = `
-      <p class="results-count">Found ${list.length} packages</p>
-      <div class="package-list">
-        ${list.slice(0, 50).map(pkg => `
-          <div class="package-card">
-            <div class="package-header">
-              <h3 class="package-title">
-                <a href="${pkg.repository || pkg.url || '#'}" target="_blank">${pkg.package_name}</a>
-              </h3>
-              <span class="package-score">${pkg.score ? pkg.score.toFixed(1) : 'N/A'}</span>
-            </div>
-            <p class="package-description">${pkg.title || 'No description'}</p>
-          </div>
-        `).join('')}
-      </div>
-    `;
+    var html = '<p class="results-count">Found ' + list.length + ' packages</p><div class="package-list">';
+    for (var i = 0; i < Math.min(list.length, 50); i++) {
+      var pkg = list[i];
+      var logoUrl = getLogoUrl(pkg);
+      var desc = escapeHtml(pkg.description || pkg.title || 'No description');
+      html += '<div class="package-card">';
+      html += '<div class="package-header">';
+      html += '<h3 class="package-title">';
+      html += '<img src="' + logoUrl + '" class="package-logo" onerror="this.style.display='none'" alt="" />';
+      html += '<a href="' + getPackageUrl(pkg) + '" target="_blank">' + pkg.package_name + '</a>';
+      html += '</h3>';
+      html += '<span class="package-score">' + (typeof pkg.score === 'number' ? pkg.score.toFixed(1) : 'N/A') + '</span>';
+      html += '</div>';
+      html += '<p class="package-description">' + (pkg.title || 'No description') + '</p>';
+      html += '<div class="package-tooltip">' + desc + '</div>';
+      html += '</div>';
+    }
+    html += '</div>';
+    container.innerHTML = html;
   }
 
   function applyFilters() {
-    const query = searchInput.value.trim().toLowerCase();
-    let filtered = packages;
+    var query = searchInput.value.trim().toLowerCase();
+    var filtered = packages.slice();
+
     if (activeLetter) {
-      filtered = filtered.filter(pkg => pkg.package_name.charAt(0).toUpperCase() === activeLetter);
+      filtered = filtered.filter(function(pkg) {
+        return pkg.package_name.charAt(0).toUpperCase() === activeLetter;
+      });
     }
     if (query) {
-      filtered = filtered.filter(pkg => pkg.package_name.toLowerCase().includes(query));
+      filtered = filtered.filter(function(pkg) {
+        return pkg.package_name.toLowerCase().indexOf(query) >= 0;
+      });
     }
     renderPackages(filtered);
   }
 
-  try {
-    const response = await fetch('../data/categories/data-manipulation.json');
-    if (!response.ok) throw new Error('Failed to load packages');
-    packages = await response.json();
+  fetch('../data/categories/data-manipulation.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      packages = data;
 
-    alphabetContainer.innerHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(l => `<button class="letter-btn" data-letter="${l}">${l}</button>`).join('');
-    renderPackages(packages);
-    searchInput.addEventListener('input', applyFilters);
-    alphabetContainer.querySelectorAll('.letter-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        activeLetter = (activeLetter === this.dataset.letter) ? null : this.dataset.letter;
-        alphabetContainer.querySelectorAll('.letter-btn').forEach(b => b.classList.toggle('active', b.dataset.letter === activeLetter));
+      var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var btns = '';
+      for (var i = 0; i < letters.length; i++) {
+        btns += '<button type="button" class="letter-btn" data-letter="' + letters[i] + '">' + letters[i] + '</button>';
+      }
+      alphabetContainer.innerHTML = btns;
+
+      renderPackages(packages);
+
+      searchInput.addEventListener('input', function() {
         applyFilters();
       });
+
+      var buttons = alphabetContainer.getElementsByClassName('letter-btn');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(e) {
+          var letter = e.target.getAttribute('data-letter');
+
+          if (activeLetter === letter) {
+            activeLetter = null;
+          } else {
+            activeLetter = letter;
+          }
+
+          var allBtns = alphabetContainer.getElementsByClassName('letter-btn');
+          for (var j = 0; j < allBtns.length; j++) {
+            if (allBtns[j].getAttribute('data-letter') === activeLetter) {
+              allBtns[j].classList.add('active');
+            } else {
+              allBtns[j].classList.remove('active');
+            }
+          }
+
+          applyFilters();
+        });
+      }
+    })
+    .catch(function(err) {
+      container.innerHTML = '<p>Error loading packages.</p>';
     });
-  } catch (e) {
-    container.innerHTML = '<p>Unable to load packages. <a href="index.html">Browse all categories</a>.</p>';
-  }
 });
 </script>
-
-<style>
-.letter-btn { background: none; border: none; color: #666; cursor: pointer; font-weight: 500; padding: 0 4px; font-size: 0.9rem; }
-.letter-btn:hover { color: #333; }
-.letter-btn.active { color: #000; font-weight: 700; }
-</style>
+```

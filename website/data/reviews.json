@@ -1,4 +1,101 @@
 {
-  "reviews": [],
-  "updated_at": "2025-12-18T00:00:00.000Z"
+  "reviews": [
+    {
+      "id": "1703001234567",
+      "package_name": "ggplot2",
+      "rating": 5,
+      "title": "Essential for data visualization",
+      "comment": "The grammar of graphics approach makes it incredibly intuitive to build complex visualizations. Once you understand the layering concept, you can create almost any plot imaginable.",
+      "use_case": "Publication-ready figures for academic papers",
+      "author": "DataScientist42",
+      "created_at": "2024-12-15T10:30:00.000Z",
+      "helpful_count": 15,
+      "verified": true
+    },
+    {
+      "id": "1703001234568",
+      "package_name": "dplyr",
+      "rating": 5,
+      "title": "Data wrangling made easy",
+      "comment": "The pipe syntax and verb-based approach completely changed how I work with data. filter(), mutate(), summarize() - it just makes sense.",
+      "use_case": "Daily data cleaning and transformation",
+      "author": "RUser2024",
+      "created_at": "2024-12-14T09:15:00.000Z",
+      "helpful_count": 12,
+      "verified": true
+    },
+    {
+      "id": "1703001234569",
+      "package_name": "EpiNow2",
+      "rating": 4,
+      "title": "Powerful but steep learning curve",
+      "comment": "Excellent for real-time epidemic analysis. The Rt estimation is state-of-the-art. Documentation could be better for beginners.",
+      "use_case": "COVID-19 outbreak analysis",
+      "author": "EpiModeler",
+      "created_at": "2024-12-13T14:20:00.000Z",
+      "helpful_count": 8,
+      "verified": true
+    },
+    {
+      "id": "1703001234570",
+      "package_name": "shiny",
+      "rating": 5,
+      "title": "Best way to share R analyses",
+      "comment": "Building interactive web apps without knowing web development is amazing. The reactive programming model is elegant once you get it.",
+      "use_case": "Internal dashboards for stakeholders",
+      "author": "AppBuilder",
+      "created_at": "2024-12-12T11:45:00.000Z",
+      "helpful_count": 20,
+      "verified": false
+    },
+    {
+      "id": "1703001234571",
+      "package_name": "tidyr",
+      "rating": 4,
+      "title": "pivot_longer saved my life",
+      "comment": "Reshaping data used to be painful. pivot_longer and pivot_wider are intuitive replacements for the old gather/spread functions.",
+      "use_case": "Preparing data for ggplot2",
+      "author": "TidyFan",
+      "created_at": "2024-12-11T16:30:00.000Z",
+      "helpful_count": 6,
+      "verified": true
+    },
+    {
+      "id": "1703001234572",
+      "package_name": "brms",
+      "rating": 5,
+      "title": "Bayesian modeling made accessible",
+      "comment": "The formula interface makes it easy to specify complex hierarchical models. Stan under the hood gives you power without the pain.",
+      "use_case": "Multilevel regression for psychology research",
+      "author": "BayesianBob",
+      "created_at": "2024-12-10T08:00:00.000Z",
+      "helpful_count": 10,
+      "verified": true
+    },
+    {
+      "id": "1703001234573",
+      "package_name": "sf",
+      "rating": 5,
+      "title": "Modern spatial data in R",
+      "comment": "Finally a consistent interface for spatial data. Works seamlessly with dplyr and ggplot2. The switch from sp was worth it.",
+      "use_case": "Mapping disease incidence data",
+      "author": "GeoAnalyst",
+      "created_at": "2024-12-09T13:15:00.000Z",
+      "helpful_count": 9,
+      "verified": true
+    },
+    {
+      "id": "1703001234574",
+      "package_name": "data.table",
+      "rating": 5,
+      "title": "Speed demon for big data",
+      "comment": "When dplyr is too slow, data.table delivers. The syntax is terse but incredibly powerful once learned. Essential for large datasets.",
+      "use_case": "Processing 100M+ row datasets",
+      "author": "BigDataR",
+      "created_at": "2024-12-08T10:00:00.000Z",
+      "helpful_count": 14,
+      "verified": true
+    }
+  ],
+  "updated_at": "2024-12-15T10:30:00.000Z"
 }

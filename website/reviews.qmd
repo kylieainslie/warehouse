@@ -1,0 +1,211 @@
+---
+title: "Package Reviews"
+format:
+  html:
+    include-in-header:
+      text: |
+        <style>
+        #review-search { width: 100%; max-width: 500px; padding: 10px 14px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; margin-bottom: 1em; }
+        .review-filters { display: flex; gap: 1em; flex-wrap: wrap; margin-bottom: 1.5em; align-items: center; }
+        .review-filters select { padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; }
+        .reviews-container { display: flex; flex-direction: column; gap: 1em; }
+        .review-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2em; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .review-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5em; }
+        .review-package { font-size: 1.1em; font-weight: 600; color: #2563eb; }
+        .review-package a { color: inherit; text-decoration: none; }
+        .review-package a:hover { text-decoration: underline; }
+        .review-rating { color: #f59e0b; font-size: 1em; }
+        .review-meta { font-size: 0.85em; color: #666; margin-bottom: 0.5em; }
+        .review-title { font-weight: 600; margin-bottom: 0.3em; }
+        .review-comment { color: #333; line-height: 1.5; }
+        .review-usecase { margin-top: 0.5em; padding: 0.5em; background: #f0f9ff; border-radius: 4px; font-size: 0.9em; color: #0369a1; }
+        .review-stats { display: flex; gap: 2em; margin-bottom: 1.5em; padding: 1em; background: #f8fafc; border-radius: 8px; }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 1.5em; font-weight: 700; color: #2563eb; }
+        .stat-label { font-size: 0.85em; color: #666; }
+        .no-reviews { text-align: center; padding: 2em; color: #666; }
+        .verified-badge { background: #10b981; color: white; font-size: 0.7em; padding: 2px 6px; border-radius: 3px; margin-left: 0.5em; }
+        .helpful-count { font-size: 0.85em; color: #666; margin-top: 0.5em; }
+        </style>
+---
+
+```{=html}
+<div class="review-stats" id="review-stats">
+  <div class="stat-item">
+    <div class="stat-value" id="total-reviews">-</div>
+    <div class="stat-label">Total Reviews</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value" id="avg-rating">-</div>
+    <div class="stat-label">Average Rating</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value" id="packages-reviewed">-</div>
+    <div class="stat-label">Packages Reviewed</div>
+  </div>
+</div>
+
+<div class="review-filters">
+  <input type="text" id="review-search" placeholder="Search reviews by package, author, or content..." />
+  <select id="rating-filter">
+    <option value="">All Ratings</option>
+    <option value="5">5 Stars</option>
+    <option value="4">4+ Stars</option>
+    <option value="3">3+ Stars</option>
+  </select>
+  <select id="sort-by">
+    <option value="recent">Most Recent</option>
+    <option value="helpful">Most Helpful</option>
+    <option value="rating-high">Highest Rated</option>
+    <option value="rating-low">Lowest Rated</option>
+  </select>
+</div>
+
+<div class="reviews-container" id="reviews-container">
+  <p>Loading reviews...</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('reviews-container');
+  var searchInput = document.getElementById('review-search');
+  var ratingFilter = document.getElementById('rating-filter');
+  var sortBy = document.getElementById('sort-by');
+
+  var allReviews = [];
+
+  function formatDate(dateStr) {
+    var d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+  }
+
+  function renderStars(rating) {
+    var stars = '';
+    for (var i = 1; i <= 5; i++) {
+      stars += i <= rating ? '★' : '☆';
+    }
+    return stars;
+  }
+
+  function escapeHtml(text) {
+    if (!text) return '';
+    var div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function updateStats(reviews) {
+    document.getElementById('total-reviews').textContent = reviews.length;
+
+    var totalRating = 0;
+    var ratedCount = 0;
+    var packages = {};
+
+    for (var i = 0; i < reviews.length; i++) {
+      if (reviews[i].rating) {
+        totalRating += reviews[i].rating;
+        ratedCount++;
+      }
+      packages[reviews[i].package_name] = true;
+    }
+
+    var avgRating = ratedCount > 0 ? (totalRating / ratedCount).toFixed(1) : '-';
+    document.getElementById('avg-rating').textContent = avgRating + ' ★';
+    document.getElementById('packages-reviewed').textContent = Object.keys(packages).length;
+  }
+
+  function renderReviews(reviews) {
+    if (reviews.length === 0) {
+      container.innerHTML = '<div class="no-reviews">No reviews found matching your criteria.</div>';
+      return;
+    }
+
+    var html = '';
+    for (var i = 0; i < reviews.length; i++) {
+      var r = reviews[i];
+      html += '<div class="review-card">';
+      html += '<div class="review-card-header">';
+      html += '<div class="review-package"><a href="https://r-universe.dev/search?q=' + encodeURIComponent(r.package_name) + '" target="_blank">' + escapeHtml(r.package_name) + '</a></div>';
+      if (r.rating) {
+        html += '<div class="review-rating">' + renderStars(r.rating) + '</div>';
+      }
+      html += '</div>';
+      html += '<div class="review-meta">By <strong>' + escapeHtml(r.author || 'Anonymous') + '</strong>';
+      if (r.verified) {
+        html += '<span class="verified-badge">Verified</span>';
+      }
+      html += ' on ' + formatDate(r.created_at) + '</div>';
+      if (r.title) {
+        html += '<div class="review-title">' + escapeHtml(r.title) + '</div>';
+      }
+      html += '<div class="review-comment">' + escapeHtml(r.comment) + '</div>';
+      if (r.use_case) {
+        html += '<div class="review-usecase"><strong>Used for:</strong> ' + escapeHtml(r.use_case) + '</div>';
+      }
+      if (r.helpful_count > 0) {
+        html += '<div class="helpful-count">👍 ' + r.helpful_count + ' found this helpful</div>';
+      }
+      html += '</div>';
+    }
+    container.innerHTML = html;
+  }
+
+  function applyFilters() {
+    var query = searchInput.value.trim().toLowerCase();
+    var minRating = parseInt(ratingFilter.value) || 0;
+    var sort = sortBy.value;
+
+    var filtered = allReviews.slice();
+
+    // Filter by search query
+    if (query) {
+      filtered = filtered.filter(function(r) {
+        var searchable = (r.package_name + ' ' + r.author + ' ' + r.title + ' ' + r.comment + ' ' + r.use_case).toLowerCase();
+        return searchable.indexOf(query) >= 0;
+      });
+    }
+
+    // Filter by rating
+    if (minRating > 0) {
+      filtered = filtered.filter(function(r) {
+        return r.rating && r.rating >= minRating;
+      });
+    }
+
+    // Sort
+    filtered.sort(function(a, b) {
+      if (sort === 'recent') {
+        return new Date(b.created_at) - new Date(a.created_at);
+      } else if (sort === 'helpful') {
+        return (b.helpful_count || 0) - (a.helpful_count || 0);
+      } else if (sort === 'rating-high') {
+        return (b.rating || 0) - (a.rating || 0);
+      } else if (sort === 'rating-low') {
+        return (a.rating || 0) - (b.rating || 0);
+      }
+      return 0;
+    });
+
+    renderReviews(filtered);
+  }
+
+  // Load reviews
+  fetch('data/reviews.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      allReviews = data.reviews || [];
+      updateStats(allReviews);
+      applyFilters();
+
+      searchInput.addEventListener('input', applyFilters);
+      ratingFilter.addEventListener('change', applyFilters);
+      sortBy.addEventListener('change', applyFilters);
+    })
+    .catch(function(err) {
+      container.innerHTML = '<div class="no-reviews">Error loading reviews.</div>';
+    });
+});
+</script>
+```
