@@ -1,0 +1,3938 @@
+[
+  {
+    "id": 1200,
+    "package_name": "shiny",
+    "title": "Web Application Framework for R",
+    "description": "Makes it incredibly easy to build interactive web\napplications with R. Automatic \"reactive\" binding between\ninputs and outputs and extensive prebuilt widgets make it\npossible to build beautiful, responsive, and powerful\napplications with minimal effort.",
+    "version": "1.12.1.9000",
+    "maintainer": "Carson Sievert <carson@posit.co>",
+    "author": "Winston Chang [aut] (ORCID: <https://orcid.org/0000-0002-1576-2126>),\nJoe Cheng [aut],\nJJ Allaire [aut],\nCarson Sievert [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-4958-2844>),\nBarret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\nGarrick Aden-Buie [aut] (ORCID:\n<https://orcid.org/0000-0002-7111-0077>),\nYihui Xie [aut],\nJeff Allen [aut],\nJonathan McPherson [aut],\nAlan Dipert [aut],\nBarbara Borges [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>),\njQuery Foundation [cph] (jQuery library and jQuery UI library),\njQuery contributors [ctb, cph] (jQuery library; authors listed in\ninst/www/shared/jquery-AUTHORS.txt),\njQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\ninst/www/shared/jqueryui/AUTHORS.txt),\nMark Otto [ctb] (Bootstrap library),\nJacob Thornton [ctb] (Bootstrap library),\nBootstrap contributors [ctb] (Bootstrap library),\nTwitter, Inc [cph] (Bootstrap library),\nPrem Nawaz Khan [ctb] (Bootstrap accessibility plugin),\nVictor Tsaran [ctb] (Bootstrap accessibility plugin),\nDennis Lembree [ctb] (Bootstrap accessibility plugin),\nSrinivasu Chakravarthula [ctb] (Bootstrap accessibility plugin),\nCathy O'Connor [ctb] (Bootstrap accessibility plugin),\nPayPal, Inc [cph] (Bootstrap accessibility plugin),\nStefan Petre [ctb, cph] (Bootstrap-datepicker library),\nAndrew Rowls [ctb, cph] (Bootstrap-datepicker library),\nBrian Reavis [ctb, cph] (selectize.js library),\nSalmen Bejaoui [ctb, cph] (selectize-plugin-a11y library),\nDenis Ineshin [ctb, cph] (ion.rangeSlider library),\nSami Samhuri [ctb, cph] (Javascript strftime library),\nSpryMedia Limited [ctb, cph] (DataTables library),\nIvan Sagalaev [ctb, cph] (highlight.js library),\nR Core Team [ctb, cph] (tar implementation from R)",
+    "url": "https://shiny.posit.co/, https://github.com/rstudio/shiny",
+    "bug_reports": "https://github.com/rstudio/shiny/issues",
+    "repository": "",
+    "exports": [
+      [
+        "..stacktraceoff.."
+      ],
+      [
+        "..stacktraceon.."
+      ],
+      [
+        "a"
+      ],
+      [
+        "absolutePanel"
+      ],
+      [
+        "actionButton"
+      ],
+      [
+        "actionLink"
+      ],
+      [
+        "addResourcePath"
+      ],
+      [
+        "animationOptions"
+      ],
+      [
+        "appendTab"
+      ],
+      [
+        "as.shiny.appobj"
+      ],
+      [
+        "basicPage"
+      ],
+      [
+        "bindCache"
+      ],
+      [
+        "bindEvent"
+      ],
+      [
+        "bookmarkButton"
+      ],
+      [
+        "bootstrapLib"
+      ],
+      [
+        "bootstrapPage"
+      ],
+      [
+        "br"
+      ],
+      [
+        "browserViewer"
+      ],
+      [
+        "brushedPoints"
+      ],
+      [
+        "brushOpts"
+      ],
+      [
+        "busyIndicatorOptions"
+      ],
+      [
+        "callModule"
+      ],
+      [
+        "captureStackTraces"
+      ],
+      [
+        "checkboxGroupInput"
+      ],
+      [
+        "checkboxInput"
+      ],
+      [
+        "clickOpts"
+      ],
+      [
+        "code"
+      ],
+      [
+        "column"
+      ],
+      [
+        "conditionalPanel"
+      ],
+      [
+        "conditionStackTrace"
+      ],
+      [
+        "conditionStackTrace<-"
+      ],
+      [
+        "createRenderFunction"
+      ],
+      [
+        "createWebDependency"
+      ],
+      [
+        "dataTableOutput"
+      ],
+      [
+        "dateInput"
+      ],
+      [
+        "dateRangeInput"
+      ],
+      [
+        "dblclickOpts"
+      ],
+      [
+        "debounce"
+      ],
+      [
+        "devmode"
+      ],
+      [
+        "dialogViewer"
+      ],
+      [
+        "diskCache"
+      ],
+      [
+        "div"
+      ],
+      [
+        "downloadButton"
+      ],
+      [
+        "downloadHandler"
+      ],
+      [
+        "downloadLink"
+      ],
+      [
+        "em"
+      ],
+      [
+        "enableBookmarking"
+      ],
+      [
+        "eventReactive"
+      ],
+      [
+        "exportTestValues"
+      ],
+      [
+        "exprToFunction"
+      ],
+      [
+        "ExtendedTask"
+      ],
+      [
+        "fileInput"
+      ],
+      [
+        "fillCol"
+      ],
+      [
+        "fillPage"
+      ],
+      [
+        "fillRow"
+      ],
+      [
+        "fixedPage"
+      ],
+      [
+        "fixedPanel"
+      ],
+      [
+        "fixedRow"
+      ],
+      [
+        "flowLayout"
+      ],
+      [
+        "fluidPage"
+      ],
+      [
+        "fluidRow"
+      ],
+      [
+        "freezeReactiveVal"
+      ],
+      [
+        "freezeReactiveValue"
+      ],
+      [
+        "get_devmode_option"
+      ],
+      [
+        "getCurrentOutputInfo"
+      ],
+      [
+        "getCurrentTheme"
+      ],
+      [
+        "getDefaultReactiveDomain"
+      ],
+      [
+        "getQueryString"
+      ],
+      [
+        "getShinyOption"
+      ],
+      [
+        "getUrlHash"
+      ],
+      [
+        "h1"
+      ],
+      [
+        "h2"
+      ],
+      [
+        "h3"
+      ],
+      [
+        "h4"
+      ],
+      [
+        "h5"
+      ],
+      [
+        "h6"
+      ],
+      [
+        "headerPanel"
+      ],
+      [
+        "helpText"
+      ],
+      [
+        "hideTab"
+      ],
+      [
+        "hoverOpts"
+      ],
+      [
+        "hr"
+      ],
+      [
+        "HTML"
+      ],
+      [
+        "htmlOutput"
+      ],
+      [
+        "htmlTemplate"
+      ],
+      [
+        "httpResponse"
+      ],
+      [
+        "icon"
+      ],
+      [
+        "imageOutput"
+      ],
+      [
+        "img"
+      ],
+      [
+        "in_devmode"
+      ],
+      [
+        "includeCSS"
+      ],
+      [
+        "includeHTML"
+      ],
+      [
+        "includeMarkdown"
+      ],
+      [
+        "includeScript"
+      ],
+      [
+        "includeText"
+      ],
+      [
+        "incProgress"
+      ],
+      [
+        "inputPanel"
+      ],
+      [
+        "insertTab"
+      ],
+      [
+        "insertUI"
+      ],
+      [
+        "installExprFunction"
+      ],
+      [
+        "invalidateLater"
+      ],
+      [
+        "is.key_missing"
+      ],
+      [
+        "is.reactive"
+      ],
+      [
+        "is.reactivevalues"
+      ],
+      [
+        "is.shiny.appobj"
+      ],
+      [
+        "is.singleton"
+      ],
+      [
+        "isolate"
+      ],
+      [
+        "isRunning"
+      ],
+      [
+        "isTruthy"
+      ],
+      [
+        "key_missing"
+      ],
+      [
+        "loadSupport"
+      ],
+      [
+        "localOtelCollect"
+      ],
+      [
+        "mainPanel"
+      ],
+      [
+        "makeReactiveBinding"
+      ],
+      [
+        "markdown"
+      ],
+      [
+        "markRenderFunction"
+      ],
+      [
+        "maskReactiveContext"
+      ],
+      [
+        "memoryCache"
+      ],
+      [
+        "MockShinySession"
+      ],
+      [
+        "modalButton"
+      ],
+      [
+        "modalDialog"
+      ],
+      [
+        "moduleServer"
+      ],
+      [
+        "navbarMenu"
+      ],
+      [
+        "navbarPage"
+      ],
+      [
+        "navlistPanel"
+      ],
+      [
+        "nearPoints"
+      ],
+      [
+        "need"
+      ],
+      [
+        "NS"
+      ],
+      [
+        "ns.sep"
+      ],
+      [
+        "numericInput"
+      ],
+      [
+        "observe"
+      ],
+      [
+        "observeEvent"
+      ],
+      [
+        "onBookmark"
+      ],
+      [
+        "onBookmarked"
+      ],
+      [
+        "onFlush"
+      ],
+      [
+        "onFlushed"
+      ],
+      [
+        "onReactiveDomainEnded"
+      ],
+      [
+        "onRestore"
+      ],
+      [
+        "onRestored"
+      ],
+      [
+        "onSessionEnded"
+      ],
+      [
+        "onStop"
+      ],
+      [
+        "onUnhandledError"
+      ],
+      [
+        "outputOptions"
+      ],
+      [
+        "p"
+      ],
+      [
+        "pageWithSidebar"
+      ],
+      [
+        "paneViewer"
+      ],
+      [
+        "parseQueryString"
+      ],
+      [
+        "passwordInput"
+      ],
+      [
+        "plotOutput"
+      ],
+      [
+        "plotPNG"
+      ],
+      [
+        "pre"
+      ],
+      [
+        "prependTab"
+      ],
+      [
+        "printError"
+      ],
+      [
+        "printStackTrace"
+      ],
+      [
+        "Progress"
+      ],
+      [
+        "quoToFunction"
+      ],
+      [
+        "radioButtons"
+      ],
+      [
+        "reactive"
+      ],
+      [
+        "reactiveConsole"
+      ],
+      [
+        "reactiveFileReader"
+      ],
+      [
+        "reactivePoll"
+      ],
+      [
+        "reactiveTimer"
+      ],
+      [
+        "reactiveVal"
+      ],
+      [
+        "reactiveValues"
+      ],
+      [
+        "reactiveValuesToList"
+      ],
+      [
+        "reactlog"
+      ],
+      [
+        "reactlogAddMark"
+      ],
+      [
+        "reactlogReset"
+      ],
+      [
+        "reactlogShow"
+      ],
+      [
+        "register_devmode_option"
+      ],
+      [
+        "registerInputHandler"
+      ],
+      [
+        "registerThemeDependency"
+      ],
+      [
+        "removeInputHandler"
+      ],
+      [
+        "removeModal"
+      ],
+      [
+        "removeNotification"
+      ],
+      [
+        "removeResourcePath"
+      ],
+      [
+        "removeTab"
+      ],
+      [
+        "removeUI"
+      ],
+      [
+        "renderCachedPlot"
+      ],
+      [
+        "renderDataTable"
+      ],
+      [
+        "renderImage"
+      ],
+      [
+        "renderPlot"
+      ],
+      [
+        "renderPrint"
+      ],
+      [
+        "renderTable"
+      ],
+      [
+        "renderText"
+      ],
+      [
+        "renderUI"
+      ],
+      [
+        "repeatable"
+      ],
+      [
+        "req"
+      ],
+      [
+        "resourcePaths"
+      ],
+      [
+        "restoreInput"
+      ],
+      [
+        "runApp"
+      ],
+      [
+        "runExample"
+      ],
+      [
+        "runGadget"
+      ],
+      [
+        "runGist"
+      ],
+      [
+        "runGitHub"
+      ],
+      [
+        "runTests"
+      ],
+      [
+        "runUrl"
+      ],
+      [
+        "safeError"
+      ],
+      [
+        "selectInput"
+      ],
+      [
+        "selectizeInput"
+      ],
+      [
+        "serverInfo"
+      ],
+      [
+        "setBookmarkExclude"
+      ],
+      [
+        "setProgress"
+      ],
+      [
+        "setSerializer"
+      ],
+      [
+        "shinyApp"
+      ],
+      [
+        "shinyAppDir"
+      ],
+      [
+        "shinyAppFile"
+      ],
+      [
+        "shinyAppTemplate"
+      ],
+      [
+        "shinyOptions"
+      ],
+      [
+        "shinyServer"
+      ],
+      [
+        "shinyUI"
+      ],
+      [
+        "showBookmarkUrlModal"
+      ],
+      [
+        "showModal"
+      ],
+      [
+        "showNotification"
+      ],
+      [
+        "showTab"
+      ],
+      [
+        "sidebarLayout"
+      ],
+      [
+        "sidebarPanel"
+      ],
+      [
+        "singleton"
+      ],
+      [
+        "sizeGrowthRatio"
+      ],
+      [
+        "sliderInput"
+      ],
+      [
+        "snapshotExclude"
+      ],
+      [
+        "snapshotPreprocessInput"
+      ],
+      [
+        "snapshotPreprocessOutput"
+      ],
+      [
+        "span"
+      ],
+      [
+        "splitLayout"
+      ],
+      [
+        "stopApp"
+      ],
+      [
+        "strong"
+      ],
+      [
+        "submitButton"
+      ],
+      [
+        "suppressDependencies"
+      ],
+      [
+        "tableOutput"
+      ],
+      [
+        "tabPanel"
+      ],
+      [
+        "tabPanelBody"
+      ],
+      [
+        "tabsetPanel"
+      ],
+      [
+        "tag"
+      ],
+      [
+        "tagAppendAttributes"
+      ],
+      [
+        "tagAppendChild"
+      ],
+      [
+        "tagAppendChildren"
+      ],
+      [
+        "tagGetAttribute"
+      ],
+      [
+        "tagHasAttribute"
+      ],
+      [
+        "tagList"
+      ],
+      [
+        "tags"
+      ],
+      [
+        "tagSetChildren"
+      ],
+      [
+        "testServer"
+      ],
+      [
+        "textAreaInput"
+      ],
+      [
+        "textInput"
+      ],
+      [
+        "textOutput"
+      ],
+      [
+        "throttle"
+      ],
+      [
+        "titlePanel"
+      ],
+      [
+        "uiOutput"
+      ],
+      [
+        "updateActionButton"
+      ],
+      [
+        "updateActionLink"
+      ],
+      [
+        "updateCheckboxGroupInput"
+      ],
+      [
+        "updateCheckboxInput"
+      ],
+      [
+        "updateDateInput"
+      ],
+      [
+        "updateDateRangeInput"
+      ],
+      [
+        "updateNavbarPage"
+      ],
+      [
+        "updateNavlistPanel"
+      ],
+      [
+        "updateNumericInput"
+      ],
+      [
+        "updateQueryString"
+      ],
+      [
+        "updateRadioButtons"
+      ],
+      [
+        "updateSelectInput"
+      ],
+      [
+        "updateSelectizeInput"
+      ],
+      [
+        "updateSliderInput"
+      ],
+      [
+        "updateTabsetPanel"
+      ],
+      [
+        "updateTextAreaInput"
+      ],
+      [
+        "updateTextInput"
+      ],
+      [
+        "updateVarSelectInput"
+      ],
+      [
+        "updateVarSelectizeInput"
+      ],
+      [
+        "urlModal"
+      ],
+      [
+        "useBusyIndicators"
+      ],
+      [
+        "validate"
+      ],
+      [
+        "validateCssUnit"
+      ],
+      [
+        "varSelectInput"
+      ],
+      [
+        "varSelectizeInput"
+      ],
+      [
+        "verbatimTextOutput"
+      ],
+      [
+        "verticalLayout"
+      ],
+      [
+        "wellPanel"
+      ],
+      [
+        "with_devmode"
+      ],
+      [
+        "withLogErrors"
+      ],
+      [
+        "withMathJax"
+      ],
+      [
+        "withOtelCollect"
+      ],
+      [
+        "withProgress"
+      ],
+      [
+        "withReactiveDomain"
+      ],
+      [
+        "withTags"
+      ]
+    ],
+    "topics": [
+      [
+        "reactive"
+      ],
+      [
+        "rstudio"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "web-app"
+      ],
+      [
+        "web-development"
+      ]
+    ],
+    "score": 21.6027,
+    "stars": 5574,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "shiny Web Application Framework for R Makes it incredibly easy to build interactive web\napplications with R. Automatic \"reactive\" binding between\ninputs and outputs and extensive prebuilt widgets make it\npossible to build beautiful, responsive, and powerful\napplications with minimal effort. ..stacktraceoff.. ..stacktraceon.. a absolutePanel actionButton actionLink addResourcePath animationOptions appendTab as.shiny.appobj basicPage bindCache bindEvent bookmarkButton bootstrapLib bootstrapPage br browserViewer brushedPoints brushOpts busyIndicatorOptions callModule captureStackTraces checkboxGroupInput checkboxInput clickOpts code column conditionalPanel conditionStackTrace conditionStackTrace<- createRenderFunction createWebDependency dataTableOutput dateInput dateRangeInput dblclickOpts debounce devmode dialogViewer diskCache div downloadButton downloadHandler downloadLink em enableBookmarking eventReactive exportTestValues exprToFunction ExtendedTask fileInput fillCol fillPage fillRow fixedPage fixedPanel fixedRow flowLayout fluidPage fluidRow freezeReactiveVal freezeReactiveValue get_devmode_option getCurrentOutputInfo getCurrentTheme getDefaultReactiveDomain getQueryString getShinyOption getUrlHash h1 h2 h3 h4 h5 h6 headerPanel helpText hideTab hoverOpts hr HTML htmlOutput htmlTemplate httpResponse icon imageOutput img in_devmode includeCSS includeHTML includeMarkdown includeScript includeText incProgress inputPanel insertTab insertUI installExprFunction invalidateLater is.key_missing is.reactive is.reactivevalues is.shiny.appobj is.singleton isolate isRunning isTruthy key_missing loadSupport localOtelCollect mainPanel makeReactiveBinding markdown markRenderFunction maskReactiveContext memoryCache MockShinySession modalButton modalDialog moduleServer navbarMenu navbarPage navlistPanel nearPoints need NS ns.sep numericInput observe observeEvent onBookmark onBookmarked onFlush onFlushed onReactiveDomainEnded onRestore onRestored onSessionEnded onStop onUnhandledError outputOptions p pageWithSidebar paneViewer parseQueryString passwordInput plotOutput plotPNG pre prependTab printError printStackTrace Progress quoToFunction radioButtons reactive reactiveConsole reactiveFileReader reactivePoll reactiveTimer reactiveVal reactiveValues reactiveValuesToList reactlog reactlogAddMark reactlogReset reactlogShow register_devmode_option registerInputHandler registerThemeDependency removeInputHandler removeModal removeNotification removeResourcePath removeTab removeUI renderCachedPlot renderDataTable renderImage renderPlot renderPrint renderTable renderText renderUI repeatable req resourcePaths restoreInput runApp runExample runGadget runGist runGitHub runTests runUrl safeError selectInput selectizeInput serverInfo setBookmarkExclude setProgress setSerializer shinyApp shinyAppDir shinyAppFile shinyAppTemplate shinyOptions shinyServer shinyUI showBookmarkUrlModal showModal showNotification showTab sidebarLayout sidebarPanel singleton sizeGrowthRatio sliderInput snapshotExclude snapshotPreprocessInput snapshotPreprocessOutput span splitLayout stopApp strong submitButton suppressDependencies tableOutput tabPanel tabPanelBody tabsetPanel tag tagAppendAttributes tagAppendChild tagAppendChildren tagGetAttribute tagHasAttribute tagList tags tagSetChildren testServer textAreaInput textInput textOutput throttle titlePanel uiOutput updateActionButton updateActionLink updateCheckboxGroupInput updateCheckboxInput updateDateInput updateDateRangeInput updateNavbarPage updateNavlistPanel updateNumericInput updateQueryString updateRadioButtons updateSelectInput updateSelectizeInput updateSliderInput updateTabsetPanel updateTextAreaInput updateTextInput updateVarSelectInput updateVarSelectizeInput urlModal useBusyIndicators validate validateCssUnit varSelectInput varSelectizeInput verbatimTextOutput verticalLayout wellPanel with_devmode withLogErrors withMathJax withOtelCollect withProgress withReactiveDomain withTags reactive rstudio shiny web-app web-development"
+  },
+  {
+    "id": 35,
+    "package_name": "DT",
+    "title": "A Wrapper of the JavaScript Library 'DataTables'",
+    "description": "Data objects in R can be rendered as HTML tables using the\nJavaScript library 'DataTables' (typically via R Markdown or\nShiny). The 'DataTables' library has been included in this R\npackage. The package name 'DT' is an abbreviation of\n'DataTables'.",
+    "version": "0.34.0.9000",
+    "maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+    "author": "Yihui Xie [aut],\nJoe Cheng [aut],\nXianying Tan [aut],\nGarrick Aden-Buie [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-7111-0077>),\nJJ Allaire [ctb],\nMaximilian Girlich [ctb],\nGreg Freedman Ellis [ctb],\nJohannes Rauh [ctb],\nSpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib),\nBrian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib),\nLeon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib),\nBartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib),\nAlex Pickering [ctb],\nWilliam Holmes [ctb],\nMikko Marttila [ctb],\nAndres Quintero [ctb],\nSt\u00e9phane Laurent [ctb],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://github.com/rstudio/DT",
+    "bug_reports": "https://github.com/rstudio/DT/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "addRow"
+      ],
+      [
+        "clearSearch"
+      ],
+      [
+        "coerceValue"
+      ],
+      [
+        "colReorder"
+      ],
+      [
+        "datatable"
+      ],
+      [
+        "dataTableAjax"
+      ],
+      [
+        "dataTableOutput"
+      ],
+      [
+        "dataTableProxy"
+      ],
+      [
+        "doColumnSearch"
+      ],
+      [
+        "doGlobalSearch"
+      ],
+      [
+        "DTOutput"
+      ],
+      [
+        "editData"
+      ],
+      [
+        "formatCurrency"
+      ],
+      [
+        "formatDate"
+      ],
+      [
+        "formatPercentage"
+      ],
+      [
+        "formatRound"
+      ],
+      [
+        "formatSignif"
+      ],
+      [
+        "formatString"
+      ],
+      [
+        "formatStyle"
+      ],
+      [
+        "hideCols"
+      ],
+      [
+        "JS"
+      ],
+      [
+        "reloadData"
+      ],
+      [
+        "renderDataTable"
+      ],
+      [
+        "renderDT"
+      ],
+      [
+        "replaceData"
+      ],
+      [
+        "saveWidget"
+      ],
+      [
+        "selectCells"
+      ],
+      [
+        "selectColumns"
+      ],
+      [
+        "selectPage"
+      ],
+      [
+        "selectRows"
+      ],
+      [
+        "showCols"
+      ],
+      [
+        "styleColorBar"
+      ],
+      [
+        "styleEqual"
+      ],
+      [
+        "styleInterval"
+      ],
+      [
+        "styleRow"
+      ],
+      [
+        "styleValue"
+      ],
+      [
+        "tableFooter"
+      ],
+      [
+        "tableHeader"
+      ],
+      [
+        "updateCaption"
+      ],
+      [
+        "updateFilters"
+      ],
+      [
+        "updateSearch"
+      ]
+    ],
+    "topics": [
+      [
+        "datatables"
+      ],
+      [
+        "htmlwidgets"
+      ],
+      [
+        "javascript"
+      ],
+      [
+        "shiny"
+      ]
+    ],
+    "score": 18.9369,
+    "stars": 614,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "DT A Wrapper of the JavaScript Library 'DataTables' Data objects in R can be rendered as HTML tables using the\nJavaScript library 'DataTables' (typically via R Markdown or\nShiny). The 'DataTables' library has been included in this R\npackage. The package name 'DT' is an abbreviation of\n'DataTables'. %>% addRow clearSearch coerceValue colReorder datatable dataTableAjax dataTableOutput dataTableProxy doColumnSearch doGlobalSearch DTOutput editData formatCurrency formatDate formatPercentage formatRound formatSignif formatString formatStyle hideCols JS reloadData renderDataTable renderDT replaceData saveWidget selectCells selectColumns selectPage selectRows showCols styleColorBar styleEqual styleInterval styleRow styleValue tableFooter tableHeader updateCaption updateFilters updateSearch datatables htmlwidgets javascript shiny"
+  },
+  {
+    "id": 325,
+    "package_name": "bslib",
+    "title": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'",
+    "description": "Simplifies custom 'CSS' styling of both 'shiny' and\n'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4\nand 5 as well as their various 'Bootswatch' themes. An\ninteractive widget is also provided for previewing themes in\nreal time.",
+    "version": "0.9.0.9002",
+    "maintainer": "Carson Sievert <carson@posit.co>",
+    "author": "Carson Sievert [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-4958-2844>),\nJoe Cheng [aut],\nGarrick Aden-Buie [aut] (ORCID:\n<https://orcid.org/0000-0002-7111-0077>),\nPosit Software, PBC [cph, fnd],\nBootstrap contributors [ctb] (Bootstrap library),\nTwitter, Inc [cph] (Bootstrap library),\nJavi Aguilar [ctb, cph] (Bootstrap colorpicker library),\nThomas Park [ctb, cph] (Bootswatch library),\nPayPal [ctb, cph] (Bootstrap accessibility plugin)",
+    "url": "https://rstudio.github.io/bslib/, https://github.com/rstudio/bslib",
+    "bug_reports": "https://github.com/rstudio/bslib/issues",
+    "repository": "",
+    "exports": [
+      [
+        "accordion"
+      ],
+      [
+        "accordion_panel"
+      ],
+      [
+        "accordion_panel_close"
+      ],
+      [
+        "accordion_panel_insert"
+      ],
+      [
+        "accordion_panel_open"
+      ],
+      [
+        "accordion_panel_remove"
+      ],
+      [
+        "accordion_panel_set"
+      ],
+      [
+        "accordion_panel_update"
+      ],
+      [
+        "as_fill_carrier"
+      ],
+      [
+        "as_fill_item"
+      ],
+      [
+        "as_fillable_container"
+      ],
+      [
+        "as.card_item"
+      ],
+      [
+        "bind_task_button"
+      ],
+      [
+        "bootstrap"
+      ],
+      [
+        "bootstrap_sass"
+      ],
+      [
+        "bootswatch_themes"
+      ],
+      [
+        "breakpoints"
+      ],
+      [
+        "bs_add_declarations"
+      ],
+      [
+        "bs_add_functions"
+      ],
+      [
+        "bs_add_mixins"
+      ],
+      [
+        "bs_add_rules"
+      ],
+      [
+        "bs_add_variables"
+      ],
+      [
+        "bs_bundle"
+      ],
+      [
+        "bs_current_theme"
+      ],
+      [
+        "bs_dependency"
+      ],
+      [
+        "bs_dependency_defer"
+      ],
+      [
+        "bs_get_contrast"
+      ],
+      [
+        "bs_get_variables"
+      ],
+      [
+        "bs_global_add_rules"
+      ],
+      [
+        "bs_global_add_variables"
+      ],
+      [
+        "bs_global_bundle"
+      ],
+      [
+        "bs_global_clear"
+      ],
+      [
+        "bs_global_get"
+      ],
+      [
+        "bs_global_set"
+      ],
+      [
+        "bs_global_theme"
+      ],
+      [
+        "bs_global_theme_update"
+      ],
+      [
+        "bs_remove"
+      ],
+      [
+        "bs_retrieve"
+      ],
+      [
+        "bs_theme"
+      ],
+      [
+        "bs_theme_accent_colors"
+      ],
+      [
+        "bs_theme_add"
+      ],
+      [
+        "bs_theme_add_variables"
+      ],
+      [
+        "bs_theme_base_colors"
+      ],
+      [
+        "bs_theme_clear"
+      ],
+      [
+        "bs_theme_dependencies"
+      ],
+      [
+        "bs_theme_fonts"
+      ],
+      [
+        "bs_theme_get"
+      ],
+      [
+        "bs_theme_get_variables"
+      ],
+      [
+        "bs_theme_new"
+      ],
+      [
+        "bs_theme_preview"
+      ],
+      [
+        "bs_theme_set"
+      ],
+      [
+        "bs_theme_update"
+      ],
+      [
+        "bs_themer"
+      ],
+      [
+        "builtin_themes"
+      ],
+      [
+        "card"
+      ],
+      [
+        "card_body"
+      ],
+      [
+        "card_body_fill"
+      ],
+      [
+        "card_footer"
+      ],
+      [
+        "card_header"
+      ],
+      [
+        "card_image"
+      ],
+      [
+        "card_title"
+      ],
+      [
+        "css"
+      ],
+      [
+        "font_collection"
+      ],
+      [
+        "font_face"
+      ],
+      [
+        "font_google"
+      ],
+      [
+        "font_link"
+      ],
+      [
+        "hide_toast"
+      ],
+      [
+        "input_dark_mode"
+      ],
+      [
+        "input_submit_textarea"
+      ],
+      [
+        "input_switch"
+      ],
+      [
+        "input_task_button"
+      ],
+      [
+        "is_bs_theme"
+      ],
+      [
+        "is_fill_carrier"
+      ],
+      [
+        "is_fill_item"
+      ],
+      [
+        "is_fillable_container"
+      ],
+      [
+        "is.card_item"
+      ],
+      [
+        "layout_column_wrap"
+      ],
+      [
+        "layout_columns"
+      ],
+      [
+        "layout_sidebar"
+      ],
+      [
+        "nav"
+      ],
+      [
+        "nav_append"
+      ],
+      [
+        "nav_content"
+      ],
+      [
+        "nav_hide"
+      ],
+      [
+        "nav_insert"
+      ],
+      [
+        "nav_item"
+      ],
+      [
+        "nav_menu"
+      ],
+      [
+        "nav_panel"
+      ],
+      [
+        "nav_panel_hidden"
+      ],
+      [
+        "nav_prepend"
+      ],
+      [
+        "nav_remove"
+      ],
+      [
+        "nav_select"
+      ],
+      [
+        "nav_show"
+      ],
+      [
+        "nav_spacer"
+      ],
+      [
+        "navbar_options"
+      ],
+      [
+        "navs_bar"
+      ],
+      [
+        "navs_hidden"
+      ],
+      [
+        "navs_pill"
+      ],
+      [
+        "navs_pill_card"
+      ],
+      [
+        "navs_pill_list"
+      ],
+      [
+        "navs_tab"
+      ],
+      [
+        "navs_tab_card"
+      ],
+      [
+        "navset_bar"
+      ],
+      [
+        "navset_card_pill"
+      ],
+      [
+        "navset_card_tab"
+      ],
+      [
+        "navset_card_underline"
+      ],
+      [
+        "navset_hidden"
+      ],
+      [
+        "navset_pill"
+      ],
+      [
+        "navset_pill_list"
+      ],
+      [
+        "navset_tab"
+      ],
+      [
+        "navset_underline"
+      ],
+      [
+        "page"
+      ],
+      [
+        "page_fill"
+      ],
+      [
+        "page_fillable"
+      ],
+      [
+        "page_fixed"
+      ],
+      [
+        "page_fluid"
+      ],
+      [
+        "page_navbar"
+      ],
+      [
+        "page_sidebar"
+      ],
+      [
+        "popover"
+      ],
+      [
+        "precompiled_css_path"
+      ],
+      [
+        "remove_all_fill"
+      ],
+      [
+        "run_with_themer"
+      ],
+      [
+        "show_toast"
+      ],
+      [
+        "showcase_bottom"
+      ],
+      [
+        "showcase_left_center"
+      ],
+      [
+        "showcase_top_right"
+      ],
+      [
+        "sidebar"
+      ],
+      [
+        "sidebar_toggle"
+      ],
+      [
+        "theme_bootswatch"
+      ],
+      [
+        "theme_version"
+      ],
+      [
+        "toast"
+      ],
+      [
+        "toast_header"
+      ],
+      [
+        "toggle_dark_mode"
+      ],
+      [
+        "toggle_popover"
+      ],
+      [
+        "toggle_sidebar"
+      ],
+      [
+        "toggle_switch"
+      ],
+      [
+        "toggle_tooltip"
+      ],
+      [
+        "tooltip"
+      ],
+      [
+        "update_popover"
+      ],
+      [
+        "update_submit_textarea"
+      ],
+      [
+        "update_switch"
+      ],
+      [
+        "update_task_button"
+      ],
+      [
+        "update_tooltip"
+      ],
+      [
+        "value_box"
+      ],
+      [
+        "value_box_theme"
+      ],
+      [
+        "version_default"
+      ],
+      [
+        "versions"
+      ]
+    ],
+    "topics": [
+      [
+        "bootstrap"
+      ],
+      [
+        "htmltools"
+      ],
+      [
+        "rmarkdown"
+      ],
+      [
+        "sass"
+      ],
+      [
+        "shiny"
+      ]
+    ],
+    "score": 18.2424,
+    "stars": 542,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "bslib Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown' Simplifies custom 'CSS' styling of both 'shiny' and\n'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4\nand 5 as well as their various 'Bootswatch' themes. An\ninteractive widget is also provided for previewing themes in\nreal time. accordion accordion_panel accordion_panel_close accordion_panel_insert accordion_panel_open accordion_panel_remove accordion_panel_set accordion_panel_update as_fill_carrier as_fill_item as_fillable_container as.card_item bind_task_button bootstrap bootstrap_sass bootswatch_themes breakpoints bs_add_declarations bs_add_functions bs_add_mixins bs_add_rules bs_add_variables bs_bundle bs_current_theme bs_dependency bs_dependency_defer bs_get_contrast bs_get_variables bs_global_add_rules bs_global_add_variables bs_global_bundle bs_global_clear bs_global_get bs_global_set bs_global_theme bs_global_theme_update bs_remove bs_retrieve bs_theme bs_theme_accent_colors bs_theme_add bs_theme_add_variables bs_theme_base_colors bs_theme_clear bs_theme_dependencies bs_theme_fonts bs_theme_get bs_theme_get_variables bs_theme_new bs_theme_preview bs_theme_set bs_theme_update bs_themer builtin_themes card card_body card_body_fill card_footer card_header card_image card_title css font_collection font_face font_google font_link hide_toast input_dark_mode input_submit_textarea input_switch input_task_button is_bs_theme is_fill_carrier is_fill_item is_fillable_container is.card_item layout_column_wrap layout_columns layout_sidebar nav nav_append nav_content nav_hide nav_insert nav_item nav_menu nav_panel nav_panel_hidden nav_prepend nav_remove nav_select nav_show nav_spacer navbar_options navs_bar navs_hidden navs_pill navs_pill_card navs_pill_list navs_tab navs_tab_card navset_bar navset_card_pill navset_card_tab navset_card_underline navset_hidden navset_pill navset_pill_list navset_tab navset_underline page page_fill page_fillable page_fixed page_fluid page_navbar page_sidebar popover precompiled_css_path remove_all_fill run_with_themer show_toast showcase_bottom showcase_left_center showcase_top_right sidebar sidebar_toggle theme_bootswatch theme_version toast toast_header toggle_dark_mode toggle_popover toggle_sidebar toggle_switch toggle_tooltip tooltip update_popover update_submit_textarea update_switch update_task_button update_tooltip value_box value_box_theme version_default versions bootstrap htmltools rmarkdown sass shiny"
+  },
+  {
+    "id": 1210,
+    "package_name": "shinyjs",
+    "title": "Easily Improve the User Experience of Your Shiny Apps in Seconds",
+    "description": "Perform common useful JavaScript operations in Shiny apps\nthat will greatly improve your apps without having to know any\nJavaScript. Examples include: hiding an element, disabling an\ninput, resetting an input back to its original value, delaying\ncode execution by a few seconds, and many more useful functions\nfor both the end user and the developer. 'shinyjs' can also be\nused to easily call your own custom JavaScript functions from\nR.",
+    "version": "2.1.0.9012",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>)",
+    "url": "https://deanattali.com/shinyjs/,\nhttps://github.com/daattali/shinyjs",
+    "bug_reports": "https://github.com/daattali/shinyjs/issues",
+    "repository": "",
+    "exports": [
+      [
+        "addClass"
+      ],
+      [
+        "addCssClass"
+      ],
+      [
+        "alert"
+      ],
+      [
+        "click"
+      ],
+      [
+        "delay"
+      ],
+      [
+        "disable"
+      ],
+      [
+        "disabled"
+      ],
+      [
+        "enable"
+      ],
+      [
+        "extendShinyjs"
+      ],
+      [
+        "hidden"
+      ],
+      [
+        "hide"
+      ],
+      [
+        "hideElement"
+      ],
+      [
+        "html"
+      ],
+      [
+        "info"
+      ],
+      [
+        "inlineCSS"
+      ],
+      [
+        "js"
+      ],
+      [
+        "logjs"
+      ],
+      [
+        "onclick"
+      ],
+      [
+        "onevent"
+      ],
+      [
+        "refresh"
+      ],
+      [
+        "removeClass"
+      ],
+      [
+        "removeCssClass"
+      ],
+      [
+        "removeEvent"
+      ],
+      [
+        "reset"
+      ],
+      [
+        "runcode"
+      ],
+      [
+        "runcodeServer"
+      ],
+      [
+        "runcodeUI"
+      ],
+      [
+        "runExample"
+      ],
+      [
+        "runjs"
+      ],
+      [
+        "show"
+      ],
+      [
+        "showElement"
+      ],
+      [
+        "showLog"
+      ],
+      [
+        "toggle"
+      ],
+      [
+        "toggleClass"
+      ],
+      [
+        "toggleCssClass"
+      ],
+      [
+        "toggleElement"
+      ],
+      [
+        "toggleState"
+      ],
+      [
+        "useShinyjs"
+      ]
+    ],
+    "topics": [
+      [
+        "javascript"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 17.9718,
+    "stars": 748,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinyjs Easily Improve the User Experience of Your Shiny Apps in Seconds Perform common useful JavaScript operations in Shiny apps\nthat will greatly improve your apps without having to know any\nJavaScript. Examples include: hiding an element, disabling an\ninput, resetting an input back to its original value, delaying\ncode execution by a few seconds, and many more useful functions\nfor both the end user and the developer. 'shinyjs' can also be\nused to easily call your own custom JavaScript functions from\nR. addClass addCssClass alert click delay disable disabled enable extendShinyjs hidden hide hideElement html info inlineCSS js logjs onclick onevent refresh removeClass removeCssClass removeEvent reset runcode runcodeServer runcodeUI runExample runjs show showElement showLog toggle toggleClass toggleCssClass toggleElement toggleState useShinyjs javascript shiny shiny-r"
+  },
+  {
+    "id": 1202,
+    "package_name": "shinyWidgets",
+    "title": "Custom Inputs Widgets for Shiny",
+    "description": "Collection of custom input controls and user interface\ncomponents for 'Shiny' applications. Give your applications a\nunique and colorful style !",
+    "version": "0.9.0.9100",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Victor Perrier [aut, cre, cph],\nFanny Meyer [aut],\nDavid Granjon [aut],\nIan Fellows [ctb] (Methods for mutating vertical tabs &\nupdateMultiInput),\nWil Davis [ctb] (numericRangeInput function),\nSpencer Matthews [ctb] (autoNumeric methods),\nJavaScript and CSS libraries authors [ctb, cph] (All authors are listed\nin LICENSE.md)",
+    "url": "https://github.com/dreamRs/shinyWidgets,\nhttps://dreamrs.github.io/shinyWidgets/",
+    "bug_reports": "https://github.com/dreamRs/shinyWidgets/issues",
+    "repository": "",
+    "exports": [
+      [
+        "actionBttn"
+      ],
+      [
+        "actionGroupButtons"
+      ],
+      [
+        "addSpinner"
+      ],
+      [
+        "airDatepickerInput"
+      ],
+      [
+        "airMonthpickerInput"
+      ],
+      [
+        "airYearpickerInput"
+      ],
+      [
+        "alert"
+      ],
+      [
+        "animateOptions"
+      ],
+      [
+        "appendVerticalTab"
+      ],
+      [
+        "applyWinBox"
+      ],
+      [
+        "ask_confirmation"
+      ],
+      [
+        "autonumericInput"
+      ],
+      [
+        "awesomeCheckbox"
+      ],
+      [
+        "awesomeCheckboxGroup"
+      ],
+      [
+        "awesomeRadio"
+      ],
+      [
+        "calendarProInput"
+      ],
+      [
+        "checkboxGroupButtons"
+      ],
+      [
+        "chooseSliderSkin"
+      ],
+      [
+        "circleButton"
+      ],
+      [
+        "closeSweetAlert"
+      ],
+      [
+        "closeWinBox"
+      ],
+      [
+        "colorPickr"
+      ],
+      [
+        "colorSelectorDrop"
+      ],
+      [
+        "colorSelectorExample"
+      ],
+      [
+        "colorSelectorInput"
+      ],
+      [
+        "confirmSweetAlert"
+      ],
+      [
+        "create_tree"
+      ],
+      [
+        "currencyInput"
+      ],
+      [
+        "demoAirDatepicker"
+      ],
+      [
+        "demoNoUiSlider"
+      ],
+      [
+        "demoNumericRange"
+      ],
+      [
+        "demoVirtualSelect"
+      ],
+      [
+        "disableDropMenu"
+      ],
+      [
+        "downloadBttn"
+      ],
+      [
+        "dropdown"
+      ],
+      [
+        "dropdownButton"
+      ],
+      [
+        "dropMenu"
+      ],
+      [
+        "dropMenuOptions"
+      ],
+      [
+        "enableDropMenu"
+      ],
+      [
+        "execute_safely"
+      ],
+      [
+        "formatNumericInput"
+      ],
+      [
+        "hideDropMenu"
+      ],
+      [
+        "html_dependency_awesome"
+      ],
+      [
+        "html_dependency_bsswitch"
+      ],
+      [
+        "html_dependency_bttn"
+      ],
+      [
+        "html_dependency_pretty"
+      ],
+      [
+        "html_dependency_sweetalert2"
+      ],
+      [
+        "html_dependency_winbox"
+      ],
+      [
+        "inputSweetAlert"
+      ],
+      [
+        "knobInput"
+      ],
+      [
+        "list_group"
+      ],
+      [
+        "materialSwitch"
+      ],
+      [
+        "multiInput"
+      ],
+      [
+        "noUiSliderInput"
+      ],
+      [
+        "numericInputIcon"
+      ],
+      [
+        "numericRangeInput"
+      ],
+      [
+        "panel"
+      ],
+      [
+        "pickerGroupServer"
+      ],
+      [
+        "pickerGroupUI"
+      ],
+      [
+        "pickerInput"
+      ],
+      [
+        "pickerOptions"
+      ],
+      [
+        "prepare_choices"
+      ],
+      [
+        "prepare_slim_choices"
+      ],
+      [
+        "prettyCheckbox"
+      ],
+      [
+        "prettyCheckboxGroup"
+      ],
+      [
+        "prettyRadioButtons"
+      ],
+      [
+        "prettySwitch"
+      ],
+      [
+        "prettyToggle"
+      ],
+      [
+        "progressBar"
+      ],
+      [
+        "progressSweetAlert"
+      ],
+      [
+        "radioGroupButtons"
+      ],
+      [
+        "removeVerticalTab"
+      ],
+      [
+        "reorderVerticalTabs"
+      ],
+      [
+        "searchInput"
+      ],
+      [
+        "selectizeGroupServer"
+      ],
+      [
+        "selectizeGroupUI"
+      ],
+      [
+        "sendSweetAlert"
+      ],
+      [
+        "setBackgroundColor"
+      ],
+      [
+        "setBackgroundImage"
+      ],
+      [
+        "setShadow"
+      ],
+      [
+        "setSliderColor"
+      ],
+      [
+        "shinyWidgetsGallery"
+      ],
+      [
+        "show_alert"
+      ],
+      [
+        "show_toast"
+      ],
+      [
+        "showDropMenu"
+      ],
+      [
+        "sliderTextInput"
+      ],
+      [
+        "slimSelectInput"
+      ],
+      [
+        "spectrumInput"
+      ],
+      [
+        "statiCard"
+      ],
+      [
+        "switchInput"
+      ],
+      [
+        "textInputAddon"
+      ],
+      [
+        "textInputIcon"
+      ],
+      [
+        "timeInput"
+      ],
+      [
+        "timepickerOptions"
+      ],
+      [
+        "toggleDropdownButton"
+      ],
+      [
+        "tooltipOptions"
+      ],
+      [
+        "treeInput"
+      ],
+      [
+        "updateAirDateInput"
+      ],
+      [
+        "updateAutonumericInput"
+      ],
+      [
+        "updateAwesomeCheckbox"
+      ],
+      [
+        "updateAwesomeCheckboxGroup"
+      ],
+      [
+        "updateAwesomeRadio"
+      ],
+      [
+        "updateCalendarPro"
+      ],
+      [
+        "updateCheckboxGroupButtons"
+      ],
+      [
+        "updateColorPickr"
+      ],
+      [
+        "updateCurrencyInput"
+      ],
+      [
+        "updateKnobInput"
+      ],
+      [
+        "updateMaterialSwitch"
+      ],
+      [
+        "updateMultiInput"
+      ],
+      [
+        "updateNoUiSliderInput"
+      ],
+      [
+        "updateNumericInputIcon"
+      ],
+      [
+        "updateNumericRangeInput"
+      ],
+      [
+        "updatePickerInput"
+      ],
+      [
+        "updatePrettyCheckbox"
+      ],
+      [
+        "updatePrettyCheckboxGroup"
+      ],
+      [
+        "updatePrettyRadioButtons"
+      ],
+      [
+        "updatePrettySwitch"
+      ],
+      [
+        "updatePrettyToggle"
+      ],
+      [
+        "updateProgressBar"
+      ],
+      [
+        "updateRadioGroupButtons"
+      ],
+      [
+        "updateSearchInput"
+      ],
+      [
+        "updateSliderTextInput"
+      ],
+      [
+        "updateSlimSelect"
+      ],
+      [
+        "updateSpectrumInput"
+      ],
+      [
+        "updateStatiCard"
+      ],
+      [
+        "updateSwitchInput"
+      ],
+      [
+        "updateTextInputIcon"
+      ],
+      [
+        "updateTimeInput"
+      ],
+      [
+        "updateTreeInput"
+      ],
+      [
+        "updateVerticalTabsetPanel"
+      ],
+      [
+        "updateVirtualSelect"
+      ],
+      [
+        "useArgonDash"
+      ],
+      [
+        "useBs4Dash"
+      ],
+      [
+        "useShinydashboard"
+      ],
+      [
+        "useShinydashboardPlus"
+      ],
+      [
+        "useSweetAlert"
+      ],
+      [
+        "useTablerDash"
+      ],
+      [
+        "verticalTabPanel"
+      ],
+      [
+        "verticalTabsetPanel"
+      ],
+      [
+        "virtualSelectInput"
+      ],
+      [
+        "wbControls"
+      ],
+      [
+        "wbOptions"
+      ],
+      [
+        "WinBox"
+      ],
+      [
+        "wNumbFormat"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ]
+    ],
+    "score": 16.7204,
+    "stars": 860,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "shinyWidgets Custom Inputs Widgets for Shiny Collection of custom input controls and user interface\ncomponents for 'Shiny' applications. Give your applications a\nunique and colorful style ! actionBttn actionGroupButtons addSpinner airDatepickerInput airMonthpickerInput airYearpickerInput alert animateOptions appendVerticalTab applyWinBox ask_confirmation autonumericInput awesomeCheckbox awesomeCheckboxGroup awesomeRadio calendarProInput checkboxGroupButtons chooseSliderSkin circleButton closeSweetAlert closeWinBox colorPickr colorSelectorDrop colorSelectorExample colorSelectorInput confirmSweetAlert create_tree currencyInput demoAirDatepicker demoNoUiSlider demoNumericRange demoVirtualSelect disableDropMenu downloadBttn dropdown dropdownButton dropMenu dropMenuOptions enableDropMenu execute_safely formatNumericInput hideDropMenu html_dependency_awesome html_dependency_bsswitch html_dependency_bttn html_dependency_pretty html_dependency_sweetalert2 html_dependency_winbox inputSweetAlert knobInput list_group materialSwitch multiInput noUiSliderInput numericInputIcon numericRangeInput panel pickerGroupServer pickerGroupUI pickerInput pickerOptions prepare_choices prepare_slim_choices prettyCheckbox prettyCheckboxGroup prettyRadioButtons prettySwitch prettyToggle progressBar progressSweetAlert radioGroupButtons removeVerticalTab reorderVerticalTabs searchInput selectizeGroupServer selectizeGroupUI sendSweetAlert setBackgroundColor setBackgroundImage setShadow setSliderColor shinyWidgetsGallery show_alert show_toast showDropMenu sliderTextInput slimSelectInput spectrumInput statiCard switchInput textInputAddon textInputIcon timeInput timepickerOptions toggleDropdownButton tooltipOptions treeInput updateAirDateInput updateAutonumericInput updateAwesomeCheckbox updateAwesomeCheckboxGroup updateAwesomeRadio updateCalendarPro updateCheckboxGroupButtons updateColorPickr updateCurrencyInput updateKnobInput updateMaterialSwitch updateMultiInput updateNoUiSliderInput updateNumericInputIcon updateNumericRangeInput updatePickerInput updatePrettyCheckbox updatePrettyCheckboxGroup updatePrettyRadioButtons updatePrettySwitch updatePrettyToggle updateProgressBar updateRadioGroupButtons updateSearchInput updateSliderTextInput updateSlimSelect updateSpectrumInput updateStatiCard updateSwitchInput updateTextInputIcon updateTimeInput updateTreeInput updateVerticalTabsetPanel updateVirtualSelect useArgonDash useBs4Dash useShinydashboard useShinydashboardPlus useSweetAlert useTablerDash verticalTabPanel verticalTabsetPanel virtualSelectInput wbControls wbOptions WinBox wNumbFormat shiny"
+  },
+  {
+    "id": 1207,
+    "package_name": "shinydashboard",
+    "title": "Create Dashboards with 'Shiny'",
+    "description": "Create dashboards with 'Shiny'. This package provides a\ntheme on top of 'Shiny', making it easy to create attractive\ndashboards.",
+    "version": "0.7.3.9000",
+    "maintainer": "Winston Chang <winston@posit.co>",
+    "author": "Winston Chang [aut, cre],\nBarbara Borges Ribeiro [aut],\nPosit Software, PBC [cph],\nAlmasaeed Studio [ctb, cph] (AdminLTE theme for Bootstrap),\nAdobe Systems Incorporated [ctb, cph] (Source Sans Pro font)",
+    "url": "https://rstudio.github.io/shinydashboard/,\nhttps://github.com/rstudio/shinydashboard",
+    "bug_reports": "https://github.com/rstudio/shinydashboard/issues",
+    "repository": "",
+    "exports": [
+      [
+        "box"
+      ],
+      [
+        "dashboardBody"
+      ],
+      [
+        "dashboardHeader"
+      ],
+      [
+        "dashboardPage"
+      ],
+      [
+        "dashboardSidebar"
+      ],
+      [
+        "dropdownMenu"
+      ],
+      [
+        "dropdownMenuOutput"
+      ],
+      [
+        "infoBox"
+      ],
+      [
+        "infoBoxOutput"
+      ],
+      [
+        "menuItem"
+      ],
+      [
+        "menuItemOutput"
+      ],
+      [
+        "menuSubItem"
+      ],
+      [
+        "messageItem"
+      ],
+      [
+        "notificationItem"
+      ],
+      [
+        "renderDropdownMenu"
+      ],
+      [
+        "renderInfoBox"
+      ],
+      [
+        "renderMenu"
+      ],
+      [
+        "renderValueBox"
+      ],
+      [
+        "sidebarMenu"
+      ],
+      [
+        "sidebarMenuOutput"
+      ],
+      [
+        "sidebarSearchForm"
+      ],
+      [
+        "sidebarUserPanel"
+      ],
+      [
+        "tabBox"
+      ],
+      [
+        "tabItem"
+      ],
+      [
+        "tabItems"
+      ],
+      [
+        "taskItem"
+      ],
+      [
+        "updateTabItems"
+      ],
+      [
+        "valueBox"
+      ],
+      [
+        "valueBoxOutput"
+      ]
+    ],
+    "topics": [
+      [
+        "admin-dashboard"
+      ],
+      [
+        "dashboard"
+      ],
+      [
+        "reactivity"
+      ],
+      [
+        "rstudio"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "shinydashboard"
+      ],
+      [
+        "web-app"
+      ],
+      [
+        "web-development"
+      ]
+    ],
+    "score": 15.7186,
+    "stars": 917,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "shinydashboard Create Dashboards with 'Shiny' Create dashboards with 'Shiny'. This package provides a\ntheme on top of 'Shiny', making it easy to create attractive\ndashboards. box dashboardBody dashboardHeader dashboardPage dashboardSidebar dropdownMenu dropdownMenuOutput infoBox infoBoxOutput menuItem menuItemOutput menuSubItem messageItem notificationItem renderDropdownMenu renderInfoBox renderMenu renderValueBox sidebarMenu sidebarMenuOutput sidebarSearchForm sidebarUserPanel tabBox tabItem tabItems taskItem updateTabItems valueBox valueBoxOutput admin-dashboard dashboard reactivity rstudio shiny shinydashboard web-app web-development"
+  },
+  {
+    "id": 1069,
+    "package_name": "reactable",
+    "title": "Interactive Data Tables for R",
+    "description": "Interactive data tables for R, based on the 'React Table'\nJavaScript library. Provides an HTML widget that can be used in\n'R Markdown' or 'Quarto' documents, 'Shiny' applications, or\nviewed from an R console.",
+    "version": "0.4.5.9000",
+    "maintainer": "Greg Lin <glin@glin.io>",
+    "author": "Greg Lin [aut, cre],\nTanner Linsley [ctb, cph] (React Table library),\nEmotion team and other contributors [ctb, cph] (Emotion library),\nKent Russell [ctb, cph] (reactR package),\nRamnath Vaidyanathan [ctb, cph] (htmlwidgets package),\nJoe Cheng [ctb, cph] (htmlwidgets package),\nJJ Allaire [ctb, cph] (htmlwidgets package),\nYihui Xie [ctb, cph] (htmlwidgets package),\nKenton Russell [ctb, cph] (htmlwidgets package),\nFacebook, Inc. and its affiliates [ctb, cph] (React library),\nFormatJS [ctb, cph] (FormatJS libraries),\nFeross Aboukhadijeh, and other contributors [ctb, cph] (buffer library),\nRoman Shtylman [ctb, cph] (process library),\nJames Halliday [ctb, cph] (stream-browserify library),\nPosit Software, PBC [fnd, cph]",
+    "url": "https://glin.github.io/reactable/,\nhttps://github.com/glin/reactable",
+    "bug_reports": "https://github.com/glin/reactable/issues",
+    "repository": "",
+    "exports": [
+      [
+        "colDef"
+      ],
+      [
+        "colFormat"
+      ],
+      [
+        "colGroup"
+      ],
+      [
+        "getReactableState"
+      ],
+      [
+        "JS"
+      ],
+      [
+        "knit_print.reactable"
+      ],
+      [
+        "reactable"
+      ],
+      [
+        "reactableLang"
+      ],
+      [
+        "reactableOutput"
+      ],
+      [
+        "reactableServerData"
+      ],
+      [
+        "reactableServerInit"
+      ],
+      [
+        "reactableTheme"
+      ],
+      [
+        "renderReactable"
+      ],
+      [
+        "resolvedData"
+      ],
+      [
+        "updateReactable"
+      ]
+    ],
+    "topics": [
+      [
+        "htmlwidgets"
+      ],
+      [
+        "react"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "table"
+      ]
+    ],
+    "score": 15.1338,
+    "stars": 669,
+    "primary_category": "visualization",
+    "source_universe": "glin",
+    "search_text": "reactable Interactive Data Tables for R Interactive data tables for R, based on the 'React Table'\nJavaScript library. Provides an HTML widget that can be used in\n'R Markdown' or 'Quarto' documents, 'Shiny' applications, or\nviewed from an R console. colDef colFormat colGroup getReactableState JS knit_print.reactable reactable reactableLang reactableOutput reactableServerData reactableServerInit reactableTheme renderReactable resolvedData updateReactable htmlwidgets react shiny table"
+  },
+  {
+    "id": 753,
+    "package_name": "learnr",
+    "title": "Interactive Tutorials for R",
+    "description": "Create interactive tutorials using R Markdown. Use a\ncombination of narrative, figures, videos, exercises, and\nquizzes to create self-paced tutorials for learning about R and\nR packages.",
+    "version": "0.11.6.9000",
+    "maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+    "author": "Garrick Aden-Buie [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-7111-0077>),\nBarret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>),\nJJ Allaire [aut, ccp],\nAlexander Rossell Hayes [aut] (ORCID:\n<https://orcid.org/0000-0001-9412-0457>),\nNischal Shrestha [ctb] (ORCID: <https://orcid.org/0000-0003-3321-1712>),\nAngela Li [ctb] (vignette),\nPosit, PBC [cph, fnd],\nAjax.org B.V. [ctb, cph] (Ace library),\nZeno Rocha [ctb, cph] (clipboard.js library),\nNick Payne [ctb, cph] (Bootbox library),\nJake Archibald [ctb, cph] (idb-keyval library),\ni18next authors [ctb, cph] (i18next library)",
+    "url": "https://rstudio.github.io/learnr/,\nhttps://github.com/rstudio/learnr",
+    "bug_reports": "https://github.com/rstudio/learnr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "answer"
+      ],
+      [
+        "answer_fn"
+      ],
+      [
+        "available_tutorials"
+      ],
+      [
+        "correct"
+      ],
+      [
+        "disable_all_tags"
+      ],
+      [
+        "duplicate_env"
+      ],
+      [
+        "event_register_handler"
+      ],
+      [
+        "external_evaluator"
+      ],
+      [
+        "filesystem_storage"
+      ],
+      [
+        "finalize_question"
+      ],
+      [
+        "get_tutorial_info"
+      ],
+      [
+        "get_tutorial_state"
+      ],
+      [
+        "incorrect"
+      ],
+      [
+        "initialize_tutorial"
+      ],
+      [
+        "mark_as"
+      ],
+      [
+        "mock_chunk"
+      ],
+      [
+        "mock_exercise"
+      ],
+      [
+        "one_time"
+      ],
+      [
+        "question"
+      ],
+      [
+        "question_checkbox"
+      ],
+      [
+        "question_is_correct"
+      ],
+      [
+        "question_is_valid"
+      ],
+      [
+        "question_numeric"
+      ],
+      [
+        "question_radio"
+      ],
+      [
+        "question_text"
+      ],
+      [
+        "question_ui_completed"
+      ],
+      [
+        "question_ui_initialize"
+      ],
+      [
+        "question_ui_try_again"
+      ],
+      [
+        "quiz"
+      ],
+      [
+        "random_encouragement"
+      ],
+      [
+        "random_phrases_add"
+      ],
+      [
+        "random_praise"
+      ],
+      [
+        "run_tutorial"
+      ],
+      [
+        "safe"
+      ],
+      [
+        "safe_env"
+      ],
+      [
+        "tutorial"
+      ],
+      [
+        "tutorial_html_dependency"
+      ],
+      [
+        "tutorial_options"
+      ],
+      [
+        "tutorial_package_dependencies"
+      ]
+    ],
+    "topics": [
+      [
+        "interactive"
+      ],
+      [
+        "python"
+      ],
+      [
+        "rmarkdown"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "sql"
+      ],
+      [
+        "teaching"
+      ],
+      [
+        "tutorial"
+      ]
+    ],
+    "score": 15.0078,
+    "stars": 726,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "learnr Interactive Tutorials for R Create interactive tutorials using R Markdown. Use a\ncombination of narrative, figures, videos, exercises, and\nquizzes to create self-paced tutorials for learning about R and\nR packages. answer answer_fn available_tutorials correct disable_all_tags duplicate_env event_register_handler external_evaluator filesystem_storage finalize_question get_tutorial_info get_tutorial_state incorrect initialize_tutorial mark_as mock_chunk mock_exercise one_time question question_checkbox question_is_correct question_is_valid question_numeric question_radio question_text question_ui_completed question_ui_initialize question_ui_try_again quiz random_encouragement random_phrases_add random_praise run_tutorial safe safe_env tutorial tutorial_html_dependency tutorial_options tutorial_package_dependencies interactive python rmarkdown shiny sql teaching tutorial"
+  },
+  {
+    "id": 1206,
+    "package_name": "shinycssloaders",
+    "title": "Add Loading Animations to a 'shiny' Output While It's\nRecalculating",
+    "description": "When a 'Shiny' output (such as a plot, table, map, etc.)\nis recalculating, it remains visible but gets greyed out. Using\n'shinycssloaders', you can add a loading animation (\"spinner\")\nto outputs instead. By wrapping a 'Shiny' output in\n'withSpinner()', a spinner will automatically appear while the\noutput is recalculating. You can also manually show and hide\nthe spinner, or add a full-page spinner to cover the entire\npage. See the demo online at\n<https://daattali.com/shiny/shinycssloaders-demo/>.",
+    "version": "1.1.0.9006",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (Maintainer/developer of shinycssloaders since\n2019, ORCID: <https://orcid.org/0000-0002-5645-3493>),\nAndras Sali [aut] (Original creator of shinycssloaders package),\nLuke Hass [ctb, cph] (Author of included CSS loader code)",
+    "url": "https://github.com/daattali/shinycssloaders,\nhttps://daattali.com/shiny/shinycssloaders-demo/",
+    "bug_reports": "https://github.com/daattali/shinycssloaders/issues",
+    "repository": "",
+    "exports": [
+      [
+        "hidePageSpinner"
+      ],
+      [
+        "hideSpinner"
+      ],
+      [
+        "showPageSpinner"
+      ],
+      [
+        "showSpinner"
+      ],
+      [
+        "withSpinner"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 14.2192,
+    "stars": 420,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinycssloaders Add Loading Animations to a 'shiny' Output While It's\nRecalculating When a 'Shiny' output (such as a plot, table, map, etc.)\nis recalculating, it remains visible but gets greyed out. Using\n'shinycssloaders', you can add a loading animation (\"spinner\")\nto outputs instead. By wrapping a 'Shiny' output in\n'withSpinner()', a spinner will automatically appear while the\noutput is recalculating. You can also manually show and hide\nthe spinner, or add a full-page spinner to cover the entire\npage. See the demo online at\n<https://daattali.com/shiny/shinycssloaders-demo/>. hidePageSpinner hideSpinner showPageSpinner showSpinner withSpinner shiny shiny-r"
+  },
+  {
+    "id": 439,
+    "package_name": "datamods",
+    "title": "Modules to Import and Manipulate Data in 'Shiny'",
+    "description": "'Shiny' modules to import data into an application or\n'addin' from various sources, and to manipulate them after\nthat.",
+    "version": "1.5.3.9200",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Victor Perrier [aut, cre, cph],\nFanny Meyer [aut],\nSamra Goumri [aut],\nZauad Shahreer Abeer [aut],\nEduard Sz\u00f6cs [ctb]",
+    "url": "https://github.com/dreamRs/datamods,\nhttps://dreamrs.github.io/datamods/",
+    "bug_reports": "https://github.com/dreamRs/datamods/issues",
+    "repository": "",
+    "exports": [
+      [
+        "create_column_server"
+      ],
+      [
+        "create_column_ui"
+      ],
+      [
+        "cut_variable_server"
+      ],
+      [
+        "cut_variable_ui"
+      ],
+      [
+        "edit_data_server"
+      ],
+      [
+        "edit_data_ui"
+      ],
+      [
+        "filter_data_server"
+      ],
+      [
+        "filter_data_ui"
+      ],
+      [
+        "get_data_packages"
+      ],
+      [
+        "i18n"
+      ],
+      [
+        "i18n_translations"
+      ],
+      [
+        "import_copypaste_server"
+      ],
+      [
+        "import_copypaste_ui"
+      ],
+      [
+        "import_file_server"
+      ],
+      [
+        "import_file_ui"
+      ],
+      [
+        "import_globalenv_server"
+      ],
+      [
+        "import_globalenv_ui"
+      ],
+      [
+        "import_googlesheets_server"
+      ],
+      [
+        "import_googlesheets_ui"
+      ],
+      [
+        "import_modal"
+      ],
+      [
+        "import_server"
+      ],
+      [
+        "import_ui"
+      ],
+      [
+        "import_url_server"
+      ],
+      [
+        "import_url_ui"
+      ],
+      [
+        "list_allowed_operations"
+      ],
+      [
+        "list_pkg_data"
+      ],
+      [
+        "modal_create_column"
+      ],
+      [
+        "modal_cut_variable"
+      ],
+      [
+        "modal_update_factor"
+      ],
+      [
+        "sample_server"
+      ],
+      [
+        "sample_ui"
+      ],
+      [
+        "select_group_server"
+      ],
+      [
+        "select_group_ui"
+      ],
+      [
+        "set_i18n"
+      ],
+      [
+        "show_data"
+      ],
+      [
+        "update_factor_server"
+      ],
+      [
+        "update_factor_ui"
+      ],
+      [
+        "update_variables_server"
+      ],
+      [
+        "update_variables_ui"
+      ],
+      [
+        "validation_server"
+      ],
+      [
+        "validation_ui"
+      ],
+      [
+        "winbox_create_column"
+      ],
+      [
+        "winbox_cut_variable"
+      ],
+      [
+        "winbox_update_factor"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-modules"
+      ]
+    ],
+    "score": 12.338,
+    "stars": 155,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "datamods Modules to Import and Manipulate Data in 'Shiny' 'Shiny' modules to import data into an application or\n'addin' from various sources, and to manipulate them after\nthat. create_column_server create_column_ui cut_variable_server cut_variable_ui edit_data_server edit_data_ui filter_data_server filter_data_ui get_data_packages i18n i18n_translations import_copypaste_server import_copypaste_ui import_file_server import_file_ui import_globalenv_server import_globalenv_ui import_googlesheets_server import_googlesheets_ui import_modal import_server import_ui import_url_server import_url_ui list_allowed_operations list_pkg_data modal_create_column modal_cut_variable modal_update_factor sample_server sample_ui select_group_server select_group_ui set_i18n show_data update_factor_server update_factor_ui update_variables_server update_variables_ui validation_server validation_ui winbox_create_column winbox_cut_variable winbox_update_factor shiny shiny-modules"
+  },
+  {
+    "id": 388,
+    "package_name": "colourpicker",
+    "title": "A Colour Picker Tool for Shiny and for Selecting Colours in\nPlots",
+    "description": "A colour picker that can be used as an input in 'Shiny'\napps or Rmarkdown documents. The colour picker supports alpha\nopacity, custom colour palettes, and many more options. A Plot\nColour Helper tool is available as an 'RStudio' Addin, which\nhelps you pick colours to use in your plots. A more generic\nColour Picker 'RStudio' Addin is also provided to let you\nselect colours to use in your R code.",
+    "version": "1.3.0",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>),\nDavid Griswold [ctb]",
+    "url": "https://github.com/daattali/colourpicker,\nhttps://daattali.com/shiny/colourInput/",
+    "bug_reports": "https://github.com/daattali/colourpicker/issues",
+    "repository": "",
+    "exports": [
+      [
+        "colourInput"
+      ],
+      [
+        "colourPicker"
+      ],
+      [
+        "colourWidget"
+      ],
+      [
+        "plotHelper"
+      ],
+      [
+        "runExample"
+      ],
+      [
+        "updateColourInput"
+      ]
+    ],
+    "topics": [
+      [
+        "rstudio-addin"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 12.2983,
+    "stars": 226,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "colourpicker A Colour Picker Tool for Shiny and for Selecting Colours in\nPlots A colour picker that can be used as an input in 'Shiny'\napps or Rmarkdown documents. The colour picker supports alpha\nopacity, custom colour palettes, and many more options. A Plot\nColour Helper tool is available as an 'RStudio' Addin, which\nhelps you pick colours to use in your plots. A more generic\nColour Picker 'RStudio' Addin is also provided to let you\nselect colours to use in your R code. colourInput colourPicker colourWidget plotHelper runExample updateColourInput rstudio-addin shiny shiny-r"
+  },
+  {
+    "id": 589,
+    "package_name": "fresh",
+    "title": "Create Custom 'Bootstrap' Themes to Use in 'Shiny'",
+    "description": "Customize 'Bootstrap' and 'Bootswatch' themes, like\ncolors, fonts, grid layout, to use in 'Shiny' applications,\n'rmarkdown' documents and 'flexdashboard'.",
+    "version": "0.2.2",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Victor Perrier [aut, cre, cph],\nFanny Meyer [aut],\nThomas Park [ctb, cph] (Bootswatch themes),\nMark Otto [ctb] (Bootstrap library),\nJacob Thornton [ctb] (Bootstrap library),\nBootstrap contributors [ctb] (Bootstrap library),\nTwitter, Inc [cph] (Bootstrap library),\nonkbear [ctb, cph] (admin-lte-2-sass),\nColorlib [ctb, cph] (AdminLTE)",
+    "url": "https://github.com/dreamRs/fresh",
+    "bug_reports": "https://github.com/dreamRs/fresh/issues",
+    "repository": "",
+    "exports": [
+      [
+        "adminlte_color"
+      ],
+      [
+        "adminlte_global"
+      ],
+      [
+        "adminlte_sidebar"
+      ],
+      [
+        "adminlte_vars"
+      ],
+      [
+        "bs_theme_nord_dark"
+      ],
+      [
+        "bs_theme_nord_light"
+      ],
+      [
+        "bs_vars"
+      ],
+      [
+        "bs_vars_alert"
+      ],
+      [
+        "bs_vars_badge"
+      ],
+      [
+        "bs_vars_button"
+      ],
+      [
+        "bs_vars_color"
+      ],
+      [
+        "bs_vars_component"
+      ],
+      [
+        "bs_vars_dropdown"
+      ],
+      [
+        "bs_vars_file"
+      ],
+      [
+        "bs_vars_font"
+      ],
+      [
+        "bs_vars_global"
+      ],
+      [
+        "bs_vars_input"
+      ],
+      [
+        "bs_vars_modal"
+      ],
+      [
+        "bs_vars_nav"
+      ],
+      [
+        "bs_vars_navbar"
+      ],
+      [
+        "bs_vars_panel"
+      ],
+      [
+        "bs_vars_pills"
+      ],
+      [
+        "bs_vars_progress"
+      ],
+      [
+        "bs_vars_state"
+      ],
+      [
+        "bs_vars_table"
+      ],
+      [
+        "bs_vars_tabs"
+      ],
+      [
+        "bs_vars_wells"
+      ],
+      [
+        "bs4dash_button"
+      ],
+      [
+        "bs4dash_color"
+      ],
+      [
+        "bs4dash_font"
+      ],
+      [
+        "bs4dash_layout"
+      ],
+      [
+        "bs4dash_sidebar_dark"
+      ],
+      [
+        "bs4dash_sidebar_light"
+      ],
+      [
+        "bs4dash_status"
+      ],
+      [
+        "bs4Dash_theme"
+      ],
+      [
+        "bs4dash_vars"
+      ],
+      [
+        "bs4dash_yiq"
+      ],
+      [
+        "create_pretty"
+      ],
+      [
+        "create_theme"
+      ],
+      [
+        "search_vars"
+      ],
+      [
+        "search_vars_adminlte2"
+      ],
+      [
+        "search_vars_bs"
+      ],
+      [
+        "search_vars_bs4dash"
+      ],
+      [
+        "use_googlefont"
+      ],
+      [
+        "use_pretty"
+      ],
+      [
+        "use_theme"
+      ],
+      [
+        "use_vars_template"
+      ]
+    ],
+    "topics": [
+      [
+        "bootstrap"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "shiny-applications"
+      ],
+      [
+        "shiny-themes"
+      ]
+    ],
+    "score": 12.1303,
+    "stars": 233,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "fresh Create Custom 'Bootstrap' Themes to Use in 'Shiny' Customize 'Bootstrap' and 'Bootswatch' themes, like\ncolors, fonts, grid layout, to use in 'Shiny' applications,\n'rmarkdown' documents and 'flexdashboard'. adminlte_color adminlte_global adminlte_sidebar adminlte_vars bs_theme_nord_dark bs_theme_nord_light bs_vars bs_vars_alert bs_vars_badge bs_vars_button bs_vars_color bs_vars_component bs_vars_dropdown bs_vars_file bs_vars_font bs_vars_global bs_vars_input bs_vars_modal bs_vars_nav bs_vars_navbar bs_vars_panel bs_vars_pills bs_vars_progress bs_vars_state bs_vars_table bs_vars_tabs bs_vars_wells bs4dash_button bs4dash_color bs4dash_font bs4dash_layout bs4dash_sidebar_dark bs4dash_sidebar_light bs4dash_status bs4Dash_theme bs4dash_vars bs4dash_yiq create_pretty create_theme search_vars search_vars_adminlte2 search_vars_bs search_vars_bs4dash use_googlefont use_pretty use_theme use_vars_template bootstrap shiny shiny-applications shiny-themes"
+  },
+  {
+    "id": 1205,
+    "package_name": "shinybusy",
+    "title": "Busy Indicators and Notifications for 'Shiny' Applications",
+    "description": "Add indicators (spinner, progress bar, gif) in your\n'shiny' applications to show the user that the server is busy.\nAnd other tools to let your users know something is happening\n(send notifications, reports, ...).",
+    "version": "0.3.3",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Fanny Meyer [aut],\nVictor Perrier [aut, cre],\nSilex Technologies [fnd] (https://www.silex-ip.com)",
+    "url": "https://github.com/dreamRs/shinybusy,\nhttps://dreamrs.github.io/shinybusy/",
+    "bug_reports": "https://github.com/dreamRs/shinybusy/issues",
+    "repository": "",
+    "exports": [
+      [
+        "add_busy_bar"
+      ],
+      [
+        "add_busy_gif"
+      ],
+      [
+        "add_busy_spinner"
+      ],
+      [
+        "add_loading_state"
+      ],
+      [
+        "block"
+      ],
+      [
+        "block_output"
+      ],
+      [
+        "busy_start_up"
+      ],
+      [
+        "config_notify"
+      ],
+      [
+        "config_report"
+      ],
+      [
+        "hide_spinner"
+      ],
+      [
+        "html_dependency_block"
+      ],
+      [
+        "html_dependency_busy"
+      ],
+      [
+        "html_dependency_epic"
+      ],
+      [
+        "html_dependency_freezeframe"
+      ],
+      [
+        "html_dependency_loading"
+      ],
+      [
+        "html_dependency_nanobar"
+      ],
+      [
+        "html_dependency_notiflix"
+      ],
+      [
+        "html_dependency_notify"
+      ],
+      [
+        "html_dependency_report"
+      ],
+      [
+        "html_dependency_shinybusy"
+      ],
+      [
+        "html_dependency_spinkit"
+      ],
+      [
+        "html_dependency_startup"
+      ],
+      [
+        "logo_silex"
+      ],
+      [
+        "notify"
+      ],
+      [
+        "notify_failure"
+      ],
+      [
+        "notify_info"
+      ],
+      [
+        "notify_success"
+      ],
+      [
+        "notify_warning"
+      ],
+      [
+        "play_gif"
+      ],
+      [
+        "progress_circle"
+      ],
+      [
+        "progress_line"
+      ],
+      [
+        "progress_semicircle"
+      ],
+      [
+        "remove_modal_gif"
+      ],
+      [
+        "remove_modal_progress"
+      ],
+      [
+        "remove_modal_spinner"
+      ],
+      [
+        "remove_start_up"
+      ],
+      [
+        "report"
+      ],
+      [
+        "report_failure"
+      ],
+      [
+        "report_info"
+      ],
+      [
+        "report_success"
+      ],
+      [
+        "report_warning"
+      ],
+      [
+        "show_modal_gif"
+      ],
+      [
+        "show_modal_progress_circle"
+      ],
+      [
+        "show_modal_progress_line"
+      ],
+      [
+        "show_modal_spinner"
+      ],
+      [
+        "show_spinner"
+      ],
+      [
+        "spin_epic"
+      ],
+      [
+        "spin_kit"
+      ],
+      [
+        "stop_gif"
+      ],
+      [
+        "unblock"
+      ],
+      [
+        "update_busy_bar"
+      ],
+      [
+        "update_modal_progress"
+      ],
+      [
+        "update_modal_spinner"
+      ],
+      [
+        "update_progress"
+      ],
+      [
+        "use_busy_bar"
+      ],
+      [
+        "use_busy_gif"
+      ],
+      [
+        "use_busy_spinner"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ]
+    ],
+    "score": 11.4977,
+    "stars": 146,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "shinybusy Busy Indicators and Notifications for 'Shiny' Applications Add indicators (spinner, progress bar, gif) in your\n'shiny' applications to show the user that the server is busy.\nAnd other tools to let your users know something is happening\n(send notifications, reports, ...). add_busy_bar add_busy_gif add_busy_spinner add_loading_state block block_output busy_start_up config_notify config_report hide_spinner html_dependency_block html_dependency_busy html_dependency_epic html_dependency_freezeframe html_dependency_loading html_dependency_nanobar html_dependency_notiflix html_dependency_notify html_dependency_report html_dependency_shinybusy html_dependency_spinkit html_dependency_startup logo_silex notify notify_failure notify_info notify_success notify_warning play_gif progress_circle progress_line progress_semicircle remove_modal_gif remove_modal_progress remove_modal_spinner remove_start_up report report_failure report_info report_success report_warning show_modal_gif show_modal_progress_circle show_modal_progress_line show_modal_spinner show_spinner spin_epic spin_kit stop_gif unblock update_busy_bar update_modal_progress update_modal_spinner update_progress use_busy_bar use_busy_gif use_busy_spinner shiny"
+  },
+  {
+    "id": 1203,
+    "package_name": "shinyalert",
+    "title": "Easily Create Pretty Popup Messages (Modals) in 'Shiny'",
+    "description": "Easily create pretty popup messages (modals) in 'Shiny'. A\nmodal can contain text, images, OK/Cancel buttons, an input to\nget a response from the user, and many more customizable\noptions.",
+    "version": "3.1.0",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>,\nR interface),\nTristan Edwards [aut] (sweetalert library),\nZhengjia Wang [ctb]",
+    "url": "https://github.com/daattali/shinyalert,\nhttps://daattali.com/shiny/shinyalert-demo/",
+    "bug_reports": "https://github.com/daattali/shinyalert/issues",
+    "repository": "",
+    "exports": [
+      [
+        "closeAlert"
+      ],
+      [
+        "runExample"
+      ],
+      [
+        "shinyalert"
+      ],
+      [
+        "useShinyalert"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 11.27,
+    "stars": 247,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinyalert Easily Create Pretty Popup Messages (Modals) in 'Shiny' Easily create pretty popup messages (modals) in 'Shiny'. A\nmodal can contain text, images, OK/Cancel buttons, an input to\nget a response from the user, and many more customizable\noptions. closeAlert runExample shinyalert useShinyalert shiny shiny-r"
+  },
+  {
+    "id": 1220,
+    "package_name": "shinyvalidate",
+    "title": "Input Validation for Shiny Apps",
+    "description": "Improves the user experience of Shiny apps by helping to\nprovide feedback when required inputs are missing, or input\nvalues are not valid.",
+    "version": "0.1.3.9000",
+    "maintainer": "Carson Sievert <carson@posit.co>",
+    "author": "Carson Sievert [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-4958-2844>),\nRichard Iannone [aut] (ORCID: <https://orcid.org/0000-0003-3925-190X>),\nJoe Cheng [aut],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://rstudio.github.io/shinyvalidate/,\nhttps://github.com/rstudio/shinyvalidate",
+    "bug_reports": "https://github.com/rstudio/shinyvalidate/issues",
+    "repository": "",
+    "exports": [
+      [
+        "compose_rules"
+      ],
+      [
+        "input_provided"
+      ],
+      [
+        "InputValidator"
+      ],
+      [
+        "skip_validation"
+      ],
+      [
+        "sv_between"
+      ],
+      [
+        "sv_email"
+      ],
+      [
+        "sv_equal"
+      ],
+      [
+        "sv_gt"
+      ],
+      [
+        "sv_gte"
+      ],
+      [
+        "sv_in_set"
+      ],
+      [
+        "sv_integer"
+      ],
+      [
+        "sv_lt"
+      ],
+      [
+        "sv_lte"
+      ],
+      [
+        "sv_not_equal"
+      ],
+      [
+        "sv_numeric"
+      ],
+      [
+        "sv_optional"
+      ],
+      [
+        "sv_regex"
+      ],
+      [
+        "sv_required"
+      ],
+      [
+        "sv_url"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "ui"
+      ],
+      [
+        "validation"
+      ]
+    ],
+    "score": 9.8942,
+    "stars": 115,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "shinyvalidate Input Validation for Shiny Apps Improves the user experience of Shiny apps by helping to\nprovide feedback when required inputs are missing, or input\nvalues are not valid. compose_rules input_provided InputValidator skip_validation sv_between sv_email sv_equal sv_gt sv_gte sv_in_set sv_integer sv_lt sv_lte sv_not_equal sv_numeric sv_optional sv_regex sv_required sv_url shiny ui validation"
+  },
+  {
+    "id": 1357,
+    "package_name": "timevis",
+    "title": "Create Interactive Timeline Visualizations in R",
+    "description": "Create rich and fully interactive timeline visualizations.\nTimelines can be included in Shiny apps or R markdown\ndocuments. 'timevis' includes an extensive API to manipulate a\ntimeline after creation, and supports getting data out of the\nvisualization into R. Based on the 'vis.js' Timeline JavaScript\nlibrary.",
+    "version": "2.1.0.9000",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (R interface, ORCID:\n<https://orcid.org/0000-0002-5645-3493>),\nAlmende B.V. [aut, cph] (vis.js Timeline library,\nhttps://visjs.github.io/vis-timeline/docs/timeline/)",
+    "url": "https://github.com/daattali/timevis,\nhttps://daattali.com/shiny/timevis-demo/",
+    "bug_reports": "https://github.com/daattali/timevis/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "addCustomTime"
+      ],
+      [
+        "addItem"
+      ],
+      [
+        "addItems"
+      ],
+      [
+        "centerItem"
+      ],
+      [
+        "centerTime"
+      ],
+      [
+        "fitWindow"
+      ],
+      [
+        "removeCustomTime"
+      ],
+      [
+        "removeItem"
+      ],
+      [
+        "renderTimevis"
+      ],
+      [
+        "runExample"
+      ],
+      [
+        "setCurrentTime"
+      ],
+      [
+        "setCustomTime"
+      ],
+      [
+        "setGroups"
+      ],
+      [
+        "setItems"
+      ],
+      [
+        "setOptions"
+      ],
+      [
+        "setSelection"
+      ],
+      [
+        "setWindow"
+      ],
+      [
+        "timevis"
+      ],
+      [
+        "timevisOutput"
+      ],
+      [
+        "zoomIn"
+      ],
+      [
+        "zoomOut"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 9.3833,
+    "stars": 675,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "timevis Create Interactive Timeline Visualizations in R Create rich and fully interactive timeline visualizations.\nTimelines can be included in Shiny apps or R markdown\ndocuments. 'timevis' includes an extensive API to manipulate a\ntimeline after creation, and supports getting data out of the\nvisualization into R. Based on the 'vis.js' Timeline JavaScript\nlibrary. %>% addCustomTime addItem addItems centerItem centerTime fitWindow removeCustomTime removeItem renderTimevis runExample setCurrentTime setCustomTime setGroups setItems setOptions setSelection setWindow timevis timevisOutput zoomIn zoomOut shiny shiny-r"
+  },
+  {
+    "id": 621,
+    "package_name": "gfonts",
+    "title": "Offline 'Google' Fonts for 'Markdown' and 'Shiny'",
+    "description": "Download 'Google' fonts and generate 'CSS' to use in\n'rmarkdown' documents and 'shiny' applications. Some popular\nfonts are included and ready to use.",
+    "version": "0.2.0",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Victor Perrier [aut, cre],\nFanny Meyer [aut],\nMario Ranftl [ctb, cph] (google-webfonts-helper)",
+    "url": "https://dreamrs.github.io/gfonts/,\nhttps://github.com/dreamRs/gfonts",
+    "bug_reports": "https://github.com/dreamRs/gfonts/issues",
+    "repository": "",
+    "exports": [
+      [
+        "download_font"
+      ],
+      [
+        "generate_css"
+      ],
+      [
+        "get_all_fonts"
+      ],
+      [
+        "get_font_info"
+      ],
+      [
+        "setup_font"
+      ],
+      [
+        "tag_example"
+      ],
+      [
+        "use_font"
+      ],
+      [
+        "use_pkg_gfont"
+      ]
+    ],
+    "topics": [
+      [
+        "fonts"
+      ],
+      [
+        "rmarkdown"
+      ],
+      [
+        "shiny"
+      ]
+    ],
+    "score": 8.613,
+    "stars": 117,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "gfonts Offline 'Google' Fonts for 'Markdown' and 'Shiny' Download 'Google' fonts and generate 'CSS' to use in\n'rmarkdown' documents and 'shiny' applications. Some popular\nfonts are included and ready to use. download_font generate_css get_all_fonts get_font_info setup_font tag_example use_font use_pkg_gfont fonts rmarkdown shiny"
+  },
+  {
+    "id": 1212,
+    "package_name": "shinylogs",
+    "title": "Record Everything that Happens in a 'Shiny' Application",
+    "description": "Track and record the use of applications and the user's\ninteractions with 'Shiny' inputs. Allows to trace the inputs\nwith which the user interacts, the outputs generated, as well\nas the errors displayed in the interface.",
+    "version": "0.2.1.9000",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Fanny Meyer [aut],\nVictor Perrier [aut, cre],\nSilex Technologies [fnd] (https://www.silex-ip.com)",
+    "url": "https://github.com/dreamRs/shinylogs,\nhttps://dreamrs.github.io/shinylogs/",
+    "bug_reports": "https://github.com/dreamRs/shinylogs/issues",
+    "repository": "",
+    "exports": [
+      [
+        "read_json_logs"
+      ],
+      [
+        "read_rds_logs"
+      ],
+      [
+        "store_custom"
+      ],
+      [
+        "store_googledrive"
+      ],
+      [
+        "store_json"
+      ],
+      [
+        "store_null"
+      ],
+      [
+        "store_rds"
+      ],
+      [
+        "store_sqlite"
+      ],
+      [
+        "track_usage"
+      ],
+      [
+        "use_tracking"
+      ]
+    ],
+    "topics": [
+      [
+        "logs"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "shinyapps"
+      ]
+    ],
+    "score": 8.6081,
+    "stars": 101,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "shinylogs Record Everything that Happens in a 'Shiny' Application Track and record the use of applications and the user's\ninteractions with 'Shiny' inputs. Allows to trace the inputs\nwith which the user interacts, the outputs generated, as well\nas the errors displayed in the interface. read_json_logs read_rds_logs store_custom store_googledrive store_json store_null store_rds store_sqlite track_usage use_tracking logs shiny shinyapps"
+  },
+  {
+    "id": 1208,
+    "package_name": "shinydisconnect",
+    "title": "Show a Nice Message When a 'Shiny' App Disconnects or Errors",
+    "description": "A 'Shiny' app can disconnect for a variety of reasons: an\nunrecoverable error occurred in the app, the server went down,\nthe user lost internet connection, or any other reason that\nmight cause the 'Shiny' app to lose connection to its server.\nWith 'shinydisconnect', you can call disonnectMessage()\nanywhere in a Shiny app's UI to add a nice message when this\nhappens. Works locally (running Shiny apps within 'RStudio')\nand on Shiny servers (such as shinyapps.io, 'RStudio Connect',\n'Shiny Server Open Source', 'Shiny Server Pro'). See demo\nonline at <https://daattali.com/shiny/shinydisconnect-demo/>.",
+    "version": "0.1.1",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0002-5645-3493>)",
+    "url": "https://github.com/daattali/shinydisconnect,\nhttps://daattali.com/shiny/shinydisconnect-demo/",
+    "bug_reports": "https://github.com/daattali/shinydisconnect/issues",
+    "repository": "",
+    "exports": [
+      [
+        "disconnectMessage"
+      ],
+      [
+        "disconnectMessage2"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 8.0502,
+    "stars": 68,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinydisconnect Show a Nice Message When a 'Shiny' App Disconnects or Errors A 'Shiny' app can disconnect for a variety of reasons: an\nunrecoverable error occurred in the app, the server went down,\nthe user lost internet connection, or any other reason that\nmight cause the 'Shiny' app to lose connection to its server.\nWith 'shinydisconnect', you can call disonnectMessage()\nanywhere in a Shiny app's UI to add a nice message when this\nhappens. Works locally (running Shiny apps within 'RStudio')\nand on Shiny servers (such as shinyapps.io, 'RStudio Connect',\n'Shiny Server Open Source', 'Shiny Server Pro'). See demo\nonline at <https://daattali.com/shiny/shinydisconnect-demo/>. disconnectMessage disconnectMessage2 shiny shiny-r"
+  },
+  {
+    "id": 1215,
+    "package_name": "shinyscreenshot",
+    "title": "Capture Screenshots of Entire Pages or Parts of Pages in 'Shiny'",
+    "description": "Capture screenshots in 'Shiny' applications. Screenshots\ncan either be of the entire viewable page, or a specific\nsection of the page. The captured image is automatically\ndownloaded as a PNG image, or it can also be saved on the\nserver. Powered by the 'html2canvas' JavaScript library.",
+    "version": "0.2.1.9000",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>),\nNiklas von Hertzen [aut] (html2canvas library),\nEli Grey [aut] (FileSaver library)",
+    "url": "https://github.com/daattali/shinyscreenshot,\nhttps://daattali.com/shiny/shinyscreenshot-demo/",
+    "bug_reports": "https://github.com/daattali/shinyscreenshot/issues",
+    "repository": "",
+    "exports": [
+      [
+        "runExample"
+      ],
+      [
+        "screenshot"
+      ],
+      [
+        "screenshotButton"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 7.4175,
+    "stars": 71,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinyscreenshot Capture Screenshots of Entire Pages or Parts of Pages in 'Shiny' Capture screenshots in 'Shiny' applications. Screenshots\ncan either be of the entire viewable page, or a specific\nsection of the page. The captured image is automatically\ndownloaded as a PNG image, or it can also be saved on the\nserver. Powered by the 'html2canvas' JavaScript library. runExample screenshot screenshotButton shiny shiny-r"
+  },
+  {
+    "id": 1412,
+    "package_name": "vchartr",
+    "title": "Interactive Charts with the 'JavaScript' 'VChart' Library",
+    "description": "Provides an 'htmlwidgets' interface to 'VChart.js'.\n'VChart', more than just a cross-platform charting library, but\nalso an expressive data storyteller. 'VChart' examples and\ndocumentation are available here:\n<https://www.visactor.io/vchart>.",
+    "version": "0.1.4.9100",
+    "maintainer": "Victor Perrier <victor.perrier@dreamrs.fr>",
+    "author": "Victor Perrier [aut, cre],\nFanny Meyer [aut]",
+    "url": "https://dreamrs.github.io/vchartr/",
+    "bug_reports": "",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "aes"
+      ],
+      [
+        "format_date_dayjs"
+      ],
+      [
+        "format_datetime_dayjs"
+      ],
+      [
+        "format_num_d3"
+      ],
+      [
+        "JS"
+      ],
+      [
+        "label_format_date"
+      ],
+      [
+        "label_format_datetime"
+      ],
+      [
+        "label_value"
+      ],
+      [
+        "renderVchart"
+      ],
+      [
+        "v_area"
+      ],
+      [
+        "v_bar"
+      ],
+      [
+        "v_boxplot"
+      ],
+      [
+        "v_circlepacking"
+      ],
+      [
+        "v_event"
+      ],
+      [
+        "v_facet_wrap"
+      ],
+      [
+        "v_gauge"
+      ],
+      [
+        "v_heatmap"
+      ],
+      [
+        "v_hist"
+      ],
+      [
+        "v_jitter"
+      ],
+      [
+        "v_labs"
+      ],
+      [
+        "v_line"
+      ],
+      [
+        "v_mark_hline"
+      ],
+      [
+        "v_mark_polygon"
+      ],
+      [
+        "v_mark_rect"
+      ],
+      [
+        "v_mark_segment"
+      ],
+      [
+        "v_mark_vline"
+      ],
+      [
+        "v_pie"
+      ],
+      [
+        "v_progress"
+      ],
+      [
+        "v_radar"
+      ],
+      [
+        "v_sankey"
+      ],
+      [
+        "v_scale_color_discrete"
+      ],
+      [
+        "v_scale_color_manual"
+      ],
+      [
+        "v_scale_colour_gradient"
+      ],
+      [
+        "v_scale_fill_discrete"
+      ],
+      [
+        "v_scale_fill_gradient"
+      ],
+      [
+        "v_scale_fill_manual"
+      ],
+      [
+        "v_scale_size"
+      ],
+      [
+        "v_scale_x_continuous"
+      ],
+      [
+        "v_scale_x_date"
+      ],
+      [
+        "v_scale_x_datetime"
+      ],
+      [
+        "v_scale_x_discrete"
+      ],
+      [
+        "v_scale_x_log"
+      ],
+      [
+        "v_scale_y_continuous"
+      ],
+      [
+        "v_scale_y_date"
+      ],
+      [
+        "v_scale_y_datetime"
+      ],
+      [
+        "v_scale_y_discrete"
+      ],
+      [
+        "v_scale_y_log"
+      ],
+      [
+        "v_scatter"
+      ],
+      [
+        "v_smooth"
+      ],
+      [
+        "v_specs"
+      ],
+      [
+        "v_specs_axes"
+      ],
+      [
+        "v_specs_colors"
+      ],
+      [
+        "v_specs_crosshair"
+      ],
+      [
+        "v_specs_custom_mark"
+      ],
+      [
+        "v_specs_datazoom"
+      ],
+      [
+        "v_specs_indicator"
+      ],
+      [
+        "v_specs_legend"
+      ],
+      [
+        "v_specs_player"
+      ],
+      [
+        "v_specs_tooltip"
+      ],
+      [
+        "v_sunburst"
+      ],
+      [
+        "v_theme"
+      ],
+      [
+        "v_treemap"
+      ],
+      [
+        "v_venn"
+      ],
+      [
+        "v_waterfall"
+      ],
+      [
+        "v_wordcloud"
+      ],
+      [
+        "vars"
+      ],
+      [
+        "vchart"
+      ],
+      [
+        "vchartOutput"
+      ],
+      [
+        "vmap"
+      ]
+    ],
+    "topics": [
+      [
+        "chart"
+      ],
+      [
+        "htmlwidgets"
+      ],
+      [
+        "shiny"
+      ],
+      [
+        "visualization"
+      ]
+    ],
+    "score": 6.242,
+    "stars": 9,
+    "primary_category": "visualization",
+    "source_universe": "dreamrs",
+    "search_text": "vchartr Interactive Charts with the 'JavaScript' 'VChart' Library Provides an 'htmlwidgets' interface to 'VChart.js'.\n'VChart', more than just a cross-platform charting library, but\nalso an expressive data storyteller. 'VChart' examples and\ndocumentation are available here:\n<https://www.visactor.io/vchart>. %>% aes format_date_dayjs format_datetime_dayjs format_num_d3 JS label_format_date label_format_datetime label_value renderVchart v_area v_bar v_boxplot v_circlepacking v_event v_facet_wrap v_gauge v_heatmap v_hist v_jitter v_labs v_line v_mark_hline v_mark_polygon v_mark_rect v_mark_segment v_mark_vline v_pie v_progress v_radar v_sankey v_scale_color_discrete v_scale_color_manual v_scale_colour_gradient v_scale_fill_discrete v_scale_fill_gradient v_scale_fill_manual v_scale_size v_scale_x_continuous v_scale_x_date v_scale_x_datetime v_scale_x_discrete v_scale_x_log v_scale_y_continuous v_scale_y_date v_scale_y_datetime v_scale_y_discrete v_scale_y_log v_scatter v_smooth v_specs v_specs_axes v_specs_colors v_specs_crosshair v_specs_custom_mark v_specs_datazoom v_specs_indicator v_specs_legend v_specs_player v_specs_tooltip v_sunburst v_theme v_treemap v_venn v_waterfall v_wordcloud vars vchart vchartOutput vmap chart htmlwidgets shiny visualization"
+  },
+  {
+    "id": 1214,
+    "package_name": "shinymodels",
+    "title": "Interactive Assessments of Models",
+    "description": "Launch a 'shiny' application for 'tidymodels' results. For\nclassification or regression models, the app can be used to\ndetermine if there is lack of fit or poorly predicted points.",
+    "version": "0.1.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nShisham Adhikari [aut],\nJulia Silge [aut] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://shinymodels.tidymodels.org,\nhttps://github.com/tidymodels/shinymodels",
+    "bug_reports": "https://github.com/tidymodels/shinymodels/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "display_selected"
+      ],
+      [
+        "explore"
+      ],
+      [
+        "first_class_prob_name"
+      ],
+      [
+        "first_level"
+      ],
+      [
+        "format_hover"
+      ],
+      [
+        "organize_data"
+      ],
+      [
+        "performance_object"
+      ],
+      [
+        "plot_multiclass_conf_mat"
+      ],
+      [
+        "plot_multiclass_obs_pred"
+      ],
+      [
+        "plot_multiclass_pr"
+      ],
+      [
+        "plot_multiclass_pred_factorcol"
+      ],
+      [
+        "plot_multiclass_pred_numcol"
+      ],
+      [
+        "plot_multiclass_roc"
+      ],
+      [
+        "plot_numeric_obs_pred"
+      ],
+      [
+        "plot_numeric_res_factorcol"
+      ],
+      [
+        "plot_numeric_res_numcol"
+      ],
+      [
+        "plot_numeric_res_pred"
+      ],
+      [
+        "plot_twoclass_conf_mat"
+      ],
+      [
+        "plot_twoclass_obs_pred"
+      ],
+      [
+        "plot_twoclass_pr"
+      ],
+      [
+        "plot_twoclass_pred_factorcol"
+      ],
+      [
+        "plot_twoclass_pred_numcol"
+      ],
+      [
+        "plot_twoclass_roc"
+      ],
+      [
+        "shiny_models"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ]
+    ],
+    "score": 5.9066,
+    "stars": 48,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "shinymodels Interactive Assessments of Models Launch a 'shiny' application for 'tidymodels' results. For\nclassification or regression models, the app can be used to\ndetermine if there is lack of fit or poorly predicted points. %>% display_selected explore first_class_prob_name first_level format_hover organize_data performance_object plot_multiclass_conf_mat plot_multiclass_obs_pred plot_multiclass_pr plot_multiclass_pred_factorcol plot_multiclass_pred_numcol plot_multiclass_roc plot_numeric_obs_pred plot_numeric_res_factorcol plot_numeric_res_numcol plot_numeric_res_pred plot_twoclass_conf_mat plot_twoclass_obs_pred plot_twoclass_pr plot_twoclass_pred_factorcol plot_twoclass_pred_numcol plot_twoclass_roc shiny_models shiny"
+  },
+  {
+    "id": 1204,
+    "package_name": "shinybrowser",
+    "title": "Find Out Information About a User's Web Browser in 'Shiny'",
+    "description": "Sometimes it's useful to know some information about your\nuser in a 'Shiny' app. The available information is: browser\nname (such as 'Chrome' or 'Safari') and version, device type\n(mobile or desktop), operating system (such as 'Windows' or\n'Mac' or 'Android') and version, and browser dimensions.",
+    "version": "1.0.0.9001",
+    "maintainer": "Dean Attali <daattali@gmail.com>",
+    "author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>)",
+    "url": "https://github.com/daattali/shinybrowser,\nhttps://daattali.com/shiny/shinybrowser-demo/",
+    "bug_reports": "https://github.com/daattali/shinybrowser/issues",
+    "repository": "",
+    "exports": [
+      [
+        "detect"
+      ],
+      [
+        "get_all_info"
+      ],
+      [
+        "get_browser"
+      ],
+      [
+        "get_browser_version"
+      ],
+      [
+        "get_device"
+      ],
+      [
+        "get_height"
+      ],
+      [
+        "get_os"
+      ],
+      [
+        "get_os_version"
+      ],
+      [
+        "get_user_agent"
+      ],
+      [
+        "get_width"
+      ],
+      [
+        "is_browser_chrome"
+      ],
+      [
+        "is_browser_firefox"
+      ],
+      [
+        "is_browser_ie"
+      ],
+      [
+        "is_device_desktop"
+      ],
+      [
+        "is_device_mobile"
+      ],
+      [
+        "is_os_mac"
+      ],
+      [
+        "is_os_windows"
+      ],
+      [
+        "SUPPORTED_BROWSERS"
+      ],
+      [
+        "SUPPORTED_DEVICES"
+      ],
+      [
+        "SUPPORTED_OPERATING_SYSTEMS"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ],
+      [
+        "shiny-r"
+      ]
+    ],
+    "score": 5.3952,
+    "stars": 40,
+    "primary_category": "visualization",
+    "source_universe": "daattali",
+    "search_text": "shinybrowser Find Out Information About a User's Web Browser in 'Shiny' Sometimes it's useful to know some information about your\nuser in a 'Shiny' app. The available information is: browser\nname (such as 'Chrome' or 'Safari') and version, device type\n(mobile or desktop), operating system (such as 'Windows' or\n'Mac' or 'Android') and version, and browser dimensions. detect get_all_info get_browser get_browser_version get_device get_height get_os get_os_version get_user_agent get_width is_browser_chrome is_browser_firefox is_browser_ie is_device_desktop is_device_mobile is_os_mac is_os_windows SUPPORTED_BROWSERS SUPPORTED_DEVICES SUPPORTED_OPERATING_SYSTEMS shiny shiny-r"
+  }
+]

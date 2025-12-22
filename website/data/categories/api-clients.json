@@ -1,0 +1,6618 @@
+[
+  {
+    "id": 692,
+    "package_name": "httr",
+    "title": "Tools for Working with URLs and HTTP",
+    "description": "Useful tools for working with HTTP organised by HTTP verbs\n(GET(), POST(), etc). Configuration functions make it easy to\ncontrol additional request components (authenticate(),\nadd_headers() and so on).",
+    "version": "1.4.7.9000",
+    "maintainer": "Hadley Wickham <hadley@posit.co>",
+    "author": "Hadley Wickham [aut, cre],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://httr.r-lib.org/, https://github.com/r-lib/httr",
+    "bug_reports": "https://github.com/r-lib/httr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "accept"
+      ],
+      [
+        "accept_json"
+      ],
+      [
+        "accept_xml"
+      ],
+      [
+        "add_headers"
+      ],
+      [
+        "authenticate"
+      ],
+      [
+        "BROWSE"
+      ],
+      [
+        "build_url"
+      ],
+      [
+        "cache_info"
+      ],
+      [
+        "config"
+      ],
+      [
+        "content"
+      ],
+      [
+        "content_type"
+      ],
+      [
+        "content_type_json"
+      ],
+      [
+        "content_type_xml"
+      ],
+      [
+        "cookies"
+      ],
+      [
+        "curl_docs"
+      ],
+      [
+        "DELETE"
+      ],
+      [
+        "GET"
+      ],
+      [
+        "get_callback"
+      ],
+      [
+        "guess_media"
+      ],
+      [
+        "handle"
+      ],
+      [
+        "handle_find"
+      ],
+      [
+        "handle_reset"
+      ],
+      [
+        "has_content"
+      ],
+      [
+        "HEAD"
+      ],
+      [
+        "headers"
+      ],
+      [
+        "hmac_sha1"
+      ],
+      [
+        "http_condition"
+      ],
+      [
+        "http_date"
+      ],
+      [
+        "http_error"
+      ],
+      [
+        "http_status"
+      ],
+      [
+        "http_type"
+      ],
+      [
+        "httr_dr"
+      ],
+      [
+        "httr_options"
+      ],
+      [
+        "init_oauth1.0"
+      ],
+      [
+        "init_oauth2.0"
+      ],
+      [
+        "insensitive"
+      ],
+      [
+        "message_for_status"
+      ],
+      [
+        "modify_url"
+      ],
+      [
+        "oauth_app"
+      ],
+      [
+        "oauth_callback"
+      ],
+      [
+        "oauth_endpoint"
+      ],
+      [
+        "oauth_endpoints"
+      ],
+      [
+        "oauth_exchanger"
+      ],
+      [
+        "oauth_header"
+      ],
+      [
+        "oauth_listener"
+      ],
+      [
+        "oauth_service_token"
+      ],
+      [
+        "oauth_signature"
+      ],
+      [
+        "oauth1.0_token"
+      ],
+      [
+        "oauth2.0_access_token"
+      ],
+      [
+        "oauth2.0_authorize_url"
+      ],
+      [
+        "oauth2.0_token"
+      ],
+      [
+        "parse_http_date"
+      ],
+      [
+        "parse_media"
+      ],
+      [
+        "parse_url"
+      ],
+      [
+        "parsed_content"
+      ],
+      [
+        "PATCH"
+      ],
+      [
+        "POST"
+      ],
+      [
+        "progress"
+      ],
+      [
+        "PUT"
+      ],
+      [
+        "rerequest"
+      ],
+      [
+        "reset_config"
+      ],
+      [
+        "RETRY"
+      ],
+      [
+        "revoke_all"
+      ],
+      [
+        "set_callback"
+      ],
+      [
+        "set_config"
+      ],
+      [
+        "set_cookies"
+      ],
+      [
+        "sha1_hash"
+      ],
+      [
+        "sign_oauth1.0"
+      ],
+      [
+        "sign_oauth2.0"
+      ],
+      [
+        "status_code"
+      ],
+      [
+        "stop_for_status"
+      ],
+      [
+        "text_content"
+      ],
+      [
+        "timeout"
+      ],
+      [
+        "Token"
+      ],
+      [
+        "Token1.0"
+      ],
+      [
+        "Token2.0"
+      ],
+      [
+        "TokenServiceAccount"
+      ],
+      [
+        "upload_file"
+      ],
+      [
+        "url_ok"
+      ],
+      [
+        "url_success"
+      ],
+      [
+        "use_proxy"
+      ],
+      [
+        "user_agent"
+      ],
+      [
+        "VERB"
+      ],
+      [
+        "verbose"
+      ],
+      [
+        "warn_for_status"
+      ],
+      [
+        "with_config"
+      ],
+      [
+        "with_verbose"
+      ],
+      [
+        "write_disk"
+      ],
+      [
+        "write_function"
+      ],
+      [
+        "write_memory"
+      ],
+      [
+        "write_stream"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "curl"
+      ],
+      [
+        "http"
+      ]
+    ],
+    "score": 20.7087,
+    "stars": 985,
+    "primary_category": "tidyverse",
+    "source_universe": "r-lib",
+    "search_text": "httr Tools for Working with URLs and HTTP Useful tools for working with HTTP organised by HTTP verbs\n(GET(), POST(), etc). Configuration functions make it easy to\ncontrol additional request components (authenticate(),\nadd_headers() and so on). accept accept_json accept_xml add_headers authenticate BROWSE build_url cache_info config content content_type content_type_json content_type_xml cookies curl_docs DELETE GET get_callback guess_media handle handle_find handle_reset has_content HEAD headers hmac_sha1 http_condition http_date http_error http_status http_type httr_dr httr_options init_oauth1.0 init_oauth2.0 insensitive message_for_status modify_url oauth_app oauth_callback oauth_endpoint oauth_endpoints oauth_exchanger oauth_header oauth_listener oauth_service_token oauth_signature oauth1.0_token oauth2.0_access_token oauth2.0_authorize_url oauth2.0_token parse_http_date parse_media parse_url parsed_content PATCH POST progress PUT rerequest reset_config RETRY revoke_all set_callback set_config set_cookies sha1_hash sign_oauth1.0 sign_oauth2.0 status_code stop_for_status text_content timeout Token Token1.0 Token2.0 TokenServiceAccount upload_file url_ok url_success use_proxy user_agent VERB verbose warn_for_status with_config with_verbose write_disk write_function write_memory write_stream api curl http"
+  },
+  {
+    "id": 991,
+    "package_name": "plumber",
+    "title": "An API Generator for R",
+    "description": "Gives the ability to automatically generate and serve an\nHTTP API from R functions using the annotations in the R\ndocumentation around your functions.",
+    "version": "1.3.0.9000",
+    "maintainer": "Barret Schloerke <barret@posit.co>",
+    "author": "Barret Schloerke [cre, aut] (ORCID:\n<https://orcid.org/0000-0001-9986-114X>),\nJeff Allen [aut, ccp],\nBruno Tremblay [ctb],\nFrans van Dunn\u00e9 [ctb],\nSebastiaan Vandewoude [ctb],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://www.rplumber.io, https://github.com/rstudio/plumber",
+    "bug_reports": "https://github.com/rstudio/plumber/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "addSerializer"
+      ],
+      [
+        "as_attachment"
+      ],
+      [
+        "available_apis"
+      ],
+      [
+        "do_configure_https"
+      ],
+      [
+        "do_deploy_api"
+      ],
+      [
+        "do_forward"
+      ],
+      [
+        "do_provision"
+      ],
+      [
+        "do_remove_api"
+      ],
+      [
+        "do_remove_forward"
+      ],
+      [
+        "endpoint_serializer"
+      ],
+      [
+        "forward"
+      ],
+      [
+        "get_character_set"
+      ],
+      [
+        "get_option_or_env"
+      ],
+      [
+        "getCharacterSet"
+      ],
+      [
+        "include_file"
+      ],
+      [
+        "include_html"
+      ],
+      [
+        "include_md"
+      ],
+      [
+        "include_rmd"
+      ],
+      [
+        "is_plumber"
+      ],
+      [
+        "options_plumber"
+      ],
+      [
+        "parser_arrow_ipc_stream"
+      ],
+      [
+        "parser_csv"
+      ],
+      [
+        "parser_excel"
+      ],
+      [
+        "parser_feather"
+      ],
+      [
+        "parser_form"
+      ],
+      [
+        "parser_geojson"
+      ],
+      [
+        "parser_json"
+      ],
+      [
+        "parser_multi"
+      ],
+      [
+        "parser_none"
+      ],
+      [
+        "parser_octet"
+      ],
+      [
+        "parser_parquet"
+      ],
+      [
+        "parser_rds"
+      ],
+      [
+        "parser_read_file"
+      ],
+      [
+        "parser_text"
+      ],
+      [
+        "parser_tsv"
+      ],
+      [
+        "parser_yaml"
+      ],
+      [
+        "plumb"
+      ],
+      [
+        "plumb_api"
+      ],
+      [
+        "plumber"
+      ],
+      [
+        "Plumber"
+      ],
+      [
+        "PlumberEndpoint"
+      ],
+      [
+        "PlumberStatic"
+      ],
+      [
+        "pr"
+      ],
+      [
+        "pr_cookie"
+      ],
+      [
+        "pr_delete"
+      ],
+      [
+        "pr_filter"
+      ],
+      [
+        "pr_get"
+      ],
+      [
+        "pr_handle"
+      ],
+      [
+        "pr_head"
+      ],
+      [
+        "pr_hook"
+      ],
+      [
+        "pr_hooks"
+      ],
+      [
+        "pr_mount"
+      ],
+      [
+        "pr_post"
+      ],
+      [
+        "pr_put"
+      ],
+      [
+        "pr_run"
+      ],
+      [
+        "pr_set_404"
+      ],
+      [
+        "pr_set_api_spec"
+      ],
+      [
+        "pr_set_debug"
+      ],
+      [
+        "pr_set_docs"
+      ],
+      [
+        "pr_set_docs_callback"
+      ],
+      [
+        "pr_set_error"
+      ],
+      [
+        "pr_set_parsers"
+      ],
+      [
+        "pr_set_serializer"
+      ],
+      [
+        "pr_static"
+      ],
+      [
+        "random_cookie_key"
+      ],
+      [
+        "register_docs"
+      ],
+      [
+        "register_parser"
+      ],
+      [
+        "register_serializer"
+      ],
+      [
+        "registered_docs"
+      ],
+      [
+        "registered_parsers"
+      ],
+      [
+        "registered_serializers"
+      ],
+      [
+        "serializer_agg_jpeg"
+      ],
+      [
+        "serializer_agg_png"
+      ],
+      [
+        "serializer_agg_tiff"
+      ],
+      [
+        "serializer_arrow_ipc_stream"
+      ],
+      [
+        "serializer_bmp"
+      ],
+      [
+        "serializer_cat"
+      ],
+      [
+        "serializer_content_type"
+      ],
+      [
+        "serializer_csv"
+      ],
+      [
+        "serializer_device"
+      ],
+      [
+        "serializer_excel"
+      ],
+      [
+        "serializer_feather"
+      ],
+      [
+        "serializer_format"
+      ],
+      [
+        "serializer_geojson"
+      ],
+      [
+        "serializer_headers"
+      ],
+      [
+        "serializer_html"
+      ],
+      [
+        "serializer_htmlwidget"
+      ],
+      [
+        "serializer_jpeg"
+      ],
+      [
+        "serializer_json"
+      ],
+      [
+        "serializer_octet"
+      ],
+      [
+        "serializer_parquet"
+      ],
+      [
+        "serializer_pdf"
+      ],
+      [
+        "serializer_png"
+      ],
+      [
+        "serializer_print"
+      ],
+      [
+        "serializer_rds"
+      ],
+      [
+        "serializer_svg"
+      ],
+      [
+        "serializer_svglite"
+      ],
+      [
+        "serializer_text"
+      ],
+      [
+        "serializer_tiff"
+      ],
+      [
+        "serializer_tsv"
+      ],
+      [
+        "serializer_unboxed_json"
+      ],
+      [
+        "serializer_write_file"
+      ],
+      [
+        "serializer_yaml"
+      ],
+      [
+        "session_cookie"
+      ],
+      [
+        "sessionCookie"
+      ],
+      [
+        "validate_api_spec"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "api-server"
+      ],
+      [
+        "plumber"
+      ]
+    ],
+    "score": 15.1808,
+    "stars": 1436,
+    "primary_category": "visualization",
+    "source_universe": "rstudio",
+    "search_text": "plumber An API Generator for R Gives the ability to automatically generate and serve an\nHTTP API from R functions using the annotations in the R\ndocumentation around your functions. %>% addSerializer as_attachment available_apis do_configure_https do_deploy_api do_forward do_provision do_remove_api do_remove_forward endpoint_serializer forward get_character_set get_option_or_env getCharacterSet include_file include_html include_md include_rmd is_plumber options_plumber parser_arrow_ipc_stream parser_csv parser_excel parser_feather parser_form parser_geojson parser_json parser_multi parser_none parser_octet parser_parquet parser_rds parser_read_file parser_text parser_tsv parser_yaml plumb plumb_api plumber Plumber PlumberEndpoint PlumberStatic pr pr_cookie pr_delete pr_filter pr_get pr_handle pr_head pr_hook pr_hooks pr_mount pr_post pr_put pr_run pr_set_404 pr_set_api_spec pr_set_debug pr_set_docs pr_set_docs_callback pr_set_error pr_set_parsers pr_set_serializer pr_static random_cookie_key register_docs register_parser register_serializer registered_docs registered_parsers registered_serializers serializer_agg_jpeg serializer_agg_png serializer_agg_tiff serializer_arrow_ipc_stream serializer_bmp serializer_cat serializer_content_type serializer_csv serializer_device serializer_excel serializer_feather serializer_format serializer_geojson serializer_headers serializer_html serializer_htmlwidget serializer_jpeg serializer_json serializer_octet serializer_parquet serializer_pdf serializer_png serializer_print serializer_rds serializer_svg serializer_svglite serializer_text serializer_tiff serializer_tsv serializer_unboxed_json serializer_write_file serializer_yaml session_cookie sessionCookie validate_api_spec api api-server plumber"
+  },
+  {
+    "id": 428,
+    "package_name": "crul",
+    "title": "HTTP Client",
+    "description": "A simple HTTP client, with tools for making HTTP requests,\nand mocking HTTP requests. The package is built on R6, and\ntakes inspiration from Ruby's 'faraday' gem\n(<https://rubygems.org/gems/faraday>). The package name is a\nplay on curl, the widely used command line tool for HTTP, and\nthis package is built on top of the R package 'curl', an\ninterface to 'libcurl' (<https://curl.se/libcurl/>).",
+    "version": "1.6.0.9000",
+    "maintainer": "Scott Chamberlain <myrmecocystus@gmail.com>",
+    "author": "Scott Chamberlain [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>)",
+    "url": "https://docs.ropensci.org/crul/, https://github.com/ropensci/crul,\nhttps://books.ropensci.org/http-testing/",
+    "bug_reports": "https://github.com/ropensci/crul/issues",
+    "repository": "",
+    "exports": [
+      [
+        "Async"
+      ],
+      [
+        "AsyncQueue"
+      ],
+      [
+        "AsyncVaried"
+      ],
+      [
+        "auth"
+      ],
+      [
+        "crul_settings"
+      ],
+      [
+        "curl_verbose"
+      ],
+      [
+        "handle"
+      ],
+      [
+        "HttpClient"
+      ],
+      [
+        "HttpRequest"
+      ],
+      [
+        "HttpResponse"
+      ],
+      [
+        "mock"
+      ],
+      [
+        "ok"
+      ],
+      [
+        "Paginator"
+      ],
+      [
+        "proxy"
+      ],
+      [
+        "set_auth"
+      ],
+      [
+        "set_headers"
+      ],
+      [
+        "set_opts"
+      ],
+      [
+        "set_proxy"
+      ],
+      [
+        "set_verbose"
+      ],
+      [
+        "upload"
+      ],
+      [
+        "url_build"
+      ],
+      [
+        "url_parse"
+      ]
+    ],
+    "topics": [
+      [
+        "http"
+      ],
+      [
+        "https"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "curl"
+      ],
+      [
+        "download"
+      ],
+      [
+        "libcurl"
+      ],
+      [
+        "async"
+      ],
+      [
+        "mocking"
+      ],
+      [
+        "caching"
+      ]
+    ],
+    "score": 14.1266,
+    "stars": 107,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "crul HTTP Client A simple HTTP client, with tools for making HTTP requests,\nand mocking HTTP requests. The package is built on R6, and\ntakes inspiration from Ruby's 'faraday' gem\n(<https://rubygems.org/gems/faraday>). The package name is a\nplay on curl, the widely used command line tool for HTTP, and\nthis package is built on top of the R package 'curl', an\ninterface to 'libcurl' (<https://curl.se/libcurl/>). Async AsyncQueue AsyncVaried auth crul_settings curl_verbose handle HttpClient HttpRequest HttpResponse mock ok Paginator proxy set_auth set_headers set_opts set_proxy set_verbose upload url_build url_parse http https api web-services curl download libcurl async mocking caching"
+  },
+  {
+    "id": 1103,
+    "package_name": "rgbif",
+    "title": "Interface to the Global Biodiversity Information Facility API",
+    "description": "A programmatic interface to the Web Service methods\nprovided by the Global Biodiversity Information Facility (GBIF;\n<https://www.gbif.org/developer/summary>). GBIF is a database\nof species occurrence records from sources all over the globe.\nrgbif includes functions for searching for taxonomic names,\nretrieving information on data providers, getting species\noccurrence records, getting counts of occurrence records, and\nusing the GBIF tile map service to make rasters summarizing\nhuge amounts of data.",
+    "version": "3.8.4.2",
+    "maintainer": "John Waller <jwaller@gbif.org>",
+    "author": "Scott Chamberlain [aut] (0000-0003-1444-9135),\nDamiano Oldoni [aut] (0000-0003-3445-7562),\nVijay Barve [ctb] (0000-0002-4852-2567),\nPeter Desmet [ctb] (0000-0002-8442-8025),\nLaurens Geffert [ctb],\nDan Mcglinn [ctb] (0000-0003-2359-3526),\nKarthik Ram [ctb] (0000-0002-0233-1757),\nrOpenSci [fnd] (019jywm96),\nJohn Waller [aut, cre] (0000-0002-7302-5976)",
+    "url": "https://github.com/ropensci/rgbif (devel),\nhttps://docs.ropensci.org/rgbif/ (documentation)",
+    "bug_reports": "https://github.com/ropensci/rgbif/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "as.download"
+      ],
+      [
+        "blanktheme"
+      ],
+      [
+        "check_wkt"
+      ],
+      [
+        "collection_export"
+      ],
+      [
+        "collection_search"
+      ],
+      [
+        "count_facet"
+      ],
+      [
+        "dataset"
+      ],
+      [
+        "dataset_comment"
+      ],
+      [
+        "dataset_constituents"
+      ],
+      [
+        "dataset_contact"
+      ],
+      [
+        "dataset_doi"
+      ],
+      [
+        "dataset_duplicate"
+      ],
+      [
+        "dataset_endpoint"
+      ],
+      [
+        "dataset_export"
+      ],
+      [
+        "dataset_get"
+      ],
+      [
+        "dataset_gridded"
+      ],
+      [
+        "dataset_identifier"
+      ],
+      [
+        "dataset_machinetag"
+      ],
+      [
+        "dataset_metrics"
+      ],
+      [
+        "dataset_networks"
+      ],
+      [
+        "dataset_noendpoint"
+      ],
+      [
+        "dataset_process"
+      ],
+      [
+        "dataset_search"
+      ],
+      [
+        "dataset_suggest"
+      ],
+      [
+        "dataset_tag"
+      ],
+      [
+        "datasets"
+      ],
+      [
+        "derived_dataset"
+      ],
+      [
+        "derived_dataset_prep"
+      ],
+      [
+        "DownReq"
+      ],
+      [
+        "elevation"
+      ],
+      [
+        "enumeration"
+      ],
+      [
+        "enumeration_country"
+      ],
+      [
+        "gbif_bbox2wkt"
+      ],
+      [
+        "gbif_citation"
+      ],
+      [
+        "gbif_geocode"
+      ],
+      [
+        "gbif_issues"
+      ],
+      [
+        "gbif_issues_lookup"
+      ],
+      [
+        "gbif_names"
+      ],
+      [
+        "gbif_oai_get_records"
+      ],
+      [
+        "gbif_oai_identify"
+      ],
+      [
+        "gbif_oai_list_identifiers"
+      ],
+      [
+        "gbif_oai_list_metadataformats"
+      ],
+      [
+        "gbif_oai_list_records"
+      ],
+      [
+        "gbif_oai_list_sets"
+      ],
+      [
+        "gbif_photos"
+      ],
+      [
+        "gbif_wkt2bbox"
+      ],
+      [
+        "GbifQueue"
+      ],
+      [
+        "installation_comment"
+      ],
+      [
+        "installation_contact"
+      ],
+      [
+        "installation_dataset"
+      ],
+      [
+        "installation_endpoint"
+      ],
+      [
+        "installation_identifier"
+      ],
+      [
+        "installation_machinetag"
+      ],
+      [
+        "installation_search"
+      ],
+      [
+        "installation_tag"
+      ],
+      [
+        "installations"
+      ],
+      [
+        "institution_export"
+      ],
+      [
+        "institution_search"
+      ],
+      [
+        "lit_count"
+      ],
+      [
+        "lit_export"
+      ],
+      [
+        "lit_search"
+      ],
+      [
+        "map_fetch"
+      ],
+      [
+        "mvt_fetch"
+      ],
+      [
+        "name_backbone"
+      ],
+      [
+        "name_backbone_checklist"
+      ],
+      [
+        "name_backbone_verbose"
+      ],
+      [
+        "name_issues"
+      ],
+      [
+        "name_lookup"
+      ],
+      [
+        "name_parse"
+      ],
+      [
+        "name_suggest"
+      ],
+      [
+        "name_usage"
+      ],
+      [
+        "network"
+      ],
+      [
+        "network_constituents"
+      ],
+      [
+        "networks"
+      ],
+      [
+        "nodes"
+      ],
+      [
+        "occ_count"
+      ],
+      [
+        "occ_count_basis_of_record"
+      ],
+      [
+        "occ_count_country"
+      ],
+      [
+        "occ_count_pub_country"
+      ],
+      [
+        "occ_count_year"
+      ],
+      [
+        "occ_data"
+      ],
+      [
+        "occ_download"
+      ],
+      [
+        "occ_download_cached"
+      ],
+      [
+        "occ_download_cancel"
+      ],
+      [
+        "occ_download_cancel_staged"
+      ],
+      [
+        "occ_download_dataset_activity"
+      ],
+      [
+        "occ_download_datasets"
+      ],
+      [
+        "occ_download_describe"
+      ],
+      [
+        "occ_download_doi"
+      ],
+      [
+        "occ_download_get"
+      ],
+      [
+        "occ_download_import"
+      ],
+      [
+        "occ_download_list"
+      ],
+      [
+        "occ_download_meta"
+      ],
+      [
+        "occ_download_prep"
+      ],
+      [
+        "occ_download_queue"
+      ],
+      [
+        "occ_download_sql"
+      ],
+      [
+        "occ_download_sql_prep"
+      ],
+      [
+        "occ_download_sql_validate"
+      ],
+      [
+        "occ_download_wait"
+      ],
+      [
+        "occ_facet"
+      ],
+      [
+        "occ_get"
+      ],
+      [
+        "occ_get_verbatim"
+      ],
+      [
+        "occ_issues"
+      ],
+      [
+        "occ_metadata"
+      ],
+      [
+        "occ_search"
+      ],
+      [
+        "occ_spellcheck"
+      ],
+      [
+        "organizations"
+      ],
+      [
+        "parsenames"
+      ],
+      [
+        "pred"
+      ],
+      [
+        "pred_and"
+      ],
+      [
+        "pred_default"
+      ],
+      [
+        "pred_gt"
+      ],
+      [
+        "pred_gte"
+      ],
+      [
+        "pred_in"
+      ],
+      [
+        "pred_isnull"
+      ],
+      [
+        "pred_like"
+      ],
+      [
+        "pred_lt"
+      ],
+      [
+        "pred_lte"
+      ],
+      [
+        "pred_not"
+      ],
+      [
+        "pred_notnull"
+      ],
+      [
+        "pred_or"
+      ],
+      [
+        "pred_within"
+      ],
+      [
+        "rgb_country_codes"
+      ],
+      [
+        "suggestfields"
+      ],
+      [
+        "taxrank"
+      ],
+      [
+        "wkt_parse"
+      ]
+    ],
+    "topics": [
+      [
+        "gbif"
+      ],
+      [
+        "specimens"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "occurrences"
+      ],
+      [
+        "species"
+      ],
+      [
+        "taxonomy"
+      ],
+      [
+        "biodiversity"
+      ],
+      [
+        "data"
+      ],
+      [
+        "lifewatch"
+      ],
+      [
+        "oscibio"
+      ],
+      [
+        "spocc"
+      ]
+    ],
+    "score": 13.6363,
+    "stars": 171,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rgbif Interface to the Global Biodiversity Information Facility API A programmatic interface to the Web Service methods\nprovided by the Global Biodiversity Information Facility (GBIF;\n<https://www.gbif.org/developer/summary>). GBIF is a database\nof species occurrence records from sources all over the globe.\nrgbif includes functions for searching for taxonomic names,\nretrieving information on data providers, getting species\noccurrence records, getting counts of occurrence records, and\nusing the GBIF tile map service to make rasters summarizing\nhuge amounts of data. %>% as.download blanktheme check_wkt collection_export collection_search count_facet dataset dataset_comment dataset_constituents dataset_contact dataset_doi dataset_duplicate dataset_endpoint dataset_export dataset_get dataset_gridded dataset_identifier dataset_machinetag dataset_metrics dataset_networks dataset_noendpoint dataset_process dataset_search dataset_suggest dataset_tag datasets derived_dataset derived_dataset_prep DownReq elevation enumeration enumeration_country gbif_bbox2wkt gbif_citation gbif_geocode gbif_issues gbif_issues_lookup gbif_names gbif_oai_get_records gbif_oai_identify gbif_oai_list_identifiers gbif_oai_list_metadataformats gbif_oai_list_records gbif_oai_list_sets gbif_photos gbif_wkt2bbox GbifQueue installation_comment installation_contact installation_dataset installation_endpoint installation_identifier installation_machinetag installation_search installation_tag installations institution_export institution_search lit_count lit_export lit_search map_fetch mvt_fetch name_backbone name_backbone_checklist name_backbone_verbose name_issues name_lookup name_parse name_suggest name_usage network network_constituents networks nodes occ_count occ_count_basis_of_record occ_count_country occ_count_pub_country occ_count_year occ_data occ_download occ_download_cached occ_download_cancel occ_download_cancel_staged occ_download_dataset_activity occ_download_datasets occ_download_describe occ_download_doi occ_download_get occ_download_import occ_download_list occ_download_meta occ_download_prep occ_download_queue occ_download_sql occ_download_sql_prep occ_download_sql_validate occ_download_wait occ_facet occ_get occ_get_verbatim occ_issues occ_metadata occ_search occ_spellcheck organizations parsenames pred pred_and pred_default pred_gt pred_gte pred_in pred_isnull pred_like pred_lt pred_lte pred_not pred_notnull pred_or pred_within rgb_country_codes suggestfields taxrank wkt_parse gbif specimens api web-services occurrences species taxonomy biodiversity data lifewatch oscibio spocc"
+  },
+  {
+    "id": 1306,
+    "package_name": "taxize",
+    "title": "Taxonomic Information from Around the Web",
+    "description": "Interacts with a suite of web application programming\ninterfaces (API) for taxonomic tasks, such as getting database\nspecific taxonomic identifiers, verifying species names,\ngetting taxonomic hierarchies, fetching downstream and upstream\ntaxonomic names, getting taxonomic synonyms, converting\nscientific to common names and vice versa, and more. Some of\nthe services supported include 'NCBI E-utilities'\n(<https://www.ncbi.nlm.nih.gov/books/NBK25501/>), 'Encyclopedia\nof Life' (<https://eol.org/docs/what-is-eol/data-services>),\n'Global Biodiversity Information Facility'\n(<https://techdocs.gbif.org/en/openapi/>), and many more. Links\nto the API documentation for other supported services are\navailable in the documentation for their respective functions\nin this package.",
+    "version": "0.10.0",
+    "maintainer": "Zachary Foster <zacharyfoster1989@gmail.com>",
+    "author": "Scott Chamberlain [aut],\nEduard Szoecs [aut],\nZachary Foster [aut, cre],\nZebulun Arendsee [aut],\nCarl Boettiger [ctb],\nKarthik Ram [ctb],\nIgnasi Bartomeus [ctb],\nJohn Baumgartner [ctb],\nJames O'Donnell [ctb],\nJari Oksanen [ctb],\nBastian Greshake Tzovaras [ctb],\nPhilippe Marchand [ctb],\nVinh Tran [ctb],\nMa\u00eblle Salmon [ctb],\nGaopeng Li [ctb],\nMatthias Greni\u00e9 [ctb],\nrOpenSci [fnd]",
+    "url": "https://docs.ropensci.org/taxize/ (website),\nhttps://github.com/ropensci/taxize (devel)",
+    "bug_reports": "https://github.com/ropensci/taxize/issues",
+    "repository": "",
+    "exports": [
+      [
+        "apg_lookup"
+      ],
+      [
+        "apgFamilies"
+      ],
+      [
+        "apgOrders"
+      ],
+      [
+        "as.boldid"
+      ],
+      [
+        "as.colid"
+      ],
+      [
+        "as.eolid"
+      ],
+      [
+        "as.gbifid"
+      ],
+      [
+        "as.iucn"
+      ],
+      [
+        "as.natservid"
+      ],
+      [
+        "as.nbnid"
+      ],
+      [
+        "as.pow"
+      ],
+      [
+        "as.tolid"
+      ],
+      [
+        "as.tpsid"
+      ],
+      [
+        "as.tsn"
+      ],
+      [
+        "as.ubioid"
+      ],
+      [
+        "as.uid"
+      ],
+      [
+        "as.wiki"
+      ],
+      [
+        "as.wormsid"
+      ],
+      [
+        "bold_children"
+      ],
+      [
+        "bold_downstream"
+      ],
+      [
+        "bold_ping"
+      ],
+      [
+        "bold_search"
+      ],
+      [
+        "children"
+      ],
+      [
+        "class2tree"
+      ],
+      [
+        "classification"
+      ],
+      [
+        "col_children"
+      ],
+      [
+        "col_classification"
+      ],
+      [
+        "col_downstream"
+      ],
+      [
+        "col_ping"
+      ],
+      [
+        "col_search"
+      ],
+      [
+        "comm2sci"
+      ],
+      [
+        "downstream"
+      ],
+      [
+        "eol_dataobjects"
+      ],
+      [
+        "eol_hierarchy"
+      ],
+      [
+        "eol_invasive"
+      ],
+      [
+        "eol_pages"
+      ],
+      [
+        "eol_ping"
+      ],
+      [
+        "eol_search"
+      ],
+      [
+        "eubon"
+      ],
+      [
+        "eubon_capabilities"
+      ],
+      [
+        "eubon_children"
+      ],
+      [
+        "eubon_hierarchy"
+      ],
+      [
+        "eubon_search"
+      ],
+      [
+        "fg_all_updated_names"
+      ],
+      [
+        "fg_author_search"
+      ],
+      [
+        "fg_deprecated_names"
+      ],
+      [
+        "fg_epithet_search"
+      ],
+      [
+        "fg_name_by_key"
+      ],
+      [
+        "fg_name_full_by_lsid"
+      ],
+      [
+        "fg_name_search"
+      ],
+      [
+        "fg_ping"
+      ],
+      [
+        "gbif_downstream"
+      ],
+      [
+        "gbif_name_usage"
+      ],
+      [
+        "gbif_parse"
+      ],
+      [
+        "gbif_ping"
+      ],
+      [
+        "genbank2uid"
+      ],
+      [
+        "get_boldid"
+      ],
+      [
+        "get_boldid_"
+      ],
+      [
+        "get_colid"
+      ],
+      [
+        "get_colid_"
+      ],
+      [
+        "get_eolid"
+      ],
+      [
+        "get_eolid_"
+      ],
+      [
+        "get_gbifid"
+      ],
+      [
+        "get_gbifid_"
+      ],
+      [
+        "get_genes"
+      ],
+      [
+        "get_genes_avail"
+      ],
+      [
+        "get_ids"
+      ],
+      [
+        "get_ids_"
+      ],
+      [
+        "get_iucn"
+      ],
+      [
+        "get_natservid"
+      ],
+      [
+        "get_natservid_"
+      ],
+      [
+        "get_nbnid"
+      ],
+      [
+        "get_nbnid_"
+      ],
+      [
+        "get_pow"
+      ],
+      [
+        "get_pow_"
+      ],
+      [
+        "get_seqs"
+      ],
+      [
+        "get_tolid"
+      ],
+      [
+        "get_tolid_"
+      ],
+      [
+        "get_tpsid"
+      ],
+      [
+        "get_tpsid_"
+      ],
+      [
+        "get_tsn"
+      ],
+      [
+        "get_tsn_"
+      ],
+      [
+        "get_ubioid"
+      ],
+      [
+        "get_ubioid_"
+      ],
+      [
+        "get_uid"
+      ],
+      [
+        "get_uid_"
+      ],
+      [
+        "get_wiki"
+      ],
+      [
+        "get_wiki_"
+      ],
+      [
+        "get_wormsid"
+      ],
+      [
+        "get_wormsid_"
+      ],
+      [
+        "getkey"
+      ],
+      [
+        "gisd_isinvasive"
+      ],
+      [
+        "gna_data_sources"
+      ],
+      [
+        "gna_parse"
+      ],
+      [
+        "gna_search"
+      ],
+      [
+        "gna_verifier"
+      ],
+      [
+        "gni_details"
+      ],
+      [
+        "gni_parse"
+      ],
+      [
+        "gni_seach"
+      ],
+      [
+        "gnr_datasources"
+      ],
+      [
+        "gnr_resolve"
+      ],
+      [
+        "id2name"
+      ],
+      [
+        "ion"
+      ],
+      [
+        "iplant_resolve"
+      ],
+      [
+        "ipni_ping"
+      ],
+      [
+        "ipni_search"
+      ],
+      [
+        "itis_acceptname"
+      ],
+      [
+        "itis_downstream"
+      ],
+      [
+        "itis_getrecord"
+      ],
+      [
+        "itis_hierarchy"
+      ],
+      [
+        "itis_kingdomnames"
+      ],
+      [
+        "itis_lsid"
+      ],
+      [
+        "itis_name"
+      ],
+      [
+        "itis_native"
+      ],
+      [
+        "itis_ping"
+      ],
+      [
+        "itis_refs"
+      ],
+      [
+        "itis_taxrank"
+      ],
+      [
+        "itis_terms"
+      ],
+      [
+        "iucn_getname"
+      ],
+      [
+        "iucn_id"
+      ],
+      [
+        "iucn_status"
+      ],
+      [
+        "iucn_summary"
+      ],
+      [
+        "lowest_common"
+      ],
+      [
+        "names_list"
+      ],
+      [
+        "nbn_classification"
+      ],
+      [
+        "nbn_ping"
+      ],
+      [
+        "nbn_search"
+      ],
+      [
+        "nbn_synonyms"
+      ],
+      [
+        "ncbi_children"
+      ],
+      [
+        "ncbi_downstream"
+      ],
+      [
+        "ncbi_get_taxon_summary"
+      ],
+      [
+        "ncbi_getbyid"
+      ],
+      [
+        "ncbi_getbyname"
+      ],
+      [
+        "ncbi_ping"
+      ],
+      [
+        "ncbi_search"
+      ],
+      [
+        "phylomatic_format"
+      ],
+      [
+        "phylomatic_tree"
+      ],
+      [
+        "plantminer"
+      ],
+      [
+        "pow_lookup"
+      ],
+      [
+        "pow_search"
+      ],
+      [
+        "pow_synonyms"
+      ],
+      [
+        "rankagg"
+      ],
+      [
+        "resolve"
+      ],
+      [
+        "sci2comm"
+      ],
+      [
+        "scrapenames"
+      ],
+      [
+        "status_codes"
+      ],
+      [
+        "synonyms"
+      ],
+      [
+        "synonyms_df"
+      ],
+      [
+        "tax_agg"
+      ],
+      [
+        "tax_name"
+      ],
+      [
+        "tax_rank"
+      ],
+      [
+        "taxize_capwords"
+      ],
+      [
+        "taxize_cite"
+      ],
+      [
+        "taxize_ldfast"
+      ],
+      [
+        "taxize_options"
+      ],
+      [
+        "taxon_clear"
+      ],
+      [
+        "taxon_last"
+      ],
+      [
+        "tnrs"
+      ],
+      [
+        "tnrs_sources"
+      ],
+      [
+        "tol_resolve"
+      ],
+      [
+        "tp_acceptednames"
+      ],
+      [
+        "tp_accnames"
+      ],
+      [
+        "tp_classification"
+      ],
+      [
+        "tp_dist"
+      ],
+      [
+        "tp_namedistributions"
+      ],
+      [
+        "tp_namereferences"
+      ],
+      [
+        "tp_refs"
+      ],
+      [
+        "tp_search"
+      ],
+      [
+        "tp_summary"
+      ],
+      [
+        "tp_synonyms"
+      ],
+      [
+        "tpl_families"
+      ],
+      [
+        "tpl_get"
+      ],
+      [
+        "tpl_search"
+      ],
+      [
+        "tropicos_ping"
+      ],
+      [
+        "ubio_classification"
+      ],
+      [
+        "ubio_classification_search"
+      ],
+      [
+        "ubio_id"
+      ],
+      [
+        "ubio_ping"
+      ],
+      [
+        "ubio_search"
+      ],
+      [
+        "ubio_synonyms"
+      ],
+      [
+        "upstream"
+      ],
+      [
+        "use_entrez"
+      ],
+      [
+        "use_eol"
+      ],
+      [
+        "use_iucn"
+      ],
+      [
+        "use_tropicos"
+      ],
+      [
+        "vascan_ping"
+      ],
+      [
+        "vascan_search"
+      ],
+      [
+        "worms_downstream"
+      ]
+    ],
+    "topics": [
+      [
+        "taxonomy"
+      ],
+      [
+        "biology"
+      ],
+      [
+        "nomenclature"
+      ],
+      [
+        "json"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "identifiers"
+      ],
+      [
+        "species"
+      ],
+      [
+        "names"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "biodiversity"
+      ],
+      [
+        "darwincore"
+      ],
+      [
+        "data"
+      ],
+      [
+        "taxize"
+      ]
+    ],
+    "score": 13.5332,
+    "stars": 293,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "taxize Taxonomic Information from Around the Web Interacts with a suite of web application programming\ninterfaces (API) for taxonomic tasks, such as getting database\nspecific taxonomic identifiers, verifying species names,\ngetting taxonomic hierarchies, fetching downstream and upstream\ntaxonomic names, getting taxonomic synonyms, converting\nscientific to common names and vice versa, and more. Some of\nthe services supported include 'NCBI E-utilities'\n(<https://www.ncbi.nlm.nih.gov/books/NBK25501/>), 'Encyclopedia\nof Life' (<https://eol.org/docs/what-is-eol/data-services>),\n'Global Biodiversity Information Facility'\n(<https://techdocs.gbif.org/en/openapi/>), and many more. Links\nto the API documentation for other supported services are\navailable in the documentation for their respective functions\nin this package. apg_lookup apgFamilies apgOrders as.boldid as.colid as.eolid as.gbifid as.iucn as.natservid as.nbnid as.pow as.tolid as.tpsid as.tsn as.ubioid as.uid as.wiki as.wormsid bold_children bold_downstream bold_ping bold_search children class2tree classification col_children col_classification col_downstream col_ping col_search comm2sci downstream eol_dataobjects eol_hierarchy eol_invasive eol_pages eol_ping eol_search eubon eubon_capabilities eubon_children eubon_hierarchy eubon_search fg_all_updated_names fg_author_search fg_deprecated_names fg_epithet_search fg_name_by_key fg_name_full_by_lsid fg_name_search fg_ping gbif_downstream gbif_name_usage gbif_parse gbif_ping genbank2uid get_boldid get_boldid_ get_colid get_colid_ get_eolid get_eolid_ get_gbifid get_gbifid_ get_genes get_genes_avail get_ids get_ids_ get_iucn get_natservid get_natservid_ get_nbnid get_nbnid_ get_pow get_pow_ get_seqs get_tolid get_tolid_ get_tpsid get_tpsid_ get_tsn get_tsn_ get_ubioid get_ubioid_ get_uid get_uid_ get_wiki get_wiki_ get_wormsid get_wormsid_ getkey gisd_isinvasive gna_data_sources gna_parse gna_search gna_verifier gni_details gni_parse gni_seach gnr_datasources gnr_resolve id2name ion iplant_resolve ipni_ping ipni_search itis_acceptname itis_downstream itis_getrecord itis_hierarchy itis_kingdomnames itis_lsid itis_name itis_native itis_ping itis_refs itis_taxrank itis_terms iucn_getname iucn_id iucn_status iucn_summary lowest_common names_list nbn_classification nbn_ping nbn_search nbn_synonyms ncbi_children ncbi_downstream ncbi_get_taxon_summary ncbi_getbyid ncbi_getbyname ncbi_ping ncbi_search phylomatic_format phylomatic_tree plantminer pow_lookup pow_search pow_synonyms rankagg resolve sci2comm scrapenames status_codes synonyms synonyms_df tax_agg tax_name tax_rank taxize_capwords taxize_cite taxize_ldfast taxize_options taxon_clear taxon_last tnrs tnrs_sources tol_resolve tp_acceptednames tp_accnames tp_classification tp_dist tp_namedistributions tp_namereferences tp_refs tp_search tp_summary tp_synonyms tpl_families tpl_get tpl_search tropicos_ping ubio_classification ubio_classification_search ubio_id ubio_ping ubio_search ubio_synonyms upstream use_entrez use_eol use_iucn use_tropicos vascan_ping vascan_search worms_downstream taxonomy biology nomenclature json api web api-client identifiers species names api-wrapper biodiversity darwincore data taxize"
+  },
+  {
+    "id": 1143,
+    "package_name": "rredlist",
+    "title": "'IUCN' Red List Client",
+    "description": "'IUCN' Red List (<https://api.iucnredlist.org/>) client.\nThe 'IUCN' Red List is a global list of threatened and\nendangered species. Functions cover all of the Red List 'API'\nroutes. An 'API' key is required.",
+    "version": "1.1.1.9000",
+    "maintainer": "William Gearty <willgearty@gmail.com>",
+    "author": "William Gearty [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-0076-3262>),\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>),\nMa\u00eblle Salmon [ctb] (ORCID: <https://orcid.org/0000-0002-2815-0399>),\nKevin Cazelles [rev] (ORCID: <https://orcid.org/0000-0001-6619-9874>),\nStephanie Hazlitt [rev] (ORCID:\n<https://orcid.org/0000-0002-3161-2304>)",
+    "url": "https://docs.ropensci.org/rredlist/,\nhttps://github.com/ropensci/rredlist",
+    "bug_reports": "https://github.com/ropensci/rredlist/issues",
+    "repository": "",
+    "exports": [
+      [
+        "rl_actions"
+      ],
+      [
+        "rl_actions_"
+      ],
+      [
+        "rl_api_version"
+      ],
+      [
+        "rl_assessment"
+      ],
+      [
+        "rl_assessment_"
+      ],
+      [
+        "rl_assessment_extract"
+      ],
+      [
+        "rl_assessment_list"
+      ],
+      [
+        "rl_categories"
+      ],
+      [
+        "rl_categories_"
+      ],
+      [
+        "rl_citation"
+      ],
+      [
+        "rl_class"
+      ],
+      [
+        "rl_class_"
+      ],
+      [
+        "rl_common_names"
+      ],
+      [
+        "rl_common_names_"
+      ],
+      [
+        "rl_comp_groups"
+      ],
+      [
+        "rl_comp_groups_"
+      ],
+      [
+        "rl_countries"
+      ],
+      [
+        "rl_countries_"
+      ],
+      [
+        "rl_extinct"
+      ],
+      [
+        "rl_extinct_"
+      ],
+      [
+        "rl_extinct_wild"
+      ],
+      [
+        "rl_extinct_wild_"
+      ],
+      [
+        "rl_family"
+      ],
+      [
+        "rl_family_"
+      ],
+      [
+        "rl_faos"
+      ],
+      [
+        "rl_faos_"
+      ],
+      [
+        "rl_green"
+      ],
+      [
+        "rl_green_"
+      ],
+      [
+        "rl_growth_forms"
+      ],
+      [
+        "rl_growth_forms_"
+      ],
+      [
+        "rl_habitats"
+      ],
+      [
+        "rl_habitats_"
+      ],
+      [
+        "rl_history"
+      ],
+      [
+        "rl_history_"
+      ],
+      [
+        "rl_kingdom"
+      ],
+      [
+        "rl_kingdom_"
+      ],
+      [
+        "rl_measures"
+      ],
+      [
+        "rl_measures_"
+      ],
+      [
+        "rl_narrative"
+      ],
+      [
+        "rl_narrative_"
+      ],
+      [
+        "rl_occ_country"
+      ],
+      [
+        "rl_occ_country_"
+      ],
+      [
+        "rl_order"
+      ],
+      [
+        "rl_order_"
+      ],
+      [
+        "rl_phylum"
+      ],
+      [
+        "rl_phylum_"
+      ],
+      [
+        "rl_pop_trends"
+      ],
+      [
+        "rl_pop_trends_"
+      ],
+      [
+        "rl_realms"
+      ],
+      [
+        "rl_realms_"
+      ],
+      [
+        "rl_regions"
+      ],
+      [
+        "rl_regions_"
+      ],
+      [
+        "rl_research"
+      ],
+      [
+        "rl_research_"
+      ],
+      [
+        "rl_scopes"
+      ],
+      [
+        "rl_scopes_"
+      ],
+      [
+        "rl_search"
+      ],
+      [
+        "rl_search_"
+      ],
+      [
+        "rl_sis"
+      ],
+      [
+        "rl_sis_"
+      ],
+      [
+        "rl_sis_latest"
+      ],
+      [
+        "rl_sp"
+      ],
+      [
+        "rl_sp_"
+      ],
+      [
+        "rl_sp_category"
+      ],
+      [
+        "rl_sp_category_"
+      ],
+      [
+        "rl_sp_citation"
+      ],
+      [
+        "rl_sp_citation_"
+      ],
+      [
+        "rl_sp_count"
+      ],
+      [
+        "rl_sp_count_"
+      ],
+      [
+        "rl_sp_country"
+      ],
+      [
+        "rl_sp_country_"
+      ],
+      [
+        "rl_species"
+      ],
+      [
+        "rl_species_"
+      ],
+      [
+        "rl_species_latest"
+      ],
+      [
+        "rl_stresses"
+      ],
+      [
+        "rl_stresses_"
+      ],
+      [
+        "rl_synonyms"
+      ],
+      [
+        "rl_synonyms_"
+      ],
+      [
+        "rl_systems"
+      ],
+      [
+        "rl_systems_"
+      ],
+      [
+        "rl_threats"
+      ],
+      [
+        "rl_threats_"
+      ],
+      [
+        "rl_use_and_trade"
+      ],
+      [
+        "rl_use_and_trade_"
+      ],
+      [
+        "rl_use_iucn"
+      ],
+      [
+        "rl_version"
+      ],
+      [
+        "scale_color_iucn"
+      ],
+      [
+        "scale_colour_iucn"
+      ],
+      [
+        "scale_discrete_iucn"
+      ],
+      [
+        "scale_fill_iucn"
+      ]
+    ],
+    "topics": [
+      [
+        "iucn"
+      ],
+      [
+        "biodiversity"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "traits"
+      ],
+      [
+        "habitat"
+      ],
+      [
+        "species"
+      ],
+      [
+        "conservation"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "iucn-red-list"
+      ],
+      [
+        "taxize"
+      ]
+    ],
+    "score": 12.2394,
+    "stars": 61,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rredlist 'IUCN' Red List Client 'IUCN' Red List (<https://api.iucnredlist.org/>) client.\nThe 'IUCN' Red List is a global list of threatened and\nendangered species. Functions cover all of the Red List 'API'\nroutes. An 'API' key is required. rl_actions rl_actions_ rl_api_version rl_assessment rl_assessment_ rl_assessment_extract rl_assessment_list rl_categories rl_categories_ rl_citation rl_class rl_class_ rl_common_names rl_common_names_ rl_comp_groups rl_comp_groups_ rl_countries rl_countries_ rl_extinct rl_extinct_ rl_extinct_wild rl_extinct_wild_ rl_family rl_family_ rl_faos rl_faos_ rl_green rl_green_ rl_growth_forms rl_growth_forms_ rl_habitats rl_habitats_ rl_history rl_history_ rl_kingdom rl_kingdom_ rl_measures rl_measures_ rl_narrative rl_narrative_ rl_occ_country rl_occ_country_ rl_order rl_order_ rl_phylum rl_phylum_ rl_pop_trends rl_pop_trends_ rl_realms rl_realms_ rl_regions rl_regions_ rl_research rl_research_ rl_scopes rl_scopes_ rl_search rl_search_ rl_sis rl_sis_ rl_sis_latest rl_sp rl_sp_ rl_sp_category rl_sp_category_ rl_sp_citation rl_sp_citation_ rl_sp_count rl_sp_count_ rl_sp_country rl_sp_country_ rl_species rl_species_ rl_species_latest rl_stresses rl_stresses_ rl_synonyms rl_synonyms_ rl_systems rl_systems_ rl_threats rl_threats_ rl_use_and_trade rl_use_and_trade_ rl_use_iucn rl_version scale_color_iucn scale_colour_iucn scale_discrete_iucn scale_fill_iucn iucn biodiversity api web-services traits habitat species conservation api-wrapper iucn-red-list taxize"
+  },
+  {
+    "id": 1062,
+    "package_name": "rcrossref",
+    "title": "Client for Various 'CrossRef' 'APIs'",
+    "description": "Client for various 'CrossRef' 'APIs', including 'metadata'\nsearch with their old and newer search 'APIs', get 'citations'\nin various formats (including 'bibtex', 'citeproc-json',\n'rdf-xml', etc.), convert 'DOIs' to 'PMIDs', and 'vice versa',\nget citations for 'DOIs', and get links to full text of\narticles when available.",
+    "version": "1.2.1",
+    "maintainer": "Najko Jahn <najko.jahn@gmail.com>",
+    "author": "Scott Chamberlain [aut],\nHao Zhu [aut],\nNajko Jahn [aut, cre] (ORCID: <https://orcid.org/0000-0001-5105-1463>),\nCarl Boettiger [aut],\nKarthik Ram [aut]",
+    "url": "https://docs.ropensci.org/rcrossref/,\nhttps://github.com/ropensci/rcrossref",
+    "bug_reports": "https://github.com/ropensci/rcrossref/issues",
+    "repository": "",
+    "exports": [
+      [
+        "as.tdmurl"
+      ],
+      [
+        "cr_abstract"
+      ],
+      [
+        "cr_agency"
+      ],
+      [
+        "cr_citation"
+      ],
+      [
+        "cr_citation_count"
+      ],
+      [
+        "cr_cn"
+      ],
+      [
+        "cr_ft_links"
+      ],
+      [
+        "cr_ft_pdf"
+      ],
+      [
+        "cr_ft_plain"
+      ],
+      [
+        "cr_ft_text"
+      ],
+      [
+        "cr_ft_xml"
+      ],
+      [
+        "cr_funders"
+      ],
+      [
+        "cr_funders_"
+      ],
+      [
+        "cr_fundref"
+      ],
+      [
+        "cr_journals"
+      ],
+      [
+        "cr_journals_"
+      ],
+      [
+        "cr_licenses"
+      ],
+      [
+        "cr_licenses_"
+      ],
+      [
+        "cr_members"
+      ],
+      [
+        "cr_members_"
+      ],
+      [
+        "cr_prefixes"
+      ],
+      [
+        "cr_prefixes_"
+      ],
+      [
+        "cr_r"
+      ],
+      [
+        "cr_search"
+      ],
+      [
+        "cr_search_free"
+      ],
+      [
+        "cr_types"
+      ],
+      [
+        "cr_types_"
+      ],
+      [
+        "cr_works"
+      ],
+      [
+        "cr_works_"
+      ],
+      [
+        "crosscite"
+      ],
+      [
+        "doi2pmid"
+      ],
+      [
+        "extract_xpdf"
+      ],
+      [
+        "filter_details"
+      ],
+      [
+        "filter_names"
+      ],
+      [
+        "get_styles"
+      ],
+      [
+        "id_converter"
+      ],
+      [
+        "pmid2doi"
+      ]
+    ],
+    "topics": [
+      [
+        "text-ming"
+      ],
+      [
+        "literature"
+      ],
+      [
+        "pdf"
+      ],
+      [
+        "xml"
+      ],
+      [
+        "publications"
+      ],
+      [
+        "citations"
+      ],
+      [
+        "full-text"
+      ],
+      [
+        "tdm"
+      ],
+      [
+        "crossref"
+      ],
+      [
+        "api"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "crossref-api"
+      ],
+      [
+        "doi"
+      ],
+      [
+        "metadata"
+      ]
+    ],
+    "score": 11.191,
+    "stars": 178,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rcrossref Client for Various 'CrossRef' 'APIs' Client for various 'CrossRef' 'APIs', including 'metadata'\nsearch with their old and newer search 'APIs', get 'citations'\nin various formats (including 'bibtex', 'citeproc-json',\n'rdf-xml', etc.), convert 'DOIs' to 'PMIDs', and 'vice versa',\nget citations for 'DOIs', and get links to full text of\narticles when available. as.tdmurl cr_abstract cr_agency cr_citation cr_citation_count cr_cn cr_ft_links cr_ft_pdf cr_ft_plain cr_ft_text cr_ft_xml cr_funders cr_funders_ cr_fundref cr_journals cr_journals_ cr_licenses cr_licenses_ cr_members cr_members_ cr_prefixes cr_prefixes_ cr_r cr_search cr_search_free cr_types cr_types_ cr_works cr_works_ crosscite doi2pmid extract_xpdf filter_details filter_names get_styles id_converter pmid2doi text-ming literature pdf xml publications citations full-text tdm crossref api api-wrapper crossref-api doi metadata"
+  },
+  {
+    "id": 1413,
+    "package_name": "vcr",
+    "title": "Record 'HTTP' Calls to Disk",
+    "description": "Record test suite 'HTTP' requests and replays them during\nfuture runs. A port of the Ruby gem of the same name\n(<https://github.com/vcr/vcr/>). Works by recording real 'HTTP'\nrequests/responses on disk in 'cassettes', and then replaying\nmatching responses on subsequent requests.",
+    "version": "2.1.0",
+    "maintainer": "Scott Chamberlain <myrmecocystus@gmail.com>",
+    "author": "Scott Chamberlain [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nAaron Wolen [aut] (ORCID: <https://orcid.org/0000-0003-2542-2202>),\nMa\u00eblle Salmon [aut] (ORCID: <https://orcid.org/0000-0002-2815-0399>),\nDaniel Possenriede [aut] (ORCID:\n<https://orcid.org/0000-0002-6738-9845>),\nHadley Wickham [aut],\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>)",
+    "url": "https://github.com/ropensci/vcr/,\nhttps://books.ropensci.org/http-testing/,\nhttps://docs.ropensci.org/vcr/",
+    "bug_reports": "https://github.com/ropensci/vcr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "Cassette"
+      ],
+      [
+        "cassette_path"
+      ],
+      [
+        "cassettes"
+      ],
+      [
+        "check_cassette_names"
+      ],
+      [
+        "current_cassette"
+      ],
+      [
+        "current_cassette_recording"
+      ],
+      [
+        "current_cassette_replaying"
+      ],
+      [
+        "eject_cassette"
+      ],
+      [
+        "insert_cassette"
+      ],
+      [
+        "insert_example_cassette"
+      ],
+      [
+        "is_recording"
+      ],
+      [
+        "is_replaying"
+      ],
+      [
+        "local_cassette"
+      ],
+      [
+        "local_vcr_configure"
+      ],
+      [
+        "local_vcr_configure_log"
+      ],
+      [
+        "setup_knitr"
+      ],
+      [
+        "skip_if_vcr_off"
+      ],
+      [
+        "turn_off"
+      ],
+      [
+        "turn_on"
+      ],
+      [
+        "turned_off"
+      ],
+      [
+        "turned_on"
+      ],
+      [
+        "use_cassette"
+      ],
+      [
+        "use_vcr"
+      ],
+      [
+        "vcr_config_defaults"
+      ],
+      [
+        "vcr_configuration"
+      ],
+      [
+        "vcr_configure"
+      ],
+      [
+        "vcr_configure_log"
+      ],
+      [
+        "vcr_configure_reset"
+      ],
+      [
+        "vcr_last_request"
+      ],
+      [
+        "vcr_last_response"
+      ],
+      [
+        "vcr_test_path"
+      ]
+    ],
+    "topics": [
+      [
+        "http"
+      ],
+      [
+        "https"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "curl"
+      ],
+      [
+        "mock"
+      ],
+      [
+        "mocking"
+      ],
+      [
+        "http-mocking"
+      ],
+      [
+        "testing"
+      ],
+      [
+        "testing-tools"
+      ],
+      [
+        "tdd"
+      ],
+      [
+        "unit-testing"
+      ],
+      [
+        "vcr"
+      ]
+    ],
+    "score": 10.9253,
+    "stars": 93,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "vcr Record 'HTTP' Calls to Disk Record test suite 'HTTP' requests and replays them during\nfuture runs. A port of the Ruby gem of the same name\n(<https://github.com/vcr/vcr/>). Works by recording real 'HTTP'\nrequests/responses on disk in 'cassettes', and then replaying\nmatching responses on subsequent requests. Cassette cassette_path cassettes check_cassette_names current_cassette current_cassette_recording current_cassette_replaying eject_cassette insert_cassette insert_example_cassette is_recording is_replaying local_cassette local_vcr_configure local_vcr_configure_log setup_knitr skip_if_vcr_off turn_off turn_on turned_off turned_on use_cassette use_vcr vcr_config_defaults vcr_configuration vcr_configure vcr_configure_log vcr_configure_reset vcr_last_request vcr_last_response vcr_test_path http https api web-services curl mock mocking http-mocking testing testing-tools tdd unit-testing vcr"
+  },
+  {
+    "id": 1262,
+    "package_name": "spocc",
+    "title": "Interface to Species Occurrence Data Sources",
+    "description": "A programmatic interface to many species occurrence data\nsources, including Global Biodiversity Information Facility\n('GBIF'), 'iNaturalist', 'eBird', Integrated Digitized\n'Biocollections' ('iDigBio'), 'VertNet', Ocean 'Biogeographic'\nInformation System ('OBIS'), and Atlas of Living Australia\n('ALA'). Includes functionality for retrieving species\noccurrence data, and combining those data.",
+    "version": "1.2.4",
+    "maintainer": "Hannah Owens <hannah.owens@gmail.com>",
+    "author": "Hannah Owens [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-0071-1745>),\nVijay Barve [aut] (ORCID: <https://orcid.org/0000-0002-4852-2567>),\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nKarthik Ram [ctb],\nTed Hart [ctb],\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>)",
+    "url": "https://github.com/ropensci/spocc (devel),\nhttps://docs.ropensci.org/spocc/ (user manual)",
+    "bug_reports": "https://github.com/ropensci/spocc/issues/",
+    "repository": "",
+    "exports": [
+      [
+        "as.ala"
+      ],
+      [
+        "as.ecoengine"
+      ],
+      [
+        "as.gbif"
+      ],
+      [
+        "as.idigbio"
+      ],
+      [
+        "as.inat"
+      ],
+      [
+        "as.obis"
+      ],
+      [
+        "as.vertnet"
+      ],
+      [
+        "bbox2wkt"
+      ],
+      [
+        "fixnames"
+      ],
+      [
+        "inspect"
+      ],
+      [
+        "obis_search"
+      ],
+      [
+        "occ"
+      ],
+      [
+        "occ_names"
+      ],
+      [
+        "occ_names_options"
+      ],
+      [
+        "occ_options"
+      ],
+      [
+        "occ2df"
+      ],
+      [
+        "spocc_capwords"
+      ],
+      [
+        "wkt_vis"
+      ],
+      [
+        "wkt2bbox"
+      ]
+    ],
+    "topics": [
+      [
+        "specimens"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "occurrences"
+      ],
+      [
+        "species"
+      ],
+      [
+        "taxonomy"
+      ],
+      [
+        "gbif"
+      ],
+      [
+        "inat"
+      ],
+      [
+        "vertnet"
+      ],
+      [
+        "ebird"
+      ],
+      [
+        "idigbio"
+      ],
+      [
+        "obis"
+      ],
+      [
+        "ala"
+      ],
+      [
+        "antweb"
+      ],
+      [
+        "bison"
+      ],
+      [
+        "data"
+      ],
+      [
+        "ecoengine"
+      ],
+      [
+        "inaturalist"
+      ],
+      [
+        "occurrence"
+      ],
+      [
+        "species-occurrence"
+      ],
+      [
+        "spocc"
+      ]
+    ],
+    "score": 10.8352,
+    "stars": 123,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "spocc Interface to Species Occurrence Data Sources A programmatic interface to many species occurrence data\nsources, including Global Biodiversity Information Facility\n('GBIF'), 'iNaturalist', 'eBird', Integrated Digitized\n'Biocollections' ('iDigBio'), 'VertNet', Ocean 'Biogeographic'\nInformation System ('OBIS'), and Atlas of Living Australia\n('ALA'). Includes functionality for retrieving species\noccurrence data, and combining those data. as.ala as.ecoengine as.gbif as.idigbio as.inat as.obis as.vertnet bbox2wkt fixnames inspect obis_search occ occ_names occ_names_options occ_options occ2df spocc_capwords wkt_vis wkt2bbox specimens api web-services occurrences species taxonomy gbif inat vertnet ebird idigbio obis ala antweb bison data ecoengine inaturalist occurrence species-occurrence spocc"
+  },
+  {
+    "id": 1091,
+    "package_name": "rerddap",
+    "title": "General Purpose Client for 'ERDDAP\u2122' Servers",
+    "description": "General purpose R client for 'ERDDAP\u2122' servers. Includes\nfunctions to search for 'datasets', get summary information on\n'datasets', and fetch 'datasets', in either 'csv' or 'netCDF'\nformat. 'ERDDAP\u2122' information:\n<https://upwell.pfeg.noaa.gov/erddap/information.html>.",
+    "version": "1.2.1",
+    "maintainer": "Roy Mendelssohn <roy.mendelssohn@noaa.gov>",
+    "author": "Scott Chamberlain [aut],\nBen Tupper [ctb],\nSalvador Jes\u00fas Fern\u00e1ndez Bejarano [ctb],\nRoy Mendelssohn [cre, ctb]",
+    "url": "https://docs.ropensci.org/rerddap/,\nhttps://github.com/ropensci/rerddap",
+    "bug_reports": "https://github.com/ropensci/rerddap/issues",
+    "repository": "",
+    "exports": [
+      [
+        "as.info"
+      ],
+      [
+        "browse"
+      ],
+      [
+        "cache_delete"
+      ],
+      [
+        "cache_delete_all"
+      ],
+      [
+        "cache_details"
+      ],
+      [
+        "cache_info"
+      ],
+      [
+        "cache_list"
+      ],
+      [
+        "cache_setup"
+      ],
+      [
+        "convert_time"
+      ],
+      [
+        "convert_units"
+      ],
+      [
+        "disk"
+      ],
+      [
+        "ed_datasets"
+      ],
+      [
+        "ed_search"
+      ],
+      [
+        "ed_search_adv"
+      ],
+      [
+        "eurl"
+      ],
+      [
+        "fipscounty"
+      ],
+      [
+        "global_search"
+      ],
+      [
+        "griddap"
+      ],
+      [
+        "info"
+      ],
+      [
+        "key_words"
+      ],
+      [
+        "memory"
+      ],
+      [
+        "servers"
+      ],
+      [
+        "tabledap"
+      ],
+      [
+        "version"
+      ]
+    ],
+    "topics": [
+      [
+        "earth"
+      ],
+      [
+        "science"
+      ],
+      [
+        "climate"
+      ],
+      [
+        "precipitation"
+      ],
+      [
+        "temperature"
+      ],
+      [
+        "storm"
+      ],
+      [
+        "buoy"
+      ],
+      [
+        "noaa"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "erddap"
+      ],
+      [
+        "noaa-data"
+      ]
+    ],
+    "score": 10.7799,
+    "stars": 41,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rerddap General Purpose Client for 'ERDDAP\u2122' Servers General purpose R client for 'ERDDAP\u2122' servers. Includes\nfunctions to search for 'datasets', get summary information on\n'datasets', and fetch 'datasets', in either 'csv' or 'netCDF'\nformat. 'ERDDAP\u2122' information:\n<https://upwell.pfeg.noaa.gov/erddap/information.html>. as.info browse cache_delete cache_delete_all cache_details cache_info cache_list cache_setup convert_time convert_units disk ed_datasets ed_search ed_search_adv eurl fipscounty global_search griddap info key_words memory servers tabledap version earth science climate precipitation temperature storm buoy noaa api-client erddap noaa-data"
+  },
+  {
+    "id": 1041,
+    "package_name": "qualtRics",
+    "title": "Download 'Qualtrics' Survey Data",
+    "description": "Provides functions to access survey results directly into\nR using the 'Qualtrics' API. 'Qualtrics'\n<https://www.qualtrics.com/about/> is an online survey and data\ncollection software platform. See <https://api.qualtrics.com/>\nfor more information about the 'Qualtrics' API.  This package\nis community-maintained and is not officially supported by\n'Qualtrics'.",
+    "version": "3.2.2.9000",
+    "maintainer": "Julia Silge <julia.silge@gmail.com>",
+    "author": "Jasper Ginn [aut],\nJackson Curtis [ctb],\nShaun Jackson [ctb],\nSamuel Kaminsky [ctb],\nEric Knudsen [ctb],\nJoseph O'Brien [aut],\nDaniel Seneca [ctb],\nJulia Silge [aut, cre] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nPhoebe Wong [ctb]",
+    "url": "https://docs.ropensci.org/qualtRics/,\nhttps://github.com/ropensci/qualtRics",
+    "bug_reports": "https://github.com/ropensci/qualtRics/issues",
+    "repository": "",
+    "exports": [
+      [
+        "all_mailinglists"
+      ],
+      [
+        "all_surveys"
+      ],
+      [
+        "column_map"
+      ],
+      [
+        "extract_colmap"
+      ],
+      [
+        "fetch_description"
+      ],
+      [
+        "fetch_distribution_history"
+      ],
+      [
+        "fetch_distributions"
+      ],
+      [
+        "fetch_id"
+      ],
+      [
+        "fetch_mailinglist"
+      ],
+      [
+        "fetch_survey"
+      ],
+      [
+        "generate_url"
+      ],
+      [
+        "list_distribution_links"
+      ],
+      [
+        "metadata"
+      ],
+      [
+        "qualtrics_api_credentials"
+      ],
+      [
+        "read_survey"
+      ],
+      [
+        "survey_questions"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "qualtrics"
+      ],
+      [
+        "qualtrics-api"
+      ],
+      [
+        "survey"
+      ],
+      [
+        "survey-data"
+      ]
+    ],
+    "score": 10.6507,
+    "stars": 226,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "qualtRics Download 'Qualtrics' Survey Data Provides functions to access survey results directly into\nR using the 'Qualtrics' API. 'Qualtrics'\n<https://www.qualtrics.com/about/> is an online survey and data\ncollection software platform. See <https://api.qualtrics.com/>\nfor more information about the 'Qualtrics' API.  This package\nis community-maintained and is not officially supported by\n'Qualtrics'. all_mailinglists all_surveys column_map extract_colmap fetch_description fetch_distribution_history fetch_distributions fetch_id fetch_mailinglist fetch_survey generate_url list_distribution_links metadata qualtrics_api_credentials read_survey survey_questions api qualtrics qualtrics-api survey survey-data"
+  },
+  {
+    "id": 1450,
+    "package_name": "worrms",
+    "title": "World Register of Marine Species (WoRMS) Client",
+    "description": "Client for World Register of Marine Species\n(<https://www.marinespecies.org/>). Includes functions for each\nof the API methods, including searching for names by name, date\nand common names, searching using external identifiers,\nfetching synonyms, as well as fetching taxonomic children and\ntaxonomic classification.",
+    "version": "0.4.3",
+    "maintainer": "Bart Vanhoorne. <bart.vanhoorne@vliz.be>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nBart Vanhoorne. [aut, cre]",
+    "url": "https://docs.ropensci.org/worrms/,\nhttps://github.com/ropensci/worrms (devel), https://taxize.dev\n(user manual)",
+    "bug_reports": "https://github.com/ropensci/worrms/issues",
+    "repository": "",
+    "exports": [
+      [
+        "wm_attr_aphia"
+      ],
+      [
+        "wm_attr_aphia_"
+      ],
+      [
+        "wm_attr_category"
+      ],
+      [
+        "wm_attr_category_"
+      ],
+      [
+        "wm_attr_data"
+      ],
+      [
+        "wm_attr_data_"
+      ],
+      [
+        "wm_attr_def"
+      ],
+      [
+        "wm_attr_def_"
+      ],
+      [
+        "wm_children"
+      ],
+      [
+        "wm_children_"
+      ],
+      [
+        "wm_classification"
+      ],
+      [
+        "wm_classification_"
+      ],
+      [
+        "wm_common_id"
+      ],
+      [
+        "wm_common_id_"
+      ],
+      [
+        "wm_distribution"
+      ],
+      [
+        "wm_distribution_"
+      ],
+      [
+        "wm_external"
+      ],
+      [
+        "wm_external_"
+      ],
+      [
+        "wm_id2name"
+      ],
+      [
+        "wm_id2name_"
+      ],
+      [
+        "wm_name2id"
+      ],
+      [
+        "wm_name2id_"
+      ],
+      [
+        "wm_ranks_id"
+      ],
+      [
+        "wm_ranks_name"
+      ],
+      [
+        "wm_record"
+      ],
+      [
+        "wm_record_"
+      ],
+      [
+        "wm_record_by_external"
+      ],
+      [
+        "wm_record_by_external_"
+      ],
+      [
+        "wm_records_common"
+      ],
+      [
+        "wm_records_common_"
+      ],
+      [
+        "wm_records_date"
+      ],
+      [
+        "wm_records_name"
+      ],
+      [
+        "wm_records_names"
+      ],
+      [
+        "wm_records_rank"
+      ],
+      [
+        "wm_records_taxamatch"
+      ],
+      [
+        "wm_sources"
+      ],
+      [
+        "wm_sources_"
+      ],
+      [
+        "wm_synonyms"
+      ],
+      [
+        "wm_synonyms_"
+      ]
+    ],
+    "topics": [
+      [
+        "biology"
+      ],
+      [
+        "science"
+      ],
+      [
+        "marine"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "worms"
+      ],
+      [
+        "species"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "biological-data"
+      ],
+      [
+        "fish"
+      ],
+      [
+        "jerico-relevant"
+      ],
+      [
+        "marine-biology"
+      ],
+      [
+        "marine-species"
+      ],
+      [
+        "taxize"
+      ],
+      [
+        "taxonomy"
+      ]
+    ],
+    "score": 10.5004,
+    "stars": 28,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "worrms World Register of Marine Species (WoRMS) Client Client for World Register of Marine Species\n(<https://www.marinespecies.org/>). Includes functions for each\nof the API methods, including searching for names by name, date\nand common names, searching using external identifiers,\nfetching synonyms, as well as fetching taxonomic children and\ntaxonomic classification. wm_attr_aphia wm_attr_aphia_ wm_attr_category wm_attr_category_ wm_attr_data wm_attr_data_ wm_attr_def wm_attr_def_ wm_children wm_children_ wm_classification wm_classification_ wm_common_id wm_common_id_ wm_distribution wm_distribution_ wm_external wm_external_ wm_id2name wm_id2name_ wm_name2id wm_name2id_ wm_ranks_id wm_ranks_name wm_record wm_record_ wm_record_by_external wm_record_by_external_ wm_records_common wm_records_common_ wm_records_date wm_records_name wm_records_names wm_records_rank wm_records_taxamatch wm_sources wm_sources_ wm_synonyms wm_synonyms_ biology science marine api web api-client worms species api-wrapper biological-data fish jerico-relevant marine-biology marine-species taxize taxonomy"
+  },
+  {
+    "id": 367,
+    "package_name": "ckanr",
+    "title": "Client for the Comprehensive Knowledge Archive Network ('CKAN')\nAPI",
+    "description": "Client for 'CKAN' API (<https://ckan.org/>). Includes\ninterface to 'CKAN' 'APIs' for search, list, show for packages,\norganizations, and resources. In addition, provides an\ninterface to the 'datastore' API.",
+    "version": "0.8.1",
+    "maintainer": "Florian Mayer <Florian.Mayer@dpc.wa.gov.au>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nImanuel Costigan [aut],\nWush Wu [aut] (ORCID: <https://orcid.org/0000-0001-5180-0567>),\nFlorian Mayer [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-4269-4242>),\nSharla Gelfand [aut],\nFrancisco Alves [aut] (ORCID: <https://orcid.org/0000-0003-3390-0534>),\nHanna B\u00f6hner [aut] (ORCID: <https://orcid.org/0000-0001-7356-5457>)",
+    "url": "https://docs.ropensci.org/ckanr/ (website)\nhttps://github.com/ropensci/ckanr (devel)",
+    "bug_reports": "https://github.com/ropensci/ckanr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "activity_create"
+      ],
+      [
+        "activity_data_show"
+      ],
+      [
+        "activity_diff"
+      ],
+      [
+        "activity_show"
+      ],
+      [
+        "am_following_user"
+      ],
+      [
+        "api_token_create"
+      ],
+      [
+        "api_token_list"
+      ],
+      [
+        "api_token_revoke"
+      ],
+      [
+        "as.ckan_group"
+      ],
+      [
+        "as.ckan_organization"
+      ],
+      [
+        "as.ckan_package"
+      ],
+      [
+        "as.ckan_related"
+      ],
+      [
+        "as.ckan_resource"
+      ],
+      [
+        "as.ckan_resource_view"
+      ],
+      [
+        "as.ckan_tag"
+      ],
+      [
+        "as.ckan_user"
+      ],
+      [
+        "as.ckan_vocabulary"
+      ],
+      [
+        "changes"
+      ],
+      [
+        "ckan_action"
+      ],
+      [
+        "ckan_fetch"
+      ],
+      [
+        "ckan_info"
+      ],
+      [
+        "ckan_version"
+      ],
+      [
+        "ckanr_settings"
+      ],
+      [
+        "ckanr_setup"
+      ],
+      [
+        "config_option_list"
+      ],
+      [
+        "config_option_show"
+      ],
+      [
+        "config_option_update"
+      ],
+      [
+        "dashboard_activity_list"
+      ],
+      [
+        "dashboard_count"
+      ],
+      [
+        "dashboard_mark_activities_old"
+      ],
+      [
+        "dashboard_new_activities_count"
+      ],
+      [
+        "dataset_am_following"
+      ],
+      [
+        "dataset_follow"
+      ],
+      [
+        "dataset_followee_count"
+      ],
+      [
+        "dataset_followee_list"
+      ],
+      [
+        "dataset_follower_count"
+      ],
+      [
+        "dataset_follower_list"
+      ],
+      [
+        "dataset_purge"
+      ],
+      [
+        "dataset_unfollow"
+      ],
+      [
+        "ds_create"
+      ],
+      [
+        "ds_create_dataset"
+      ],
+      [
+        "ds_search"
+      ],
+      [
+        "ds_search_sql"
+      ],
+      [
+        "follow_user"
+      ],
+      [
+        "followee_count"
+      ],
+      [
+        "followee_list"
+      ],
+      [
+        "get_default_key"
+      ],
+      [
+        "get_default_url"
+      ],
+      [
+        "get_test_behaviour"
+      ],
+      [
+        "get_test_did"
+      ],
+      [
+        "get_test_gid"
+      ],
+      [
+        "get_test_key"
+      ],
+      [
+        "get_test_oid"
+      ],
+      [
+        "get_test_rid"
+      ],
+      [
+        "get_test_url"
+      ],
+      [
+        "group_activity_list"
+      ],
+      [
+        "group_am_following"
+      ],
+      [
+        "group_create"
+      ],
+      [
+        "group_delete"
+      ],
+      [
+        "group_follow"
+      ],
+      [
+        "group_followee_count"
+      ],
+      [
+        "group_followee_list"
+      ],
+      [
+        "group_follower_count"
+      ],
+      [
+        "group_follower_list"
+      ],
+      [
+        "group_list"
+      ],
+      [
+        "group_list_authz"
+      ],
+      [
+        "group_member_create"
+      ],
+      [
+        "group_member_delete"
+      ],
+      [
+        "group_patch"
+      ],
+      [
+        "group_show"
+      ],
+      [
+        "group_unfollow"
+      ],
+      [
+        "group_update"
+      ],
+      [
+        "help_show"
+      ],
+      [
+        "is.ckan_group"
+      ],
+      [
+        "is.ckan_organization"
+      ],
+      [
+        "is.ckan_package"
+      ],
+      [
+        "is.ckan_related"
+      ],
+      [
+        "is.ckan_resource"
+      ],
+      [
+        "is.ckan_resource_view"
+      ],
+      [
+        "is.ckan_tag"
+      ],
+      [
+        "is.ckan_user"
+      ],
+      [
+        "is.ckan_vocabulary"
+      ],
+      [
+        "job_cancel"
+      ],
+      [
+        "job_clear"
+      ],
+      [
+        "job_list"
+      ],
+      [
+        "job_show"
+      ],
+      [
+        "license_list"
+      ],
+      [
+        "member_create"
+      ],
+      [
+        "member_delete"
+      ],
+      [
+        "member_list"
+      ],
+      [
+        "member_roles_list"
+      ],
+      [
+        "organization_activity_list"
+      ],
+      [
+        "organization_create"
+      ],
+      [
+        "organization_delete"
+      ],
+      [
+        "organization_list"
+      ],
+      [
+        "organization_list_for_user"
+      ],
+      [
+        "organization_member_create"
+      ],
+      [
+        "organization_member_delete"
+      ],
+      [
+        "organization_purge"
+      ],
+      [
+        "organization_show"
+      ],
+      [
+        "package_activity_list"
+      ],
+      [
+        "package_collaborator_create"
+      ],
+      [
+        "package_collaborator_delete"
+      ],
+      [
+        "package_collaborator_list"
+      ],
+      [
+        "package_collaborator_list_for_user"
+      ],
+      [
+        "package_create"
+      ],
+      [
+        "package_create_default_resource_views"
+      ],
+      [
+        "package_delete"
+      ],
+      [
+        "package_list"
+      ],
+      [
+        "package_list_current"
+      ],
+      [
+        "package_owner_org_update"
+      ],
+      [
+        "package_patch"
+      ],
+      [
+        "package_relationship_create"
+      ],
+      [
+        "package_relationship_delete"
+      ],
+      [
+        "package_relationship_update"
+      ],
+      [
+        "package_relationships_list"
+      ],
+      [
+        "package_resource_reorder"
+      ],
+      [
+        "package_revise"
+      ],
+      [
+        "package_revision_list"
+      ],
+      [
+        "package_search"
+      ],
+      [
+        "package_show"
+      ],
+      [
+        "package_update"
+      ],
+      [
+        "ping"
+      ],
+      [
+        "recently_changed_packages_activity_list"
+      ],
+      [
+        "related_create"
+      ],
+      [
+        "related_delete"
+      ],
+      [
+        "related_list"
+      ],
+      [
+        "related_show"
+      ],
+      [
+        "resource_create"
+      ],
+      [
+        "resource_create_default_resource_views"
+      ],
+      [
+        "resource_delete"
+      ],
+      [
+        "resource_patch"
+      ],
+      [
+        "resource_search"
+      ],
+      [
+        "resource_show"
+      ],
+      [
+        "resource_update"
+      ],
+      [
+        "resource_view_clear"
+      ],
+      [
+        "resource_view_create"
+      ],
+      [
+        "resource_view_delete"
+      ],
+      [
+        "resource_view_list"
+      ],
+      [
+        "resource_view_reorder"
+      ],
+      [
+        "resource_view_show"
+      ],
+      [
+        "resource_view_update"
+      ],
+      [
+        "revision_list"
+      ],
+      [
+        "send_email_notifications"
+      ],
+      [
+        "servers"
+      ],
+      [
+        "src_ckan"
+      ],
+      [
+        "status_show"
+      ],
+      [
+        "tag_autocomplete"
+      ],
+      [
+        "tag_create"
+      ],
+      [
+        "tag_list"
+      ],
+      [
+        "tag_search"
+      ],
+      [
+        "tag_show"
+      ],
+      [
+        "task_status_delete"
+      ],
+      [
+        "task_status_show"
+      ],
+      [
+        "task_status_update"
+      ],
+      [
+        "task_status_update_many"
+      ],
+      [
+        "term_translation_show"
+      ],
+      [
+        "term_translation_update"
+      ],
+      [
+        "term_translation_update_many"
+      ],
+      [
+        "unfollow_user"
+      ],
+      [
+        "user_activity_list"
+      ],
+      [
+        "user_create"
+      ],
+      [
+        "user_delete"
+      ],
+      [
+        "user_followee_count"
+      ],
+      [
+        "user_followee_list"
+      ],
+      [
+        "user_follower_count"
+      ],
+      [
+        "user_follower_list"
+      ],
+      [
+        "user_invite"
+      ],
+      [
+        "user_list"
+      ],
+      [
+        "user_show"
+      ],
+      [
+        "vocabulary_create"
+      ],
+      [
+        "vocabulary_delete"
+      ],
+      [
+        "vocabulary_list"
+      ],
+      [
+        "vocabulary_show"
+      ],
+      [
+        "vocabulary_update"
+      ]
+    ],
+    "topics": [
+      [
+        "database"
+      ],
+      [
+        "open-data"
+      ],
+      [
+        "ckan"
+      ],
+      [
+        "api"
+      ],
+      [
+        "data"
+      ],
+      [
+        "dataset"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "ckan-api"
+      ]
+    ],
+    "score": 9.9287,
+    "stars": 101,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "ckanr Client for the Comprehensive Knowledge Archive Network ('CKAN')\nAPI Client for 'CKAN' API (<https://ckan.org/>). Includes\ninterface to 'CKAN' 'APIs' for search, list, show for packages,\norganizations, and resources. In addition, provides an\ninterface to the 'datastore' API. %>% activity_create activity_data_show activity_diff activity_show am_following_user api_token_create api_token_list api_token_revoke as.ckan_group as.ckan_organization as.ckan_package as.ckan_related as.ckan_resource as.ckan_resource_view as.ckan_tag as.ckan_user as.ckan_vocabulary changes ckan_action ckan_fetch ckan_info ckan_version ckanr_settings ckanr_setup config_option_list config_option_show config_option_update dashboard_activity_list dashboard_count dashboard_mark_activities_old dashboard_new_activities_count dataset_am_following dataset_follow dataset_followee_count dataset_followee_list dataset_follower_count dataset_follower_list dataset_purge dataset_unfollow ds_create ds_create_dataset ds_search ds_search_sql follow_user followee_count followee_list get_default_key get_default_url get_test_behaviour get_test_did get_test_gid get_test_key get_test_oid get_test_rid get_test_url group_activity_list group_am_following group_create group_delete group_follow group_followee_count group_followee_list group_follower_count group_follower_list group_list group_list_authz group_member_create group_member_delete group_patch group_show group_unfollow group_update help_show is.ckan_group is.ckan_organization is.ckan_package is.ckan_related is.ckan_resource is.ckan_resource_view is.ckan_tag is.ckan_user is.ckan_vocabulary job_cancel job_clear job_list job_show license_list member_create member_delete member_list member_roles_list organization_activity_list organization_create organization_delete organization_list organization_list_for_user organization_member_create organization_member_delete organization_purge organization_show package_activity_list package_collaborator_create package_collaborator_delete package_collaborator_list package_collaborator_list_for_user package_create package_create_default_resource_views package_delete package_list package_list_current package_owner_org_update package_patch package_relationship_create package_relationship_delete package_relationship_update package_relationships_list package_resource_reorder package_revise package_revision_list package_search package_show package_update ping recently_changed_packages_activity_list related_create related_delete related_list related_show resource_create resource_create_default_resource_views resource_delete resource_patch resource_search resource_show resource_update resource_view_clear resource_view_create resource_view_delete resource_view_list resource_view_reorder resource_view_show resource_view_update revision_list send_email_notifications servers src_ckan status_show tag_autocomplete tag_create tag_list tag_search tag_show task_status_delete task_status_show task_status_update task_status_update_many term_translation_show term_translation_update term_translation_update_many unfollow_user user_activity_list user_create user_delete user_followee_count user_followee_list user_follower_count user_follower_list user_invite user_list user_show vocabulary_create vocabulary_delete vocabulary_list vocabulary_show vocabulary_update database open-data ckan api data dataset api-wrapper ckan-api"
+  },
+  {
+    "id": 635,
+    "package_name": "ghql",
+    "title": "General Purpose 'GraphQL' Client",
+    "description": "A 'GraphQL' client, with an R6 interface for initializing\na connection to a 'GraphQL' instance, and methods for\nconstructing queries, including fragments and parameterized\nqueries. Queries are checked with the 'libgraphqlparser' C++\nparser via the 'graphql' package.",
+    "version": "0.1.2",
+    "maintainer": "Mark Padgham <mark.padgham@email.com>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nMark Padgham [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-2172-5265>)",
+    "url": "https://docs.ropensci.org/ghql/, https://github.com/ropensci/ghql",
+    "bug_reports": "https://github.com/ropensci/ghql/issues",
+    "repository": "",
+    "exports": [
+      [
+        "Fragment"
+      ],
+      [
+        "GraphqlClient"
+      ],
+      [
+        "Query"
+      ]
+    ],
+    "topics": [
+      [
+        "http"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "curl"
+      ],
+      [
+        "data"
+      ],
+      [
+        "graphql"
+      ],
+      [
+        "graphql-api"
+      ],
+      [
+        "graphql-client"
+      ]
+    ],
+    "score": 9.2685,
+    "stars": 149,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "ghql General Purpose 'GraphQL' Client A 'GraphQL' client, with an R6 interface for initializing\na connection to a 'GraphQL' instance, and methods for\nconstructing queries, including fragments and parameterized\nqueries. Queries are checked with the 'libgraphqlparser' C++\nparser via the 'graphql' package. Fragment GraphqlClient Query http api web-services curl data graphql graphql-api graphql-client"
+  },
+  {
+    "id": 210,
+    "package_name": "UCSCXenaTools",
+    "title": "Download and Explore Datasets from UCSC Xena Data Hubs",
+    "description": "Download and explore datasets from UCSC Xena data hubs,\nwhich are a collection of UCSC-hosted public databases such as\nTCGA, ICGC, TARGET, GTEx, CCLE, and others.  Databases are\nnormalized so they can be combined, linked, filtered, explored\nand downloaded.",
+    "version": "1.6.2",
+    "maintainer": "Shixiang Wang <w_shixiang@163.com>",
+    "author": "Shixiang Wang [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-9855-7357>),\nXue-Song Liu [aut] (ORCID: <https://orcid.org/0000-0002-7736-0077>),\nMartin Morgan [ctb],\nChristine Stawitz [rev] (Christine reviewed the package for ropensci,\nsee <https://github.com/ropensci/software-review/issues/315>),\nCarl Ganz [rev] (Carl reviewed the package for ropensci, see\n<https://github.com/ropensci/software-review/issues/315>)",
+    "url": "https://docs.ropensci.org/UCSCXenaTools/,\nhttps://github.com/ropensci/UCSCXenaTools",
+    "bug_reports": "https://github.com/ropensci/UCSCXenaTools/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".XenaHub"
+      ],
+      [
+        "%>%"
+      ],
+      [
+        "availTCGA"
+      ],
+      [
+        "cohorts"
+      ],
+      [
+        "datasets"
+      ],
+      [
+        "downloadTCGA"
+      ],
+      [
+        "fetch"
+      ],
+      [
+        "fetch_dataset_identifiers"
+      ],
+      [
+        "fetch_dataset_samples"
+      ],
+      [
+        "fetch_dense_values"
+      ],
+      [
+        "fetch_sparse_values"
+      ],
+      [
+        "getTCGAdata"
+      ],
+      [
+        "has_probeMap"
+      ],
+      [
+        "hosts"
+      ],
+      [
+        "samples"
+      ],
+      [
+        "showTCGA"
+      ],
+      [
+        "to_snake"
+      ],
+      [
+        "xena_default_hosts"
+      ],
+      [
+        "XenaBrowse"
+      ],
+      [
+        "XenaDataUpdate"
+      ],
+      [
+        "XenaDownload"
+      ],
+      [
+        "XenaFilter"
+      ],
+      [
+        "XenaGenerate"
+      ],
+      [
+        "XenaHub"
+      ],
+      [
+        "XenaPrepare"
+      ],
+      [
+        "XenaQuery"
+      ],
+      [
+        "XenaQueryProbeMap"
+      ],
+      [
+        "XenaScan"
+      ]
+    ],
+    "topics": [
+      [
+        "api-client"
+      ],
+      [
+        "bioinformatics"
+      ],
+      [
+        "ccle"
+      ],
+      [
+        "downloader"
+      ],
+      [
+        "icgc"
+      ],
+      [
+        "tcga"
+      ],
+      [
+        "toil"
+      ],
+      [
+        "treehouse"
+      ],
+      [
+        "ucsc"
+      ],
+      [
+        "ucsc-xena"
+      ]
+    ],
+    "score": 9.0182,
+    "stars": 111,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "UCSCXenaTools Download and Explore Datasets from UCSC Xena Data Hubs Download and explore datasets from UCSC Xena data hubs,\nwhich are a collection of UCSC-hosted public databases such as\nTCGA, ICGC, TARGET, GTEx, CCLE, and others.  Databases are\nnormalized so they can be combined, linked, filtered, explored\nand downloaded. .XenaHub %>% availTCGA cohorts datasets downloadTCGA fetch fetch_dataset_identifiers fetch_dataset_samples fetch_dense_values fetch_sparse_values getTCGAdata has_probeMap hosts samples showTCGA to_snake xena_default_hosts XenaBrowse XenaDataUpdate XenaDownload XenaFilter XenaGenerate XenaHub XenaPrepare XenaQuery XenaQueryProbeMap XenaScan api-client bioinformatics ccle downloader icgc tcga toil treehouse ucsc ucsc-xena"
+  },
+  {
+    "id": 391,
+    "package_name": "comtradr",
+    "title": "Interface with the United Nations Comtrade API",
+    "description": "Interface with and extract data from the United Nations\n'Comtrade' API <https://comtradeplus.un.org/>. 'Comtrade'\nprovides country level shipping data for a variety of\ncommodities, these functions allow for easy API query and data\nreturned as a tidy data frame.",
+    "version": "1.0.5",
+    "maintainer": "Paul Bochtler <paulbochtler.gh@gmail.com>",
+    "author": "Paul Bochtler [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0002-9146-6185>),\nHarriet Goers [aut],\nChris Muir [aut],\nAlicia Schep [rev] (ORCID: <https://orcid.org/0000-0002-3915-0618>,\nAlicia reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/141),\nRafael Hellwig [rev] (ORCID: <https://orcid.org/0000-0002-3092-3493>,\nRafael reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/141),\nErnest Guevarra [rev] (ORCID: <https://orcid.org/0000-0002-4887-4415>,\nErnest reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/software-review/issues/613),\nNicholas Potter [rev] (ORCID: <https://orcid.org/0000-0002-3410-3732>,\nNicholas reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/software-review/issues/613),\nJuergen Amann [ctb]",
+    "url": "https://docs.ropensci.org/comtradr/,\nhttps://github.com/ropensci/comtradr",
+    "bug_reports": "https://github.com/ropensci/comtradr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "ct_commodity_db_type"
+      ],
+      [
+        "ct_commodity_lookup"
+      ],
+      [
+        "ct_country_lookup"
+      ],
+      [
+        "ct_get_bulk"
+      ],
+      [
+        "ct_get_data"
+      ],
+      [
+        "ct_get_ref_table"
+      ],
+      [
+        "ct_get_remaining_hourly_queries"
+      ],
+      [
+        "ct_get_reset_time"
+      ],
+      [
+        "ct_migrate_cache"
+      ],
+      [
+        "ct_register_token"
+      ],
+      [
+        "ct_search"
+      ],
+      [
+        "ct_update_databases"
+      ],
+      [
+        "ct_use_pretty_cols"
+      ],
+      [
+        "get_primary_comtrade_key"
+      ],
+      [
+        "set_primary_comtrade_key"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "comtrade"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "supply-chain"
+      ]
+    ],
+    "score": 8.7291,
+    "stars": 77,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "comtradr Interface with the United Nations Comtrade API Interface with and extract data from the United Nations\n'Comtrade' API <https://comtradeplus.un.org/>. 'Comtrade'\nprovides country level shipping data for a variety of\ncommodities, these functions allow for easy API query and data\nreturned as a tidy data frame. ct_commodity_db_type ct_commodity_lookup ct_country_lookup ct_get_bulk ct_get_data ct_get_ref_table ct_get_remaining_hourly_queries ct_get_reset_time ct_migrate_cache ct_register_token ct_search ct_update_databases ct_use_pretty_cols get_primary_comtrade_key set_primary_comtrade_key api comtrade peer-reviewed supply-chain"
+  },
+  {
+    "id": 1442,
+    "package_name": "wikitaxa",
+    "title": "Taxonomic Information from 'Wikipedia'",
+    "description": "'Taxonomic' information from 'Wikipedia', 'Wikicommons',\n'Wikispecies', and 'Wikidata'. Functions included for getting\ntaxonomic information from each of the sources just listed, as\nwell performing taxonomic search.",
+    "version": "0.4.0.93",
+    "maintainer": "Zachary Foster <zacharyfoster1989@gmail.com>",
+    "author": "Scott Chamberlain [aut],\nEthan Welty [aut],\nGrzegorz Sapijaszko [aut],\nZachary Foster [aut, cre]",
+    "url": "https://docs.ropensci.org/wikitaxa,\nhttps://github.com/ropensci/wikitaxa",
+    "bug_reports": "https://github.com/ropensci/wikitaxa/issues",
+    "repository": "",
+    "exports": [
+      [
+        "wt_data"
+      ],
+      [
+        "wt_data_id"
+      ],
+      [
+        "wt_wiki_page"
+      ],
+      [
+        "wt_wiki_page_parse"
+      ],
+      [
+        "wt_wiki_url_build"
+      ],
+      [
+        "wt_wiki_url_parse"
+      ],
+      [
+        "wt_wikicommons"
+      ],
+      [
+        "wt_wikicommons_parse"
+      ],
+      [
+        "wt_wikicommons_search"
+      ],
+      [
+        "wt_wikipedia"
+      ],
+      [
+        "wt_wikipedia_parse"
+      ],
+      [
+        "wt_wikipedia_search"
+      ],
+      [
+        "wt_wikispecies"
+      ],
+      [
+        "wt_wikispecies_parse"
+      ],
+      [
+        "wt_wikispecies_search"
+      ]
+    ],
+    "topics": [
+      [
+        "taxonomy"
+      ],
+      [
+        "species"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "wikipedia"
+      ],
+      [
+        "vernacular"
+      ],
+      [
+        "wikispecies"
+      ],
+      [
+        "wikicommons"
+      ],
+      [
+        "taxize"
+      ],
+      [
+        "wikipedia-api"
+      ]
+    ],
+    "score": 8.3983,
+    "stars": 21,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "wikitaxa Taxonomic Information from 'Wikipedia' 'Taxonomic' information from 'Wikipedia', 'Wikicommons',\n'Wikispecies', and 'Wikidata'. Functions included for getting\ntaxonomic information from each of the sources just listed, as\nwell performing taxonomic search. wt_data wt_data_id wt_wiki_page wt_wiki_page_parse wt_wiki_url_build wt_wiki_url_parse wt_wikicommons wt_wikicommons_parse wt_wikicommons_search wt_wikipedia wt_wikipedia_parse wt_wikipedia_search wt_wikispecies wt_wikispecies_parse wt_wikispecies_search taxonomy species api web-services wikipedia vernacular wikispecies wikicommons taxize wikipedia-api"
+  },
+  {
+    "id": 1170,
+    "package_name": "rvertnet",
+    "title": "Search 'Vertnet', a 'Database' of Vertebrate Specimen Records",
+    "description": "Retrieve, map and summarize data from the 'VertNet.org'\narchives (<https://vertnet.org/>).  Functions allow searching\nby many parameters, including 'taxonomic' names, places, and\ndates. In addition, there is an interface for conducting\nspatially delimited searches, and another for requesting large\n'datasets' via email.",
+    "version": "0.8.4.9000",
+    "maintainer": "Dave Slager <slager@uw.edu>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nChris Ray [ctb],\nVijay Barve [ctb],\nDave Slager [ctb, cre] (ORCID: <https://orcid.org/0000-0003-2525-2039>)",
+    "url": "https://github.com/ropensci/rvertnet,\nhttps://docs.ropensci.org/rvertnet/",
+    "bug_reports": "https://github.com/ropensci/rvertnet/issues",
+    "repository": "",
+    "exports": [
+      [
+        "bigsearch"
+      ],
+      [
+        "dump_init"
+      ],
+      [
+        "dump_links"
+      ],
+      [
+        "dump_tbl"
+      ],
+      [
+        "searchbyterm"
+      ],
+      [
+        "spatialsearch"
+      ],
+      [
+        "traitsearch"
+      ],
+      [
+        "vert_id"
+      ],
+      [
+        "vertavailablemaps"
+      ],
+      [
+        "vertlocations"
+      ],
+      [
+        "vertmap"
+      ],
+      [
+        "vertoccurrence"
+      ],
+      [
+        "vertoccurrencecount"
+      ],
+      [
+        "vertproviders"
+      ],
+      [
+        "vertsearch"
+      ],
+      [
+        "vertsummary"
+      ],
+      [
+        "verttaxa"
+      ]
+    ],
+    "topics": [
+      [
+        "species"
+      ],
+      [
+        "occurrences"
+      ],
+      [
+        "biodiversity"
+      ],
+      [
+        "maps"
+      ],
+      [
+        "vertnet"
+      ],
+      [
+        "mammals"
+      ],
+      [
+        "mammalia"
+      ],
+      [
+        "specimens"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "specimen"
+      ],
+      [
+        "spocc"
+      ]
+    ],
+    "score": 8.2542,
+    "stars": 7,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rvertnet Search 'Vertnet', a 'Database' of Vertebrate Specimen Records Retrieve, map and summarize data from the 'VertNet.org'\narchives (<https://vertnet.org/>).  Functions allow searching\nby many parameters, including 'taxonomic' names, places, and\ndates. In addition, there is an interface for conducting\nspatially delimited searches, and another for requesting large\n'datasets' via email. bigsearch dump_init dump_links dump_tbl searchbyterm spatialsearch traitsearch vert_id vertavailablemaps vertlocations vertmap vertoccurrence vertoccurrencecount vertproviders vertsearch vertsummary verttaxa species occurrences biodiversity maps vertnet mammals mammalia specimens api-wrapper specimen spocc"
+  },
+  {
+    "id": 1436,
+    "package_name": "webmockr",
+    "title": "Stubbing and Setting Expectations on 'HTTP' Requests",
+    "description": "Stubbing and setting expectations on 'HTTP' requests.\nIncludes tools for stubbing 'HTTP' requests, including expected\nrequest conditions and response conditions. Match on 'HTTP'\nmethod, query parameters, request body, headers and more. Can\nbe used for unit tests or outside of a testing context.",
+    "version": "2.2.1.92",
+    "maintainer": "Scott Chamberlain <myrmecocystus+r@gmail.com>",
+    "author": "Scott Chamberlain [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nAaron Wolen [ctb] (ORCID: <https://orcid.org/0000-0003-2542-2202>),\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>)",
+    "url": "https://github.com/ropensci/webmockr,\nhttps://books.ropensci.org/http-testing/,\nhttps://docs.ropensci.org/webmockr/",
+    "bug_reports": "https://github.com/ropensci/webmockr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "build_crul_response"
+      ],
+      [
+        "build_httr_response"
+      ],
+      [
+        "build_httr2_request"
+      ],
+      [
+        "build_httr2_response"
+      ],
+      [
+        "CrulAdapter"
+      ],
+      [
+        "disable"
+      ],
+      [
+        "enable"
+      ],
+      [
+        "enabled"
+      ],
+      [
+        "excluding"
+      ],
+      [
+        "httr_mock"
+      ],
+      [
+        "httr2_mock"
+      ],
+      [
+        "Httr2Adapter"
+      ],
+      [
+        "HttrAdapter"
+      ],
+      [
+        "including"
+      ],
+      [
+        "last_request"
+      ],
+      [
+        "last_stub"
+      ],
+      [
+        "mock_file"
+      ],
+      [
+        "pluck_body"
+      ],
+      [
+        "remove_request_stub"
+      ],
+      [
+        "request_registry"
+      ],
+      [
+        "request_registry_clear"
+      ],
+      [
+        "request_registry_filter"
+      ],
+      [
+        "RequestSignature"
+      ],
+      [
+        "Response"
+      ],
+      [
+        "stub_body_diff"
+      ],
+      [
+        "stub_registry"
+      ],
+      [
+        "stub_registry_clear"
+      ],
+      [
+        "stub_request"
+      ],
+      [
+        "to_raise"
+      ],
+      [
+        "to_return"
+      ],
+      [
+        "to_return_"
+      ],
+      [
+        "to_timeout"
+      ],
+      [
+        "webmockr_allow_net_connect"
+      ],
+      [
+        "webmockr_configuration"
+      ],
+      [
+        "webmockr_configure"
+      ],
+      [
+        "webmockr_configure_reset"
+      ],
+      [
+        "webmockr_crul_fetch"
+      ],
+      [
+        "webmockr_disable"
+      ],
+      [
+        "webmockr_disable_net_connect"
+      ],
+      [
+        "webmockr_enable"
+      ],
+      [
+        "webmockr_net_connect_allowed"
+      ],
+      [
+        "webmockr_reset"
+      ],
+      [
+        "wi_th"
+      ],
+      [
+        "wi_th_"
+      ]
+    ],
+    "topics": [
+      [
+        "http"
+      ],
+      [
+        "https"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "curl"
+      ],
+      [
+        "mock"
+      ],
+      [
+        "mocking"
+      ],
+      [
+        "fakeweb"
+      ],
+      [
+        "http-mocking"
+      ],
+      [
+        "testing"
+      ],
+      [
+        "testing-tools"
+      ],
+      [
+        "tdd"
+      ],
+      [
+        "http-mock"
+      ]
+    ],
+    "score": 8.2078,
+    "stars": 50,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "webmockr Stubbing and Setting Expectations on 'HTTP' Requests Stubbing and setting expectations on 'HTTP' requests.\nIncludes tools for stubbing 'HTTP' requests, including expected\nrequest conditions and response conditions. Match on 'HTTP'\nmethod, query parameters, request body, headers and more. Can\nbe used for unit tests or outside of a testing context. %>% build_crul_response build_httr_response build_httr2_request build_httr2_response CrulAdapter disable enable enabled excluding httr_mock httr2_mock Httr2Adapter HttrAdapter including last_request last_stub mock_file pluck_body remove_request_stub request_registry request_registry_clear request_registry_filter RequestSignature Response stub_body_diff stub_registry stub_registry_clear stub_request to_raise to_return to_return_ to_timeout webmockr_allow_net_connect webmockr_configuration webmockr_configure webmockr_configure_reset webmockr_crul_fetch webmockr_disable webmockr_disable_net_connect webmockr_enable webmockr_net_connect_allowed webmockr_reset wi_th wi_th_ http https api web-services curl mock mocking fakeweb http-mocking testing testing-tools tdd http-mock"
+  },
+  {
+    "id": 1373,
+    "package_name": "traits",
+    "title": "Species Trait Data from Around the Web",
+    "description": "Species trait data from many sources, including sequence\ndata from 'NCBI' (<https://www.ncbi.nlm.nih.gov/>), plant\ntraits from 'BETYdb', and data from 'EOL Traitbank' and\n'Birdlife International'.",
+    "version": "0.5.2",
+    "maintainer": "David LeBauer <dlebauer@gmail.com>",
+    "author": "David LeBauer [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-7228-053X>),\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nZachary Foster [aut],\nIgnasi Bartomeus [aut],\nChris Black [aut],\nDavid Harris [aut],\nRupert Collins [ctb]",
+    "url": "https://docs.ropensci.org/traits/,\nhttps://github.com/ropensci/traits",
+    "bug_reports": "https://github.com/ropensci/traits/issues",
+    "repository": "",
+    "exports": [
+      [
+        "betydb_citation"
+      ],
+      [
+        "betydb_experiment"
+      ],
+      [
+        "betydb_query"
+      ],
+      [
+        "betydb_record"
+      ],
+      [
+        "betydb_search"
+      ],
+      [
+        "betydb_site"
+      ],
+      [
+        "betydb_specie"
+      ],
+      [
+        "betydb_trait"
+      ],
+      [
+        "birdlife_habitat"
+      ],
+      [
+        "birdlife_threats"
+      ],
+      [
+        "coral_locations"
+      ],
+      [
+        "coral_methodologies"
+      ],
+      [
+        "coral_resources"
+      ],
+      [
+        "coral_species"
+      ],
+      [
+        "coral_taxa"
+      ],
+      [
+        "coral_traits"
+      ],
+      [
+        "eol_invasive_"
+      ],
+      [
+        "fe_native"
+      ],
+      [
+        "g_invasive"
+      ],
+      [
+        "is_native"
+      ],
+      [
+        "leda"
+      ],
+      [
+        "ncbi_byid"
+      ],
+      [
+        "ncbi_byname"
+      ],
+      [
+        "ncbi_searcher"
+      ],
+      [
+        "taxa_search"
+      ],
+      [
+        "tr_ernest"
+      ],
+      [
+        "tr_usda"
+      ],
+      [
+        "tr_zanne"
+      ],
+      [
+        "traitbank"
+      ],
+      [
+        "traits_cache"
+      ]
+    ],
+    "topics": [
+      [
+        "traits"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "species"
+      ],
+      [
+        "taxonomy"
+      ],
+      [
+        "biodiversity"
+      ],
+      [
+        "ecology"
+      ],
+      [
+        "environmental-data"
+      ],
+      [
+        "species-traits"
+      ],
+      [
+        "api-client"
+      ]
+    ],
+    "score": 8.2068,
+    "stars": 41,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "traits Species Trait Data from Around the Web Species trait data from many sources, including sequence\ndata from 'NCBI' (<https://www.ncbi.nlm.nih.gov/>), plant\ntraits from 'BETYdb', and data from 'EOL Traitbank' and\n'Birdlife International'. betydb_citation betydb_experiment betydb_query betydb_record betydb_search betydb_site betydb_specie betydb_trait birdlife_habitat birdlife_threats coral_locations coral_methodologies coral_resources coral_species coral_taxa coral_traits eol_invasive_ fe_native g_invasive is_native leda ncbi_byid ncbi_byname ncbi_searcher taxa_search tr_ernest tr_usda tr_zanne traitbank traits_cache traits api web-services species taxonomy biodiversity ecology environmental-data species-traits api-client"
+  },
+  {
+    "id": 574,
+    "package_name": "fingertipsR",
+    "title": "Fingertips Data for Public Health",
+    "description": "Fingertips (<http://fingertips.phe.org.uk/>) contains data\nfor many indicators of public health in England. The underlying\ndata is now more easily accessible by making use of the API.",
+    "version": "1.1.0",
+    "maintainer": "Sam Dunn <sam.dunn@dhsc.gov.uk>",
+    "author": "Annabel Westermann [aut, cre],\nSebastian Fox [aut, ctb],\nHadley Nanayakkara [aut, ctb],\nJulian Flowers [aut, ctb],\nSimon Thelwall [ctb] (ORCID: <https://orcid.org/0000-0002-0434-2724>),\nDuncan Garmonsway [ctb],\nCarl Ganz [ctb],\nDavid Whiting [ctb],\nLuke Bradley [ctb],\nSamuel Cutler [ctb],\nThilaksan Vikneswaran [ctb],\nCrown Copyright 2020 [cph]",
+    "url": "https://fingertips.phe.org.uk,\nhttps://github.com/ropensci/fingertipsR,\nhttps://docs.ropensci.org/fingertipsR/",
+    "bug_reports": "https://github.com/ropensci/fingertipsR/issues",
+    "repository": "",
+    "exports": [
+      [
+        "area_types"
+      ],
+      [
+        "category_types"
+      ],
+      [
+        "deprivation_decile"
+      ],
+      [
+        "fingertips_data"
+      ],
+      [
+        "fingertips_endpoint"
+      ],
+      [
+        "fingertips_redred"
+      ],
+      [
+        "fingertips_stats"
+      ],
+      [
+        "get_fingertips_api"
+      ],
+      [
+        "indicator_areatypes"
+      ],
+      [
+        "indicator_metadata"
+      ],
+      [
+        "indicator_order"
+      ],
+      [
+        "indicator_update_information"
+      ],
+      [
+        "indicators"
+      ],
+      [
+        "indicators_unique"
+      ],
+      [
+        "nearest_neighbour_areatypeids"
+      ],
+      [
+        "nearest_neighbours"
+      ],
+      [
+        "profiles"
+      ],
+      [
+        "select_indicators"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "fingertips"
+      ],
+      [
+        "health"
+      ],
+      [
+        "open-data"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "public-health"
+      ],
+      [
+        "public-health-england"
+      ]
+    ],
+    "score": 8.1988,
+    "stars": 103,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "fingertipsR Fingertips Data for Public Health Fingertips (<http://fingertips.phe.org.uk/>) contains data\nfor many indicators of public health in England. The underlying\ndata is now more easily accessible by making use of the API. area_types category_types deprivation_decile fingertips_data fingertips_endpoint fingertips_redred fingertips_stats get_fingertips_api indicator_areatypes indicator_metadata indicator_order indicator_update_information indicators indicators_unique nearest_neighbour_areatypeids nearest_neighbours profiles select_indicators api-wrapper fingertips health open-data peer-reviewed public-health public-health-england"
+  },
+  {
+    "id": 1115,
+    "package_name": "ritis",
+    "title": "Integrated Taxonomic Information System Client",
+    "description": "An interface to the Integrated Taxonomic Information\nSystem ('ITIS') (<https://www.itis.gov>). Includes functions to\nwork with the 'ITIS' REST API methods\n(<https://www.itis.gov/ws_description.html>), as well as the\n'Solr' web service\n(<https://www.itis.gov/solr_documentation.html>).",
+    "version": "1.0.0",
+    "maintainer": "Julia Blum <juliablum@gmail.com>",
+    "author": "Julia Blum [aut, cre] (ORCID: <https://orcid.org/0000-0002-2388-6612>),\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>)",
+    "url": "https://github.com/ropensci/ritis (devel)\nhttps://docs.ropensci.org/ritis/ (docs)",
+    "bug_reports": "https://github.com/ropensci/ritis/issues",
+    "repository": "",
+    "exports": [
+      [
+        "accepted_names"
+      ],
+      [
+        "any_match_count"
+      ],
+      [
+        "comment_detail"
+      ],
+      [
+        "common_names"
+      ],
+      [
+        "core_metadata"
+      ],
+      [
+        "coverage"
+      ],
+      [
+        "credibility_rating"
+      ],
+      [
+        "credibility_ratings"
+      ],
+      [
+        "currency"
+      ],
+      [
+        "date_data"
+      ],
+      [
+        "description"
+      ],
+      [
+        "experts"
+      ],
+      [
+        "full_record"
+      ],
+      [
+        "geographic_divisions"
+      ],
+      [
+        "geographic_values"
+      ],
+      [
+        "global_species_completeness"
+      ],
+      [
+        "hierarchy_down"
+      ],
+      [
+        "hierarchy_full"
+      ],
+      [
+        "hierarchy_up"
+      ],
+      [
+        "itis_facet"
+      ],
+      [
+        "itis_group"
+      ],
+      [
+        "itis_highlight"
+      ],
+      [
+        "itis_search"
+      ],
+      [
+        "jurisdiction_origin_values"
+      ],
+      [
+        "jurisdiction_values"
+      ],
+      [
+        "jurisdictional_origin"
+      ],
+      [
+        "kingdom_name"
+      ],
+      [
+        "kingdom_names"
+      ],
+      [
+        "last_change_date"
+      ],
+      [
+        "lsid2tsn"
+      ],
+      [
+        "other_sources"
+      ],
+      [
+        "parent_tsn"
+      ],
+      [
+        "publications"
+      ],
+      [
+        "rank_name"
+      ],
+      [
+        "rank_names"
+      ],
+      [
+        "record"
+      ],
+      [
+        "review_year"
+      ],
+      [
+        "scientific_name"
+      ],
+      [
+        "search_any_match_paged"
+      ],
+      [
+        "search_anymatch"
+      ],
+      [
+        "search_common"
+      ],
+      [
+        "search_scientific"
+      ],
+      [
+        "synonym_names"
+      ],
+      [
+        "taxon_authorship"
+      ],
+      [
+        "terms"
+      ],
+      [
+        "tsn_by_vernacular_language"
+      ],
+      [
+        "tsn2lsid"
+      ],
+      [
+        "unacceptability_reason"
+      ],
+      [
+        "usage"
+      ],
+      [
+        "vernacular_languages"
+      ]
+    ],
+    "topics": [
+      [
+        "taxonomy"
+      ],
+      [
+        "biology"
+      ],
+      [
+        "nomenclature"
+      ],
+      [
+        "json"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "identifiers"
+      ],
+      [
+        "species"
+      ],
+      [
+        "names"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "itis"
+      ],
+      [
+        "taxize"
+      ]
+    ],
+    "score": 8.1029,
+    "stars": 16,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "ritis Integrated Taxonomic Information System Client An interface to the Integrated Taxonomic Information\nSystem ('ITIS') (<https://www.itis.gov>). Includes functions to\nwork with the 'ITIS' REST API methods\n(<https://www.itis.gov/ws_description.html>), as well as the\n'Solr' web service\n(<https://www.itis.gov/solr_documentation.html>). accepted_names any_match_count comment_detail common_names core_metadata coverage credibility_rating credibility_ratings currency date_data description experts full_record geographic_divisions geographic_values global_species_completeness hierarchy_down hierarchy_full hierarchy_up itis_facet itis_group itis_highlight itis_search jurisdiction_origin_values jurisdiction_values jurisdictional_origin kingdom_name kingdom_names last_change_date lsid2tsn other_sources parent_tsn publications rank_name rank_names record review_year scientific_name search_any_match_paged search_anymatch search_common search_scientific synonym_names taxon_authorship terms tsn_by_vernacular_language tsn2lsid unacceptability_reason usage vernacular_languages taxonomy biology nomenclature json api web api-client identifiers species names api-wrapper itis taxize"
+  },
+  {
+    "id": 1431,
+    "package_name": "weatherOz",
+    "title": "An API Client for Australian Weather and Climate Data Resources",
+    "description": "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints provided by\nthe Department of Primary Industries and Regional Development\n(DPIRD) of Western Australia and by the Science and Technology\nDivision of the Queensland Government's Department of\nEnvironment and Science (DES). As well as the Bureau of\nMeteorology (BOM) of the Australian government precis and\ncoastal forecasts, and downloading and importing radar and\nsatellite imagery files. DPIRD weather data are accessed\nthrough public APIs provided by DPIRD,\n<https://www.dpird.wa.gov.au/online-tools/apis/>, providing\naccess to weather station data from the DPIRD weather station\nnetwork.  Australia-wide weather data are based on data from\nthe Australian Bureau of Meteorology (BOM) data and accessed\nthrough SILO (Scientific Information for Land Owners) Jeffrey\net al. (2001) <doi:10.1016/S1364-8152(01)00008-1>.  DPIRD data\nare made available under a Creative Commons Attribution 3.0\nLicence (CC BY 3.0 AU) license\n<https://creativecommons.org/licenses/by/3.0/au/deed.en>. SILO\ndata are released under a Creative Commons Attribution 4.0\nInternational licence (CC BY 4.0)\n<https://creativecommons.org/licenses/by/4.0/>. BOM data are\n(c) Australian Government Bureau of Meteorology and released\nunder a Creative Commons (CC) Attribution 3.0 licence or Public\nAccess Licence (PAL) as appropriate, see\n<http://www.bom.gov.au/other/copyright.shtml> for further\ndetails.",
+    "version": "2.0.2",
+    "maintainer": "Rodrigo Pires <rodrigo.pires@dpird.wa.gov.au>",
+    "author": "Rodrigo Pires [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-7384-6849>),\nAnna Hepworth [aut] (ORCID: <https://orcid.org/0000-0003-0204-6347>),\nRebecca O'Leary [aut],\nJonathan Carroll [aut] (ORCID: <https://orcid.org/0000-0002-1404-5264>),\nJames Goldie [aut] (ORCID: <https://orcid.org/0000-0002-5024-6207>),\nDean Marchiori [aut] (ORCID: <https://orcid.org/0000-0002-3430-7225>),\nPaul Melloy [aut] (ORCID: <https://orcid.org/0000-0003-4253-7167>),\nMark Padgham [aut] (ORCID: <https://orcid.org/0000-0003-2172-5265>),\nHugh Parsonage [aut] (ORCID: <https://orcid.org/0000-0003-4055-0835>),\nKeith Pembleton [ctb] (ORCID: <https://orcid.org/0000-0002-1896-4516>,\nContributed code and ideas for original bomrang package that was\nused in the creation of weatherOz.),\nMa\u00eblle Salmon [ctb] (ORCID: <https://orcid.org/0000-0002-2815-0399>,\nContributed to debugging a nasty little bug with CI where timezones\ncaused tests to fail due to vcr not recognising the URL when run\noutside of Australia-Perth TZ! Suggested the use of\nlocal_timzeone().),\nMax Moldovan [ctb] (ORCID: <https://orcid.org/0000-0001-9680-8474>,\nContributed valuable feedback on package usage leading to\nimprovements in the package structure and functionality.),\nJimmy Ng [ctb],\nSteve Collins [ctb] (Designed the hex logo for 'weatherOz' hex logo.),\nAdam H. Sparks [aut] (ORCID: <https://orcid.org/0000-0002-0061-8359>),\nLaurens Geffert [rev],\nSam Rogers [rev],\nWestern Australia Agriculture Authority (WAAA) [cph],\nCurtin University [cph]",
+    "url": "https://github.com/ropensci/weatherOz/,\nhttps://docs.ropensci.org/weatherOz/",
+    "bug_reports": "https://github.com/ropensci/weatherOz/issues",
+    "repository": "",
+    "exports": [
+      [
+        "find_forecast_towns"
+      ],
+      [
+        "find_nearby_stations"
+      ],
+      [
+        "find_stations_in"
+      ],
+      [
+        "get_available_imagery"
+      ],
+      [
+        "get_available_radar"
+      ],
+      [
+        "get_coastal_forecast"
+      ],
+      [
+        "get_data_drill"
+      ],
+      [
+        "get_data_drill_apsim"
+      ],
+      [
+        "get_dpird_apsim"
+      ],
+      [
+        "get_dpird_availability"
+      ],
+      [
+        "get_dpird_extremes"
+      ],
+      [
+        "get_dpird_minute"
+      ],
+      [
+        "get_dpird_summaries"
+      ],
+      [
+        "get_key"
+      ],
+      [
+        "get_patched_point"
+      ],
+      [
+        "get_patched_point_apsim"
+      ],
+      [
+        "get_precis_forecast"
+      ],
+      [
+        "get_radar_imagery"
+      ],
+      [
+        "get_satellite_imagery"
+      ],
+      [
+        "get_stations_metadata"
+      ],
+      [
+        "parse_ag_bulletin"
+      ],
+      [
+        "parse_coastal_forecast"
+      ],
+      [
+        "parse_precis_forecast"
+      ],
+      [
+        "plot"
+      ],
+      [
+        "write_apsim_met"
+      ]
+    ],
+    "topics": [
+      [
+        "dpird"
+      ],
+      [
+        "bom"
+      ],
+      [
+        "meteorological-data"
+      ],
+      [
+        "weather-forecast"
+      ],
+      [
+        "australia"
+      ],
+      [
+        "weather"
+      ],
+      [
+        "weather-data"
+      ],
+      [
+        "meteorology"
+      ],
+      [
+        "western-australia"
+      ],
+      [
+        "australia-bureau-of-meteorology"
+      ],
+      [
+        "western-australia-agriculture"
+      ],
+      [
+        "australia-agriculture"
+      ],
+      [
+        "australia-climate"
+      ],
+      [
+        "australia-weather"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "climate"
+      ],
+      [
+        "data"
+      ],
+      [
+        "rainfall"
+      ],
+      [
+        "weather-api"
+      ]
+    ],
+    "score": 7.9754,
+    "stars": 35,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "weatherOz An API Client for Australian Weather and Climate Data Resources Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints provided by\nthe Department of Primary Industries and Regional Development\n(DPIRD) of Western Australia and by the Science and Technology\nDivision of the Queensland Government's Department of\nEnvironment and Science (DES). As well as the Bureau of\nMeteorology (BOM) of the Australian government precis and\ncoastal forecasts, and downloading and importing radar and\nsatellite imagery files. DPIRD weather data are accessed\nthrough public APIs provided by DPIRD,\n<https://www.dpird.wa.gov.au/online-tools/apis/>, providing\naccess to weather station data from the DPIRD weather station\nnetwork.  Australia-wide weather data are based on data from\nthe Australian Bureau of Meteorology (BOM) data and accessed\nthrough SILO (Scientific Information for Land Owners) Jeffrey\net al. (2001) <doi:10.1016/S1364-8152(01)00008-1>.  DPIRD data\nare made available under a Creative Commons Attribution 3.0\nLicence (CC BY 3.0 AU) license\n<https://creativecommons.org/licenses/by/3.0/au/deed.en>. SILO\ndata are released under a Creative Commons Attribution 4.0\nInternational licence (CC BY 4.0)\n<https://creativecommons.org/licenses/by/4.0/>. BOM data are\n(c) Australian Government Bureau of Meteorology and released\nunder a Creative Commons (CC) Attribution 3.0 licence or Public\nAccess Licence (PAL) as appropriate, see\n<http://www.bom.gov.au/other/copyright.shtml> for further\ndetails. find_forecast_towns find_nearby_stations find_stations_in get_available_imagery get_available_radar get_coastal_forecast get_data_drill get_data_drill_apsim get_dpird_apsim get_dpird_availability get_dpird_extremes get_dpird_minute get_dpird_summaries get_key get_patched_point get_patched_point_apsim get_precis_forecast get_radar_imagery get_satellite_imagery get_stations_metadata parse_ag_bulletin parse_coastal_forecast parse_precis_forecast plot write_apsim_met dpird bom meteorological-data weather-forecast australia weather weather-data meteorology western-australia australia-bureau-of-meteorology western-australia-agriculture australia-agriculture australia-climate australia-weather api-client climate data rainfall weather-api"
+  },
+  {
+    "id": 871,
+    "package_name": "natserv",
+    "title": "'NatureServe' Interface",
+    "description": "Interface to 'NatureServe'\n(<https://www.natureserve.org/>). Includes methods to get data,\nimage metadata, search taxonomic names, and make maps.",
+    "version": "1.0.0.91",
+    "maintainer": "Christopher Tracey <christopher_tracey@natureserve.org>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nChristopher Tracey [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-3866-9020>),\nrOpenSci [fnd] (ROR: <https://ror.org/019jywm96>)",
+    "url": "https://docs.ropensci.org/natserv/,\nhttps://github.com/ropensci/natserv",
+    "bug_reports": "https://github.com/ropensci/natserv/issues",
+    "repository": "",
+    "exports": [
+      [
+        "ns_altid"
+      ],
+      [
+        "ns_ecohier"
+      ],
+      [
+        "ns_export"
+      ],
+      [
+        "ns_export_status"
+      ],
+      [
+        "ns_id"
+      ],
+      [
+        "ns_search_comb"
+      ],
+      [
+        "ns_search_eco"
+      ],
+      [
+        "ns_search_spp"
+      ]
+    ],
+    "topics": [
+      [
+        "taxonomy"
+      ],
+      [
+        "species"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "natureserve"
+      ],
+      [
+        "metadata"
+      ],
+      [
+        "maps"
+      ],
+      [
+        "taxize"
+      ]
+    ],
+    "score": 7.4771,
+    "stars": 11,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "natserv 'NatureServe' Interface Interface to 'NatureServe'\n(<https://www.natureserve.org/>). Includes methods to get data,\nimage metadata, search taxonomic names, and make maps. ns_altid ns_ecohier ns_export ns_export_status ns_id ns_search_comb ns_search_eco ns_search_spp taxonomy species api web-services natureserve metadata maps taxize"
+  },
+  {
+    "id": 924,
+    "package_name": "osmapiR",
+    "title": "'OpenStreetMap' API",
+    "description": "Interface to 'OpenStreetMap API' for fetching and saving\ndata from/to the 'OpenStreetMap' database\n(<https://wiki.openstreetmap.org/wiki/API_v0.6>).",
+    "version": "0.2.4.9000",
+    "maintainer": "Joan Maspons <joanmaspons@gmail.com>",
+    "author": "Joan Maspons [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0003-2286-8727>),\nJon Harmon [rev] (Jon reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/software-review/issues/633, ORCID:\n<https://orcid.org/0000-0003-4781-4346>),\nCarlos C\u00e1mara [rev] (Carles reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/software-review/issues/633, ORCID:\n<https://orcid.org/0000-0002-9378-0549>)",
+    "url": "https://docs.ropensci.org/osmapiR/,\nhttps://github.com/ropensci/osmapiR",
+    "bug_reports": "https://github.com/ropensci/osmapiR/issues",
+    "repository": "",
+    "exports": [
+      [
+        "authenticate_osmapi"
+      ],
+      [
+        "get_osmapi_url"
+      ],
+      [
+        "logout_osmapi"
+      ],
+      [
+        "osm_api_versions"
+      ],
+      [
+        "osm_bbox_objects"
+      ],
+      [
+        "osm_capabilities"
+      ],
+      [
+        "osm_close_changeset"
+      ],
+      [
+        "osm_close_note"
+      ],
+      [
+        "osm_comment_changeset_discussion"
+      ],
+      [
+        "osm_create_changeset"
+      ],
+      [
+        "osm_create_comment_note"
+      ],
+      [
+        "osm_create_gpx"
+      ],
+      [
+        "osm_create_note"
+      ],
+      [
+        "osm_create_object"
+      ],
+      [
+        "osm_create_user_block"
+      ],
+      [
+        "osm_delete_gpx"
+      ],
+      [
+        "osm_delete_note"
+      ],
+      [
+        "osm_delete_object"
+      ],
+      [
+        "osm_details_logged_user"
+      ],
+      [
+        "osm_diff_upload_changeset"
+      ],
+      [
+        "osm_download_changeset"
+      ],
+      [
+        "osm_feed_notes"
+      ],
+      [
+        "osm_get_changesets"
+      ],
+      [
+        "osm_get_data_gpx"
+      ],
+      [
+        "osm_get_gpx_metadata"
+      ],
+      [
+        "osm_get_notes"
+      ],
+      [
+        "osm_get_objects"
+      ],
+      [
+        "osm_get_points_gps"
+      ],
+      [
+        "osm_get_preferences_user"
+      ],
+      [
+        "osm_get_user_blocks"
+      ],
+      [
+        "osm_get_user_details"
+      ],
+      [
+        "osm_hide_comment_changeset_discussion"
+      ],
+      [
+        "osm_history_object"
+      ],
+      [
+        "osm_list_active_user_blocks"
+      ],
+      [
+        "osm_list_gpxs"
+      ],
+      [
+        "osm_permissions"
+      ],
+      [
+        "osm_query_changesets"
+      ],
+      [
+        "osm_read_bbox_notes"
+      ],
+      [
+        "osm_redaction_object"
+      ],
+      [
+        "osm_relations_object"
+      ],
+      [
+        "osm_reopen_note"
+      ],
+      [
+        "osm_search_notes"
+      ],
+      [
+        "osm_set_preferences_user"
+      ],
+      [
+        "osm_subscribe_changeset_discussion"
+      ],
+      [
+        "osm_subscribe_note"
+      ],
+      [
+        "osm_unhide_comment_changeset_discussion"
+      ],
+      [
+        "osm_unsubscribe_changeset_discussion"
+      ],
+      [
+        "osm_unsubscribe_note"
+      ],
+      [
+        "osm_update_changeset"
+      ],
+      [
+        "osm_update_gpx"
+      ],
+      [
+        "osm_update_object"
+      ],
+      [
+        "osm_ways_node"
+      ],
+      [
+        "osmapi_objects"
+      ],
+      [
+        "osmchange_create"
+      ],
+      [
+        "osmchange_delete"
+      ],
+      [
+        "osmchange_modify"
+      ],
+      [
+        "set_osmapi_connection"
+      ],
+      [
+        "set_osmapi_url"
+      ],
+      [
+        "st_as_sf.osmapi_changesets"
+      ],
+      [
+        "st_as_sf.osmapi_gps_track"
+      ],
+      [
+        "st_as_sf.osmapi_gpx"
+      ],
+      [
+        "st_as_sf.osmapi_map_notes"
+      ],
+      [
+        "tags_list2wide"
+      ],
+      [
+        "tags_wide2list"
+      ]
+    ],
+    "topics": [
+      [
+        "open street map"
+      ],
+      [
+        "openstreetmap"
+      ],
+      [
+        "osm"
+      ],
+      [
+        "openstreetmap-api"
+      ],
+      [
+        "osmapi"
+      ],
+      [
+        "api"
+      ]
+    ],
+    "score": 7.1821,
+    "stars": 26,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "osmapiR 'OpenStreetMap' API Interface to 'OpenStreetMap API' for fetching and saving\ndata from/to the 'OpenStreetMap' database\n(<https://wiki.openstreetmap.org/wiki/API_v0.6>). authenticate_osmapi get_osmapi_url logout_osmapi osm_api_versions osm_bbox_objects osm_capabilities osm_close_changeset osm_close_note osm_comment_changeset_discussion osm_create_changeset osm_create_comment_note osm_create_gpx osm_create_note osm_create_object osm_create_user_block osm_delete_gpx osm_delete_note osm_delete_object osm_details_logged_user osm_diff_upload_changeset osm_download_changeset osm_feed_notes osm_get_changesets osm_get_data_gpx osm_get_gpx_metadata osm_get_notes osm_get_objects osm_get_points_gps osm_get_preferences_user osm_get_user_blocks osm_get_user_details osm_hide_comment_changeset_discussion osm_history_object osm_list_active_user_blocks osm_list_gpxs osm_permissions osm_query_changesets osm_read_bbox_notes osm_redaction_object osm_relations_object osm_reopen_note osm_search_notes osm_set_preferences_user osm_subscribe_changeset_discussion osm_subscribe_note osm_unhide_comment_changeset_discussion osm_unsubscribe_changeset_discussion osm_unsubscribe_note osm_update_changeset osm_update_gpx osm_update_object osm_ways_node osmapi_objects osmchange_create osmchange_delete osmchange_modify set_osmapi_connection set_osmapi_url st_as_sf.osmapi_changesets st_as_sf.osmapi_gps_track st_as_sf.osmapi_gpx st_as_sf.osmapi_map_notes tags_list2wide tags_wide2list open street map openstreetmap osm openstreetmap-api osmapi api"
+  },
+  {
+    "id": 1370,
+    "package_name": "tradestatistics",
+    "title": "Open Trade Statistics API Wrapper and Utility Program",
+    "description": "Access 'Open Trade Statistics' API from R to download\ninternational trade data.",
+    "version": "5.0.0",
+    "maintainer": "Mauricio Vargas <mavargas11@uc.cl>",
+    "author": "Mauricio Vargas [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0003-1017-7574>),\nJoshua Kunst [ctb] (contributed to different parts of the pre-release\ncode),\nAlexey Kravchenko [ctb] (reviewed 2021 version of the API),\nEmma Mendelsohn [ctb] (updated the functions to take available years\nfrom the API instead of hardcoded values),\nDaniela de los Santos [ctb] (proposed improvements to default\nparameters),\nEmily Riederer [rev] (reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/274),\nMark Padgham [rev] (reviewed the package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/274),\nAmanda Dobbyn [rev] (reviewed a previous package that evolved into the\ncurrent package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/217),\nJorge Cimentada [rev] (reviewed a previous package that evolved into\nthe current package for rOpenSci, see\nhttps://github.com/ropensci/onboarding/issues/217),\nUN Comtrade [dtc],\nThe World Bank [dtc]",
+    "url": "https://docs.ropensci.org/tradestatistics/",
+    "bug_reports": "https://github.com/ropensci/tradestatistics/issues/",
+    "repository": "",
+    "exports": [
+      [
+        "ots_commodity_code"
+      ],
+      [
+        "ots_country_code"
+      ],
+      [
+        "ots_create_tidy_data"
+      ],
+      [
+        "ots_gdp_deflator_adjustment"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "data-table"
+      ],
+      [
+        "international-trade"
+      ],
+      [
+        "jsonlite"
+      ],
+      [
+        "open-trade-statistics"
+      ]
+    ],
+    "score": 7.1332,
+    "stars": 79,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "tradestatistics Open Trade Statistics API Wrapper and Utility Program Access 'Open Trade Statistics' API from R to download\ninternational trade data. ots_commodity_code ots_country_code ots_create_tidy_data ots_gdp_deflator_adjustment api-wrapper data-table international-trade jsonlite open-trade-statistics"
+  },
+  {
+    "id": 670,
+    "package_name": "gtexr",
+    "title": "Query the GTEx Portal API",
+    "description": "A convenient R interface to the Genotype-Tissue Expression\n(GTEx) Portal API. The GTEx project is a comprehensive public\nresource for studying tissue-specific gene expression and\nregulation in human tissues. Through systematic analysis of RNA\nsequencing data from 54 non-diseased tissue sites across nearly\n1000 individuals, GTEx provides crucial insights into the\nrelationship between genetic variation and gene expression.\nThis data is accessible through the GTEx Portal API enabling\nprogrammatic access to human gene expression data. For more\ninformation on the API, see\n<https://gtexportal.org/api/v2/redoc>.",
+    "version": "0.2.1.9000",
+    "maintainer": "Alasdair Warwick <alasdair.warwick.19@ucl.ac.uk>",
+    "author": "Alasdair Warwick [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0002-0800-2890>),\nBenjamin Zuckerman [aut] (ORCID:\n<https://orcid.org/0000-0002-0077-6074>),\nAbraham Olvera-Barrios [aut] (ORCID:\n<https://orcid.org/0000-0002-3305-4465>),\nChuin Ying Ung [aut] (ORCID: <https://orcid.org/0000-0001-8487-4589>),\nRobert Luben [aut] (ORCID: <https://orcid.org/0000-0002-5088-6343>),\nZhian N. Kamvar [rev] (ORCID: <https://orcid.org/0000-0003-1458-7108>)",
+    "url": "https://docs.ropensci.org/gtexr/,\nhttps://github.com/ropensci/gtexr",
+    "bug_reports": "https://github.com/ropensci/gtexr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "calculate_expression_quantitative_trait_loci"
+      ],
+      [
+        "calculate_ieqtls"
+      ],
+      [
+        "calculate_isqtls"
+      ],
+      [
+        "calculate_splicing_quantitative_trait_loci"
+      ],
+      [
+        "download"
+      ],
+      [
+        "get_annotation"
+      ],
+      [
+        "get_clustered_median_exon_expression"
+      ],
+      [
+        "get_clustered_median_gene_expression"
+      ],
+      [
+        "get_clustered_median_junction_expression"
+      ],
+      [
+        "get_clustered_median_transcript_expression"
+      ],
+      [
+        "get_collapsed_gene_model_exon"
+      ],
+      [
+        "get_dataset_info"
+      ],
+      [
+        "get_downloads_page_data"
+      ],
+      [
+        "get_eqtl_genes"
+      ],
+      [
+        "get_exons"
+      ],
+      [
+        "get_expression_pca"
+      ],
+      [
+        "get_file_list"
+      ],
+      [
+        "get_fine_mapping"
+      ],
+      [
+        "get_full_get_collapsed_gene_model_exon"
+      ],
+      [
+        "get_functional_annotation"
+      ],
+      [
+        "get_gene_expression"
+      ],
+      [
+        "get_gene_search"
+      ],
+      [
+        "get_genes"
+      ],
+      [
+        "get_genomic_features"
+      ],
+      [
+        "get_gwas_catalog_by_location"
+      ],
+      [
+        "get_image"
+      ],
+      [
+        "get_independent_eqtl"
+      ],
+      [
+        "get_linkage_disequilibrium_by_variant_data"
+      ],
+      [
+        "get_linkage_disequilibrium_data"
+      ],
+      [
+        "get_maintenance_message"
+      ],
+      [
+        "get_median_exon_expression"
+      ],
+      [
+        "get_median_gene_expression"
+      ],
+      [
+        "get_median_junction_expression"
+      ],
+      [
+        "get_median_transcript_expression"
+      ],
+      [
+        "get_multi_tissue_eqtls"
+      ],
+      [
+        "get_neighbor_gene"
+      ],
+      [
+        "get_news_item"
+      ],
+      [
+        "get_sample_biobank_data"
+      ],
+      [
+        "get_sample_datasets"
+      ],
+      [
+        "get_service_info"
+      ],
+      [
+        "get_significant_single_tissue_eqtls"
+      ],
+      [
+        "get_significant_single_tissue_eqtls_by_location"
+      ],
+      [
+        "get_significant_single_tissue_ieqtls"
+      ],
+      [
+        "get_significant_single_tissue_isqtls"
+      ],
+      [
+        "get_significant_single_tissue_sqtls"
+      ],
+      [
+        "get_single_nucleus_gex"
+      ],
+      [
+        "get_single_nucleus_gex_summary"
+      ],
+      [
+        "get_sqtl_genes"
+      ],
+      [
+        "get_subject"
+      ],
+      [
+        "get_tissue_site_detail"
+      ],
+      [
+        "get_top_expressed_genes"
+      ],
+      [
+        "get_transcripts"
+      ],
+      [
+        "get_variant"
+      ],
+      [
+        "get_variant_by_location"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "bioinformatics"
+      ],
+      [
+        "eqtl"
+      ],
+      [
+        "gtex"
+      ],
+      [
+        "sqtl"
+      ]
+    ],
+    "score": 6.8195,
+    "stars": 11,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "gtexr Query the GTEx Portal API A convenient R interface to the Genotype-Tissue Expression\n(GTEx) Portal API. The GTEx project is a comprehensive public\nresource for studying tissue-specific gene expression and\nregulation in human tissues. Through systematic analysis of RNA\nsequencing data from 54 non-diseased tissue sites across nearly\n1000 individuals, GTEx provides crucial insights into the\nrelationship between genetic variation and gene expression.\nThis data is accessible through the GTEx Portal API enabling\nprogrammatic access to human gene expression data. For more\ninformation on the API, see\n<https://gtexportal.org/api/v2/redoc>. calculate_expression_quantitative_trait_loci calculate_ieqtls calculate_isqtls calculate_splicing_quantitative_trait_loci download get_annotation get_clustered_median_exon_expression get_clustered_median_gene_expression get_clustered_median_junction_expression get_clustered_median_transcript_expression get_collapsed_gene_model_exon get_dataset_info get_downloads_page_data get_eqtl_genes get_exons get_expression_pca get_file_list get_fine_mapping get_full_get_collapsed_gene_model_exon get_functional_annotation get_gene_expression get_gene_search get_genes get_genomic_features get_gwas_catalog_by_location get_image get_independent_eqtl get_linkage_disequilibrium_by_variant_data get_linkage_disequilibrium_data get_maintenance_message get_median_exon_expression get_median_gene_expression get_median_junction_expression get_median_transcript_expression get_multi_tissue_eqtls get_neighbor_gene get_news_item get_sample_biobank_data get_sample_datasets get_service_info get_significant_single_tissue_eqtls get_significant_single_tissue_eqtls_by_location get_significant_single_tissue_ieqtls get_significant_single_tissue_isqtls get_significant_single_tissue_sqtls get_single_nucleus_gex get_single_nucleus_gex_summary get_sqtl_genes get_subject get_tissue_site_detail get_top_expressed_genes get_transcripts get_variant get_variant_by_location api-wrapper bioinformatics eqtl gtex sqtl"
+  },
+  {
+    "id": 1154,
+    "package_name": "rsnps",
+    "title": "Get 'SNP' ('Single-Nucleotide' 'Polymorphism') Data on the Web",
+    "description": "A programmatic interface to various 'SNP' 'datasets' on\nthe web: 'OpenSNP' (<https://opensnp.org>), and 'NBCIs' 'dbSNP'\ndatabase (<https://www.ncbi.nlm.nih.gov/projects/SNP/>).\nFunctions are included for searching for 'NCBI'. For 'OpenSNP',\nfunctions are included for getting 'SNPs', and data for\n'genotypes', 'phenotypes', annotations, and bulk downloads of\ndata by user.",
+    "version": "0.6.1",
+    "maintainer": "Julia Gustavsen <j.gustavsen@gmail.com>",
+    "author": "Julia Gustavsen [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-4764-4802>),\nSina R\u00fceger [aut] (ORCID: <https://orcid.org/0000-0003-2848-9242>),\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nKevin Ushey [aut],\nHao Zhu [aut]",
+    "url": "https://docs.ropensci.org/rsnps/,\nhttps://github.com/ropensci/rsnps/",
+    "bug_reports": "https://github.com/ropensci/rsnps/issues/",
+    "repository": "",
+    "exports": [
+      [
+        "allgensnp"
+      ],
+      [
+        "allphenotypes"
+      ],
+      [
+        "annotations"
+      ],
+      [
+        "download_users"
+      ],
+      [
+        "fetch_genotypes"
+      ],
+      [
+        "genotypes"
+      ],
+      [
+        "ld_search"
+      ],
+      [
+        "LDSearch"
+      ],
+      [
+        "ncbi_snp_query"
+      ],
+      [
+        "NCBI_snp_query"
+      ],
+      [
+        "ncbi_snp_query2"
+      ],
+      [
+        "NCBI_snp_query2"
+      ],
+      [
+        "ncbi_snp_summary"
+      ],
+      [
+        "phenotypes"
+      ],
+      [
+        "phenotypes_byid"
+      ],
+      [
+        "read_users"
+      ],
+      [
+        "rsnpsCache"
+      ],
+      [
+        "tryget"
+      ],
+      [
+        "users"
+      ]
+    ],
+    "topics": [
+      [
+        "gene"
+      ],
+      [
+        "snp"
+      ],
+      [
+        "sequence"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web"
+      ],
+      [
+        "api-client"
+      ],
+      [
+        "species"
+      ],
+      [
+        "dbsnp"
+      ],
+      [
+        "opensnp"
+      ],
+      [
+        "ncbi"
+      ],
+      [
+        "genotype"
+      ],
+      [
+        "data"
+      ],
+      [
+        "snps"
+      ],
+      [
+        "web-api"
+      ]
+    ],
+    "score": 6.7004,
+    "stars": 55,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rsnps Get 'SNP' ('Single-Nucleotide' 'Polymorphism') Data on the Web A programmatic interface to various 'SNP' 'datasets' on\nthe web: 'OpenSNP' (<https://opensnp.org>), and 'NBCIs' 'dbSNP'\ndatabase (<https://www.ncbi.nlm.nih.gov/projects/SNP/>).\nFunctions are included for searching for 'NCBI'. For 'OpenSNP',\nfunctions are included for getting 'SNPs', and data for\n'genotypes', 'phenotypes', annotations, and bulk downloads of\ndata by user. allgensnp allphenotypes annotations download_users fetch_genotypes genotypes ld_search LDSearch ncbi_snp_query NCBI_snp_query ncbi_snp_query2 NCBI_snp_query2 ncbi_snp_summary phenotypes phenotypes_byid read_users rsnpsCache tryget users gene snp sequence api web api-client species dbsnp opensnp ncbi genotype data snps web-api"
+  },
+  {
+    "id": 1166,
+    "package_name": "ruODK",
+    "title": "An R Client for the ODK Central API",
+    "description": "Access and tidy up data from the 'ODK Central' API.  'ODK\nCentral' is a clearinghouse for digitally captured data using\nODK <https://docs.getodk.org/central-intro/>.  It manages user\naccounts and permissions, stores form definitions, and allows\ndata collection clients like 'ODK Collect' to connect to it for\nform download and submission upload. The 'ODK Central' API is\ndocumented at <https://docs.getodk.org/central-api/>.",
+    "version": "1.5.2",
+    "maintainer": "Florian W. Mayer <Florian.Mayer@dpc.wa.gov.au>",
+    "author": "Florian W. Mayer [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-4269-4242>),\nMa\u00eblle Salmon [rev] (ORCID: <https://orcid.org/0000-0002-2815-0399>),\nKarissa Whiting [rev] (ORCID: <https://orcid.org/0000-0002-4683-1868>),\nJason Taylor [rev],\nMarcelo Tyszler [ctb] (ORCID: <https://orcid.org/0000-0002-4573-0002>),\nH\u00e9l\u00e8ne Langet [ctb] (ORCID: <https://orcid.org/0000-0002-6758-2397>),\nDBCA [cph, fnd],\nNWSFTCP [fnd]",
+    "url": "https://docs.ropensci.org/ruODK, https://github.com/ropensci/ruODK",
+    "bug_reports": "https://github.com/ropensci/ruODK/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "attachment_get"
+      ],
+      [
+        "attachment_link"
+      ],
+      [
+        "attachment_list"
+      ],
+      [
+        "audit_get"
+      ],
+      [
+        "drop_null_coords"
+      ],
+      [
+        "encryption_key_list"
+      ],
+      [
+        "enexpr"
+      ],
+      [
+        "enquo"
+      ],
+      [
+        "ensym"
+      ],
+      [
+        "entity_audits"
+      ],
+      [
+        "entity_changes"
+      ],
+      [
+        "entity_create"
+      ],
+      [
+        "entity_delete"
+      ],
+      [
+        "entity_detail"
+      ],
+      [
+        "entity_list"
+      ],
+      [
+        "entity_update"
+      ],
+      [
+        "entity_versions"
+      ],
+      [
+        "entitylist_detail"
+      ],
+      [
+        "entitylist_download"
+      ],
+      [
+        "entitylist_list"
+      ],
+      [
+        "entitylist_update"
+      ],
+      [
+        "expr"
+      ],
+      [
+        "exprs"
+      ],
+      [
+        "form_detail"
+      ],
+      [
+        "form_list"
+      ],
+      [
+        "form_schema"
+      ],
+      [
+        "form_schema_ext"
+      ],
+      [
+        "form_schema_parse"
+      ],
+      [
+        "form_xml"
+      ],
+      [
+        "get_default_fid"
+      ],
+      [
+        "get_default_odkc_version"
+      ],
+      [
+        "get_default_orders"
+      ],
+      [
+        "get_default_pid"
+      ],
+      [
+        "get_default_pp"
+      ],
+      [
+        "get_default_pw"
+      ],
+      [
+        "get_default_tz"
+      ],
+      [
+        "get_default_un"
+      ],
+      [
+        "get_default_url"
+      ],
+      [
+        "get_one_attachment"
+      ],
+      [
+        "get_one_submission"
+      ],
+      [
+        "get_one_submission_att_list"
+      ],
+      [
+        "get_one_submission_audit"
+      ],
+      [
+        "get_retries"
+      ],
+      [
+        "get_ru_verbose"
+      ],
+      [
+        "get_test_fid"
+      ],
+      [
+        "get_test_fid_att"
+      ],
+      [
+        "get_test_fid_gap"
+      ],
+      [
+        "get_test_fid_wkt"
+      ],
+      [
+        "get_test_fid_zip"
+      ],
+      [
+        "get_test_odkc_version"
+      ],
+      [
+        "get_test_pid"
+      ],
+      [
+        "get_test_pp"
+      ],
+      [
+        "get_test_pw"
+      ],
+      [
+        "get_test_un"
+      ],
+      [
+        "get_test_url"
+      ],
+      [
+        "handle_ru_attachments"
+      ],
+      [
+        "handle_ru_datetimes"
+      ],
+      [
+        "handle_ru_geopoints"
+      ],
+      [
+        "handle_ru_geoshapes"
+      ],
+      [
+        "handle_ru_geotraces"
+      ],
+      [
+        "odata_entitylist_data_get"
+      ],
+      [
+        "odata_entitylist_metadata_get"
+      ],
+      [
+        "odata_entitylist_service_get"
+      ],
+      [
+        "odata_metadata_get"
+      ],
+      [
+        "odata_service_get"
+      ],
+      [
+        "odata_submission_get"
+      ],
+      [
+        "odata_submission_rectangle"
+      ],
+      [
+        "odata_svc_parse"
+      ],
+      [
+        "parse_odkc_version"
+      ],
+      [
+        "project_create"
+      ],
+      [
+        "project_detail"
+      ],
+      [
+        "project_list"
+      ],
+      [
+        "quo"
+      ],
+      [
+        "quo_name"
+      ],
+      [
+        "quos"
+      ],
+      [
+        "ru_msg_abort"
+      ],
+      [
+        "ru_msg_info"
+      ],
+      [
+        "ru_msg_noop"
+      ],
+      [
+        "ru_msg_success"
+      ],
+      [
+        "ru_msg_warn"
+      ],
+      [
+        "ru_settings"
+      ],
+      [
+        "ru_setup"
+      ],
+      [
+        "semver_gt"
+      ],
+      [
+        "semver_lt"
+      ],
+      [
+        "split_geopoint"
+      ],
+      [
+        "split_geoshape"
+      ],
+      [
+        "split_geotrace"
+      ],
+      [
+        "submission_audit_get"
+      ],
+      [
+        "submission_detail"
+      ],
+      [
+        "submission_export"
+      ],
+      [
+        "submission_get"
+      ],
+      [
+        "submission_list"
+      ],
+      [
+        "sym"
+      ],
+      [
+        "syms"
+      ],
+      [
+        "user_list"
+      ]
+    ],
+    "topics": [
+      [
+        "database"
+      ],
+      [
+        "open-data"
+      ],
+      [
+        "odk"
+      ],
+      [
+        "api"
+      ],
+      [
+        "data"
+      ],
+      [
+        "dataset"
+      ],
+      [
+        "odata"
+      ],
+      [
+        "odata-client"
+      ],
+      [
+        "odk-central"
+      ],
+      [
+        "opendatakit"
+      ]
+    ],
+    "score": 6.6257,
+    "stars": 44,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "ruODK An R Client for the ODK Central API Access and tidy up data from the 'ODK Central' API.  'ODK\nCentral' is a clearinghouse for digitally captured data using\nODK <https://docs.getodk.org/central-intro/>.  It manages user\naccounts and permissions, stores form definitions, and allows\ndata collection clients like 'ODK Collect' to connect to it for\nform download and submission upload. The 'ODK Central' API is\ndocumented at <https://docs.getodk.org/central-api/>. %>% attachment_get attachment_link attachment_list audit_get drop_null_coords encryption_key_list enexpr enquo ensym entity_audits entity_changes entity_create entity_delete entity_detail entity_list entity_update entity_versions entitylist_detail entitylist_download entitylist_list entitylist_update expr exprs form_detail form_list form_schema form_schema_ext form_schema_parse form_xml get_default_fid get_default_odkc_version get_default_orders get_default_pid get_default_pp get_default_pw get_default_tz get_default_un get_default_url get_one_attachment get_one_submission get_one_submission_att_list get_one_submission_audit get_retries get_ru_verbose get_test_fid get_test_fid_att get_test_fid_gap get_test_fid_wkt get_test_fid_zip get_test_odkc_version get_test_pid get_test_pp get_test_pw get_test_un get_test_url handle_ru_attachments handle_ru_datetimes handle_ru_geopoints handle_ru_geoshapes handle_ru_geotraces odata_entitylist_data_get odata_entitylist_metadata_get odata_entitylist_service_get odata_metadata_get odata_service_get odata_submission_get odata_submission_rectangle odata_svc_parse parse_odkc_version project_create project_detail project_list quo quo_name quos ru_msg_abort ru_msg_info ru_msg_noop ru_msg_success ru_msg_warn ru_settings ru_setup semver_gt semver_lt split_geopoint split_geoshape split_geotrace submission_audit_get submission_detail submission_export submission_get submission_list sym syms user_list database open-data odk api data dataset odata odata-client odk-central opendatakit"
+  },
+  {
+    "id": 115,
+    "package_name": "PostcodesioR",
+    "title": "API Wrapper Around 'Postcodes.io'",
+    "description": "Free UK geocoding using data from Office for National\nStatistics. It is using several functions to get information\nabout post codes, outward codes, reverse geocoding, nearest\npost codes/outward codes, validation, or randomly generate a\npost code. API wrapper around <https://postcodes.io>.",
+    "version": "0.3.1",
+    "maintainer": "Eryk Walczak <erykjwalczak@gmail.com>",
+    "author": "Eryk Walczak [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-8724-462X>),\nClaudia Vitolo [rev] (ORCID: <https://orcid.org/0000-0002-4252-1176>),\nRobin Lovelace [rev] (ORCID: <https://orcid.org/0000-0001-5679-6536>)",
+    "url": "https://docs.ropensci.org/PostcodesioR/",
+    "bug_reports": "https://github.com/ropensci/PostcodesioR/issues",
+    "repository": "",
+    "exports": [
+      [
+        "bulk_postcode_lookup"
+      ],
+      [
+        "bulk_reverse_geocoding"
+      ],
+      [
+        "nearest_outcode"
+      ],
+      [
+        "nearest_outcode_lonlat"
+      ],
+      [
+        "nearest_postcode"
+      ],
+      [
+        "outcode_reverse_geocoding"
+      ],
+      [
+        "outward_code_lookup"
+      ],
+      [
+        "place_lookup"
+      ],
+      [
+        "place_query"
+      ],
+      [
+        "postcode_autocomplete"
+      ],
+      [
+        "postcode_lookup"
+      ],
+      [
+        "postcode_query"
+      ],
+      [
+        "postcode_validation"
+      ],
+      [
+        "random_place"
+      ],
+      [
+        "random_postcode"
+      ],
+      [
+        "reverse_geocoding"
+      ],
+      [
+        "scottish_postcode_lookup"
+      ],
+      [
+        "terminated_postcode"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "geocoder"
+      ],
+      [
+        "geographic-data"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "postcode"
+      ],
+      [
+        "uk"
+      ]
+    ],
+    "score": 6.6214,
+    "stars": 41,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "PostcodesioR API Wrapper Around 'Postcodes.io' Free UK geocoding using data from Office for National\nStatistics. It is using several functions to get information\nabout post codes, outward codes, reverse geocoding, nearest\npost codes/outward codes, validation, or randomly generate a\npost code. API wrapper around <https://postcodes.io>. bulk_postcode_lookup bulk_reverse_geocoding nearest_outcode nearest_outcode_lonlat nearest_postcode outcode_reverse_geocoding outward_code_lookup place_lookup place_query postcode_autocomplete postcode_lookup postcode_query postcode_validation random_place random_postcode reverse_geocoding scottish_postcode_lookup terminated_postcode api-wrapper geocoder geographic-data peer-reviewed postcode uk"
+  },
+  {
+    "id": 1060,
+    "package_name": "rcites",
+    "title": "R Interface to the Species+ Database",
+    "description": "A programmatic interface to the Species+\n<https://speciesplus.net/> database via the Species+/CITES\nChecklist API <https://api.speciesplus.net/>.",
+    "version": "1.3.0.9000",
+    "maintainer": "Kevin Cazelles <kevin.cazelles@gmail.com>",
+    "author": "Kevin Cazelles [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-6619-9874>),\nJonas Geschke [aut] (ORCID: <https://orcid.org/0000-0002-5654-9313>),\nIgnasi Bartomeus [aut] (ORCID: <https://orcid.org/0000-0001-7893-4389>),\nJonathan Goldenberg [ctb],\nMarie-B\u00e9 Leduc [ctb],\nYasmine Verzelen [ctb],\nNoam Ross [rev],\nMargaret Siple [rev]",
+    "url": "https://docs.ropensci.org/rcites/,\nhttps://github.com/ropensci/rcites",
+    "bug_reports": "https://github.com/ropensci/rcites/issues",
+    "repository": "",
+    "exports": [
+      [
+        "forget_token"
+      ],
+      [
+        "set_token"
+      ],
+      [
+        "spp_cites_legislation"
+      ],
+      [
+        "spp_distributions"
+      ],
+      [
+        "spp_eu_legislation"
+      ],
+      [
+        "spp_references"
+      ],
+      [
+        "spp_taxonconcept"
+      ]
+    ],
+    "topics": [
+      [
+        "api-client"
+      ],
+      [
+        "cites"
+      ],
+      [
+        "database"
+      ],
+      [
+        "endangered-species"
+      ],
+      [
+        "trade"
+      ]
+    ],
+    "score": 6.6055,
+    "stars": 14,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rcites R Interface to the Species+ Database A programmatic interface to the Species+\n<https://speciesplus.net/> database via the Species+/CITES\nChecklist API <https://api.speciesplus.net/>. forget_token set_token spp_cites_legislation spp_distributions spp_eu_legislation spp_references spp_taxonconcept api-client cites database endangered-species trade"
+  },
+  {
+    "id": 1388,
+    "package_name": "trud",
+    "title": "Query the 'NHS TRUD API'",
+    "description": "Provides a convenient R interface to the 'National Health\nService NHS Technology Reference Update Distribution (TRUD)\nAPI', allowing users to list available releases for their\nsubscribed items, retrieve metadata, and download release\nfiles. For more information on the API, see\n<https://isd.digital.nhs.uk/trud/users/guest/filters/0/api>.",
+    "version": "0.2.0.9000",
+    "maintainer": "Alasdair Warwick <alasdair.warwick.19@ucl.ac.uk>",
+    "author": "Alasdair Warwick [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0002-0800-2890>),\nRobert Luben [aut] (ORCID: <https://orcid.org/0000-0002-5088-6343>),\nAbraham Olvera-Barrios [aut] (ORCID:\n<https://orcid.org/0000-0002-3305-4465>),\nChuin Ying Ung [aut] (ORCID: <https://orcid.org/0000-0001-8487-4589>),\nJon Clayden [rev] (ORCID: <https://orcid.org/0000-0002-6608-0619>),\nAlexandros Kouretsis [rev]",
+    "url": "https://docs.ropensci.org/trud/, https://github.com/ropensci/trud",
+    "bug_reports": "https://github.com/ropensci/trud/issues",
+    "repository": "",
+    "exports": [
+      [
+        "download_item"
+      ],
+      [
+        "get_item_metadata"
+      ],
+      [
+        "get_subscribed_metadata"
+      ],
+      [
+        "trud_items"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "ehr"
+      ],
+      [
+        "icd"
+      ],
+      [
+        "nhs"
+      ],
+      [
+        "snomed-ct"
+      ]
+    ],
+    "score": 6.0792,
+    "stars": 8,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "trud Query the 'NHS TRUD API' Provides a convenient R interface to the 'National Health\nService NHS Technology Reference Update Distribution (TRUD)\nAPI', allowing users to list available releases for their\nsubscribed items, retrieve metadata, and download release\nfiles. For more information on the API, see\n<https://isd.digital.nhs.uk/trud/users/guest/filters/0/api>. download_item get_item_metadata get_subscribed_metadata trud_items api-wrapper ehr icd nhs snomed-ct"
+  },
+  {
+    "id": 307,
+    "package_name": "bold",
+    "title": "Interface to Bold Systems API",
+    "description": "A programmatic interface to the Web Service methods\nprovided by Bold Systems (<http://www.boldsystems.org/>) for\ngenetic 'barcode' data. Functions include methods for searching\nby sequences by taxonomic names, ids, collectors, and\ninstitutions; as well as a function for searching for\nspecimens, and downloading trace files.",
+    "version": "1.3.0",
+    "maintainer": "Salix Dubois <salixdubois+bold@gmail.com>",
+    "author": "Salix Dubois [aut, cre],\nScott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>)",
+    "url": "https://docs.ropensci.org/bold/ (documentation),\nhttps://github.com/ropensci/bold (source)",
+    "bug_reports": "https://github.com/ropensci/bold/issues",
+    "repository": "",
+    "exports": [
+      [
+        "b_sepFasta"
+      ],
+      [
+        "bold_filter"
+      ],
+      [
+        "bold_get_attr"
+      ],
+      [
+        "bold_get_errors"
+      ],
+      [
+        "bold_get_params"
+      ],
+      [
+        "bold_identify"
+      ],
+      [
+        "bold_identify_parents"
+      ],
+      [
+        "bold_identify_taxonomy"
+      ],
+      [
+        "bold_read_trace"
+      ],
+      [
+        "bold_seq"
+      ],
+      [
+        "bold_seqspec"
+      ],
+      [
+        "bold_specimens"
+      ],
+      [
+        "bold_stats"
+      ],
+      [
+        "bold_tax_id"
+      ],
+      [
+        "bold_tax_id2"
+      ],
+      [
+        "bold_tax_name"
+      ],
+      [
+        "bold_trace"
+      ],
+      [
+        "read_trace"
+      ]
+    ],
+    "topics": [
+      [
+        "biodiversity"
+      ],
+      [
+        "barcode"
+      ],
+      [
+        "dna"
+      ],
+      [
+        "sequences"
+      ],
+      [
+        "fasta"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "barcodes"
+      ],
+      [
+        "taxize"
+      ]
+    ],
+    "score": 6.0696,
+    "stars": 21,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "bold Interface to Bold Systems API A programmatic interface to the Web Service methods\nprovided by Bold Systems (<http://www.boldsystems.org/>) for\ngenetic 'barcode' data. Functions include methods for searching\nby sequences by taxonomic names, ids, collectors, and\ninstitutions; as well as a function for searching for\nspecimens, and downloading trace files. b_sepFasta bold_filter bold_get_attr bold_get_errors bold_get_params bold_identify bold_identify_parents bold_identify_taxonomy bold_read_trace bold_seq bold_seqspec bold_specimens bold_stats bold_tax_id bold_tax_id2 bold_tax_name bold_trace read_trace biodiversity barcode dna sequences fasta api-wrapper barcodes taxize"
+  },
+  {
+    "id": 886,
+    "package_name": "nomisr",
+    "title": "Access 'Nomis' UK Labour Market Data",
+    "description": "Access UK official statistics from the 'Nomis' database.\n'Nomis' includes data from the Census, the Labour Force Survey,\nDWP benefit statistics and other economic and demographic data\nfrom the Office for National Statistics, based around\nstatistical geographies. See\n<https://www.nomisweb.co.uk/api/v01/help> for full API\ndocumentation.",
+    "version": "0.4.7",
+    "maintainer": "Evan Odell <evanodell91@gmail.com>",
+    "author": "Evan Odell [aut, cre] (ORCID: <https://orcid.org/0000-0003-1845-808X>),\nPaul Egeler [rev, ctb],\nChristophe Dervieux [rev] (ORCID:\n<https://orcid.org/0000-0003-4474-2498>),\nNina Robery [ctb] (Work and Health Indicators with nomisr vignette)",
+    "url": "https://github.com/ropensci/nomisr,\nhttps://docs.evanodell.com/nomisr",
+    "bug_reports": "https://github.com/ropensci/nomisr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "nomis_api_key"
+      ],
+      [
+        "nomis_codelist"
+      ],
+      [
+        "nomis_content_type"
+      ],
+      [
+        "nomis_data_info"
+      ],
+      [
+        "nomis_get_data"
+      ],
+      [
+        "nomis_get_metadata"
+      ],
+      [
+        "nomis_overview"
+      ],
+      [
+        "nomis_search"
+      ]
+    ],
+    "topics": [
+      [
+        "api-client"
+      ],
+      [
+        "census-data"
+      ],
+      [
+        "demography"
+      ],
+      [
+        "geographic-data"
+      ],
+      [
+        "national-statistics"
+      ],
+      [
+        "official-statistics"
+      ],
+      [
+        "officialstatistics"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "uk"
+      ]
+    ],
+    "score": 6.0617,
+    "stars": 51,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "nomisr Access 'Nomis' UK Labour Market Data Access UK official statistics from the 'Nomis' database.\n'Nomis' includes data from the Census, the Labour Force Survey,\nDWP benefit statistics and other economic and demographic data\nfrom the Office for National Statistics, based around\nstatistical geographies. See\n<https://www.nomisweb.co.uk/api/v01/help> for full API\ndocumentation. nomis_api_key nomis_codelist nomis_content_type nomis_data_info nomis_get_data nomis_get_metadata nomis_overview nomis_search api-client census-data demography geographic-data national-statistics official-statistics officialstatistics peer-reviewed uk"
+  },
+  {
+    "id": 890,
+    "package_name": "npi",
+    "title": "Access the U.S. National Provider Identifier Registry API",
+    "description": "Access the United States National Provider Identifier\nRegistry API <https://npiregistry.cms.hhs.gov/api/>. Obtain and\ntransform administrative data linked to a specific individual\nor organizational healthcare provider, or perform advanced\nsearches based on provider name, location, type of service,\ncredentials, and other attributes exposed by the API.",
+    "version": "0.2.0.9000",
+    "maintainer": "Frank Farach <frank.farach@gmail.com>",
+    "author": "Frank Farach [cre, aut, cph] (ORCID:\n<https://orcid.org/0000-0002-2145-0145>),\nSam Parmar [ctb],\nMatthias Greni\u00e9 [rev] (ORCID: <https://orcid.org/0000-0002-4659-7522>),\nEmily C. Zabor [rev] (ORCID: <https://orcid.org/0000-0002-1402-4498>)",
+    "url": "https://github.com/ropensci/npi/, https://docs.ropensci.org/npi/,\nhttps://npiregistry.cms.hhs.gov/api/",
+    "bug_reports": "https://github.com/ropensci/npi/issues/",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "npi_flatten"
+      ],
+      [
+        "npi_is_valid"
+      ],
+      [
+        "npi_search"
+      ],
+      [
+        "npi_summarize"
+      ]
+    ],
+    "topics": [
+      [
+        "api-wrapper"
+      ],
+      [
+        "health-data"
+      ],
+      [
+        "healthcare"
+      ],
+      [
+        "npi-number"
+      ]
+    ],
+    "score": 5.9413,
+    "stars": 36,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "npi Access the U.S. National Provider Identifier Registry API Access the United States National Provider Identifier\nRegistry API <https://npiregistry.cms.hhs.gov/api/>. Obtain and\ntransform administrative data linked to a specific individual\nor organizational healthcare provider, or perform advanced\nsearches based on provider name, location, type of service,\ncredentials, and other attributes exposed by the API. %>% npi_flatten npi_is_valid npi_search npi_summarize api-wrapper health-data healthcare npi-number"
+  },
+  {
+    "id": 365,
+    "package_name": "circle",
+    "title": "R Client Package for Circle CI",
+    "description": "Tools for interacting with the 'Circle CI' API\n(<https://circleci.com/docs/api/v2/>). Besides executing common\ntasks such as querying build logs and restarting builds, this\npackage also helps setting up permissions to deploy from\nbuilds.",
+    "version": "0.7.3",
+    "maintainer": "Patrick Schratz <patrick.schratz@gmail.com>",
+    "author": "Patrick Schratz [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-0748-6624>),\nMax Joseph [rev] (Max reviewed the package for ropensci, see\n<https://github.com/ropensci/software-review/issues/356>),\nSharla Gelfand [rev] (Sharla reviewed the package for ropensci, see\n<https://github.com/ropensci/software-review/issues/356>)",
+    "url": "https://docs.ropensci.org/circle/,\nhttps://github.com/ropensci/circle",
+    "bug_reports": "https://github.com/ropensci/circle/issues",
+    "repository": "",
+    "exports": [
+      [
+        "browse_circle_token"
+      ],
+      [
+        "circle"
+      ],
+      [
+        "create_checkout_key"
+      ],
+      [
+        "delete_checkout_key"
+      ],
+      [
+        "delete_env_var"
+      ],
+      [
+        "edit_circle_config"
+      ],
+      [
+        "enable_repo"
+      ],
+      [
+        "get_build_artifacts"
+      ],
+      [
+        "get_checkout_keys"
+      ],
+      [
+        "get_circle_user"
+      ],
+      [
+        "get_env_vars"
+      ],
+      [
+        "get_jobs"
+      ],
+      [
+        "get_pipelines"
+      ],
+      [
+        "get_workflows"
+      ],
+      [
+        "has_checkout_key"
+      ],
+      [
+        "list_projects"
+      ],
+      [
+        "new_build"
+      ],
+      [
+        "retry_workflow"
+      ],
+      [
+        "set_env_var"
+      ],
+      [
+        "use_circle_deploy"
+      ]
+    ],
+    "topics": [
+      [
+        "api-client"
+      ],
+      [
+        "circle-ci"
+      ],
+      [
+        "continuous-deployment"
+      ],
+      [
+        "continuous-integration"
+      ]
+    ],
+    "score": 5.8573,
+    "stars": 12,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "circle R Client Package for Circle CI Tools for interacting with the 'Circle CI' API\n(<https://circleci.com/docs/api/v2/>). Besides executing common\ntasks such as querying build logs and restarting builds, this\npackage also helps setting up permissions to deploy from\nbuilds. browse_circle_token circle create_checkout_key delete_checkout_key delete_env_var edit_circle_config enable_repo get_build_artifacts get_checkout_keys get_circle_user get_env_vars get_jobs get_pipelines get_workflows has_checkout_key list_projects new_build retry_workflow set_env_var use_circle_deploy api-client circle-ci continuous-deployment continuous-integration"
+  },
+  {
+    "id": 1427,
+    "package_name": "wateRinfo",
+    "title": "Download Time Series Data from Waterinfo.be",
+    "description": "wateRinfo facilitates access to waterinfo.be\n(<https://www.waterinfo.be>), a website managed by the Flanders\nEnvironment Agency (VMM) and Flanders Hydraulics Research. The\nwebsite provides access to real-time water and weather related\nenvironmental variables for Flanders (Belgium), such as\nrainfall, air pressure, discharge, and water level. The package\nprovides functions to search for stations and variables, and\ndownload time series.",
+    "version": "0.3.0.9065",
+    "maintainer": "Stijn Van Hoey <stijnvanhoey@gmail.com>",
+    "author": "Stijn Van Hoey [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-6413-3185>),\nWillem Maetens [ctb],\nPeter Desmet [ctb] (ORCID: <https://orcid.org/0000-0002-8442-8025>),\nResearch Institute for Nature and Forest (INBO) [cph]\n(https://www.vlaanderen.be/inbo/en-gb/),\nLifeWatch Belgium [fnd] (https://lifewatch.be)",
+    "url": "https://github.com/ropensci/wateRinfo,\nhttps://docs.ropensci.org/wateRinfo",
+    "bug_reports": "https://github.com/ropensci/wateRinfo/issues",
+    "repository": "",
+    "exports": [
+      [
+        "check_period_format"
+      ],
+      [
+        "expires.in"
+      ],
+      [
+        "get_stations"
+      ],
+      [
+        "get_timeseries_tsid"
+      ],
+      [
+        "get_token"
+      ],
+      [
+        "get_variables"
+      ],
+      [
+        "is_supported_variable"
+      ],
+      [
+        "is.expired"
+      ],
+      [
+        "resolve_datasource"
+      ],
+      [
+        "resolve_timeseriesgroupid"
+      ],
+      [
+        "show.token"
+      ],
+      [
+        "supported_frequencies"
+      ],
+      [
+        "supported_variables"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "climate"
+      ],
+      [
+        "lifewatch"
+      ],
+      [
+        "open-science"
+      ],
+      [
+        "oscibio"
+      ],
+      [
+        "ropensci"
+      ],
+      [
+        "water"
+      ],
+      [
+        "weather"
+      ]
+    ],
+    "score": 5.4558,
+    "stars": 14,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "wateRinfo Download Time Series Data from Waterinfo.be wateRinfo facilitates access to waterinfo.be\n(<https://www.waterinfo.be>), a website managed by the Flanders\nEnvironment Agency (VMM) and Flanders Hydraulics Research. The\nwebsite provides access to real-time water and weather related\nenvironmental variables for Flanders (Belgium), such as\nrainfall, air pressure, discharge, and water level. The package\nprovides functions to search for stations and variables, and\ndownload time series. check_period_format expires.in get_stations get_timeseries_tsid get_token get_variables is_supported_variable is.expired resolve_datasource resolve_timeseriesgroupid show.token supported_frequencies supported_variables api climate lifewatch open-science oscibio ropensci water weather"
+  },
+  {
+    "id": 1063,
+    "package_name": "rdatacite",
+    "title": "Client for the 'DataCite' API",
+    "description": "Client for the web service methods provided by 'DataCite'\n(<https://www.datacite.org/>), including functions to interface\nwith their 'RESTful' search API. The API is backed by\n'Elasticsearch', allowing expressive queries, including\nfaceting.",
+    "version": "0.5.4",
+    "maintainer": "Bianca Kramer <bianca.kramer@gmail.com>",
+    "author": "Scott Chamberlain [aut] (ORCID:\n<https://orcid.org/0000-0003-1444-9135>),\nBianca Kramer [cre] (ORCID: <https://orcid.org/0000-0002-5965-6560>)",
+    "url": "https://docs.ropensci.org/rdatacite/,\nhttps://github.com/ropensci/rdatacite",
+    "bug_reports": "https://github.com/ropensci/rdatacite/issues",
+    "repository": "",
+    "exports": [
+      [
+        "dc_activities"
+      ],
+      [
+        "dc_check"
+      ],
+      [
+        "dc_client_prefixes"
+      ],
+      [
+        "dc_clients"
+      ],
+      [
+        "dc_cn"
+      ],
+      [
+        "dc_dois"
+      ],
+      [
+        "dc_events"
+      ],
+      [
+        "dc_prefixes"
+      ],
+      [
+        "dc_provider_prefixes"
+      ],
+      [
+        "dc_providers"
+      ],
+      [
+        "dc_reports"
+      ],
+      [
+        "dc_status"
+      ]
+    ],
+    "topics": [
+      [
+        "data"
+      ],
+      [
+        "scholarly"
+      ],
+      [
+        "dataset"
+      ],
+      [
+        "https"
+      ],
+      [
+        "api"
+      ],
+      [
+        "web-services"
+      ],
+      [
+        "api-wrapper"
+      ],
+      [
+        "datacite"
+      ],
+      [
+        "identifier"
+      ],
+      [
+        "metadata"
+      ],
+      [
+        "oai-pmh"
+      ],
+      [
+        "solr"
+      ]
+    ],
+    "score": 5.0035,
+    "stars": 24,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rdatacite Client for the 'DataCite' API Client for the web service methods provided by 'DataCite'\n(<https://www.datacite.org/>), including functions to interface\nwith their 'RESTful' search API. The API is backed by\n'Elasticsearch', allowing expressive queries, including\nfaceting. dc_activities dc_check dc_client_prefixes dc_clients dc_cn dc_dois dc_events dc_prefixes dc_provider_prefixes dc_providers dc_reports dc_status data scholarly dataset https api web-services api-wrapper datacite identifier metadata oai-pmh solr"
+  },
+  {
+    "id": 548,
+    "package_name": "exoplanets",
+    "title": "Access NASA's Exoplanet Archive Data",
+    "description": "The goal of exoplanets is to provide access to NASA's\nExoplanet Archive TAP Service. For more information regarding\nthe API please read the documentation\n<https://exoplanetarchive.ipac.caltech.edu/index.html>.",
+    "version": "0.2.3",
+    "maintainer": "Tyler Littlefield <tylerlittlefield@hey.com>",
+    "author": "Tyler Littlefield [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6020-1125>),\nMa\u00eblle Salmon [ctb, rev],\nMathida Chuk [ctb]",
+    "url": "https://docs.ropensci.org/exoplanets/,\nhttps://github.com/ropensci/exoplanets",
+    "bug_reports": "https://github.com/ropensci/exoplanets/issues",
+    "repository": "",
+    "exports": [
+      [
+        "exoplanets"
+      ],
+      [
+        "forget_exoplanets"
+      ]
+    ],
+    "topics": [
+      [
+        "api"
+      ],
+      [
+        "exoplanets"
+      ],
+      [
+        "nasa"
+      ]
+    ],
+    "score": 3.959,
+    "stars": 14,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "exoplanets Access NASA's Exoplanet Archive Data The goal of exoplanets is to provide access to NASA's\nExoplanet Archive TAP Service. For more information regarding\nthe API please read the documentation\n<https://exoplanetarchive.ipac.caltech.edu/index.html>. exoplanets forget_exoplanets api exoplanets nasa"
+  },
+  {
+    "id": 648,
+    "package_name": "godataR",
+    "title": "Connecting R with the Go.Data Application",
+    "description": "A set of functions to connect R to Go.Data.",
+    "version": "2.0.0",
+    "maintainer": "The WHO Go.Data Team <godata@who.int>",
+    "author": "",
+    "url": "https://github.com/WorldHealthOrganization/godataR",
+    "bug_reports": "https://github.com/WorldHealthOrganization/godataR/issues",
+    "repository": "https://github.com/WorldHealthOrganization/godataR",
+    "exports": [],
+    "topics": [
+      "api",
+      "covid19",
+      "epidemiology",
+      "godata",
+      "r-analytics"
+    ],
+    "score": "NA",
+    "stars": 13,
+    "primary_category": "epidemiology",
+    "source_universe": "github:WorldHealthOrganization",
+    "search_text": "godataR Connecting R with the Go.Data Application A set of functions to connect R to Go.Data.  api covid19 epidemiology godata r-analytics"
+  }
+]

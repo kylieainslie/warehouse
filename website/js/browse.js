@@ -19,7 +19,7 @@ async function initBrowsePage() {
     await loadPackageData();
 
     // Render the browse page
-    renderBrowsePage();
+    await renderBrowsePage();
 
     // Restore collapsed/expanded state from localStorage
     restoreSectionState();
@@ -34,6 +34,18 @@ async function initBrowsePage() {
         <p>Failed to load categories. Please try refreshing the page.</p>
       </div>
     `;
+  }
+}
+
+// Load subcategories for a given category
+async function loadSubcategories(categoryId) {
+  try {
+    const response = await fetch(`/data/categories/${categoryId}.json`);
+    if (!response.ok) return []; // Return empty array if file not found
+    return await response.json();
+  } catch (err) {
+    console.error(`Failed to load subcategories for ${categoryId}:`, err);
+    return [];
   }
 }
 
@@ -69,64 +81,102 @@ function getPackageInfo(packageName) {
 // Get package logo URL
 function getPackageLogoUrl(pkg) {
   if (!pkg) return null;
-  // Try to construct R-universe logo URL
   if (pkg.universe) {
     return `https://${pkg.universe}.r-universe.dev/${pkg.package_name}/logo.png`;
   }
-  // Fallback to common R-universe patterns
   return `https://r-universe.dev/${pkg.package_name}/logo.png`;
 }
 
-// Fetch subcategories for a given section
-async function loadSubcategories(sectionId) {
-  try {
-    const response = await fetch(`/categories/${sectionId}.json`);
-    if (!response.ok) throw new Error(`Failed to load subcategories for ${sectionId}`);
-    return await response.json();
-  } catch (error) {
-    console.error(error);
-    return []; // Return empty array if fetch fails
-  }
-}
-
-// Render a single section, including its subcategories
-async function renderSection(section) {
-  const sectionEl = document.createElement('section');
-  sectionEl.className = 'category-section';
-
-  // Section header
-  const header = document.createElement('h2');
-  header.textContent = section.title;
-  sectionEl.appendChild(header);
-
-  // Container for subcategories
-  const subcatDiv = document.createElement('div');
-  subcatDiv.className = 'subcategories';
-  sectionEl.appendChild(subcatDiv);
-
-  // Load and render subcategories
-  const subcategories = await loadSubcategories(section.id);
-  subcategories.forEach(sub => {
-    const subEl = document.createElement('div');
-    subEl.className = 'subcategory';
-    subEl.innerHTML = `<a href="${sub.url}">${sub.title}</a>`;
-    subcatDiv.appendChild(subEl);
-  });
-
-  return sectionEl;
-}
-
-// Render the entire browse page
+// Render the entire browse page with async subcategories
 async function renderBrowsePage() {
   const container = document.getElementById('browse-container');
   if (!container || !categoriesData) return;
 
-  container.innerHTML = ''; // Clear existing content
+  container.innerHTML = ''; // Clear previous content
 
   for (const section of categoriesData.sections) {
-    const sectionEl = await renderSection(section);
+    // Create section element
+    const sectionEl = document.createElement('div');
+    sectionEl.className = 'browse-section';
+    sectionEl.dataset.sectionId = section.id;
+
+    // Section header
+    const header = document.createElement('button');
+    header.className = `section-header ${section.expanded ? 'expanded' : ''}`;
+    header.setAttribute('aria-expanded', section.expanded ? 'true' : 'false');
+    header.innerHTML = `
+      <span class="section-chevron"><i class="bi bi-chevron-right"></i></span>
+      <span class="section-name">${escapeHtml(section.name)}</span>
+      <span class="section-count">${section.categories.length} categories</span>
+    `;
+    header.onclick = () => toggleSection(section.id);
+    sectionEl.appendChild(header);
+
+    // Section content
+    const content = document.createElement('div');
+    content.className = `section-content ${section.expanded ? 'expanded' : ''}`;
+
+    // Category cards
+    const cardsContainer = document.createElement('div');
+    cardsContainer.className = 'category-cards';
+    section.categories.forEach(cat => {
+      const cardHtml = renderCategoryCard(cat); // still returns HTML string
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = cardHtml;
+      cardsContainer.appendChild(wrapper.firstElementChild);
+    });
+    content.appendChild(cardsContainer);
+
+    // Subcategories
+    const subcatDiv = document.createElement('div');
+    subcatDiv.className = 'subcategories';
+    subcatDiv.id = `subcat-${section.id}`;
+    content.appendChild(subcatDiv);
+
+    sectionEl.appendChild(content);
     container.appendChild(sectionEl);
+
+    // Load subcategories async
+    const subcategories = await loadSubcategories(section.id);
+    subcategories.forEach(sub => {
+      const subEl = document.createElement('div');
+      subEl.className = 'subcategory';
+      subEl.innerHTML = `<a href="${sub.url}">${escapeHtml(sub.title)}</a>`;
+      subcatDiv.appendChild(subEl);
+    });
   }
+
+  // Initialize scroll buttons after rendering
+  setTimeout(initScrollButtons, 100);
+}
+
+// Render a single section with its categories
+function renderSection(section) {
+  const categoryCount = section.categories.length;
+  const isExpanded = section.expanded;
+
+  const categoriesHtml = section.categories.map(cat =>
+    renderCategoryCard(cat)
+  ).join('');
+
+  return `
+    <div class="browse-section" data-section-id="${section.id}">
+      <button class="section-header ${isExpanded ? 'expanded' : ''}"
+              onclick="toggleSection('${section.id}')"
+              aria-expanded="${isExpanded}">
+        <span class="section-chevron">
+          <i class="bi bi-chevron-right"></i>
+        </span>
+        <span class="section-name">${section.name}</span>
+        <span class="section-count">${categoryCount} categories</span>
+      </button>
+      <div class="section-content ${isExpanded ? 'expanded' : ''}">
+        <div class="category-cards">
+          ${categoriesHtml}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 // Render a single category card with Discover-style featured packages
@@ -135,18 +185,13 @@ function renderCategoryCard(category) {
   const countDisplay = count > 0 ? `${count} packages` : '';
   const cardId = `featured-${category.id}`;
 
-  // Build featured packages as Discover-style tiles
   const featuredHtml = category.featured.map(pkgName => {
     const pkg = getPackageInfo(pkgName);
     const logoUrl = pkg ? getPackageLogoUrl(pkg) : null;
     const pkgUrl = `https://r-universe.dev/search?q=${encodeURIComponent(pkgName)}`;
 
     return `
-      <a href="${pkgUrl}"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="featured-tile"
-         onclick="event.stopPropagation()">
+      <a href="${pkgUrl}" target="_blank" rel="noopener noreferrer" class="featured-tile" onclick="event.stopPropagation()">
         <div class="featured-tile-logo">
           ${logoUrl ?
             `<img src="${logoUrl}" alt="${escapeHtml(pkgName)}" onerror="this.parentElement.innerHTML='<span class=\\'featured-tile-fallback\\'>${escapeHtml(pkgName.charAt(0).toUpperCase())}</span>'" />` :
@@ -160,7 +205,7 @@ function renderCategoryCard(category) {
 
   return `
     <div class="category-card" data-category="${category.id}">
-      <a href="/categories/${category.id}.qmd" class="category-card-link">
+      <a href="/categories/${category.id}.html" class="category-card-link">
         <div class="card-header">
           <span class="card-emoji">${category.emoji}</span>
           <div class="card-title-area">
@@ -173,17 +218,13 @@ function renderCategoryCard(category) {
       <div class="card-featured">
         <span class="featured-label">Featured:</span>
         <div class="featured-scroll-container">
-          <button class="featured-scroll-btn featured-scroll-left"
-                  onclick="scrollFeatured('${cardId}', -1)"
-                  aria-label="Scroll left">
+          <button class="featured-scroll-btn featured-scroll-left" onclick="scrollFeatured('${cardId}', -1)" aria-label="Scroll left">
             <i class="bi bi-chevron-left"></i>
           </button>
           <div class="featured-tiles" id="${cardId}">
             ${featuredHtml}
           </div>
-          <button class="featured-scroll-btn featured-scroll-right"
-                  onclick="scrollFeatured('${cardId}', 1)"
-                  aria-label="Scroll right">
+          <button class="featured-scroll-btn featured-scroll-right" onclick="scrollFeatured('${cardId}', 1)" aria-label="Scroll right">
             <i class="bi bi-chevron-right"></i>
           </button>
         </div>
@@ -198,12 +239,8 @@ function scrollFeatured(containerId, direction) {
   if (!container) return;
 
   const scrollAmount = 100;
-  container.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
+  container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 
-  // Update button states after scroll
   setTimeout(() => updateFeaturedScrollButtons(containerId), 300);
 }
 
@@ -218,10 +255,7 @@ function updateFeaturedScrollButtons(containerId) {
   const leftBtn = scrollContainer.querySelector('.featured-scroll-left');
   const rightBtn = scrollContainer.querySelector('.featured-scroll-right');
 
-  if (leftBtn) {
-    leftBtn.style.opacity = container.scrollLeft > 0 ? '1' : '0.3';
-  }
-
+  if (leftBtn) leftBtn.style.opacity = container.scrollLeft > 0 ? '1' : '0.3';
   if (rightBtn) {
     const maxScroll = container.scrollWidth - container.clientWidth;
     rightBtn.style.opacity = container.scrollLeft < maxScroll - 5 ? '1' : '0.3';
@@ -232,9 +266,7 @@ function updateFeaturedScrollButtons(containerId) {
 function initScrollButtons() {
   document.querySelectorAll('.featured-tiles').forEach(container => {
     updateFeaturedScrollButtons(container.id);
-    container.addEventListener('scroll', () => {
-      updateFeaturedScrollButtons(container.id);
-    });
+    container.addEventListener('scroll', () => updateFeaturedScrollButtons(container.id));
   });
 }
 
@@ -245,7 +277,6 @@ function toggleSection(sectionId) {
 
   const header = section.querySelector('.section-header');
   const content = section.querySelector('.section-content');
-
   const isExpanded = header.classList.contains('expanded');
 
   if (isExpanded) {
@@ -256,15 +287,9 @@ function toggleSection(sectionId) {
     header.classList.add('expanded');
     content.classList.add('expanded');
     header.setAttribute('aria-expanded', 'true');
-    // Initialize scroll buttons when section expands
-    setTimeout(() => {
-      section.querySelectorAll('.featured-tiles').forEach(container => {
-        updateFeaturedScrollButtons(container.id);
-      });
-    }, 100);
+    setTimeout(() => section.querySelectorAll('.featured-tiles').forEach(c => updateFeaturedScrollButtons(c.id)), 100);
   }
 
-  // Save state to localStorage
   saveSectionState();
 }
 
@@ -272,13 +297,11 @@ function toggleSection(sectionId) {
 function saveSectionState() {
   const sections = document.querySelectorAll('.browse-section');
   const state = {};
-
   sections.forEach(section => {
     const id = section.dataset.sectionId;
     const header = section.querySelector('.section-header');
     state[id] = header.classList.contains('expanded');
   });
-
   localStorage.setItem('browsePageSectionState', JSON.stringify(state));
 }
 
@@ -289,14 +312,12 @@ function restoreSectionState() {
     if (!saved) return;
 
     const state = JSON.parse(saved);
-
     Object.entries(state).forEach(([sectionId, isExpanded]) => {
       const section = document.querySelector(`[data-section-id="${sectionId}"]`);
       if (!section) return;
 
       const header = section.querySelector('.section-header');
       const content = section.querySelector('.section-content');
-
       if (isExpanded) {
         header.classList.add('expanded');
         content.classList.add('expanded');
@@ -322,27 +343,16 @@ function escapeHtml(text) {
 
 // Expand all sections
 function expandAllSections() {
-  document.querySelectorAll('.section-header').forEach(header => {
-    header.classList.add('expanded');
-    header.setAttribute('aria-expanded', 'true');
-  });
-  document.querySelectorAll('.section-content').forEach(content => {
-    content.classList.add('expanded');
-  });
+  document.querySelectorAll('.section-header').forEach(header => header.classList.add('expanded'));
+  document.querySelectorAll('.section-content').forEach(content => content.classList.add('expanded'));
   saveSectionState();
-  // Initialize scroll buttons
   setTimeout(initScrollButtons, 100);
 }
 
 // Collapse all sections
 function collapseAllSections() {
-  document.querySelectorAll('.section-header').forEach(header => {
-    header.classList.remove('expanded');
-    header.setAttribute('aria-expanded', 'false');
-  });
-  document.querySelectorAll('.section-content').forEach(content => {
-    content.classList.remove('expanded');
-  });
+  document.querySelectorAll('.section-header').forEach(header => header.classList.remove('expanded'));
+  document.querySelectorAll('.section-content').forEach(content => content.classList.remove('expanded'));
   saveSectionState();
 }
 

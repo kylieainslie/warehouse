@@ -2,20 +2,28 @@
 title: "Performance Packages"
 ---
 
+<div id="search-container">
+  <input type="text" id="package-search" placeholder="Search packages..." />
+</div>
+
+<div id="alphabet-filter" style="margin: 0.5em 0;"></div>
+
 <div id="category-packages" data-category="performance"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', async function() {
   const container = document.getElementById('category-packages');
-  try {
-    const response = await fetch('../data/categories/performance.json');
-    if (!response.ok) throw new Error('Failed to load');
-    const data = await response.json();
+  const searchInput = document.getElementById('package-search');
+  const alphabetContainer = document.getElementById('alphabet-filter');
 
+  let packages = [];
+  let activeLetter = null;
+
+  function renderPackages(list) {
     container.innerHTML = `
-      <p class="results-count">Found ${data.packages.length} packages</p>
+      <p class="results-count">Found ${list.length} packages</p>
       <div class="package-list">
-        ${data.packages.slice(0, 50).map(pkg => `
+        ${list.slice(0, 50).map(pkg => `
           <div class="package-card">
             <div class="package-header">
               <h3 class="package-title">
@@ -28,8 +36,43 @@ document.addEventListener('DOMContentLoaded', async function() {
         `).join('')}
       </div>
     `;
+  }
+
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    let filtered = packages;
+    if (activeLetter) {
+      filtered = filtered.filter(pkg => pkg.package_name.charAt(0).toUpperCase() === activeLetter);
+    }
+    if (query) {
+      filtered = filtered.filter(pkg => pkg.package_name.toLowerCase().includes(query));
+    }
+    renderPackages(filtered);
+  }
+
+  try {
+    const response = await fetch('../data/categories/performance.json');
+    if (!response.ok) throw new Error('Failed to load packages');
+    packages = await response.json();
+
+    alphabetContainer.innerHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(l => `<button class="letter-btn" data-letter="${l}">${l}</button>`).join('');
+    renderPackages(packages);
+    searchInput.addEventListener('input', applyFilters);
+    alphabetContainer.querySelectorAll('.letter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        activeLetter = (activeLetter === this.dataset.letter) ? null : this.dataset.letter;
+        alphabetContainer.querySelectorAll('.letter-btn').forEach(b => b.classList.toggle('active', b.dataset.letter === activeLetter));
+        applyFilters();
+      });
+    });
   } catch (e) {
-    container.innerHTML = '<p>Unable to load packages. <a href="index.qmd">Browse all categories</a>.</p>';
+    container.innerHTML = '<p>Unable to load packages. <a href="index.html">Browse all categories</a>.</p>';
   }
 });
 </script>
+
+<style>
+.letter-btn { background: none; border: none; color: #666; cursor: pointer; font-weight: 500; padding: 0 4px; font-size: 0.9rem; }
+.letter-btn:hover { color: #333; }
+.letter-btn.active { color: #000; font-weight: 700; }
+</style>

@@ -1,0 +1,1324 @@
+[
+  {
+    "id": 532,
+    "package_name": "epiparameter",
+    "title": "Classes and Helper Functions for Working with Epidemiological\nParameters",
+    "description": "Classes and helper functions for loading, extracting,\nconverting, manipulating, plotting and aggregating\nepidemiological parameters for infectious diseases.\nEpidemiological parameters extracted from the literature are\nloaded from the 'epiparameterDB' R package.",
+    "version": "0.4.1.9000",
+    "maintainer": "Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>",
+    "author": "Joshua W. Lambert [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nAdam Kucharski [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-8814-9421>),\nCarmen Tamayo Cuartero [aut] (ORCID:\n<https://orcid.org/0000-0003-4184-2864>),\nHugo Gruson [ctb, rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nSebastian Funk [ctb] (ORCID: <https://orcid.org/0000-0002-2842-3406>),\nPratik Gupte [rev] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\nJames M. Azam [rev] (ORCID: <https://orcid.org/0000-0001-5782-7330>),\nChris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nTim Taylor [rev] (ORCID: <https://orcid.org/0000-0002-8587-7113>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph] (ROR:\n<https://ror.org/00a0jsq62>)",
+    "url": "https://github.com/epiverse-trace/epiparameter/,\nhttps://epiverse-trace.github.io/epiparameter/",
+    "bug_reports": "https://github.com/epiverse-trace/epiparameter/issues",
+    "repository": "",
+    "exports": [
+      [
+        "as_epiparameter"
+      ],
+      [
+        "assert_epiparameter"
+      ],
+      [
+        "calc_disc_dist_quantile"
+      ],
+      [
+        "cdf"
+      ],
+      [
+        "convert_params_to_summary_stats"
+      ],
+      [
+        "convert_summary_stats_to_params"
+      ],
+      [
+        "create_citation"
+      ],
+      [
+        "create_metadata"
+      ],
+      [
+        "create_method_assess"
+      ],
+      [
+        "create_prob_distribution"
+      ],
+      [
+        "create_region"
+      ],
+      [
+        "create_summary_stats"
+      ],
+      [
+        "create_uncertainty"
+      ],
+      [
+        "discretise"
+      ],
+      [
+        "discretize"
+      ],
+      [
+        "epidist_db"
+      ],
+      [
+        "epiparameter"
+      ],
+      [
+        "epiparameter_db"
+      ],
+      [
+        "extract_param"
+      ],
+      [
+        "generate"
+      ],
+      [
+        "get_citation"
+      ],
+      [
+        "get_parameters"
+      ],
+      [
+        "is_continuous"
+      ],
+      [
+        "is_epiparameter"
+      ],
+      [
+        "is_epiparameter_params"
+      ],
+      [
+        "is_parameterised"
+      ],
+      [
+        "is_parameterized"
+      ],
+      [
+        "is_truncated"
+      ],
+      [
+        "parameter_tbl"
+      ],
+      [
+        "test_epiparameter"
+      ]
+    ],
+    "topics": [
+      [
+        "data-access"
+      ],
+      [
+        "data-package"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "probability-distribution"
+      ]
+    ],
+    "score": 9.4988,
+    "stars": 34,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "epiparameter Classes and Helper Functions for Working with Epidemiological\nParameters Classes and helper functions for loading, extracting,\nconverting, manipulating, plotting and aggregating\nepidemiological parameters for infectious diseases.\nEpidemiological parameters extracted from the literature are\nloaded from the 'epiparameterDB' R package. as_epiparameter assert_epiparameter calc_disc_dist_quantile cdf convert_params_to_summary_stats convert_summary_stats_to_params create_citation create_metadata create_method_assess create_prob_distribution create_region create_summary_stats create_uncertainty discretise discretize epidist_db epiparameter epiparameter_db extract_param generate get_citation get_parameters is_continuous is_epiparameter is_epiparameter_params is_parameterised is_parameterized is_truncated parameter_tbl test_epiparameter data-access data-package epidemiology epiverse probability-distribution"
+  },
+  {
+    "id": 761,
+    "package_name": "linelist",
+    "title": "Tagging and Validating Epidemiological Data",
+    "description": "Provides tools to help storing and handling case line list\ndata. The 'linelist' class adds a tagging system to classical\n'data.frame' objects to identify key epidemiological data such\nas dates of symptom onset, epidemiological case definition,\nage, gender or disease outcome. Once tagged, these variables\ncan be seamlessly used in downstream analyses, making data\npipelines more robust and reliable.",
+    "version": "2.0.1.9000",
+    "maintainer": "Chris Hartgerink <chris@data.org>",
+    "author": "Hugo Gruson [aut] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nThibaut Jombart [aut, ccp],\nTim Taylor [ctb],\nChris Hartgerink [cre, rev] (ORCID:\n<https://orcid.org/0000-0003-1050-6809>)",
+    "url": "https://epiverse-trace.github.io/linelist/,\nhttps://github.com/epiverse-trace/linelist",
+    "bug_reports": "https://github.com/epiverse-trace/linelist/issues",
+    "repository": "",
+    "exports": [
+      [
+        "get_lost_tags_action"
+      ],
+      [
+        "has_tag"
+      ],
+      [
+        "lost_tags_action"
+      ],
+      [
+        "make_linelist"
+      ],
+      [
+        "set_tags"
+      ],
+      [
+        "tags"
+      ],
+      [
+        "tags_defaults"
+      ],
+      [
+        "tags_df"
+      ],
+      [
+        "tags_names"
+      ],
+      [
+        "tags_types"
+      ],
+      [
+        "validate_linelist"
+      ],
+      [
+        "validate_tags"
+      ],
+      [
+        "validate_types"
+      ]
+    ],
+    "topics": [
+      [
+        "data"
+      ],
+      [
+        "data-structures"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "outbreaks"
+      ],
+      [
+        "sdg-3"
+      ],
+      [
+        "structured-data"
+      ]
+    ],
+    "score": 8.6786,
+    "stars": 10,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "linelist Tagging and Validating Epidemiological Data Provides tools to help storing and handling case line list\ndata. The 'linelist' class adds a tagging system to classical\n'data.frame' objects to identify key epidemiological data such\nas dates of symptom onset, epidemiological case definition,\nage, gender or disease outcome. Once tagged, these variables\ncan be seamlessly used in downstream analyses, making data\npipelines more robust and reliable. get_lost_tags_action has_tag lost_tags_action make_linelist set_tags tags tags_defaults tags_df tags_names tags_types validate_linelist validate_tags validate_types data data-structures epidemiology epiverse outbreaks sdg-3 structured-data"
+  },
+  {
+    "id": 356,
+    "package_name": "cfr",
+    "title": "Estimate Disease Severity and Case Ascertainment",
+    "description": "Estimate the severity of a disease and ascertainment of\ncases, as discussed in Nishiura et al. (2009)\n<doi:10.1371/journal.pone.0006852>.",
+    "version": "0.2.0.9000",
+    "maintainer": "Adam Kucharski <adam.kucharski@lshtm.ac.uk>",
+    "author": "Pratik R. Gupte [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-5294-7819>),\nAdam Kucharski [aut, cph, cre] (ORCID:\n<https://orcid.org/0000-0001-8814-9421>),\nTim Russell [aut, cph] (ORCID: <https://orcid.org/0000-0001-5610-6080>),\nJoshua W. Lambert [rev] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nHugo Gruson [rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nTim Taylor [rev] (ORCID: <https://orcid.org/0000-0002-8587-7113>),\nJames M. Azam [rev] (ORCID: <https://orcid.org/0000-0001-5782-7330>),\nAbdoelnaser M. Degoot [rev] (ORCID:\n<https://orcid.org/0000-0001-8788-2496>),\nSebastian Funk [rev] (ORCID: <https://orcid.org/0000-0002-2842-3406>)",
+    "url": "https://github.com/epiverse-trace/cfr,\nhttps://epiverse-trace.github.io/cfr/",
+    "bug_reports": "https://github.com/epiverse-trace/cfr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "cfr_rolling"
+      ],
+      [
+        "cfr_static"
+      ],
+      [
+        "cfr_time_varying"
+      ],
+      [
+        "estimate_ascertainment"
+      ],
+      [
+        "estimate_outcomes"
+      ],
+      [
+        "prepare_data"
+      ]
+    ],
+    "topics": [
+      [
+        "case-fatality-rate"
+      ],
+      [
+        "epidemic-modelling"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "health-outcomes"
+      ],
+      [
+        "outbreak-analysis"
+      ],
+      [
+        "sdg-3"
+      ]
+    ],
+    "score": 8.0261,
+    "stars": 15,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "cfr Estimate Disease Severity and Case Ascertainment Estimate the severity of a disease and ascertainment of\ncases, as discussed in Nishiura et al. (2009)\n<doi:10.1371/journal.pone.0006852>. cfr_rolling cfr_static cfr_time_varying estimate_ascertainment estimate_outcomes prepare_data case-fatality-rate epidemic-modelling epidemiology epiverse health-outcomes outbreak-analysis sdg-3"
+  },
+  {
+    "id": 1228,
+    "package_name": "simulist",
+    "title": "Simulate Disease Outbreak Line List and Contacts Data",
+    "description": "Tools to simulate realistic raw case data for an epidemic\nin the form of line lists and contacts using a branching\nprocess. Simulated outbreaks are parameterised with\nepidemiological parameters and can have age-structured\npopulations, age-stratified hospitalisation and death risk and\ntime-varying case fatality risk.",
+    "version": "0.6.0.9000",
+    "maintainer": "Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>",
+    "author": "Joshua W. Lambert [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nCarmen Tamayo Cuartero [aut] (ORCID:\n<https://orcid.org/0000-0003-4184-2864>),\nHugo Gruson [ctb, rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nPratik R. Gupte [ctb, rev] (ORCID:\n<https://orcid.org/0000-0001-5294-7819>),\nAdam Kucharski [rev] (ORCID: <https://orcid.org/0000-0001-8814-9421>),\nChris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nSebastian Funk [ctb] (ORCID: <https://orcid.org/0000-0002-2842-3406>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph] (ROR:\n<https://ror.org/00a0jsq62>)",
+    "url": "https://github.com/epiverse-trace/simulist,\nhttps://epiverse-trace.github.io/simulist/",
+    "bug_reports": "https://github.com/epiverse-trace/simulist/issues",
+    "repository": "",
+    "exports": [
+      [
+        "censor_linelist"
+      ],
+      [
+        "create_config"
+      ],
+      [
+        "messy_linelist"
+      ],
+      [
+        "sim_contacts"
+      ],
+      [
+        "sim_linelist"
+      ],
+      [
+        "sim_outbreak"
+      ],
+      [
+        "truncate_linelist"
+      ]
+    ],
+    "topics": [
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "linelist"
+      ],
+      [
+        "outbreaks"
+      ]
+    ],
+    "score": 7.96,
+    "stars": 10,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "simulist Simulate Disease Outbreak Line List and Contacts Data Tools to simulate realistic raw case data for an epidemic\nin the form of line lists and contacts using a branching\nprocess. Simulated outbreaks are parameterised with\nepidemiological parameters and can have age-structured\npopulations, age-stratified hospitalisation and death risk and\ntime-varying case fatality risk. censor_linelist create_config messy_linelist sim_contacts sim_linelist sim_outbreak truncate_linelist epidemiology epiverse linelist outbreaks"
+  },
+  {
+    "id": 1072,
+    "package_name": "readepi",
+    "title": "Read Data from Relational Database Management Systems and Health\nInformation Systems",
+    "description": "Import Data from Relational Database Management Systems\n(RDBMS) and Health Information Systems ('HIS'). The current\nversion of the package supports importing data from RDBMS\nincluding 'MS SQL', 'MySQL', 'PostGRESQL', and 'SQLite', as\nwell as from two HIS platforms: 'DHIS2' and 'SORMAS'.",
+    "version": "1.0.3.9000",
+    "maintainer": "Bubacarr Bah <Bubacarr.Bah1@lshtm.ac.uk>",
+    "author": "Karim Man\u00e9 [aut] (ORCID: <https://orcid.org/0000-0002-9892-2999>),\nEmmanuel Kabuga [aut] (ORCID: <https://orcid.org/0009-0006-2291-709X>),\nBubacarr Bah [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-3318-6668>),\nBankol\u00e9 Ahadzie [ctb],\nNuredin Mohammed [ctb],\nAbdoelnaser Degoot [ctb],\nHugo Gruson [rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nPratik Gupte [rev] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\nAndree Valle-Campos [rev] (ORCID:\n<https://orcid.org/0000-0002-7779-481X>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph],\ndata.org [fnd]",
+    "url": "https://epiverse-trace.github.io/readepi/,\nhttps://github.com/epiverse-trace/readepi/,\nhttps://github.com/epiverse-trace/readepi",
+    "bug_reports": "https://github.com/epiverse-trace/readepi/issues",
+    "repository": "",
+    "exports": [
+      [
+        "dhis2_login"
+      ],
+      [
+        "get_api_version"
+      ],
+      [
+        "get_data_elements"
+      ],
+      [
+        "get_organisation_units"
+      ],
+      [
+        "get_program_org_units"
+      ],
+      [
+        "get_program_stages"
+      ],
+      [
+        "get_programs"
+      ],
+      [
+        "get_tracked_entities"
+      ],
+      [
+        "login"
+      ],
+      [
+        "read_dhis2"
+      ],
+      [
+        "read_rdbms"
+      ],
+      [
+        "read_sormas"
+      ],
+      [
+        "show_tables"
+      ],
+      [
+        "sormas_get_api_specification"
+      ],
+      [
+        "sormas_get_data_dictionary"
+      ],
+      [
+        "sormas_get_diseases"
+      ]
+    ],
+    "topics": [
+      [
+        "data-import"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "health-information-systems"
+      ]
+    ],
+    "score": 7.8485,
+    "stars": 6,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "readepi Read Data from Relational Database Management Systems and Health\nInformation Systems Import Data from Relational Database Management Systems\n(RDBMS) and Health Information Systems ('HIS'). The current\nversion of the package supports importing data from RDBMS\nincluding 'MS SQL', 'MySQL', 'PostGRESQL', and 'SQLite', as\nwell as from two HIS platforms: 'DHIS2' and 'SORMAS'. dhis2_login get_api_version get_data_elements get_organisation_units get_program_org_units get_program_stages get_programs get_tracked_entities login read_dhis2 read_rdbms read_sormas show_tables sormas_get_api_specification sormas_get_data_dictionary sormas_get_diseases data-import epidemiology epiverse health-information-systems"
+  },
+  {
+    "id": 1231,
+    "package_name": "sivirep",
+    "title": "Data Wrangling and Automated Reports from 'SIVIGILA' Source",
+    "description": "Data wrangling, pre-processing, and generating automated\nreports from Colombia's epidemiological surveillance system,\n'SIVIGILA' <https://portalsivigila.ins.gov.co/>. It provides a\ncustomizable R Markdown template for analysis and automatic\ngeneration of epidemiological reports that can be adapted to\nlocal, regional, and national contexts. This tool offers a\nstandardized and reproducible workflow that helps to reduce\nmanual labor and potential errors in report generation,\nimproving their efficiency and consistency.",
+    "version": "1.0.2",
+    "maintainer": "Geraldine G\u00f3mez-Mill\u00e1n <geralidine.gomez@javeriana.edu.co>",
+    "author": "Geraldine G\u00f3mez-Mill\u00e1n [aut, cre, ctb] (ORCID:\n<https://orcid.org/0009-0007-8701-0568>),\nZulma M. Cucunub\u00e1 [aut, ctb] (ORCID:\n<https://orcid.org/0000-0002-8165-3198>),\nJennifer A. Mendez-Romero [aut, ctb] (ORCID:\n<https://orcid.org/0009-0001-6138-0225>),\nClaudia Huguett-Arag\u00f3n [aut, ctb] (ORCID:\n<https://orcid.org/0000-0002-9814-2386>),\nHugo Gruson [ctb] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nJuanita Romero-Garc\u00e9s [ctb] (ORCID:\n<https://orcid.org/0000-0001-9796-6626>),\nJaime Pavlich-Mariscal [ctb] (ORCID:\n<https://orcid.org/0000-0002-3892-6680>),\nLaura G\u00f3mez Bermeo [ctb] (ORCID:\n<https://orcid.org/0000-0003-4028-2893>),\nAndr\u00e9s Moreno [ctb] (ORCID: <https://orcid.org/0000-0001-9266-731X>),\nMiguel G\u00e1mez [ctb],\nJohan Calder\u00f3n [ctb],\nLady Fl\u00f3rez-Tapiero [ctb],\nVer\u00f3nica Tangarife-Arredondo [ctb],\nGerard Alarcon [ctb],\nInternational Development Research Center (IDRC) [fnd] (ROR:\n<https://ror.org/0445x0472>),\nPontificia Universidad Javeriana [cph] (ROR:\n<https://ror.org/03etyjw28>)",
+    "url": "https://epiverse-trace.github.io/sivirep/,\nhttps://github.com/epiverse-trace/sivirep",
+    "bug_reports": "https://github.com/epiverse-trace/sivirep/issues",
+    "repository": "",
+    "exports": [
+      [
+        "agrupar_area_geo"
+      ],
+      [
+        "agrupar_cols_casos"
+      ],
+      [
+        "agrupar_dpto"
+      ],
+      [
+        "agrupar_edad"
+      ],
+      [
+        "agrupar_edad_sex"
+      ],
+      [
+        "agrupar_eventos"
+      ],
+      [
+        "agrupar_fecha_inisintomas"
+      ],
+      [
+        "agrupar_mpio"
+      ],
+      [
+        "agrupar_per_etn"
+      ],
+      [
+        "agrupar_rango_edad"
+      ],
+      [
+        "agrupar_semanaepi"
+      ],
+      [
+        "agrupar_sex"
+      ],
+      [
+        "agrupar_sex_semanaepi"
+      ],
+      [
+        "agrupar_tipo_caso"
+      ],
+      [
+        "agrupar_top_area_geo"
+      ],
+      [
+        "agrupar_years"
+      ],
+      [
+        "calcular_incidencia"
+      ],
+      [
+        "calcular_incidencia_geo"
+      ],
+      [
+        "calcular_incidencia_sex"
+      ],
+      [
+        "convert_edad"
+      ],
+      [
+        "estandarizar_geo_cods"
+      ],
+      [
+        "geo_filtro"
+      ],
+      [
+        "import_data_event"
+      ],
+      [
+        "import_geo_cods"
+      ],
+      [
+        "import_pob_incidencia"
+      ],
+      [
+        "import_pob_proyecciones"
+      ],
+      [
+        "import_pob_riesgo"
+      ],
+      [
+        "limpiar_data_sivigila"
+      ],
+      [
+        "limpiar_edad_event"
+      ],
+      [
+        "limpiar_encabezado"
+      ],
+      [
+        "limpiar_fecha_event"
+      ],
+      [
+        "limpiar_val_atipic"
+      ],
+      [
+        "list_events"
+      ],
+      [
+        "obtener_cond_inciden_event"
+      ],
+      [
+        "obtener_dptos"
+      ],
+      [
+        "obtener_fila_mas_casos"
+      ],
+      [
+        "obtener_info_depts"
+      ],
+      [
+        "obtener_meses_mas_casos"
+      ],
+      [
+        "obtener_nombre_dpto"
+      ],
+      [
+        "obtener_nombre_mpio"
+      ],
+      [
+        "obtener_text_sex"
+      ],
+      [
+        "obtener_tip_ocurren_geo"
+      ],
+      [
+        "obtener_val_config"
+      ],
+      [
+        "plot_area_geo"
+      ],
+      [
+        "plot_dptos"
+      ],
+      [
+        "plot_edad"
+      ],
+      [
+        "plot_edad_sex"
+      ],
+      [
+        "plot_fecha_inisintomas"
+      ],
+      [
+        "plot_map"
+      ],
+      [
+        "plot_mpios"
+      ],
+      [
+        "plot_per_etn"
+      ],
+      [
+        "plot_sex"
+      ],
+      [
+        "plot_sex_semanaepi"
+      ],
+      [
+        "plot_tabla_incidencia_geo"
+      ],
+      [
+        "plot_tabla_incidencia_sex"
+      ],
+      [
+        "plot_tabla_tipos_event"
+      ],
+      [
+        "plot_tipo_caso"
+      ],
+      [
+        "plot_tipo_caso_years"
+      ],
+      [
+        "plot_top_area_geo"
+      ],
+      [
+        "plot_years"
+      ]
+    ],
+    "topics": [
+      [
+        "colombia"
+      ],
+      [
+        "epidemiological-surveillance"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "public-health"
+      ]
+    ],
+    "score": 7.7236,
+    "stars": 42,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "sivirep Data Wrangling and Automated Reports from 'SIVIGILA' Source Data wrangling, pre-processing, and generating automated\nreports from Colombia's epidemiological surveillance system,\n'SIVIGILA' <https://portalsivigila.ins.gov.co/>. It provides a\ncustomizable R Markdown template for analysis and automatic\ngeneration of epidemiological reports that can be adapted to\nlocal, regional, and national contexts. This tool offers a\nstandardized and reproducible workflow that helps to reduce\nmanual labor and potential errors in report generation,\nimproving their efficiency and consistency. agrupar_area_geo agrupar_cols_casos agrupar_dpto agrupar_edad agrupar_edad_sex agrupar_eventos agrupar_fecha_inisintomas agrupar_mpio agrupar_per_etn agrupar_rango_edad agrupar_semanaepi agrupar_sex agrupar_sex_semanaepi agrupar_tipo_caso agrupar_top_area_geo agrupar_years calcular_incidencia calcular_incidencia_geo calcular_incidencia_sex convert_edad estandarizar_geo_cods geo_filtro import_data_event import_geo_cods import_pob_incidencia import_pob_proyecciones import_pob_riesgo limpiar_data_sivigila limpiar_edad_event limpiar_encabezado limpiar_fecha_event limpiar_val_atipic list_events obtener_cond_inciden_event obtener_dptos obtener_fila_mas_casos obtener_info_depts obtener_meses_mas_casos obtener_nombre_dpto obtener_nombre_mpio obtener_text_sex obtener_tip_ocurren_geo obtener_val_config plot_area_geo plot_dptos plot_edad plot_edad_sex plot_fecha_inisintomas plot_map plot_mpios plot_per_etn plot_sex plot_sex_semanaepi plot_tabla_incidencia_geo plot_tabla_incidencia_sex plot_tabla_tipos_event plot_tipo_caso plot_tipo_caso_years plot_top_area_geo plot_years colombia epidemiological-surveillance epiverse public-health"
+  },
+  {
+    "id": 571,
+    "package_name": "finalsize",
+    "title": "Calculate the Final Size of an Epidemic",
+    "description": "Calculate the final size of a\nsusceptible-infectious-recovered epidemic in a population with\ndemographic variation in contact patterns and susceptibility to\ndisease, as discussed in Miller (2012)\n<doi:10.1007/s11538-012-9749-6>.",
+    "version": "0.2.1.9000",
+    "maintainer": "Rosalind Eggo <r.eggo@lshtm.ac.uk>",
+    "author": "Pratik Gupte [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-5294-7819>),\nEdwin Van Leeuwen [aut, cph] (ORCID:\n<https://orcid.org/0000-0002-2383-5305>),\nAdam Kucharski [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-8814-9421>),\nRosalind Eggo [ctb, cre] (ORCID:\n<https://orcid.org/0000-0002-0362-6717>),\nHugo Gruson [ctb] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nThibaut Jombart [ctb] (ORCID: <https://orcid.org/0000-0003-3796-2097>),\nAndree Valle-Campos [ctb] (ORCID:\n<https://orcid.org/0000-0002-7779-481X>),\nJoshua W. Lambert [rev] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>)",
+    "url": "https://github.com/epiverse-trace/finalsize,\nhttps://epiverse-trace.github.io/finalsize/",
+    "bug_reports": "https://github.com/epiverse-trace/finalsize/issues",
+    "repository": "",
+    "exports": [
+      [
+        "final_size"
+      ],
+      [
+        "lambda_to_r0"
+      ],
+      [
+        "r_eff"
+      ],
+      [
+        "r0_to_lambda"
+      ]
+    ],
+    "topics": [
+      [
+        "epidemic-modelling"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "outbreak-analysis"
+      ],
+      [
+        "rcpp"
+      ],
+      [
+        "sdg-3"
+      ],
+      [
+        "cpp"
+      ]
+    ],
+    "score": 7.7147,
+    "stars": 15,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "finalsize Calculate the Final Size of an Epidemic Calculate the final size of a\nsusceptible-infectious-recovered epidemic in a population with\ndemographic variation in contact patterns and susceptibility to\ndisease, as discussed in Miller (2012)\n<doi:10.1007/s11538-012-9749-6>. final_size lambda_to_r0 r_eff r0_to_lambda epidemic-modelling epidemiology epiverse outbreak-analysis rcpp sdg-3 cpp"
+  },
+  {
+    "id": 526,
+    "package_name": "epichains",
+    "title": "Simulating and Analysing Transmission Chain Statistics Using\nBranching Process Models",
+    "description": "Provides methods to simulate and analyse the size and\nlength of branching processes with an arbitrary offspring\ndistribution. These can be used, for example, to analyse the\ndistribution of chain sizes or length of infectious disease\noutbreaks, as discussed in Farrington et al. (2003)\n<doi:10.1093/biostatistics/4.2.279>.",
+    "version": "0.1.1.9000",
+    "maintainer": "James M. Azam <james.azam@lshtm.ac.uk>",
+    "author": "James M. Azam [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0001-5782-7330>),\nSebastian Funk [aut, cph] (ORCID:\n<https://orcid.org/0000-0002-2842-3406>),\nFlavio Finger [aut] (ORCID: <https://orcid.org/0000-0002-8613-5170>),\nZhian N. Kamvar [ctb] (ORCID: <https://orcid.org/0000-0003-1458-7108>),\nHugo Gruson [ctb, rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nKarim Man\u00e9 [rev] (ORCID: <https://orcid.org/0000-0002-9892-2999>),\nPratik Gupte [rev] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\nJoshua W. Lambert [rev] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nChris Hartgerink [ctb] (ORCID: <https://orcid.org/0000-0003-1050-6809>)",
+    "url": "https://github.com/epiverse-trace/epichains,\nhttps://epiverse-trace.github.io/epichains/",
+    "bug_reports": "https://github.com/epiverse-trace/epichains/issues",
+    "repository": "",
+    "exports": [
+      [
+        "dborel"
+      ],
+      [
+        "likelihood"
+      ],
+      [
+        "rborel"
+      ],
+      [
+        "rgborel"
+      ],
+      [
+        "simulate_chain_stats"
+      ],
+      [
+        "simulate_chains"
+      ]
+    ],
+    "topics": [
+      [
+        "branching-processes"
+      ],
+      [
+        "epidemic-dynamics"
+      ],
+      [
+        "epidemic-modelling"
+      ],
+      [
+        "epidemic-simulations"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epidemiology-models"
+      ],
+      [
+        "outbreak-simulator"
+      ],
+      [
+        "transmission-chain"
+      ],
+      [
+        "transmission-chain-reconstruction"
+      ]
+    ],
+    "score": 7.6469,
+    "stars": 8,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "epichains Simulating and Analysing Transmission Chain Statistics Using\nBranching Process Models Provides methods to simulate and analyse the size and\nlength of branching processes with an arbitrary offspring\ndistribution. These can be used, for example, to analyse the\ndistribution of chain sizes or length of infectious disease\noutbreaks, as discussed in Farrington et al. (2003)\n<doi:10.1093/biostatistics/4.2.279>. dborel likelihood rborel rgborel simulate_chain_stats simulate_chains branching-processes epidemic-dynamics epidemic-modelling epidemic-simulations epidemiology epidemiology-models outbreak-simulator transmission-chain transmission-chain-reconstruction"
+  },
+  {
+    "id": 372,
+    "package_name": "cleanepi",
+    "title": "Clean and Standardize Epidemiological Data",
+    "description": "Cleaning and standardizing tabular data package, tailored\nspecifically for curating epidemiological data. It streamlines\nvarious data cleaning tasks that are typically expected when\nworking with datasets in epidemiology. It returns the processed\ndata in the same format, and generates a comprehensive report\ndetailing the outcomes of each cleaning task.",
+    "version": "1.1.2.9000",
+    "maintainer": "Bubacarr Bah <Bubacarr.Bah1@lshtm.ac.uk>",
+    "author": "Karim Man\u00e9 [aut] (ORCID: <https://orcid.org/0000-0002-9892-2999>),\nThibaut Jombart [ctb] (Thibaut contributed in development of\ndate_guess().),\nAbdoelnaser Degoot [aut] (ORCID:\n<https://orcid.org/0000-0001-8788-2496>),\nBankol\u00e9 Ahadzie [aut],\nNuredin Mohammed [aut],\nBubacarr Bah [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-3318-6668>),\nHugo Gruson [ctb, rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nPratik R. Gupte [rev] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\nJames M. Azam [rev] (ORCID: <https://orcid.org/0000-0001-5782-7330>),\nJoshua W. Lambert [rev, ctb] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nChris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nAndree Valle-Campos [rev, ctb] (ORCID:\n<https://orcid.org/0000-0002-7779-481X>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph] (ROR:\n<https://ror.org/00a0jsq62>),\ndata.org [fnd]",
+    "url": "https://epiverse-trace.github.io/cleanepi/,\nhttps://github.com/epiverse-trace/cleanepi",
+    "bug_reports": "https://github.com/epiverse-trace/cleanepi/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "add_to_dictionary"
+      ],
+      [
+        "add_to_report"
+      ],
+      [
+        "check_date_sequence"
+      ],
+      [
+        "check_subject_ids"
+      ],
+      [
+        "clean_data"
+      ],
+      [
+        "clean_using_dictionary"
+      ],
+      [
+        "convert_numeric_to_date"
+      ],
+      [
+        "convert_to_numeric"
+      ],
+      [
+        "correct_misspelled_values"
+      ],
+      [
+        "correct_subject_ids"
+      ],
+      [
+        "find_duplicates"
+      ],
+      [
+        "get_default_params"
+      ],
+      [
+        "print_report"
+      ],
+      [
+        "remove_constants"
+      ],
+      [
+        "remove_duplicates"
+      ],
+      [
+        "replace_missing_values"
+      ],
+      [
+        "scan_data"
+      ],
+      [
+        "standardize_column_names"
+      ],
+      [
+        "standardize_dates"
+      ],
+      [
+        "timespan"
+      ]
+    ],
+    "topics": [
+      [
+        "data-cleaning"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ]
+    ],
+    "score": 7.6232,
+    "stars": 10,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "cleanepi Clean and Standardize Epidemiological Data Cleaning and standardizing tabular data package, tailored\nspecifically for curating epidemiological data. It streamlines\nvarious data cleaning tasks that are typically expected when\nworking with datasets in epidemiology. It returns the processed\ndata in the same format, and generates a comprehensive report\ndetailing the outcomes of each cleaning task. %>% add_to_dictionary add_to_report check_date_sequence check_subject_ids clean_data clean_using_dictionary convert_numeric_to_date convert_to_numeric correct_misspelled_values correct_subject_ids find_duplicates get_default_params print_report remove_constants remove_duplicates replace_missing_values scan_data standardize_column_names standardize_dates timespan data-cleaning epidemiology epiverse"
+  },
+  {
+    "id": 528,
+    "package_name": "epidemics",
+    "title": "Composable Epidemic Scenario Modelling",
+    "description": "A library of compartmental epidemic models taken from the\npublished literature, and classes to represent affected\npopulations, public health response measures including\nnon-pharmaceutical interventions on social contacts,\nnon-pharmaceutical and pharmaceutical interventions that affect\ndisease transmissibility, vaccination regimes, and disease\nseasonality, which can be combined to compose epidemic scenario\nmodels.",
+    "version": "0.4.0.9000",
+    "maintainer": "Rosalind Eggo <rosalind.eggo@lshtm.ac.uk>",
+    "author": "Pratik Gupte [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-5294-7819>),\nRosalind Eggo [aut, cph, cre] (ORCID:\n<https://orcid.org/0000-0002-0362-6717>),\nEdwin Van Leeuwen [aut, cph] (ORCID:\n<https://orcid.org/0000-0002-2383-5305>),\nAdam Kucharski [ctb, rev] (ORCID:\n<https://orcid.org/0000-0001-8814-9421>),\nTim Taylor [ctb, rev] (ORCID: <https://orcid.org/0000-0002-8587-7113>),\nBanky Ahadzie [ctb],\nAlexis Robert [ctb] (ORCID: <https://orcid.org/0000-0002-4516-2965>),\nHugo Gruson [rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nJoshua W. Lambert [rev] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nJames M. Azam [rev] (ORCID: <https://orcid.org/0000-0001-5782-7330>),\nAlexis Robert [rev] (ORCID: <https://orcid.org/0000-0002-4516-2965>)",
+    "url": "https://github.com/epiverse-trace/epidemics,\nhttps://epiverse-trace.github.io/epidemics/",
+    "bug_reports": "https://github.com/epiverse-trace/epidemics/issues",
+    "repository": "",
+    "exports": [
+      [
+        "as.intervention"
+      ],
+      [
+        "as.vaccination"
+      ],
+      [
+        "combine_populations"
+      ],
+      [
+        "epidemic_peak"
+      ],
+      [
+        "epidemic_size"
+      ],
+      [
+        "gravity_contact"
+      ],
+      [
+        "intervention"
+      ],
+      [
+        "is_contacts_intervention"
+      ],
+      [
+        "is_intervention"
+      ],
+      [
+        "is_population"
+      ],
+      [
+        "is_rate_intervention"
+      ],
+      [
+        "is_vaccination"
+      ],
+      [
+        "model_default"
+      ],
+      [
+        "model_diphtheria"
+      ],
+      [
+        "model_ebola"
+      ],
+      [
+        "model_vacamole"
+      ],
+      [
+        "new_infections"
+      ],
+      [
+        "outcomes_averted"
+      ],
+      [
+        "population"
+      ],
+      [
+        "vaccination"
+      ]
+    ],
+    "topics": [
+      [
+        "decision-support"
+      ],
+      [
+        "epidemic-modelling"
+      ],
+      [
+        "epidemic-simulations"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "infectious-disease-dynamics"
+      ],
+      [
+        "model-library"
+      ],
+      [
+        "non-pharmaceutical-interventions"
+      ],
+      [
+        "rcpp"
+      ],
+      [
+        "rcppeigen"
+      ],
+      [
+        "scenario-analysis"
+      ],
+      [
+        "vaccination"
+      ]
+    ],
+    "score": 7.4776,
+    "stars": 13,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "epidemics Composable Epidemic Scenario Modelling A library of compartmental epidemic models taken from the\npublished literature, and classes to represent affected\npopulations, public health response measures including\nnon-pharmaceutical interventions on social contacts,\nnon-pharmaceutical and pharmaceutical interventions that affect\ndisease transmissibility, vaccination regimes, and disease\nseasonality, which can be combined to compose epidemic scenario\nmodels. as.intervention as.vaccination combine_populations epidemic_peak epidemic_size gravity_contact intervention is_contacts_intervention is_intervention is_population is_rate_intervention is_vaccination model_default model_diphtheria model_ebola model_vacamole new_infections outcomes_averted population vaccination decision-support epidemic-modelling epidemic-simulations epidemiology epiverse infectious-disease-dynamics model-library non-pharmaceutical-interventions rcpp rcppeigen scenario-analysis vaccination"
+  },
+  {
+    "id": 1406,
+    "package_name": "vaccineff",
+    "title": "Estimate Vaccine Effectiveness Based on Different Study Designs",
+    "description": "Provides tools for estimating vaccine effectiveness and\nrelated metrics. The 'vaccineff_data' class manages key\nfeatures for preparing, visualizing, and organizing cohort\ndata, as well as estimating vaccine effectiveness. The results\nand model performance are assessed using the 'vaccineff' class.",
+    "version": "1.0.1",
+    "maintainer": "Zulma M. Cucunub\u00e1 <tracelacdev@gmail.com>",
+    "author": "David Santiago Quevedo [aut] (ORCID:\n<https://orcid.org/0000-0003-1583-4262>),\nZulma M. Cucunub\u00e1 [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-8165-3198>),\nInternational Development Research Center (IDRC) [fnd] (ROR:\n<https://ror.org/0445x0472>),\nGeraldine G\u00f3mez Mill\u00e1n [ctb] (ORCID:\n<https://orcid.org/0009-0007-8701-0568>),\nPratik Gupte [ctb] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\n\u00c9rika J Cantor [ctb] (ORCID: <https://orcid.org/0000-0003-3320-6032>),\nSantiago Loaiza [ctb] (ORCID: <https://orcid.org/0000-0002-2092-3262>),\nJaime Pavlich-Mariscal [ctb] (ORCID:\n<https://orcid.org/0000-0002-3892-6680>),\nHugo Gruson [ctb] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nChris Hartgerink [ctb] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nFelipe Segundo Abril [ctb] (ORCID:\n<https://orcid.org/0000-0002-2512-4929>),\nJoshua W. Lambert [ctb] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nJulian Otero [ctb] (ORCID: <https://orcid.org/0009-0006-0429-7747>),\nPontificia Universidad Javeriana [cph] (ROR:\n<https://ror.org/03etyjw28>)",
+    "url": "https://github.com/epiverse-trace/vaccineff,\nhttps://epiverse-trace.github.io/vaccineff/",
+    "bug_reports": "https://github.com/epiverse-trace/vaccineff/issues",
+    "repository": "",
+    "exports": [
+      [
+        "estimate_vaccineff"
+      ],
+      [
+        "get_age_group"
+      ],
+      [
+        "make_vaccineff_data"
+      ]
+    ],
+    "topics": [
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "vaccine-effectiveness"
+      ]
+    ],
+    "score": 7.2723,
+    "stars": 16,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "vaccineff Estimate Vaccine Effectiveness Based on Different Study Designs Provides tools for estimating vaccine effectiveness and\nrelated metrics. The 'vaccineff_data' class manages key\nfeatures for preparing, visualizing, and organizing cohort\ndata, as well as estimating vaccine effectiveness. The results\nand model performance are assessed using the 'vaccineff' class. estimate_vaccineff get_age_group make_vaccineff_data epidemiology epiverse vaccine-effectiveness"
+  },
+  {
+    "id": 1282,
+    "package_name": "superspreading",
+    "title": "Understand Individual-Level Variation in Infectious Disease\nTransmission",
+    "description": "Estimate and understand individual-level variation in\ntransmission. Implements density and cumulative compound\nPoisson discrete distribution functions (Kremer et al. (2021)\n<doi:10.1038/s41598-021-93578-x>), as well as functions to\ncalculate infectious disease outbreak statistics given\nepidemiological parameters on individual-level transmission;\nincluding the probability of an outbreak becoming an\nepidemic/extinct (Kucharski et al. (2020)\n<doi:10.1016/S1473-3099(20)30144-4>), or the cluster size\nstatistics, e.g. what proportion of cases cause X\\% of\ntransmission (Lloyd-Smith et al. (2005)\n<doi:10.1038/nature04153>).",
+    "version": "0.4.0.9000",
+    "maintainer": "Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>",
+    "author": "Joshua W. Lambert [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nAdam Kucharski [aut, cph] (ORCID:\n<https://orcid.org/0000-0001-8814-9421>),\nDillon C. Adam [aut] (ORCID: <https://orcid.org/0000-0002-7485-9905>),\nSebastian Funk [ctb, cph] (ORCID:\n<https://orcid.org/0000-0002-2842-3406>, .chain_sim uses code from\nbpmodels::chain_sim),\nPratik Gupte [rev] (ORCID: <https://orcid.org/0000-0001-5294-7819>),\nHugo Gruson [rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nJames M. Azam [rev, ctb] (ORCID:\n<https://orcid.org/0000-0001-5782-7330>),\nChris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph] (ROR:\n<https://ror.org/00a0jsq62>)",
+    "url": "https://github.com/epiverse-trace/superspreading,\nhttps://epiverse-trace.github.io/superspreading/",
+    "bug_reports": "https://github.com/epiverse-trace/superspreading/issues",
+    "repository": "",
+    "exports": [
+      [
+        "calc_network_R"
+      ],
+      [
+        "dpoislnorm"
+      ],
+      [
+        "dpoisweibull"
+      ],
+      [
+        "ic_tbl"
+      ],
+      [
+        "ppoislnorm"
+      ],
+      [
+        "ppoisweibull"
+      ],
+      [
+        "probability_contain"
+      ],
+      [
+        "probability_emergence"
+      ],
+      [
+        "probability_epidemic"
+      ],
+      [
+        "probability_extinct"
+      ],
+      [
+        "proportion_cluster_size"
+      ],
+      [
+        "proportion_transmission"
+      ]
+    ],
+    "topics": [
+      [
+        "disease-transmission"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ]
+    ],
+    "score": 7.1034,
+    "stars": 5,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "superspreading Understand Individual-Level Variation in Infectious Disease\nTransmission Estimate and understand individual-level variation in\ntransmission. Implements density and cumulative compound\nPoisson discrete distribution functions (Kremer et al. (2021)\n<doi:10.1038/s41598-021-93578-x>), as well as functions to\ncalculate infectious disease outbreak statistics given\nepidemiological parameters on individual-level transmission;\nincluding the probability of an outbreak becoming an\nepidemic/extinct (Kucharski et al. (2020)\n<doi:10.1016/S1473-3099(20)30144-4>), or the cluster size\nstatistics, e.g. what proportion of cases cause X\\% of\ntransmission (Lloyd-Smith et al. (2005)\n<doi:10.1038/nature04153>). calc_network_R dpoislnorm dpoisweibull ic_tbl ppoislnorm ppoisweibull probability_contain probability_emergence probability_epidemic probability_extinct proportion_cluster_size proportion_transmission disease-transmission epidemiology epiverse"
+  },
+  {
+    "id": 21,
+    "package_name": "ColOpenData",
+    "title": "Download Colombian Demographic, Climate and Geospatial Data",
+    "description": "Downloads wrangled Colombian socioeconomic,\ngeospatial,population and climate data from DANE\n<https://www.dane.gov.co/> (National Administrative Department\nof Statistics) and IDEAM <https://ideam.gov.co> (Institute of\nHydrology, Meteorology and Environmental Studies). It solves\nthe problem of Colombian data being issued in different web\npages and sources by using functions that allow the user to\nselect the desired database and download it without having to\ndo the exhausting acquisition process.",
+    "version": "0.3.1",
+    "maintainer": "Maria Camila Tavera-Cifuentes <mc.tavera@uniandes.edu.co>",
+    "author": "Maria Camila Tavera-Cifuentes [aut, cre, cph] (ORCID:\n<https://orcid.org/0009-0007-1610-4583>),\nJulian Otero [aut, cph] (ORCID:\n<https://orcid.org/0009-0006-0429-7747>),\nNatalia Nino-Machado [ctb] (ORCID:\n<https://orcid.org/0000-0001-7887-9439>),\nCatalina Gonzalez-Uribe [ctb] (ORCID:\n<https://orcid.org/0000-0002-3322-5017>),\nJuan Manuel Cordovez [ctb] (ORCID:\n<https://orcid.org/0000-0002-4005-3567>),\nHugo Gruson [rev] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nChris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nKarim Mane [rev] (ORCID: <https://orcid.org/0000-0002-9892-2999>),\nJoshua W. Lambert [rev] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>)",
+    "url": "https://github.com/epiverse-trace/ColOpenData,\nhttps://epiverse-trace.github.io/ColOpenData/",
+    "bug_reports": "https://github.com/epiverse-trace/ColOpenData/issues",
+    "repository": "",
+    "exports": [
+      [
+        "aggregate_climate"
+      ],
+      [
+        "code_to_name_dep"
+      ],
+      [
+        "code_to_name_mun"
+      ],
+      [
+        "divipola_table"
+      ],
+      [
+        "download_climate"
+      ],
+      [
+        "download_climate_geom"
+      ],
+      [
+        "download_climate_stations"
+      ],
+      [
+        "download_demographic"
+      ],
+      [
+        "download_geospatial"
+      ],
+      [
+        "download_pop_projections"
+      ],
+      [
+        "geospatial_dictionary"
+      ],
+      [
+        "get_climate_tags"
+      ],
+      [
+        "list_datasets"
+      ],
+      [
+        "look_up"
+      ],
+      [
+        "merge_geo_demographic"
+      ],
+      [
+        "name_to_code_dep"
+      ],
+      [
+        "name_to_code_mun"
+      ],
+      [
+        "name_to_standard_dep"
+      ],
+      [
+        "name_to_standard_mun"
+      ],
+      [
+        "stations_in_roi"
+      ]
+    ],
+    "topics": [
+      [
+        "climate"
+      ],
+      [
+        "colombia"
+      ],
+      [
+        "data-package"
+      ],
+      [
+        "demographics"
+      ],
+      [
+        "maps"
+      ]
+    ],
+    "score": 6.6189,
+    "stars": 11,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "ColOpenData Download Colombian Demographic, Climate and Geospatial Data Downloads wrangled Colombian socioeconomic,\ngeospatial,population and climate data from DANE\n<https://www.dane.gov.co/> (National Administrative Department\nof Statistics) and IDEAM <https://ideam.gov.co> (Institute of\nHydrology, Meteorology and Environmental Studies). It solves\nthe problem of Colombian data being issued in different web\npages and sources by using functions that allow the user to\nselect the desired database and download it without having to\ndo the exhausting acquisition process. aggregate_climate code_to_name_dep code_to_name_mun divipola_table download_climate download_climate_geom download_climate_stations download_demographic download_geospatial download_pop_projections geospatial_dictionary get_climate_tags list_datasets look_up merge_geo_demographic name_to_code_dep name_to_code_mun name_to_standard_dep name_to_standard_mun stations_in_roi climate colombia data-package demographics maps"
+  },
+  {
+    "id": 524,
+    "package_name": "epiCo",
+    "title": "Statistical and Viz Tools for Vector-Borne Diseases in Colombia",
+    "description": "Provides statistical and visualization tools for the\nanalysis of demographic indicators, and spatio-temporal\nbehavior and characterization of outbreaks of vector-borne\ndiseases (VBDs) in Colombia. It implements travel times\nestimated in Bravo-Vega C., Santos-Vega M., & Cordovez J.M.\n(2022), and the endemic channel method (Bortman, M.  (1999)\n<https://iris.paho.org/handle/10665.2/8562>).",
+    "version": "1.0.1.9000",
+    "maintainer": "Juan D. Uma\u00f1a <jd.umana10@uniandes.edu.co>",
+    "author": "Juan D. Uma\u00f1a [aut, cre, cph] (ORCID:\n<https://orcid.org/0000-0003-0316-6164>),\nJuan Montenegro-Torres [aut] (ORCID:\n<https://orcid.org/0000-0003-2755-4743>),\nJulian Otero [aut] (ORCID: <https://orcid.org/0009-0006-0429-7747>),\nHugo Gruson [ctb] (ORCID: <https://orcid.org/0000-0002-4094-1476>)",
+    "url": "https://epiverse-trace.github.io/epiCo/,\nhttps://github.com/epiverse-trace/epiCo",
+    "bug_reports": "https://github.com/epiverse-trace/epiCo/issues",
+    "repository": "",
+    "exports": [
+      [
+        "age_risk"
+      ],
+      [
+        "describe_ethnicity"
+      ],
+      [
+        "describe_occupation"
+      ],
+      [
+        "endemic_channel"
+      ],
+      [
+        "epi_calendar"
+      ],
+      [
+        "geometric_mean"
+      ],
+      [
+        "geometric_sd"
+      ],
+      [
+        "incidence_rate"
+      ],
+      [
+        "morans_index"
+      ],
+      [
+        "neighborhoods"
+      ],
+      [
+        "population_pyramid"
+      ]
+    ],
+    "topics": [
+      [
+        "colombia"
+      ],
+      [
+        "decision-support"
+      ],
+      [
+        "demographics"
+      ],
+      [
+        "epiverse"
+      ],
+      [
+        "outbreak-analysis"
+      ],
+      [
+        "sdg-3"
+      ],
+      [
+        "spatio-temporal-analysis"
+      ],
+      [
+        "vector-borne-diseases"
+      ]
+    ],
+    "score": 6.1931,
+    "stars": 13,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "epiCo Statistical and Viz Tools for Vector-Borne Diseases in Colombia Provides statistical and visualization tools for the\nanalysis of demographic indicators, and spatio-temporal\nbehavior and characterization of outbreaks of vector-borne\ndiseases (VBDs) in Colombia. It implements travel times\nestimated in Bravo-Vega C., Santos-Vega M., & Cordovez J.M.\n(2022), and the endemic channel method (Bortman, M.  (1999)\n<https://iris.paho.org/handle/10665.2/8562>). age_risk describe_ethnicity describe_occupation endemic_channel epi_calendar geometric_mean geometric_sd incidence_rate morans_index neighborhoods population_pyramid colombia decision-support demographics epiverse outbreak-analysis sdg-3 spatio-temporal-analysis vector-borne-diseases"
+  },
+  {
+    "id": 533,
+    "package_name": "epiparameterDB",
+    "title": "Database of Epidemiological Parameters",
+    "description": "A data package containing a database of epidemiological\nparameters. It stores the data for the 'epiparameter' R\npackage. Epidemiological parameter estimates are extracted from\nthe literature.",
+    "version": "0.1.0.9000",
+    "maintainer": "Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>",
+    "author": "Joshua W. Lambert [cre, aut, cph] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nAdam Kucharski [aut] (ORCID: <https://orcid.org/0000-0001-8814-9421>),\nCarmen Tamayo Cuartero [aut] (ORCID:\n<https://orcid.org/0000-0003-4184-2864>),\nLondon School of Hygiene and Tropical Medicine, LSHTM [cph] (ROR:\n<https://ror.org/00a0jsq62>)",
+    "url": "https://github.com/epiverse-trace/epiparameterDB/,\nhttps://epiverse-trace.github.io/epiparameterDB/",
+    "bug_reports": "https://github.com/epiverse-trace/epiparameterDB/issues",
+    "repository": "",
+    "exports": [],
+    "topics": [
+      [
+        "data-package"
+      ],
+      [
+        "epidemiology"
+      ],
+      [
+        "epiverse"
+      ]
+    ],
+    "score": 6.0334,
+    "stars": 2,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "epiparameterDB Database of Epidemiological Parameters A data package containing a database of epidemiological\nparameters. It stores the data for the 'epiparameter' R\npackage. Epidemiological parameter estimates are extracted from\nthe literature.  data-package epidemiology epiverse"
+  },
+  {
+    "id": 893,
+    "package_name": "numberize",
+    "title": "Convert Words to Numbers in Multiple Languages",
+    "description": "Converts written out numbers into their equivalent\nnumbers. Supports numbers written out in English, French, or\nSpanish.",
+    "version": "1.0.1",
+    "maintainer": "Bankole Ahadzie <bankole.ahadzie@lshtm.ac.uk>",
+    "author": "Chris Hartgerink [rev] (ORCID: <https://orcid.org/0000-0003-1050-6809>),\nJoshua W. Lambert [ctb] (ORCID:\n<https://orcid.org/0000-0001-5218-3046>),\nKarim Man\u00e9 [ctb] (ORCID: <https://orcid.org/0000-0002-9892-2999>),\nHugo Gruson [aut] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nBankole Ahadzie [aut, cre, cph]",
+    "url": "https://github.com/epiverse-trace/numberize",
+    "bug_reports": "https://github.com/epiverse-trace/numberize/issues",
+    "repository": "",
+    "exports": [
+      [
+        "numberize"
+      ]
+    ],
+    "topics": [
+      [
+        "r-programming"
+      ]
+    ],
+    "score": 4.6812,
+    "stars": 4,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "numberize Convert Words to Numbers in Multiple Languages Converts written out numbers into their equivalent\nnumbers. Supports numbers written out in English, French, or\nSpanish. numberize r-programming"
+  },
+  {
+    "id": 1369,
+    "package_name": "tracetheme",
+    "title": "A 'ggplot2' Theme and Scale Using 'Epiverse-TRACE' Visual Style",
+    "description": "A 'ggplot2' theme and scale using 'Epiverse-TRACE' visual\nstyle, colour scheme, and visualisation guidelines.",
+    "version": "0.1.0.9000",
+    "maintainer": "Hugo Gruson <hugo@data.org>",
+    "author": "Hugo Gruson [aut, cre] (ORCID: <https://orcid.org/0000-0002-4094-1476>),\nThe Epiverse-TRACE team [aut, cph]",
+    "url": "https://github.com/epiverse-trace/tracetheme",
+    "bug_reports": "https://github.com/epiverse-trace/tracetheme/issues",
+    "repository": "",
+    "exports": [
+      [
+        "theme_trace"
+      ]
+    ],
+    "topics": [],
+    "score": 3.5185,
+    "stars": 1,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "tracetheme A 'ggplot2' Theme and Scale Using 'Epiverse-TRACE' Visual Style A 'ggplot2' theme and scale using 'Epiverse-TRACE' visual\nstyle, colour scheme, and visualisation guidelines. theme_trace "
+  },
+  {
+    "id": 1191,
+    "package_name": "serofoi",
+    "title": "",
+    "description": "",
+    "version": "",
+    "maintainer": "Zulma M. Cucunub\u00e1 <zulma.cucunuba@javeriana.edu.co>",
+    "author": "",
+    "url": "",
+    "bug_reports": "",
+    "repository": "",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "epidemiology",
+    "source_universe": "epiverse-trace",
+    "search_text": "serofoi  "
+  }
+]

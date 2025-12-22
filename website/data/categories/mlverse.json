@@ -1,0 +1,6117 @@
+[
+  {
+    "id": 321,
+    "package_name": "broom",
+    "title": "Convert Statistical Objects into Tidy Tibbles",
+    "description": "Summarizes key information about statistical objects in\ntidy tibbles. This makes it easy to report results, create\nplots and consistently work with large numbers of models at\nonce.  Broom provides three verbs that each provide different\ntypes of information about a model. tidy() summarizes\ninformation about model components such as coefficients of a\nregression. glance() reports information about an entire model,\nsuch as goodness of fit measures like AIC and BIC. augment()\nadds information about individual observations to a dataset,\nsuch as fitted values or influence measures.",
+    "version": "1.0.11.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "David Robinson [aut],\nAlex Hayes [aut] (ORCID: <https://orcid.org/0000-0002-4985-5160>),\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nEmil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>),\nIndrajeet Patil [ctb] (ORCID: <https://orcid.org/0000-0003-1995-6531>),\nDerek Chiu [ctb],\nMatthieu Gomez [ctb],\nBoris Demeshev [ctb],\nDieter Menne [ctb],\nBenjamin Nutter [ctb],\nLuke Johnston [ctb],\nBen Bolker [ctb],\nFrancois Briatte [ctb],\nJeffrey Arnold [ctb],\nJonah Gabry [ctb],\nLuciano Selzer [ctb],\nGavin Simpson [ctb],\nJens Preussner [ctb],\nJay Hesselberth [ctb],\nHadley Wickham [ctb],\nMatthew Lincoln [ctb],\nAlessandro Gasparini [ctb],\nLukasz Komsta [ctb],\nFrederick Novometsky [ctb],\nWilson Freitas [ctb],\nMichelle Evans [ctb],\nJason Cory Brunson [ctb],\nSimon Jackson [ctb],\nBen Whalley [ctb],\nKarissa Whiting [ctb],\nYves Rosseel [ctb],\nMichael Kuehn [ctb],\nJorge Cimentada [ctb],\nErle Holgersen [ctb],\nKarl Dunkle Werner [ctb] (ORCID:\n<https://orcid.org/0000-0003-0523-7309>),\nEthan Christensen [ctb],\nSteven Pav [ctb],\nPaul PJ [ctb],\nBen Schneider [ctb],\nPatrick Kennedy [ctb],\nLily Medina [ctb],\nBrian Fannin [ctb],\nJason Muhlenkamp [ctb],\nMatt Lehman [ctb],\nBill Denney [ctb] (ORCID: <https://orcid.org/0000-0002-5759-428X>),\nNic Crane [ctb],\nAndrew Bates [ctb],\nVincent Arel-Bundock [ctb] (ORCID:\n<https://orcid.org/0000-0003-2042-7063>),\nHideaki Hayashi [ctb],\nLuis Tobalina [ctb],\nAnnie Wang [ctb],\nWei Yang Tham [ctb],\nClara Wang [ctb],\nAbby Smith [ctb] (ORCID: <https://orcid.org/0000-0002-3207-0375>),\nJasper Cooper [ctb] (ORCID: <https://orcid.org/0000-0002-8639-3188>),\nE Auden Krauska [ctb] (ORCID: <https://orcid.org/0000-0002-1466-5850>),\nAlex Wang [ctb],\nMalcolm Barrett [ctb] (ORCID: <https://orcid.org/0000-0003-0299-5825>),\nCharles Gray [ctb] (ORCID: <https://orcid.org/0000-0002-9978-011X>),\nJared Wilber [ctb],\nVilmantas Gegzna [ctb] (ORCID: <https://orcid.org/0000-0002-9500-5167>),\nEduard Szoecs [ctb],\nFrederik Aust [ctb] (ORCID: <https://orcid.org/0000-0003-4900-788X>),\nAngus Moore [ctb],\nNick Williams [ctb],\nMarius Barth [ctb] (ORCID: <https://orcid.org/0000-0002-3421-6665>),\nBruna Wundervald [ctb] (ORCID: <https://orcid.org/0000-0001-8163-220X>),\nJoyce Cahoon [ctb] (ORCID: <https://orcid.org/0000-0001-7217-4702>),\nGrant McDermott [ctb] (ORCID: <https://orcid.org/0000-0001-7883-8573>),\nKevin Zarca [ctb],\nShiro Kuriwaki [ctb] (ORCID: <https://orcid.org/0000-0002-5687-2647>),\nLukas Wallrich [ctb] (ORCID: <https://orcid.org/0000-0003-2121-5177>),\nJames Martherus [ctb] (ORCID: <https://orcid.org/0000-0002-8285-3300>),\nChuliang Xiao [ctb] (ORCID: <https://orcid.org/0000-0002-8466-9398>),\nJoseph Larmarange [ctb],\nMax Kuhn [ctb],\nMichal Bojanowski [ctb],\nHakon Malmedal [ctb],\nClara Wang [ctb],\nSergio Oller [ctb],\nLuke Sonnet [ctb],\nJim Hester [ctb],\nBen Schneider [ctb],\nBernie Gray [ctb] (ORCID: <https://orcid.org/0000-0001-9190-6032>),\nMara Averick [ctb],\nAaron Jacobs [ctb],\nAndreas Bender [ctb],\nSven Templer [ctb],\nPaul-Christian Buerkner [ctb],\nMatthew Kay [ctb],\nErwan Le Pennec [ctb],\nJohan Junkka [ctb],\nHao Zhu [ctb],\nBenjamin Soltoff [ctb],\nZoe Wilkinson Saldana [ctb],\nTyler Littlefield [ctb],\nCharles T. Gray [ctb],\nShabbh E. Banks [ctb],\nSerina Robinson [ctb],\nRoger Bivand [ctb],\nRiinu Ots [ctb],\nNicholas Williams [ctb],\nNina Jakobsen [ctb],\nMichael Weylandt [ctb],\nLisa Lendway [ctb],\nKarl Hailperin [ctb],\nJosue Rodriguez [ctb],\nJenny Bryan [ctb],\nChris Jarvis [ctb],\nGreg Macfarlane [ctb],\nBrian Mannakee [ctb],\nDrew Tyre [ctb],\nShreyas Singh [ctb],\nLaurens Geffert [ctb],\nHong Ooi [ctb],\nHenrik Bengtsson [ctb],\nEduard Szocs [ctb],\nDavid Hugh-Jones [ctb],\nMatthieu Stigler [ctb],\nHugo Tavares [ctb] (ORCID: <https://orcid.org/0000-0001-9373-2726>),\nR. Willem Vervoort [ctb],\nBrenton M. Wiernik [ctb],\nJosh Yamamoto [ctb],\nJasme Lee [ctb],\nTaren Sanders [ctb] (ORCID: <https://orcid.org/0000-0002-4504-6008>),\nIlaria Prosdocimi [ctb] (ORCID:\n<https://orcid.org/0000-0001-8565-094X>),\nDaniel D. Sjoberg [ctb] (ORCID:\n<https://orcid.org/0000-0003-0862-2018>),\nAlex Reinhart [ctb] (ORCID: <https://orcid.org/0000-0002-6658-514X>)",
+    "url": "https://broom.tidymodels.org/, https://github.com/tidymodels/broom",
+    "bug_reports": "https://github.com/tidymodels/broom/issues",
+    "repository": "",
+    "exports": [
+      [
+        "augment"
+      ],
+      [
+        "augment_columns"
+      ],
+      [
+        "bootstrap"
+      ],
+      [
+        "confint_tidy"
+      ],
+      [
+        "finish_glance"
+      ],
+      [
+        "fix_data_frame"
+      ],
+      [
+        "glance"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tidy_irlba"
+      ]
+    ],
+    "topics": [
+      [
+        "modeling"
+      ],
+      [
+        "tidy-data"
+      ]
+    ],
+    "score": 21.9333,
+    "stars": 1503,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "broom Convert Statistical Objects into Tidy Tibbles Summarizes key information about statistical objects in\ntidy tibbles. This makes it easy to report results, create\nplots and consistently work with large numbers of models at\nonce.  Broom provides three verbs that each provide different\ntypes of information about a model. tidy() summarizes\ninformation about model components such as coefficients of a\nregression. glance() reports information about an entire model,\nsuch as goodness of fit measures like AIC and BIC. augment()\nadds information about individual observations to a dataset,\nsuch as fitted values or influence measures. augment augment_columns bootstrap confint_tidy finish_glance fix_data_frame glance tidy tidy_irlba modeling tidy-data"
+  },
+  {
+    "id": 1076,
+    "package_name": "recipes",
+    "title": "Preprocessing and Feature Engineering Steps for Modeling",
+    "description": "A recipe prepares your data for modeling. We provide an\nextensible framework for pipeable sequences of feature\nengineering steps provides preprocessing tools to be applied to\ndata. Statistical parameters for the steps can be estimated\nfrom an initial data set and then applied to other data sets.\nThe resulting processed output can then be used as inputs for\nstatistical or machine learning models.",
+    "version": "1.3.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre],\nHadley Wickham [aut],\nEmil Hvitfeldt [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/recipes,\nhttps://recipes.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/recipes/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".get_data_types"
+      ],
+      [
+        ".recipes_estimate_sparsity"
+      ],
+      [
+        ".recipes_preserve_sparsity"
+      ],
+      [
+        ".recipes_toggle_sparse_args"
+      ],
+      [
+        "%>%"
+      ],
+      [
+        "add_check"
+      ],
+      [
+        "add_role"
+      ],
+      [
+        "add_step"
+      ],
+      [
+        "all_date"
+      ],
+      [
+        "all_date_predictors"
+      ],
+      [
+        "all_datetime"
+      ],
+      [
+        "all_datetime_predictors"
+      ],
+      [
+        "all_double"
+      ],
+      [
+        "all_double_predictors"
+      ],
+      [
+        "all_factor"
+      ],
+      [
+        "all_factor_predictors"
+      ],
+      [
+        "all_integer"
+      ],
+      [
+        "all_integer_predictors"
+      ],
+      [
+        "all_logical"
+      ],
+      [
+        "all_logical_predictors"
+      ],
+      [
+        "all_nominal"
+      ],
+      [
+        "all_nominal_predictors"
+      ],
+      [
+        "all_numeric"
+      ],
+      [
+        "all_numeric_predictors"
+      ],
+      [
+        "all_ordered"
+      ],
+      [
+        "all_ordered_predictors"
+      ],
+      [
+        "all_outcomes"
+      ],
+      [
+        "all_predictors"
+      ],
+      [
+        "all_string"
+      ],
+      [
+        "all_string_predictors"
+      ],
+      [
+        "all_unordered"
+      ],
+      [
+        "all_unordered_predictors"
+      ],
+      [
+        "are_weights_used"
+      ],
+      [
+        "averages"
+      ],
+      [
+        "bake"
+      ],
+      [
+        "check"
+      ],
+      [
+        "check_class"
+      ],
+      [
+        "check_cols"
+      ],
+      [
+        "check_missing"
+      ],
+      [
+        "check_name"
+      ],
+      [
+        "check_new_data"
+      ],
+      [
+        "check_new_values"
+      ],
+      [
+        "check_options"
+      ],
+      [
+        "check_range"
+      ],
+      [
+        "check_type"
+      ],
+      [
+        "correlations"
+      ],
+      [
+        "covariances"
+      ],
+      [
+        "current_info"
+      ],
+      [
+        "denom_vars"
+      ],
+      [
+        "detect_step"
+      ],
+      [
+        "discretize"
+      ],
+      [
+        "dummy_extract_names"
+      ],
+      [
+        "dummy_names"
+      ],
+      [
+        "ellipse_check"
+      ],
+      [
+        "estimate_yj"
+      ],
+      [
+        "extract_fit_time"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "fixed"
+      ],
+      [
+        "format_ch_vec"
+      ],
+      [
+        "format_selectors"
+      ],
+      [
+        "frequency_weights"
+      ],
+      [
+        "fully_trained"
+      ],
+      [
+        "get_case_weights"
+      ],
+      [
+        "get_keep_original_cols"
+      ],
+      [
+        "has_role"
+      ],
+      [
+        "has_type"
+      ],
+      [
+        "imp_vars"
+      ],
+      [
+        "importance_weights"
+      ],
+      [
+        "is_trained"
+      ],
+      [
+        "juice"
+      ],
+      [
+        "medians"
+      ],
+      [
+        "names0"
+      ],
+      [
+        "pca_wts"
+      ],
+      [
+        "prep"
+      ],
+      [
+        "prepare"
+      ],
+      [
+        "prepper"
+      ],
+      [
+        "print_step"
+      ],
+      [
+        "printer"
+      ],
+      [
+        "prof"
+      ],
+      [
+        "rand_id"
+      ],
+      [
+        "recipe"
+      ],
+      [
+        "recipes_argument_select"
+      ],
+      [
+        "recipes_eval_select"
+      ],
+      [
+        "recipes_extension_check"
+      ],
+      [
+        "recipes_names_outcomes"
+      ],
+      [
+        "recipes_names_predictors"
+      ],
+      [
+        "recipes_pkg_check"
+      ],
+      [
+        "recipes_ptype"
+      ],
+      [
+        "recipes_ptype_validate"
+      ],
+      [
+        "recipes_remove_cols"
+      ],
+      [
+        "remove_original_cols"
+      ],
+      [
+        "remove_role"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "sel2char"
+      ],
+      [
+        "step"
+      ],
+      [
+        "step_arrange"
+      ],
+      [
+        "step_bagimpute"
+      ],
+      [
+        "step_bin2factor"
+      ],
+      [
+        "step_BoxCox"
+      ],
+      [
+        "step_bs"
+      ],
+      [
+        "step_center"
+      ],
+      [
+        "step_classdist"
+      ],
+      [
+        "step_classdist_shrunken"
+      ],
+      [
+        "step_corr"
+      ],
+      [
+        "step_count"
+      ],
+      [
+        "step_cut"
+      ],
+      [
+        "step_date"
+      ],
+      [
+        "step_depth"
+      ],
+      [
+        "step_discretize"
+      ],
+      [
+        "step_dummy"
+      ],
+      [
+        "step_dummy_extract"
+      ],
+      [
+        "step_dummy_multi_choice"
+      ],
+      [
+        "step_factor2string"
+      ],
+      [
+        "step_filter"
+      ],
+      [
+        "step_filter_missing"
+      ],
+      [
+        "step_geodist"
+      ],
+      [
+        "step_harmonic"
+      ],
+      [
+        "step_holiday"
+      ],
+      [
+        "step_hyperbolic"
+      ],
+      [
+        "step_ica"
+      ],
+      [
+        "step_impute_bag"
+      ],
+      [
+        "step_impute_knn"
+      ],
+      [
+        "step_impute_linear"
+      ],
+      [
+        "step_impute_lower"
+      ],
+      [
+        "step_impute_mean"
+      ],
+      [
+        "step_impute_median"
+      ],
+      [
+        "step_impute_mode"
+      ],
+      [
+        "step_impute_roll"
+      ],
+      [
+        "step_indicate_na"
+      ],
+      [
+        "step_integer"
+      ],
+      [
+        "step_interact"
+      ],
+      [
+        "step_intercept"
+      ],
+      [
+        "step_inverse"
+      ],
+      [
+        "step_invlogit"
+      ],
+      [
+        "step_isomap"
+      ],
+      [
+        "step_knnimpute"
+      ],
+      [
+        "step_kpca"
+      ],
+      [
+        "step_kpca_poly"
+      ],
+      [
+        "step_kpca_rbf"
+      ],
+      [
+        "step_lag"
+      ],
+      [
+        "step_lincomb"
+      ],
+      [
+        "step_log"
+      ],
+      [
+        "step_logit"
+      ],
+      [
+        "step_lowerimpute"
+      ],
+      [
+        "step_meanimpute"
+      ],
+      [
+        "step_medianimpute"
+      ],
+      [
+        "step_modeimpute"
+      ],
+      [
+        "step_mutate"
+      ],
+      [
+        "step_mutate_at"
+      ],
+      [
+        "step_naomit"
+      ],
+      [
+        "step_nnmf"
+      ],
+      [
+        "step_nnmf_sparse"
+      ],
+      [
+        "step_normalize"
+      ],
+      [
+        "step_novel"
+      ],
+      [
+        "step_ns"
+      ],
+      [
+        "step_num2factor"
+      ],
+      [
+        "step_nzv"
+      ],
+      [
+        "step_ordinalscore"
+      ],
+      [
+        "step_other"
+      ],
+      [
+        "step_pca"
+      ],
+      [
+        "step_percentile"
+      ],
+      [
+        "step_pls"
+      ],
+      [
+        "step_poly"
+      ],
+      [
+        "step_poly_bernstein"
+      ],
+      [
+        "step_profile"
+      ],
+      [
+        "step_range"
+      ],
+      [
+        "step_ratio"
+      ],
+      [
+        "step_regex"
+      ],
+      [
+        "step_relevel"
+      ],
+      [
+        "step_relu"
+      ],
+      [
+        "step_rename"
+      ],
+      [
+        "step_rename_at"
+      ],
+      [
+        "step_rm"
+      ],
+      [
+        "step_rollimpute"
+      ],
+      [
+        "step_sample"
+      ],
+      [
+        "step_scale"
+      ],
+      [
+        "step_select"
+      ],
+      [
+        "step_shuffle"
+      ],
+      [
+        "step_slice"
+      ],
+      [
+        "step_spatialsign"
+      ],
+      [
+        "step_spline_b"
+      ],
+      [
+        "step_spline_convex"
+      ],
+      [
+        "step_spline_monotone"
+      ],
+      [
+        "step_spline_natural"
+      ],
+      [
+        "step_spline_nonnegative"
+      ],
+      [
+        "step_sqrt"
+      ],
+      [
+        "step_string2factor"
+      ],
+      [
+        "step_time"
+      ],
+      [
+        "step_unknown"
+      ],
+      [
+        "step_unorder"
+      ],
+      [
+        "step_window"
+      ],
+      [
+        "step_YeoJohnson"
+      ],
+      [
+        "step_zv"
+      ],
+      [
+        "terms_select"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tunable"
+      ],
+      [
+        "tune_args"
+      ],
+      [
+        "update"
+      ],
+      [
+        "update_role"
+      ],
+      [
+        "update_role_requirements"
+      ],
+      [
+        "variances"
+      ],
+      [
+        "yj_transform"
+      ]
+    ],
+    "topics": [],
+    "score": 18.794,
+    "stars": 607,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "recipes Preprocessing and Feature Engineering Steps for Modeling A recipe prepares your data for modeling. We provide an\nextensible framework for pipeable sequences of feature\nengineering steps provides preprocessing tools to be applied to\ndata. Statistical parameters for the steps can be estimated\nfrom an initial data set and then applied to other data sets.\nThe resulting processed output can then be used as inputs for\nstatistical or machine learning models. .get_data_types .recipes_estimate_sparsity .recipes_preserve_sparsity .recipes_toggle_sparse_args %>% add_check add_role add_step all_date all_date_predictors all_datetime all_datetime_predictors all_double all_double_predictors all_factor all_factor_predictors all_integer all_integer_predictors all_logical all_logical_predictors all_nominal all_nominal_predictors all_numeric all_numeric_predictors all_ordered all_ordered_predictors all_outcomes all_predictors all_string all_string_predictors all_unordered all_unordered_predictors are_weights_used averages bake check check_class check_cols check_missing check_name check_new_data check_new_values check_options check_range check_type correlations covariances current_info denom_vars detect_step discretize dummy_extract_names dummy_names ellipse_check estimate_yj extract_fit_time extract_parameter_dials extract_parameter_set_dials fixed format_ch_vec format_selectors frequency_weights fully_trained get_case_weights get_keep_original_cols has_role has_type imp_vars importance_weights is_trained juice medians names0 pca_wts prep prepare prepper print_step printer prof rand_id recipe recipes_argument_select recipes_eval_select recipes_extension_check recipes_names_outcomes recipes_names_predictors recipes_pkg_check recipes_ptype recipes_ptype_validate recipes_remove_cols remove_original_cols remove_role required_pkgs sel2char step step_arrange step_bagimpute step_bin2factor step_BoxCox step_bs step_center step_classdist step_classdist_shrunken step_corr step_count step_cut step_date step_depth step_discretize step_dummy step_dummy_extract step_dummy_multi_choice step_factor2string step_filter step_filter_missing step_geodist step_harmonic step_holiday step_hyperbolic step_ica step_impute_bag step_impute_knn step_impute_linear step_impute_lower step_impute_mean step_impute_median step_impute_mode step_impute_roll step_indicate_na step_integer step_interact step_intercept step_inverse step_invlogit step_isomap step_knnimpute step_kpca step_kpca_poly step_kpca_rbf step_lag step_lincomb step_log step_logit step_lowerimpute step_meanimpute step_medianimpute step_modeimpute step_mutate step_mutate_at step_naomit step_nnmf step_nnmf_sparse step_normalize step_novel step_ns step_num2factor step_nzv step_ordinalscore step_other step_pca step_percentile step_pls step_poly step_poly_bernstein step_profile step_range step_ratio step_regex step_relevel step_relu step_rename step_rename_at step_rm step_rollimpute step_sample step_scale step_select step_shuffle step_slice step_spatialsign step_spline_b step_spline_convex step_spline_monotone step_spline_natural step_spline_nonnegative step_sqrt step_string2factor step_time step_unknown step_unorder step_window step_YeoJohnson step_zv terms_select tidy tunable tune_args update update_role update_role_requirements variances yj_transform "
+  },
+  {
+    "id": 1148,
+    "package_name": "rsample",
+    "title": "General Resampling Infrastructure",
+    "description": "Classes and functions to create and summarize different\ntypes of resampling objects (e.g. bootstrap, cross-validation).",
+    "version": "1.3.1.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Hannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nFanny Chow [aut],\nMax Kuhn [aut],\nMichael Mahoney [aut] (ORCID: <https://orcid.org/0000-0003-2402-304X>),\nJulia Silge [aut] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nHadley Wickham [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://rsample.tidymodels.org,\nhttps://github.com/tidymodels/rsample",
+    "bug_reports": "https://github.com/tidymodels/rsample/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".get_fingerprint"
+      ],
+      [
+        ".get_split_args"
+      ],
+      [
+        "add_resample_id"
+      ],
+      [
+        "all_of"
+      ],
+      [
+        "analysis"
+      ],
+      [
+        "any_of"
+      ],
+      [
+        "apparent"
+      ],
+      [
+        "assessment"
+      ],
+      [
+        "bootstraps"
+      ],
+      [
+        "calibration"
+      ],
+      [
+        "caret2rsample"
+      ],
+      [
+        "clustering_cv"
+      ],
+      [
+        "complement"
+      ],
+      [
+        "contains"
+      ],
+      [
+        "ends_with"
+      ],
+      [
+        "everything"
+      ],
+      [
+        "form_pred"
+      ],
+      [
+        "get_rsplit"
+      ],
+      [
+        "group_bootstraps"
+      ],
+      [
+        "group_initial_split"
+      ],
+      [
+        "group_initial_validation_split"
+      ],
+      [
+        "group_mc_cv"
+      ],
+      [
+        "group_validation_split"
+      ],
+      [
+        "group_vfold_cv"
+      ],
+      [
+        "initial_split"
+      ],
+      [
+        "initial_time_split"
+      ],
+      [
+        "initial_validation_split"
+      ],
+      [
+        "initial_validation_time_split"
+      ],
+      [
+        "int_bca"
+      ],
+      [
+        "int_pctl"
+      ],
+      [
+        "int_t"
+      ],
+      [
+        "internal_calibration_split"
+      ],
+      [
+        "last_col"
+      ],
+      [
+        "loo_cv"
+      ],
+      [
+        "make_splits"
+      ],
+      [
+        "make_strata"
+      ],
+      [
+        "manual_rset"
+      ],
+      [
+        "matches"
+      ],
+      [
+        "mc_cv"
+      ],
+      [
+        "nested_cv"
+      ],
+      [
+        "new_rset"
+      ],
+      [
+        "num_range"
+      ],
+      [
+        "permutations"
+      ],
+      [
+        "populate"
+      ],
+      [
+        "reg_intervals"
+      ],
+      [
+        "reshuffle_rset"
+      ],
+      [
+        "reverse_splits"
+      ],
+      [
+        "rolling_origin"
+      ],
+      [
+        "rsample2caret"
+      ],
+      [
+        "rset_reconstruct"
+      ],
+      [
+        "sliding_index"
+      ],
+      [
+        "sliding_period"
+      ],
+      [
+        "sliding_window"
+      ],
+      [
+        "starts_with"
+      ],
+      [
+        "testing"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "training"
+      ],
+      [
+        "validation"
+      ],
+      [
+        "validation_set"
+      ],
+      [
+        "validation_split"
+      ],
+      [
+        "validation_time_split"
+      ],
+      [
+        "vfold_cv"
+      ]
+    ],
+    "topics": [],
+    "score": 16.9647,
+    "stars": 341,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "rsample General Resampling Infrastructure Classes and functions to create and summarize different\ntypes of resampling objects (e.g. bootstrap, cross-validation). .get_fingerprint .get_split_args add_resample_id all_of analysis any_of apparent assessment bootstraps calibration caret2rsample clustering_cv complement contains ends_with everything form_pred get_rsplit group_bootstraps group_initial_split group_initial_validation_split group_mc_cv group_validation_split group_vfold_cv initial_split initial_time_split initial_validation_split initial_validation_time_split int_bca int_pctl int_t internal_calibration_split last_col loo_cv make_splits make_strata manual_rset matches mc_cv nested_cv new_rset num_range permutations populate reg_intervals reshuffle_rset reverse_splits rolling_origin rsample2caret rset_reconstruct sliding_index sliding_period sliding_window starts_with testing tidy training validation validation_set validation_split validation_time_split vfold_cv "
+  },
+  {
+    "id": 1342,
+    "package_name": "tidymodels",
+    "title": "Easily Install and Load the 'Tidymodels' Packages",
+    "description": "The tidy modeling \"verse\" is a collection of packages for\nmodeling and statistical analysis that share the underlying\ndesign philosophy, grammar, and data structures of the\ntidyverse.",
+    "version": "1.4.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nHadley Wickham [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://tidymodels.tidymodels.org,\nhttps://github.com/tidymodels/tidymodels",
+    "bug_reports": "https://github.com/tidymodels/tidymodels/issues",
+    "repository": "",
+    "exports": [
+      [
+        "pkg_deps"
+      ],
+      [
+        "tag_attach"
+      ],
+      [
+        "tag_show"
+      ],
+      [
+        "tag_update"
+      ],
+      [
+        "tidymodels_conflicts"
+      ],
+      [
+        "tidymodels_packages"
+      ],
+      [
+        "tidymodels_prefer"
+      ],
+      [
+        "tidymodels_update"
+      ]
+    ],
+    "topics": [],
+    "score": 16.6819,
+    "stars": 805,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tidymodels Easily Install and Load the 'Tidymodels' Packages The tidy modeling \"verse\" is a collection of packages for\nmodeling and statistical analysis that share the underlying\ndesign philosophy, grammar, and data structures of the\ntidyverse. pkg_deps tag_attach tag_show tag_update tidymodels_conflicts tidymodels_packages tidymodels_prefer tidymodels_update "
+  },
+  {
+    "id": 710,
+    "package_name": "infer",
+    "title": "Tidy Statistical Inference",
+    "description": "The objective of this package is to perform inference\nusing an expressive statistical grammar that coheres with the\ntidy design framework.",
+    "version": "1.0.9.9000",
+    "maintainer": "Simon Couch <simon.couch@posit.co>",
+    "author": "Andrew Bray [aut],\nChester Ismay [aut] (ORCID: <https://orcid.org/0000-0003-2820-2547>),\nEvgeni Chasnovski [aut] (ORCID:\n<https://orcid.org/0000-0002-1617-4019>),\nSimon Couch [aut, cre] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nBen Baumer [aut] (ORCID: <https://orcid.org/0000-0002-3279-0516>),\nMine Cetinkaya-Rundel [aut] (ORCID:\n<https://orcid.org/0000-0001-6452-2420>),\nTed Laderas [ctb] (ORCID: <https://orcid.org/0000-0002-6207-7068>),\nNick Solomon [ctb],\nJohanna Hardin [ctb],\nAlbert Y. Kim [ctb] (ORCID: <https://orcid.org/0000-0001-7824-306X>),\nNeal Fultz [ctb],\nDoug Friedman [ctb],\nRichie Cotton [ctb] (ORCID: <https://orcid.org/0000-0003-2504-802X>),\nBrian Fannin [ctb]",
+    "url": "https://github.com/tidymodels/infer, https://infer.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/infer/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "assume"
+      ],
+      [
+        "calculate"
+      ],
+      [
+        "chisq_stat"
+      ],
+      [
+        "chisq_test"
+      ],
+      [
+        "conf_int"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "fit.infer"
+      ],
+      [
+        "generate"
+      ],
+      [
+        "get_ci"
+      ],
+      [
+        "get_confidence_interval"
+      ],
+      [
+        "get_p_value"
+      ],
+      [
+        "get_pvalue"
+      ],
+      [
+        "ggplot_add"
+      ],
+      [
+        "hypothesise"
+      ],
+      [
+        "hypothesize"
+      ],
+      [
+        "observe"
+      ],
+      [
+        "p_value"
+      ],
+      [
+        "prop_test"
+      ],
+      [
+        "rep_sample_n"
+      ],
+      [
+        "rep_slice_sample"
+      ],
+      [
+        "shade_ci"
+      ],
+      [
+        "shade_confidence_interval"
+      ],
+      [
+        "shade_p_value"
+      ],
+      [
+        "shade_pvalue"
+      ],
+      [
+        "specify"
+      ],
+      [
+        "t_stat"
+      ],
+      [
+        "t_test"
+      ],
+      [
+        "visualise"
+      ],
+      [
+        "visualize"
+      ]
+    ],
+    "topics": [],
+    "score": 16.5016,
+    "stars": 767,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "infer Tidy Statistical Inference The objective of this package is to perform inference\nusing an expressive statistical grammar that coheres with the\ntidy design framework. %>% assume calculate chisq_stat chisq_test conf_int fit fit.infer generate get_ci get_confidence_interval get_p_value get_pvalue ggplot_add hypothesise hypothesize observe p_value prop_test rep_sample_n rep_slice_sample shade_ci shade_confidence_interval shade_p_value shade_pvalue specify t_stat t_test visualise visualize "
+  },
+  {
+    "id": 946,
+    "package_name": "parsnip",
+    "title": "A Common API to Modeling and Analysis Functions",
+    "description": "A common interface is provided to allow users to specify a\nmodel without having to remember the different argument names\nacross different functions or computational engines (e.g. 'R',\n'Spark', 'Stan', 'H2O', etc).",
+    "version": "1.4.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [cre, aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nDavis Vaughan [aut],\nEmil Hvitfeldt [ctb],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/parsnip,\nhttps://parsnip.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/parsnip/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".censoring_weights_graf"
+      ],
+      [
+        ".check_glmnet_penalty_fit"
+      ],
+      [
+        ".check_glmnet_penalty_predict"
+      ],
+      [
+        ".cols"
+      ],
+      [
+        ".convert_form_to_xy_fit"
+      ],
+      [
+        ".convert_form_to_xy_new"
+      ],
+      [
+        ".convert_xy_to_form_fit"
+      ],
+      [
+        ".convert_xy_to_form_new"
+      ],
+      [
+        ".dat"
+      ],
+      [
+        ".extract_surv_status"
+      ],
+      [
+        ".extract_surv_time"
+      ],
+      [
+        ".facts"
+      ],
+      [
+        ".get_prediction_column_names"
+      ],
+      [
+        ".lvls"
+      ],
+      [
+        ".model_param_name_key"
+      ],
+      [
+        ".obs"
+      ],
+      [
+        ".organize_glmnet_pred"
+      ],
+      [
+        ".preds"
+      ],
+      [
+        ".x"
+      ],
+      [
+        ".y"
+      ],
+      [
+        "%>%"
+      ],
+      [
+        "add_rowindex"
+      ],
+      [
+        "augment"
+      ],
+      [
+        "auto_ml"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "bag_mars"
+      ],
+      [
+        "bag_mlp"
+      ],
+      [
+        "bag_tree"
+      ],
+      [
+        "bart"
+      ],
+      [
+        "boost_tree"
+      ],
+      [
+        "C5_rules"
+      ],
+      [
+        "C5.0_train"
+      ],
+      [
+        "case_weights_allowed"
+      ],
+      [
+        "cforest_train"
+      ],
+      [
+        "check_args"
+      ],
+      [
+        "check_empty_ellipse"
+      ],
+      [
+        "check_final_param"
+      ],
+      [
+        "condense_control"
+      ],
+      [
+        "contr_one_hot"
+      ],
+      [
+        "control_parsnip"
+      ],
+      [
+        "convert_stan_interval"
+      ],
+      [
+        "ctree_train"
+      ],
+      [
+        "cubist_rules"
+      ],
+      [
+        "dbart_predict_calc"
+      ],
+      [
+        "decision_tree"
+      ],
+      [
+        "discrim_flexible"
+      ],
+      [
+        "discrim_linear"
+      ],
+      [
+        "discrim_quad"
+      ],
+      [
+        "discrim_regularized"
+      ],
+      [
+        "ensure_parsnip_format"
+      ],
+      [
+        "eval_args"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_time"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "find_engine_files"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "fit_control"
+      ],
+      [
+        "fit_xy"
+      ],
+      [
+        "fit_xy.model_spec"
+      ],
+      [
+        "fit.model_spec"
+      ],
+      [
+        "format_class"
+      ],
+      [
+        "format_classprobs"
+      ],
+      [
+        "format_hazard"
+      ],
+      [
+        "format_linear_pred"
+      ],
+      [
+        "format_num"
+      ],
+      [
+        "format_survival"
+      ],
+      [
+        "format_time"
+      ],
+      [
+        "frequency_weights"
+      ],
+      [
+        "gen_additive_mod"
+      ],
+      [
+        "get_dependency"
+      ],
+      [
+        "get_encoding"
+      ],
+      [
+        "get_fit"
+      ],
+      [
+        "get_from_env"
+      ],
+      [
+        "get_model_env"
+      ],
+      [
+        "get_pred_type"
+      ],
+      [
+        "glance"
+      ],
+      [
+        "glm_grouped"
+      ],
+      [
+        "has_multi_predict"
+      ],
+      [
+        "importance_weights"
+      ],
+      [
+        "is_varying"
+      ],
+      [
+        "keras_activations"
+      ],
+      [
+        "keras_mlp"
+      ],
+      [
+        "keras_predict_classes"
+      ],
+      [
+        "knit_engine_docs"
+      ],
+      [
+        "linear_reg"
+      ],
+      [
+        "list_md_problems"
+      ],
+      [
+        "logistic_reg"
+      ],
+      [
+        "make_call"
+      ],
+      [
+        "make_classes"
+      ],
+      [
+        "make_engine_list"
+      ],
+      [
+        "make_seealso_list"
+      ],
+      [
+        "mars"
+      ],
+      [
+        "matrix_to_quantile_pred"
+      ],
+      [
+        "max_mtry_formula"
+      ],
+      [
+        "maybe_data_frame"
+      ],
+      [
+        "maybe_matrix"
+      ],
+      [
+        "min_cols"
+      ],
+      [
+        "min_rows"
+      ],
+      [
+        "mlp"
+      ],
+      [
+        "model_printer"
+      ],
+      [
+        "multi_predict"
+      ],
+      [
+        "multi_predict_args"
+      ],
+      [
+        "multinom_reg"
+      ],
+      [
+        "naive_Bayes"
+      ],
+      [
+        "nearest_neighbor"
+      ],
+      [
+        "new_model_spec"
+      ],
+      [
+        "null_model"
+      ],
+      [
+        "null_value"
+      ],
+      [
+        "nullmodel"
+      ],
+      [
+        "parsnip_addin"
+      ],
+      [
+        "pls"
+      ],
+      [
+        "poisson_reg"
+      ],
+      [
+        "pred_value_template"
+      ],
+      [
+        "predict_class.model_fit"
+      ],
+      [
+        "predict_classprob.model_fit"
+      ],
+      [
+        "predict_confint"
+      ],
+      [
+        "predict_confint.model_fit"
+      ],
+      [
+        "predict_hazard.model_fit"
+      ],
+      [
+        "predict_linear_pred"
+      ],
+      [
+        "predict_linear_pred.model_fit"
+      ],
+      [
+        "predict_numeric"
+      ],
+      [
+        "predict_numeric.model_fit"
+      ],
+      [
+        "predict_predint"
+      ],
+      [
+        "predict_predint.model_fit"
+      ],
+      [
+        "predict_quantile.model_fit"
+      ],
+      [
+        "predict_raw"
+      ],
+      [
+        "predict_raw.model_fit"
+      ],
+      [
+        "predict_survival"
+      ],
+      [
+        "predict_survival.model_fit"
+      ],
+      [
+        "predict_time"
+      ],
+      [
+        "predict_time.model_fit"
+      ],
+      [
+        "predict.model_fit"
+      ],
+      [
+        "prepare_data"
+      ],
+      [
+        "print_model_spec"
+      ],
+      [
+        "prompt_missing_implementation"
+      ],
+      [
+        "proportional_hazards"
+      ],
+      [
+        "rand_forest"
+      ],
+      [
+        "repair_call"
+      ],
+      [
+        "req_pkgs"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "rule_fit"
+      ],
+      [
+        "set_args"
+      ],
+      [
+        "set_dependency"
+      ],
+      [
+        "set_encoding"
+      ],
+      [
+        "set_engine"
+      ],
+      [
+        "set_env_val"
+      ],
+      [
+        "set_fit"
+      ],
+      [
+        "set_in_env"
+      ],
+      [
+        "set_mode"
+      ],
+      [
+        "set_model_arg"
+      ],
+      [
+        "set_model_engine"
+      ],
+      [
+        "set_model_mode"
+      ],
+      [
+        "set_new_model"
+      ],
+      [
+        "set_pred"
+      ],
+      [
+        "set_tf_seed"
+      ],
+      [
+        "show_call"
+      ],
+      [
+        "show_engines"
+      ],
+      [
+        "show_fit"
+      ],
+      [
+        "show_model_info"
+      ],
+      [
+        "spec_is_loaded"
+      ],
+      [
+        "spec_is_possible"
+      ],
+      [
+        "stan_conf_int"
+      ],
+      [
+        "surv_reg"
+      ],
+      [
+        "survival_reg"
+      ],
+      [
+        "svm_linear"
+      ],
+      [
+        "svm_poly"
+      ],
+      [
+        "svm_rbf"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "translate"
+      ],
+      [
+        "translate.default"
+      ],
+      [
+        "tune"
+      ],
+      [
+        "update_dot_check"
+      ],
+      [
+        "update_engine_parameters"
+      ],
+      [
+        "update_main_parameters"
+      ],
+      [
+        "update_model_info_file"
+      ],
+      [
+        "update_spec"
+      ],
+      [
+        "varying"
+      ],
+      [
+        "varying_args"
+      ],
+      [
+        "xgb_predict"
+      ],
+      [
+        "xgb_train"
+      ]
+    ],
+    "topics": [],
+    "score": 16.4026,
+    "stars": 638,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "parsnip A Common API to Modeling and Analysis Functions A common interface is provided to allow users to specify a\nmodel without having to remember the different argument names\nacross different functions or computational engines (e.g. 'R',\n'Spark', 'Stan', 'H2O', etc). .censoring_weights_graf .check_glmnet_penalty_fit .check_glmnet_penalty_predict .cols .convert_form_to_xy_fit .convert_form_to_xy_new .convert_xy_to_form_fit .convert_xy_to_form_new .dat .extract_surv_status .extract_surv_time .facts .get_prediction_column_names .lvls .model_param_name_key .obs .organize_glmnet_pred .preds .x .y %>% add_rowindex augment auto_ml autoplot bag_mars bag_mlp bag_tree bart boost_tree C5_rules C5.0_train case_weights_allowed cforest_train check_args check_empty_ellipse check_final_param condense_control contr_one_hot control_parsnip convert_stan_interval ctree_train cubist_rules dbart_predict_calc decision_tree discrim_flexible discrim_linear discrim_quad discrim_regularized ensure_parsnip_format eval_args extract_fit_engine extract_fit_time extract_parameter_dials extract_parameter_set_dials extract_spec_parsnip find_engine_files fit fit_control fit_xy fit_xy.model_spec fit.model_spec format_class format_classprobs format_hazard format_linear_pred format_num format_survival format_time frequency_weights gen_additive_mod get_dependency get_encoding get_fit get_from_env get_model_env get_pred_type glance glm_grouped has_multi_predict importance_weights is_varying keras_activations keras_mlp keras_predict_classes knit_engine_docs linear_reg list_md_problems logistic_reg make_call make_classes make_engine_list make_seealso_list mars matrix_to_quantile_pred max_mtry_formula maybe_data_frame maybe_matrix min_cols min_rows mlp model_printer multi_predict multi_predict_args multinom_reg naive_Bayes nearest_neighbor new_model_spec null_model null_value nullmodel parsnip_addin pls poisson_reg pred_value_template predict_class.model_fit predict_classprob.model_fit predict_confint predict_confint.model_fit predict_hazard.model_fit predict_linear_pred predict_linear_pred.model_fit predict_numeric predict_numeric.model_fit predict_predint predict_predint.model_fit predict_quantile.model_fit predict_raw predict_raw.model_fit predict_survival predict_survival.model_fit predict_time predict_time.model_fit predict.model_fit prepare_data print_model_spec prompt_missing_implementation proportional_hazards rand_forest repair_call req_pkgs required_pkgs rule_fit set_args set_dependency set_encoding set_engine set_env_val set_fit set_in_env set_mode set_model_arg set_model_engine set_model_mode set_new_model set_pred set_tf_seed show_call show_engines show_fit show_model_info spec_is_loaded spec_is_possible stan_conf_int surv_reg survival_reg svm_linear svm_poly svm_rbf tidy translate translate.default tune update_dot_check update_engine_parameters update_main_parameters update_model_info_file update_spec varying varying_args xgb_predict xgb_train "
+  },
+  {
+    "id": 1468,
+    "package_name": "yardstick",
+    "title": "Tidy Characterizations of Model Performance",
+    "description": "Tidy tools for quantifying how well model fits to a data\nset such as confusion matrices, class probability curve\nsummaries, and regression metrics (e.g., RMSE).",
+    "version": "1.3.2.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Max Kuhn [aut],\nDavis Vaughan [aut],\nEmil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/yardstick,\nhttps://yardstick.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/yardstick/issues",
+    "repository": "",
+    "exports": [
+      [
+        "accuracy"
+      ],
+      [
+        "accuracy_vec"
+      ],
+      [
+        "average_precision"
+      ],
+      [
+        "average_precision_vec"
+      ],
+      [
+        "bal_accuracy"
+      ],
+      [
+        "bal_accuracy_vec"
+      ],
+      [
+        "brier_class"
+      ],
+      [
+        "brier_class_vec"
+      ],
+      [
+        "brier_survival"
+      ],
+      [
+        "brier_survival_integrated"
+      ],
+      [
+        "brier_survival_integrated_vec"
+      ],
+      [
+        "brier_survival_vec"
+      ],
+      [
+        "ccc"
+      ],
+      [
+        "ccc_vec"
+      ],
+      [
+        "check_class_metric"
+      ],
+      [
+        "check_dynamic_survival_metric"
+      ],
+      [
+        "check_linear_pred_survival_metric"
+      ],
+      [
+        "check_numeric_metric"
+      ],
+      [
+        "check_ordered_prob_metric"
+      ],
+      [
+        "check_prob_metric"
+      ],
+      [
+        "check_static_survival_metric"
+      ],
+      [
+        "class_metric_summarizer"
+      ],
+      [
+        "classification_cost"
+      ],
+      [
+        "classification_cost_vec"
+      ],
+      [
+        "concordance_survival"
+      ],
+      [
+        "concordance_survival_vec"
+      ],
+      [
+        "conf_mat"
+      ],
+      [
+        "curve_metric_summarizer"
+      ],
+      [
+        "curve_survival_metric_summarizer"
+      ],
+      [
+        "demographic_parity"
+      ],
+      [
+        "detection_prevalence"
+      ],
+      [
+        "detection_prevalence_vec"
+      ],
+      [
+        "dots_to_estimate"
+      ],
+      [
+        "dynamic_survival_metric_summarizer"
+      ],
+      [
+        "equal_opportunity"
+      ],
+      [
+        "equalized_odds"
+      ],
+      [
+        "f_meas"
+      ],
+      [
+        "f_meas_vec"
+      ],
+      [
+        "finalize_estimator"
+      ],
+      [
+        "finalize_estimator_internal"
+      ],
+      [
+        "gain_capture"
+      ],
+      [
+        "gain_capture_vec"
+      ],
+      [
+        "gain_curve"
+      ],
+      [
+        "get_weights"
+      ],
+      [
+        "huber_loss"
+      ],
+      [
+        "huber_loss_pseudo"
+      ],
+      [
+        "huber_loss_pseudo_vec"
+      ],
+      [
+        "huber_loss_vec"
+      ],
+      [
+        "iic"
+      ],
+      [
+        "iic_vec"
+      ],
+      [
+        "j_index"
+      ],
+      [
+        "j_index_vec"
+      ],
+      [
+        "kap"
+      ],
+      [
+        "kap_vec"
+      ],
+      [
+        "lift_curve"
+      ],
+      [
+        "linear_pred_survival_metric_summarizer"
+      ],
+      [
+        "mae"
+      ],
+      [
+        "mae_vec"
+      ],
+      [
+        "mape"
+      ],
+      [
+        "mape_vec"
+      ],
+      [
+        "mase"
+      ],
+      [
+        "mase_vec"
+      ],
+      [
+        "mcc"
+      ],
+      [
+        "mcc_vec"
+      ],
+      [
+        "metric_set"
+      ],
+      [
+        "metric_summarizer"
+      ],
+      [
+        "metric_tweak"
+      ],
+      [
+        "metric_vec_template"
+      ],
+      [
+        "metrics"
+      ],
+      [
+        "mn_log_loss"
+      ],
+      [
+        "mn_log_loss_vec"
+      ],
+      [
+        "mpe"
+      ],
+      [
+        "mpe_vec"
+      ],
+      [
+        "msd"
+      ],
+      [
+        "msd_vec"
+      ],
+      [
+        "new_class_metric"
+      ],
+      [
+        "new_dynamic_survival_metric"
+      ],
+      [
+        "new_groupwise_metric"
+      ],
+      [
+        "new_integrated_survival_metric"
+      ],
+      [
+        "new_linear_pred_survival_metric"
+      ],
+      [
+        "new_numeric_metric"
+      ],
+      [
+        "new_ordered_prob_metric"
+      ],
+      [
+        "new_prob_metric"
+      ],
+      [
+        "new_static_survival_metric"
+      ],
+      [
+        "npv"
+      ],
+      [
+        "npv_vec"
+      ],
+      [
+        "numeric_metric_summarizer"
+      ],
+      [
+        "ordered_prob_metric_summarizer"
+      ],
+      [
+        "poisson_log_loss"
+      ],
+      [
+        "poisson_log_loss_vec"
+      ],
+      [
+        "ppv"
+      ],
+      [
+        "ppv_vec"
+      ],
+      [
+        "pr_auc"
+      ],
+      [
+        "pr_auc_vec"
+      ],
+      [
+        "pr_curve"
+      ],
+      [
+        "precision"
+      ],
+      [
+        "precision_vec"
+      ],
+      [
+        "prob_metric_summarizer"
+      ],
+      [
+        "ranked_prob_score"
+      ],
+      [
+        "ranked_prob_score_vec"
+      ],
+      [
+        "recall"
+      ],
+      [
+        "recall_vec"
+      ],
+      [
+        "rmse"
+      ],
+      [
+        "rmse_vec"
+      ],
+      [
+        "roc_auc"
+      ],
+      [
+        "roc_auc_survival"
+      ],
+      [
+        "roc_auc_survival_vec"
+      ],
+      [
+        "roc_auc_vec"
+      ],
+      [
+        "roc_aunp"
+      ],
+      [
+        "roc_aunp_vec"
+      ],
+      [
+        "roc_aunu"
+      ],
+      [
+        "roc_aunu_vec"
+      ],
+      [
+        "roc_curve"
+      ],
+      [
+        "roc_curve_survival"
+      ],
+      [
+        "rpd"
+      ],
+      [
+        "rpd_vec"
+      ],
+      [
+        "rpiq"
+      ],
+      [
+        "rpiq_vec"
+      ],
+      [
+        "rsq"
+      ],
+      [
+        "rsq_trad"
+      ],
+      [
+        "rsq_trad_vec"
+      ],
+      [
+        "rsq_vec"
+      ],
+      [
+        "sens"
+      ],
+      [
+        "sens_vec"
+      ],
+      [
+        "sensitivity"
+      ],
+      [
+        "sensitivity_vec"
+      ],
+      [
+        "smape"
+      ],
+      [
+        "smape_vec"
+      ],
+      [
+        "spec"
+      ],
+      [
+        "spec_vec"
+      ],
+      [
+        "specificity"
+      ],
+      [
+        "specificity_vec"
+      ],
+      [
+        "static_survival_metric_summarizer"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "validate_estimator"
+      ],
+      [
+        "yardstick_any_missing"
+      ],
+      [
+        "yardstick_remove_missing"
+      ]
+    ],
+    "topics": [],
+    "score": 16.0649,
+    "stars": 397,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "yardstick Tidy Characterizations of Model Performance Tidy tools for quantifying how well model fits to a data\nset such as confusion matrices, class probability curve\nsummaries, and regression metrics (e.g., RMSE). accuracy accuracy_vec average_precision average_precision_vec bal_accuracy bal_accuracy_vec brier_class brier_class_vec brier_survival brier_survival_integrated brier_survival_integrated_vec brier_survival_vec ccc ccc_vec check_class_metric check_dynamic_survival_metric check_linear_pred_survival_metric check_numeric_metric check_ordered_prob_metric check_prob_metric check_static_survival_metric class_metric_summarizer classification_cost classification_cost_vec concordance_survival concordance_survival_vec conf_mat curve_metric_summarizer curve_survival_metric_summarizer demographic_parity detection_prevalence detection_prevalence_vec dots_to_estimate dynamic_survival_metric_summarizer equal_opportunity equalized_odds f_meas f_meas_vec finalize_estimator finalize_estimator_internal gain_capture gain_capture_vec gain_curve get_weights huber_loss huber_loss_pseudo huber_loss_pseudo_vec huber_loss_vec iic iic_vec j_index j_index_vec kap kap_vec lift_curve linear_pred_survival_metric_summarizer mae mae_vec mape mape_vec mase mase_vec mcc mcc_vec metric_set metric_summarizer metric_tweak metric_vec_template metrics mn_log_loss mn_log_loss_vec mpe mpe_vec msd msd_vec new_class_metric new_dynamic_survival_metric new_groupwise_metric new_integrated_survival_metric new_linear_pred_survival_metric new_numeric_metric new_ordered_prob_metric new_prob_metric new_static_survival_metric npv npv_vec numeric_metric_summarizer ordered_prob_metric_summarizer poisson_log_loss poisson_log_loss_vec ppv ppv_vec pr_auc pr_auc_vec pr_curve precision precision_vec prob_metric_summarizer ranked_prob_score ranked_prob_score_vec recall recall_vec rmse rmse_vec roc_auc roc_auc_survival roc_auc_survival_vec roc_auc_vec roc_aunp roc_aunp_vec roc_aunu roc_aunu_vec roc_curve roc_curve_survival rpd rpd_vec rpiq rpiq_vec rsq rsq_trad rsq_trad_vec rsq_vec sens sens_vec sensitivity sensitivity_vec smape smape_vec spec spec_vec specificity specificity_vec static_survival_metric_summarizer tidy validate_estimator yardstick_any_missing yardstick_remove_missing "
+  },
+  {
+    "id": 675,
+    "package_name": "hardhat",
+    "title": "Construct Modeling Packages",
+    "description": "Building modeling packages is hard. A large amount of\neffort generally goes into providing an implementation for a\nnew method that is efficient, fast, and correct, but often less\nemphasis is put on the user interface. A good interface\nrequires specialized knowledge about S3 methods and formulas,\nwhich the average package developer might not have. The goal of\n'hardhat' is to reduce the burden around building new modeling\npackages by providing functionality for preprocessing,\npredicting, and validating input.",
+    "version": "1.4.2.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Hannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nDavis Vaughan [aut],\nMax Kuhn [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/hardhat,\nhttps://hardhat.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/hardhat/issues",
+    "repository": "",
+    "exports": [
+      [
+        "add_intercept_column"
+      ],
+      [
+        "check_column_names"
+      ],
+      [
+        "check_no_formula_duplication"
+      ],
+      [
+        "check_outcomes_are_binary"
+      ],
+      [
+        "check_outcomes_are_factors"
+      ],
+      [
+        "check_outcomes_are_numeric"
+      ],
+      [
+        "check_outcomes_are_univariate"
+      ],
+      [
+        "check_prediction_size"
+      ],
+      [
+        "check_predictors_are_numeric"
+      ],
+      [
+        "check_quantile_levels"
+      ],
+      [
+        "contr_one_hot"
+      ],
+      [
+        "create_modeling_package"
+      ],
+      [
+        "default_formula_blueprint"
+      ],
+      [
+        "default_recipe_blueprint"
+      ],
+      [
+        "default_xy_blueprint"
+      ],
+      [
+        "delete_response"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "extract_fit_time"
+      ],
+      [
+        "extract_mold"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_postprocessor"
+      ],
+      [
+        "extract_preprocessor"
+      ],
+      [
+        "extract_quantile_levels"
+      ],
+      [
+        "extract_recipe"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "extract_tailor"
+      ],
+      [
+        "extract_workflow"
+      ],
+      [
+        "fct_encode_one_hot"
+      ],
+      [
+        "forge"
+      ],
+      [
+        "frequency_weights"
+      ],
+      [
+        "get_data_classes"
+      ],
+      [
+        "get_levels"
+      ],
+      [
+        "get_outcome_levels"
+      ],
+      [
+        "importance_weights"
+      ],
+      [
+        "impute_quantiles"
+      ],
+      [
+        "is_blueprint"
+      ],
+      [
+        "is_case_weights"
+      ],
+      [
+        "is_frequency_weights"
+      ],
+      [
+        "is_importance_weights"
+      ],
+      [
+        "is_quantile_pred"
+      ],
+      [
+        "model_frame"
+      ],
+      [
+        "model_matrix"
+      ],
+      [
+        "model_offset"
+      ],
+      [
+        "mold"
+      ],
+      [
+        "new_blueprint"
+      ],
+      [
+        "new_case_weights"
+      ],
+      [
+        "new_default_formula_blueprint"
+      ],
+      [
+        "new_default_recipe_blueprint"
+      ],
+      [
+        "new_default_xy_blueprint"
+      ],
+      [
+        "new_formula_blueprint"
+      ],
+      [
+        "new_frequency_weights"
+      ],
+      [
+        "new_importance_weights"
+      ],
+      [
+        "new_model"
+      ],
+      [
+        "new_recipe_blueprint"
+      ],
+      [
+        "new_xy_blueprint"
+      ],
+      [
+        "quantile_pred"
+      ],
+      [
+        "recompose"
+      ],
+      [
+        "refresh_blueprint"
+      ],
+      [
+        "run_forge"
+      ],
+      [
+        "run_mold"
+      ],
+      [
+        "scream"
+      ],
+      [
+        "shrink"
+      ],
+      [
+        "snap"
+      ],
+      [
+        "spruce_class"
+      ],
+      [
+        "spruce_class_multiple"
+      ],
+      [
+        "spruce_numeric"
+      ],
+      [
+        "spruce_numeric_multiple"
+      ],
+      [
+        "spruce_prob"
+      ],
+      [
+        "spruce_prob_multiple"
+      ],
+      [
+        "standardize"
+      ],
+      [
+        "tune"
+      ],
+      [
+        "update_blueprint"
+      ],
+      [
+        "use_modeling_deps"
+      ],
+      [
+        "use_modeling_files"
+      ],
+      [
+        "validate_column_names"
+      ],
+      [
+        "validate_no_formula_duplication"
+      ],
+      [
+        "validate_outcomes_are_binary"
+      ],
+      [
+        "validate_outcomes_are_factors"
+      ],
+      [
+        "validate_outcomes_are_numeric"
+      ],
+      [
+        "validate_outcomes_are_univariate"
+      ],
+      [
+        "validate_prediction_size"
+      ],
+      [
+        "validate_predictors_are_numeric"
+      ],
+      [
+        "weighted_table"
+      ]
+    ],
+    "topics": [],
+    "score": 15.1261,
+    "stars": 108,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "hardhat Construct Modeling Packages Building modeling packages is hard. A large amount of\neffort generally goes into providing an implementation for a\nnew method that is efficient, fast, and correct, but often less\nemphasis is put on the user interface. A good interface\nrequires specialized knowledge about S3 methods and formulas,\nwhich the average package developer might not have. The goal of\n'hardhat' is to reduce the burden around building new modeling\npackages by providing functionality for preprocessing,\npredicting, and validating input. add_intercept_column check_column_names check_no_formula_duplication check_outcomes_are_binary check_outcomes_are_factors check_outcomes_are_numeric check_outcomes_are_univariate check_prediction_size check_predictors_are_numeric check_quantile_levels contr_one_hot create_modeling_package default_formula_blueprint default_recipe_blueprint default_xy_blueprint delete_response extract_fit_engine extract_fit_parsnip extract_fit_time extract_mold extract_parameter_dials extract_parameter_set_dials extract_postprocessor extract_preprocessor extract_quantile_levels extract_recipe extract_spec_parsnip extract_tailor extract_workflow fct_encode_one_hot forge frequency_weights get_data_classes get_levels get_outcome_levels importance_weights impute_quantiles is_blueprint is_case_weights is_frequency_weights is_importance_weights is_quantile_pred model_frame model_matrix model_offset mold new_blueprint new_case_weights new_default_formula_blueprint new_default_recipe_blueprint new_default_xy_blueprint new_formula_blueprint new_frequency_weights new_importance_weights new_model new_recipe_blueprint new_xy_blueprint quantile_pred recompose refresh_blueprint run_forge run_mold scream shrink snap spruce_class spruce_class_multiple spruce_numeric spruce_numeric_multiple spruce_prob spruce_prob_multiple standardize tune update_blueprint use_modeling_deps use_modeling_files validate_column_names validate_no_formula_duplication validate_outcomes_are_binary validate_outcomes_are_factors validate_outcomes_are_numeric validate_outcomes_are_univariate validate_prediction_size validate_predictors_are_numeric weighted_table "
+  },
+  {
+    "id": 468,
+    "package_name": "dials",
+    "title": "Tools for Creating Tuning Parameter Values",
+    "description": "Many models contain tuning parameters (i.e. parameters\nthat cannot be directly estimated from the data). These tools\ncan be used to define objects for creating, simulating, or\nvalidating values for such parameters.",
+    "version": "1.4.2.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Max Kuhn [aut],\nHannah Frick [aut, cre],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://dials.tidymodels.org, https://github.com/tidymodels/dials",
+    "bug_reports": "https://github.com/tidymodels/dials/issues",
+    "repository": "",
+    "exports": [
+      [
+        "activation"
+      ],
+      [
+        "activation_2"
+      ],
+      [
+        "adjust_deg_free"
+      ],
+      [
+        "all_neighbors"
+      ],
+      [
+        "average_before_softmax"
+      ],
+      [
+        "balance_probabilities"
+      ],
+      [
+        "batch_size"
+      ],
+      [
+        "buffer"
+      ],
+      [
+        "cal_method_class"
+      ],
+      [
+        "cal_method_reg"
+      ],
+      [
+        "class_weights"
+      ],
+      [
+        "conditional_min_criterion"
+      ],
+      [
+        "conditional_test_statistic"
+      ],
+      [
+        "conditional_test_type"
+      ],
+      [
+        "confidence_factor"
+      ],
+      [
+        "cost"
+      ],
+      [
+        "cost_complexity"
+      ],
+      [
+        "deg_free"
+      ],
+      [
+        "degree"
+      ],
+      [
+        "degree_int"
+      ],
+      [
+        "diagonal_covariance"
+      ],
+      [
+        "dist_power"
+      ],
+      [
+        "dropout"
+      ],
+      [
+        "encode_unit"
+      ],
+      [
+        "epochs"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extrapolation"
+      ],
+      [
+        "finalize"
+      ],
+      [
+        "freq_cut"
+      ],
+      [
+        "fuzzy_thresholding"
+      ],
+      [
+        "get_batch_sizes"
+      ],
+      [
+        "get_log_p"
+      ],
+      [
+        "get_n"
+      ],
+      [
+        "get_n_frac"
+      ],
+      [
+        "get_n_frac_range"
+      ],
+      [
+        "get_p"
+      ],
+      [
+        "get_rbf_range"
+      ],
+      [
+        "grid_latin_hypercube"
+      ],
+      [
+        "grid_max_entropy"
+      ],
+      [
+        "grid_random"
+      ],
+      [
+        "grid_regular"
+      ],
+      [
+        "grid_space_filling"
+      ],
+      [
+        "harmonic_frequency"
+      ],
+      [
+        "has_unknowns"
+      ],
+      [
+        "hidden_units"
+      ],
+      [
+        "hidden_units_2"
+      ],
+      [
+        "initial_umap"
+      ],
+      [
+        "is_unknown"
+      ],
+      [
+        "kernel_offset"
+      ],
+      [
+        "Laplace"
+      ],
+      [
+        "learn_rate"
+      ],
+      [
+        "loss_reduction"
+      ],
+      [
+        "lower_limit"
+      ],
+      [
+        "lower_quantile"
+      ],
+      [
+        "max_nodes"
+      ],
+      [
+        "max_num_terms"
+      ],
+      [
+        "max_rules"
+      ],
+      [
+        "max_times"
+      ],
+      [
+        "max_tokens"
+      ],
+      [
+        "min_dist"
+      ],
+      [
+        "min_n"
+      ],
+      [
+        "min_times"
+      ],
+      [
+        "min_unique"
+      ],
+      [
+        "mixture"
+      ],
+      [
+        "momentum"
+      ],
+      [
+        "mtry"
+      ],
+      [
+        "mtry_long"
+      ],
+      [
+        "mtry_prop"
+      ],
+      [
+        "neighbors"
+      ],
+      [
+        "new_qual_param"
+      ],
+      [
+        "new_quant_param"
+      ],
+      [
+        "no_global_pruning"
+      ],
+      [
+        "num_breaks"
+      ],
+      [
+        "num_clusters"
+      ],
+      [
+        "num_comp"
+      ],
+      [
+        "num_estimators"
+      ],
+      [
+        "num_hash"
+      ],
+      [
+        "num_knots"
+      ],
+      [
+        "num_leaves"
+      ],
+      [
+        "num_random_splits"
+      ],
+      [
+        "num_runs"
+      ],
+      [
+        "num_terms"
+      ],
+      [
+        "num_tokens"
+      ],
+      [
+        "over_ratio"
+      ],
+      [
+        "parameters"
+      ],
+      [
+        "parameters_constr"
+      ],
+      [
+        "penalty"
+      ],
+      [
+        "penalty_L1"
+      ],
+      [
+        "penalty_L2"
+      ],
+      [
+        "predictor_prop"
+      ],
+      [
+        "predictor_winnowing"
+      ],
+      [
+        "prior_mixture_threshold"
+      ],
+      [
+        "prior_outcome_range"
+      ],
+      [
+        "prior_slab_dispersion"
+      ],
+      [
+        "prior_terminal_node_coef"
+      ],
+      [
+        "prior_terminal_node_expo"
+      ],
+      [
+        "prod_degree"
+      ],
+      [
+        "prop_terms"
+      ],
+      [
+        "prune"
+      ],
+      [
+        "prune_method"
+      ],
+      [
+        "range_get"
+      ],
+      [
+        "range_set"
+      ],
+      [
+        "range_validate"
+      ],
+      [
+        "ranger_class_rules"
+      ],
+      [
+        "ranger_reg_rules"
+      ],
+      [
+        "ranger_split_rules"
+      ],
+      [
+        "rate_decay"
+      ],
+      [
+        "rate_initial"
+      ],
+      [
+        "rate_largest"
+      ],
+      [
+        "rate_reduction"
+      ],
+      [
+        "rate_schedule"
+      ],
+      [
+        "rate_step_size"
+      ],
+      [
+        "rate_steps"
+      ],
+      [
+        "rbf_sigma"
+      ],
+      [
+        "regularization_factor"
+      ],
+      [
+        "regularization_method"
+      ],
+      [
+        "regularize_depth"
+      ],
+      [
+        "rule_bands"
+      ],
+      [
+        "sample_prop"
+      ],
+      [
+        "sample_size"
+      ],
+      [
+        "scale_factor"
+      ],
+      [
+        "scale_pos_weight"
+      ],
+      [
+        "select_features"
+      ],
+      [
+        "shrinkage_correlation"
+      ],
+      [
+        "shrinkage_frequencies"
+      ],
+      [
+        "shrinkage_variance"
+      ],
+      [
+        "signed_hash"
+      ],
+      [
+        "significance_threshold"
+      ],
+      [
+        "smoothness"
+      ],
+      [
+        "softmax_temperature"
+      ],
+      [
+        "spline_degree"
+      ],
+      [
+        "splitting_rule"
+      ],
+      [
+        "stop_iter"
+      ],
+      [
+        "summary_stat"
+      ],
+      [
+        "surv_dist"
+      ],
+      [
+        "survival_link"
+      ],
+      [
+        "svm_margin"
+      ],
+      [
+        "target_weight"
+      ],
+      [
+        "threshold"
+      ],
+      [
+        "token"
+      ],
+      [
+        "training_set_limit"
+      ],
+      [
+        "tree_depth"
+      ],
+      [
+        "trees"
+      ],
+      [
+        "trim_amount"
+      ],
+      [
+        "unbiased_rules"
+      ],
+      [
+        "under_ratio"
+      ],
+      [
+        "unique_cut"
+      ],
+      [
+        "unknown"
+      ],
+      [
+        "upper_limit"
+      ],
+      [
+        "validation_set_prop"
+      ],
+      [
+        "value_inverse"
+      ],
+      [
+        "value_sample"
+      ],
+      [
+        "value_seq"
+      ],
+      [
+        "value_set"
+      ],
+      [
+        "value_transform"
+      ],
+      [
+        "value_validate"
+      ],
+      [
+        "values_activation"
+      ],
+      [
+        "values_cal_cls"
+      ],
+      [
+        "values_cal_reg"
+      ],
+      [
+        "values_initial_umap"
+      ],
+      [
+        "values_prune_method"
+      ],
+      [
+        "values_regularization_method"
+      ],
+      [
+        "values_scheduler"
+      ],
+      [
+        "values_summary_stat"
+      ],
+      [
+        "values_surv_dist"
+      ],
+      [
+        "values_survival_link"
+      ],
+      [
+        "values_test_statistic"
+      ],
+      [
+        "values_test_type"
+      ],
+      [
+        "values_token"
+      ],
+      [
+        "values_weight_func"
+      ],
+      [
+        "values_weight_scheme"
+      ],
+      [
+        "vocabulary_size"
+      ],
+      [
+        "weight"
+      ],
+      [
+        "weight_func"
+      ],
+      [
+        "weight_scheme"
+      ],
+      [
+        "window_size"
+      ]
+    ],
+    "topics": [],
+    "score": 14.7374,
+    "stars": 116,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "dials Tools for Creating Tuning Parameter Values Many models contain tuning parameters (i.e. parameters\nthat cannot be directly estimated from the data). These tools\ncan be used to define objects for creating, simulating, or\nvalidating values for such parameters. activation activation_2 adjust_deg_free all_neighbors average_before_softmax balance_probabilities batch_size buffer cal_method_class cal_method_reg class_weights conditional_min_criterion conditional_test_statistic conditional_test_type confidence_factor cost cost_complexity deg_free degree degree_int diagonal_covariance dist_power dropout encode_unit epochs extract_parameter_dials extrapolation finalize freq_cut fuzzy_thresholding get_batch_sizes get_log_p get_n get_n_frac get_n_frac_range get_p get_rbf_range grid_latin_hypercube grid_max_entropy grid_random grid_regular grid_space_filling harmonic_frequency has_unknowns hidden_units hidden_units_2 initial_umap is_unknown kernel_offset Laplace learn_rate loss_reduction lower_limit lower_quantile max_nodes max_num_terms max_rules max_times max_tokens min_dist min_n min_times min_unique mixture momentum mtry mtry_long mtry_prop neighbors new_qual_param new_quant_param no_global_pruning num_breaks num_clusters num_comp num_estimators num_hash num_knots num_leaves num_random_splits num_runs num_terms num_tokens over_ratio parameters parameters_constr penalty penalty_L1 penalty_L2 predictor_prop predictor_winnowing prior_mixture_threshold prior_outcome_range prior_slab_dispersion prior_terminal_node_coef prior_terminal_node_expo prod_degree prop_terms prune prune_method range_get range_set range_validate ranger_class_rules ranger_reg_rules ranger_split_rules rate_decay rate_initial rate_largest rate_reduction rate_schedule rate_step_size rate_steps rbf_sigma regularization_factor regularization_method regularize_depth rule_bands sample_prop sample_size scale_factor scale_pos_weight select_features shrinkage_correlation shrinkage_frequencies shrinkage_variance signed_hash significance_threshold smoothness softmax_temperature spline_degree splitting_rule stop_iter summary_stat surv_dist survival_link svm_margin target_weight threshold token training_set_limit tree_depth trees trim_amount unbiased_rules under_ratio unique_cut unknown upper_limit validation_set_prop value_inverse value_sample value_seq value_set value_transform value_validate values_activation values_cal_cls values_cal_reg values_initial_umap values_prune_method values_regularization_method values_scheduler values_summary_stat values_surv_dist values_survival_link values_test_statistic values_test_type values_token values_weight_func values_weight_scheme vocabulary_size weight weight_func weight_scheme window_size "
+  },
+  {
+    "id": 1395,
+    "package_name": "tune",
+    "title": "Tidy Tuning Tools",
+    "description": "The ability to tune models is important. 'tune' contains\nfunctions and classes to be used in conjunction with other\n'tidymodels' packages for finding reasonable values of\nhyper-parameters in models, pre-processing methods, and\npost-processing steps.",
+    "version": "2.0.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://tune.tidymodels.org/, https://github.com/tidymodels/tune",
+    "bug_reports": "https://github.com/tidymodels/tune/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".catch_and_log"
+      ],
+      [
+        ".config_key_from_metrics"
+      ],
+      [
+        ".create_weight_mapping"
+      ],
+      [
+        ".effective_sample_size"
+      ],
+      [
+        ".estimate_metrics"
+      ],
+      [
+        ".filter_perf_metrics"
+      ],
+      [
+        ".get_extra_col_names"
+      ],
+      [
+        ".get_fingerprint"
+      ],
+      [
+        ".get_resample_weights"
+      ],
+      [
+        ".get_tune_eval_time_target"
+      ],
+      [
+        ".get_tune_eval_times"
+      ],
+      [
+        ".get_tune_metric_names"
+      ],
+      [
+        ".get_tune_metrics"
+      ],
+      [
+        ".get_tune_outcome_names"
+      ],
+      [
+        ".get_tune_parameter_names"
+      ],
+      [
+        ".get_tune_parameters"
+      ],
+      [
+        ".get_tune_workflow"
+      ],
+      [
+        ".load_namespace"
+      ],
+      [
+        ".stash_last_result"
+      ],
+      [
+        ".use_case_weights_with_yardstick"
+      ],
+      [
+        ".validate_resample_weights"
+      ],
+      [
+        ".weighted_sd"
+      ],
+      [
+        "add_resample_weights"
+      ],
+      [
+        "augment"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "calculate_resample_weights"
+      ],
+      [
+        "check_eval_time_arg"
+      ],
+      [
+        "check_initial"
+      ],
+      [
+        "check_metric_in_tune_results"
+      ],
+      [
+        "check_metrics"
+      ],
+      [
+        "check_metrics_arg"
+      ],
+      [
+        "check_parameters"
+      ],
+      [
+        "check_rset"
+      ],
+      [
+        "check_time"
+      ],
+      [
+        "check_workflow"
+      ],
+      [
+        "choose_eval_time"
+      ],
+      [
+        "choose_framework"
+      ],
+      [
+        "choose_metric"
+      ],
+      [
+        "collect_extracts"
+      ],
+      [
+        "collect_metrics"
+      ],
+      [
+        "collect_notes"
+      ],
+      [
+        "collect_predictions"
+      ],
+      [
+        "compute_metrics"
+      ],
+      [
+        "conf_bound"
+      ],
+      [
+        "conf_mat_resampled"
+      ],
+      [
+        "control_bayes"
+      ],
+      [
+        "control_grid"
+      ],
+      [
+        "control_last_fit"
+      ],
+      [
+        "control_resamples"
+      ],
+      [
+        "coord_obs_pred"
+      ],
+      [
+        "empty_ellipses"
+      ],
+      [
+        "encode_set"
+      ],
+      [
+        "estimate_tune_results"
+      ],
+      [
+        "eval_mirai"
+      ],
+      [
+        "exp_improve"
+      ],
+      [
+        "expo_decay"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "extract_mold"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_preprocessor"
+      ],
+      [
+        "extract_recipe"
+      ],
+      [
+        "extract_resample_weights"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "extract_workflow"
+      ],
+      [
+        "filter_parameters"
+      ],
+      [
+        "finalize_model"
+      ],
+      [
+        "finalize_recipe"
+      ],
+      [
+        "finalize_tailor"
+      ],
+      [
+        "finalize_workflow"
+      ],
+      [
+        "finalize_workflow_preprocessor"
+      ],
+      [
+        "first_eval_time"
+      ],
+      [
+        "first_metric"
+      ],
+      [
+        "fit_best"
+      ],
+      [
+        "fit_max_value"
+      ],
+      [
+        "fit_resamples"
+      ],
+      [
+        "forge_from_workflow"
+      ],
+      [
+        "future_installed"
+      ],
+      [
+        "get_future_workers"
+      ],
+      [
+        "get_metric_time"
+      ],
+      [
+        "get_mirai_workers"
+      ],
+      [
+        "get_parallel_seeds"
+      ],
+      [
+        "get_tune_colors"
+      ],
+      [
+        "has_non_par_pkgs"
+      ],
+      [
+        "initialize_catalog"
+      ],
+      [
+        "int_pctl"
+      ],
+      [
+        "is_preprocessor"
+      ],
+      [
+        "is_recipe"
+      ],
+      [
+        "is_workflow"
+      ],
+      [
+        "last_fit"
+      ],
+      [
+        "load_pkgs"
+      ],
+      [
+        "maybe_choose_eval_time"
+      ],
+      [
+        "message_wrap"
+      ],
+      [
+        "metrics_info"
+      ],
+      [
+        "min_grid"
+      ],
+      [
+        "min_grid.boost_tree"
+      ],
+      [
+        "min_grid.C5_rules"
+      ],
+      [
+        "min_grid.cubist_rules"
+      ],
+      [
+        "min_grid.linear_reg"
+      ],
+      [
+        "min_grid.logistic_reg"
+      ],
+      [
+        "min_grid.mars"
+      ],
+      [
+        "min_grid.multinom_reg"
+      ],
+      [
+        "min_grid.nearest_neighbor"
+      ],
+      [
+        "min_grid.pls"
+      ],
+      [
+        "min_grid.poisson_reg"
+      ],
+      [
+        "min_grid.rule_fit"
+      ],
+      [
+        "mirai_installed"
+      ],
+      [
+        "new_backend_options"
+      ],
+      [
+        "new_iteration_results"
+      ],
+      [
+        "outcome_names"
+      ],
+      [
+        "par_fns"
+      ],
+      [
+        "parameters"
+      ],
+      [
+        "prob_improve"
+      ],
+      [
+        "pull_rset_attributes"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "schedule_grid"
+      ],
+      [
+        "select_best"
+      ],
+      [
+        "select_by_one_std_err"
+      ],
+      [
+        "select_by_pct_loss"
+      ],
+      [
+        "show_best"
+      ],
+      [
+        "show_notes"
+      ],
+      [
+        "tunable"
+      ],
+      [
+        "tune"
+      ],
+      [
+        "tune_args"
+      ],
+      [
+        "tune_bayes"
+      ],
+      [
+        "tune_grid"
+      ],
+      [
+        "val_class_and_single"
+      ],
+      [
+        "val_class_or_null"
+      ]
+    ],
+    "topics": [],
+    "score": 14.6425,
+    "stars": 318,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tune Tidy Tuning Tools The ability to tune models is important. 'tune' contains\nfunctions and classes to be used in conjunction with other\n'tidymodels' packages for finding reasonable values of\nhyper-parameters in models, pre-processing methods, and\npost-processing steps. .catch_and_log .config_key_from_metrics .create_weight_mapping .effective_sample_size .estimate_metrics .filter_perf_metrics .get_extra_col_names .get_fingerprint .get_resample_weights .get_tune_eval_time_target .get_tune_eval_times .get_tune_metric_names .get_tune_metrics .get_tune_outcome_names .get_tune_parameter_names .get_tune_parameters .get_tune_workflow .load_namespace .stash_last_result .use_case_weights_with_yardstick .validate_resample_weights .weighted_sd add_resample_weights augment autoplot calculate_resample_weights check_eval_time_arg check_initial check_metric_in_tune_results check_metrics check_metrics_arg check_parameters check_rset check_time check_workflow choose_eval_time choose_framework choose_metric collect_extracts collect_metrics collect_notes collect_predictions compute_metrics conf_bound conf_mat_resampled control_bayes control_grid control_last_fit control_resamples coord_obs_pred empty_ellipses encode_set estimate_tune_results eval_mirai exp_improve expo_decay extract_fit_engine extract_fit_parsnip extract_mold extract_parameter_set_dials extract_preprocessor extract_recipe extract_resample_weights extract_spec_parsnip extract_workflow filter_parameters finalize_model finalize_recipe finalize_tailor finalize_workflow finalize_workflow_preprocessor first_eval_time first_metric fit_best fit_max_value fit_resamples forge_from_workflow future_installed get_future_workers get_metric_time get_mirai_workers get_parallel_seeds get_tune_colors has_non_par_pkgs initialize_catalog int_pctl is_preprocessor is_recipe is_workflow last_fit load_pkgs maybe_choose_eval_time message_wrap metrics_info min_grid min_grid.boost_tree min_grid.C5_rules min_grid.cubist_rules min_grid.linear_reg min_grid.logistic_reg min_grid.mars min_grid.multinom_reg min_grid.nearest_neighbor min_grid.pls min_grid.poisson_reg min_grid.rule_fit mirai_installed new_backend_options new_iteration_results outcome_names par_fns parameters prob_improve pull_rset_attributes required_pkgs schedule_grid select_best select_by_one_std_err select_by_pct_loss show_best show_notes tunable tune tune_args tune_bayes tune_grid val_class_and_single val_class_or_null "
+  },
+  {
+    "id": 1447,
+    "package_name": "workflows",
+    "title": "Modeling Workflows",
+    "description": "Managing both a 'parsnip' model and a preprocessor, such\nas a model formula or recipe from 'recipes', can often be\nchallenging. The goal of 'workflows' is to streamline this\nprocess by bundling the model alongside the preprocessor, all\nwithin the same object.",
+    "version": "1.3.0.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Davis Vaughan [aut],\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nHannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/workflows,\nhttps://workflows.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/workflows/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".fit_finalize"
+      ],
+      [
+        ".fit_model"
+      ],
+      [
+        ".fit_post"
+      ],
+      [
+        ".fit_pre"
+      ],
+      [
+        ".workflow_postprocessor_requires_fit"
+      ],
+      [
+        "add_case_weights"
+      ],
+      [
+        "add_formula"
+      ],
+      [
+        "add_model"
+      ],
+      [
+        "add_recipe"
+      ],
+      [
+        "add_tailor"
+      ],
+      [
+        "add_variables"
+      ],
+      [
+        "control_workflow"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "extract_fit_time"
+      ],
+      [
+        "extract_mold"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_postprocessor"
+      ],
+      [
+        "extract_preprocessor"
+      ],
+      [
+        "extract_recipe"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "extract_tailor"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "is_trained_workflow"
+      ],
+      [
+        "pull_workflow_fit"
+      ],
+      [
+        "pull_workflow_mold"
+      ],
+      [
+        "pull_workflow_prepped_recipe"
+      ],
+      [
+        "pull_workflow_preprocessor"
+      ],
+      [
+        "pull_workflow_spec"
+      ],
+      [
+        "remove_case_weights"
+      ],
+      [
+        "remove_formula"
+      ],
+      [
+        "remove_model"
+      ],
+      [
+        "remove_recipe"
+      ],
+      [
+        "remove_tailor"
+      ],
+      [
+        "remove_variables"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "update_case_weights"
+      ],
+      [
+        "update_formula"
+      ],
+      [
+        "update_model"
+      ],
+      [
+        "update_recipe"
+      ],
+      [
+        "update_tailor"
+      ],
+      [
+        "update_variables"
+      ],
+      [
+        "workflow"
+      ],
+      [
+        "workflow_variables"
+      ]
+    ],
+    "topics": [],
+    "score": 14.081,
+    "stars": 209,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "workflows Modeling Workflows Managing both a 'parsnip' model and a preprocessor, such\nas a model formula or recipe from 'recipes', can often be\nchallenging. The goal of 'workflows' is to streamline this\nprocess by bundling the model alongside the preprocessor, all\nwithin the same object. .fit_finalize .fit_model .fit_post .fit_pre .workflow_postprocessor_requires_fit add_case_weights add_formula add_model add_recipe add_tailor add_variables control_workflow extract_fit_engine extract_fit_parsnip extract_fit_time extract_mold extract_parameter_dials extract_parameter_set_dials extract_postprocessor extract_preprocessor extract_recipe extract_spec_parsnip extract_tailor fit is_trained_workflow pull_workflow_fit pull_workflow_mold pull_workflow_prepped_recipe pull_workflow_preprocessor pull_workflow_spec remove_case_weights remove_formula remove_model remove_recipe remove_tailor remove_variables required_pkgs update_case_weights update_formula update_model update_recipe update_tailor update_variables workflow workflow_variables "
+  },
+  {
+    "id": 408,
+    "package_name": "corrr",
+    "title": "Correlations in R",
+    "description": "A tool for exploring correlations.  It makes it possible\nto easily perform routine tasks when exploring correlation\nmatrices such as ignoring the diagonal, focusing on the\ncorrelations of certain variables against others, or\nrearranging and visualizing the matrix in terms of the strength\nof the correlations.",
+    "version": "0.4.4.9000",
+    "maintainer": "Max Kuhn <max@rstudio.com>",
+    "author": "Max Kuhn [aut, cre],\nSimon Jackson [aut],\nJorge Cimentada [aut]",
+    "url": "https://github.com/tidymodels/corrr, https://corrr.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/corrr/issues",
+    "repository": "",
+    "exports": [
+      [
+        "as_cordf"
+      ],
+      [
+        "as_matrix"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "colpair_map"
+      ],
+      [
+        "correlate"
+      ],
+      [
+        "dice"
+      ],
+      [
+        "fashion"
+      ],
+      [
+        "first_col"
+      ],
+      [
+        "focus"
+      ],
+      [
+        "focus_"
+      ],
+      [
+        "focus_if"
+      ],
+      [
+        "network_plot"
+      ],
+      [
+        "pair_n"
+      ],
+      [
+        "rearrange"
+      ],
+      [
+        "retract"
+      ],
+      [
+        "rplot"
+      ],
+      [
+        "shave"
+      ],
+      [
+        "stretch"
+      ]
+    ],
+    "topics": [],
+    "score": 13.9463,
+    "stars": 591,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "corrr Correlations in R A tool for exploring correlations.  It makes it possible\nto easily perform routine tasks when exploring correlation\nmatrices such as ignoring the diagonal, focusing on the\ncorrelations of certain variables against others, or\nrearranging and visualizing the matrix in terms of the strength\nof the correlations. as_cordf as_matrix autoplot colpair_map correlate dice fashion first_col focus focus_ focus_if network_plot pair_n rearrange retract rplot shave stretch "
+  },
+  {
+    "id": 1015,
+    "package_name": "probably",
+    "title": "Tools for Post-Processing Predicted Values",
+    "description": "Models can be improved by post-processing class\nprobabilities, by: recalibration, conversion to hard\nprobabilities, assessment of equivocal zones, and other\nactivities. 'probably' contains tools for conducting these\noperations as well as calibration tools and conformal inference\ntechniques for regression models.",
+    "version": "1.2.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre],\nDavis Vaughan [aut],\nEdgar Ruiz [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/probably,\nhttps://probably.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/probably/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".cal_table_breaks"
+      ],
+      [
+        ".cal_table_logistic"
+      ],
+      [
+        ".cal_table_windowed"
+      ],
+      [
+        "any_equivocal"
+      ],
+      [
+        "append_class_pred"
+      ],
+      [
+        "as_class_pred"
+      ],
+      [
+        "as.factor"
+      ],
+      [
+        "as.ordered"
+      ],
+      [
+        "augment"
+      ],
+      [
+        "bound_prediction"
+      ],
+      [
+        "cal_apply"
+      ],
+      [
+        "cal_estimate_beta"
+      ],
+      [
+        "cal_estimate_isotonic"
+      ],
+      [
+        "cal_estimate_isotonic_boot"
+      ],
+      [
+        "cal_estimate_linear"
+      ],
+      [
+        "cal_estimate_logistic"
+      ],
+      [
+        "cal_estimate_multinomial"
+      ],
+      [
+        "cal_estimate_none"
+      ],
+      [
+        "cal_plot_breaks"
+      ],
+      [
+        "cal_plot_logistic"
+      ],
+      [
+        "cal_plot_regression"
+      ],
+      [
+        "cal_plot_windowed"
+      ],
+      [
+        "cal_validate_beta"
+      ],
+      [
+        "cal_validate_isotonic"
+      ],
+      [
+        "cal_validate_isotonic_boot"
+      ],
+      [
+        "cal_validate_linear"
+      ],
+      [
+        "cal_validate_logistic"
+      ],
+      [
+        "cal_validate_multinomial"
+      ],
+      [
+        "cal_validate_none"
+      ],
+      [
+        "class_pred"
+      ],
+      [
+        "collect_metrics"
+      ],
+      [
+        "collect_predictions"
+      ],
+      [
+        "control_conformal_full"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "int_conformal_cv"
+      ],
+      [
+        "int_conformal_full"
+      ],
+      [
+        "int_conformal_quantile"
+      ],
+      [
+        "int_conformal_split"
+      ],
+      [
+        "is_class_pred"
+      ],
+      [
+        "is_equivocal"
+      ],
+      [
+        "make_class_pred"
+      ],
+      [
+        "make_two_class_pred"
+      ],
+      [
+        "reportable_rate"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "threshold_perf"
+      ],
+      [
+        "which_equivocal"
+      ]
+    ],
+    "topics": [],
+    "score": 12.9749,
+    "stars": 120,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "probably Tools for Post-Processing Predicted Values Models can be improved by post-processing class\nprobabilities, by: recalibration, conversion to hard\nprobabilities, assessment of equivocal zones, and other\nactivities. 'probably' contains tools for conducting these\noperations as well as calibration tools and conformal inference\ntechniques for regression models. .cal_table_breaks .cal_table_logistic .cal_table_windowed any_equivocal append_class_pred as_class_pred as.factor as.ordered augment bound_prediction cal_apply cal_estimate_beta cal_estimate_isotonic cal_estimate_isotonic_boot cal_estimate_linear cal_estimate_logistic cal_estimate_multinomial cal_estimate_none cal_plot_breaks cal_plot_logistic cal_plot_regression cal_plot_windowed cal_validate_beta cal_validate_isotonic cal_validate_isotonic_boot cal_validate_linear cal_validate_logistic cal_validate_multinomial cal_validate_none class_pred collect_metrics collect_predictions control_conformal_full fit int_conformal_cv int_conformal_full int_conformal_quantile int_conformal_split is_class_pred is_equivocal make_class_pred make_two_class_pred reportable_rate required_pkgs threshold_perf which_equivocal "
+  },
+  {
+    "id": 328,
+    "package_name": "butcher",
+    "title": "Model Butcher",
+    "description": "Provides a set of S3 generics to axe components of fitted\nmodel objects and help reduce the size of model objects saved\nto disk.",
+    "version": "0.4.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Joyce Cahoon [aut] (ORCID: <https://orcid.org/0000-0001-7217-4702>),\nDavis Vaughan [aut],\nMax Kuhn [cre, aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nAlex Hayes [aut],\nJulia Silge [aut] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://butcher.tidymodels.org/,\nhttps://github.com/tidymodels/butcher",
+    "bug_reports": "https://github.com/tidymodels/butcher/issues",
+    "repository": "",
+    "exports": [
+      [
+        "axe_call"
+      ],
+      [
+        "axe_ctrl"
+      ],
+      [
+        "axe_data"
+      ],
+      [
+        "axe_env"
+      ],
+      [
+        "axe_fitted"
+      ],
+      [
+        "axe_rsample_data"
+      ],
+      [
+        "axe_rsample_indicators"
+      ],
+      [
+        "butcher"
+      ],
+      [
+        "locate"
+      ],
+      [
+        "new_model_butcher"
+      ],
+      [
+        "weigh"
+      ]
+    ],
+    "topics": [],
+    "score": 12.5951,
+    "stars": 137,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "butcher Model Butcher Provides a set of S3 generics to axe components of fitted\nmodel objects and help reduce the size of model objects saved\nto disk. axe_call axe_ctrl axe_data axe_env axe_fitted axe_rsample_data axe_rsample_indicators butcher locate new_model_butcher weigh "
+  },
+  {
+    "id": 1270,
+    "package_name": "stacks",
+    "title": "Tidy Model Stacking",
+    "description": "Model stacking is an ensemble technique that involves\ntraining a model to combine the outputs of many diverse\nstatistical models, and has been shown to improve predictive\nperformance in a variety of settings. 'stacks' implements a\ngrammar for 'tidymodels'-aligned model stacking.",
+    "version": "1.1.1.9001",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Simon Couch [aut],\nMax Kuhn [aut, cre],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://stacks.tidymodels.org/,\nhttps://github.com/tidymodels/stacks",
+    "bug_reports": "https://github.com/tidymodels/stacks/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "add_candidates"
+      ],
+      [
+        "augment"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "axe_call"
+      ],
+      [
+        "axe_call.model_stack"
+      ],
+      [
+        "axe_ctrl"
+      ],
+      [
+        "axe_ctrl.model_stack"
+      ],
+      [
+        "axe_data"
+      ],
+      [
+        "axe_data.model_stack"
+      ],
+      [
+        "axe_env"
+      ],
+      [
+        "axe_env.model_stack"
+      ],
+      [
+        "axe_fitted"
+      ],
+      [
+        "axe_fitted.model_stack"
+      ],
+      [
+        "blend_predictions"
+      ],
+      [
+        "build_linear_predictor"
+      ],
+      [
+        "butcher"
+      ],
+      [
+        "collect_parameters"
+      ],
+      [
+        "control_stack_bayes"
+      ],
+      [
+        "control_stack_grid"
+      ],
+      [
+        "control_stack_resamples"
+      ],
+      [
+        "fit_members"
+      ],
+      [
+        "get_expressions"
+      ],
+      [
+        "predict.data_stack"
+      ],
+      [
+        "predict.model_stack"
+      ],
+      [
+        "prediction_eqn"
+      ],
+      [
+        "stack_predict"
+      ],
+      [
+        "stacks"
+      ]
+    ],
+    "topics": [],
+    "score": 12.3327,
+    "stars": 301,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "stacks Tidy Model Stacking Model stacking is an ensemble technique that involves\ntraining a model to combine the outputs of many diverse\nstatistical models, and has been shown to improve predictive\nperformance in a variety of settings. 'stacks' implements a\ngrammar for 'tidymodels'-aligned model stacking. %>% add_candidates augment autoplot axe_call axe_call.model_stack axe_ctrl axe_ctrl.model_stack axe_data axe_data.model_stack axe_env axe_env.model_stack axe_fitted axe_fitted.model_stack blend_predictions build_linear_predictor butcher collect_parameters control_stack_bayes control_stack_grid control_stack_resamples fit_members get_expressions predict.data_stack predict.model_stack prediction_eqn stack_predict stacks "
+  },
+  {
+    "id": 1448,
+    "package_name": "workflowsets",
+    "title": "Create a Collection of 'tidymodels' Workflows",
+    "description": "A workflow is a combination of a model and preprocessors\n(e.g, a formula, recipe, etc.) (Kuhn and Silge (2021)\n<https://www.tmwr.org/>). In order to try different\ncombinations of these, an object can be created that contains\nmany workflows. There are functions to create workflows en\nmasse as well as training them and visualizing the results.",
+    "version": "1.1.1.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Hannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/workflowsets,\nhttps://workflowsets.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/workflowsets/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "as_workflow_set"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "collect_extracts"
+      ],
+      [
+        "collect_metrics"
+      ],
+      [
+        "collect_notes"
+      ],
+      [
+        "collect_predictions"
+      ],
+      [
+        "comment_add"
+      ],
+      [
+        "comment_get"
+      ],
+      [
+        "comment_print"
+      ],
+      [
+        "comment_reset"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "extract_mold"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_preprocessor"
+      ],
+      [
+        "extract_recipe"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "extract_workflow"
+      ],
+      [
+        "extract_workflow_set_result"
+      ],
+      [
+        "fit_best"
+      ],
+      [
+        "leave_var_out_formulas"
+      ],
+      [
+        "option_add"
+      ],
+      [
+        "option_add_parameters"
+      ],
+      [
+        "option_list"
+      ],
+      [
+        "option_remove"
+      ],
+      [
+        "pull_workflow"
+      ],
+      [
+        "pull_workflow_set_result"
+      ],
+      [
+        "rank_results"
+      ],
+      [
+        "update_workflow_model"
+      ],
+      [
+        "update_workflow_recipe"
+      ],
+      [
+        "workflow_map"
+      ],
+      [
+        "workflow_set"
+      ]
+    ],
+    "topics": [],
+    "score": 12.2515,
+    "stars": 95,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "workflowsets Create a Collection of 'tidymodels' Workflows A workflow is a combination of a model and preprocessors\n(e.g, a formula, recipe, etc.) (Kuhn and Silge (2021)\n<https://www.tmwr.org/>). In order to try different\ncombinations of these, an object can be created that contains\nmany workflows. There are functions to create workflows en\nmasse as well as training them and visualizing the results. %>% as_workflow_set autoplot collect_extracts collect_metrics collect_notes collect_predictions comment_add comment_get comment_print comment_reset extract_fit_engine extract_fit_parsnip extract_mold extract_parameter_dials extract_parameter_set_dials extract_preprocessor extract_recipe extract_spec_parsnip extract_workflow extract_workflow_set_result fit_best leave_var_out_formulas option_add option_add_parameters option_list option_remove pull_workflow pull_workflow_set_result rank_results update_workflow_model update_workflow_recipe workflow_map workflow_set "
+  },
+  {
+    "id": 1346,
+    "package_name": "tidypredict",
+    "title": "Run Predictions Inside the Database",
+    "description": "It parses a fitted 'R' model object, and returns a formula\nin 'Tidy Eval' code that calculates the predictions.  It works\nwith several databases back-ends because it leverages 'dplyr'\nand 'dbplyr' for the final 'SQL' translation of the algorithm.\nIt currently supports lm(), glm(), randomForest(), ranger(),\nearth(), xgb.Booster.complete(), cubist(), and ctree() models.",
+    "version": "1.0.1.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre],\nEdgar Ruiz [aut],\nMax Kuhn [aut]",
+    "url": "https://tidypredict.tidymodels.org,\nhttps://github.com/tidymodels/tidypredict",
+    "bug_reports": "https://github.com/tidymodels/tidypredict/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".extract_partykit_classprob"
+      ],
+      [
+        ".extract_xgb_trees"
+      ],
+      [
+        "acceptable_formula"
+      ],
+      [
+        "as_parsed_model"
+      ],
+      [
+        "parse_model"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tidypredict_fit"
+      ],
+      [
+        "tidypredict_interval"
+      ],
+      [
+        "tidypredict_sql"
+      ],
+      [
+        "tidypredict_sql_interval"
+      ],
+      [
+        "tidypredict_test"
+      ],
+      [
+        "tidypredict_to_column"
+      ]
+    ],
+    "topics": [
+      [
+        "dbplyr"
+      ],
+      [
+        "dplyr"
+      ],
+      [
+        "purrr"
+      ],
+      [
+        "rlang"
+      ]
+    ],
+    "score": 12.1646,
+    "stars": 261,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tidypredict Run Predictions Inside the Database It parses a fitted 'R' model object, and returns a formula\nin 'Tidy Eval' code that calculates the predictions.  It works\nwith several databases back-ends because it leverages 'dplyr'\nand 'dbplyr' for the final 'SQL' translation of the algorithm.\nIt currently supports lm(), glm(), randomForest(), ranger(),\nearth(), xgb.Booster.complete(), cubist(), and ctree() models. .extract_partykit_classprob .extract_xgb_trees acceptable_formula as_parsed_model parse_model tidy tidypredict_fit tidypredict_interval tidypredict_sql tidypredict_sql_interval tidypredict_test tidypredict_to_column dbplyr dplyr purrr rlang"
+  },
+  {
+    "id": 308,
+    "package_name": "bonsai",
+    "title": "Model Wrappers for Tree-Based Models",
+    "description": "Bindings for additional tree-based model engines for use\nwith the 'parsnip' package. Models include gradient boosted\ndecision trees with 'LightGBM' (Ke et al, 2017.), conditional\ninference trees and conditional random forests with 'partykit'\n(Hothorn and Zeileis, 2015. and Hothorn et al, 2006.\n<doi:10.1198/106186006X133933>), and accelerated oblique random\nforests with 'aorsf' (Jaeger et al, 2022\n<doi:10.5281/zenodo.7116854>).",
+    "version": "0.4.0.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Daniel Falbel [aut],\nAthos Damiani [aut],\nRoel M. Hogervorst [aut] (ORCID:\n<https://orcid.org/0000-0001-7509-0328>),\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nEmil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://bonsai.tidymodels.org/,\nhttps://github.com/tidymodels/bonsai",
+    "bug_reports": "https://github.com/tidymodels/bonsai/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "predict_catboost_classification_class"
+      ],
+      [
+        "predict_catboost_classification_prob"
+      ],
+      [
+        "predict_catboost_classification_raw"
+      ],
+      [
+        "predict_catboost_regression_numeric"
+      ],
+      [
+        "predict_lightgbm_classification_class"
+      ],
+      [
+        "predict_lightgbm_classification_prob"
+      ],
+      [
+        "predict_lightgbm_classification_raw"
+      ],
+      [
+        "predict_lightgbm_regression_numeric"
+      ],
+      [
+        "train_catboost"
+      ],
+      [
+        "train_lightgbm"
+      ]
+    ],
+    "topics": [],
+    "score": 11.5025,
+    "stars": 53,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "bonsai Model Wrappers for Tree-Based Models Bindings for additional tree-based model engines for use\nwith the 'parsnip' package. Models include gradient boosted\ndecision trees with 'LightGBM' (Ke et al, 2017.), conditional\ninference trees and conditional random forests with 'partykit'\n(Hothorn and Zeileis, 2015. and Hothorn et al, 2006.\n<doi:10.1198/106186006X133933>), and accelerated oblique random\nforests with 'aorsf' (Jaeger et al, 2022\n<doi:10.5281/zenodo.7116854>). %>% predict_catboost_classification_class predict_catboost_classification_prob predict_catboost_classification_raw predict_catboost_regression_numeric predict_lightgbm_classification_class predict_lightgbm_classification_prob predict_lightgbm_classification_raw predict_lightgbm_regression_numeric train_catboost train_lightgbm "
+  },
+  {
+    "id": 829,
+    "package_name": "modeldata",
+    "title": "Data Sets Useful for Modeling Examples",
+    "description": "Data sets used for demonstrating or testing model-related\npackages are contained in this package.",
+    "version": "1.5.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://modeldata.tidymodels.org,\nhttps://github.com/tidymodels/modeldata",
+    "bug_reports": "https://github.com/tidymodels/modeldata/issues",
+    "repository": "",
+    "exports": [
+      [
+        "sim_classification"
+      ],
+      [
+        "sim_logistic"
+      ],
+      [
+        "sim_multinomial"
+      ],
+      [
+        "sim_noise"
+      ],
+      [
+        "sim_regression"
+      ]
+    ],
+    "topics": [],
+    "score": 11.4818,
+    "stars": 23,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "modeldata Data Sets Useful for Modeling Examples Data sets used for demonstrating or testing model-related\npackages are contained in this package. sim_classification sim_logistic sim_multinomial sim_noise sim_regression "
+  },
+  {
+    "id": 1320,
+    "package_name": "textrecipes",
+    "title": "Extra 'Recipes' for Text Processing",
+    "description": "Converting text to numerical features requires\nspecifically created procedures, which are implemented as steps\naccording to the 'recipes' package. These steps allows for\ntokenization, filtering, counting (tf and tfidf) and feature\nhashing.",
+    "version": "1.1.0.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nMichael W. Kearney [cph] (author of count_functions),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/textrecipes,\nhttps://textrecipes.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/textrecipes/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "all_tokenized"
+      ],
+      [
+        "all_tokenized_predictors"
+      ],
+      [
+        "count_functions"
+      ],
+      [
+        "ngram"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "show_tokens"
+      ],
+      [
+        "step_clean_levels"
+      ],
+      [
+        "step_clean_names"
+      ],
+      [
+        "step_dummy_hash"
+      ],
+      [
+        "step_lda"
+      ],
+      [
+        "step_lemma"
+      ],
+      [
+        "step_ngram"
+      ],
+      [
+        "step_pos_filter"
+      ],
+      [
+        "step_sequence_onehot"
+      ],
+      [
+        "step_stem"
+      ],
+      [
+        "step_stopwords"
+      ],
+      [
+        "step_text_normalization"
+      ],
+      [
+        "step_textfeature"
+      ],
+      [
+        "step_texthash"
+      ],
+      [
+        "step_tf"
+      ],
+      [
+        "step_tfidf"
+      ],
+      [
+        "step_tokenfilter"
+      ],
+      [
+        "step_tokenize"
+      ],
+      [
+        "step_tokenize_bpe"
+      ],
+      [
+        "step_tokenize_sentencepiece"
+      ],
+      [
+        "step_tokenize_wordpiece"
+      ],
+      [
+        "step_tokenmerge"
+      ],
+      [
+        "step_untokenize"
+      ],
+      [
+        "step_word_embeddings"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tokenlist"
+      ],
+      [
+        "tunable"
+      ]
+    ],
+    "topics": [],
+    "score": 11.1367,
+    "stars": 164,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "textrecipes Extra 'Recipes' for Text Processing Converting text to numerical features requires\nspecifically created procedures, which are implemented as steps\naccording to the 'recipes' package. These steps allows for\ntokenization, filtering, counting (tf and tfidf) and feature\nhashing. %>% all_tokenized all_tokenized_predictors count_functions ngram required_pkgs show_tokens step_clean_levels step_clean_names step_dummy_hash step_lda step_lemma step_ngram step_pos_filter step_sequence_onehot step_stem step_stopwords step_text_normalization step_textfeature step_texthash step_tf step_tfidf step_tokenfilter step_tokenize step_tokenize_bpe step_tokenize_sentencepiece step_tokenize_wordpiece step_tokenmerge step_untokenize step_word_embeddings tidy tokenlist tunable "
+  },
+  {
+    "id": 760,
+    "package_name": "lime",
+    "title": "Local Interpretable Model-Agnostic Explanations",
+    "description": "When building complex models, it is often difficult to\nexplain why the model should be trusted. While global measures\nsuch as accuracy are useful, they cannot be used for explaining\nwhy a model made a specific prediction. 'lime' (a port of the\n'lime' 'Python' package) is a method for explaining the outcome\nof black box models by fitting a local model around the point\nin question an perturbations of this point. The approach is\ndescribed in more detail in the article by Ribeiro et al.\n(2016) <doi:10.48550/arXiv.1602.04938>.",
+    "version": "0.5.4.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nThomas Lin Pedersen [aut] (ORCID:\n<https://orcid.org/0000-0002-5147-4711>),\nMicha\u00ebl Benesty [aut]",
+    "url": "https://lime.data-imaginist.com,\nhttps://github.com/tidymodels/lime,\nhttps://lime.data-imaginist.com/",
+    "bug_reports": "https://github.com/tidymodels/lime/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".load_image_example"
+      ],
+      [
+        ".load_text_example"
+      ],
+      [
+        "as_classifier"
+      ],
+      [
+        "as_regressor"
+      ],
+      [
+        "default_tokenize"
+      ],
+      [
+        "explain"
+      ],
+      [
+        "interactive_text_explanations"
+      ],
+      [
+        "lime"
+      ],
+      [
+        "model_type"
+      ],
+      [
+        "plot_explanations"
+      ],
+      [
+        "plot_features"
+      ],
+      [
+        "plot_image_explanation"
+      ],
+      [
+        "plot_superpixels"
+      ],
+      [
+        "plot_text_explanations"
+      ],
+      [
+        "predict_model"
+      ],
+      [
+        "render_text_explanations"
+      ],
+      [
+        "slic"
+      ],
+      [
+        "text_explanations_output"
+      ]
+    ],
+    "topics": [
+      [
+        "caret"
+      ],
+      [
+        "model-checking"
+      ],
+      [
+        "model-evaluation"
+      ],
+      [
+        "modeling"
+      ],
+      [
+        "cpp"
+      ]
+    ],
+    "score": 11.0191,
+    "stars": 489,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "lime Local Interpretable Model-Agnostic Explanations When building complex models, it is often difficult to\nexplain why the model should be trusted. While global measures\nsuch as accuracy are useful, they cannot be used for explaining\nwhy a model made a specific prediction. 'lime' (a port of the\n'lime' 'Python' package) is a method for explaining the outcome\nof black box models by fitting a local model around the point\nin question an perturbations of this point. The approach is\ndescribed in more detail in the article by Ribeiro et al.\n(2016) <doi:10.48550/arXiv.1602.04938>. .load_image_example .load_text_example as_classifier as_regressor default_tokenize explain interactive_text_explanations lime model_type plot_explanations plot_features plot_image_explanation plot_superpixels plot_text_explanations predict_model render_text_explanations slic text_explanations_output caret model-checking model-evaluation modeling cpp"
+  },
+  {
+    "id": 1332,
+    "package_name": "themis",
+    "title": "Extra Recipes Steps for Dealing with Unbalanced Data",
+    "description": "A dataset with an uneven number of cases in each class is\nsaid to be unbalanced. Many models produce a subpar performance\non unbalanced datasets. A dataset can be balanced by increasing\nthe number of minority cases using SMOTE 2011\n<doi:10.48550/arXiv.1106.1813>, BorderlineSMOTE 2005\n<doi:10.1007/11538059_91> and ADASYN 2008\n<https://ieeexplore.ieee.org/document/4633969>. Or by\ndecreasing the number of majority cases using NearMiss 2003\n<https://www.site.uottawa.ca/~nat/Workshop2003/jzhang.pdf> or\nTomek link removal 1976\n<https://ieeexplore.ieee.org/document/4309452>.",
+    "version": "1.0.3.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/themis,\nhttps://themis.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/themis/issues",
+    "repository": "",
+    "exports": [
+      [
+        "adasyn"
+      ],
+      [
+        "bsmote"
+      ],
+      [
+        "nearmiss"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "smote"
+      ],
+      [
+        "smotenc"
+      ],
+      [
+        "step_adasyn"
+      ],
+      [
+        "step_bsmote"
+      ],
+      [
+        "step_downsample"
+      ],
+      [
+        "step_nearmiss"
+      ],
+      [
+        "step_rose"
+      ],
+      [
+        "step_smote"
+      ],
+      [
+        "step_smotenc"
+      ],
+      [
+        "step_tomek"
+      ],
+      [
+        "step_upsample"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tomek"
+      ],
+      [
+        "tunable"
+      ]
+    ],
+    "topics": [],
+    "score": 10.5555,
+    "stars": 142,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "themis Extra Recipes Steps for Dealing with Unbalanced Data A dataset with an uneven number of cases in each class is\nsaid to be unbalanced. Many models produce a subpar performance\non unbalanced datasets. A dataset can be balanced by increasing\nthe number of minority cases using SMOTE 2011\n<doi:10.48550/arXiv.1106.1813>, BorderlineSMOTE 2005\n<doi:10.1007/11538059_91> and ADASYN 2008\n<https://ieeexplore.ieee.org/document/4633969>. Or by\ndecreasing the number of majority cases using NearMiss 2003\n<https://www.site.uottawa.ca/~nat/Workshop2003/jzhang.pdf> or\nTomek link removal 1976\n<https://ieeexplore.ieee.org/document/4309452>. adasyn bsmote nearmiss required_pkgs smote smotenc step_adasyn step_bsmote step_downsample step_nearmiss step_rose step_smote step_smotenc step_tomek step_upsample tidy tomek tunable "
+  },
+  {
+    "id": 1167,
+    "package_name": "rules",
+    "title": "Model Wrappers for Rule-Based Models",
+    "description": "Bindings for additional models for use with the 'parsnip'\npackage.  Models include prediction rule ensembles (Friedman\nand Popescu, 2008) <doi:10.1214/07-AOAS148>, C5.0 rules\n(Quinlan, 1992 ISBN: 1558602380), and Cubist (Kuhn and Johnson,\n2013) <doi:10.1007/978-1-4614-6849-3>.",
+    "version": "1.0.2.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/rules, https://rules.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/rules/issues",
+    "repository": "",
+    "exports": [
+      [
+        "c5_fit"
+      ],
+      [
+        "c5_pred"
+      ],
+      [
+        "committees"
+      ],
+      [
+        "cubist_fit"
+      ],
+      [
+        "get_neighbors"
+      ],
+      [
+        "max_rules"
+      ],
+      [
+        "mtry_prop"
+      ],
+      [
+        "multi_predict"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tunable"
+      ],
+      [
+        "xrf_fit"
+      ],
+      [
+        "xrf_pred"
+      ]
+    ],
+    "topics": [],
+    "score": 10.2286,
+    "stars": 41,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "rules Model Wrappers for Rule-Based Models Bindings for additional models for use with the 'parsnip'\npackage.  Models include prediction rule ensembles (Friedman\nand Popescu, 2008) <doi:10.1214/07-AOAS148>, C5.0 rules\n(Quinlan, 1992 ISBN: 1558602380), and Cubist (Kuhn and Johnson,\n2013) <doi:10.1007/978-1-4614-6849-3>. c5_fit c5_pred committees cubist_fit get_neighbors max_rules mtry_prop multi_predict tidy tunable xrf_fit xrf_pred "
+  },
+  {
+    "id": 514,
+    "package_name": "embed",
+    "title": "Extra Recipes for Encoding Predictors",
+    "description": "Predictors can be converted to one or more numeric\nrepresentations using a variety of methods. Effect encodings\nusing simple generalized linear models\n<doi:10.48550/arXiv.1611.09477> or nonlinear models\n<doi:10.48550/arXiv.1604.06737> can be used. There are also\nfunctions for dimension reduction and other approaches.",
+    "version": "1.2.1.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://embed.tidymodels.org, https://github.com/tidymodels/embed",
+    "bug_reports": "https://github.com/tidymodels/embed/issues",
+    "repository": "",
+    "exports": [
+      [
+        "add_woe"
+      ],
+      [
+        "dictionary"
+      ],
+      [
+        "embed_control"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "step_collapse_cart"
+      ],
+      [
+        "step_collapse_stringdist"
+      ],
+      [
+        "step_discretize_cart"
+      ],
+      [
+        "step_discretize_xgb"
+      ],
+      [
+        "step_embed"
+      ],
+      [
+        "step_feature_hash"
+      ],
+      [
+        "step_lencode"
+      ],
+      [
+        "step_lencode_bayes"
+      ],
+      [
+        "step_lencode_glm"
+      ],
+      [
+        "step_lencode_mixed"
+      ],
+      [
+        "step_pca_sparse"
+      ],
+      [
+        "step_pca_sparse_bayes"
+      ],
+      [
+        "step_pca_truncated"
+      ],
+      [
+        "step_umap"
+      ],
+      [
+        "step_woe"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tunable"
+      ]
+    ],
+    "topics": [],
+    "score": 9.7388,
+    "stars": 143,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "embed Extra Recipes for Encoding Predictors Predictors can be converted to one or more numeric\nrepresentations using a variety of methods. Effect encodings\nusing simple generalized linear models\n<doi:10.48550/arXiv.1611.09477> or nonlinear models\n<doi:10.48550/arXiv.1604.06737> can be used. There are also\nfunctions for dimension reduction and other approaches. add_woe dictionary embed_control required_pkgs step_collapse_cart step_collapse_stringdist step_discretize_cart step_discretize_xgb step_embed step_feature_hash step_lencode step_lencode_bayes step_lencode_glm step_lencode_mixed step_pca_sparse step_pca_sparse_bayes step_pca_truncated step_umap step_woe tidy tunable "
+  },
+  {
+    "id": 1299,
+    "package_name": "tailor",
+    "title": "Iterative Steps for Postprocessing Model Predictions",
+    "description": "Postprocessors refine predictions outputted from machine\nlearning models to improve predictive performance or better\nsatisfy distributional limitations. This package introduces\n'tailor' objects, which compose iterative adjustments to model\npredictions. A number of pre-written adjustments are provided\nwith the package, such as calibration. See Lichtenstein,\nFischhoff, and Phillips (1977)\n<doi:10.1007/978-94-010-1276-8_19>. Other methods and utilities\nto compose new adjustments are also included. Tailors are\ntightly integrated with the 'tidymodels' framework.",
+    "version": "0.1.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Simon Couch [aut],\nHannah Frick [aut],\nEmil HvitFeldt [aut],\nMax Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/tailor,\nhttps://tailor.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/tailor/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "adjust_equivocal_zone"
+      ],
+      [
+        "adjust_numeric_calibration"
+      ],
+      [
+        "adjust_numeric_range"
+      ],
+      [
+        "adjust_predictions_custom"
+      ],
+      [
+        "adjust_probability_calibration"
+      ],
+      [
+        "adjust_probability_threshold"
+      ],
+      [
+        "extract_parameter_dials"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "tailor"
+      ],
+      [
+        "tailor_fully_trained"
+      ],
+      [
+        "tailor_requires_fit"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tunable"
+      ],
+      [
+        "tune_args"
+      ]
+    ],
+    "topics": [],
+    "score": 9.7199,
+    "stars": 16,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tailor Iterative Steps for Postprocessing Model Predictions Postprocessors refine predictions outputted from machine\nlearning models to improve predictive performance or better\nsatisfy distributional limitations. This package introduces\n'tailor' objects, which compose iterative adjustments to model\npredictions. A number of pre-written adjustments are provided\nwith the package, such as calibration. See Lichtenstein,\nFischhoff, and Phillips (1977)\n<doi:10.1007/978-94-010-1276-8_19>. Other methods and utilities\nto compose new adjustments are also included. Tailors are\ntightly integrated with the 'tidymodels' framework. %>% adjust_equivocal_zone adjust_numeric_calibration adjust_numeric_range adjust_predictions_custom adjust_probability_calibration adjust_probability_threshold extract_parameter_dials extract_parameter_set_dials fit required_pkgs tailor tailor_fully_trained tailor_requires_fit tidy tunable tune_args "
+  },
+  {
+    "id": 573,
+    "package_name": "finetune",
+    "title": "Additional Functions for Model Tuning",
+    "description": "The ability to tune models is important. 'finetune'\nenhances the 'tune' package by providing more specialized\nmethods for finding reasonable values of model tuning\nparameters.  Two racing methods described by Kuhn (2014)\n<doi:10.48550/arXiv.1405.6974> are included. An iterative\nsearch method using generalized simulated annealing\n(Bohachevsky, Johnson and Stein, 1986)\n<doi:10.1080/00401706.1986.10488128> is also included.",
+    "version": "1.2.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/finetune,\nhttps://finetune.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/finetune/issues",
+    "repository": "",
+    "exports": [
+      [
+        "control_race"
+      ],
+      [
+        "control_sim_anneal"
+      ],
+      [
+        "plot_race"
+      ],
+      [
+        "tune_race_anova"
+      ],
+      [
+        "tune_race_win_loss"
+      ],
+      [
+        "tune_sim_anneal"
+      ]
+    ],
+    "topics": [],
+    "score": 9.5511,
+    "stars": 63,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "finetune Additional Functions for Model Tuning The ability to tune models is important. 'finetune'\nenhances the 'tune' package by providing more specialized\nmethods for finding reasonable values of model tuning\nparameters.  Two racing methods described by Kuhn (2014)\n<doi:10.48550/arXiv.1405.6974> are included. An iterative\nsearch method using generalized simulated annealing\n(Bohachevsky, Johnson and Stein, 1986)\n<doi:10.1080/00401706.1986.10488128> is also included. control_race control_sim_anneal plot_race tune_race_anova tune_race_win_loss tune_sim_anneal "
+  },
+  {
+    "id": 1255,
+    "package_name": "spatialsample",
+    "title": "Spatial Resampling Infrastructure",
+    "description": "Functions and classes for spatial resampling to use with\nthe 'rsample' package, such as spatial cross-validation\n(Brenning, 2012) <doi:10.1109/IGARSS.2012.6352393>. The scope\nof 'rsample' and 'spatialsample' is to provide the basic\nbuilding blocks for creating and analyzing resamples of a\nspatial data set, but neither package includes functions for\nmodeling or computing statistics. The resampled spatial data\nsets created by 'spatialsample' do not contain much overhead in\nmemory.",
+    "version": "0.6.0.9000",
+    "maintainer": "Michael Mahoney <mike.mahoney.218@gmail.com>",
+    "author": "Michael Mahoney [aut, cre] (ORCID:\n<https://orcid.org/0000-0003-2402-304X>),\nJulia Silge [aut] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://github.com/tidymodels/spatialsample,\nhttps://spatialsample.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/spatialsample/issues",
+    "repository": "",
+    "exports": [
+      [
+        "analysis"
+      ],
+      [
+        "assessment"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "get_rsplit"
+      ],
+      [
+        "spatial_block_cv"
+      ],
+      [
+        "spatial_buffer_vfold_cv"
+      ],
+      [
+        "spatial_clustering_cv"
+      ],
+      [
+        "spatial_leave_location_out_cv"
+      ],
+      [
+        "spatial_nndm_cv"
+      ]
+    ],
+    "topics": [
+      [
+        "cpp"
+      ]
+    ],
+    "score": 9.1542,
+    "stars": 76,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "spatialsample Spatial Resampling Infrastructure Functions and classes for spatial resampling to use with\nthe 'rsample' package, such as spatial cross-validation\n(Brenning, 2012) <doi:10.1109/IGARSS.2012.6352393>. The scope\nof 'rsample' and 'spatialsample' is to provide the basic\nbuilding blocks for creating and analyzing resamples of a\nspatial data set, but neither package includes functions for\nmodeling or computing statistics. The resampled spatial data\nsets created by 'spatialsample' do not contain much overhead in\nmemory. analysis assessment autoplot get_rsplit spatial_block_cv spatial_buffer_vfold_cv spatial_clustering_cv spatial_leave_location_out_cv spatial_nndm_cv cpp"
+  },
+  {
+    "id": 353,
+    "package_name": "censored",
+    "title": "'parsnip' Engines for Survival Models",
+    "description": "Engines for survival models from the 'parsnip' package.\nThese include parametric models (e.g., Jackson (2016)\n<doi:10.18637/jss.v070.i08>), semi-parametric (e.g., Simon et\nal (2011) <doi:10.18637/jss.v039.i05>), and tree-based models\n(e.g., Buehlmann and Hothorn (2007) <doi:10.1214/07-STS242>).",
+    "version": "0.3.3.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Emil Hvitfeldt [aut] (ORCID: <https://orcid.org/0000-0002-0679-1945>),\nHannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/censored,\nhttps://censored.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/censored/issues",
+    "repository": "",
+    "exports": [
+      [
+        "blackboost_train"
+      ],
+      [
+        "coxnet_train"
+      ],
+      [
+        "hazard_survreg"
+      ],
+      [
+        "survival_prob_coxnet"
+      ],
+      [
+        "survival_prob_coxph"
+      ],
+      [
+        "survival_prob_mboost"
+      ],
+      [
+        "survival_prob_orsf"
+      ],
+      [
+        "survival_prob_partykit"
+      ],
+      [
+        "survival_prob_pecRpart"
+      ],
+      [
+        "survival_prob_survbagg"
+      ],
+      [
+        "survival_prob_survreg"
+      ],
+      [
+        "survival_time_coxnet"
+      ],
+      [
+        "survival_time_coxph"
+      ],
+      [
+        "survival_time_mboost"
+      ],
+      [
+        "survival_time_survbagg"
+      ]
+    ],
+    "topics": [
+      [
+        "parsnip"
+      ],
+      [
+        "tidymodels"
+      ]
+    ],
+    "score": 9.1528,
+    "stars": 122,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "censored 'parsnip' Engines for Survival Models Engines for survival models from the 'parsnip' package.\nThese include parametric models (e.g., Jackson (2016)\n<doi:10.18637/jss.v070.i08>), semi-parametric (e.g., Simon et\nal (2011) <doi:10.18637/jss.v039.i05>), and tree-based models\n(e.g., Buehlmann and Hothorn (2007) <doi:10.1214/07-STS242>). blackboost_train coxnet_train hazard_survreg survival_prob_coxnet survival_prob_coxph survival_prob_mboost survival_prob_orsf survival_prob_partykit survival_prob_pecRpart survival_prob_survbagg survival_prob_survreg survival_time_coxnet survival_time_coxph survival_time_mboost survival_time_survbagg parsnip tidymodels"
+  },
+  {
+    "id": 474,
+    "package_name": "discrim",
+    "title": "Model Wrappers for Discriminant Analysis",
+    "description": "Bindings for additional classification models for use with\nthe 'parsnip' package. Models include flavors of discriminant\nanalysis, such as linear (Fisher (1936)\n<doi:10.1111/j.1469-1809.1936.tb02137.x>), regularized\n(Friedman (1989) <doi:10.1080/01621459.1989.10478752>), and\nflexible (Hastie, Tibshirani, and Buja (1994)\n<doi:10.1080/01621459.1994.10476866>), as well as naive Bayes\nclassifiers (Hand and Yu (2007)\n<doi:10.1111/j.1751-5823.2001.tb00465.x>).",
+    "version": "1.1.0.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/discrim,\nhttps://discrim.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/discrim/issues",
+    "repository": "",
+    "exports": [
+      [
+        "fit_regularized_linear"
+      ],
+      [
+        "fit_regularized_quad"
+      ],
+      [
+        "frac_common_cov"
+      ],
+      [
+        "frac_identity"
+      ],
+      [
+        "klar_bayes_wrapper"
+      ],
+      [
+        "pred_wrapper"
+      ],
+      [
+        "smoothness"
+      ]
+    ],
+    "topics": [],
+    "score": 9.007,
+    "stars": 31,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "discrim Model Wrappers for Discriminant Analysis Bindings for additional classification models for use with\nthe 'parsnip' package. Models include flavors of discriminant\nanalysis, such as linear (Fisher (1936)\n<doi:10.1111/j.1469-1809.1936.tb02137.x>), regularized\n(Friedman (1989) <doi:10.1080/01621459.1989.10478752>), and\nflexible (Hastie, Tibshirani, and Buja (1994)\n<doi:10.1080/01621459.1994.10476866>), as well as naive Bayes\nclassifiers (Hand and Yu (2007)\n<doi:10.1111/j.1751-5823.2001.tb00465.x>). fit_regularized_linear fit_regularized_quad frac_common_cov frac_identity klar_bayes_wrapper pred_wrapper smoothness "
+  },
+  {
+    "id": 1345,
+    "package_name": "tidyposterior",
+    "title": "Bayesian Analysis to Compare Models using Resampling Statistics",
+    "description": "Bayesian analysis used here to answer the question: \"when\nlooking at resampling results, are the differences between\nmodels 'real'?\" To answer this, a model can be created were the\nperformance statistic is the resampling statistics (e.g.\naccuracy or RMSE). These values are explained by the model\ntypes. In doing this, we can get parameter estimates for each\nmodel's affect on performance and make statistical (and\npractical) comparisons between models. The methods included\nhere are similar to Benavoli et al (2017)\n<https://jmlr.org/papers/v18/16-305.html>.",
+    "version": "1.0.2.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://tidyposterior.tidymodels.org,\nhttps://github.com/tidymodels/tidyposterior",
+    "bug_reports": "https://github.com/tidymodels/tidyposterior/issues",
+    "repository": "",
+    "exports": [
+      [
+        "autoplot"
+      ],
+      [
+        "contrast_models"
+      ],
+      [
+        "Fisher_trans"
+      ],
+      [
+        "inv_trans"
+      ],
+      [
+        "ln_trans"
+      ],
+      [
+        "logit_trans"
+      ],
+      [
+        "no_trans"
+      ],
+      [
+        "perf_mod"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "tidy.perf_mod"
+      ],
+      [
+        "vec_cast.data.frame.posterior"
+      ],
+      [
+        "vec_cast.data.frame.posterior_diff"
+      ],
+      [
+        "vec_cast.posterior_diff.data.frame"
+      ],
+      [
+        "vec_cast.posterior_diff.posterior_diff"
+      ],
+      [
+        "vec_cast.posterior_diff.tbl_df"
+      ],
+      [
+        "vec_cast.posterior.data.frame"
+      ],
+      [
+        "vec_cast.posterior.posterior"
+      ],
+      [
+        "vec_cast.posterior.tbl_df"
+      ],
+      [
+        "vec_cast.tbl_df.posterior"
+      ],
+      [
+        "vec_cast.tbl_df.posterior_diff"
+      ],
+      [
+        "vec_proxy.posterior"
+      ],
+      [
+        "vec_proxy.posterior_diff"
+      ],
+      [
+        "vec_ptype2.data.frame.posterior"
+      ],
+      [
+        "vec_ptype2.data.frame.posterior_diff"
+      ],
+      [
+        "vec_ptype2.posterior_diff.data.frame"
+      ],
+      [
+        "vec_ptype2.posterior_diff.posterior_diff"
+      ],
+      [
+        "vec_ptype2.posterior_diff.tbl_df"
+      ],
+      [
+        "vec_ptype2.posterior.data.frame"
+      ],
+      [
+        "vec_ptype2.posterior.posterior"
+      ],
+      [
+        "vec_ptype2.posterior.tbl_df"
+      ],
+      [
+        "vec_ptype2.tbl_df.posterior"
+      ],
+      [
+        "vec_ptype2.tbl_df.posterior_diff"
+      ],
+      [
+        "vec_restore.posterior"
+      ],
+      [
+        "vec_restore.posterior_diff"
+      ]
+    ],
+    "topics": [],
+    "score": 8.5997,
+    "stars": 102,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tidyposterior Bayesian Analysis to Compare Models using Resampling Statistics Bayesian analysis used here to answer the question: \"when\nlooking at resampling results, are the differences between\nmodels 'real'?\" To answer this, a model can be created were the\nperformance statistic is the resampling statistics (e.g.\naccuracy or RMSE). These values are explained by the model\ntypes. In doing this, we can get parameter estimates for each\nmodel's affect on performance and make statistical (and\npractical) comparisons between models. The methods included\nhere are similar to Benavoli et al (2017)\n<https://jmlr.org/papers/v18/16-305.html>. autoplot contrast_models Fisher_trans inv_trans ln_trans logit_trans no_trans perf_mod tidy tidy.perf_mod vec_cast.data.frame.posterior vec_cast.data.frame.posterior_diff vec_cast.posterior_diff.data.frame vec_cast.posterior_diff.posterior_diff vec_cast.posterior_diff.tbl_df vec_cast.posterior.data.frame vec_cast.posterior.posterior vec_cast.posterior.tbl_df vec_cast.tbl_df.posterior vec_cast.tbl_df.posterior_diff vec_proxy.posterior vec_proxy.posterior_diff vec_ptype2.data.frame.posterior vec_ptype2.data.frame.posterior_diff vec_ptype2.posterior_diff.data.frame vec_ptype2.posterior_diff.posterior_diff vec_ptype2.posterior_diff.tbl_df vec_ptype2.posterior.data.frame vec_ptype2.posterior.posterior vec_ptype2.posterior.tbl_df vec_ptype2.tbl_df.posterior vec_ptype2.tbl_df.posterior_diff vec_restore.posterior vec_restore.posterior_diff "
+  },
+  {
+    "id": 275,
+    "package_name": "baguette",
+    "title": "Efficient Model Functions for Bagging",
+    "description": "Tree- and rule-based models can be bagged\n(<doi:10.1007/BF00058655>) using this package and their\npredictions equations are stored in an efficient format to\nreduce the model objects size and speed.",
+    "version": "1.1.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://baguette.tidymodels.org,\nhttps://github.com/tidymodels/baguette",
+    "bug_reports": "https://github.com/tidymodels/baguette/issues",
+    "repository": "",
+    "exports": [
+      [
+        "bagger"
+      ],
+      [
+        "class_cost"
+      ],
+      [
+        "control_bag"
+      ],
+      [
+        "nnet_imp_garson"
+      ],
+      [
+        "var_imp"
+      ],
+      [
+        "var_imp.bagger"
+      ]
+    ],
+    "topics": [],
+    "score": 8.5165,
+    "stars": 28,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "baguette Efficient Model Functions for Bagging Tree- and rule-based models can be bagged\n(<doi:10.1007/BF00058655>) using this package and their\npredictions equations are stored in an efficient format to\nreduce the model objects size and speed. bagger class_cost control_bag nnet_imp_garson var_imp var_imp.bagger "
+  },
+  {
+    "id": 858,
+    "package_name": "multilevelmod",
+    "title": "Model Wrappers for Multi-Level Models",
+    "description": "Bindings for hierarchical regression models for use with\nthe 'parsnip' package. Models include longitudinal generalized\nlinear models (Liang and Zeger, 1986)\n<doi:10.1093/biomet/73.1.13>, and mixed-effect models (Pinheiro\nand Bates) <doi:10.1007/978-1-4419-0318-1_1>.",
+    "version": "1.0.0.9000",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Max Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nHannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/multilevelmod,\nhttp://multilevelmod.tidymodels.org/",
+    "bug_reports": "",
+    "repository": "",
+    "exports": [
+      [
+        "gee_fit"
+      ]
+    ],
+    "topics": [],
+    "score": 8.4988,
+    "stars": 73,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "multilevelmod Model Wrappers for Multi-Level Models Bindings for hierarchical regression models for use with\nthe 'parsnip' package. Models include longitudinal generalized\nlinear models (Liang and Zeger, 1986)\n<doi:10.1093/biomet/73.1.13>, and mixed-effect models (Pinheiro\nand Bates) <doi:10.1007/978-1-4419-0318-1_1>. gee_fit "
+  },
+  {
+    "id": 323,
+    "package_name": "brulee",
+    "title": "High-Level Modeling Functions with 'torch'",
+    "description": "Provides high-level modeling functions to define and train\nmodels using the 'torch' R package. Models include linear,\nlogistic, and multinomial regression as well as multilayer\nperceptrons.",
+    "version": "0.6.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nDaniel Falbel [aut],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://github.com/tidymodels/brulee,\nhttps://brulee.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/brulee/issues",
+    "repository": "",
+    "exports": [
+      [
+        "autoplot"
+      ],
+      [
+        "brulee_activations"
+      ],
+      [
+        "brulee_linear_reg"
+      ],
+      [
+        "brulee_logistic_reg"
+      ],
+      [
+        "brulee_mlp"
+      ],
+      [
+        "brulee_mlp_two_layer"
+      ],
+      [
+        "brulee_multinomial_reg"
+      ],
+      [
+        "coef"
+      ],
+      [
+        "matrix_to_dataset"
+      ],
+      [
+        "schedule_cyclic"
+      ],
+      [
+        "schedule_decay_expo"
+      ],
+      [
+        "schedule_decay_time"
+      ],
+      [
+        "schedule_step"
+      ],
+      [
+        "set_learn_rate"
+      ],
+      [
+        "tunable"
+      ]
+    ],
+    "topics": [],
+    "score": 8.1519,
+    "stars": 74,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "brulee High-Level Modeling Functions with 'torch' Provides high-level modeling functions to define and train\nmodels using the 'torch' R package. Models include linear,\nlogistic, and multinomial regression as well as multilayer\nperceptrons. autoplot brulee_activations brulee_linear_reg brulee_logistic_reg brulee_mlp brulee_mlp_two_layer brulee_multinomial_reg coef matrix_to_dataset schedule_cyclic schedule_decay_expo schedule_decay_time schedule_step set_learn_rate tunable "
+  },
+  {
+    "id": 248,
+    "package_name": "applicable",
+    "title": "A Compilation of Applicability Domain Methods",
+    "description": "A modeling package compiling applicability domain methods\nin R.  It combines different methods to measure the amount of\nextrapolation new samples can have from the training set. See\nNetzeva et al (2005) <doi:10.1177/026119290503300209> for an\noverview of applicability domains.",
+    "version": "0.0.1.1",
+    "maintainer": "Marly Gotti <marlygotti@gmail.com>",
+    "author": "Marly Gotti [aut, cre],\nMax Kuhn [aut],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://github.com/tidymodels/applicable,\nhttps://applicable.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/applicable/issues",
+    "repository": "",
+    "exports": [
+      [
+        "apd_hat_values"
+      ],
+      [
+        "apd_pca"
+      ],
+      [
+        "apd_similarity"
+      ],
+      [
+        "autoplot.apd_pca"
+      ],
+      [
+        "autoplot.apd_similarity"
+      ],
+      [
+        "score"
+      ],
+      [
+        "score.default"
+      ]
+    ],
+    "topics": [],
+    "score": 8.0426,
+    "stars": 47,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "applicable A Compilation of Applicability Domain Methods A modeling package compiling applicability domain methods\nin R.  It combines different methods to measure the amount of\nextrapolation new samples can have from the training set. See\nNetzeva et al (2005) <doi:10.1177/026119290503300209> for an\noverview of applicability domains. apd_hat_values apd_pca apd_similarity autoplot.apd_pca autoplot.apd_similarity score score.default "
+  },
+  {
+    "id": 832,
+    "package_name": "modelenv",
+    "title": "Provide Tools to Register Models for Use in 'tidymodels'",
+    "description": "An developer focused, low dependency package in\n'tidymodels' that provides functions to register how models are\nto be used. Functions to register models are complimented with\naccessor functions to retrieve registered model information to\naid in model fitting and error handling.",
+    "version": "0.2.0.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/modelenv,\nhttp://modelenv.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/modelenv/issues",
+    "repository": "",
+    "exports": [
+      [
+        "check_spec_mode_engine_val"
+      ],
+      [
+        "get_dependency"
+      ],
+      [
+        "get_encoding"
+      ],
+      [
+        "get_fit"
+      ],
+      [
+        "get_from_env"
+      ],
+      [
+        "get_model_arg"
+      ],
+      [
+        "get_model_env"
+      ],
+      [
+        "get_pred_type"
+      ],
+      [
+        "is_unsupervised_fit"
+      ],
+      [
+        "is_unsupervised_spec"
+      ],
+      [
+        "new_unsupervised_fit"
+      ],
+      [
+        "new_unsupervised_spec"
+      ],
+      [
+        "set_dependency"
+      ],
+      [
+        "set_encoding"
+      ],
+      [
+        "set_env_val"
+      ],
+      [
+        "set_fit"
+      ],
+      [
+        "set_model_arg"
+      ],
+      [
+        "set_model_engine"
+      ],
+      [
+        "set_model_mode"
+      ],
+      [
+        "set_new_model"
+      ],
+      [
+        "set_pred"
+      ],
+      [
+        "stop_incompatible_mode"
+      ]
+    ],
+    "topics": [],
+    "score": 7.734,
+    "stars": 4,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "modelenv Provide Tools to Register Models for Use in 'tidymodels' An developer focused, low dependency package in\n'tidymodels' that provides functions to register how models are\nto be used. Functions to register models are complimented with\naccessor functions to retrieve registered model information to\naid in model fitting and error handling. check_spec_mode_engine_val get_dependency get_encoding get_fit get_from_env get_model_arg get_model_env get_pred_type is_unsupervised_fit is_unsupervised_spec new_unsupervised_fit new_unsupervised_spec set_dependency set_encoding set_env_val set_fit set_model_arg set_model_engine set_model_mode set_new_model set_pred stop_incompatible_mode "
+  },
+  {
+    "id": 1339,
+    "package_name": "tidyclust",
+    "title": "A Common API to Clustering",
+    "description": "A common interface to specifying clustering models, in the\nsame style as 'parsnip'. Creates unified interface across\ndifferent functions and computational engines.",
+    "version": "0.2.4.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nKelly Bodwin [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/tidyclust,\nhttps://tidyclust.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/tidyclust/issues",
+    "repository": "",
+    "exports": [
+      [
+        ".hier_clust_fit_stats"
+      ],
+      [
+        ".k_means_fit_ClusterR"
+      ],
+      [
+        ".k_means_fit_clustMixType"
+      ],
+      [
+        ".k_means_fit_klaR"
+      ],
+      [
+        ".k_means_fit_stats"
+      ],
+      [
+        "%>%"
+      ],
+      [
+        "augment"
+      ],
+      [
+        "cluster_metric_set"
+      ],
+      [
+        "control_cluster"
+      ],
+      [
+        "cut_height"
+      ],
+      [
+        "extract_centroids"
+      ],
+      [
+        "extract_cluster_assignment"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "extract_fit_summary"
+      ],
+      [
+        "extract_parameter_set_dials"
+      ],
+      [
+        "extract_preprocessor"
+      ],
+      [
+        "extract_spec_parsnip"
+      ],
+      [
+        "finalize_model_tidyclust"
+      ],
+      [
+        "finalize_workflow_tidyclust"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "fit_xy"
+      ],
+      [
+        "fit_xy.cluster_spec"
+      ],
+      [
+        "fit.cluster_spec"
+      ],
+      [
+        "get_tidyclust_colors"
+      ],
+      [
+        "glance"
+      ],
+      [
+        "hier_clust"
+      ],
+      [
+        "k_means"
+      ],
+      [
+        "knit_engine_docs"
+      ],
+      [
+        "linkage_method"
+      ],
+      [
+        "list_md_problems"
+      ],
+      [
+        "load_pkgs"
+      ],
+      [
+        "make_classes_tidyclust"
+      ],
+      [
+        "min_grid"
+      ],
+      [
+        "new_cluster_metric"
+      ],
+      [
+        "new_cluster_spec"
+      ],
+      [
+        "predict_cluster"
+      ],
+      [
+        "predict_cluster.cluster_fit"
+      ],
+      [
+        "predict_raw"
+      ],
+      [
+        "predict_raw.cluster_fit"
+      ],
+      [
+        "predict.cluster_fit"
+      ],
+      [
+        "reconcile_clusterings_mapping"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "set_args"
+      ],
+      [
+        "set_engine"
+      ],
+      [
+        "set_mode"
+      ],
+      [
+        "silhouette"
+      ],
+      [
+        "silhouette_avg"
+      ],
+      [
+        "silhouette_avg_vec"
+      ],
+      [
+        "sse_ratio"
+      ],
+      [
+        "sse_ratio_vec"
+      ],
+      [
+        "sse_total"
+      ],
+      [
+        "sse_total_vec"
+      ],
+      [
+        "sse_within"
+      ],
+      [
+        "sse_within_total"
+      ],
+      [
+        "sse_within_total_vec"
+      ],
+      [
+        "tidy"
+      ],
+      [
+        "translate_tidyclust"
+      ],
+      [
+        "translate_tidyclust.default"
+      ],
+      [
+        "tune"
+      ],
+      [
+        "tune_cluster"
+      ],
+      [
+        "values_linkage_method"
+      ]
+    ],
+    "topics": [],
+    "score": 7.6703,
+    "stars": 112,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "tidyclust A Common API to Clustering A common interface to specifying clustering models, in the\nsame style as 'parsnip'. Creates unified interface across\ndifferent functions and computational engines. .hier_clust_fit_stats .k_means_fit_ClusterR .k_means_fit_clustMixType .k_means_fit_klaR .k_means_fit_stats %>% augment cluster_metric_set control_cluster cut_height extract_centroids extract_cluster_assignment extract_fit_engine extract_fit_parsnip extract_fit_summary extract_parameter_set_dials extract_preprocessor extract_spec_parsnip finalize_model_tidyclust finalize_workflow_tidyclust fit fit_xy fit_xy.cluster_spec fit.cluster_spec get_tidyclust_colors glance hier_clust k_means knit_engine_docs linkage_method list_md_problems load_pkgs make_classes_tidyclust min_grid new_cluster_metric new_cluster_spec predict_cluster predict_cluster.cluster_fit predict_raw predict_raw.cluster_fit predict.cluster_fit reconcile_clusterings_mapping required_pkgs set_args set_engine set_mode silhouette silhouette_avg silhouette_avg_vec sse_ratio sse_ratio_vec sse_total sse_total_vec sse_within sse_within_total sse_within_total_vec tidy translate_tidyclust translate_tidyclust.default tune tune_cluster values_linkage_method "
+  },
+  {
+    "id": 831,
+    "package_name": "modeldb",
+    "title": "Fits Models Inside the Database",
+    "description": "Uses 'dplyr' and 'tidyeval' to fit statistical models\ninside the database. It currently supports KMeans and linear\nregression models.",
+    "version": "0.3.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Edgar Ruiz [aut],\nMax Kuhn [aut, cre]",
+    "url": "https://modeldb.tidymodels.org,\nhttps://github.com/tidymodels/modeldb",
+    "bug_reports": "https://github.com/tidymodels/modeldb/issues",
+    "repository": "",
+    "exports": [
+      [
+        "add_dummy_variables"
+      ],
+      [
+        "as_parsed_model"
+      ],
+      [
+        "db_calculate_squares"
+      ],
+      [
+        "linear_regression_db"
+      ],
+      [
+        "plot_kmeans"
+      ],
+      [
+        "simple_kmeans_db"
+      ]
+    ],
+    "topics": [
+      [
+        "database"
+      ],
+      [
+        "dbplyr"
+      ],
+      [
+        "dplyr"
+      ],
+      [
+        "ggplot2"
+      ],
+      [
+        "modeling"
+      ],
+      [
+        "rlang"
+      ],
+      [
+        "sql"
+      ],
+      [
+        "tidyeval"
+      ],
+      [
+        "visualization"
+      ]
+    ],
+    "score": 7.586,
+    "stars": 79,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "modeldb Fits Models Inside the Database Uses 'dplyr' and 'tidyeval' to fit statistical models\ninside the database. It currently supports KMeans and linear\nregression models. add_dummy_variables as_parsed_model db_calculate_squares linear_regression_db plot_kmeans simple_kmeans_db database dbplyr dplyr ggplot2 modeling rlang sql tidyeval visualization"
+  },
+  {
+    "id": 999,
+    "package_name": "poissonreg",
+    "title": "Model Wrappers for Poisson Regression",
+    "description": "Bindings for Poisson regression models for use with the\n'parsnip' package. Models include simple generalized linear\nmodels, Bayesian models, and zero-inflated Poisson models\n(Zeileis, Kleiber, and Jackman (2008)\n<doi:10.18637/jss.v027.i08>).",
+    "version": "1.0.1.9001",
+    "maintainer": "Hannah Frick <hannah@posit.co>",
+    "author": "Max Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nHannah Frick [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-6049-5258>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/poissonreg,\nhttps://poissonreg.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/poissonreg/issues",
+    "repository": "",
+    "exports": [
+      [
+        "tidy"
+      ]
+    ],
+    "topics": [],
+    "score": 7.4084,
+    "stars": 22,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "poissonreg Model Wrappers for Poisson Regression Bindings for Poisson regression models for use with the\n'parsnip' package. Models include simple generalized linear\nmodels, Bayesian models, and zero-inflated Poisson models\n(Zeileis, Kleiber, and Jackman (2008)\n<doi:10.18637/jss.v027.i08>). tidy "
+  },
+  {
+    "id": 1404,
+    "package_name": "usemodels",
+    "title": "Boilerplate Code for 'Tidymodels' Analyses",
+    "description": "Code snippets to fit models using the tidymodels framework\ncan be easily created for a given data set.",
+    "version": "0.2.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://usemodels.tidymodels.org/,\nhttps://github.com/tidymodels/usemodels",
+    "bug_reports": "https://github.com/tidymodels/usemodels/issues",
+    "repository": "",
+    "exports": [
+      [
+        "use_bag_tree_rpart"
+      ],
+      [
+        "use_C5.0"
+      ],
+      [
+        "use_cubist"
+      ],
+      [
+        "use_dbarts"
+      ],
+      [
+        "use_earth"
+      ],
+      [
+        "use_glmnet"
+      ],
+      [
+        "use_kernlab_svm_poly"
+      ],
+      [
+        "use_kernlab_svm_rbf"
+      ],
+      [
+        "use_kknn"
+      ],
+      [
+        "use_mgcv"
+      ],
+      [
+        "use_mixOmics"
+      ],
+      [
+        "use_nnet"
+      ],
+      [
+        "use_ranger"
+      ],
+      [
+        "use_rpart"
+      ],
+      [
+        "use_xgboost"
+      ],
+      [
+        "use_xrf"
+      ]
+    ],
+    "topics": [],
+    "score": 7.2878,
+    "stars": 86,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "usemodels Boilerplate Code for 'Tidymodels' Analyses Code snippets to fit models using the tidymodels framework\ncan be easily created for a given data set. use_bag_tree_rpart use_C5.0 use_cubist use_dbarts use_earth use_glmnet use_kernlab_svm_poly use_kernlab_svm_rbf use_kknn use_mgcv use_mixOmics use_nnet use_ranger use_rpart use_xgboost use_xrf "
+  },
+  {
+    "id": 570,
+    "package_name": "filtro",
+    "title": "Feature Selection Using Supervised Filter-Based Methods",
+    "description": "Tidy tools to apply filter-based supervised feature\nselection methods. These methods score and rank feature\nrelevance using metrics such as p-values, correlation, and\nimportance scores (Kuhn and Johnson (2019)\n<doi:10.1201/9781315108230>).",
+    "version": "0.2.0.9000",
+    "maintainer": "Frances Lin <franceslinyc@gmail.com>",
+    "author": "Frances Lin [aut, cre],\nMax Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nEmil Hvitfeldt [aut],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/filtro,\nhttps://filtro.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/filtro/issues",
+    "repository": "",
+    "exports": [
+      [
+        "arrange_score"
+      ],
+      [
+        "bind_scores"
+      ],
+      [
+        "class_score"
+      ],
+      [
+        "class_score_aov"
+      ],
+      [
+        "class_score_cor"
+      ],
+      [
+        "class_score_imp_rf"
+      ],
+      [
+        "class_score_info_gain"
+      ],
+      [
+        "class_score_list"
+      ],
+      [
+        "class_score_roc_auc"
+      ],
+      [
+        "class_score_xtab"
+      ],
+      [
+        "dont_log_pvalues"
+      ],
+      [
+        "fill_safe_value"
+      ],
+      [
+        "fill_safe_values"
+      ],
+      [
+        "fit"
+      ],
+      [
+        "rank_best_score_dense"
+      ],
+      [
+        "rank_best_score_min"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "score_aov_fstat"
+      ],
+      [
+        "score_aov_pval"
+      ],
+      [
+        "score_cor_pearson"
+      ],
+      [
+        "score_cor_spearman"
+      ],
+      [
+        "score_gain_ratio"
+      ],
+      [
+        "score_imp_rf"
+      ],
+      [
+        "score_imp_rf_conditional"
+      ],
+      [
+        "score_imp_rf_oblique"
+      ],
+      [
+        "score_info_gain"
+      ],
+      [
+        "score_roc_auc"
+      ],
+      [
+        "score_sym_uncert"
+      ],
+      [
+        "score_xtab_pval_chisq"
+      ],
+      [
+        "score_xtab_pval_fisher"
+      ],
+      [
+        "show_best_desirability_num"
+      ],
+      [
+        "show_best_desirability_prop"
+      ],
+      [
+        "show_best_score_cutoff"
+      ],
+      [
+        "show_best_score_dual"
+      ],
+      [
+        "show_best_score_num"
+      ],
+      [
+        "show_best_score_prop"
+      ]
+    ],
+    "topics": [
+      [
+        "quarto"
+      ]
+    ],
+    "score": 6.8785,
+    "stars": 7,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "filtro Feature Selection Using Supervised Filter-Based Methods Tidy tools to apply filter-based supervised feature\nselection methods. These methods score and rank feature\nrelevance using metrics such as p-values, correlation, and\nimportance scores (Kuhn and Johnson (2019)\n<doi:10.1201/9781315108230>). arrange_score bind_scores class_score class_score_aov class_score_cor class_score_imp_rf class_score_info_gain class_score_list class_score_roc_auc class_score_xtab dont_log_pvalues fill_safe_value fill_safe_values fit rank_best_score_dense rank_best_score_min required_pkgs score_aov_fstat score_aov_pval score_cor_pearson score_cor_spearman score_gain_ratio score_imp_rf score_imp_rf_conditional score_imp_rf_oblique score_info_gain score_roc_auc score_sym_uncert score_xtab_pval_chisq score_xtab_pval_fisher show_best_desirability_num show_best_desirability_prop show_best_score_cutoff show_best_score_dual show_best_score_num show_best_score_prop quarto"
+  },
+  {
+    "id": 463,
+    "package_name": "desirability2",
+    "title": "Desirability Functions for Multiparameter Optimization",
+    "description": "In-line functions for multivariate optimization via\ndesirability functions (Derringer and Suich, 1980,\n<doi:10.1080/00224065.1980.11980968>) with easy use within\n'dplyr' pipelines.",
+    "version": "0.2.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://desirability2.tidymodels.org,\nhttps://github.com/tidymodels/desirability2",
+    "bug_reports": "https://github.com/tidymodels/desirability2/issues",
+    "repository": "",
+    "exports": [
+      [
+        "category"
+      ],
+      [
+        "constrain"
+      ],
+      [
+        "d_box"
+      ],
+      [
+        "d_category"
+      ],
+      [
+        "d_custom"
+      ],
+      [
+        "d_max"
+      ],
+      [
+        "d_min"
+      ],
+      [
+        "d_overall"
+      ],
+      [
+        "d_target"
+      ],
+      [
+        "desirability"
+      ],
+      [
+        "make_desirability_cols"
+      ],
+      [
+        "maximize"
+      ],
+      [
+        "minimize"
+      ],
+      [
+        "select_best_desirability"
+      ],
+      [
+        "show_best_desirability"
+      ],
+      [
+        "target"
+      ]
+    ],
+    "topics": [],
+    "score": 6.7236,
+    "stars": 14,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "desirability2 Desirability Functions for Multiparameter Optimization In-line functions for multivariate optimization via\ndesirability functions (Derringer and Suich, 1980,\n<doi:10.1080/00224065.1980.11980968>) with easy use within\n'dplyr' pipelines. category constrain d_box d_category d_custom d_max d_min d_overall d_target desirability make_desirability_cols maximize minimize select_best_desirability show_best_desirability target "
+  },
+  {
+    "id": 914,
+    "package_name": "orbital",
+    "title": "Predict with 'tidymodels' Workflows in Databases",
+    "description": "Turn 'tidymodels' workflows into objects containing the\nsufficient sequential equations to perform predictions. These\nsmaller objects allow for low dependency prediction locally or\ndirectly in databases.",
+    "version": "0.4.1.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://github.com/tidymodels/orbital,\nhttps://orbital.tidymodels.org",
+    "bug_reports": "https://github.com/tidymodels/orbital/issues",
+    "repository": "",
+    "exports": [
+      [
+        "augment"
+      ],
+      [
+        "orbital"
+      ],
+      [
+        "orbital_dt"
+      ],
+      [
+        "orbital_inline"
+      ],
+      [
+        "orbital_json_read"
+      ],
+      [
+        "orbital_json_write"
+      ],
+      [
+        "orbital_r_fun"
+      ],
+      [
+        "orbital_sql"
+      ]
+    ],
+    "topics": [],
+    "score": 6.6846,
+    "stars": 43,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "orbital Predict with 'tidymodels' Workflows in Databases Turn 'tidymodels' workflows into objects containing the\nsufficient sequential equations to perform predictions. These\nsmaller objects allow for low dependency prediction locally or\ndirectly in databases. augment orbital orbital_dt orbital_inline orbital_json_read orbital_json_write orbital_r_fun orbital_sql "
+  },
+  {
+    "id": 229,
+    "package_name": "agua",
+    "title": "'tidymodels' Integration with 'h2o'",
+    "description": "Create and evaluate models using 'tidymodels' and 'h2o'\n<https://h2o.ai/>. The package enables users to specify 'h2o'\nas an engine for several modeling methods.",
+    "version": "0.1.4.9000",
+    "maintainer": "Qiushi Yan <qiushi.yann@gmail.com>",
+    "author": "Max Kuhn [aut] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nQiushi Yan [aut, cre],\nSteven Pawley [aut],\nPosit Software, PBC [cph, fnd]",
+    "url": "https://agua.tidymodels.org/, https://github.com/tidymodels/agua",
+    "bug_reports": "https://github.com/tidymodels/agua/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "agua_backend_options"
+      ],
+      [
+        "as_h2o"
+      ],
+      [
+        "as_tibble"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "collect_metrics"
+      ],
+      [
+        "extract_fit_engine"
+      ],
+      [
+        "extract_fit_parsnip"
+      ],
+      [
+        "get_leaderboard"
+      ],
+      [
+        "h2o_activation"
+      ],
+      [
+        "h2o_end"
+      ],
+      [
+        "h2o_get_frame"
+      ],
+      [
+        "h2o_get_model"
+      ],
+      [
+        "h2o_predict"
+      ],
+      [
+        "h2o_predict_classification"
+      ],
+      [
+        "h2o_predict_regression"
+      ],
+      [
+        "h2o_remove"
+      ],
+      [
+        "h2o_remove_all"
+      ],
+      [
+        "h2o_running"
+      ],
+      [
+        "h2o_split"
+      ],
+      [
+        "h2o_start"
+      ],
+      [
+        "h2o_train"
+      ],
+      [
+        "h2o_train_auto"
+      ],
+      [
+        "h2o_train_gbm"
+      ],
+      [
+        "h2o_train_glm"
+      ],
+      [
+        "h2o_train_mlp"
+      ],
+      [
+        "h2o_train_nb"
+      ],
+      [
+        "h2o_train_rf"
+      ],
+      [
+        "h2o_train_rule"
+      ],
+      [
+        "h2o_train_xgboost"
+      ],
+      [
+        "h2o_xgboost_available"
+      ],
+      [
+        "member_weights"
+      ],
+      [
+        "rank_results"
+      ],
+      [
+        "refit"
+      ],
+      [
+        "tidy"
+      ]
+    ],
+    "topics": [],
+    "score": 6.645,
+    "stars": 23,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "agua 'tidymodels' Integration with 'h2o' Create and evaluate models using 'tidymodels' and 'h2o'\n<https://h2o.ai/>. The package enables users to specify 'h2o'\nas an engine for several modeling methods. %>% agua_backend_options as_h2o as_tibble autoplot collect_metrics extract_fit_engine extract_fit_parsnip get_leaderboard h2o_activation h2o_end h2o_get_frame h2o_get_model h2o_predict h2o_predict_classification h2o_predict_regression h2o_remove h2o_remove_all h2o_running h2o_split h2o_start h2o_train h2o_train_auto h2o_train_gbm h2o_train_glm h2o_train_mlp h2o_train_nb h2o_train_rf h2o_train_rule h2o_train_xgboost h2o_xgboost_available member_weights rank_results refit tidy "
+  },
+  {
+    "id": 989,
+    "package_name": "plsmod",
+    "title": "Model Wrappers for Projection Methods",
+    "description": "Bindings for additional regression models for use with the\n'parsnip' package, including ordinary and spare partial least\nsquares models for regression and classification (Rohart et al\n(2017) <doi:10.1371/journal.pcbi.1005752>).",
+    "version": "1.0.0.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://plsmod.tidymodels.org,\nhttps://github.com/tidymodels/plsmod",
+    "bug_reports": "https://github.com/tidymodels/plsmod/issues",
+    "repository": "",
+    "exports": [
+      [
+        "multi_predict"
+      ],
+      [
+        "pls_fit"
+      ],
+      [
+        "tidy"
+      ]
+    ],
+    "topics": [
+      [
+        "mixomics"
+      ]
+    ],
+    "score": 6.5635,
+    "stars": 14,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "plsmod Model Wrappers for Projection Methods Bindings for additional regression models for use with the\n'parsnip' package, including ordinary and spare partial least\nsquares models for regression and classification (Rohart et al\n(2017) <doi:10.1371/journal.pcbi.1005752>). multi_predict pls_fit tidy mixomics"
+  },
+  {
+    "id": 1214,
+    "package_name": "shinymodels",
+    "title": "Interactive Assessments of Models",
+    "description": "Launch a 'shiny' application for 'tidymodels' results. For\nclassification or regression models, the app can be used to\ndetermine if there is lack of fit or poorly predicted points.",
+    "version": "0.1.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nShisham Adhikari [aut],\nJulia Silge [aut] (ORCID: <https://orcid.org/0000-0002-3671-836X>),\nSimon Couch [aut] (ORCID: <https://orcid.org/0000-0001-5676-5107>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://shinymodels.tidymodels.org,\nhttps://github.com/tidymodels/shinymodels",
+    "bug_reports": "https://github.com/tidymodels/shinymodels/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "display_selected"
+      ],
+      [
+        "explore"
+      ],
+      [
+        "first_class_prob_name"
+      ],
+      [
+        "first_level"
+      ],
+      [
+        "format_hover"
+      ],
+      [
+        "organize_data"
+      ],
+      [
+        "performance_object"
+      ],
+      [
+        "plot_multiclass_conf_mat"
+      ],
+      [
+        "plot_multiclass_obs_pred"
+      ],
+      [
+        "plot_multiclass_pr"
+      ],
+      [
+        "plot_multiclass_pred_factorcol"
+      ],
+      [
+        "plot_multiclass_pred_numcol"
+      ],
+      [
+        "plot_multiclass_roc"
+      ],
+      [
+        "plot_numeric_obs_pred"
+      ],
+      [
+        "plot_numeric_res_factorcol"
+      ],
+      [
+        "plot_numeric_res_numcol"
+      ],
+      [
+        "plot_numeric_res_pred"
+      ],
+      [
+        "plot_twoclass_conf_mat"
+      ],
+      [
+        "plot_twoclass_obs_pred"
+      ],
+      [
+        "plot_twoclass_pr"
+      ],
+      [
+        "plot_twoclass_pred_factorcol"
+      ],
+      [
+        "plot_twoclass_pred_numcol"
+      ],
+      [
+        "plot_twoclass_roc"
+      ],
+      [
+        "shiny_models"
+      ]
+    ],
+    "topics": [
+      [
+        "shiny"
+      ]
+    ],
+    "score": 5.9066,
+    "stars": 48,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "shinymodels Interactive Assessments of Models Launch a 'shiny' application for 'tidymodels' results. For\nclassification or regression models, the app can be used to\ndetermine if there is lack of fit or poorly predicted points. %>% display_selected explore first_class_prob_name first_level format_hover organize_data performance_object plot_multiclass_conf_mat plot_multiclass_obs_pred plot_multiclass_pr plot_multiclass_pred_factorcol plot_multiclass_pred_numcol plot_multiclass_roc plot_numeric_obs_pred plot_numeric_res_factorcol plot_numeric_res_numcol plot_numeric_res_pred plot_twoclass_conf_mat plot_twoclass_obs_pred plot_twoclass_pr plot_twoclass_pred_factorcol plot_twoclass_pred_numcol plot_twoclass_roc shiny_models shiny"
+  },
+  {
+    "id": 707,
+    "package_name": "important",
+    "title": "Supervised Feature Selection",
+    "description": "Interfaces for choosing important predictors in supervised\nregression, classification, and censored regression models.\nPermuted importance scores (Biecek and Burzykowski (2021)\n<doi:10.1201/9780429027192>) can be computed for 'tidymodels'\nmodel fits.",
+    "version": "0.2.1.9000",
+    "maintainer": "Max Kuhn <max@posit.co>",
+    "author": "Max Kuhn [aut, cre] (ORCID: <https://orcid.org/0000-0003-2402-136X>),\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://important.tidymodels.org/,\nhttps://github.com/tidymodels/important",
+    "bug_reports": "https://github.com/tidymodels/important/issues",
+    "repository": "",
+    "exports": [
+      [
+        "augment"
+      ],
+      [
+        "autoplot"
+      ],
+      [
+        "importance_perm"
+      ],
+      [
+        "required_pkgs"
+      ],
+      [
+        "step_predictor_best"
+      ],
+      [
+        "step_predictor_desirability"
+      ],
+      [
+        "step_predictor_retain"
+      ]
+    ],
+    "topics": [],
+    "score": 4.8885,
+    "stars": 17,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "important Supervised Feature Selection Interfaces for choosing important predictors in supervised\nregression, classification, and censored regression models.\nPermuted importance scores (Biecek and Burzykowski (2021)\n<doi:10.1201/9780429027192>) can be computed for 'tidymodels'\nmodel fits. augment autoplot importance_perm required_pkgs step_predictor_best step_predictor_desirability step_predictor_retain "
+  },
+  {
+    "id": 830,
+    "package_name": "modeldatatoo",
+    "title": "More Data Sets Useful for Modeling Examples",
+    "description": "More data sets used for demonstrating or testing\nmodel-related packages are contained in this package. The data\nsets are downloaded and cached, allowing for more and bigger\ndata sets.",
+    "version": "0.3.0.9000",
+    "maintainer": "Emil Hvitfeldt <emil.hvitfeldt@posit.co>",
+    "author": "Emil Hvitfeldt [aut, cre] (ORCID:\n<https://orcid.org/0000-0002-0679-1945>),\nPosit Software, PBC [cph, fnd]",
+    "url": "https://github.com/tidymodels/modeldatatoo,\nhttps://modeldatatoo.tidymodels.org/",
+    "bug_reports": "https://github.com/tidymodels/modeldatatoo/issues",
+    "repository": "",
+    "exports": [
+      [
+        "attach_small_fine_foods"
+      ],
+      [
+        "data_animals"
+      ],
+      [
+        "data_building_complaints"
+      ],
+      [
+        "data_chimiometrie_2019"
+      ],
+      [
+        "data_detectors"
+      ],
+      [
+        "data_elevators"
+      ],
+      [
+        "data_hotel_rates"
+      ],
+      [
+        "data_pharma_bioreactors"
+      ],
+      [
+        "data_taxi"
+      ],
+      [
+        "internal_board"
+      ]
+    ],
+    "topics": [],
+    "score": 4.634,
+    "stars": 7,
+    "primary_category": "tidyverse",
+    "source_universe": "tidymodels",
+    "search_text": "modeldatatoo More Data Sets Useful for Modeling Examples More data sets used for demonstrating or testing\nmodel-related packages are contained in this package. The data\nsets are downloaded and cached, allowing for more and bigger\ndata sets. attach_small_fine_foods data_animals data_building_complaints data_chimiometrie_2019 data_detectors data_elevators data_hotel_rates data_pharma_bioreactors data_taxi internal_board "
+  }
+]

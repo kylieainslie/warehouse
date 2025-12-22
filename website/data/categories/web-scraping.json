@@ -1,0 +1,2825 @@
+[
+  {
+    "id": 1171,
+    "package_name": "rvest",
+    "title": "Easily Harvest (Scrape) Web Pages",
+    "description": "Wrappers around the 'xml2' and 'httr' packages to make it\neasy to download, then manipulate, HTML and XML.",
+    "version": "1.0.5.9000",
+    "maintainer": "Hadley Wickham <hadley@posit.co>",
+    "author": "Hadley Wickham [aut, cre],\nPosit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+    "url": "https://rvest.tidyverse.org/, https://github.com/tidyverse/rvest",
+    "bug_reports": "https://github.com/tidyverse/rvest/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "back"
+      ],
+      [
+        "follow_link"
+      ],
+      [
+        "forward"
+      ],
+      [
+        "google_form"
+      ],
+      [
+        "guess_encoding"
+      ],
+      [
+        "html_attr"
+      ],
+      [
+        "html_attrs"
+      ],
+      [
+        "html_children"
+      ],
+      [
+        "html_element"
+      ],
+      [
+        "html_elements"
+      ],
+      [
+        "html_encoding_guess"
+      ],
+      [
+        "html_form"
+      ],
+      [
+        "html_form_set"
+      ],
+      [
+        "html_form_submit"
+      ],
+      [
+        "html_name"
+      ],
+      [
+        "html_node"
+      ],
+      [
+        "html_nodes"
+      ],
+      [
+        "html_session"
+      ],
+      [
+        "html_table"
+      ],
+      [
+        "html_text"
+      ],
+      [
+        "html_text2"
+      ],
+      [
+        "is.session"
+      ],
+      [
+        "jump_to"
+      ],
+      [
+        "LiveHTML"
+      ],
+      [
+        "minimal_html"
+      ],
+      [
+        "read_html"
+      ],
+      [
+        "read_html_live"
+      ],
+      [
+        "repair_encoding"
+      ],
+      [
+        "session"
+      ],
+      [
+        "session_back"
+      ],
+      [
+        "session_follow_link"
+      ],
+      [
+        "session_forward"
+      ],
+      [
+        "session_history"
+      ],
+      [
+        "session_jump_to"
+      ],
+      [
+        "session_submit"
+      ],
+      [
+        "set_values"
+      ],
+      [
+        "submit_form"
+      ],
+      [
+        "url_absolute"
+      ],
+      [
+        "xml_node"
+      ],
+      [
+        "xml_nodes"
+      ],
+      [
+        "xml_tag"
+      ]
+    ],
+    "topics": [
+      [
+        "html"
+      ],
+      [
+        "web-scraping"
+      ]
+    ],
+    "score": 19.777,
+    "stars": 1510,
+    "primary_category": "tidyverse",
+    "source_universe": "tidyverse",
+    "search_text": "rvest Easily Harvest (Scrape) Web Pages Wrappers around the 'xml2' and 'httr' packages to make it\neasy to download, then manipulate, HTML and XML. %>% back follow_link forward google_form guess_encoding html_attr html_attrs html_children html_element html_elements html_encoding_guess html_form html_form_set html_form_submit html_name html_node html_nodes html_session html_table html_text html_text2 is.session jump_to LiveHTML minimal_html read_html read_html_live repair_encoding session session_back session_follow_link session_forward session_history session_jump_to session_submit set_values submit_form url_absolute xml_node xml_nodes xml_tag html web-scraping"
+  },
+  {
+    "id": 693,
+    "package_name": "httr2",
+    "title": "Perform HTTP Requests and Process the Responses",
+    "description": "Tools for creating and modifying HTTP requests, then\nperforming them and processing the results. 'httr2' is a modern\nre-imagining of 'httr' that uses a pipe-based interface and\nsolves more of the problems that API wrapping packages face.",
+    "version": "1.2.2.9000",
+    "maintainer": "Hadley Wickham <hadley@posit.co>",
+    "author": "Hadley Wickham [aut, cre],\nPosit Software, PBC [cph, fnd],\nMaximilian Girlich [ctb]",
+    "url": "https://httr2.r-lib.org, https://github.com/r-lib/httr2",
+    "bug_reports": "https://github.com/r-lib/httr2/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "curl_help"
+      ],
+      [
+        "curl_translate"
+      ],
+      [
+        "example_github_client"
+      ],
+      [
+        "example_url"
+      ],
+      [
+        "is_online"
+      ],
+      [
+        "iterate_with_cursor"
+      ],
+      [
+        "iterate_with_link_url"
+      ],
+      [
+        "iterate_with_offset"
+      ],
+      [
+        "jwt_claim"
+      ],
+      [
+        "jwt_encode_hmac"
+      ],
+      [
+        "jwt_encode_sig"
+      ],
+      [
+        "last_request"
+      ],
+      [
+        "last_request_json"
+      ],
+      [
+        "last_response"
+      ],
+      [
+        "last_response_json"
+      ],
+      [
+        "local_mocked_responses"
+      ],
+      [
+        "local_verbosity"
+      ],
+      [
+        "new_response"
+      ],
+      [
+        "oauth_cache_clear"
+      ],
+      [
+        "oauth_cache_path"
+      ],
+      [
+        "oauth_client"
+      ],
+      [
+        "oauth_client_req_auth"
+      ],
+      [
+        "oauth_client_req_auth_body"
+      ],
+      [
+        "oauth_client_req_auth_header"
+      ],
+      [
+        "oauth_client_req_auth_jwt_sig"
+      ],
+      [
+        "oauth_flow_auth_code"
+      ],
+      [
+        "oauth_flow_auth_code_listen"
+      ],
+      [
+        "oauth_flow_auth_code_parse"
+      ],
+      [
+        "oauth_flow_auth_code_pkce"
+      ],
+      [
+        "oauth_flow_auth_code_url"
+      ],
+      [
+        "oauth_flow_bearer_jwt"
+      ],
+      [
+        "oauth_flow_client_credentials"
+      ],
+      [
+        "oauth_flow_device"
+      ],
+      [
+        "oauth_flow_password"
+      ],
+      [
+        "oauth_flow_refresh"
+      ],
+      [
+        "oauth_flow_token_exchange"
+      ],
+      [
+        "oauth_redirect_uri"
+      ],
+      [
+        "oauth_token"
+      ],
+      [
+        "oauth_token_cached"
+      ],
+      [
+        "obfuscate"
+      ],
+      [
+        "obfuscated"
+      ],
+      [
+        "req_auth_aws_v4"
+      ],
+      [
+        "req_auth_basic"
+      ],
+      [
+        "req_auth_bearer_token"
+      ],
+      [
+        "req_body_file"
+      ],
+      [
+        "req_body_form"
+      ],
+      [
+        "req_body_json"
+      ],
+      [
+        "req_body_json_modify"
+      ],
+      [
+        "req_body_multipart"
+      ],
+      [
+        "req_body_raw"
+      ],
+      [
+        "req_cache"
+      ],
+      [
+        "req_cookie_preserve"
+      ],
+      [
+        "req_cookies_set"
+      ],
+      [
+        "req_dry_run"
+      ],
+      [
+        "req_error"
+      ],
+      [
+        "req_get_body"
+      ],
+      [
+        "req_get_body_type"
+      ],
+      [
+        "req_get_headers"
+      ],
+      [
+        "req_get_method"
+      ],
+      [
+        "req_get_url"
+      ],
+      [
+        "req_headers"
+      ],
+      [
+        "req_headers_redacted"
+      ],
+      [
+        "req_method"
+      ],
+      [
+        "req_oauth"
+      ],
+      [
+        "req_oauth_auth_code"
+      ],
+      [
+        "req_oauth_bearer_jwt"
+      ],
+      [
+        "req_oauth_client_credentials"
+      ],
+      [
+        "req_oauth_device"
+      ],
+      [
+        "req_oauth_password"
+      ],
+      [
+        "req_oauth_refresh"
+      ],
+      [
+        "req_oauth_token_exchange"
+      ],
+      [
+        "req_options"
+      ],
+      [
+        "req_perform"
+      ],
+      [
+        "req_perform_connection"
+      ],
+      [
+        "req_perform_iterative"
+      ],
+      [
+        "req_perform_parallel"
+      ],
+      [
+        "req_perform_promise"
+      ],
+      [
+        "req_perform_sequential"
+      ],
+      [
+        "req_perform_stream"
+      ],
+      [
+        "req_progress"
+      ],
+      [
+        "req_proxy"
+      ],
+      [
+        "req_retry"
+      ],
+      [
+        "req_template"
+      ],
+      [
+        "req_throttle"
+      ],
+      [
+        "req_timeout"
+      ],
+      [
+        "req_url"
+      ],
+      [
+        "req_url_path"
+      ],
+      [
+        "req_url_path_append"
+      ],
+      [
+        "req_url_query"
+      ],
+      [
+        "req_url_relative"
+      ],
+      [
+        "req_user_agent"
+      ],
+      [
+        "req_verbose"
+      ],
+      [
+        "request"
+      ],
+      [
+        "resp_body_html"
+      ],
+      [
+        "resp_body_json"
+      ],
+      [
+        "resp_body_raw"
+      ],
+      [
+        "resp_body_string"
+      ],
+      [
+        "resp_body_xml"
+      ],
+      [
+        "resp_check_content_type"
+      ],
+      [
+        "resp_check_status"
+      ],
+      [
+        "resp_content_type"
+      ],
+      [
+        "resp_date"
+      ],
+      [
+        "resp_encoding"
+      ],
+      [
+        "resp_has_body"
+      ],
+      [
+        "resp_header"
+      ],
+      [
+        "resp_header_exists"
+      ],
+      [
+        "resp_headers"
+      ],
+      [
+        "resp_is_error"
+      ],
+      [
+        "resp_link_url"
+      ],
+      [
+        "resp_raw"
+      ],
+      [
+        "resp_request"
+      ],
+      [
+        "resp_retry_after"
+      ],
+      [
+        "resp_status"
+      ],
+      [
+        "resp_status_desc"
+      ],
+      [
+        "resp_stream_aws"
+      ],
+      [
+        "resp_stream_is_complete"
+      ],
+      [
+        "resp_stream_lines"
+      ],
+      [
+        "resp_stream_raw"
+      ],
+      [
+        "resp_stream_sse"
+      ],
+      [
+        "resp_timing"
+      ],
+      [
+        "resp_url"
+      ],
+      [
+        "resp_url_path"
+      ],
+      [
+        "resp_url_queries"
+      ],
+      [
+        "resp_url_query"
+      ],
+      [
+        "response"
+      ],
+      [
+        "response_json"
+      ],
+      [
+        "resps_data"
+      ],
+      [
+        "resps_failures"
+      ],
+      [
+        "resps_ok"
+      ],
+      [
+        "resps_requests"
+      ],
+      [
+        "resps_successes"
+      ],
+      [
+        "secret_decrypt"
+      ],
+      [
+        "secret_decrypt_file"
+      ],
+      [
+        "secret_encrypt"
+      ],
+      [
+        "secret_encrypt_file"
+      ],
+      [
+        "secret_has_key"
+      ],
+      [
+        "secret_make_key"
+      ],
+      [
+        "secret_read_rds"
+      ],
+      [
+        "secret_write_rds"
+      ],
+      [
+        "signal_total_pages"
+      ],
+      [
+        "StreamingBody"
+      ],
+      [
+        "throttle_status"
+      ],
+      [
+        "url_build"
+      ],
+      [
+        "url_modify"
+      ],
+      [
+        "url_modify_query"
+      ],
+      [
+        "url_modify_relative"
+      ],
+      [
+        "url_parse"
+      ],
+      [
+        "url_query_build"
+      ],
+      [
+        "url_query_parse"
+      ],
+      [
+        "with_mocked_responses"
+      ],
+      [
+        "with_verbosity"
+      ]
+    ],
+    "topics": [
+      [
+        "http"
+      ]
+    ],
+    "score": 18.1342,
+    "stars": 256,
+    "primary_category": "tidyverse",
+    "source_universe": "r-lib",
+    "search_text": "httr2 Perform HTTP Requests and Process the Responses Tools for creating and modifying HTTP requests, then\nperforming them and processing the results. 'httr2' is a modern\nre-imagining of 'httr' that uses a pipe-based interface and\nsolves more of the problems that API wrapping packages face. %>% curl_help curl_translate example_github_client example_url is_online iterate_with_cursor iterate_with_link_url iterate_with_offset jwt_claim jwt_encode_hmac jwt_encode_sig last_request last_request_json last_response last_response_json local_mocked_responses local_verbosity new_response oauth_cache_clear oauth_cache_path oauth_client oauth_client_req_auth oauth_client_req_auth_body oauth_client_req_auth_header oauth_client_req_auth_jwt_sig oauth_flow_auth_code oauth_flow_auth_code_listen oauth_flow_auth_code_parse oauth_flow_auth_code_pkce oauth_flow_auth_code_url oauth_flow_bearer_jwt oauth_flow_client_credentials oauth_flow_device oauth_flow_password oauth_flow_refresh oauth_flow_token_exchange oauth_redirect_uri oauth_token oauth_token_cached obfuscate obfuscated req_auth_aws_v4 req_auth_basic req_auth_bearer_token req_body_file req_body_form req_body_json req_body_json_modify req_body_multipart req_body_raw req_cache req_cookie_preserve req_cookies_set req_dry_run req_error req_get_body req_get_body_type req_get_headers req_get_method req_get_url req_headers req_headers_redacted req_method req_oauth req_oauth_auth_code req_oauth_bearer_jwt req_oauth_client_credentials req_oauth_device req_oauth_password req_oauth_refresh req_oauth_token_exchange req_options req_perform req_perform_connection req_perform_iterative req_perform_parallel req_perform_promise req_perform_sequential req_perform_stream req_progress req_proxy req_retry req_template req_throttle req_timeout req_url req_url_path req_url_path_append req_url_query req_url_relative req_user_agent req_verbose request resp_body_html resp_body_json resp_body_raw resp_body_string resp_body_xml resp_check_content_type resp_check_status resp_content_type resp_date resp_encoding resp_has_body resp_header resp_header_exists resp_headers resp_is_error resp_link_url resp_raw resp_request resp_retry_after resp_status resp_status_desc resp_stream_aws resp_stream_is_complete resp_stream_lines resp_stream_raw resp_stream_sse resp_timing resp_url resp_url_path resp_url_queries resp_url_query response response_json resps_data resps_failures resps_ok resps_requests resps_successes secret_decrypt secret_decrypt_file secret_encrypt secret_encrypt_file secret_has_key secret_make_key secret_read_rds secret_write_rds signal_total_pages StreamingBody throttle_status url_build url_modify url_modify_query url_modify_relative url_parse url_query_build url_query_parse with_mocked_responses with_verbosity http"
+  },
+  {
+    "id": 1130,
+    "package_name": "robotstxt",
+    "title": "A 'robots.txt' Parser and 'Webbot'/'Spider'/'Crawler'\nPermissions Checker",
+    "description": "Provides functions to download and parse 'robots.txt'\nfiles. Ultimately the package makes it easy to check if bots\n(spiders, crawler, scrapers, ...) are allowed to access\nspecific resources on a domain.",
+    "version": "0.7.15.9000",
+    "maintainer": "Jordan Bradford <jrdnbradford@gmail.com>",
+    "author": "Pedro Baltazar [ctb],\nJordan Bradford [cre],\nPeter Meissner [aut],\nKun Ren [aut, cph] (Author and copyright holder of list_merge.R.),\nOliver Keys [ctb] (original release code review),\nRich Fitz John [ctb] (original release code review)",
+    "url": "https://docs.ropensci.org/robotstxt/,\nhttps://github.com/ropensci/robotstxt",
+    "bug_reports": "https://github.com/ropensci/robotstxt/issues",
+    "repository": "",
+    "exports": [
+      [
+        "%>%"
+      ],
+      [
+        "get_robotstxt"
+      ],
+      [
+        "get_robotstxt_http_get"
+      ],
+      [
+        "get_robotstxts"
+      ],
+      [
+        "is_valid_robotstxt"
+      ],
+      [
+        "on_client_error_default"
+      ],
+      [
+        "on_domain_change_default"
+      ],
+      [
+        "on_file_type_mismatch_default"
+      ],
+      [
+        "on_not_found_default"
+      ],
+      [
+        "on_redirect_default"
+      ],
+      [
+        "on_server_error_default"
+      ],
+      [
+        "on_sub_domain_change_default"
+      ],
+      [
+        "on_suspect_content_default"
+      ],
+      [
+        "parse_robotstxt"
+      ],
+      [
+        "paths_allowed"
+      ],
+      [
+        "request_handler_handler"
+      ],
+      [
+        "robotstxt"
+      ],
+      [
+        "rt_last_http"
+      ],
+      [
+        "rt_request_handler"
+      ]
+    ],
+    "topics": [
+      [
+        "crawler"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "robotstxt"
+      ],
+      [
+        "scraper"
+      ],
+      [
+        "spider"
+      ],
+      [
+        "webscraping"
+      ]
+    ],
+    "score": 9.9672,
+    "stars": 68,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "robotstxt A 'robots.txt' Parser and 'Webbot'/'Spider'/'Crawler'\nPermissions Checker Provides functions to download and parse 'robots.txt'\nfiles. Ultimately the package makes it easy to check if bots\n(spiders, crawler, scrapers, ...) are allowed to access\nspecific resources on a domain. %>% get_robotstxt get_robotstxt_http_get get_robotstxts is_valid_robotstxt on_client_error_default on_domain_change_default on_file_type_mismatch_default on_not_found_default on_redirect_default on_server_error_default on_sub_domain_change_default on_suspect_content_default parse_robotstxt paths_allowed request_handler_handler robotstxt rt_last_http rt_request_handler crawler peer-reviewed robotstxt scraper spider webscraping"
+  },
+  {
+    "id": 898,
+    "package_name": "oai",
+    "title": "General Purpose 'Oai-PMH' Services Client",
+    "description": "A general purpose client to work with any 'OAI-PMH' (Open\nArchives Initiative Protocol for 'Metadata' Harvesting)\nservice. The 'OAI-PMH' protocol is described at\n<http://www.openarchives.org/OAI/openarchivesprotocol.html>.\nFunctions are provided to work with the 'OAI-PMH' verbs:\n'GetRecord', 'Identify', 'ListIdentifiers',\n'ListMetadataFormats', 'ListRecords', and 'ListSets'.",
+    "version": "0.4.1",
+    "maintainer": "Michal Bojanowski <michal2992@gmail.com>",
+    "author": "Scott Chamberlain [aut],\nMichal Bojanowski [aut, cre] (ORCID:\n<https://orcid.org/0000-0001-7503-852X>),\nNational Science Centre [fnd] (Supported MB through grant\n2012/07/D/HS6/01971, <https://ncn.gov.pl>)",
+    "url": "https://docs.ropensci.org/oai/, https://github.com/ropensci/oai",
+    "bug_reports": "https://github.com/ropensci/oai/issues",
+    "repository": "",
+    "exports": [
+      [
+        "count_identifiers"
+      ],
+      [
+        "dump_raw_to_db"
+      ],
+      [
+        "dump_raw_to_txt"
+      ],
+      [
+        "dump_to_rds"
+      ],
+      [
+        "get_records"
+      ],
+      [
+        "id"
+      ],
+      [
+        "list_identifiers"
+      ],
+      [
+        "list_metadataformats"
+      ],
+      [
+        "list_records"
+      ],
+      [
+        "list_sets"
+      ],
+      [
+        "load_providers"
+      ],
+      [
+        "oai_available"
+      ],
+      [
+        "update_providers"
+      ]
+    ],
+    "topics": [
+      [
+        "data-access"
+      ],
+      [
+        "oai-pmh"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "scholarly-api"
+      ]
+    ],
+    "score": 8.7912,
+    "stars": 15,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "oai General Purpose 'Oai-PMH' Services Client A general purpose client to work with any 'OAI-PMH' (Open\nArchives Initiative Protocol for 'Metadata' Harvesting)\nservice. The 'OAI-PMH' protocol is described at\n<http://www.openarchives.org/OAI/openarchivesprotocol.html>.\nFunctions are provided to work with the 'OAI-PMH' verbs:\n'GetRecord', 'Identify', 'ListIdentifiers',\n'ListMetadataFormats', 'ListRecords', and 'ListSets'. count_identifiers dump_raw_to_db dump_raw_to_txt dump_to_rds get_records id list_identifiers list_metadataformats list_records list_sets load_providers oai_available update_providers data-access oai-pmh peer-reviewed scholarly-api"
+  },
+  {
+    "id": 174,
+    "package_name": "Rpolyhedra",
+    "title": "Polyhedra Database",
+    "description": "A polyhedra database scraped from various sources as R6\nobjects and 'rgl' visualizing capabilities.",
+    "version": "0.5.6",
+    "maintainer": "Alejandro Baranek <abaranek@dc.uba.ar>",
+    "author": "Alejandro Baranek [aut, com, cre, cph],\nLeonardo Belen [aut, com, cph],\nqbotics [cph],\nBarret Schloerke [rev],\nLijia Yu [rev]",
+    "url": "https://docs.ropensci.org/Rpolyhedra/,\nhttps://github.com/ropensci/Rpolyhedra",
+    "bug_reports": "https://github.com/ropensci/Rpolyhedra/issues",
+    "repository": "",
+    "exports": [
+      [
+        "genLogger"
+      ],
+      [
+        "getAvailablePolyhedra"
+      ],
+      [
+        "getAvailableSources"
+      ],
+      [
+        "getLogger"
+      ],
+      [
+        "getPolyhedraObject"
+      ],
+      [
+        "getPolyhedron"
+      ],
+      [
+        "loggerSetupFile"
+      ],
+      [
+        "mutate_cond"
+      ],
+      [
+        "polyhedronToXML"
+      ],
+      [
+        "switchToFullDatabase"
+      ]
+    ],
+    "topics": [
+      [
+        "geometry"
+      ],
+      [
+        "polyhedra-database"
+      ],
+      [
+        "rgl"
+      ]
+    ],
+    "score": 5.8215,
+    "stars": 13,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "Rpolyhedra Polyhedra Database A polyhedra database scraped from various sources as R6\nobjects and 'rgl' visualizing capabilities. genLogger getAvailablePolyhedra getAvailableSources getLogger getPolyhedraObject getPolyhedron loggerSetupFile mutate_cond polyhedronToXML switchToFullDatabase geometry polyhedra-database rgl"
+  },
+  {
+    "id": 522,
+    "package_name": "epair",
+    "title": "EPA Data Helper for R",
+    "description": "Aid the user in making queries to the EPA API site found\nat https://aqs.epa.gov/aqsweb/documents/data_api. This package\ncombines API calling methods from various web scraping packages\nwith specific strings to retrieve data from the EPA API. It\nalso contains easy to use loaded variables that help a user\nnavigate services offered by the API and aid the user in\ndetermining the appropriate way to make a an API call.",
+    "version": "1.1.0",
+    "maintainer": "G.L. Orozco-Mulfinger <glo003@bucknell.edu>",
+    "author": "G.L. Orozco-Mulfinger [aut, cre],\nMadyline Lawrence [aut],\nOwais Gilani [aut]",
+    "url": "https://github.com/ropensci/epair",
+    "bug_reports": "https://github.com/ropensci/epair/issues",
+    "repository": "",
+    "exports": [
+      [
+        "add.variables"
+      ],
+      [
+        "clear.all.cached"
+      ],
+      [
+        "clear.cached"
+      ],
+      [
+        "create.authentication"
+      ],
+      [
+        "get_all_mas"
+      ],
+      [
+        "get_all_pqaos"
+      ],
+      [
+        "get_aqs_key"
+      ],
+      [
+        "get_cbsas"
+      ],
+      [
+        "get_counties_in_state"
+      ],
+      [
+        "get_daily_summary_in_bbox"
+      ],
+      [
+        "get_daily_summary_in_cbsa"
+      ],
+      [
+        "get_daily_summary_in_county"
+      ],
+      [
+        "get_daily_summary_in_site"
+      ],
+      [
+        "get_daily_summary_in_state"
+      ],
+      [
+        "get_fields_by_service"
+      ],
+      [
+        "get_known_issues"
+      ],
+      [
+        "get_monitors_in_bbox"
+      ],
+      [
+        "get_monitors_in_cbsa"
+      ],
+      [
+        "get_monitors_in_county"
+      ],
+      [
+        "get_monitors_in_site"
+      ],
+      [
+        "get_monitors_in_state"
+      ],
+      [
+        "get_parameter_classes"
+      ],
+      [
+        "get_parameters_in_class"
+      ],
+      [
+        "get_qa_ape_in_agency"
+      ],
+      [
+        "get_qa_ape_in_county"
+      ],
+      [
+        "get_qa_ape_in_pqao"
+      ],
+      [
+        "get_qa_ape_in_site"
+      ],
+      [
+        "get_qa_ape_in_state"
+      ],
+      [
+        "get_qa_blanks_in_agency"
+      ],
+      [
+        "get_qa_blanks_in_county"
+      ],
+      [
+        "get_qa_blanks_in_pqao"
+      ],
+      [
+        "get_qa_blanks_in_site"
+      ],
+      [
+        "get_qa_blanks_in_state"
+      ],
+      [
+        "get_qa_ca_in_agency"
+      ],
+      [
+        "get_qa_ca_in_county"
+      ],
+      [
+        "get_qa_ca_in_pqao"
+      ],
+      [
+        "get_qa_ca_in_site"
+      ],
+      [
+        "get_qa_ca_in_state"
+      ],
+      [
+        "get_qa_fra_in_agency"
+      ],
+      [
+        "get_qa_fra_in_county"
+      ],
+      [
+        "get_qa_fra_in_pqao"
+      ],
+      [
+        "get_qa_fra_in_site"
+      ],
+      [
+        "get_qa_fra_in_state"
+      ],
+      [
+        "get_qa_frv_in_agency"
+      ],
+      [
+        "get_qa_frv_in_county"
+      ],
+      [
+        "get_qa_frv_in_pqao"
+      ],
+      [
+        "get_qa_frv_in_site"
+      ],
+      [
+        "get_qa_frv_in_state"
+      ],
+      [
+        "get_qa_pep_in_agency"
+      ],
+      [
+        "get_qa_pep_in_county"
+      ],
+      [
+        "get_qa_pep_in_pqao"
+      ],
+      [
+        "get_qa_pep_in_site"
+      ],
+      [
+        "get_qa_pep_in_state"
+      ],
+      [
+        "get_qa_qc_in_agency"
+      ],
+      [
+        "get_qa_qc_in_county"
+      ],
+      [
+        "get_qa_qc_in_pqao"
+      ],
+      [
+        "get_qa_qc_in_site"
+      ],
+      [
+        "get_qa_qc_in_state"
+      ],
+      [
+        "get_revision_history"
+      ],
+      [
+        "get_sites_in_county"
+      ],
+      [
+        "get_state_fips"
+      ],
+      [
+        "get_tf_qa_ape_in_agency"
+      ],
+      [
+        "get_tf_qa_ape_in_county"
+      ],
+      [
+        "get_tf_qa_ape_in_pqao"
+      ],
+      [
+        "get_tf_qa_ape_in_site"
+      ],
+      [
+        "get_tf_qa_ape_in_state"
+      ],
+      [
+        "get_tf_sample_in_agency"
+      ],
+      [
+        "get_tf_sample_in_county"
+      ],
+      [
+        "get_tf_sample_in_site"
+      ],
+      [
+        "get_tf_sample_in_state"
+      ],
+      [
+        "is_API_running"
+      ],
+      [
+        "list.cached.data"
+      ],
+      [
+        "non.cached.perform.call"
+      ],
+      [
+        "perform.call"
+      ],
+      [
+        "perform.call.raw"
+      ],
+      [
+        "retrieve.cached.call"
+      ],
+      [
+        "save.new.cached.call"
+      ]
+    ],
+    "topics": [],
+    "score": 5.2253,
+    "stars": 8,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "epair EPA Data Helper for R Aid the user in making queries to the EPA API site found\nat https://aqs.epa.gov/aqsweb/documents/data_api. This package\ncombines API calling methods from various web scraping packages\nwith specific strings to retrieve data from the EPA API. It\nalso contains easy to use loaded variables that help a user\nnavigate services offered by the API and aid the user in\ndetermining the appropriate way to make a an API call. add.variables clear.all.cached clear.cached create.authentication get_all_mas get_all_pqaos get_aqs_key get_cbsas get_counties_in_state get_daily_summary_in_bbox get_daily_summary_in_cbsa get_daily_summary_in_county get_daily_summary_in_site get_daily_summary_in_state get_fields_by_service get_known_issues get_monitors_in_bbox get_monitors_in_cbsa get_monitors_in_county get_monitors_in_site get_monitors_in_state get_parameter_classes get_parameters_in_class get_qa_ape_in_agency get_qa_ape_in_county get_qa_ape_in_pqao get_qa_ape_in_site get_qa_ape_in_state get_qa_blanks_in_agency get_qa_blanks_in_county get_qa_blanks_in_pqao get_qa_blanks_in_site get_qa_blanks_in_state get_qa_ca_in_agency get_qa_ca_in_county get_qa_ca_in_pqao get_qa_ca_in_site get_qa_ca_in_state get_qa_fra_in_agency get_qa_fra_in_county get_qa_fra_in_pqao get_qa_fra_in_site get_qa_fra_in_state get_qa_frv_in_agency get_qa_frv_in_county get_qa_frv_in_pqao get_qa_frv_in_site get_qa_frv_in_state get_qa_pep_in_agency get_qa_pep_in_county get_qa_pep_in_pqao get_qa_pep_in_site get_qa_pep_in_state get_qa_qc_in_agency get_qa_qc_in_county get_qa_qc_in_pqao get_qa_qc_in_site get_qa_qc_in_state get_revision_history get_sites_in_county get_state_fips get_tf_qa_ape_in_agency get_tf_qa_ape_in_county get_tf_qa_ape_in_pqao get_tf_qa_ape_in_site get_tf_qa_ape_in_state get_tf_sample_in_agency get_tf_sample_in_county get_tf_sample_in_site get_tf_sample_in_state is_API_running list.cached.data non.cached.perform.call perform.call perform.call.raw retrieve.cached.call save.new.cached.call "
+  },
+  {
+    "id": 1145,
+    "package_name": "rrricanes",
+    "title": "Web Scraper for Atlantic and East Pacific Hurricanes and\nTropical Storms",
+    "description": "Get archived data of past and current hurricanes and\ntropical storms for the Atlantic and eastern Pacific oceans.\nData is available for storms since 1998. Datasets are updated\nvia the rrricanesdata package. Currently, this package is about\n6MB of datasets. See the README or view `vignette(\"drat\")` for\nmore information.",
+    "version": "0.2.0.6.10",
+    "maintainer": "Elin Waring <elin.waring@gmail.com>",
+    "author": "Tim Trice [aut],\nJoseph Stachelek [rev] (Joseph Stachelek reviewed the package for\nrOpenSci, see https://github.com/ropensci/onboarding/issues/118),\nEmily Robinson [rev] (Emily Robinson reviewed the package for rOpenSci,\nsee https://github.com/ropensci/onboarding/issues/118),\nSophia Barett [ctb],\nLismarie Arche [ctb],\nSimon Ayotes [ctb],\nGoodness Ajayi-Martins [ctb],\nElin Waring [aut, cre]",
+    "url": "https://docs.ropensci.org/rrricanes\nhttps://github.com/ropensci/rrricanes",
+    "bug_reports": "https://github.com/ropensci/rrricanes/issues",
+    "repository": "",
+    "exports": [
+      [
+        "al_prblty_stations"
+      ],
+      [
+        "al_tracking_chart"
+      ],
+      [
+        "cp_prblty_stations"
+      ],
+      [
+        "ep_prblty_stations"
+      ],
+      [
+        "ep_tracking_chart"
+      ],
+      [
+        "get_discus"
+      ],
+      [
+        "get_fstadv"
+      ],
+      [
+        "get_ftp_storm_data"
+      ],
+      [
+        "get_posest"
+      ],
+      [
+        "get_prblty"
+      ],
+      [
+        "get_public"
+      ],
+      [
+        "get_serial_numbers"
+      ],
+      [
+        "get_storm_data"
+      ],
+      [
+        "get_storm_list"
+      ],
+      [
+        "get_storms"
+      ],
+      [
+        "get_update"
+      ],
+      [
+        "get_url_contents"
+      ],
+      [
+        "get_wndprb"
+      ],
+      [
+        "gis_advisory"
+      ],
+      [
+        "gis_breakpoints"
+      ],
+      [
+        "gis_download"
+      ],
+      [
+        "gis_latest"
+      ],
+      [
+        "gis_outlook"
+      ],
+      [
+        "gis_prob_storm_surge"
+      ],
+      [
+        "gis_storm_surge_flood"
+      ],
+      [
+        "gis_windfield"
+      ],
+      [
+        "gis_wsp"
+      ],
+      [
+        "knots_to_mph"
+      ],
+      [
+        "mb_to_in"
+      ],
+      [
+        "nm_to_sm"
+      ],
+      [
+        "saffir"
+      ],
+      [
+        "shp_to_df"
+      ],
+      [
+        "status_abbr_to_str"
+      ],
+      [
+        "tidy_adv"
+      ],
+      [
+        "tidy_fcst"
+      ],
+      [
+        "tidy_fcst_wr"
+      ],
+      [
+        "tidy_fstadv"
+      ],
+      [
+        "tidy_wr"
+      ],
+      [
+        "tracking_chart"
+      ],
+      [
+        "twoal"
+      ],
+      [
+        "twoep"
+      ]
+    ],
+    "topics": [
+      [
+        "hurricane"
+      ],
+      [
+        "peer-reviewed"
+      ],
+      [
+        "weather"
+      ]
+    ],
+    "score": 4.9956,
+    "stars": 20,
+    "primary_category": "ropensci",
+    "source_universe": "ropensci",
+    "search_text": "rrricanes Web Scraper for Atlantic and East Pacific Hurricanes and\nTropical Storms Get archived data of past and current hurricanes and\ntropical storms for the Atlantic and eastern Pacific oceans.\nData is available for storms since 1998. Datasets are updated\nvia the rrricanesdata package. Currently, this package is about\n6MB of datasets. See the README or view `vignette(\"drat\")` for\nmore information. al_prblty_stations al_tracking_chart cp_prblty_stations ep_prblty_stations ep_tracking_chart get_discus get_fstadv get_ftp_storm_data get_posest get_prblty get_public get_serial_numbers get_storm_data get_storm_list get_storms get_update get_url_contents get_wndprb gis_advisory gis_breakpoints gis_download gis_latest gis_outlook gis_prob_storm_surge gis_storm_surge_flood gis_windfield gis_wsp knots_to_mph mb_to_in nm_to_sm saffir shp_to_df status_abbr_to_str tidy_adv tidy_fcst tidy_fcst_wr tidy_fstadv tidy_wr tracking_chart twoal twoep hurricane peer-reviewed weather"
+  },
+  {
+    "id": 187,
+    "package_name": "SchoolDataIT",
+    "title": "Retrieve, Harmonise and Map Open Data Regarding the Italian\nSchool System",
+    "description": "Compiles and displays the available data sets regarding the Italian school system, with a focus on the infrastructural aspects.\n    Input datasets are downloaded from the web, with the aim of updating everything to real time.  \n    The functions are divided in four main modules, namely \n    'Get', to scrape raw data from the web\n    'Util', various utilities needed to process raw data\n    'Group', to aggregate data at the municipality or province level\n    'Map', to visualize the output datasets.",
+    "version": "0.2.12",
+    "maintainer": "Leonardo Cefalo <leonardo.cefalo@uniba.it>",
+    "author": "Leonardo Cefalo [aut, cre] (ORCID:\n    <https://orcid.org/0009-0001-7776-723X>),\n  Alessio Pollice [ctb, ths] (ORCID:\n    <https://orcid.org/0000-0002-2818-9373>),\n  Paolo Maranzano [ctb] (ORCID: <https://orcid.org/0000-0002-9228-2759>)",
+    "url": "https://github.com/lcef97/SchoolDataIT",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=SchoolDataIT",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "SchoolDataIT Retrieve, Harmonise and Map Open Data Regarding the Italian\nSchool System Compiles and displays the available data sets regarding the Italian school system, with a focus on the infrastructural aspects.\n    Input datasets are downloaded from the web, with the aim of updating everything to real time.  \n    The functions are divided in four main modules, namely \n    'Get', to scrape raw data from the web\n    'Util', various utilities needed to process raw data\n    'Group', to aggregate data at the municipality or province level\n    'Map', to visualize the output datasets.  "
+  },
+  {
+    "id": 877,
+    "package_name": "nhlscraper",
+    "title": "Scraper for National Hockey League Data",
+    "description": "Scrapes and cleans data from the 'NHL' and 'ESPN' APIs into data.frames and lists. Wraps 125+ endpoints documented in <https://github.com/RentoSaijo/nhlscraper/wiki> from high-level multi-season summaries and award winners to low-level decisecond replays and bookmakers' odds, making them more accessible. Features cleaning and visualization tools, primarily for play-by-plays.",
+    "version": "0.4.1",
+    "maintainer": "Rento Saijo <rentosaijo0527@gmail.com>",
+    "author": "Rento Saijo [aut, cre, cph] (ORCID:\n    <https://orcid.org/0009-0008-4919-7349>),\n  Lars Skytte [ctb]",
+    "url": "https://rentosaijo.github.io/nhlscraper/,\nhttps://github.com/RentoSaijo/nhlscraper",
+    "bug_reports": "https://github.com/RentoSaijo/nhlscraper/issues",
+    "repository": "https://cran.r-project.org/package=nhlscraper",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "nhlscraper Scraper for National Hockey League Data Scrapes and cleans data from the 'NHL' and 'ESPN' APIs into data.frames and lists. Wraps 125+ endpoints documented in <https://github.com/RentoSaijo/nhlscraper/wiki> from high-level multi-season summaries and award winners to low-level decisecond replays and bookmakers' odds, making them more accessible. Features cleaning and visualization tools, primarily for play-by-plays.  "
+  },
+  {
+    "id": 1554,
+    "package_name": "AMPLE",
+    "title": "Shiny Apps to Support Capacity Building on Harvest Control Rules",
+    "description": "Three Shiny apps are provided that introduce Harvest Control Rules (HCR) for fisheries management.\n    'Introduction to HCRs' provides a simple overview to how HCRs work. Users are able to select their own HCR and\n    step through its performance, year by year. Biological variability and estimation uncertainty are introduced.\n    'Measuring performance' builds on the previous app and introduces the idea of using performance indicators\n    to measure HCR performance.\n    'Comparing performance' allows multiple HCRs to be created and tested, and their performance compared so that the\n    preferred HCR can be selected.",
+    "version": "1.0.2",
+    "maintainer": "Finlay Scott <finlays@spc.int>",
+    "author": "Finlay Scott [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-9950-9023>),\n  Pacific Community (SPC) [cph]",
+    "url": "https://github.com/PacificCommunity/ofp-sam-ample",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=AMPLE",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "AMPLE Shiny Apps to Support Capacity Building on Harvest Control Rules Three Shiny apps are provided that introduce Harvest Control Rules (HCR) for fisheries management.\n    'Introduction to HCRs' provides a simple overview to how HCRs work. Users are able to select their own HCR and\n    step through its performance, year by year. Biological variability and estimation uncertainty are introduced.\n    'Measuring performance' builds on the previous app and introduces the idea of using performance indicators\n    to measure HCR performance.\n    'Comparing performance' allows multiple HCRs to be created and tested, and their performance compared so that the\n    preferred HCR can be selected.  "
+  },
+  {
+    "id": 1759,
+    "package_name": "AzureAuth",
+    "title": "Authentication Services for Azure Active Directory",
+    "description": "Provides Azure Active Directory (AAD) authentication functionality for R users of Microsoft's 'Azure' cloud <https://azure.microsoft.com/>. Use this package to obtain 'OAuth' 2.0 tokens for services including Azure Resource Manager, Azure Storage and others. It supports both AAD v1.0 and v2.0, as well as multiple authentication methods, including device code and resource owner grant. Tokens are cached in a user-specific directory obtained using the 'rappdirs' package. The interface is based on the 'OAuth' framework in the 'httr' package, but customised and streamlined for Azure. Part of the 'AzureR' family of packages.",
+    "version": "1.3.3",
+    "maintainer": "Hong Ooi <hongooi73@gmail.com>",
+    "author": "Hong Ooi [aut, cre],\n  Tyler Littlefield [ctb],\n  httr development team [ctb] (Original OAuth listener code),\n  Scott Holden [ctb] (Advice on AAD authentication),\n  Chris Stone [ctb] (Advice on AAD authentication),\n  Microsoft [cph]",
+    "url": "https://github.com/Azure/AzureAuth https://github.com/Azure/AzureR",
+    "bug_reports": "https://github.com/Azure/AzureAuth/issues",
+    "repository": "https://cran.r-project.org/package=AzureAuth",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "AzureAuth Authentication Services for Azure Active Directory Provides Azure Active Directory (AAD) authentication functionality for R users of Microsoft's 'Azure' cloud <https://azure.microsoft.com/>. Use this package to obtain 'OAuth' 2.0 tokens for services including Azure Resource Manager, Azure Storage and others. It supports both AAD v1.0 and v2.0, as well as multiple authentication methods, including device code and resource owner grant. Tokens are cached in a user-specific directory obtained using the 'rappdirs' package. The interface is based on the 'OAuth' framework in the 'httr' package, but customised and streamlined for Azure. Part of the 'AzureR' family of packages.  "
+  },
+  {
+    "id": 1790,
+    "package_name": "BAwiR",
+    "title": "Analysis of Basketball Data",
+    "description": "Collection of tools to work with European basketball data. Functions available are related to friendly \n\tweb scraping, data management and visualization. Data were obtained from <https://www.euroleaguebasketball.net/euroleague/>, \n\t<https://www.euroleaguebasketball.net/eurocup/> and <https://www.acb.com/>, following the instructions \n        of their respectives robots.txt files, when available. Box score data are available for the three leagues. \n\tPlay-by-play and spatial shooting data are also available for the Spanish league. Methods for analysis include a \n\tpopulation pyramid, 2D plots, circular plots of players' percentiles, plots of players' monthly/yearly stats, \n\tteam heatmaps, team shooting plots, team four factors plots, cross-tables with the results of regular season games,\n\tmaps of nationalities, combinations of lineups, possessions-related variables, timeouts,\n\tperformance by periods, personal fouls, offensive rebounds and different types of shooting charts. \n\tPlease see Vinue (2020) <doi:10.1089/big.2018.0124> and Vinue (2024) <doi:10.1089/big.2023.0177>. ",
+    "version": "1.4.3",
+    "maintainer": "Guillermo Vinue <guillermo.vinue@uv.es>",
+    "author": "Guillermo Vinue [aut, cre]",
+    "url": "https://www.uv.es/vivigui/basketball_platform.html,\nhttps://www.uv.es/vivigui/, https://www.R-project.org",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=BAwiR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "BAwiR Analysis of Basketball Data Collection of tools to work with European basketball data. Functions available are related to friendly \n\tweb scraping, data management and visualization. Data were obtained from <https://www.euroleaguebasketball.net/euroleague/>, \n\t<https://www.euroleaguebasketball.net/eurocup/> and <https://www.acb.com/>, following the instructions \n        of their respectives robots.txt files, when available. Box score data are available for the three leagues. \n\tPlay-by-play and spatial shooting data are also available for the Spanish league. Methods for analysis include a \n\tpopulation pyramid, 2D plots, circular plots of players' percentiles, plots of players' monthly/yearly stats, \n\tteam heatmaps, team shooting plots, team four factors plots, cross-tables with the results of regular season games,\n\tmaps of nationalities, combinations of lineups, possessions-related variables, timeouts,\n\tperformance by periods, personal fouls, offensive rebounds and different types of shooting charts. \n\tPlease see Vinue (2020) <doi:10.1089/big.2018.0124> and Vinue (2024) <doi:10.1089/big.2023.0177>.   "
+  },
+  {
+    "id": 2064,
+    "package_name": "BigDataPE",
+    "title": "Secure and Intuitive Access to 'BigDataPE' 'API' Datasets",
+    "description": "Designed to simplify the process of retrieving datasets from the 'Big Data PE' platform using secure token-based authentication. It provides functions for securely storing, retrieving, and managing tokens associated with specific datasets, as well as fetching and processing data using the 'httr2' package. ",
+    "version": "0.0.96",
+    "maintainer": "Andre Leite <leite@castlab.org>",
+    "author": "Andre Leite [aut, cre],\n  Hugo Vaconcelos [aut],\n  Diogo Bezerra [aut]",
+    "url": "<https://github.com/StrategicProjects/bigdatape>",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=BigDataPE",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "BigDataPE Secure and Intuitive Access to 'BigDataPE' 'API' Datasets Designed to simplify the process of retrieving datasets from the 'Big Data PE' platform using secure token-based authentication. It provides functions for securely storing, retrieving, and managing tokens associated with specific datasets, as well as fetching and processing data using the 'httr2' package.   "
+  },
+  {
+    "id": 3358,
+    "package_name": "FESta",
+    "title": "Fishing Effort Standardisation",
+    "description": "Original idea was presented in the reference paper. Varghese et al. (2020, 74(1):35-42) \"Bayesian State-space Implementation of Schaefer Production Model for Assessment of Stock Status for Multi-gear Fishery\". Marine fisheries governance and management practices are very essential to ensure the sustainability of the marine resources. A widely accepted resource management strategy towards this is to derive sustainable fish harvest levels based on the status of marine fish stock. Various fish stock assessment models that describe the biomass dynamics using time series data on fish catch and fishing effort are generally used for this purpose. In the scenario of complex multi-species marine fishery in which different species are caught by a number of fishing gears and each gear harvests a number of species make it difficult to obtain the fishing effort corresponding to each fish species. Since the capacity of the gears varies, the effort made to catch a resource cannot be considered as the sum of efforts expended by different fishing gears. This necessitates standardisation of fishing effort in unit base.",
+    "version": "1.0.0",
+    "maintainer": "Eldho Varghese <eldhoiasri@gmail.com>",
+    "author": "Eldho Varghese [aut, cre],\n  Sathianandan T V [aut],\n  Jayasankar J [aut],\n  Reshma Gills [ctb]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=FESta",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "FESta Fishing Effort Standardisation Original idea was presented in the reference paper. Varghese et al. (2020, 74(1):35-42) \"Bayesian State-space Implementation of Schaefer Production Model for Assessment of Stock Status for Multi-gear Fishery\". Marine fisheries governance and management practices are very essential to ensure the sustainability of the marine resources. A widely accepted resource management strategy towards this is to derive sustainable fish harvest levels based on the status of marine fish stock. Various fish stock assessment models that describe the biomass dynamics using time series data on fish catch and fishing effort are generally used for this purpose. In the scenario of complex multi-species marine fishery in which different species are caught by a number of fishing gears and each gear harvests a number of species make it difficult to obtain the fishing effort corresponding to each fish species. Since the capacity of the gears varies, the effort made to catch a resource cannot be considered as the sum of efforts expended by different fishing gears. This necessitates standardisation of fishing effort in unit base.  "
+  },
+  {
+    "id": 3478,
+    "package_name": "FinNet",
+    "title": "Quickly Build and Manipulate Financial Networks",
+    "description": "Providing classes, methods, and functions to deal with financial networks. \n    Users can easily store information about both physical and legal persons by using pre-made classes that are studied for integration with scraping packages such as 'rvest' and 'RSelenium'.\n    Moreover, the package assists in creating various types of financial networks depending on the type of relation between its units depending on the relation under scrutiny (ownership, board interlocks, etc.), the desired tie type (valued or binary), and renders them in the most common formats (adjacency matrix, incidence matrix, edge list, 'igraph', 'network').\n    There are also ad-hoc functions for the Fiedler value, global network efficiency, and cascade-failure analysis.",
+    "version": "0.2.1",
+    "maintainer": "Fabio Ashtar Telarico <Fabio-Ashtar.Telarico@fdv.uni-lj.si>",
+    "author": "Fabio Ashtar Telarico [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-8740-7078>)",
+    "url": "https://fatelarico.github.io/FinNet.html",
+    "bug_reports": "https://github.com/FATelarico/FinNet/issues",
+    "repository": "https://cran.r-project.org/package=FinNet",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "FinNet Quickly Build and Manipulate Financial Networks Providing classes, methods, and functions to deal with financial networks. \n    Users can easily store information about both physical and legal persons by using pre-made classes that are studied for integration with scraping packages such as 'rvest' and 'RSelenium'.\n    Moreover, the package assists in creating various types of financial networks depending on the type of relation between its units depending on the relation under scrutiny (ownership, board interlocks, etc.), the desired tie type (valued or binary), and renders them in the most common formats (adjacency matrix, incidence matrix, edge list, 'igraph', 'network').\n    There are also ad-hoc functions for the Fiedler value, global network efficiency, and cascade-failure analysis.  "
+  },
+  {
+    "id": 3876,
+    "package_name": "Goodreader",
+    "title": "Scrape and Analyze 'Goodreads' Book Data",
+    "description": "A comprehensive toolkit for scraping and analyzing book data from <https://www.goodreads.com/>. This package provides functions to search for books, scrape book details and reviews, perform sentiment analysis on reviews, and conduct topic modeling. It's designed for researchers, data analysts, and book enthusiasts who want to gain insights from 'Goodreads' data. ",
+    "version": "0.1.2",
+    "maintainer": "Chao Liu <chaoliu@cedarville.edu>",
+    "author": "Chao Liu [aut, cre, cph] (ORCID:\n    <https://orcid.org/0000-0002-9979-8272>)",
+    "url": "https://github.com/chaoliu-cl/Goodreader,\nhttp://liu-chao.site/Goodreader/",
+    "bug_reports": "https://github.com/chaoliu-cl/Goodreader/issues",
+    "repository": "https://cran.r-project.org/package=Goodreader",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "Goodreader Scrape and Analyze 'Goodreads' Book Data A comprehensive toolkit for scraping and analyzing book data from <https://www.goodreads.com/>. This package provides functions to search for books, scrape book details and reviews, perform sentiment analysis on reviews, and conduct topic modeling. It's designed for researchers, data analysts, and book enthusiasts who want to gain insights from 'Goodreads' data.   "
+  },
+  {
+    "id": 4012,
+    "package_name": "Harvest.Tree",
+    "title": "Harvest the Classification Tree",
+    "description": "Aimed at applying the Harvest classification tree algorithm, modified algorithm of classic classification tree.The harvested tree has advantage of deleting redundant rules in trees, leading to a simplify and more efficient tree model.It was firstly used in drug discovery field, but it also performs well in other kinds of data, especially when the region of a class is disconnected. This package also improves the basic harvest classification tree algorithm by extending the field of data of algorithm to both continuous and categorical variables. To learn more about the harvest classification tree algorithm, you can go to http://www.stat.ubc.ca/Research/TechReports/techreports/220.pdf for more information. ",
+    "version": "1.1",
+    "maintainer": "Bingyuan Liu <adler1016@gmail.com>",
+    "author": "Bingyuan Liu/Yan Yuan/Qian Shi",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=Harvest.Tree",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "Harvest.Tree Harvest the Classification Tree Aimed at applying the Harvest classification tree algorithm, modified algorithm of classic classification tree.The harvested tree has advantage of deleting redundant rules in trees, leading to a simplify and more efficient tree model.It was firstly used in drug discovery field, but it also performs well in other kinds of data, especially when the region of a class is disconnected. This package also improves the basic harvest classification tree algorithm by extending the field of data of algorithm to both continuous and categorical variables. To learn more about the harvest classification tree algorithm, you can go to http://www.stat.ubc.ca/Research/TechReports/techreports/220.pdf for more information.   "
+  },
+  {
+    "id": 4719,
+    "package_name": "MDPIexploreR",
+    "title": "Web Scraping and Bibliometric Analysis of MDPI Journals",
+    "description": "Provides comprehensive tools to scrape and analyze data from the MDPI journals. It allows users to extract metrics such as submission-to-acceptance times, article types, and whether articles are part of special issues. The package can also visualize this information through plots. Additionally, 'MDPIexploreR' offers tools to explore patterns of self-citations within articles and provides insights into guest-edited special issues.",
+    "version": "0.3.0",
+    "maintainer": "Pablo G\u00f3mez Barreiro <pablogomezbr@hotmail.es>",
+    "author": "Pablo G\u00f3mez Barreiro [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-3140-3326>)",
+    "url": "https://github.com/pgomba/MDPI_exploreR",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=MDPIexploreR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "MDPIexploreR Web Scraping and Bibliometric Analysis of MDPI Journals Provides comprehensive tools to scrape and analyze data from the MDPI journals. It allows users to extract metrics such as submission-to-acceptance times, article types, and whether articles are part of special issues. The package can also visualize this information through plots. Additionally, 'MDPIexploreR' offers tools to explore patterns of self-citations within articles and provides insights into guest-edited special issues.  "
+  },
+  {
+    "id": 4797,
+    "package_name": "MLFS",
+    "title": "Machine Learning Forest Simulator",
+    "description": "Climate-sensitive, single-tree forest simulator based on\n  data-driven machine learning. It simulates the main forest processes\u2014\n  radial growth, height growth, mortality, crown recession, regeneration,\n  and harvesting\u2014so users can assess stand development under climate and\n  management scenarios. The height model is described by Skudnik and\n  Jev\u0161enak (2022) <doi:10.1016/j.foreco.2022.120017>, the basal-area\n  increment model by Jev\u0161enak and Skudnik (2021) <doi:10.1016/j.foreco.2020.118601>,\n  and an overview of the MLFS package, workflow, and applications is\n  provided by Jev\u0161enak, Arni\u010d, Krajnc, and Skudnik (2023), Ecological\n  Informatics <doi:10.1016/j.ecoinf.2023.102115>.",
+    "version": "0.4.3",
+    "maintainer": "Jernej Jevsenak <jernej.jevsenak@gmail.com>",
+    "author": "Jernej Jevsenak [aut, cre, cph]",
+    "url": "https://CRAN.R-project.org/package=MLFS",
+    "bug_reports": "https://github.com/jernejjevsenak/MLFS/issues",
+    "repository": "https://cran.r-project.org/package=MLFS",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "MLFS Machine Learning Forest Simulator Climate-sensitive, single-tree forest simulator based on\n  data-driven machine learning. It simulates the main forest processes\u2014\n  radial growth, height growth, mortality, crown recession, regeneration,\n  and harvesting\u2014so users can assess stand development under climate and\n  management scenarios. The height model is described by Skudnik and\n  Jev\u0161enak (2022) <doi:10.1016/j.foreco.2022.120017>, the basal-area\n  increment model by Jev\u0161enak and Skudnik (2021) <doi:10.1016/j.foreco.2020.118601>,\n  and an overview of the MLFS package, workflow, and applications is\n  provided by Jev\u0161enak, Arni\u010d, Krajnc, and Skudnik (2023), Ecological\n  Informatics <doi:10.1016/j.ecoinf.2023.102115>.  "
+  },
+  {
+    "id": 5025,
+    "package_name": "MetaUtility",
+    "title": "Utility Functions for Conducting and Interpreting Meta-Analyses",
+    "description": "Contains functions to estimate the proportion of effects stronger than a threshold\n    of scientific importance (function prop_stronger), to nonparametrically characterize the distribution of effects in a meta-analysis (calib_ests, pct_pval),\n    to make effect size conversions (r_to_d, r_to_z, z_to_r, d_to_logRR), to compute and format inference in a meta-analysis (format_CI, format_stat, tau_CI), to scrape results from \n    existing meta-analyses for re-analysis (scrape_meta, parse_CI_string, ci_to_var).",
+    "version": "2.1.2",
+    "maintainer": "Maya B. Mathur <mmathur@stanford.edu>",
+    "author": "Maya B. Mathur, Rui Wang, Tyler J. VanderWeele",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=MetaUtility",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "MetaUtility Utility Functions for Conducting and Interpreting Meta-Analyses Contains functions to estimate the proportion of effects stronger than a threshold\n    of scientific importance (function prop_stronger), to nonparametrically characterize the distribution of effects in a meta-analysis (calib_ests, pct_pval),\n    to make effect size conversions (r_to_d, r_to_z, z_to_r, d_to_logRR), to compute and format inference in a meta-analysis (format_CI, format_stat, tau_CI), to scrape results from \n    existing meta-analyses for re-analysis (scrape_meta, parse_CI_string, ci_to_var).  "
+  },
+  {
+    "id": 5225,
+    "package_name": "NHSDataDictionaRy",
+    "title": "NHS Data Dictionary Toolset for NHS Lookups",
+    "description": "Providing a common set of simplified web scraping tools for working with the NHS Data Dictionary <https://datadictionary.nhs.uk/data_elements_overview.html>.\n    The intended usage is to access the data elements section of the NHS Data Dictionary to access key lookups.\n    The benefits of having it in this package are that the lookups are the live lookups on the website and will not need to be maintained.\n    This package was commissioned by the NHS-R community <https://nhsrcommunity.com/> to provide this consistency of lookups.\n    The OpenSafely lookups have now been added <https://www.opencodelists.org/docs/>.",
+    "version": "1.2.5",
+    "maintainer": "Gary Hutson <hutsons-hacks@outlook.com>",
+    "author": "Gary Hutson [aut, cre] (ORCID: <https://orcid.org/0000-0003-3534-6143>),\n  Calum Polwart [aut],\n  Tom Jemmett [aut] (ORCID: <https://orcid.org/0000-0002-6943-2990>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=NHSDataDictionaRy",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "NHSDataDictionaRy NHS Data Dictionary Toolset for NHS Lookups Providing a common set of simplified web scraping tools for working with the NHS Data Dictionary <https://datadictionary.nhs.uk/data_elements_overview.html>.\n    The intended usage is to access the data elements section of the NHS Data Dictionary to access key lookups.\n    The benefits of having it in this package are that the lookups are the live lookups on the website and will not need to be maintained.\n    This package was commissioned by the NHS-R community <https://nhsrcommunity.com/> to provide this consistency of lookups.\n    The OpenSafely lookups have now been added <https://www.opencodelists.org/docs/>.  "
+  },
+  {
+    "id": 5363,
+    "package_name": "OAIHarvester",
+    "title": "Harvest Metadata Using OAI-PMH Version 2.0",
+    "description": "\n  Harvest metadata using the Open Archives Initiative Protocol for Metadata\n  Harvesting (OAI-PMH) version 2.0 (for more information, see\n  <https://www.openarchives.org/OAI/openarchivesprotocol.html>).",
+    "version": "0.3-5",
+    "maintainer": "Kurt Hornik <Kurt.Hornik@R-project.org>",
+    "author": "Kurt Hornik [aut, cre] (ORCID: <https://orcid.org/0000-0003-4198-9911>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=OAIHarvester",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "OAIHarvester Harvest Metadata Using OAI-PMH Version 2.0 \n  Harvest metadata using the Open Archives Initiative Protocol for Metadata\n  Harvesting (OAI-PMH) version 2.0 (for more information, see\n  <https://www.openarchives.org/OAI/openarchivesprotocol.html>).  "
+  },
+  {
+    "id": 5371,
+    "package_name": "OCSdata",
+    "title": "Download Data from the 'Open Case Studies' Repository",
+    "description": "\n    Provides functions to access and download data from the 'Open Case Studies' <https://www.opencasestudies.org/> \n    repositories on 'GitHub' <https://github.com/opencasestudies>. Different functions enable \n    users to grab the data they need at different sections in the case study, as well as \n    download the whole case study repository. All the user needs to do is input the name of \n    the case study being worked on. The package relies on the httr::GET() function to access\n    files through the 'GitHub' API. The functions usethis::use_zip() and usethis::create_from_github() \n    are used to clone and/or download the case study repositories. To cite an individual case study,\n    please see the respective 'README' file at <https://github.com/opencasestudies/>.\n    <https://github.com/opencasestudies/ocs-bp-rural-and-urban-obesity> \n    <https://github.com/opencasestudies/ocs-bp-air-pollution>\n    <https://github.com/opencasestudies/ocs-bp-vaping-case-study>\n    <https://github.com/opencasestudies/ocs-bp-opioid-rural-urban>\n    <https://github.com/opencasestudies/ocs-bp-RTC-wrangling>\n    <https://github.com/opencasestudies/ocs-bp-RTC-analysis>\n    <https://github.com/opencasestudies/ocs-bp-youth-disconnection>\n    <https://github.com/opencasestudies/ocs-bp-youth-mental-health>\n    <https://github.com/opencasestudies/ocs-bp-school-shootings-dashboard>\n    <https://github.com/opencasestudies/ocs-bp-co2-emissions>\n    <https://github.com/opencasestudies/ocs-bp-diet>.",
+    "version": "1.0.2",
+    "maintainer": "Carrie Wright <cwrigh60@jhu.edu>",
+    "author": "Michael Breshock [aut],\n  Carrie Wright [aut, cre, ths] (ORCID:\n    <https://orcid.org/0000-0003-1325-6067>),\n  Stephanie Hicks [aut] (ORCID: <https://orcid.org/0000-0002-7858-0231>),\n  Leah Jager [ctb] (ORCID: <https://orcid.org/0000-0003-3362-2298>),\n  John Muschelli [ctb] (ORCID: <https://orcid.org/0000-0001-6469-1750>),\n  Margaret Taub [ctb] (ORCID: <https://orcid.org/0000-0001-8008-618X>)",
+    "url": "https://github.com/opencasestudies/OCSdata,\nhttps://doi.org/10.5281/zenodo.5214347,\nhttps://www.opencasestudies.org/",
+    "bug_reports": "https://github.com/opencasestudies/OCSdata/issues",
+    "repository": "https://cran.r-project.org/package=OCSdata",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "OCSdata Download Data from the 'Open Case Studies' Repository \n    Provides functions to access and download data from the 'Open Case Studies' <https://www.opencasestudies.org/> \n    repositories on 'GitHub' <https://github.com/opencasestudies>. Different functions enable \n    users to grab the data they need at different sections in the case study, as well as \n    download the whole case study repository. All the user needs to do is input the name of \n    the case study being worked on. The package relies on the httr::GET() function to access\n    files through the 'GitHub' API. The functions usethis::use_zip() and usethis::create_from_github() \n    are used to clone and/or download the case study repositories. To cite an individual case study,\n    please see the respective 'README' file at <https://github.com/opencasestudies/>.\n    <https://github.com/opencasestudies/ocs-bp-rural-and-urban-obesity> \n    <https://github.com/opencasestudies/ocs-bp-air-pollution>\n    <https://github.com/opencasestudies/ocs-bp-vaping-case-study>\n    <https://github.com/opencasestudies/ocs-bp-opioid-rural-urban>\n    <https://github.com/opencasestudies/ocs-bp-RTC-wrangling>\n    <https://github.com/opencasestudies/ocs-bp-RTC-analysis>\n    <https://github.com/opencasestudies/ocs-bp-youth-disconnection>\n    <https://github.com/opencasestudies/ocs-bp-youth-mental-health>\n    <https://github.com/opencasestudies/ocs-bp-school-shootings-dashboard>\n    <https://github.com/opencasestudies/ocs-bp-co2-emissions>\n    <https://github.com/opencasestudies/ocs-bp-diet>.  "
+  },
+  {
+    "id": 5735,
+    "package_name": "PacketLLM",
+    "title": "Interactive 'OpenAI' Model Integration in 'RStudio'",
+    "description": "Offers an interactive 'RStudio' gadget interface for communicating \n    with 'OpenAI' large language models (e.g., 'gpt-5', 'gpt-5-mini', 'gpt-5-nano') \n    (<https://platform.openai.com/docs/api-reference>). \n    Enables users to conduct multiple chat conversations simultaneously in \n    separate tabs. Supports uploading local files (R, PDF, DOCX) to provide \n    context for the models. Allows per-conversation configuration of system \n    messages (where supported by the model). API interactions via the 'httr' \n    package are performed asynchronously using 'promises' and 'future' to avoid \n    blocking the R console. Useful for tasks like code generation, text \n    summarization, and document analysis directly within the 'RStudio' environment. \n    Requires an 'OpenAI' API key set as an environment variable.",
+    "version": "0.1.1",
+    "maintainer": "Antoni Czolgowski <antoni.czolgowski@gmail.com>",
+    "author": "Antoni Czolgowski [aut, cre]",
+    "url": "https://github.com/AntoniCzolgowski/PacketLLM",
+    "bug_reports": "https://github.com/AntoniCzolgowski/PacketLLM/issues",
+    "repository": "https://cran.r-project.org/package=PacketLLM",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "PacketLLM Interactive 'OpenAI' Model Integration in 'RStudio' Offers an interactive 'RStudio' gadget interface for communicating \n    with 'OpenAI' large language models (e.g., 'gpt-5', 'gpt-5-mini', 'gpt-5-nano') \n    (<https://platform.openai.com/docs/api-reference>). \n    Enables users to conduct multiple chat conversations simultaneously in \n    separate tabs. Supports uploading local files (R, PDF, DOCX) to provide \n    context for the models. Allows per-conversation configuration of system \n    messages (where supported by the model). API interactions via the 'httr' \n    package are performed asynchronously using 'promises' and 'future' to avoid \n    blocking the R console. Useful for tasks like code generation, text \n    summarization, and document analysis directly within the 'RStudio' environment. \n    Requires an 'OpenAI' API key set as an environment variable.  "
+  },
+  {
+    "id": 5931,
+    "package_name": "ProSportsDraftData",
+    "title": "Professional Sports Draft Data",
+    "description": "We provide comprehensive draft data for major professional sports leagues, including the National Football League (NFL), National Basketball Association (NBA), and National Hockey League (NHL). It offers access to both historical and current draft data, allowing for detailed analysis and research on player biases and player performance. The package is useful for sports fans and researchers interested in identifying biases and trends within scouting reports. Created by web scraping data from leading websites that cover professional sports player scouting reports, the package allows users to filter and summarize data for analytical purposes. For further details on the methods used, please refer to Wickham (2022) \"rvest: Easily Harvest (Scrape) Web Pages\" <https://CRAN.R-project.org/package=rvest> and Harrison (2023) \"RSelenium: R Bindings for Selenium WebDriver\" <https://CRAN.R-project.org/package=RSelenium>.",
+    "version": "1.0.3",
+    "maintainer": "Benjamin Ginsburg <benjamin.ginsburg@du.edu>",
+    "author": "Benjamin Ginsburg [aut, cre]",
+    "url": "https://github.com/Ginsburg1/ProSportsDraftData",
+    "bug_reports": "https://github.com/Ginsburg1/ProSportsDraftData/issues",
+    "repository": "https://cran.r-project.org/package=ProSportsDraftData",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ProSportsDraftData Professional Sports Draft Data We provide comprehensive draft data for major professional sports leagues, including the National Football League (NFL), National Basketball Association (NBA), and National Hockey League (NHL). It offers access to both historical and current draft data, allowing for detailed analysis and research on player biases and player performance. The package is useful for sports fans and researchers interested in identifying biases and trends within scouting reports. Created by web scraping data from leading websites that cover professional sports player scouting reports, the package allows users to filter and summarize data for analytical purposes. For further details on the methods used, please refer to Wickham (2022) \"rvest: Easily Harvest (Scrape) Web Pages\" <https://CRAN.R-project.org/package=rvest> and Harrison (2023) \"RSelenium: R Bindings for Selenium WebDriver\" <https://CRAN.R-project.org/package=RSelenium>.  "
+  },
+  {
+    "id": 6064,
+    "package_name": "R2HTML",
+    "title": "HTML Exportation for R Objects",
+    "description": "Includes HTML function and methods to write in an HTML\n        file. Thus, making HTML reports is easy. Includes a function\n        that allows redirection on the fly, which appears to be very\n        useful for teaching purpose, as the student can keep a copy of\n        the produced output to keep all that he did during the course.\n        Package comes with a vignette describing how to write HTML\n        reports for statistical analysis. Finally, a driver for 'Sweave'\n        allows to parse HTML flat files containing R code and to\n        automatically write the corresponding outputs (tables and\n        graphs).",
+    "version": "2.3.4",
+    "maintainer": "Milan Bouchet-Valat <nalimilan@club.fr>",
+    "author": "Eric Lecoutre [aut],\n  Milan Bouchet-Valat [cre, ctb],\n  Thomas Friedrichsmeier [ctb]",
+    "url": "https://github.com/nalimilan/R2HTML",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=R2HTML",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "R2HTML HTML Exportation for R Objects Includes HTML function and methods to write in an HTML\n        file. Thus, making HTML reports is easy. Includes a function\n        that allows redirection on the fly, which appears to be very\n        useful for teaching purpose, as the student can keep a copy of\n        the produced output to keep all that he did during the course.\n        Package comes with a vignette describing how to write HTML\n        reports for statistical analysis. Finally, a driver for 'Sweave'\n        allows to parse HTML flat files containing R code and to\n        automatically write the corresponding outputs (tables and\n        graphs).  "
+  },
+  {
+    "id": 6717,
+    "package_name": "Rigma",
+    "title": "Access to the 'Figma' API",
+    "description": "The goal of Rigma is to provide a user friendly client to the\n    'Figma' API <https://www.figma.com/developers/api>. It uses the latest\n    `httr2` for a stable interface with the REST API. More than 20 methods\n    are provided to interact with 'Figma' files, and teams. Get design\n    data into R by reading published components and styles, converting and\n    downloading images, getting access to the full 'Figma' file as a\n    hierarchical data structure, and much more. Enhance your creativity\n    and streamline the application development by automating the\n    extraction, transformation, and loading of design data to your\n    applications and 'HTML' documents.",
+    "version": "0.3.0",
+    "maintainer": "Alexandros Kouretsis <alexandros@appsilon.com>",
+    "author": "Alexandros Kouretsis [aut, cre],\n  Eli Pousson [aut] (ORCID: <https://orcid.org/0000-0001-8280-1706>)",
+    "url": "https://github.com/AleKoure/Rigma,\nhttps://AleKoure.github.io/Rigma/",
+    "bug_reports": "https://github.com/AleKoure/Rigma/issues",
+    "repository": "https://cran.r-project.org/package=Rigma",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "Rigma Access to the 'Figma' API The goal of Rigma is to provide a user friendly client to the\n    'Figma' API <https://www.figma.com/developers/api>. It uses the latest\n    `httr2` for a stable interface with the REST API. More than 20 methods\n    are provided to interact with 'Figma' files, and teams. Get design\n    data into R by reading published components and styles, converting and\n    downloading images, getting access to the full 'Figma' file as a\n    hierarchical data structure, and much more. Enhance your creativity\n    and streamline the application development by automating the\n    extraction, transformation, and loading of design data to your\n    applications and 'HTML' documents.  "
+  },
+  {
+    "id": 7324,
+    "package_name": "SlotLim",
+    "title": "Catch Advice for Fisheries Managed by Harvest Slot Limits",
+    "description": "Catch advice for data-limited vertebrate and invertebrate \n    fisheries managed by harvest slot limits using the SlotLim harvest \n    control rule. The package accompanies the manuscript \"SlotLim: catch advice \n    for data-limited vertebrate and invertebrate fisheries managed by harvest \n    slot limits\" (Pritchard et al., in prep). Minimum data requirements: at \n    least two consecutive years of catch data, length\u2013frequency distributions, \n    and biomass or abundance indices (all from fishery-dependent sources); \n    species-specific growth rate parameters (either von Bertalanffy, Gompertz, \n    or Schnute); and either the natural mortality rate ('M') or the maximum \n    observed age ('tmax'), from which M is estimated. The following functions \n    have optional plotting capabilities that require 'ggplot2' installed: \n    prop_target(), TBA(), SAM(), catch_advice(), catch_adjust(), and \n    slotlim_once().",
+    "version": "0.0.2",
+    "maintainer": "C.J. Pritchard <cj_pritchard@outlook.com>",
+    "author": "C.J. Pritchard [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-7093-6785>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=SlotLim",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "SlotLim Catch Advice for Fisheries Managed by Harvest Slot Limits Catch advice for data-limited vertebrate and invertebrate \n    fisheries managed by harvest slot limits using the SlotLim harvest \n    control rule. The package accompanies the manuscript \"SlotLim: catch advice \n    for data-limited vertebrate and invertebrate fisheries managed by harvest \n    slot limits\" (Pritchard et al., in prep). Minimum data requirements: at \n    least two consecutive years of catch data, length\u2013frequency distributions, \n    and biomass or abundance indices (all from fishery-dependent sources); \n    species-specific growth rate parameters (either von Bertalanffy, Gompertz, \n    or Schnute); and either the natural mortality rate ('M') or the maximum \n    observed age ('tmax'), from which M is estimated. The following functions \n    have optional plotting capabilities that require 'ggplot2' installed: \n    prop_target(), TBA(), SAM(), catch_advice(), catch_adjust(), and \n    slotlim_once().  "
+  },
+  {
+    "id": 7360,
+    "package_name": "SouthParkRshiny",
+    "title": "Data and 'Shiny' Application for the Show 'SouthPark'",
+    "description": "Ratings, votes, swear words and sentiments are analysed for\n    the show 'SouthPark' through a 'Shiny' application after web scraping \n    from 'IMDB' and the website <https://southpark.fandom.com/wiki/South_Park_Archives>.",
+    "version": "1.0.0",
+    "maintainer": "Amalan Mahendran <amalan0595@gmail.com>",
+    "author": "Amalan Mahendran [cre, aut]",
+    "url": "https://github.com/Amalan-ConStat/SouthParkRshiny,https://amalan-con-stat.shinyapps.io/SouthParkRshiny/",
+    "bug_reports": "https://github.com/Amalan-ConStat/SouthParkRshiny/issues",
+    "repository": "https://cran.r-project.org/package=SouthParkRshiny",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "SouthParkRshiny Data and 'Shiny' Application for the Show 'SouthPark' Ratings, votes, swear words and sentiments are analysed for\n    the show 'SouthPark' through a 'Shiny' application after web scraping \n    from 'IMDB' and the website <https://southpark.fandom.com/wiki/South_Park_Archives>.  "
+  },
+  {
+    "id": 8342,
+    "package_name": "affinity",
+    "title": "Raster Georeferencing, Grid Affine Transforms, Cell Abstraction",
+    "description": "Tools for raster georeferencing, grid affine transforms, and general raster logic. \n These functions provide converters between raster specifications, world vector, geotransform, \n 'RasterIO' window, and 'RasterIO window' in 'sf' package list format. There are functions to offset\n a matrix by padding any of four corners (useful for vectorizing neighbourhood operations), and\n helper functions to harvesting user clicks on a graphics device to use for simple georeferencing\n of images.  Methods used are available from <https://en.wikipedia.org/wiki/World_file> and\n <https://gdal.org/user/raster_data_model.html>. ",
+    "version": "0.2.5",
+    "maintainer": "Michael D. Sumner <mdsumner@gmail.com>",
+    "author": "Michael D. Sumner [aut, cre]",
+    "url": "https://github.com/hypertidy/affinity",
+    "bug_reports": "https://github.com/hypertidy/affinity/issues",
+    "repository": "https://cran.r-project.org/package=affinity",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "affinity Raster Georeferencing, Grid Affine Transforms, Cell Abstraction Tools for raster georeferencing, grid affine transforms, and general raster logic. \n These functions provide converters between raster specifications, world vector, geotransform, \n 'RasterIO' window, and 'RasterIO window' in 'sf' package list format. There are functions to offset\n a matrix by padding any of four corners (useful for vectorizing neighbourhood operations), and\n helper functions to harvesting user clicks on a graphics device to use for simple georeferencing\n of images.  Methods used are available from <https://en.wikipedia.org/wiki/World_file> and\n <https://gdal.org/user/raster_data_model.html>.   "
+  },
+  {
+    "id": 8604,
+    "package_name": "archiveRetriever",
+    "title": "Retrieve Archived Web Pages from the 'Internet Archive'",
+    "description": "Scraping content from archived web pages stored in\n    the 'Internet Archive' (<https://archive.org>) using a systematic\n    workflow.  Get an overview of the mementos available from the\n    respective homepage, retrieve the Urls and links of the page and\n    finally scrape the content. The final output is stored in tibbles,\n    which can be then easily used for further analysis.",
+    "version": "0.4.1",
+    "maintainer": "Lukas Isermann <lukas.isermann@uni-mannheim.de>",
+    "author": "Lukas Isermann [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-7195-9302>),\n  Konstantin Gavras [aut] (ORCID:\n    <https://orcid.org/0000-0002-9222-0101>)",
+    "url": "https://github.com/liserman/archiveRetriever/",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=archiveRetriever",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "archiveRetriever Retrieve Archived Web Pages from the 'Internet Archive' Scraping content from archived web pages stored in\n    the 'Internet Archive' (<https://archive.org>) using a systematic\n    workflow.  Get an overview of the mementos available from the\n    respective homepage, retrieve the Urls and links of the page and\n    finally scrape the content. The final output is stored in tibbles,\n    which can be then easily used for further analysis.  "
+  },
+  {
+    "id": 8606,
+    "package_name": "arcpbf",
+    "title": "Process ArcGIS Protocol Buffer FeatureCollections",
+    "description": "Fast processing of ArcGIS FeatureCollection protocol buffers in R.\n  It is designed to work seamlessly with 'httr2' and integrates with 'sf'. ",
+    "version": "0.2.0",
+    "maintainer": "Josiah Parry <josiah.parry@gmail.com>",
+    "author": "Josiah Parry [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-9910-865X>)",
+    "url": "https://r.esri.com/arcpbf/, https://github.com/R-ArcGIS/arcpbf",
+    "bug_reports": "https://github.com/R-ArcGIS/arcpbf/issues",
+    "repository": "https://cran.r-project.org/package=arcpbf",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "arcpbf Process ArcGIS Protocol Buffer FeatureCollections Fast processing of ArcGIS FeatureCollection protocol buffers in R.\n  It is designed to work seamlessly with 'httr2' and integrates with 'sf'.   "
+  },
+  {
+    "id": 8801,
+    "package_name": "azr",
+    "title": "Credential Chain for Seamless 'OAuth 2.0' Authentication to\n'Azure Services'",
+    "description": "Implements a credential chain for 'Azure OAuth 2.0' authentication \n      based on the package 'httr2''s 'OAuth' framework. Sequentially attempts authentication \n      methods until one succeeds. During development allows interactive \n      browser-based flows ('Device Code' and 'Auth Code' flows) and non-interactive \n      flow ('Client Secret') in batch mode.",
+    "version": "0.2.0",
+    "maintainer": "Pedro Baltazar <pedrobtz@gmail.com>",
+    "author": "Pedro Baltazar [aut, cre]",
+    "url": "https://pedrobtz.github.io/azr/, https://github.com/pedrobtz/azr",
+    "bug_reports": "https://github.com/pedrobtz/azr/issues",
+    "repository": "https://cran.r-project.org/package=azr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "azr Credential Chain for Seamless 'OAuth 2.0' Authentication to\n'Azure Services' Implements a credential chain for 'Azure OAuth 2.0' authentication \n      based on the package 'httr2''s 'OAuth' framework. Sequentially attempts authentication \n      methods until one succeeds. During development allows interactive \n      browser-based flows ('Device Code' and 'Auth Code' flows) and non-interactive \n      flow ('Client Secret') in batch mode.  "
+  },
+  {
+    "id": 8857,
+    "package_name": "banxicoR",
+    "title": "Download Data from the Bank of Mexico",
+    "description": "Provides functions to scrape IQY calls to Bank of Mexico,\n    downloading and ordering the data conveniently.",
+    "version": "0.9.0",
+    "maintainer": "Eduardo Flores <eduardo@enelmargen.org>",
+    "author": "Eduardo Flores",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=banxicoR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "banxicoR Download Data from the Bank of Mexico Provides functions to scrape IQY calls to Bank of Mexico,\n    downloading and ordering the data conveniently.  "
+  },
+  {
+    "id": 9278,
+    "package_name": "blscrapeR",
+    "title": "An API Wrapper for the United States Bureau of Labor Statistics",
+    "description": "Scrapes various data from <https://www.bls.gov/>. The Bureau of Labor Statistics is the statistical branch of the United States Department of Labor. The package has additional functions to help parse, analyze and visualize the data.",
+    "version": "4.0.1",
+    "maintainer": "Kris Eberwein <kris.eberwein@gmail.com>",
+    "author": "Kris Eberwein [aut, cre]",
+    "url": "https://github.com/keberwein/blscrapeR",
+    "bug_reports": "https://github.com/keberwein/blscrapeR/issues",
+    "repository": "https://cran.r-project.org/package=blscrapeR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "blscrapeR An API Wrapper for the United States Bureau of Labor Statistics Scrapes various data from <https://www.bls.gov/>. The Bureau of Labor Statistics is the statistical branch of the United States Department of Labor. The package has additional functions to help parse, analyze and visualize the data.  "
+  },
+  {
+    "id": 9609,
+    "package_name": "care4cmodel",
+    "title": "Carbon-Related Assessment of Silvicultural Concepts",
+    "description": "A simulation model and accompanying functions that support \n    assessing silvicultural concepts on the forest estate level with a focus on \n    the CO2 uptake by wood growth and CO2 emissions by forest operations. For \n    achieving this, a virtual forest estate area is split into the areas covered\n    by typical phases of the silvicultural concept of interest. Given initial \n    area shares of these phases, the dynamics of these areas is simulated. The \n    typical carbon stocks and flows which are known for all phases are \n    attributed post-hoc to the areas and upscaled to the estate level. CO2 \n    emissions by forest operations are estimated based on the amounts and \n    dimensions of the harvested timber. Probabilities of damage events are taken\n    into account.",
+    "version": "1.0.3",
+    "maintainer": "Peter Biber <p.biber@tum.de>",
+    "author": "Peter Biber [aut, cre, cph] (ORCID:\n    <https://orcid.org/0000-0002-9700-8708>),\n  Stefano Grigolato [ctb] (ORCID:\n    <https://orcid.org/0000-0002-2089-3892>),\n  Julia Schmucker [ctb] (ORCID: <https://orcid.org/0000-0001-9996-4851>),\n  Enno Uhl [ctb] (ORCID: <https://orcid.org/0000-0002-7847-923X>),\n  Hans Pretzsch [ctb] (ORCID: <https://orcid.org/0000-0002-4958-1868>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=care4cmodel",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "care4cmodel Carbon-Related Assessment of Silvicultural Concepts A simulation model and accompanying functions that support \n    assessing silvicultural concepts on the forest estate level with a focus on \n    the CO2 uptake by wood growth and CO2 emissions by forest operations. For \n    achieving this, a virtual forest estate area is split into the areas covered\n    by typical phases of the silvicultural concept of interest. Given initial \n    area shares of these phases, the dynamics of these areas is simulated. The \n    typical carbon stocks and flows which are known for all phases are \n    attributed post-hoc to the areas and upscaled to the estate level. CO2 \n    emissions by forest operations are estimated based on the amounts and \n    dimensions of the harvested timber. Probabilities of damage events are taken\n    into account.  "
+  },
+  {
+    "id": 10111,
+    "package_name": "cocktailApp",
+    "title": "'shiny' App to Discover Cocktails",
+    "description": "A 'shiny' app to discover cocktails. The\n    app allows one to search for cocktails by ingredient,\n    filter on rating, and number of ingredients. The\n    package also contains data with the ingredients of\n    nearly 26 thousand cocktails scraped from the web.",
+    "version": "0.2.4",
+    "maintainer": "Steven E. Pav <shabbychef@gmail.com>",
+    "author": "Steven E. Pav [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-4197-6195>)",
+    "url": "https://github.com/shabbychef/cocktailApp",
+    "bug_reports": "https://github.com/shabbychef/cocktailApp/issues",
+    "repository": "https://cran.r-project.org/package=cocktailApp",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "cocktailApp 'shiny' App to Discover Cocktails A 'shiny' app to discover cocktails. The\n    app allows one to search for cocktails by ingredient,\n    filter on rating, and number of ingredients. The\n    package also contains data with the ingredients of\n    nearly 26 thousand cocktails scraped from the web.  "
+  },
+  {
+    "id": 10375,
+    "package_name": "cookiemonster",
+    "title": "Your Friendly Solution to Managing Browser Cookies",
+    "description": "A convenient tool to store and format browser cookies and use them \n    in 'HTTP' requests (for example, through 'httr2', 'httr' or 'curl').",
+    "version": "0.1.0",
+    "maintainer": "Johannes B. Gruber <JohannesB.Gruber@gmail.com>",
+    "author": "Johannes B. Gruber [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-9177-1772>)",
+    "url": "https://github.com/JBGruber/cookiemonster",
+    "bug_reports": "https://github.com/JBGruber/cookiemonster/issues",
+    "repository": "https://cran.r-project.org/package=cookiemonster",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "cookiemonster Your Friendly Solution to Managing Browser Cookies A convenient tool to store and format browser cookies and use them \n    in 'HTTP' requests (for example, through 'httr2', 'httr' or 'curl').  "
+  },
+  {
+    "id": 10586,
+    "package_name": "cropdatape",
+    "title": "Open Data of Agricultural Production of Crops of Peru",
+    "description": "Provides peruvian agricultural production data from the Agriculture Minestry of Peru (MINAGRI). The first version includes\n             6 crops: rice, quinoa, potato, sweet potato, tomato and wheat; all of them across 24 departments. Initially,  in excel files which has been transformed\n             and assembled using tidy data principles, i.e. each variable is in a column, each observation is a row and each value is in a cell.\n             The variables variables are sowing and harvest area per crop, yield, production and price per plot, every one year, from 2004 to 2014.",
+    "version": "1.0.0",
+    "maintainer": "Omar Benites-Alfaro <obacc07@gmail.com>",
+    "author": "Omar Benites-Alfaro [aut, cre],\n  Pablo Gutierrez-Vilchez [aut],\n  Jossyn Lockuan-Cotrina [aut],\n  Giorgio Cruz-Fajardo [aut],\n  Grace Guevara-Diaz [aut],\n  Charlie Mendez-Morales [aut],\n  Liliana Aragon-Caballero [ctb],\n  Raul Blas-Sevillano [ctb],\n  Agronomy Faculty, National Agrarian University La Molina (UNALM) [cph]\n    (Copyright holder of all R code),\n  Agriculture Ministry of Peru (MINAGRI) [cph] (Data source come from\n    MINAGRI)",
+    "url": "https://github.com/omarbenites/cropdatape,\nhttp://siea.minagri.gob.pe/siea/?q=publicaciones/anuarios-estadisticos",
+    "bug_reports": "https://github.com/omarbenites/cropdatape/issues",
+    "repository": "https://cran.r-project.org/package=cropdatape",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "cropdatape Open Data of Agricultural Production of Crops of Peru Provides peruvian agricultural production data from the Agriculture Minestry of Peru (MINAGRI). The first version includes\n             6 crops: rice, quinoa, potato, sweet potato, tomato and wheat; all of them across 24 departments. Initially,  in excel files which has been transformed\n             and assembled using tidy data principles, i.e. each variable is in a column, each observation is a row and each value is in a cell.\n             The variables variables are sowing and harvest area per crop, yield, production and price per plot, every one year, from 2004 to 2014.  "
+  },
+  {
+    "id": 10619,
+    "package_name": "crypto2",
+    "title": "Download Crypto Currency Data from 'CoinMarketCap' without 'API'",
+    "description": "Retrieves crypto currency information and historical prices as well as information on the exchanges they are listed on. Historical data contains daily open, high, low and close values for all crypto currencies. All data is scraped from <https://coinmarketcap.com> via their 'web-api'.",
+    "version": "2.0.5",
+    "maintainer": "Sebastian Stoeckl <sebastian.stoeckl@uni.li>",
+    "author": "Sebastian Stoeckl [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-4196-6093>, Package commissioner and\n    maintainer.),\n  Jesse Vent [ctb] (Creator of the crypto package that provided the idea\n    and basis for this package.)",
+    "url": "https://github.com/sstoeckl/crypto2,\nhttps://www.sebastianstoeckl.com/crypto2/",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=crypto2",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "crypto2 Download Crypto Currency Data from 'CoinMarketCap' without 'API' Retrieves crypto currency information and historical prices as well as information on the exchanges they are listed on. Historical data contains daily open, high, low and close values for all crypto currencies. All data is scraped from <https://coinmarketcap.com> via their 'web-api'.  "
+  },
+  {
+    "id": 10697,
+    "package_name": "curl",
+    "title": "A Modern and Flexible Web Client for R",
+    "description": "Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully\n    configurable HTTP/FTP requests where responses can be processed in memory, on\n    disk, or streaming via the callback or connection interfaces. Some knowledge\n    of 'libcurl' is recommended; for a more-user-friendly web client see the \n    'httr2' package which builds on this package with http specific tools and logic.",
+    "version": "7.0.0",
+    "maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+    "author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>),\n  Hadley Wickham [ctb],\n  Posit Software, PBC [cph]",
+    "url": "https://jeroen.r-universe.dev/curl",
+    "bug_reports": "https://github.com/jeroen/curl/issues",
+    "repository": "https://cran.r-project.org/package=curl",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "curl A Modern and Flexible Web Client for R Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully\n    configurable HTTP/FTP requests where responses can be processed in memory, on\n    disk, or streaming via the callback or connection interfaces. Some knowledge\n    of 'libcurl' is recommended; for a more-user-friendly web client see the \n    'httr2' package which builds on this package with http specific tools and logic.  "
+  },
+  {
+    "id": 11119,
+    "package_name": "diario",
+    "title": "'R' Interface to the 'Diariodeobras' Application",
+    "description": "Provides a set of functions for securely storing 'API' tokens and interacting with the <https://diariodeobras.net> system. Includes convenient wrappers around the 'httr2' package to perform authenticated requests, retrieve project details, tasks, reports, and more. ",
+    "version": "0.1.0",
+    "maintainer": "Andre Leite <leite@castlab.org>",
+    "author": "Andre Leite [aut, cre],\n  Felipe Ferreira [aut],\n  Hugo Vaconcelos [aut],\n  Diogo Bezerra [aut],\n  Roger Azevedo [aut]",
+    "url": "<https://github.com/StrategicProjects/diario>",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=diario",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "diario 'R' Interface to the 'Diariodeobras' Application Provides a set of functions for securely storing 'API' tokens and interacting with the <https://diariodeobras.net> system. Includes convenient wrappers around the 'httr2' package to perform authenticated requests, retrieve project details, tasks, reports, and more.   "
+  },
+  {
+    "id": 11690,
+    "package_name": "efdm",
+    "title": "Simulate Forest Resources with the European Forestry Dynamics\nModel",
+    "description": "An implementation of European Forestry Dynamics Model (EFDM) and\n    an estimation algorithm for the transition probabilities.\n    The EFDM is a large-scale forest model that simulates the development of\n    the forest and estimates volume of wood harvested for any given forested\n    area. This estimate can be broken down by, for example, species, site\n    quality, management regime and ownership category.\n    See Packalen et al. (2015) <doi:10.2788/153990>.",
+    "version": "0.2.1",
+    "maintainer": "Mikko Kuronen <mikko.kuronen@luke.fi>",
+    "author": "Mikko Kuronen [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-8089-7895>),\n  Minna R\u00e4ty [aut] (ORCID: <https://orcid.org/0000-0001-9898-8712>)",
+    "url": "https://github.com/mikkoku/efdm",
+    "bug_reports": "https://github.com/mikkoku/efdm/issues",
+    "repository": "https://cran.r-project.org/package=efdm",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "efdm Simulate Forest Resources with the European Forestry Dynamics\nModel An implementation of European Forestry Dynamics Model (EFDM) and\n    an estimation algorithm for the transition probabilities.\n    The EFDM is a large-scale forest model that simulates the development of\n    the forest and estimates volume of wood harvested for any given forested\n    area. This estimate can be broken down by, for example, species, site\n    quality, management regime and ownership category.\n    See Packalen et al. (2015) <doi:10.2788/153990>.  "
+  },
+  {
+    "id": 11758,
+    "package_name": "emailjsr",
+    "title": "'emailjs' Support",
+    "description": "Use 'emailjs' API easily in 'R'. This package is not official. <https://www.emailjs.com/docs/rest-api/send/>. You can send e-mail with 'emailjs' with function, based on 'httr'. You can also make a 'shiny' ui and server function. It can be used for making feedback form, inquiry, and so on.",
+    "version": "0.0.2",
+    "maintainer": "Changwoo Lim <limcw@zarathu.com>",
+    "author": "Changwoo Lim [aut, cre] (ORCID:\n    <https://orcid.org/0000-0003-1949-0639>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=emailjsr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "emailjsr 'emailjs' Support Use 'emailjs' API easily in 'R'. This package is not official. <https://www.emailjs.com/docs/rest-api/send/>. You can send e-mail with 'emailjs' with function, based on 'httr'. You can also make a 'shiny' ui and server function. It can be used for making feedback form, inquiry, and so on.  "
+  },
+  {
+    "id": 11888,
+    "package_name": "equiBSPD",
+    "title": "Equivalent Estimation Balanced Split Plot Designs",
+    "description": "In agricultural, post-harvest and processing, engineering and industrial experiments factors are often differentiated with ease with which they can change from experimental run to experimental run. This is due to the fact that one or more factors may be expensive or time consuming to change i.e. hard-to-change factors. These factors restrict the use of complete randomization as it may make the experiment expensive and time consuming. Split plot designs can be used for such situations. In general model estimation of split plot designs require the use of generalized least squares (GLS). However for some split-plot designs ordinary least squares (OLS) estimates are equivalent to generalized least squares (GLS) estimates. These types of designs are known in literature as equivalent-estimation split-plot design. For method details see, Macharia, H. and Goos, P.(2010) <doi:10.1080/00224065.2010.11917833>.Balanced split plot designs are designs which have an equal number of subplots within every whole plot. This package used to construct equivalent estimation balanced split plot designs for different experimental set ups along with different statistical criteria to measure the performance of these designs. It consist of the function equivalent_BSPD().",
+    "version": "0.1.0",
+    "maintainer": "Bijoy Chanda <bijoychanda08@gmail.com>",
+    "author": "Bijoy Chanda [aut, cre, ctb],\n  Arpan Bhowmik [aut, ctb],\n  Cini Varghese [aut],\n  Seema Jaggi [aut, ctb],\n  Eldho Varghese [aut, ctb],\n  BN Mandal [ctb],\n  Anindita Datta [ctb],\n  Soumen Pal [ctb],\n  Dibyendu Deb [ctb]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=equiBSPD",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "equiBSPD Equivalent Estimation Balanced Split Plot Designs In agricultural, post-harvest and processing, engineering and industrial experiments factors are often differentiated with ease with which they can change from experimental run to experimental run. This is due to the fact that one or more factors may be expensive or time consuming to change i.e. hard-to-change factors. These factors restrict the use of complete randomization as it may make the experiment expensive and time consuming. Split plot designs can be used for such situations. In general model estimation of split plot designs require the use of generalized least squares (GLS). However for some split-plot designs ordinary least squares (OLS) estimates are equivalent to generalized least squares (GLS) estimates. These types of designs are known in literature as equivalent-estimation split-plot design. For method details see, Macharia, H. and Goos, P.(2010) <doi:10.1080/00224065.2010.11917833>.Balanced split plot designs are designs which have an equal number of subplots within every whole plot. This package used to construct equivalent estimation balanced split plot designs for different experimental set ups along with different statistical criteria to measure the performance of these designs. It consist of the function equivalent_BSPD().  "
+  },
+  {
+    "id": 12220,
+    "package_name": "fastRhockey",
+    "title": "Functions to Access Premier Hockey Federation and National\nHockey League Play by Play Data",
+    "description": "A utility to scrape and load play-by-play data\n    and statistics from the Premier Hockey Federation (PHF) <https://www.premierhockeyfederation.com/>, formerly\n    known as the National Women's Hockey League (NWHL). Additionally, allows access to the National Hockey League's\n    stats API <https://www.nhl.com/>.",
+    "version": "0.4.0",
+    "maintainer": "Saiem Gilani <saiem.gilani@gmail.com>",
+    "author": "Ben Howell [aut],\n  Saiem Gilani [cre, aut],\n  Alyssa Longmuir [ctb]",
+    "url": "https://fastRhockey.sportsdataverse.org/,\nhttps://github.com/sportsdataverse/fastRhockey",
+    "bug_reports": "https://github.com/sportsdataverse/fastRhockey/issues",
+    "repository": "https://cran.r-project.org/package=fastRhockey",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "fastRhockey Functions to Access Premier Hockey Federation and National\nHockey League Play by Play Data A utility to scrape and load play-by-play data\n    and statistics from the Premier Hockey Federation (PHF) <https://www.premierhockeyfederation.com/>, formerly\n    known as the National Women's Hockey League (NWHL). Additionally, allows access to the National Hockey League's\n    stats API <https://www.nhl.com/>.  "
+  },
+  {
+    "id": 12273,
+    "package_name": "fauxpas",
+    "title": "HTTP Error Helpers",
+    "description": "HTTP error helpers. Methods included for general purpose HTTP \n    error handling, as well as individual methods for every HTTP status\n    code, both via status code numbers as well as their descriptive names.\n    Supports ability to adjust behavior to stop, message or warning.\n    Includes ability to use custom whisker template to have any configuration\n    of status code, short description, and verbose message. Currently \n    supports integration with 'crul', 'curl', and 'httr'.",
+    "version": "0.5.2",
+    "maintainer": "Scott Chamberlain <myrmecocystus@gmail.com>",
+    "author": "Scott Chamberlain [aut, cre] (ORCID:\n    <https://orcid.org/0000-0003-1444-9135>)",
+    "url": "https://sckott.github.io/fauxpas/,\nhttps://github.com/sckott/fauxpas",
+    "bug_reports": "https://github.com/sckott/fauxpas/issues",
+    "repository": "https://cran.r-project.org/package=fauxpas",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "fauxpas HTTP Error Helpers HTTP error helpers. Methods included for general purpose HTTP \n    error handling, as well as individual methods for every HTTP status\n    code, both via status code numbers as well as their descriptive names.\n    Supports ability to adjust behavior to stop, message or warning.\n    Includes ability to use custom whisker template to have any configuration\n    of status code, short description, and verbose message. Currently \n    supports integration with 'crul', 'curl', and 'httr'.  "
+  },
+  {
+    "id": 12449,
+    "package_name": "fitbitScraper",
+    "title": "Scrapes Data from Fitbit",
+    "description": "Scrapes data from Fitbit <http://www.fitbit.com>. This does not use the official\n    API, but instead uses the API that the web dashboard uses to generate the graphs\n    displayed on the dashboard after login at <http://www.fitbit.com>.",
+    "version": "0.1.8",
+    "maintainer": "Cory Nissen <corynissen@gmail.com>",
+    "author": "Cory Nissen <corynissen@gmail.com> [aut, cre]",
+    "url": "https://github.com/corynissen/fitbitScraper",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=fitbitScraper",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "fitbitScraper Scrapes Data from Fitbit Scrapes data from Fitbit <http://www.fitbit.com>. This does not use the official\n    API, but instead uses the API that the web dashboard uses to generate the graphs\n    displayed on the dashboard after login at <http://www.fitbit.com>.  "
+  },
+  {
+    "id": 12460,
+    "package_name": "fitzRoy",
+    "title": "Easily Scrape and Process AFL Data",
+    "description": "An easy package for scraping and processing Australia Rules Football (AFL)\n    data. 'fitzRoy' provides a range of functions for accessing publicly available data \n    from 'AFL Tables' <https://afltables.com/afl/afl_index.html>, 'Footy Wire' <https://www.footywire.com> and\n    'The Squiggle' <https://squiggle.com.au>. Further functions allow for easy processing, \n    cleaning and transformation of this data into formats that can be used for analysis. ",
+    "version": "1.6.0",
+    "maintainer": "James Day <jamesthomasday@gmail.com>",
+    "author": "James Day [cre, aut],\n  Robert Nguyen [aut],\n  Matthew Erbs [ctb],\n  Oscar Lane [aut],\n  Jason Zivkovic [ctb],\n  Jacob Holden [ctb]",
+    "url": "https://jimmyday12.github.io/fitzRoy/,\nhttps://github.com/jimmyday12/fitzRoy,\nhttps://github.com/jimmyday12/fitzroy",
+    "bug_reports": "https://github.com/jimmyday12/fitzRoy/issues",
+    "repository": "https://cran.r-project.org/package=fitzRoy",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "fitzRoy Easily Scrape and Process AFL Data An easy package for scraping and processing Australia Rules Football (AFL)\n    data. 'fitzRoy' provides a range of functions for accessing publicly available data \n    from 'AFL Tables' <https://afltables.com/afl/afl_index.html>, 'Footy Wire' <https://www.footywire.com> and\n    'The Squiggle' <https://squiggle.com.au>. Further functions allow for easy processing, \n    cleaning and transformation of this data into formats that can be used for analysis.   "
+  },
+  {
+    "id": 12598,
+    "package_name": "forestGYM",
+    "title": "Forest Growth and Yield Model Based on Clutter Model",
+    "description": "The Clutter model is a significant forest growth simulation tool. Grounded on individual trees and comprehensively considering factors such as competition among trees and the impact of environmental elements on growth, it can accurately reflect the growth process of forest stands. It can be applied in areas like forest resource management, harvesting planning, and ecological research. With the help of the Clutter model, people can better understand the dynamic changes of forests and provide a scientific basis for rational forest management and protecting the ecological environment. This R package can effectively realize the construction of forest growth and harvest models based on the Clutter model and achieve optimized forest management.References: Farias A, Soares C, Leite H et al(2021)<doi:10.1007/s10342-021-01380-1>. Guera O, Silva J, Ferreira R, et al(2019)<doi:10.1590/2179-8087.038117>.",
+    "version": "1.0.0",
+    "maintainer": "Zongzheng Chai <chaizz@126.com>",
+    "author": "Zongzheng Chai [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-0530-0040>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=forestGYM",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "forestGYM Forest Growth and Yield Model Based on Clutter Model The Clutter model is a significant forest growth simulation tool. Grounded on individual trees and comprehensively considering factors such as competition among trees and the impact of environmental elements on growth, it can accurately reflect the growth process of forest stands. It can be applied in areas like forest resource management, harvesting planning, and ecological research. With the help of the Clutter model, people can better understand the dynamic changes of forests and provide a scientific basis for rational forest management and protecting the ecological environment. This R package can effectively realize the construction of forest growth and harvest models based on the Clutter model and achieve optimized forest management.References: Farias A, Soares C, Leite H et al(2021)<doi:10.1007/s10342-021-01380-1>. Guera O, Silva J, Ferreira R, et al(2019)<doi:10.1590/2179-8087.038117>.  "
+  },
+  {
+    "id": 12935,
+    "package_name": "gcite",
+    "title": "Google Citation Parser",
+    "description": "Scrapes Google Citation pages and creates data frames of \n    citations over time.",
+    "version": "0.11.0",
+    "maintainer": "John Muschelli <muschellij2@gmail.com>",
+    "author": "John Muschelli [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-6469-1750>)",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=gcite",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "gcite Google Citation Parser Scrapes Google Citation pages and creates data frames of \n    citations over time.  "
+  },
+  {
+    "id": 13211,
+    "package_name": "ggfootball",
+    "title": "Plotting Football Matches Expected Goals (xG) Stats with\n'Understat' Data",
+    "description": "Scrapes football match shots data from 'Understat' <https://understat.com/> and visualizes it using interactive plots:\n    - A detailed shot map displaying the location, type, and xG value of shots taken by both teams.\n    - An xG timeline chart showing the cumulative xG for each team over time, annotated with the details of scored goals.",
+    "version": "0.2.1",
+    "maintainer": "Aymen Nasri <aymennasrii@proton.me>",
+    "author": "Aymen Nasri [aut, cre, cph]",
+    "url": "http://aymennasri.me/ggfootball/",
+    "bug_reports": "https://github.com/aymennasri/ggfootball/issues",
+    "repository": "https://cran.r-project.org/package=ggfootball",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ggfootball Plotting Football Matches Expected Goals (xG) Stats with\n'Understat' Data Scrapes football match shots data from 'Understat' <https://understat.com/> and visualizes it using interactive plots:\n    - A detailed shot map displaying the location, type, and xG value of shots taken by both teams.\n    - An xG timeline chart showing the cumulative xG for each team over time, annotated with the details of scored goals.  "
+  },
+  {
+    "id": 14035,
+    "package_name": "hoopR",
+    "title": "Access Men's Basketball Play by Play Data",
+    "description": "A utility to quickly obtain clean and tidy men's\n    basketball play by play data. Provides functions to access\n    live play by play and box score data from ESPN<https://www.espn.com> with shot locations\n    when available. It is also a full NBA Stats API<https://www.nba.com/stats/> wrapper.\n    It is also a scraping and aggregating interface for Ken Pomeroy's \n    men's college basketball statistics website<https://kenpom.com>. It provides users with an\n    active subscription the capability to scrape the website tables and\n    analyze the data for themselves.",
+    "version": "2.1.0",
+    "maintainer": "Saiem Gilani <saiem.gilani@gmail.com>",
+    "author": "Saiem Gilani [aut, cre],\n  Jason Lee [ctb],\n  Billy Fryer [ctb],\n  Ross Drucker [ctb],\n  Vladislav Shufinskiy [ctb]",
+    "url": "https://github.com/sportsdataverse/hoopR,\nhttp://hoopr.sportsdataverse.org/",
+    "bug_reports": "https://github.com/sportsdataverse/hoopR/issues",
+    "repository": "https://cran.r-project.org/package=hoopR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "hoopR Access Men's Basketball Play by Play Data A utility to quickly obtain clean and tidy men's\n    basketball play by play data. Provides functions to access\n    live play by play and box score data from ESPN<https://www.espn.com> with shot locations\n    when available. It is also a full NBA Stats API<https://www.nba.com/stats/> wrapper.\n    It is also a scraping and aggregating interface for Ken Pomeroy's \n    men's college basketball statistics website<https://kenpom.com>. It provides users with an\n    active subscription the capability to scrape the website tables and\n    analyze the data for themselves.  "
+  },
+  {
+    "id": 14089,
+    "package_name": "httpcache",
+    "title": "Query Cache for HTTP Clients",
+    "description": "In order to improve performance for HTTP API clients, 'httpcache'\n    provides simple tools for caching and invalidating cache. It includes the\n    HTTP verb functions GET, PUT, PATCH, POST, and DELETE, which are drop-in\n    replacements for those in the 'httr' package. These functions are cache-aware\n    and provide default settings for cache invalidation suitable for RESTful\n    APIs; the package also enables custom cache-management strategies.\n    Finally, 'httpcache' includes a basic logging framework to facilitate the\n    measurement of HTTP request time and cache performance.",
+    "version": "1.2.0",
+    "maintainer": "Neal Richardson <neal.p.richardson@gmail.com>",
+    "author": "Neal Richardson [aut, cre]",
+    "url": "https://enpiar.com/r/httpcache/,\nhttps://github.com/nealrichardson/httpcache/",
+    "bug_reports": "https://github.com/nealrichardson/httpcache/issues",
+    "repository": "https://cran.r-project.org/package=httpcache",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "httpcache Query Cache for HTTP Clients In order to improve performance for HTTP API clients, 'httpcache'\n    provides simple tools for caching and invalidating cache. It includes the\n    HTTP verb functions GET, PUT, PATCH, POST, and DELETE, which are drop-in\n    replacements for those in the 'httr' package. These functions are cache-aware\n    and provide default settings for cache invalidation suitable for RESTful\n    APIs; the package also enables custom cache-management strategies.\n    Finally, 'httpcache' includes a basic logging framework to facilitate the\n    measurement of HTTP request time and cache performance.  "
+  },
+  {
+    "id": 14091,
+    "package_name": "httping",
+    "title": "'Ping' 'URLs' to Time 'Requests'",
+    "description": "A suite of functions to ping 'URLs' and to time\n    'HTTP' 'requests'. Designed to work with 'httr'.",
+    "version": "0.2.0",
+    "maintainer": "Scott Chamberlain <myrmecocystus@gmail.com>",
+    "author": "Scott Chamberlain [aut, cre]",
+    "url": "https://github.com/sckott/httping",
+    "bug_reports": "https://github.com/sckott/httping/issues",
+    "repository": "https://cran.r-project.org/package=httping",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "httping 'Ping' 'URLs' to Time 'Requests' A suite of functions to ping 'URLs' and to time\n    'HTTP' 'requests'. Designed to work with 'httr'.  "
+  },
+  {
+    "id": 14094,
+    "package_name": "httptest2",
+    "title": "Test Helpers for 'httr2'",
+    "description": "Testing and documenting code that communicates with remote servers\n    can be painful. This package helps with writing tests for packages that\n    use 'httr2'. It enables testing all of the logic\n    on the R sides of the API without requiring access to the\n    remote service, and it also allows recording real API responses to use as\n    test fixtures. The ability to save responses and load them offline also\n    enables writing vignettes and other dynamic documents that can be\n    distributed without access to a live server.",
+    "version": "1.2.2",
+    "maintainer": "Neal Richardson <neal.p.richardson@gmail.com>",
+    "author": "Neal Richardson [aut, cre] (ORCID:\n    <https://orcid.org/0009-0002-7992-3520>),\n  Jonathan Keane [ctb],\n  Ma\u00eblle Salmon [ctb] (ORCID: <https://orcid.org/0000-0002-2815-0399>)",
+    "url": "https://enpiar.com/httptest2/,\nhttps://github.com/nealrichardson/httptest2",
+    "bug_reports": "https://github.com/nealrichardson/httptest2/issues",
+    "repository": "https://cran.r-project.org/package=httptest2",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "httptest2 Test Helpers for 'httr2' Testing and documenting code that communicates with remote servers\n    can be painful. This package helps with writing tests for packages that\n    use 'httr2'. It enables testing all of the logic\n    on the R sides of the API without requiring access to the\n    remote service, and it also allows recording real API responses to use as\n    test fixtures. The ability to save responses and load them offline also\n    enables writing vignettes and other dynamic documents that can be\n    distributed without access to a live server.  "
+  },
+  {
+    "id": 14317,
+    "package_name": "ihpdr",
+    "title": "Download Data from the International House Price Database",
+    "description": "Web scraping the <https://www.dallasfed.org> for\n    up-to-date data on international house prices and exuberance\n    indicators. Download data in tidy format.",
+    "version": "1.2.1",
+    "maintainer": "Kostas Vasilopoulos <k.vasilopoulo@gmail.com>",
+    "author": "Kostas Vasilopoulos [aut, cre]",
+    "url": "https://github.com/kvasilopoulos/ihpdr",
+    "bug_reports": "https://github.com/kvasilopoulos/ihpdr/issues",
+    "repository": "https://cran.r-project.org/package=ihpdr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ihpdr Download Data from the International House Price Database Web scraping the <https://www.dallasfed.org> for\n    up-to-date data on international house prices and exuberance\n    indicators. Download data in tidy format.  "
+  },
+  {
+    "id": 14969,
+    "package_name": "kvkapiR",
+    "title": "Interface to the Dutch Chamber of Commerce (KvK) API",
+    "description": "Access business registration data from the Dutch Chamber of\n    Commerce (Kamer van Koophandel, KvK) through their official API\n    <https://developers.kvk.nl/>. Search for companies by name, location,\n    or registration number. Retrieve detailed business profiles,\n    establishment information, and company name histories. Built on\n    'httr2' for robust API interaction with automatic pagination, error\n    handling, and usage tracking.",
+    "version": "0.1.2",
+    "maintainer": "Coen Eisma <coeneisma@gmail.com>",
+    "author": "Coen Eisma [aut, cre, cph] (ORCID:\n    <https://orcid.org/0009-0007-9001-2572>)",
+    "url": "https://coeneisma.github.io/kvkapiR/,\nhttps://github.com/coeneisma/kvkapiR/",
+    "bug_reports": "https://github.com/coeneisma/kvkapiR/issues",
+    "repository": "https://cran.r-project.org/package=kvkapiR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "kvkapiR Interface to the Dutch Chamber of Commerce (KvK) API Access business registration data from the Dutch Chamber of\n    Commerce (Kamer van Koophandel, KvK) through their official API\n    <https://developers.kvk.nl/>. Search for companies by name, location,\n    or registration number. Retrieve detailed business profiles,\n    establishment information, and company name histories. Built on\n    'httr2' for robust API interaction with automatic pagination, error\n    handling, and usage tracking.  "
+  },
+  {
+    "id": 15148,
+    "package_name": "letsHerp",
+    "title": "An Interface to the Reptile Database",
+    "description": "Provides tools to retrieve and summarize taxonomic information and synonymy data for reptile species using data scraped from The Reptile Database website (<https://reptile-database.reptarium.cz/>). Outputs include clean and structured data frames useful for ecological, evolutionary, and conservation research.",
+    "version": "0.1.0",
+    "maintainer": "Jo\u00e3o Paulo dos Santos Vieira-Alencar <joaopaulo.valencar@gmail.com>",
+    "author": "Jo\u00e3o Paulo dos Santos Vieira-Alencar [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-6894-6773>),\n  Christoph Liedtke [aut] (ORCID:\n    <https://orcid.org/0000-0002-6221-8043>)",
+    "url": "https://github.com/joao-svalencar/letsHerp",
+    "bug_reports": "https://github.com/joao-svalencar/letsHerp/issues",
+    "repository": "https://cran.r-project.org/package=letsHerp",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "letsHerp An Interface to the Reptile Database Provides tools to retrieve and summarize taxonomic information and synonymy data for reptile species using data scraped from The Reptile Database website (<https://reptile-database.reptarium.cz/>). Outputs include clean and structured data frames useful for ecological, evolutionary, and conservation research.  "
+  },
+  {
+    "id": 15149,
+    "package_name": "letsRept",
+    "title": "An Interface to the Reptile Database",
+    "description": "Provides tools to retrieve and summarize taxonomic information and synonymy data for reptile species using data scraped from The Reptile Database website (<https://reptile-database.reptarium.cz/>). Outputs include clean and structured data frames useful for ecological, evolutionary, and conservation research.",
+    "version": "1.1.0",
+    "maintainer": "Jo\u00e3o Paulo dos Santos Vieira-Alencar <joaopaulo.valencar@gmail.com>",
+    "author": "Jo\u00e3o Paulo dos Santos Vieira-Alencar [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-6894-6773>),\n  Christoph Liedtke [aut] (ORCID:\n    <https://orcid.org/0000-0002-6221-8043>)",
+    "url": "https://joao-svalencar.github.io/letsRept/",
+    "bug_reports": "https://github.com/joao-svalencar/letsRept/issues",
+    "repository": "https://cran.r-project.org/package=letsRept",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "letsRept An Interface to the Reptile Database Provides tools to retrieve and summarize taxonomic information and synonymy data for reptile species using data scraped from The Reptile Database website (<https://reptile-database.reptarium.cz/>). Outputs include clean and structured data frames useful for ecological, evolutionary, and conservation research.  "
+  },
+  {
+    "id": 15902,
+    "package_name": "metagear",
+    "title": "Comprehensive Research Synthesis Tools for Systematic Reviews\nand Meta-Analysis",
+    "description": "Functionalities for facilitating systematic reviews, data\n    extractions, and meta-analyses. It includes a GUI (graphical user interface)\n    to help screen the abstracts and titles of bibliographic data; tools to assign\n    screening effort across multiple collaborators/reviewers and to assess inter-\n    reviewer reliability; tools to help automate the download and retrieval of\n    journal PDF articles from online databases; figure and image extractions \n    from PDFs; web scraping of citations; automated and manual data extraction \n    from scatter-plot and bar-plot images; PRISMA (Preferred Reporting Items for\n    Systematic Reviews and Meta-Analyses) flow diagrams; simple imputation tools\n    to fill gaps in incomplete or missing study parameters; generation of random\n    effects sizes for Hedges' d, log response ratio, odds ratio, and correlation\n    coefficients for Monte Carlo experiments; covariance equations for modelling\n    dependencies among multiple effect sizes (e.g., effect sizes with a common\n    control); and finally summaries that replicate analyses and outputs from \n    widely used but no longer updated meta-analysis software (i.e., metawin).\n\tFunding for this package was supported by National Science Foundation (NSF) \n\tgrants DBI-1262545 and DEB-1451031. CITE: Lajeunesse, M.J. (2016) \n\tFacilitating systematic reviews, data extraction and meta-analysis with the \n\tmetagear package for R. Methods in Ecology and Evolution 7, 323-330 \n\t<doi:10.1111/2041-210X.12472>.",
+    "version": "0.7",
+    "maintainer": "Marc J. Lajeunesse <lajeunesse@usf.edu>",
+    "author": "Marc J. Lajeunesse [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-9678-2080>)",
+    "url": "http://lajeunesse.myweb.usf.edu/ https://github.com/mjlajeunesse/\nhttps://www.youtube.com/c/LajeunesseLab/",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=metagear",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "metagear Comprehensive Research Synthesis Tools for Systematic Reviews\nand Meta-Analysis Functionalities for facilitating systematic reviews, data\n    extractions, and meta-analyses. It includes a GUI (graphical user interface)\n    to help screen the abstracts and titles of bibliographic data; tools to assign\n    screening effort across multiple collaborators/reviewers and to assess inter-\n    reviewer reliability; tools to help automate the download and retrieval of\n    journal PDF articles from online databases; figure and image extractions \n    from PDFs; web scraping of citations; automated and manual data extraction \n    from scatter-plot and bar-plot images; PRISMA (Preferred Reporting Items for\n    Systematic Reviews and Meta-Analyses) flow diagrams; simple imputation tools\n    to fill gaps in incomplete or missing study parameters; generation of random\n    effects sizes for Hedges' d, log response ratio, odds ratio, and correlation\n    coefficients for Monte Carlo experiments; covariance equations for modelling\n    dependencies among multiple effect sizes (e.g., effect sizes with a common\n    control); and finally summaries that replicate analyses and outputs from \n    widely used but no longer updated meta-analysis software (i.e., metawin).\n\tFunding for this package was supported by National Science Foundation (NSF) \n\tgrants DBI-1262545 and DEB-1451031. CITE: Lajeunesse, M.J. (2016) \n\tFacilitating systematic reviews, data extraction and meta-analysis with the \n\tmetagear package for R. Methods in Ecology and Evolution 7, 323-330 \n\t<doi:10.1111/2041-210X.12472>.  "
+  },
+  {
+    "id": 16063,
+    "package_name": "min2HalfFFD",
+    "title": "Minimally Changed Two-Level Half-Fractional Factorial Designs",
+    "description": "In many agricultural, engineering, industrial, post-harvest and processing experiments, the number of factor level changes and hence the total number of changes is of serious concern as such experiments may consists of hard-to-change factors where it is physically very difficult to change levels of some factors or sometime such experiments may require normalization time to obtain adequate operating condition. For this reason, run orders that offer the minimum  number of factor level changes and at the same time minimize the possible influence of systematic trend effects on the experimentation have been sought. Factorial designs with minimum changes in factors level may be preferred for such situations as these minimally changed run orders will minimize the cost of the experiments. This technique can be employed to any half replicate of two level factorial run order where the number of factors are greater than two. For method details see, Bhowmik, A., Varghese, E., Jaggi, S. and Varghese, C. (2017) <doi:10.1080/03610926.2016.1152490>. This package generates all possible minimally changed two-level half-fractional factorial designs for different experimental setups along with various statistical criteria to measure the performance of these designs through a user-friendly interface. It consist of the function minimal.2halfFFD() which launches the application interface.",
+    "version": "0.1.0",
+    "maintainer": "Bijoy Chanda <bijoychanda08@gmail.com>",
+    "author": "Bijoy Chanda [aut, cre, ctb],\n  Arpan Bhowmik [aut, ctb],\n  Seema Jaggi [aut],\n  Eldho Varghese [aut, ctb],\n  Cini Varghese [aut],\n  Anindita Datta [aut],\n  Dibyendu Deb [aut]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=min2HalfFFD",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "min2HalfFFD Minimally Changed Two-Level Half-Fractional Factorial Designs In many agricultural, engineering, industrial, post-harvest and processing experiments, the number of factor level changes and hence the total number of changes is of serious concern as such experiments may consists of hard-to-change factors where it is physically very difficult to change levels of some factors or sometime such experiments may require normalization time to obtain adequate operating condition. For this reason, run orders that offer the minimum  number of factor level changes and at the same time minimize the possible influence of systematic trend effects on the experimentation have been sought. Factorial designs with minimum changes in factors level may be preferred for such situations as these minimally changed run orders will minimize the cost of the experiments. This technique can be employed to any half replicate of two level factorial run order where the number of factors are greater than two. For method details see, Bhowmik, A., Varghese, E., Jaggi, S. and Varghese, C. (2017) <doi:10.1080/03610926.2016.1152490>. This package generates all possible minimally changed two-level half-fractional factorial designs for different experimental setups along with various statistical criteria to measure the performance of these designs through a user-friendly interface. It consist of the function minimal.2halfFFD() which launches the application interface.  "
+  },
+  {
+    "id": 16064,
+    "package_name": "minFactorial",
+    "title": "All Possible Minimally Changed Factorial Run Orders",
+    "description": "In many agricultural, engineering, industrial, post-harvest and processing experiments, the number of factor level changes and hence the total number of changes is of serious concern as such experiments may consists of hard-to-change factors where it is physically very difficult to change levels of some factors or sometime such experiments may require normalization time to obtain adequate operating condition. For this reason, run orders that offer the minimum  number of factor level changes and at the same time minimize the possible influence of systematic trend effects on the experimentation have been sought. Factorial designs with minimum changes in factors level may be preferred for such situations as these minimally changed run orders will minimize the cost of the experiments. For method details see, Bhowmik, A.,Varghese, E., Jaggi, S. and Varghese, C. (2017)<doi:10.1080/03610926.2016.1152490>.This package used to construct all possible minimally changed factorial run orders for different experimental set ups along with different statistical criteria to measure the performance of these designs. It consist of the function minFactDesign().",
+    "version": "0.1.0",
+    "maintainer": "Bijoy Chanda <bijoychanda08@gmail.com>",
+    "author": "Arpan Bhowmik [aut, ctb],\n  Bijoy Chanda [aut, cre, ctb],\n  Seema Jaggi [aut],\n  Eldho Varghese [aut, ctb],\n  Cini Varghese [aut],\n  Anindita Datta [aut]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=minFactorial",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "minFactorial All Possible Minimally Changed Factorial Run Orders In many agricultural, engineering, industrial, post-harvest and processing experiments, the number of factor level changes and hence the total number of changes is of serious concern as such experiments may consists of hard-to-change factors where it is physically very difficult to change levels of some factors or sometime such experiments may require normalization time to obtain adequate operating condition. For this reason, run orders that offer the minimum  number of factor level changes and at the same time minimize the possible influence of systematic trend effects on the experimentation have been sought. Factorial designs with minimum changes in factors level may be preferred for such situations as these minimally changed run orders will minimize the cost of the experiments. For method details see, Bhowmik, A.,Varghese, E., Jaggi, S. and Varghese, C. (2017)<doi:10.1080/03610926.2016.1152490>.This package used to construct all possible minimally changed factorial run orders for different experimental set ups along with different statistical criteria to measure the performance of these designs. It consist of the function minFactDesign().  "
+  },
+  {
+    "id": 16110,
+    "package_name": "miscFuncs",
+    "title": "Miscellaneous Useful Functions Including LaTeX Tables, Kalman\nFiltering, QQplots with Simulation-Based Confidence Intervals,\nLinear Regression Diagnostics and Development Tools",
+    "description": "Implementing various things including functions for LaTeX tables,\n    the Kalman filter, QQ-plots with simulation-based confidence intervals, linear regression diagnostics, web scraping, development tools, relative risk and odds\n    rati, GARCH(1,1) Forecasting.",
+    "version": "1.5-10",
+    "maintainer": "Benjamin M. Taylor <benjamin.taylor.software@gmail.com>",
+    "author": "Benjamin M. Taylor [aut, cre]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=miscFuncs",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "miscFuncs Miscellaneous Useful Functions Including LaTeX Tables, Kalman\nFiltering, QQplots with Simulation-Based Confidence Intervals,\nLinear Regression Diagnostics and Development Tools Implementing various things including functions for LaTeX tables,\n    the Kalman filter, QQ-plots with simulation-based confidence intervals, linear regression diagnostics, web scraping, development tools, relative risk and odds\n    rati, GARCH(1,1) Forecasting.  "
+  },
+  {
+    "id": 17028,
+    "package_name": "nonmemica",
+    "title": "Create and Evaluate NONMEM Models in a Project Context",
+    "description": "Systematically creates and modifies NONMEM(R) control streams. Harvests\n NONMEM output, builds run logs, creates derivative data, generates diagnostics.\n NONMEM (ICON Development Solutions <https://www.iconplc.com/>) is software for \n nonlinear mixed effects modeling. See 'package?nonmemica'. ",
+    "version": "1.0.11",
+    "maintainer": "Tim Bergsma <bergsmat@gmail.com>",
+    "author": "Tim Bergsma [aut, cre]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=nonmemica",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "nonmemica Create and Evaluate NONMEM Models in a Project Context Systematically creates and modifies NONMEM(R) control streams. Harvests\n NONMEM output, builds run logs, creates derivative data, generates diagnostics.\n NONMEM (ICON Development Solutions <https://www.iconplc.com/>) is software for \n nonlinear mixed effects modeling. See 'package?nonmemica'.   "
+  },
+  {
+    "id": 17114,
+    "package_name": "nrlR",
+    "title": "Functions to Scrape Rugby Data",
+    "description": "Provides a set of functions to scrape and analyze rugby data. \n    Supports competitions including the National Rugby League, New South Wales Cup, \n    Queensland Cup, Super League, and various representative and women's competitions. \n    Includes functions to fetch player statistics, match results, ladders, venues, and coaching data. \n    Designed to assist analysts, fans, and researchers in exploring historical and current rugby league data. \n    See Woods et al. (2017) <doi:10.1123/ijspp.2016-0187> for an example of rugby league performance analysis methodology.",
+    "version": "0.1.2",
+    "maintainer": "Daniel Tomaro <danieltomaro@icloud.com>",
+    "author": "Daniel Tomaro [aut, cre]",
+    "url": "https://github.com/DanielTomaro13/nrlR",
+    "bug_reports": "https://github.com/DanielTomaro13/nrlR/issues",
+    "repository": "https://cran.r-project.org/package=nrlR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "nrlR Functions to Scrape Rugby Data Provides a set of functions to scrape and analyze rugby data. \n    Supports competitions including the National Rugby League, New South Wales Cup, \n    Queensland Cup, Super League, and various representative and women's competitions. \n    Includes functions to fetch player statistics, match results, ladders, venues, and coaching data. \n    Designed to assist analysts, fans, and researchers in exploring historical and current rugby league data. \n    See Woods et al. (2017) <doi:10.1123/ijspp.2016-0187> for an example of rugby league performance analysis methodology.  "
+  },
+  {
+    "id": 17226,
+    "package_name": "ojsr",
+    "title": "Crawler and Data Scraper for Open Journal System ('OJS')",
+    "description": "Crawler for 'OJS' pages and scraper for meta-data from articles. \n    You can crawl 'OJS' archives, issues, articles, galleys, and search results. \n    You can scrape articles metadata from their head tag in html, \n    or from Open Archives Initiative ('OAI') records.\n    Most of these functions rely on 'OJS' routing conventions \n    (<https://docs.pkp.sfu.ca/dev/documentation/en/architecture-routes>).",
+    "version": "0.1.5",
+    "maintainer": "Gaston Becerra <gaston.becerra@gmail.com>",
+    "author": "Gaston Becerra [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-9432-8848>)",
+    "url": "https://github.com/gastonbecerra/ojsr",
+    "bug_reports": "https://github.com/gastonbecerra/ojsr/issues",
+    "repository": "https://cran.r-project.org/package=ojsr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ojsr Crawler and Data Scraper for Open Journal System ('OJS') Crawler for 'OJS' pages and scraper for meta-data from articles. \n    You can crawl 'OJS' archives, issues, articles, galleys, and search results. \n    You can scrape articles metadata from their head tag in html, \n    or from Open Archives Initiative ('OAI') records.\n    Most of these functions rely on 'OJS' routing conventions \n    (<https://docs.pkp.sfu.ca/dev/documentation/en/architecture-routes>).  "
+  },
+  {
+    "id": 17290,
+    "package_name": "openFDA",
+    "title": "'openFDA' API",
+    "description": "The 'openFDA' API facilitates access to Federal Drug Agency (FDA)\n  data on drugs, devices, foodstuffs, tobacco, and more with 'httr2'. This\n  package makes the API easily accessible, returning objects which the user can\n  convert to JSON data and parse. Kass-Hout TA, Xu Z, Mohebbi M et al. (2016)\n  <doi:10.1093/jamia/ocv153>.",
+    "version": "0.1.0",
+    "maintainer": "Simon Parker <simon.parker.24@ucl.ac.uk>",
+    "author": "Simon Parker [aut, cre, cph] (ORCID:\n    <https://orcid.org/0009-0003-8214-4496>)",
+    "url": "https://github.com/simpar1471/openFDA,\nhttps://simpar1471.github.io/openFDA/",
+    "bug_reports": "https://github.com/simpar1471/openFDA/issues",
+    "repository": "https://cran.r-project.org/package=openFDA",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "openFDA 'openFDA' API The 'openFDA' API facilitates access to Federal Drug Agency (FDA)\n  data on drugs, devices, foodstuffs, tobacco, and more with 'httr2'. This\n  package makes the API easily accessible, returning objects which the user can\n  convert to JSON data and parse. Kass-Hout TA, Xu Z, Mohebbi M et al. (2016)\n  <doi:10.1093/jamia/ocv153>.  "
+  },
+  {
+    "id": 18073,
+    "package_name": "plug",
+    "title": "Secure and Intuitive Access to 'Plug' Interface",
+    "description": "Provides a secure and user-friendly interface to interact with the 'Plug' <https://plugbytpf.com.br> 'API'. It enables developers to store and manage tokens securely using the 'keyring' package, retrieve data from 'API' endpoints with the 'httr2' package, and handle large datasets with chunked data fetching. Designed for simplicity and security, the package facilitates seamless integration with 'Plug' ecosystem.",
+    "version": "0.1.0",
+    "maintainer": "Andre Leite <leite@castlab.org>",
+    "author": "Andre Leite [aut, cre],\n  Felipe Ferreira [aut],\n  Hugo Vaconcelos [aut],\n  Diogo Bezerra [aut],\n  Roger Azevedo [aut]",
+    "url": "<https://github.com/StrategicProjects/plug>",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=plug",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "plug Secure and Intuitive Access to 'Plug' Interface Provides a secure and user-friendly interface to interact with the 'Plug' <https://plugbytpf.com.br> 'API'. It enables developers to store and manage tokens securely using the 'keyring' package, retrieve data from 'API' endpoints with the 'httr2' package, and handle large datasets with chunked data fetching. Designed for simplicity and security, the package facilitates seamless integration with 'Plug' ecosystem.  "
+  },
+  {
+    "id": 18113,
+    "package_name": "poems",
+    "title": "Pattern-Oriented Ensemble Modeling System",
+    "description": "A framework of interoperable R6 classes (Chang, 2020, <https://CRAN.R-project.org/package=R6>) for building ensembles of viable models via the pattern-oriented modeling (POM) approach (Grimm et al.,2005, <doi:10.1126/science.1116681>). The package includes classes for encapsulating and generating model parameters, and managing the POM workflow. The workflow includes: model setup; generating model parameters via Latin hyper-cube sampling (Iman & Conover, 1980, <doi:10.1080/03610928008827996>); running multiple sampled model simulations; collating summary results; and validating and selecting an ensemble of models that best match known patterns. By default, model validation and selection utilizes an approximate Bayesian computation (ABC) approach (Beaumont et al., 2002, <doi:10.1093/genetics/162.4.2025>), although alternative user-defined functionality could be employed. The package includes a spatially explicit demographic population model simulation engine, which incorporates default functionality for density dependence, correlated environmental stochasticity, stage-based transitions, and distance-based dispersal. The user may customize the simulator by defining functionality for translocations, harvesting, mortality, and other processes, as well as defining the sequence order for the simulator processes. The framework could also be adapted for use with other model simulators by utilizing its extendable (inheritable) base classes.",
+    "version": "1.4.0",
+    "maintainer": "July Pilowsky <pilowskyj@caryinstitute.org>",
+    "author": "Sean Haythorne [aut],\n  Damien Fordham [aut],\n  Stuart Brown [aut] (ORCID: <https://orcid.org/0000-0002-0669-1418>),\n  Jessie Buettel [aut],\n  Barry Brook [aut],\n  July Pilowsky [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-6376-2585>)",
+    "url": "https://github.com/GlobalEcologyLab/poems,\nhttps://globalecologylab.github.io/poems/",
+    "bug_reports": "https://github.com/GlobalEcologyLab/poems/issues",
+    "repository": "https://cran.r-project.org/package=poems",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "poems Pattern-Oriented Ensemble Modeling System A framework of interoperable R6 classes (Chang, 2020, <https://CRAN.R-project.org/package=R6>) for building ensembles of viable models via the pattern-oriented modeling (POM) approach (Grimm et al.,2005, <doi:10.1126/science.1116681>). The package includes classes for encapsulating and generating model parameters, and managing the POM workflow. The workflow includes: model setup; generating model parameters via Latin hyper-cube sampling (Iman & Conover, 1980, <doi:10.1080/03610928008827996>); running multiple sampled model simulations; collating summary results; and validating and selecting an ensemble of models that best match known patterns. By default, model validation and selection utilizes an approximate Bayesian computation (ABC) approach (Beaumont et al., 2002, <doi:10.1093/genetics/162.4.2025>), although alternative user-defined functionality could be employed. The package includes a spatially explicit demographic population model simulation engine, which incorporates default functionality for density dependence, correlated environmental stochasticity, stage-based transitions, and distance-based dispersal. The user may customize the simulator by defining functionality for translocations, harvesting, mortality, and other processes, as well as defining the sequence order for the simulator processes. The framework could also be adapted for use with other model simulators by utilizing its extendable (inheritable) base classes.  "
+  },
+  {
+    "id": 18851,
+    "package_name": "rGhanaCensus",
+    "title": "2021 Ghana Population and Housing Census Results as Data Frames",
+    "description": "Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as 'tidyverse' and 'sf'-Ready Data Frames.    The data in this package is scraped from pdf reports released by the Ghana Statistical Service website <https://census2021.statsghana.gov.gh/> . The package currently only contains datasets from the literacy and education reports. Namely, school attendance data for respondents aged 3 years and above.",
+    "version": "0.1.0",
+    "maintainer": "Ama Owusu-Darko <aowusuda@asu.edu>",
+    "author": "Ama Owusu-Darko [cre, aut]",
+    "url": "https://github.com/ktemadarko/rGhanaCensus",
+    "bug_reports": "https://github.com/ktemadarko/rGhanaCensus/issues",
+    "repository": "https://cran.r-project.org/package=rGhanaCensus",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "rGhanaCensus 2021 Ghana Population and Housing Census Results as Data Frames Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as 'tidyverse' and 'sf'-Ready Data Frames.    The data in this package is scraped from pdf reports released by the Ghana Statistical Service website <https://census2021.statsghana.gov.gh/> . The package currently only contains datasets from the literacy and education reports. Namely, school attendance data for respondents aged 3 years and above.  "
+  },
+  {
+    "id": 18942,
+    "package_name": "ralger",
+    "title": "Easy Web Scraping",
+    "description": "The goal of 'ralger' is to facilitate web scraping in R.",
+    "version": "2.3.0",
+    "maintainer": "Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>",
+    "author": "Mohamed El Fodil Ihaddaden [aut, cre],\n  Ezekiel Ogundepo [ctb],\n  Romain Fran\u00e7ois [ctb]",
+    "url": "https://github.com/feddelegrand7/ralger",
+    "bug_reports": "https://github.com/feddelegrand7/ralger/issues",
+    "repository": "https://cran.r-project.org/package=ralger",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ralger Easy Web Scraping The goal of 'ralger' is to facilitate web scraping in R.  "
+  },
+  {
+    "id": 20063,
+    "package_name": "salmonMSE",
+    "title": "Management Strategy Evaluation for Salmon Species",
+    "description": "Simulation tools to evaluate the long-term effects of salmon management strategies, including a combination of habitat, harvest, and\n  habitat actions. The stochastic age-structured operating model accommodates complex life histories, including freshwater survival across \n  early life stages, juvenile survival and fishery exploitation in the marine life stage, partial maturity by age class, and fitness impacts of \n  hatchery programs on natural spawning populations. 'salmonMSE' also provides an age-structured conditioning model to develop operating models \n  fitted to data.",
+    "version": "0.1.0",
+    "maintainer": "Quang Huynh <quang@bluematterscience.com>",
+    "author": "Quang Huynh [aut, cre] (ORCID: <https://orcid.org/0000-0001-7835-4376>)",
+    "url": "https://docs.salmonmse.com/,\nhttps://github.com/Blue-Matter/salmonMSE",
+    "bug_reports": "https://github.com/Blue-Matter/salmonMSE/issues",
+    "repository": "https://cran.r-project.org/package=salmonMSE",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "salmonMSE Management Strategy Evaluation for Salmon Species Simulation tools to evaluate the long-term effects of salmon management strategies, including a combination of habitat, harvest, and\n  habitat actions. The stochastic age-structured operating model accommodates complex life histories, including freshwater survival across \n  early life stages, juvenile survival and fishery exploitation in the marine life stage, partial maturity by age class, and fitness impacts of \n  hatchery programs on natural spawning populations. 'salmonMSE' also provides an age-structured conditioning model to develop operating models \n  fitted to data.  "
+  },
+  {
+    "id": 20251,
+    "package_name": "scraEP",
+    "title": "Scrape the Web with Extra Power",
+    "description": "Tools for scraping information from webpages and other XML contents, using XPath or CSS selectors.",
+    "version": "1.2",
+    "maintainer": "Julien Boelaert <jubo.stats@gmail.com>",
+    "author": "Julien Boelaert <jubo.stats@gmail.com>",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=scraEP",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "scraEP Scrape the Web with Extra Power Tools for scraping information from webpages and other XML contents, using XPath or CSS selectors.  "
+  },
+  {
+    "id": 20252,
+    "package_name": "scrapeR",
+    "title": "These Functions Fetch and Extract Text Content from Specified\nWeb Pages",
+    "description": "The 'scrapeR' package utilizes functions that fetch and extract text content from specified web pages. It handles HTTP errors and parses HTML efficiently. The package can handle hundreds of websites at a time using the scrapeR_in_batches() command.",
+    "version": "0.1.8",
+    "maintainer": "Mathieu Dubeau <mdubeau20@gmail.com>",
+    "author": "Mathieu Dubeau [aut, cre, cph]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=scrapeR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "scrapeR These Functions Fetch and Extract Text Content from Specified\nWeb Pages The 'scrapeR' package utilizes functions that fetch and extract text content from specified web pages. It handles HTTP errors and parses HTML efficiently. The package can handle hundreds of websites at a time using the scrapeR_in_batches() command.  "
+  },
+  {
+    "id": 20253,
+    "package_name": "scrappy",
+    "title": "A Simple Web Scraper",
+    "description": "A group of functions to scrape data from different websites, for \n    academic purposes.",
+    "version": "0.0.1",
+    "maintainer": "Roberto Villegas-Diaz <villegas.roberto@hotmail.com>",
+    "author": "Roberto Villegas-Diaz [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-5036-8661>)",
+    "url": "https://github.com/villegar/scrappy/,\nhttps://villegar.github.io/scrappy/",
+    "bug_reports": "https://github.com/villegar/scrappy/issues/",
+    "repository": "https://cran.r-project.org/package=scrappy",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "scrappy A Simple Web Scraper A group of functions to scrape data from different websites, for \n    academic purposes.  "
+  },
+  {
+    "id": 20356,
+    "package_name": "selenider",
+    "title": "Concise, Lazy and Reliable Wrapper for 'chromote' and 'selenium'",
+    "description": "A user-friendly wrapper for web automation, using either\n    'chromote' or 'selenium'. Provides a simple and consistent API to make\n    web scraping and testing scripts easy to write and understand.\n    Elements are lazy, and automatically wait for the website to be valid,\n    resulting in reliable and reproducible code, with no visible impact on\n    the experience of the programmer.",
+    "version": "0.4.1",
+    "maintainer": "Ashby Thorpe <ashbythorpe@gmail.com>",
+    "author": "Ashby Thorpe [aut, cre, cph] (ORCID:\n    <https://orcid.org/0000-0003-3106-099X>)",
+    "url": "https://github.com/ashbythorpe/selenider,\nhttps://ashbythorpe.github.io/selenider/",
+    "bug_reports": "https://github.com/ashbythorpe/selenider/issues",
+    "repository": "https://cran.r-project.org/package=selenider",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "selenider Concise, Lazy and Reliable Wrapper for 'chromote' and 'selenium' A user-friendly wrapper for web automation, using either\n    'chromote' or 'selenium'. Provides a simple and consistent API to make\n    web scraping and testing scripts easy to write and understand.\n    Elements are lazy, and automatically wait for the website to be valid,\n    resulting in reliable and reproducible code, with no visible impact on\n    the experience of the programmer.  "
+  },
+  {
+    "id": 20620,
+    "package_name": "shinyhttr",
+    "title": "Progress Bars for Downloads in 'shiny' Apps",
+    "description": "Modifies the progress() function from 'httr' package to let it \n      send output to progressBar() function from 'shinyWidgets' package. \n      It is just a tweak at the original functions from 'httr' package to \n      make it smooth for 'shiny' developers.",
+    "version": "1.1.0",
+    "maintainer": "Athos Damiani <athos.damiani@curso-r.com>",
+    "author": "Athos Damiani [aut, cre],\n  Hadley Wickham [aut],\n  RStudio [cph]",
+    "url": "https://github.com/curso-r/shinyhttr",
+    "bug_reports": "https://github.com/curso-r/shinyhttr/issues",
+    "repository": "https://cran.r-project.org/package=shinyhttr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "shinyhttr Progress Bars for Downloads in 'shiny' Apps Modifies the progress() function from 'httr' package to let it \n      send output to progressBar() function from 'shinyWidgets' package. \n      It is just a tweak at the original functions from 'httr' package to \n      make it smooth for 'shiny' developers.  "
+  },
+  {
+    "id": 20790,
+    "package_name": "sinew",
+    "title": "Package Development Documentation and Namespace Management",
+    "description": "Manage package documentation and namespaces from the command line. \n             Programmatically attach namespaces in R and Rmd script, populates \n             'Roxygen2' skeletons with information scraped from within functions and \n             populate the Imports field of the DESCRIPTION file.",
+    "version": "0.4.0",
+    "maintainer": "Jonathan Sidi <yonicd@gmail.com>",
+    "author": "Jonathan Sidi [aut, cre],\n  Anton Grishin [ctb],\n  Lorenzo Busetto [ctb],\n  Alexey Shiklomanov [ctb],\n  Stephen Holsenbeck [ctb]",
+    "url": "https://github.com/yonicd/sinew",
+    "bug_reports": "https://github.com/yonicd/sinew/issues",
+    "repository": "https://cran.r-project.org/package=sinew",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "sinew Package Development Documentation and Namespace Management Manage package documentation and namespaces from the command line. \n             Programmatically attach namespaces in R and Rmd script, populates \n             'Roxygen2' skeletons with information scraped from within functions and \n             populate the Imports field of the DESCRIPTION file.  "
+  },
+  {
+    "id": 21691,
+    "package_name": "susographql",
+    "title": "Comprehensive Interface to the Survey Solutions 'GraphQL' API",
+    "description": "Provides a complete suite of tools for interacting\n    with the Survey Solutions 'GraphQL' API\n    <https://demo.mysurvey.solutions/graphql/>. This package encompasses\n    all currently available queries and mutations, including the latest\n    features for map uploads. It is built on the modern 'httr2' package,\n    offering a streamlined and efficient interface without relying on\n    external 'GraphQL' client packages. In addition to core API\n    functionalities, the package includes a range of helper functions\n    designed to facilitate the use of available query filters.",
+    "version": "0.1.6",
+    "maintainer": "Michael Wild <mwild@worldbank.org>",
+    "author": "Michael Wild [cre, aut, cph]",
+    "url": "https://michael-cw.github.io/susographql/",
+    "bug_reports": "https://github.com/michael-cw/susographql/issues",
+    "repository": "https://cran.r-project.org/package=susographql",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "susographql Comprehensive Interface to the Survey Solutions 'GraphQL' API Provides a complete suite of tools for interacting\n    with the Survey Solutions 'GraphQL' API\n    <https://demo.mysurvey.solutions/graphql/>. This package encompasses\n    all currently available queries and mutations, including the latest\n    features for map uploads. It is built on the modern 'httr2' package,\n    offering a streamlined and efficient interface without relying on\n    external 'GraphQL' client packages. In addition to core API\n    functionalities, the package includes a range of helper functions\n    designed to facilitate the use of available query filters.  "
+  },
+  {
+    "id": 21853,
+    "package_name": "tastyR",
+    "title": "Recipe Data from 'Allrecipes.com'",
+    "description": "A collection of recipe datasets scraped from <https://www.allrecipes.com/>, containing two complementary datasets: 'allrecipes' with 14,426 general recipes, and 'cuisines' with 2,218 recipes categorized by country of origin. Both datasets include comprehensive recipe information such as ingredients, nutritional facts (calories, fat, carbs, protein), cooking times (preparation and cooking), ratings, and review metadata. All data has been cleaned and standardized, ready for analysis.",
+    "version": "0.1.0",
+    "maintainer": "Brian Mubia <mubia65@gmail.com>",
+    "author": "Brian Mubia [aut, cre]",
+    "url": "",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=tastyR",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "tastyR Recipe Data from 'Allrecipes.com' A collection of recipe datasets scraped from <https://www.allrecipes.com/>, containing two complementary datasets: 'allrecipes' with 14,426 general recipes, and 'cuisines' with 2,218 recipes categorized by country of origin. Both datasets include comprehensive recipe information such as ingredients, nutritional facts (calories, fat, carbs, protein), cooking times (preparation and cooking), ratings, and review metadata. All data has been cleaned and standardized, ready for analysis.  "
+  },
+  {
+    "id": 21863,
+    "package_name": "taxotools",
+    "title": "Taxonomic List Processing",
+    "description": "Taxonomic lists matching and merging, casting and melting \n  scientific names, managing taxonomic lists from  Global Biodiversity \n  Information Facility 'GBIF' <https://www.gbif.org/> or Integrated Taxonomic \n  Information System 'ITIS', <https://itis.gov/> harvesting names from \n  Wikipedia and fuzzy matching.",
+    "version": "0.0.148",
+    "maintainer": "Vijay Barve <vijay.barve@gmail.com>",
+    "author": "Vijay Barve [aut, cre] (ORCID: <https://orcid.org/0000-0002-4852-2567>)",
+    "url": "",
+    "bug_reports": "https://github.com/vijaybarve/taxotools/issues",
+    "repository": "https://cran.r-project.org/package=taxotools",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "taxotools Taxonomic List Processing Taxonomic lists matching and merging, casting and melting \n  scientific names, managing taxonomic lists from  Global Biodiversity \n  Information Facility 'GBIF' <https://www.gbif.org/> or Integrated Taxonomic \n  Information System 'ITIS', <https://itis.gov/> harvesting names from \n  Wikipedia and fuzzy matching.  "
+  },
+  {
+    "id": 21878,
+    "package_name": "tcplfit2",
+    "title": "A Concentration-Response Modeling Utility",
+    "description": "The tcplfit2 R package performs basic concentration-response curve fitting. The original tcplFit() function in the tcpl R package performed basic concentration-response curvefitting to 3 models. With tcplfit2, the core tcpl concentration-response functionality has been expanded to process diverse high-throughput screen (HTS) data generated at the US Environmental Protection Agency, including targeted ToxCast, high-throughput transcriptomics (HTTr) and high-throughput phenotypic profiling (HTPP). tcplfit2 can be used independently to support analysis for diverse chemical screening efforts.",
+    "version": "0.1.9",
+    "maintainer": "Madison Feshuk <feshuk.madison@epa.gov>",
+    "author": "Thomas Sheffield [aut],\n  Jason Brown [ctb] (ORCID: <https://orcid.org/0009-0000-2294-641X>),\n  Sarah E. Davidson-Fritz [ctb] (ORCID:\n    <https://orcid.org/0000-0002-2891-9380>),\n  Madison Feshuk [ctb, cre] (ORCID:\n    <https://orcid.org/0000-0002-1390-6405>),\n  Lindsay Knupp [ctb],\n  Zhihui Zhao [ctb],\n  Richard S Judson [ctb] (ORCID: <https://orcid.org/0000-0002-2348-9633>),\n  Katie Paul Friedman [ctb] (ORCID:\n    <https://orcid.org/0000-0002-2710-1691>)",
+    "url": "https://github.com/USEPA/CompTox-ToxCast-tcplFit2",
+    "bug_reports": "https://github.com/USEPA/CompTox-ToxCast-tcplFit2/issues",
+    "repository": "https://cran.r-project.org/package=tcplfit2",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "tcplfit2 A Concentration-Response Modeling Utility The tcplfit2 R package performs basic concentration-response curve fitting. The original tcplFit() function in the tcpl R package performed basic concentration-response curvefitting to 3 models. With tcplfit2, the core tcpl concentration-response functionality has been expanded to process diverse high-throughput screen (HTS) data generated at the US Environmental Protection Agency, including targeted ToxCast, high-throughput transcriptomics (HTTr) and high-throughput phenotypic profiling (HTPP). tcplfit2 can be used independently to support analysis for diverse chemical screening efforts.  "
+  },
+  {
+    "id": 21992,
+    "package_name": "textpress",
+    "title": "A Lightweight and Versatile NLP Toolkit",
+    "description": "A simple Natural Language Processing (NLP) toolkit focused on search-centric workflows with minimal dependencies. The package offers key features for web scraping, text processing, corpus search, and text embedding generation via the 'HuggingFace API' <https://huggingface.co/docs/api-inference/index>.",
+    "version": "1.0.0",
+    "maintainer": "Jason Timm <JaTimm@salud.unm.edu>",
+    "author": "Jason Timm [aut, cre]",
+    "url": "https://github.com/jaytimm/textpress,\nhttps://jaytimm.github.io/textpress/",
+    "bug_reports": "https://github.com/jaytimm/textpress/issues",
+    "repository": "https://cran.r-project.org/package=textpress",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "textpress A Lightweight and Versatile NLP Toolkit A simple Natural Language Processing (NLP) toolkit focused on search-centric workflows with minimal dependencies. The package offers key features for web scraping, text processing, corpus search, and text embedding generation via the 'HuggingFace API' <https://huggingface.co/docs/api-inference/index>.  "
+  },
+  {
+    "id": 22509,
+    "package_name": "tuber",
+    "title": "Client for the YouTube API",
+    "description": "Get comments posted on YouTube videos, information on how\n    many times a video has been liked, search for videos with particular\n    content, and much more. You can also scrape captions from a few\n    videos. To learn more about the YouTube API, see\n    <https://developers.google.com/youtube/v3/>.",
+    "version": "1.1.0",
+    "maintainer": "Gaurav Sood <gsood07@gmail.com>",
+    "author": "Gaurav Sood [aut, cre],\n  Kate Lyons [ctb],\n  John Muschelli [ctb]",
+    "url": "https://gojiplus.github.io/tuber/,\nhttps://github.com/gojiplus/tuber",
+    "bug_reports": "https://github.com/gojiplus/tuber/issues",
+    "repository": "https://cran.r-project.org/package=tuber",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "tuber Client for the YouTube API Get comments posted on YouTube videos, information on how\n    many times a video has been liked, search for videos with particular\n    content, and much more. You can also scrape captions from a few\n    videos. To learn more about the YouTube API, see\n    <https://developers.google.com/youtube/v3/>.  "
+  },
+  {
+    "id": 22545,
+    "package_name": "twfy",
+    "title": "Drive the API for TheyWorkForYou",
+    "description": "An R wrapper around the API of TheyWorkForYou, a parliamentary \n    monitoring site that scrapes and repackages Hansard (the UK's parliamentary \n    record) and augments it with information from the Register of Members' \n    Interests, election results, and voting records to provide a unified \n    source of information about UK legislators and their activities. See \n    <http://www.theyworkforyou.com> for details.",
+    "version": "0.1.0",
+    "maintainer": "Will Lowe <wlowe@princeton.edu>",
+    "author": "Will Lowe [aut, cre]",
+    "url": "https://conjugateprior.github.io/twfy",
+    "bug_reports": "https://github.com/conjugateprior/twfy/issues",
+    "repository": "https://cran.r-project.org/package=twfy",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "twfy Drive the API for TheyWorkForYou An R wrapper around the API of TheyWorkForYou, a parliamentary \n    monitoring site that scrapes and repackages Hansard (the UK's parliamentary \n    record) and augments it with information from the Register of Members' \n    Interests, election results, and voting records to provide a unified \n    source of information about UK legislators and their activities. See \n    <http://www.theyworkforyou.com> for details.  "
+  },
+  {
+    "id": 23100,
+    "package_name": "wikilake",
+    "title": "Scrape Lake Metadata Tables from Wikipedia",
+    "description": "Scrape lake metadata tables from Wikipedia <https://www.wikipedia.org/>. ",
+    "version": "0.7.0",
+    "maintainer": "Jemma Stachelek <jemma.stachelek@gmail.com>",
+    "author": "Jemma Stachelek [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-5924-2464>)",
+    "url": "https://github.com/jsta/wikilake",
+    "bug_reports": "https://github.com/jsta/wikilake/issues",
+    "repository": "https://cran.r-project.org/package=wikilake",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "wikilake Scrape Lake Metadata Tables from Wikipedia Scrape lake metadata tables from Wikipedia <https://www.wikipedia.org/>.   "
+  },
+  {
+    "id": 23133,
+    "package_name": "woodValuationDE",
+    "title": "Wood Valuation Germany",
+    "description": "Monetary valuation of wood in German forests\n             (stumpage values), including estimations of harvest quantities, \n             wood revenues, and harvest costs. The functions are sensitive to\n             tree species, mean diameter of the harvested trees, stand quality,\n             and logging method. The functions include estimations for the\n             consequences of disturbances on revenues and costs. The underlying\n             assortment tables are taken from Offer and Staupendahl (2018) with\n             corresponding functions for salable and skidded volume derived in\n             Fuchs et al. (2023). Wood revenue and harvest cost\n             functions were taken from v. Bodelschwingh (2018). The consequences\n             of disturbances refer to Dieter (2001), Moellmann and Moehring\n             (2017), and Fuchs et al. (2022a, 2022b). For the full references \n             see documentation of the functions, package README, and Fuchs et\n             al. (2023). Apart from Dieter (2001) and Moellmann and\n             Moehring (2017), all functions and factors are based on data from\n             HessenForst, the forest administration of the Federal State of\n             Hesse in Germany.",
+    "version": "1.0.2",
+    "maintainer": "Jasper M. Fuchs <jasper.fuchs@usys.ethz.ch>",
+    "author": "Jasper M. Fuchs [aut, cre] (ORCID:\n    <https://orcid.org/0000-0001-5951-7897>),\n  Kai Husmann [aut] (ORCID: <https://orcid.org/0000-0003-2970-4709>),\n  Hilmar v. Bodelschwingh [aut],\n  Roman Koster [aut] (ORCID: <https://orcid.org/0000-0002-0439-2086>),\n  Kai Staupendahl [aut] (ORCID: <https://orcid.org/0000-0001-6595-3601>),\n  Armin Offer [aut],\n  Bernhard M\u00f6hring [aut],\n  Carola Paul [aut] (ORCID: <https://orcid.org/0000-0002-6257-2026>),\n  University Goettingen - Department of Forest Economics and Sustainable\n    Land-use Planning [fnd],\n  Federal Ministry of Education and Research Germany (BMBF) [fnd],\n  BiodivClim ERA-Net COFUND BiodivERsA call [fnd],\n  ETH Zurich - Institute of Terrestrial Ecosystems - Forest Resources\n    Management [fnd]",
+    "url": "https://github.com/Forest-Economics-Goettingen/woodValuationDE",
+    "bug_reports": "",
+    "repository": "https://cran.r-project.org/package=woodValuationDE",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "woodValuationDE Wood Valuation Germany Monetary valuation of wood in German forests\n             (stumpage values), including estimations of harvest quantities, \n             wood revenues, and harvest costs. The functions are sensitive to\n             tree species, mean diameter of the harvested trees, stand quality,\n             and logging method. The functions include estimations for the\n             consequences of disturbances on revenues and costs. The underlying\n             assortment tables are taken from Offer and Staupendahl (2018) with\n             corresponding functions for salable and skidded volume derived in\n             Fuchs et al. (2023). Wood revenue and harvest cost\n             functions were taken from v. Bodelschwingh (2018). The consequences\n             of disturbances refer to Dieter (2001), Moellmann and Moehring\n             (2017), and Fuchs et al. (2022a, 2022b). For the full references \n             see documentation of the functions, package README, and Fuchs et\n             al. (2023). Apart from Dieter (2001) and Moellmann and\n             Moehring (2017), all functions and factors are based on data from\n             HessenForst, the forest administration of the Federal State of\n             Hesse in Germany.  "
+  },
+  {
+    "id": 23293,
+    "package_name": "ypr",
+    "title": "Yield Per Recruit",
+    "description": "An implementation of equilibrium-based yield per recruit\n    methods.  Yield per recruit methods can used to estimate the optimal\n    yield for a fish population as described by Walters and Martell (2004)\n    <isbn:0-691-11544-3>.  The yield can be based on the number of fish\n    caught (or harvested) or biomass caught for all fish or just large\n    (trophy) individuals.",
+    "version": "0.6.0",
+    "maintainer": "Joe Thorley <joe@poissonconsulting.ca>",
+    "author": "Joe Thorley [aut, cre] (ORCID: <https://orcid.org/0000-0002-7683-4592>),\n  Ayla Pearson [ctb] (ORCID: <https://orcid.org/0000-0001-7388-1222>),\n  Poisson Consulting [cph, fnd]",
+    "url": "https://github.com/poissonconsulting/ypr",
+    "bug_reports": "https://github.com/poissonconsulting/ypr/issues",
+    "repository": "https://cran.r-project.org/package=ypr",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0,
+    "primary_category": "general",
+    "source_universe": "cran-direct",
+    "search_text": "ypr Yield Per Recruit An implementation of equilibrium-based yield per recruit\n    methods.  Yield per recruit methods can used to estimate the optimal\n    yield for a fish population as described by Walters and Martell (2004)\n    <isbn:0-691-11544-3>.  The yield can be based on the number of fish\n    caught (or harvested) or biomass caught for all fish or just large\n    (trophy) individuals.  "
+  }
+]
