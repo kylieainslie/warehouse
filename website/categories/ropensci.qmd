@@ -1,5 +1,5 @@
 ---
-title: "rOpenSci Packages"
+title: "ROpenSci Packages"
 format:
   html:
     include-in-header:
@@ -15,6 +15,37 @@ format:
         .package-title { display: flex; align-items: center; }
         .package-card:hover .package-tooltip { display: block; }
         .package-tooltip { display: none; position: absolute; background: #333; color: #fff; padding: 8px 12px; border-radius: 4px; font-size: 0.85rem; max-width: 300px; z-index: 1001; top: 100%; left: 0; margin-top: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        .package-reviews { display: flex; align-items: center; gap: 0.5em; margin-top: 0.5em; font-size: 0.85em; }
+        .review-stars { color: #f59e0b; }
+        .review-count { color: #666; }
+        .btn-review { background: #fef3c7; color: #92400e; border: none; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 0.8em; }
+        .btn-review:hover { background: #fde68a; }
+        .review-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center; }
+        .review-modal-content { background: #fff; border-radius: 8px; max-width: 700px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 1.5em; position: relative; }
+        .review-modal-close { position: absolute; top: 10px; right: 15px; font-size: 1.5em; cursor: pointer; color: #666; }
+        .review-modal-close:hover { color: #000; }
+        .review-item { border-bottom: 1px solid #e5e7eb; padding: 1em 0; }
+        .review-item:last-child { border-bottom: none; }
+        .review-header { display: flex; gap: 1em; align-items: center; margin-bottom: 0.5em; flex-wrap: wrap; }
+        .review-author { font-weight: 600; }
+        .review-date { color: #666; font-size: 0.85em; }
+        .review-badges { display: flex; flex-wrap: wrap; gap: 0.4em; margin: 0.5em 0; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.7em; font-weight: 500; }
+        .badge-needs { background: #dcfce7; color: #166534; }
+        .badge-needs-mostly { background: #fef9c3; color: #854d0e; }
+        .badge-curve { background: #dbeafe; color: #1e40af; }
+        .badge-curve-steep { background: #fef3c7; color: #92400e; }
+        .badge-docs { background: #f3e8ff; color: #6b21a8; }
+        .badge-again { background: #ecfdf5; color: #065f46; }
+        .badge-level { background: #f1f5f9; color: #475569; }
+        .review-section { margin: 0.5em 0; }
+        .review-section-title { font-weight: 600; font-size: 0.8em; color: #374151; }
+        .review-section-content { color: #333; line-height: 1.4; font-size: 0.9em; }
+        .review-tip { background: #f0f9ff; border-left: 3px solid #2563eb; padding: 0.4em 0.6em; margin-top: 0.5em; font-size: 0.85em; }
+        .review-search { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1em; }
+        .no-reviews { color: #666; text-align: center; padding: 2em; }
+        .dev-section { margin-top: 0.75em; padding-top: 0.75em; border-top: 1px dashed #e5e7eb; }
+        .dev-section-title { font-size: 0.75em; color: #059669; font-weight: 600; margin-bottom: 0.3em; }
         </style>
 ---
 
@@ -22,6 +53,15 @@ format:
 <input type="text" id="package-search" placeholder="Search packages..." />
 <div id="alphabet-filter" style="margin: 0.5em 0;"></div>
 <div id="category-packages">Loading packages...</div>
+
+<div id="review-modal" class="review-modal" onclick="if(event.target===this)closeReviewModal()">
+  <div class="review-modal-content">
+    <span class="review-modal-close" onclick="closeReviewModal()">&times;</span>
+    <h3>Reviews for <span id="modal-package-name"></span></h3>
+    <input type="text" id="review-search" class="review-search" placeholder="Search reviews..." oninput="filterReviews()" />
+    <div id="modal-reviews-list"></div>
+  </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var packages = [];
   var activeLetter = null;
+  var allReviews = [];
+  var reviewsByPackage = {};
+  var currentPackageReviews = [];
 
   function getLogoUrl(pkg) {
     var name = pkg.package_name;
@@ -52,21 +95,73 @@ document.addEventListener('DOMContentLoaded', function() {
     return urls[0] || '#';
   }
 
+  function renderStars(rating) {
+    var stars = '';
+    for (var i = 1; i <= 5; i++) {
+      stars += i <= rating ? '★' : '☆';
+    }
+    return stars;
+  }
+
+  function getPackageReviewStats(packageName) {
+    var reviews = reviewsByPackage[packageName] || [];
+    if (reviews.length === 0) return null;
+    var total = 0;
+    var count = 0;
+    for (var i = 0; i < reviews.length; i++) {
+      if (reviews[i].rating) {
+        total += reviews[i].rating;
+        count++;
+      }
+    }
+    return {
+      count: reviews.length,
+      avg: count > 0 ? (total / count) : 0
+    };
+  }
+
+  function getBadgeClass(type, value) {
+    if (type === 'met_needs') {
+      if (value === 'Yes fully') return 'badge-needs';
+      if (value === 'Mostly') return 'badge-needs-mostly';
+      return 'badge-needs';
+    }
+    if (type === 'learning_curve') {
+      if (value === 'Easy') return 'badge-curve';
+      return 'badge-curve-steep';
+    }
+    return '';
+  }
+
   function renderPackages(list) {
     var html = '<p class="results-count">Found ' + list.length + ' packages</p><div class="package-list">';
     for (var i = 0; i < Math.min(list.length, 50); i++) {
       var pkg = list[i];
       var logoUrl = getLogoUrl(pkg);
       var desc = escapeHtml(pkg.description || pkg.title || 'No description');
+      var stats = getPackageReviewStats(pkg.package_name);
+
       html += '<div class="package-card">';
       html += '<div class="package-header">';
       html += '<h3 class="package-title">';
-      html += '<img src="' + logoUrl + '" class="package-logo" onerror="this.style.display='none'" alt="" />';
+      html += '<img src="' + logoUrl + '" class="package-logo" onerror="this.style.display=\'none\'" alt="" />';
       html += '<a href="' + getPackageUrl(pkg) + '" target="_blank">' + pkg.package_name + '</a>';
       html += '</h3>';
       html += '<span class="package-score">' + (typeof pkg.score === 'number' ? pkg.score.toFixed(1) : 'N/A') + '</span>';
       html += '</div>';
       html += '<p class="package-description">' + (pkg.title || 'No description') + '</p>';
+
+      // Reviews section
+      html += '<div class="package-reviews">';
+      if (stats) {
+        html += '<span class="review-stars">' + renderStars(Math.round(stats.avg)) + '</span>';
+        html += '<span class="review-count">(' + stats.count + ')</span>';
+      } else {
+        html += '<span class="review-count">No reviews</span>';
+      }
+      html += '<button class="btn-review" onclick="openReviewModal(\'' + escapeHtml(pkg.package_name) + '\')">Reviews</button>';
+      html += '</div>';
+
       html += '<div class="package-tooltip">' + desc + '</div>';
       html += '</div>';
     }
@@ -91,53 +186,171 @@ document.addEventListener('DOMContentLoaded', function() {
     renderPackages(filtered);
   }
 
-  fetch('../data/categories/ropensci.json')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      packages = data;
+  // Review modal functions
+  window.openReviewModal = function(packageName) {
+    var modal = document.getElementById('review-modal');
+    document.getElementById('modal-package-name').textContent = packageName;
+    document.getElementById('review-search').value = '';
+    currentPackageReviews = reviewsByPackage[packageName] || [];
+    renderModalReviews(currentPackageReviews);
+    modal.style.display = 'flex';
+  };
 
-      var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-      var btns = '';
-      for (var i = 0; i < letters.length; i++) {
-        btns += '<button type="button" class="letter-btn" data-letter="' + letters[i] + '">' + letters[i] + '</button>';
+  window.closeReviewModal = function() {
+    document.getElementById('review-modal').style.display = 'none';
+  };
+
+  window.filterReviews = function() {
+    var query = document.getElementById('review-search').value.trim().toLowerCase();
+    var filtered = currentPackageReviews;
+    if (query) {
+      filtered = currentPackageReviews.filter(function(r) {
+        var text = (r.author + ' ' + r.use_case + ' ' + r.best_thing + ' ' + r.tips + ' ' + r.hardest_part).toLowerCase();
+        return text.indexOf(query) >= 0;
+      });
+    }
+    renderModalReviews(filtered);
+  };
+
+  function renderModalReviews(reviews) {
+    var container = document.getElementById('modal-reviews-list');
+    if (reviews.length === 0) {
+      container.innerHTML = '<div class="no-reviews">No reviews yet for this package.</div>';
+      return;
+    }
+    var html = '';
+    for (var i = 0; i < reviews.length; i++) {
+      var r = reviews[i];
+      html += '<div class="review-item">';
+
+      // Header with author, stars, date, experience level
+      html += '<div class="review-header">';
+      html += '<span class="review-author">' + escapeHtml(r.author || 'Anonymous') + '</span>';
+      if (r.rating) {
+        html += '<span class="review-stars">' + renderStars(r.rating) + '</span>';
       }
-      alphabetContainer.innerHTML = btns;
+      html += '<span class="review-date">' + new Date(r.created_at).toLocaleDateString() + '</span>';
+      if (r.experience_level) {
+        html += '<span class="badge badge-level">' + escapeHtml(r.experience_level) + '</span>';
+      }
+      html += '</div>';
 
-      renderPackages(packages);
+      // Quick assessment badges
+      html += '<div class="review-badges">';
+      if (r.met_needs) {
+        html += '<span class="badge ' + getBadgeClass('met_needs', r.met_needs) + '">Needs: ' + escapeHtml(r.met_needs) + '</span>';
+      }
+      if (r.learning_curve) {
+        html += '<span class="badge ' + getBadgeClass('learning_curve', r.learning_curve) + '">Learning: ' + escapeHtml(r.learning_curve) + '</span>';
+      }
+      if (r.would_use_again) {
+        html += '<span class="badge badge-again">Again: ' + escapeHtml(r.would_use_again) + '</span>';
+      }
+      if (r.documentation) {
+        html += '<span class="badge badge-docs">Docs: ' + escapeHtml(r.documentation) + '</span>';
+      }
+      html += '</div>';
 
-      searchInput.addEventListener('input', function() {
+      // Use case
+      if (r.use_case) {
+        html += '<div class="review-section">';
+        html += '<span class="review-section-title">Used for: </span>';
+        html += '<span class="review-section-content">' + escapeHtml(r.use_case) + '</span>';
+        html += '</div>';
+      }
+
+      // Best thing
+      if (r.best_thing) {
+        html += '<div class="review-section">';
+        html += '<span class="review-section-title">Best thing: </span>';
+        html += '<span class="review-section-content">' + escapeHtml(r.best_thing) + '</span>';
+        html += '</div>';
+      }
+
+      // Tips
+      if (r.tips) {
+        html += '<div class="review-tip"><strong>Tip:</strong> ' + escapeHtml(r.tips) + '</div>';
+      }
+
+      // Developer feedback section
+      var hasDevFeedback = r.hardest_part || r.would_improve || r.missing_feature;
+      if (hasDevFeedback) {
+        html += '<div class="dev-section">';
+        html += '<div class="dev-section-title">Developer Feedback</div>';
+        if (r.hardest_part) {
+          html += '<div class="review-section"><span class="review-section-title">Hardest part: </span>';
+          html += '<span class="review-section-content">' + escapeHtml(r.hardest_part) + '</span></div>';
+        }
+        if (r.would_improve) {
+          html += '<div class="review-section"><span class="review-section-title">Would improve: </span>';
+          html += '<span class="review-section-content">' + escapeHtml(r.would_improve) + '</span></div>';
+        }
+        if (r.missing_feature) {
+          html += '<div class="review-section"><span class="review-section-title">Missing feature: </span>';
+          html += '<span class="review-section-content">' + escapeHtml(r.missing_feature) + '</span></div>';
+        }
+        html += '</div>';
+      }
+
+      html += '</div>';
+    }
+    container.innerHTML = html;
+  }
+
+  // Load data
+  Promise.all([
+    fetch('../data/categories/ropensci.json').then(function(r) { return r.json(); }),
+    fetch('../data/reviews.json').then(function(r) { return r.json(); }).catch(function() { return { reviews: [] }; })
+  ]).then(function(results) {
+    packages = results[0];
+    allReviews = results[1].reviews || [];
+
+    // Index reviews by package
+    for (var i = 0; i < allReviews.length; i++) {
+      var r = allReviews[i];
+      if (!reviewsByPackage[r.package_name]) {
+        reviewsByPackage[r.package_name] = [];
+      }
+      reviewsByPackage[r.package_name].push(r);
+    }
+
+    // Render alphabet buttons
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var btns = '';
+    for (var i = 0; i < letters.length; i++) {
+      btns += '<button type="button" class="letter-btn" data-letter="' + letters[i] + '">' + letters[i] + '</button>';
+    }
+    alphabetContainer.innerHTML = btns;
+
+    renderPackages(packages);
+
+    searchInput.addEventListener('input', applyFilters);
+
+    var buttons = alphabetContainer.getElementsByClassName('letter-btn');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(e) {
+        var letter = e.target.getAttribute('data-letter');
+        activeLetter = (activeLetter === letter) ? null : letter;
+
+        var allBtns = alphabetContainer.getElementsByClassName('letter-btn');
+        for (var j = 0; j < allBtns.length; j++) {
+          if (allBtns[j].getAttribute('data-letter') === activeLetter) {
+            allBtns[j].classList.add('active');
+          } else {
+            allBtns[j].classList.remove('active');
+          }
+        }
         applyFilters();
       });
+    }
+  }).catch(function(err) {
+    container.innerHTML = '<p>Error loading packages.</p>';
+  });
 
-      var buttons = alphabetContainer.getElementsByClassName('letter-btn');
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function(e) {
-          var letter = e.target.getAttribute('data-letter');
-
-          if (activeLetter === letter) {
-            activeLetter = null;
-          } else {
-            activeLetter = letter;
-          }
-
-          var allBtns = alphabetContainer.getElementsByClassName('letter-btn');
-          for (var j = 0; j < allBtns.length; j++) {
-            if (allBtns[j].getAttribute('data-letter') === activeLetter) {
-              allBtns[j].classList.add('active');
-            } else {
-              allBtns[j].classList.remove('active');
-            }
-          }
-
-          applyFilters();
-        });
-      }
-    })
-    .catch(function(err) {
-      container.innerHTML = '<p>Error loading packages.</p>';
-    });
+  // Close modal on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeReviewModal();
+  });
 });
 </script>
 ```

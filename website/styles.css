@@ -1919,7 +1919,9 @@ tr:hover {
 
 /* Category Card Link */
 .category-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
@@ -1927,6 +1929,25 @@ tr:hover {
 .category-card-link:hover {
   text-decoration: none;
 }
+
+.category-card {
+  cursor: pointer;
+}
+
+.category-card-link:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.card-featured {
+  cursor: default;
+}
+
+.featured-tile {
+  cursor: pointer;
+}
+
 
 /* Featured Packages - Discover Style */
 .card-featured {

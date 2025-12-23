@@ -21,6 +21,9 @@ website:
       - href: about.qmd
         text: About
     right:
+      - href: submit-review.qmd
+        text: Write Review
+        icon: star
       - href: submit.qmd
         text: Submit Package
         icon: plus-circle

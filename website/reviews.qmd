@@ -15,17 +15,33 @@ format:
         .review-package a { color: inherit; text-decoration: none; }
         .review-package a:hover { text-decoration: underline; }
         .review-rating { color: #f59e0b; font-size: 1em; }
-        .review-meta { font-size: 0.85em; color: #666; margin-bottom: 0.5em; }
-        .review-title { font-weight: 600; margin-bottom: 0.3em; }
-        .review-comment { color: #333; line-height: 1.5; }
-        .review-usecase { margin-top: 0.5em; padding: 0.5em; background: #f0f9ff; border-radius: 4px; font-size: 0.9em; color: #0369a1; }
-        .review-stats { display: flex; gap: 2em; margin-bottom: 1.5em; padding: 1em; background: #f8fafc; border-radius: 8px; }
+        .review-meta { font-size: 0.85em; color: #666; margin-bottom: 0.75em; display: flex; flex-wrap: wrap; gap: 0.5em 1.5em; }
+        .review-section { margin-bottom: 0.75em; }
+        .review-section-title { font-weight: 600; font-size: 0.85em; color: #374151; margin-bottom: 0.25em; }
+        .review-section-content { color: #333; line-height: 1.5; }
+        .review-badges { display: flex; flex-wrap: wrap; gap: 0.5em; margin-bottom: 0.75em; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75em; font-weight: 500; }
+        .badge-needs { background: #dcfce7; color: #166534; }
+        .badge-needs-mostly { background: #fef9c3; color: #854d0e; }
+        .badge-needs-partial { background: #fee2e2; color: #991b1b; }
+        .badge-curve { background: #dbeafe; color: #1e40af; }
+        .badge-curve-steep { background: #fef3c7; color: #92400e; }
+        .badge-docs { background: #f3e8ff; color: #6b21a8; }
+        .badge-again { background: #ecfdf5; color: #065f46; }
+        .badge-level { background: #f1f5f9; color: #475569; }
+        .review-tip { background: #f0f9ff; border-left: 3px solid #2563eb; padding: 0.5em 0.75em; margin-top: 0.5em; font-size: 0.9em; }
+        .review-improvement { background: #fefce8; border-left: 3px solid #eab308; padding: 0.5em 0.75em; margin-top: 0.5em; font-size: 0.9em; }
+        .review-stats { display: flex; gap: 2em; margin-bottom: 1.5em; padding: 1em; background: #f8fafc; border-radius: 8px; flex-wrap: wrap; }
         .stat-item { text-align: center; }
         .stat-value { font-size: 1.5em; font-weight: 700; color: #2563eb; }
         .stat-label { font-size: 0.85em; color: #666; }
         .no-reviews { text-align: center; padding: 2em; color: #666; }
-        .verified-badge { background: #10b981; color: white; font-size: 0.7em; padding: 2px 6px; border-radius: 3px; margin-left: 0.5em; }
+        .verified-badge { background: #10b981; color: white; font-size: 0.7em; padding: 2px 6px; border-radius: 3px; }
         .helpful-count { font-size: 0.85em; color: #666; margin-top: 0.5em; }
+        .toggle-details { background: none; border: none; color: #2563eb; cursor: pointer; font-size: 0.85em; padding: 0; margin-top: 0.5em; }
+        .toggle-details:hover { text-decoration: underline; }
+        .dev-details { display: none; margin-top: 0.75em; padding-top: 0.75em; border-top: 1px solid #e5e7eb; }
+        .dev-details.show { display: block; }
         </style>
 ---
 
@@ -53,6 +69,12 @@ format:
     <option value="4">4+ Stars</option>
     <option value="3">3+ Stars</option>
   </select>
+  <select id="curve-filter">
+    <option value="">All Learning Curves</option>
+    <option value="Easy">Easy</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Steep">Steep</option>
+  </select>
   <select id="sort-by">
     <option value="recent">Most Recent</option>
     <option value="helpful">Most Helpful</option>
@@ -70,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var container = document.getElementById('reviews-container');
   var searchInput = document.getElementById('review-search');
   var ratingFilter = document.getElementById('rating-filter');
+  var curveFilter = document.getElementById('curve-filter');
   var sortBy = document.getElementById('sort-by');
 
   var allReviews = [];
@@ -92,6 +115,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+  }
+
+  function getBadgeClass(type, value) {
+    if (type === 'met_needs') {
+      if (value === 'Yes fully') return 'badge-needs';
+      if (value === 'Mostly') return 'badge-needs-mostly';
+      return 'badge-needs-partial';
+    }
+    if (type === 'learning_curve') {
+      if (value === 'Easy') return 'badge-curve';
+      return 'badge-curve-steep';
+    }
+    return '';
   }
 
   function updateStats(reviews) {
@@ -123,36 +159,121 @@ document.addEventListener('DOMContentLoaded', function() {
     var html = '';
     for (var i = 0; i < reviews.length; i++) {
       var r = reviews[i];
+      var reviewId = 'review-' + i;
+
       html += '<div class="review-card">';
+
+      // Header
       html += '<div class="review-card-header">';
       html += '<div class="review-package"><a href="https://r-universe.dev/search?q=' + encodeURIComponent(r.package_name) + '" target="_blank">' + escapeHtml(r.package_name) + '</a></div>';
       if (r.rating) {
         html += '<div class="review-rating">' + renderStars(r.rating) + '</div>';
       }
       html += '</div>';
-      html += '<div class="review-meta">By <strong>' + escapeHtml(r.author || 'Anonymous') + '</strong>';
+
+      // Meta
+      html += '<div class="review-meta">';
+      html += '<span>By <strong>' + escapeHtml(r.author || 'Anonymous') + '</strong></span>';
       if (r.verified) {
         html += '<span class="verified-badge">Verified</span>';
       }
-      html += ' on ' + formatDate(r.created_at) + '</div>';
-      if (r.title) {
-        html += '<div class="review-title">' + escapeHtml(r.title) + '</div>';
+      html += '<span>' + formatDate(r.created_at) + '</span>';
+      if (r.experience_level) {
+        html += '<span class="badge badge-level">' + escapeHtml(r.experience_level) + '</span>';
       }
-      html += '<div class="review-comment">' + escapeHtml(r.comment) + '</div>';
+      html += '</div>';
+
+      // Quick badges
+      html += '<div class="review-badges">';
+      if (r.met_needs) {
+        html += '<span class="badge ' + getBadgeClass('met_needs', r.met_needs) + '">Needs: ' + escapeHtml(r.met_needs) + '</span>';
+      }
+      if (r.learning_curve) {
+        html += '<span class="badge ' + getBadgeClass('learning_curve', r.learning_curve) + '">Learning: ' + escapeHtml(r.learning_curve) + '</span>';
+      }
+      if (r.would_use_again) {
+        html += '<span class="badge badge-again">Again: ' + escapeHtml(r.would_use_again) + '</span>';
+      }
+      if (r.documentation) {
+        html += '<span class="badge badge-docs">Docs: ' + escapeHtml(r.documentation) + '</span>';
+      }
+      html += '</div>';
+
+      // Use case
       if (r.use_case) {
-        html += '<div class="review-usecase"><strong>Used for:</strong> ' + escapeHtml(r.use_case) + '</div>';
+        html += '<div class="review-section">';
+        html += '<div class="review-section-title">Used for:</div>';
+        html += '<div class="review-section-content">' + escapeHtml(r.use_case) + '</div>';
+        html += '</div>';
       }
+
+      // Best thing
+      if (r.best_thing) {
+        html += '<div class="review-section">';
+        html += '<div class="review-section-title">Best thing:</div>';
+        html += '<div class="review-section-content">' + escapeHtml(r.best_thing) + '</div>';
+        html += '</div>';
+      }
+
+      // Tips
+      if (r.tips) {
+        html += '<div class="review-tip"><strong>Tip:</strong> ' + escapeHtml(r.tips) + '</div>';
+      }
+
+      // Toggle for developer details
+      var hasDevDetails = r.hardest_part || r.missing_feature || r.would_improve || r.error_messages || r.bugs_encountered;
+      if (hasDevDetails) {
+        html += '<button class="toggle-details" onclick="toggleDetails(\'' + reviewId + '\')">Show developer feedback ▼</button>';
+        html += '<div class="dev-details" id="' + reviewId + '">';
+
+        if (r.hardest_part) {
+          html += '<div class="review-section"><div class="review-section-title">Hardest to figure out:</div>';
+          html += '<div class="review-section-content">' + escapeHtml(r.hardest_part) + '</div></div>';
+        }
+        if (r.would_improve) {
+          html += '<div class="review-improvement"><strong>Would improve:</strong> ' + escapeHtml(r.would_improve) + '</div>';
+        }
+        if (r.missing_feature) {
+          html += '<div class="review-section"><div class="review-section-title">Missing feature:</div>';
+          html += '<div class="review-section-content">' + escapeHtml(r.missing_feature) + '</div></div>';
+        }
+        if (r.error_messages) {
+          html += '<div class="review-section"><div class="review-section-title">Error messages helpful:</div>';
+          html += '<div class="review-section-content">' + escapeHtml(r.error_messages) + '</div></div>';
+        }
+        if (r.bugs_encountered) {
+          html += '<div class="review-section"><div class="review-section-title">Bugs encountered:</div>';
+          html += '<div class="review-section-content">' + escapeHtml(r.bugs_encountered) + '</div></div>';
+        }
+
+        html += '</div>';
+      }
+
       if (r.helpful_count > 0) {
         html += '<div class="helpful-count">👍 ' + r.helpful_count + ' found this helpful</div>';
       }
+
       html += '</div>';
     }
     container.innerHTML = html;
   }
 
+  window.toggleDetails = function(id) {
+    var el = document.getElementById(id);
+    var btn = el.previousElementSibling;
+    if (el.classList.contains('show')) {
+      el.classList.remove('show');
+      btn.textContent = 'Show developer feedback ▼';
+    } else {
+      el.classList.add('show');
+      btn.textContent = 'Hide developer feedback ▲';
+    }
+  };
+
   function applyFilters() {
     var query = searchInput.value.trim().toLowerCase();
     var minRating = parseInt(ratingFilter.value) || 0;
+    var curve = curveFilter.value;
     var sort = sortBy.value;
 
     var filtered = allReviews.slice();
@@ -160,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Filter by search query
     if (query) {
       filtered = filtered.filter(function(r) {
-        var searchable = (r.package_name + ' ' + r.author + ' ' + r.title + ' ' + r.comment + ' ' + r.use_case).toLowerCase();
+        var searchable = (r.package_name + ' ' + r.author + ' ' + r.use_case + ' ' + r.best_thing + ' ' + r.tips).toLowerCase();
         return searchable.indexOf(query) >= 0;
       });
     }
@@ -169,6 +290,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (minRating > 0) {
       filtered = filtered.filter(function(r) {
         return r.rating && r.rating >= minRating;
+      });
+    }
+
+    // Filter by learning curve
+    if (curve) {
+      filtered = filtered.filter(function(r) {
+        return r.learning_curve === curve;
       });
     }
 
@@ -201,6 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       searchInput.addEventListener('input', applyFilters);
       ratingFilter.addEventListener('change', applyFilters);
+      curveFilter.addEventListener('change', applyFilters);
       sortBy.addEventListener('change', applyFilters);
     })
     .catch(function(err) {
@@ -209,3 +338,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 ```
+

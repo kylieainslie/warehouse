@@ -1,0 +1,237 @@
+---
+title: "Submit a Review"
+format:
+  html:
+    toc: false
+---
+
+```{=html}
+<style>
+.review-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.form-intro {
+  background: #f0f9ff;
+  border-left: 4px solid #2563eb;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 0 8px 8px 0;
+}
+.form-intro h3 {
+  margin-top: 0;
+  color: #1e40af;
+}
+.guidelines {
+  background: #fefce8;
+  border: 1px solid #fde047;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+.guidelines h4 {
+  margin-top: 0;
+  color: #854d0e;
+}
+.guidelines ul {
+  margin-bottom: 0;
+}
+.submit-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.submit-btn:hover {
+  background: #1d4ed8;
+  color: white;
+}
+.form-link-section {
+  text-align: center;
+  padding: 2em;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+.question-section {
+  margin-bottom: 2em;
+}
+.question-section h4 {
+  color: #1e40af;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+.question-table th {
+  text-align: left;
+  background: #f1f5f9;
+  padding: 0.75em;
+  border: 1px solid #e2e8f0;
+}
+.question-table td {
+  padding: 0.75em;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+.question-table tr:nth-child(even) {
+  background: #f8fafc;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.badge-user {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.badge-dev {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge-both {
+  background: #fef3c7;
+  color: #92400e;
+}
+</style>
+
+<div class="review-form-container">
+
+<div class="form-intro">
+  <h3>Share Your Experience</h3>
+  <p>Your reviews help the R community in two ways:</p>
+  <ul>
+    <li><strong>Help users</strong> find the right packages for their needs</li>
+    <li><strong>Help developers</strong> improve their packages with concrete feedback</li>
+  </ul>
+</div>
+
+<div class="form-link-section">
+  <a href="https://forms.gle/suhjrBJKpxD63gkM8" target="_blank" class="submit-btn">Submit a Review</a>
+  <p style="margin-top: 1em; color: #666; font-size: 0.9em;">Opens Google Form in a new tab</p>
+</div>
+
+<div class="guidelines">
+  <h4>Review Guidelines</h4>
+  <ul>
+    <li><strong>Be specific</strong> - Describe your actual use case and experience</li>
+    <li><strong>Be constructive</strong> - Frame suggestions positively</li>
+    <li><strong>Be honest</strong> - Share both what worked and what didn't</li>
+  </ul>
+</div>
+
+<div class="question-section">
+  <h4>Questions We Ask</h4>
+
+  <h5>Basic Info</h5>
+  <table class="question-table">
+    <tr>
+      <th>Question</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><strong>Package name</strong></td>
+      <td>Text (required)</td>
+    </tr>
+    <tr>
+      <td><strong>Your name/handle</strong></td>
+      <td>Text (optional)</td>
+    </tr>
+    <tr>
+      <td><strong>Your R experience level</strong></td>
+      <td>Beginner / Intermediate / Advanced</td>
+    </tr>
+  </table>
+
+  <h5>For Users Deciding on a Package <span class="badge badge-user">Helps Users</span></h5>
+  <table class="question-table">
+    <tr>
+      <th>Question</th>
+      <th>Options</th>
+    </tr>
+    <tr>
+      <td><strong>What task did you use it for?</strong></td>
+      <td>Free text</td>
+    </tr>
+    <tr>
+      <td><strong>Did it do what you needed?</strong></td>
+      <td>Yes fully / Mostly / Partially / No</td>
+    </tr>
+    <tr>
+      <td><strong>How was the learning curve?</strong></td>
+      <td>Easy / Moderate / Steep / Very steep</td>
+    </tr>
+    <tr>
+      <td><strong>Would you use it again?</strong></td>
+      <td>Definitely / Probably / Unsure / No</td>
+    </tr>
+    <tr>
+      <td><strong>Overall rating</strong></td>
+      <td>1-5 stars</td>
+    </tr>
+  </table>
+
+  <h5>For Developers <span class="badge badge-dev">Helps Developers</span></h5>
+  <table class="question-table">
+    <tr>
+      <th>Question</th>
+      <th>Options</th>
+    </tr>
+    <tr>
+      <td><strong>Documentation quality</strong></td>
+      <td>Great / Adequate / Lacking / Poor</td>
+    </tr>
+    <tr>
+      <td><strong>Were error messages helpful?</strong></td>
+      <td>Yes / Sometimes / Rarely / N/A</td>
+    </tr>
+    <tr>
+      <td><strong>Did you encounter bugs?</strong></td>
+      <td>None / Minor / Significant</td>
+    </tr>
+    <tr>
+      <td><strong>What was hardest to figure out?</strong></td>
+      <td>Free text</td>
+    </tr>
+    <tr>
+      <td><strong>What feature is missing?</strong></td>
+      <td>Free text</td>
+    </tr>
+  </table>
+
+  <h5>For Everyone <span class="badge badge-both">Helps Both</span></h5>
+  <table class="question-table">
+    <tr>
+      <th>Question</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td><strong>Best thing about this package?</strong></td>
+      <td>Free text</td>
+    </tr>
+    <tr>
+      <td><strong>What would you improve?</strong></td>
+      <td>Free text</td>
+    </tr>
+    <tr>
+      <td><strong>Tips for new users?</strong></td>
+      <td>Free text</td>
+    </tr>
+  </table>
+</div>
+
+</div>
+```
+
