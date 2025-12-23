@@ -1,191 +1,189 @@
 ---
 title: "Submit a Package"
+format:
+  html:
+    toc: false
 ---
 
-## Submit Your R Package
+```{=html}
+<style>
+.submit-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.submit-intro {
+  background: #f0f9ff;
+  border-left: 4px solid #2563eb;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 0 8px 8px 0;
+}
+.submit-intro h3 {
+  margin-top: 0;
+  color: #1e40af;
+}
+.source-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+.source-item {
+  background: #f8fafc;
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.source-item .icon {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.submit-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.submit-btn:hover {
+  background: #1d4ed8;
+  color: white;
+}
+.submit-section {
+  text-align: center;
+  padding: 2em;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin: 2em 0;
+}
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1.5em 0;
+}
+.step {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+.step-number {
+  background: #2563eb;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.step-content h4 {
+  margin: 0 0 0.25em 0;
+  color: #1e40af;
+}
+.step-content p {
+  margin: 0;
+  color: #666;
+}
+.guidelines {
+  background: #fefce8;
+  border: 1px solid #fde047;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+.guidelines h4 {
+  margin-top: 0;
+  color: #854d0e;
+}
+</style>
 
-Help grow The Warehouse by submitting your package! We accept packages from:
+<div class="submit-container">
 
-- ✅ CRAN (auto-indexed, but you can add details)
-- ✅ GitHub
-- ✅ Bioconductor
-- ✅ GitLab, Bitbucket, or private repos
-
----
-
-<form id="submission-form" class="submission-form">
-
-### Package Information
-
-<div class="form-group">
-  <label for="package-name">Package Name *</label>
-  <input type="text" id="package-name" name="package-name" required
-         placeholder="e.g., EpiEstim">
+<div class="submit-intro">
+  <h3>Help Grow The Warehouse</h3>
+  <p>Submit your R package to help others discover useful tools for their work. Package submissions are reviewed by the community via GitHub Issues.</p>
 </div>
 
-<div class="form-group">
-  <label for="package-url">Package URL *</label>
-  <input type="url" id="package-url" name="package-url" required
-         placeholder="https://github.com/username/package">
-  <small>GitHub, CRAN, or other repository URL</small>
+<h3>We Accept Packages From</h3>
+<div class="source-list">
+  <div class="source-item">
+    <div class="icon">📦</div>
+    <strong>CRAN</strong>
+    <p style="margin:0;font-size:0.9em;color:#666">Auto-indexed, but add details</p>
+  </div>
+  <div class="source-item">
+    <div class="icon">🐙</div>
+    <strong>GitHub</strong>
+    <p style="margin:0;font-size:0.9em;color:#666">Public repositories</p>
+  </div>
+  <div class="source-item">
+    <div class="icon">🧬</div>
+    <strong>Bioconductor</strong>
+    <p style="margin:0;font-size:0.9em;color:#666">Bioinformatics packages</p>
+  </div>
+  <div class="source-item">
+    <div class="icon">🔗</div>
+    <strong>Other</strong>
+    <p style="margin:0;font-size:0.9em;color:#666">GitLab, R-universe, etc.</p>
+  </div>
 </div>
 
-<div class="form-group">
-  <label for="title">Short Description *</label>
-  <input type="text" id="title" name="title" required
-         placeholder="One-line description of what your package does">
+<div class="submit-section">
+  <p>Click the button below to submit a package via GitHub:</p>
+  <a href="https://github.com/kylieainslie/warehouse/issues/new?template=package-submission.yml" target="_blank" class="submit-btn">Submit a Package</a>
+  <p style="margin-top: 1em; color: #666; font-size: 0.9em;">Opens GitHub (requires a GitHub account)</p>
 </div>
 
-<div class="form-group">
-  <label for="description">Detailed Description</label>
-  <textarea id="description" name="description" rows="4"
-            placeholder="What problem does your package solve? What makes it unique?"></textarea>
+<h3>How It Works</h3>
+<div class="process-steps">
+  <div class="step">
+    <div class="step-number">1</div>
+    <div class="step-content">
+      <h4>Submit</h4>
+      <p>Fill out the submission form on GitHub with your package details</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-content">
+      <h4>Review</h4>
+      <p>The community can comment and provide feedback on the submission</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-content">
+      <h4>Add</h4>
+      <p>Approved packages are added to the warehouse and appear in search results</p>
+    </div>
+  </div>
 </div>
 
-### Categorization
-
-<div class="form-group">
-  <label for="category">Primary Category *</label>
-  <select id="category" name="category" required>
-    <option value="">Select a category...</option>
-    <option value="epidemiology">Epidemiology</option>
-    <option value="data-manipulation">Data Manipulation</option>
-    <option value="visualization">Visualization</option>
-    <option value="statistical-modeling">Statistical Modeling</option>
-    <option value="machine-learning">Machine Learning</option>
-    <option value="time-series">Time Series</option>
-    <option value="spatial">Spatial Analysis</option>
-    <option value="other">Other</option>
-  </select>
+<div class="guidelines">
+  <h4>Submission Guidelines</h4>
+  <ul>
+    <li><strong>Working package</strong> - The package should be installable and functional</li>
+    <li><strong>Documentation</strong> - At minimum, a README explaining what the package does</li>
+    <li><strong>Maintained</strong> - Package should be actively maintained or stable</li>
+    <li><strong>Open source</strong> - Source code should be publicly accessible</li>
+  </ul>
 </div>
 
-<div class="form-group">
-  <label for="keywords">Keywords (comma-separated)</label>
-  <input type="text" id="keywords" name="keywords"
-         placeholder="e.g., outbreak, R0, serial interval, epidemic">
+<h3>Already on CRAN or R-universe?</h3>
+<p>Packages from CRAN and major R-universe organizations are automatically indexed weekly. Submitting helps us:</p>
+<ul>
+  <li>Categorize your package correctly</li>
+  <li>Highlight key features and use cases</li>
+  <li>Add keywords for better discoverability</li>
+</ul>
+
 </div>
+```
 
-<div class="form-group">
-  <label for="use-cases">Common Use Cases</label>
-  <textarea id="use-cases" name="use-cases" rows="3"
-            placeholder="What specific tasks is your package good for? e.g., 'Estimate serial interval from case data'"></textarea>
-</div>
-
-### Documentation
-
-<div class="form-group">
-  <label for="readme-url">README URL</label>
-  <input type="url" id="readme-url" name="readme-url"
-         placeholder="Direct link to README">
-</div>
-
-<div class="form-group">
-  <label for="docs-url">Documentation Website</label>
-  <input type="url" id="docs-url" name="docs-url"
-         placeholder="pkgdown site or other documentation">
-</div>
-
-<div class="form-group">
-  <label for="vignettes">Vignettes</label>
-  <input type="text" id="vignettes" name="vignettes"
-         placeholder="List vignette titles or URLs">
-</div>
-
-<div class="form-group">
-  <label for="paper-doi">Related Paper (DOI)</label>
-  <input type="text" id="paper-doi" name="paper-doi"
-         placeholder="10.xxxx/xxxxx">
-</div>
-
-### Installation
-
-<div class="form-group">
-  <label for="install-command">Installation Command *</label>
-  <textarea id="install-command" name="install-command" rows="2" required
-            placeholder="install.packages('packagename')">install.packages("packagename")</textarea>
-</div>
-
-### Quality Indicators
-
-<div class="form-group">
-  <label>Does your package have:</label>
-  <label class="checkbox">
-    <input type="checkbox" name="has-tests" value="yes"> Automated tests
-  </label>
-  <label class="checkbox">
-    <input type="checkbox" name="has-ci" value="yes"> Continuous Integration (GitHub Actions, Travis, etc.)
-  </label>
-  <label class="checkbox">
-    <input type="checkbox" name="has-vignettes" value="yes"> Vignettes or tutorials
-  </label>
-  <label class="checkbox">
-    <input type="checkbox" name="has-pkgdown" value="yes"> pkgdown documentation site
-  </label>
-</div>
-
-### Contact Information
-
-<div class="form-group">
-  <label for="submitter-name">Your Name *</label>
-  <input type="text" id="submitter-name" name="submitter-name" required
-         placeholder="John Doe">
-</div>
-
-<div class="form-group">
-  <label for="submitter-email">Your Email *</label>
-  <input type="email" id="submitter-email" name="submitter-email" required
-         placeholder="you@example.com">
-  <small>We'll contact you if we have questions. Not displayed publicly.</small>
-</div>
-
-<div class="form-group">
-  <label for="relationship">Relationship to Package *</label>
-  <select id="relationship" name="relationship" required>
-    <option value="">Select...</option>
-    <option value="author">Package author/maintainer</option>
-    <option value="contributor">Contributor</option>
-    <option value="user">User/advocate</option>
-    <option value="other">Other</option>
-  </select>
-</div>
-
-### Additional Context
-
-<div class="form-group">
-  <label for="similar-packages">Similar Packages</label>
-  <input type="text" id="similar-packages" name="similar-packages"
-         placeholder="List related packages (helps with categorization)">
-</div>
-
-<div class="form-group">
-  <label for="unique-features">What Makes This Package Unique?</label>
-  <textarea id="unique-features" name="unique-features" rows="3"
-            placeholder="How does this package differ from alternatives?"></textarea>
-</div>
-
----
-
-<div class="form-group">
-  <button type="submit" class="submit-button">Submit Package</button>
-</div>
-
-<div id="form-status" class="form-status"></div>
-
-</form>
-
-<script>
-document.getElementById('submission-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const status = document.getElementById('form-status');
-  status.innerHTML = '<div class="alert alert-info">Submission functionality coming soon! For now, please email submissions to: your.email@example.com</div>';
-  
-  // In production, this would send to Formspree or your backend
-  // const formData = new FormData(this);
-  // fetch('https://formspree.io/f/YOUR_ID', {
-  //   method: 'POST',
-  //   body: formData,
-  //   headers: {'Accept': 'application/json'}
-  // }).then(response => { ... });
-});
-</script>

@@ -1,0 +1,149 @@
+name: Submit a Package
+description: Submit an R package to The Warehouse
+title: "[Package Submission]: "
+labels: ["package-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a package to The Warehouse! Please fill out the information below.
+
+  - type: input
+    id: package-name
+    attributes:
+      label: Package Name
+      description: The name of the R package
+      placeholder: e.g., EpiEstim
+    validations:
+      required: true
+
+  - type: input
+    id: package-url
+    attributes:
+      label: Package URL
+      description: GitHub, CRAN, or other repository URL
+      placeholder: https://github.com/username/package
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Short Description
+      description: One-line description of what the package does
+      placeholder: Estimate time-varying reproduction numbers from epidemic curves
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: What problem does this package solve? What makes it unique?
+      placeholder: |
+        This package provides tools for...
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      description: Select the most appropriate category
+      options:
+        - Epidemiology
+        - Data Manipulation
+        - Visualization
+        - Statistical Modeling
+        - Machine Learning
+        - Time Series
+        - Spatial Analysis
+        - Bioinformatics
+        - Package Development
+        - Shiny/Web Apps
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: keywords
+    attributes:
+      label: Keywords
+      description: Comma-separated keywords for discoverability
+      placeholder: outbreak, reproduction number, epidemic, transmission
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Common Use Cases
+      description: What specific tasks is this package good for?
+      placeholder: |
+        - Estimate R0 from case data
+        - Analyze outbreak dynamics
+        - ...
+
+  - type: input
+    id: docs-url
+    attributes:
+      label: Documentation URL
+      description: Link to pkgdown site or documentation
+      placeholder: https://package.github.io/docs
+
+  - type: input
+    id: paper-doi
+    attributes:
+      label: Related Paper (DOI)
+      description: If there's an associated publication
+      placeholder: 10.1234/example
+
+  - type: textarea
+    id: install
+    attributes:
+      label: Installation Command
+      description: How to install the package
+      placeholder: |
+        install.packages("packagename")
+        # or
+        remotes::install_github("user/package")
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: quality
+    attributes:
+      label: Quality Indicators
+      description: Check all that apply
+      options:
+        - label: Has automated tests
+        - label: Has CI/CD (GitHub Actions, etc.)
+        - label: Has vignettes or tutorials
+        - label: Has pkgdown documentation site
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your Relationship to the Package
+      options:
+        - Package author/maintainer
+        - Contributor
+        - User/advocate
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: submitter-name
+    attributes:
+      label: Your Name
+      placeholder: Jane Doe
+
+  - type: textarea
+    id: similar-packages
+    attributes:
+      label: Similar Packages
+      description: List related packages (helps with categorization)
+      placeholder: Similar to packageX but focuses on...
+
+  - type: textarea
+    id: unique-features
+    attributes:
+      label: What Makes This Package Unique?
+      description: How does this package differ from alternatives?
