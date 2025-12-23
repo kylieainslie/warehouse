@@ -1,0 +1,169 @@
+name: Process Package Submission
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  process-submission:
+    # Only run when 'approved' label is added to a package submission
+    if: github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'package-submission')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Parse issue and add package
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const issue = context.payload.issue;
+            const body = issue.body;
+
+            // Parse the issue form fields
+            function parseField(body, fieldName) {
+              // GitHub issue forms use ### headers for field labels
+              const regex = new RegExp(`### ${fieldName}\\s*\\n\\s*([\\s\\S]*?)(?=\\n###|$)`, 'i');
+              const match = body.match(regex);
+              if (match) {
+                let value = match[1].trim();
+                // Handle "None" or "_No response_" as empty
+                if (value === 'None' || value === '_No response_' || value === 'null') {
+                  return '';
+                }
+                return value;
+              }
+              return '';
+            }
+
+            // Parse checkbox fields
+            function parseCheckboxes(body, fieldName) {
+              const regex = new RegExp(`### ${fieldName}\\s*\\n([\\s\\S]*?)(?=\\n###|$)`, 'i');
+              const match = body.match(regex);
+              if (match) {
+                const checkboxSection = match[1];
+                const checked = [];
+                const checkboxRegex = /- \[x\] (.+)/gi;
+                let checkMatch;
+                while ((checkMatch = checkboxRegex.exec(checkboxSection)) !== null) {
+                  checked.push(checkMatch[1].trim());
+                }
+                return checked;
+              }
+              return [];
+            }
+
+            // Extract package data from issue
+            const packageData = {
+              id: `submitted-${issue.number}`,
+              package_name: parseField(body, 'Package Name'),
+              title: parseField(body, 'Short Description'),
+              description: parseField(body, 'Detailed Description'),
+              url: parseField(body, 'Package URL'),
+              primary_category: parseField(body, 'Primary Category').toLowerCase().replace(/\s+/g, '-'),
+              keywords: parseField(body, 'Keywords').split(',').map(k => k.trim()).filter(k => k),
+              use_cases: parseField(body, 'Common Use Cases'),
+              docs_url: parseField(body, 'Documentation URL'),
+              paper_doi: parseField(body, 'Related Paper \\(DOI\\)'),
+              install_command: parseField(body, 'Installation Command'),
+              quality_indicators: parseCheckboxes(body, 'Quality Indicators'),
+              submitter_relationship: parseField(body, 'Your Relationship to the Package'),
+              submitter_name: parseField(body, 'Your Name'),
+              similar_packages: parseField(body, 'Similar Packages'),
+              unique_features: parseField(body, 'What Makes This Package Unique\\?'),
+              source_universe: 'submitted',
+              github_issue: issue.number,
+              submitted_at: new Date().toISOString(),
+              score: null,
+              stars: 0
+            };
+
+            console.log('Parsed package data:', JSON.stringify(packageData, null, 2));
+
+            // Validate required fields
+            if (!packageData.package_name) {
+              core.setFailed('Package name is required');
+              return;
+            }
+
+            // Load existing submitted packages
+            const submittedPath = 'website/data/submitted-packages.json';
+            let submitted = { packages: [], updated_at: null };
+
+            if (fs.existsSync(submittedPath)) {
+              submitted = JSON.parse(fs.readFileSync(submittedPath, 'utf8'));
+            }
+
+            // Check for duplicates
+            const exists = submitted.packages.some(p =>
+              p.package_name.toLowerCase() === packageData.package_name.toLowerCase()
+            );
+
+            if (exists) {
+              console.log('Package already exists, updating...');
+              submitted.packages = submitted.packages.map(p =>
+                p.package_name.toLowerCase() === packageData.package_name.toLowerCase()
+                  ? packageData
+                  : p
+              );
+            } else {
+              submitted.packages.push(packageData);
+            }
+
+            submitted.updated_at = new Date().toISOString();
+
+            // Ensure directory exists
+            const dir = path.dirname(submittedPath);
+            if (!fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+
+            // Write updated file
+            fs.writeFileSync(submittedPath, JSON.stringify(submitted, null, 2));
+
+            console.log(`Added package: ${packageData.package_name}`);
+            console.log(`Total submitted packages: ${submitted.packages.length}`);
+
+            // Set outputs for later steps
+            core.exportVariable('PACKAGE_NAME', packageData.package_name);
+            core.exportVariable('ISSUE_NUMBER', issue.number);
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add website/data/submitted-packages.json
+          git commit -m "Add submitted package: $PACKAGE_NAME
+
+          From issue #$ISSUE_NUMBER"
+          git push
+
+      - name: Close issue with comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = process.env.ISSUE_NUMBER;
+            const packageName = process.env.PACKAGE_NAME;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(issueNumber),
+              body: `✅ **Package "${packageName}" has been added to The Warehouse!**\n\nIt will appear on the site after the next build. Thank you for your submission!`
+            });
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt(issueNumber),
+              state: 'closed'
+            });

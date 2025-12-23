@@ -43,6 +43,10 @@ jobs:
         run: |
           Rscript -e 'source("R/build_database.R"); build_database()'
 
+      - name: Import submitted packages
+        run: |
+          Rscript -e 'source("R/import_submitted.R"); import_submitted_packages()'
+
       - name: Export JSON files
         run: |
           Rscript -e 'source("R/export_json.R"); export_all()'
