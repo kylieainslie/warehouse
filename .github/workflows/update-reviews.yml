@@ -11,6 +11,10 @@ jobs:
   update-reviews:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: website
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,12 +25,8 @@ jobs:
           use-public-rspm: true
 
       - name: Install R packages
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: |
-            googlesheets4
-            jsonlite
-            gargle
+        run: |
+          Rscript -e 'install.packages(c("googlesheets4", "jsonlite", "gargle"))'
 
       - name: Create service account credentials file
         run: |
