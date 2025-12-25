@@ -10,6 +10,7 @@ on:
 jobs:
   update-packages:
     runs-on: ubuntu-latest
+    timeout-minutes: 120  # Allow 2 hours for comprehensive scraping
 
     defaults:
       run:
@@ -68,5 +69,9 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -m "Update packages from scraped sources
 
-          Weekly automated update from R-universe, GitHub, and CRAN."
+          Weekly automated update with discovery-based scraping:
+          - R-universe priority universes + topic search
+          - GitHub topic search + organization search
+          - CRAN Task Views + keyword categorization
+          - Bioconductor packages"
           git push
