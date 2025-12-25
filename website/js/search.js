@@ -372,29 +372,9 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Search cache (localStorage + pre-seeded common queries)
+// Search cache (localStorage only - no pre-seeded results to ensure new packages are discoverable)
 const CACHE_KEY = 'warehouse_search_cache';
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
-
-// Pre-seeded cache for common epidemiology/R searches
-const SEEDED_CACHE = {
-  'serial interval': ['EpiEstim', 'mitey', 'epiparameter', 'epitrix', 'incidence2', 'coarseDataTools'],
-  'estimate serial interval': ['EpiEstim', 'mitey', 'epiparameter', 'epitrix', 'incidence2'],
-  'reproduction number': ['EpiEstim', 'mitey', 'epitrix', 'R0', 'earlyR', 'projections'],
-  'epidemic curves': ['incidence2', 'incidence', 'epicontacts', 'EpiEstim'],
-  'contact tracing': ['epicontacts', 'epitrace', 'epiflows'],
-  'outbreak analysis': ['outbreaks', 'incidence2', 'epicontacts', 'EpiEstim', 'projections'],
-  'data visualization': ['ggplot2', 'plotly', 'highcharter', 'echarts4r', 'ggiraph'],
-  'time series': ['forecast', 'tseries', 'zoo', 'xts', 'fable'],
-  'machine learning': ['tidymodels', 'caret', 'mlr3', 'xgboost', 'ranger'],
-  'web scraping': ['rvest', 'httr2', 'polite', 'RSelenium'],
-  'spatial analysis': ['sf', 'terra', 'leaflet', 'tmap', 'stars'],
-  'data manipulation': ['dplyr', 'tidyr', 'data.table', 'purrr', 'stringr'],
-  'regression': ['lme4', 'brms', 'rstanarm', 'glmnet', 'mgcv'],
-  'survival analysis': ['survival', 'survminer', 'flexsurv', 'rstpm2'],
-  'phylogenetics': ['ape', 'ggtree', 'phangorn', 'treeio'],
-  'genomics': ['Biostrings', 'GenomicRanges', 'DESeq2', 'edgeR']
-};
 
 function getSearchCache() {
   try {
@@ -423,9 +403,6 @@ function setSearchCache(query, packageNames) {
 
 function getCachedSearch(query) {
   const q = query.toLowerCase();
-  // Check seeded cache first
-  if (SEEDED_CACHE[q]) return SEEDED_CACHE[q];
-  // Then check user cache
   const cache = getSearchCache();
   return cache[q] || null;
 }
