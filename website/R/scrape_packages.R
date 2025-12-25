@@ -21,6 +21,7 @@ PRIORITY_UNIVERSES <- list(
     "cmmid",                    # LSHTM Centre for Mathematical Modelling
     "jameel-institute",         # Jameel Institute
     "epiforecasts",             # Epiforecasts team
+    "epinowcast",               # Epinowcast team (nowcasting/forecasting)
     "r-epidemics-consortium",   # RECON
     "covid19r",                 # COVID-19 R packages
     "thinklab"                  # Thinklab
