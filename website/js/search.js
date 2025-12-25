@@ -249,9 +249,6 @@ function renderPackageCard(pkg) {
   // Get logo URL
   const logoUrl = getPackageLogoUrl(pkg);
 
-  // Format exports preview
-  const exportsHtml = renderExportPreview(pkg.exports);
-
   // Format topics/tags
   const topicsHtml = renderTopics(pkg.topics);
 
@@ -283,7 +280,6 @@ function renderPackageCard(pkg) {
         <span class="meta-item" title="Category"><i class="bi bi-folder"></i> ${escapeHtml(pkg.primary_category || 'Uncategorized')}</span>
         <span class="meta-item" title="Version"><i class="bi bi-tag"></i> ${escapeHtml(pkg.version || '?')}</span>
       </div>
-      ${exportsHtml}
       ${topicsHtml}
       <div class="package-actions">
         <button class="btn-review" onclick="openFeedback('${escapeHtml(pkg.package_name)}')">
