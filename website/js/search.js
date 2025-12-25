@@ -270,7 +270,7 @@ function renderPackageCard(pkg) {
           <h3 class="package-title">
             <a href="${escapeHtml(packagePageUrl)}">${escapeHtml(pkg.package_name)}</a>
           </h3>
-          <span class="package-score ${scoreClass}" title="R-universe quality score">${score}</span>
+          ${scoreNum ? `<span class="package-score ${scoreClass}" title="R-universe quality score">${score}</span>` : ''}
         </div>
       </div>
       <p class="package-description">${escapeHtml(pkg.title || pkg.description || 'No description available')}</p>

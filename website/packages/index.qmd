@@ -288,7 +288,7 @@ function renderPackagePage(pkg, reviews, related) {
         <h1 class="pkg-name">${escapeHtml(pkg.package_name)}</h1>
         <p class="pkg-title">${escapeHtml(pkg.title || '')}</p>
         <div class="pkg-badges">
-          ${pkg.score ? `<span class="pkg-badge badge-score ${getScoreClass(pkg.score)}">Score: ${pkg.score.toFixed(1)}</span>` : ''}
+          ${pkg.score && pkg.score > 0 ? `<span class="pkg-badge badge-score ${getScoreClass(pkg.score)}">Score: ${pkg.score.toFixed(1)}</span>` : ''}
           ${pkg.stars ? `<span class="pkg-badge badge-stars">⭐ ${pkg.stars.toLocaleString()}</span>` : ''}
           ${pkg.version ? `<span class="pkg-badge badge-version">v${escapeHtml(pkg.version)}</span>` : ''}
           ${pkg.source_universe ? `<span class="pkg-badge badge-universe">${escapeHtml(pkg.source_universe)}</span>` : ''}
