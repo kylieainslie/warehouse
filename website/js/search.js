@@ -378,9 +378,9 @@ const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
 // Pre-seeded cache for common epidemiology/R searches
 const SEEDED_CACHE = {
-  'serial interval': ['EpiEstim', 'epiparameter', 'epitrix', 'incidence2', 'coarseDataTools'],
-  'estimate serial interval': ['EpiEstim', 'epiparameter', 'epitrix', 'incidence2'],
-  'reproduction number': ['EpiEstim', 'epitrix', 'R0', 'earlyR', 'projections'],
+  'serial interval': ['EpiEstim', 'mitey', 'epiparameter', 'epitrix', 'incidence2', 'coarseDataTools'],
+  'estimate serial interval': ['EpiEstim', 'mitey', 'epiparameter', 'epitrix', 'incidence2'],
+  'reproduction number': ['EpiEstim', 'mitey', 'epitrix', 'R0', 'earlyR', 'projections'],
   'epidemic curves': ['incidence2', 'incidence', 'epicontacts', 'EpiEstim'],
   'contact tracing': ['epicontacts', 'epitrace', 'epiflows'],
   'outbreak analysis': ['outbreaks', 'incidence2', 'epicontacts', 'EpiEstim', 'projections'],
