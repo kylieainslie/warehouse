@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '<div class="package-header">';
       html += '<h3 class="package-title">';
       html += '<img src="' + logoUrl + '" class="package-logo" onerror="this.style.display=\'none\'" alt="" />';
-      html += '<a href="' + getPackageUrl(pkg) + '" target="_blank">' + pkg.package_name + '</a>';
+      html += '<a href="/packages/' + encodeURIComponent(pkg.package_name) + '">' + pkg.package_name + '</a>';
       html += '</h3>';
       html += '<span class="package-score">' + (typeof pkg.score === 'number' ? pkg.score.toFixed(1) : 'N/A') + '</span>';
       html += '</div>';

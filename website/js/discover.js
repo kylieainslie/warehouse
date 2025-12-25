@@ -90,8 +90,10 @@ function createDiscoverCard(pkg) {
   const downloads = formatNumber(pkg.downloads || 0);
   const stars = formatNumber(pkg.stars || 0);
 
+  const packagePageUrl = `/packages/${encodeURIComponent(pkg.name)}`;
+
   return `
-    <a href="${pkg.url}" target="_blank" rel="noopener noreferrer" class="discover-card">
+    <a href="${packagePageUrl}" class="discover-card">
       <div class="discover-card-header">
         <span class="discover-card-name">${escapeHtml(pkg.name)}</span>
         <span class="discover-card-version">${escapeHtml(pkg.version || '')}</span>

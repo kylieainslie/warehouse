@@ -240,8 +240,11 @@ function renderPackageCard(pkg) {
   const score = scoreNum ? scoreNum.toFixed(1) : 'N/A';
   const scoreClass = scoreNum >= 80 ? 'score-high' : scoreNum >= 50 ? 'score-medium' : 'score-low';
 
-  // Get package URL - prefer repository, then url
-  const pkgUrl = pkg.repository || pkg.url || `https://r-universe.dev/search?q=${pkg.package_name}`;
+  // Internal package page URL
+  const packagePageUrl = `/packages/${encodeURIComponent(pkg.package_name)}`;
+
+  // External source URL - prefer repository, then url
+  const sourceUrl = pkg.repository || pkg.url || `https://r-universe.dev/search?q=${pkg.package_name}`;
 
   // Get logo URL
   const logoUrl = getPackageLogoUrl(pkg);
@@ -268,7 +271,7 @@ function renderPackageCard(pkg) {
         ${logoHtml}
         <div class="package-header-text">
           <h3 class="package-title">
-            <a href="${escapeHtml(pkgUrl)}" target="_blank" rel="noopener">${escapeHtml(pkg.package_name)}</a>
+            <a href="${escapeHtml(packagePageUrl)}">${escapeHtml(pkg.package_name)}</a>
           </h3>
           <span class="package-score ${scoreClass}" title="R-universe quality score">${score}</span>
         </div>
@@ -286,8 +289,11 @@ function renderPackageCard(pkg) {
         <button class="btn-review" onclick="openFeedback('${escapeHtml(pkg.package_name)}')">
           <i class="bi bi-star"></i> Review
         </button>
-        <a href="${escapeHtml(pkgUrl)}" class="btn-view" target="_blank" rel="noopener">
-          <i class="bi bi-box-arrow-up-right"></i> View
+        <a href="${escapeHtml(packagePageUrl)}" class="btn-view">
+          <i class="bi bi-info-circle"></i> Details
+        </a>
+        <a href="${escapeHtml(sourceUrl)}" class="btn-source" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> Source
         </a>
       </div>
     </div>

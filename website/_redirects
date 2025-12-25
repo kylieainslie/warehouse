@@ -1,0 +1,4 @@
+# Netlify redirects for dynamic package pages
+# All /packages/* URLs serve the same template, JavaScript reads the path
+
+/packages/*  /packages/index.html  200

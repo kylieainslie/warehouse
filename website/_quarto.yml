@@ -4,6 +4,7 @@ project:
   resources:
     - js/**
     - data/**
+    - _redirects
 
 website:
   title: "The Warehouse"

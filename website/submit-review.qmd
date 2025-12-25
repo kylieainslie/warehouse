@@ -109,6 +109,10 @@ format:
 
 <div class="review-form-container">
 
+<div id="package-info" class="package-review-info" style="display:none; background: #ecfdf5; border: 1px solid #10b981; padding: 1em 1.5em; border-radius: 8px; margin-bottom: 1.5em;">
+  <p style="margin:0; font-size: 1.1em;">Reviewing: <strong id="package-name-display" style="color: #059669;"></strong></p>
+</div>
+
 <div class="form-intro">
   <h3>Share Your Experience</h3>
   <p>Your reviews help the R community in two ways:</p>
@@ -121,7 +125,21 @@ format:
 <div class="form-link-section">
   <a href="https://forms.gle/suhjrBJKpxD63gkM8" target="_blank" class="submit-btn">Submit a Review</a>
   <p style="margin-top: 1em; color: #666; font-size: 0.9em;">Opens Google Form in a new tab</p>
+  <p id="copy-hint" style="display:none; margin-top: 0.5em; color: #059669; font-size: 0.9em;">📋 Enter "<span id="package-name-copy"></span>" as the package name in the form</p>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const pkgName = urlParams.get('pkg');
+  if (pkgName) {
+    document.getElementById('package-info').style.display = 'block';
+    document.getElementById('package-name-display').textContent = pkgName;
+    document.getElementById('copy-hint').style.display = 'block';
+    document.getElementById('package-name-copy').textContent = pkgName;
+  }
+});
+</script>
 
 <div class="guidelines">
   <h4>Review Guidelines</h4>

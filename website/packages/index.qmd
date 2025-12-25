@@ -1,0 +1,440 @@
+---
+title: "Package Details"
+format:
+  html:
+    toc: false
+    page-layout: full
+    include-in-header:
+      text: |
+        <style>
+        .pkg-container { max-width: 100%; margin: 0 auto; padding: 0 1em; box-sizing: border-box; }
+        #quarto-document-content { max-width: 100% !important; width: 100% !important; }
+        #quarto-content { max-width: 100% !important; width: 100% !important; padding: 0 !important; }
+        #quarto-content.page-layout-article { max-width: 100% !important; }
+        .quarto-container { max-width: 100% !important; width: 100% !important; }
+        .content { max-width: 100% !important; width: 100% !important; }
+        main.content { max-width: 100% !important; width: 100% !important; padding-left: 1em !important; padding-right: 1em !important; }
+        main#quarto-document-content { max-width: 100% !important; width: 100% !important; }
+        .page-columns { max-width: 100% !important; }
+        .column-body { max-width: 100% !important; width: 100% !important; }
+        body.fullcontent main.content { max-width: 100% !important; }
+        .pkg-header { display: flex; gap: 1.5em; align-items: flex-start; margin-bottom: 2em; flex-wrap: wrap; }
+        .pkg-logo { width: 100px; height: 100px; border-radius: 12px; object-fit: contain; background: #f8fafc; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .pkg-logo-placeholder { width: 100px; height: 100px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5em; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .pkg-title-section { flex: 1; min-width: 200px; }
+        .pkg-name { font-size: 2em; margin: 0 0 0.25em 0; display: flex; align-items: center; gap: 0.5em; flex-wrap: wrap; }
+        .pkg-title { color: #666; margin: 0; font-size: 1.1em; font-weight: normal; }
+        .pkg-badges { display: flex; gap: 0.75em; margin-top: 0.75em; flex-wrap: wrap; }
+        .pkg-badge { display: inline-flex; align-items: center; gap: 0.3em; padding: 0.3em 0.6em; border-radius: 6px; font-size: 0.85em; font-weight: 500; }
+        .badge-score { background: #dcfce7; color: #166534; }
+        .badge-score.medium { background: #fef9c3; color: #854d0e; }
+        .badge-score.low { background: #fee2e2; color: #991b1b; }
+        .badge-stars { background: #fef3c7; color: #92400e; }
+        .badge-version { background: #e0e7ff; color: #3730a3; }
+        .badge-universe { background: #f3e8ff; color: #6b21a8; }
+
+        .pkg-actions { display: flex; gap: 0.75em; flex-wrap: wrap; margin: 1.5em 0; }
+        .pkg-action-btn { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.6em 1em; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: all 0.2s; }
+        .btn-primary { background: #2563eb; color: white; }
+        .btn-primary:hover { background: #1d4ed8; color: white; }
+        .btn-secondary { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+        .btn-secondary:hover { background: #e2e8f0; color: #1e293b; }
+
+        .pkg-install { background: #1e293b; color: #e2e8f0; padding: 1em; border-radius: 8px; font-family: monospace; margin: 1em 0; display: flex; justify-content: space-between; align-items: center; gap: 1em; overflow: hidden; }
+        .pkg-install code { background: none; flex: 1; overflow-x: auto; white-space: nowrap; display: block; scrollbar-width: thin; }
+        .btn-copy { background: #334155; border: none; color: #94a3b8; padding: 0.4em 0.8em; border-radius: 4px; cursor: pointer; font-size: 0.85em; }
+        .btn-copy:hover { background: #475569; color: #e2e8f0; }
+        .btn-copy.copied { background: #166534; color: white; }
+
+        .pkg-section { margin: 2em 0; width: 100%; }
+        .pkg-section h2 { font-size: 1.3em; margin-bottom: 0.75em; padding-bottom: 0.5em; border-bottom: 2px solid #e2e8f0; width: 100%; }
+
+        .pkg-description { line-height: 1.7; color: #374151; width: 100%; text-align: justify; }
+
+        .pkg-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; }
+        .pkg-meta-item { background: #f8fafc; padding: 1em; border-radius: 8px; }
+        .pkg-meta-label { font-size: 0.8em; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3em; }
+        .pkg-meta-value { color: #1e293b; font-weight: 500; }
+        .pkg-meta-value a { color: #2563eb; text-decoration: none; }
+        .pkg-meta-value a:hover { text-decoration: underline; }
+
+        .pkg-topics { display: flex; flex-wrap: wrap; gap: 0.5em; margin-top: 1em; }
+        .pkg-topic { background: #e0f2fe; color: #0369a1; padding: 0.3em 0.6em; border-radius: 4px; font-size: 0.85em; }
+
+        .pkg-reviews-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1em; }
+        .pkg-reviews-stats { display: flex; align-items: center; gap: 1em; }
+        .reviews-avg { font-size: 2em; font-weight: bold; color: #1e293b; }
+        .reviews-stars { color: #f59e0b; font-size: 1.2em; }
+        .reviews-count { color: #64748b; }
+
+        .review-item { border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25em; margin: 1em 0; }
+        .review-header { display: flex; gap: 1em; align-items: center; margin-bottom: 0.75em; flex-wrap: wrap; }
+        .review-author { font-weight: 600; color: #1e293b; }
+        .review-stars { color: #f59e0b; }
+        .review-date { color: #64748b; font-size: 0.85em; }
+        .review-badges { display: flex; flex-wrap: wrap; gap: 0.4em; margin: 0.5em 0; }
+        .review-badge { display: inline-block; padding: 0.2em 0.5em; border-radius: 4px; font-size: 0.75em; font-weight: 500; }
+        .badge-needs { background: #dcfce7; color: #166534; }
+        .badge-curve { background: #dbeafe; color: #1e40af; }
+        .badge-docs { background: #f3e8ff; color: #6b21a8; }
+        .review-content { color: #374151; line-height: 1.6; margin: 0.75em 0; }
+        .review-tip { background: #f0f9ff; border-left: 3px solid #2563eb; padding: 0.6em 1em; margin-top: 0.75em; font-size: 0.9em; }
+        .no-reviews { text-align: center; padding: 2em; color: #64748b; background: #f8fafc; border-radius: 8px; }
+
+        .related-packages { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1em; }
+        .related-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1em; text-decoration: none; color: inherit; transition: all 0.2s; }
+        .related-card:hover { border-color: #2563eb; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1); }
+        .related-card h4 { margin: 0 0 0.3em 0; color: #1e293b; }
+        .related-card p { margin: 0; font-size: 0.85em; color: #64748b; }
+
+        .pkg-loading { text-align: center; padding: 4em; color: #64748b; }
+        .pkg-not-found { text-align: center; padding: 4em; }
+        .pkg-not-found h2 { color: #991b1b; }
+        .pkg-not-found p { color: #64748b; margin: 1em 0; }
+        </style>
+---
+
+```{=html}
+<div class="pkg-container">
+  <div id="package-content">
+    <div class="pkg-loading">Loading package details...</div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+  const container = document.getElementById('package-content');
+
+  // Extract package name from URL
+  // Support both: /packages/ggplot2 (Netlify) and ?pkg=ggplot2 (local testing)
+  const urlParams = new URLSearchParams(window.location.search);
+  const pathParts = window.location.pathname.split('/').filter(p => p);
+  let packageName = urlParams.get('pkg') || pathParts[pathParts.length - 1];
+
+  // Handle /packages/ with no package name
+  if (packageName === 'packages' || packageName === 'index.html' || !packageName) {
+    container.innerHTML = `
+      <div class="pkg-not-found">
+        <h2>No Package Specified</h2>
+        <p>Please search for a package or browse categories.</p>
+        <a href="/" class="pkg-action-btn btn-primary">Go to Search</a>
+      </div>
+    `;
+    return;
+  }
+
+  // Decode URL-encoded package name
+  packageName = decodeURIComponent(packageName);
+
+  try {
+    // Fetch package data and reviews in parallel
+    const [packagesRes, reviewsRes] = await Promise.all([
+      fetch('/data/packages.json'),
+      fetch('/data/reviews.json').catch(() => ({ ok: false }))
+    ]);
+
+    const packagesData = await packagesRes.json();
+    const reviewsData = reviewsRes.ok ? await reviewsRes.json() : { reviews: [] };
+
+    // Find the package (case-insensitive)
+    const pkg = packagesData.packages.find(p =>
+      p.package_name.toLowerCase() === packageName.toLowerCase()
+    );
+
+    if (!pkg) {
+      container.innerHTML = `
+        <div class="pkg-not-found">
+          <h2>Package Not Found</h2>
+          <p>We couldn't find a package named "${escapeHtml(packageName)}".</p>
+          <a href="/" class="pkg-action-btn btn-primary">Search for Packages</a>
+        </div>
+      `;
+      document.title = 'Package Not Found - The Warehouse';
+      return;
+    }
+
+    // Update page title
+    document.title = `${pkg.package_name} - The Warehouse`;
+
+    // Get reviews for this package
+    const pkgReviews = (reviewsData.reviews || []).filter(r =>
+      r.package_name.toLowerCase() === pkg.package_name.toLowerCase()
+    );
+
+    // Find related packages (same category)
+    const relatedPkgs = packagesData.packages
+      .filter(p => p.primary_category === pkg.primary_category && p.package_name !== pkg.package_name)
+      .sort((a, b) => (b.stars || 0) - (a.stars || 0))
+      .slice(0, 6);
+
+    // Render the package page
+    container.innerHTML = renderPackagePage(pkg, pkgReviews, relatedPkgs);
+
+  } catch (err) {
+    console.error('Error loading package:', err);
+    container.innerHTML = `
+      <div class="pkg-not-found">
+        <h2>Error Loading Package</h2>
+        <p>There was an error loading the package data. Please try again.</p>
+        <a href="/" class="pkg-action-btn btn-primary">Go to Search</a>
+      </div>
+    `;
+  }
+});
+
+function escapeHtml(text) {
+  if (!text) return '';
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function getLogoUrl(pkg) {
+  const name = pkg.package_name;
+  // Try to get GitHub logo from URL (most reliable)
+  const urls = [pkg.url, pkg.repository, pkg.bug_reports].filter(Boolean).join(' ').replace(/\n/g, ' ');
+  const ghMatch = urls.match(/github\.com\/([^\/]+)\/([^\/\s,\n]+)/);
+  if (ghMatch) {
+    const [, owner, repo] = ghMatch;
+    const cleanRepo = repo.replace(/\.git$/, '').replace(/[\/\s].*$/, '');
+    return `https://raw.githubusercontent.com/${owner}/${cleanRepo}/HEAD/man/figures/logo.png`;
+  }
+  // Fallback: try r-universe with universe prefix
+  const universe = pkg.source_universe;
+  if (universe && universe !== 'cran' && universe !== 'cran-direct') {
+    return `https://${universe}.r-universe.dev/${name}/logo.png`;
+  }
+  return null; // Will show placeholder
+}
+
+function renderStars(rating) {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    stars += i <= rating ? '★' : '☆';
+  }
+  return stars;
+}
+
+function getScoreClass(score) {
+  if (score >= 70) return '';
+  if (score >= 40) return 'medium';
+  return 'low';
+}
+
+function getInstallCommand(pkg) {
+  if (pkg.source_universe === 'cran' || pkg.source_universe === 'cran-direct') {
+    return `install.packages("${pkg.package_name}")`;
+  }
+  if (pkg.source_universe) {
+    return `install.packages("${pkg.package_name}", repos = c("https://${pkg.source_universe}.r-universe.dev", "https://cloud.r-project.org"))`;
+  }
+  // Try to extract GitHub repo from URL
+  const url = pkg.url || pkg.repository || '';
+  const githubMatch = url.match(/github\.com\/([^\/]+\/[^\/,\s]+)/);
+  if (githubMatch) {
+    return `remotes::install_github("${githubMatch[1]}")`;
+  }
+  return `install.packages("${pkg.package_name}")`;
+}
+
+function parseUrls(urlString) {
+  if (!urlString) return [];
+  return urlString.split(/[,\n]/).map(u => u.trim()).filter(u => u && u.startsWith('http'));
+}
+
+function getLinkType(url) {
+  if (url.includes('github.com')) return { icon: '📂', label: 'GitHub' };
+  if (url.includes('gitlab.com')) return { icon: '📂', label: 'GitLab' };
+  if (url.includes('r-universe.dev')) return { icon: '🌐', label: 'R-universe' };
+  if (url.includes('cran.r-project.org')) return { icon: '📦', label: 'CRAN' };
+  if (url.includes('bioconductor.org')) return { icon: '🧬', label: 'Bioconductor' };
+  return { icon: '🔗', label: 'Website' };
+}
+
+function renderPackagePage(pkg, reviews, related) {
+  const logoUrl = getLogoUrl(pkg);
+  const urls = parseUrls(pkg.url);
+  const bugUrl = pkg.bug_reports || '';
+  const installCmd = getInstallCommand(pkg);
+
+  // Calculate review stats
+  let avgRating = 0;
+  let ratingCount = 0;
+  reviews.forEach(r => {
+    if (r.rating) {
+      avgRating += r.rating;
+      ratingCount++;
+    }
+  });
+  avgRating = ratingCount > 0 ? (avgRating / ratingCount).toFixed(1) : 0;
+
+  // Parse topics
+  let topics = [];
+  if (pkg.topics) {
+    if (Array.isArray(pkg.topics)) {
+      topics = pkg.topics.flat();
+    } else if (typeof pkg.topics === 'string') {
+      topics = pkg.topics.split('|').filter(t => t);
+    }
+  }
+
+  let html = `
+    <div class="pkg-header">
+      ${logoUrl
+        ? `<img src="${logoUrl}" class="pkg-logo" onerror="this.outerHTML='<div class=\\'pkg-logo-placeholder\\'>${pkg.package_name.charAt(0).toUpperCase()}</div>'" alt="${pkg.package_name} logo" />`
+        : `<div class="pkg-logo-placeholder">${pkg.package_name.charAt(0).toUpperCase()}</div>`
+      }
+      <div class="pkg-title-section">
+        <h1 class="pkg-name">${escapeHtml(pkg.package_name)}</h1>
+        <p class="pkg-title">${escapeHtml(pkg.title || '')}</p>
+        <div class="pkg-badges">
+          ${pkg.score ? `<span class="pkg-badge badge-score ${getScoreClass(pkg.score)}">Score: ${pkg.score.toFixed(1)}</span>` : ''}
+          ${pkg.stars ? `<span class="pkg-badge badge-stars">⭐ ${pkg.stars.toLocaleString()}</span>` : ''}
+          ${pkg.version ? `<span class="pkg-badge badge-version">v${escapeHtml(pkg.version)}</span>` : ''}
+          ${pkg.source_universe ? `<span class="pkg-badge badge-universe">${escapeHtml(pkg.source_universe)}</span>` : ''}
+        </div>
+      </div>
+    </div>
+
+    <div class="pkg-install">
+      <code id="install-cmd">${escapeHtml(installCmd)}</code>
+      <button class="btn-copy" onclick="copyInstall()">Copy</button>
+    </div>
+
+    <div class="pkg-actions">
+      ${urls.map(url => {
+        const linkType = getLinkType(url);
+        return `<a href="${url}" target="_blank" class="pkg-action-btn btn-secondary">${linkType.icon} ${linkType.label}</a>`;
+      }).join('')}
+      ${bugUrl ? `<a href="${bugUrl}" target="_blank" class="pkg-action-btn btn-secondary">🐛 Report Issue</a>` : ''}
+      <a href="/submit-review.html?pkg=${encodeURIComponent(pkg.package_name)}" class="pkg-action-btn btn-primary">✍️ Write Review</a>
+    </div>
+  `;
+
+  // Description section
+  if (pkg.description) {
+    html += `
+      <div class="pkg-section">
+        <h2>Description</h2>
+        <div class="pkg-description">${escapeHtml(pkg.description).replace(/\n/g, '<br>')}</div>
+      </div>
+    `;
+  }
+
+  // Metadata section
+  html += `
+    <div class="pkg-section">
+      <h2>Details</h2>
+      <div class="pkg-meta">
+        ${pkg.maintainer ? `
+          <div class="pkg-meta-item">
+            <div class="pkg-meta-label">Maintainer</div>
+            <div class="pkg-meta-value">${escapeHtml(pkg.maintainer.replace(/<[^>]+>/g, ''))}</div>
+          </div>
+        ` : ''}
+        ${pkg.license ? `
+          <div class="pkg-meta-item">
+            <div class="pkg-meta-label">License</div>
+            <div class="pkg-meta-value">${escapeHtml(pkg.license)}</div>
+          </div>
+        ` : ''}
+        ${pkg.primary_category ? `
+          <div class="pkg-meta-item">
+            <div class="pkg-meta-label">Category</div>
+            <div class="pkg-meta-value"><a href="/categories/${pkg.primary_category}.html">${escapeHtml(pkg.primary_category)}</a></div>
+          </div>
+        ` : ''}
+        ${pkg.registered ? `
+          <div class="pkg-meta-item">
+            <div class="pkg-meta-label">Registered</div>
+            <div class="pkg-meta-value">${escapeHtml(pkg.registered)}</div>
+          </div>
+        ` : ''}
+      </div>
+      ${topics.length > 0 ? `
+        <div class="pkg-topics">
+          ${topics.map(t => `<span class="pkg-topic">${escapeHtml(t)}</span>`).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+
+  // Reviews section
+  html += `
+    <div class="pkg-section">
+      <div class="pkg-reviews-header">
+        <h2>Reviews</h2>
+        ${reviews.length > 0 ? `
+          <div class="pkg-reviews-stats">
+            <span class="reviews-avg">${avgRating}</span>
+            <span class="reviews-stars">${renderStars(Math.round(avgRating))}</span>
+            <span class="reviews-count">(${reviews.length} review${reviews.length === 1 ? '' : 's'})</span>
+          </div>
+        ` : ''}
+      </div>
+  `;
+
+  if (reviews.length === 0) {
+    html += `
+      <div class="no-reviews">
+        <p>No reviews yet for this package.</p>
+        <a href="/submit-review.html?pkg=${encodeURIComponent(pkg.package_name)}" class="pkg-action-btn btn-primary">Be the first to review</a>
+      </div>
+    `;
+  } else {
+    reviews.forEach(r => {
+      html += `
+        <div class="review-item">
+          <div class="review-header">
+            <span class="review-author">${escapeHtml(r.author || 'Anonymous')}</span>
+            ${r.rating ? `<span class="review-stars">${renderStars(r.rating)}</span>` : ''}
+            <span class="review-date">${new Date(r.created_at).toLocaleDateString()}</span>
+          </div>
+          <div class="review-badges">
+            ${r.met_needs ? `<span class="review-badge badge-needs">Needs: ${escapeHtml(r.met_needs)}</span>` : ''}
+            ${r.learning_curve ? `<span class="review-badge badge-curve">Learning: ${escapeHtml(r.learning_curve)}</span>` : ''}
+            ${r.documentation ? `<span class="review-badge badge-docs">Docs: ${escapeHtml(r.documentation)}</span>` : ''}
+          </div>
+          ${r.use_case ? `<div class="review-content"><strong>Used for:</strong> ${escapeHtml(r.use_case)}</div>` : ''}
+          ${r.best_thing ? `<div class="review-content"><strong>Best thing:</strong> ${escapeHtml(r.best_thing)}</div>` : ''}
+          ${r.tips ? `<div class="review-tip"><strong>Tip:</strong> ${escapeHtml(r.tips)}</div>` : ''}
+        </div>
+      `;
+    });
+  }
+  html += `</div>`;
+
+  // Related packages section
+  if (related.length > 0) {
+    html += `
+      <div class="pkg-section">
+        <h2>Related Packages</h2>
+        <div class="related-packages">
+          ${related.map(p => `
+            <a href="/packages/${encodeURIComponent(p.package_name)}" class="related-card">
+              <h4>${escapeHtml(p.package_name)}</h4>
+              <p>${escapeHtml((p.title || '').substring(0, 60))}${(p.title || '').length > 60 ? '...' : ''}</p>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  return html;
+}
+
+function copyInstall() {
+  const cmd = document.getElementById('install-cmd').textContent;
+  navigator.clipboard.writeText(cmd).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
+```

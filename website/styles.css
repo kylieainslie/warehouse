@@ -606,6 +606,25 @@ tr:hover {
   background: #5568d3;
 }
 
+.btn-source {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-source:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
 .results-count {
   color: #6a737d;
   margin-bottom: 1rem;

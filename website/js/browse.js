@@ -78,13 +78,26 @@ function getPackageInfo(packageName) {
   return packagesData[packageName.toLowerCase()] || null;
 }
 
-// Get package logo URL
+// Get package logo URL - try GitHub first, then r-universe
 function getPackageLogoUrl(pkg) {
   if (!pkg) return null;
-  if (pkg.universe) {
-    return `https://${pkg.universe}.r-universe.dev/${pkg.package_name}/logo.png`;
+
+  // Try to get GitHub logo from URL (most reliable)
+  const urls = [pkg.url, pkg.repository, pkg.bug_reports].filter(Boolean).join(' ').replace(/\n/g, ' ');
+  const ghMatch = urls.match(/github\.com\/([^\/]+)\/([^\/\s,\n]+)/);
+  if (ghMatch) {
+    const [, owner, repo] = ghMatch;
+    const cleanRepo = repo.replace(/\.git$/, '').replace(/[\/\s].*$/, '');
+    return `https://raw.githubusercontent.com/${owner}/${cleanRepo}/HEAD/man/figures/logo.png`;
   }
-  return `https://r-universe.dev/${pkg.package_name}/logo.png`;
+
+  // Fallback: try r-universe with universe prefix
+  const universe = pkg.source_universe || pkg.universe;
+  if (universe && universe !== 'cran' && universe !== 'cran-direct') {
+    return `https://${universe}.r-universe.dev/${pkg.package_name}/logo.png`;
+  }
+
+  return null; // Will show placeholder
 }
 
 // Render the entire browse page with async subcategories
@@ -188,10 +201,10 @@ function renderCategoryCard(category) {
   const featuredHtml = category.featured.map(pkgName => {
     const pkg = getPackageInfo(pkgName);
     const logoUrl = pkg ? getPackageLogoUrl(pkg) : null;
-    const pkgUrl = `https://r-universe.dev/search?q=${encodeURIComponent(pkgName)}`;
+    const pkgUrl = `/packages/${encodeURIComponent(pkgName)}`;
 
     return `
-      <a href="${pkgUrl}" target="_blank" rel="noopener noreferrer" class="featured-tile" onclick="event.stopPropagation()">
+      <a href="${pkgUrl}" class="featured-tile" onclick="event.stopPropagation()">
         <div class="featured-tile-logo">
           ${logoUrl ?
             `<img src="${logoUrl}" alt="${escapeHtml(pkgName)}" onerror="this.parentElement.innerHTML='<span class=\\'featured-tile-fallback\\'>${escapeHtml(pkgName.charAt(0).toUpperCase())}</span>'" />` :
