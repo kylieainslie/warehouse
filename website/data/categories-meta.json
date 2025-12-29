@@ -307,6 +307,13 @@
           "featured": ["EpiEstim", "epiparameter", "cfr"]
         },
         {
+          "id": "pharmaverse",
+          "name": "Pharmaverse",
+          "emoji": "💊",
+          "description": "Pharmaceutical development, clinical reporting, and regulatory submissions",
+          "featured": ["admiral", "rtables", "xportr"]
+        },
+        {
           "id": "stan",
           "name": "Stan",
           "emoji": "📊",

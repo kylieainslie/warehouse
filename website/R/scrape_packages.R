@@ -56,6 +56,9 @@ PRIORITY_UNIVERSES <- list(
   # Scientific Computing
   ropensci = c("ropensci"),
 
+  # Pharmaceutical Development
+  pharmaverse = c("pharmaverse"),
+
   # Shiny & Visualization
   visualization = c(
     "dreamrs",                  # shinyWidgets, esquisse
