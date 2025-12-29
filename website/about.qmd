@@ -25,6 +25,29 @@ The Warehouse provides:
 - **Community reviews**: Real user experiences and recommendations
 - **Smart categorization**: Browse by what packages actually do
 
+## Resources & Credits
+
+The Warehouse doesn't aim to reinvent the wheel. The R ecosystem already has excellent resources for package discovery and distribution. We build upon these foundations, adding a unified search experience focused on *what packages do* rather than what they're called.
+
+**Our data sources:**
+
+| Resource | What it provides |
+|----------|------------------|
+| [R-Universe](https://r-universe.dev) | Package metadata, binaries, and quality metrics for CRAN and GitHub packages |
+| [CRAN](https://cran.r-project.org) | The official R package repository with 20,000+ packages |
+| [Bioconductor](https://bioconductor.org) | Curated packages for bioinformatics and computational biology |
+| [rOpenSci](https://ropensci.org) | Peer-reviewed packages for reproducible research |
+
+**What The Warehouse adds:**
+
+- **Unified search** across all sources with AI-powered semantic matching
+- **Function-first discovery** — search by what you want to do, not package names
+- **Curated categories** for domain-specific workflows (epidemiology, pharma, geospatial, etc.)
+- **Community reviews** to share real-world experiences
+- **Quality comparisons** to help choose between similar packages
+
+We're grateful to the maintainers of these resources and the broader R community for making package discovery possible.
+
 ## How We Calculate Quality Scores
 
 Quality scores (0-100) are calculated from:

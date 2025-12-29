@@ -22,6 +22,13 @@
   display: block;
 }
 
+.warehouse-logo-img-horizontal {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 0.25rem;
+  display: block;
+}
+
 .warehouse-logo-text {
   font-size: 3rem;
   font-weight: 300;
@@ -96,6 +103,26 @@
   background: #f8f9fa;
 }
 
+/* Primary search button */
+.search-button-google.primary {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.search-button-google.primary:hover {
+  background: #5568d3;
+  border-color: #5568d3;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+/* Package count */
+.package-count {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
 .search-results-google {
   margin-top: 2rem;
   width: 100%;
@@ -126,15 +153,38 @@
   text-decoration: underline;
 }
 
+.quick-links-separator {
+  color: #dee2e6;
+  margin: 0 0.5rem;
+}
+
+.resources-label {
+  color: #6c757d;
+  margin-right: 0.25rem;
+}
+
 /* Responsive - mobile */
 @media (max-width: 768px) {
   .warehouse-logo-img {
     width: 140px;
     height: 140px;
   }
-  
+
+  .warehouse-logo-img-horizontal {
+    max-width: 280px;
+  }
+
   .warehouse-logo-text {
     font-size: 2rem;
+  }
+
+  .quick-links-separator,
+  .resources-label {
+    display: none;
+  }
+
+  .quick-links {
+    line-height: 2;
   }
   
   .warehouse-logo {

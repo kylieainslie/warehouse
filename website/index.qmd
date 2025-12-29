@@ -9,18 +9,18 @@ include-in-header:
 <div class="google-style-home">
 
 <div class="logo-container">
-<img src="images/the_warehouse_logo.png" alt="The Warehouse" class="warehouse-logo-img">
-<h1 class="warehouse-logo-text">The Warehouse</h1>
+<img src="images/warehouse-logo-horizontal.png" alt="The Warehouse" class="warehouse-logo-img-horizontal">
 <p class="tagline">Find R packages by what they do</p>
+<p class="package-count" id="package-count"></p>
 </div>
 
 <div class="search-container-google">
 <input type="text" id="package-search" class="search-input-google"
-       placeholder='Try: "estimate serial interval" or "interactive plots"'
+       placeholder="Search packages by function or topic..."
        autofocus>
 <span id="search-status" class="search-status"></span>
 <div class="search-buttons">
-<button class="search-button-google" onclick="handleSearch()">Search Packages</button>
+<button class="search-button-google primary" onclick="handleSearch()">Search Packages</button>
 <button class="browse-button-google" onclick="window.location.href='categories/'">Browse Categories</button>
 </div>
 </div>
@@ -44,9 +44,10 @@ include-in-header:
 </div>
 
 <div class="quick-links">
-<a href="about.qmd">About</a> •
-<a href="submit.qmd">Submit Package</a> •
-<a href="categories/">Browse All</a>
+<span class="resources-label">Resources:</span>
+<a href="https://r-universe.dev" target="_blank">R-Universe</a> •
+<a href="https://rweekly.org" target="_blank">R Weekly</a> •
+<a href="https://cran.r-project.org" target="_blank">CRAN</a>
 </div>
 
 </div>

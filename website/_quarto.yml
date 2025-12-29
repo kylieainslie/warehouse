@@ -11,6 +11,8 @@ website:
   description: "Function-first R package discovery"
   
   navbar:
+    logo: images/the_warehouse_logo.png
+    logo-alt: "The Warehouse"
     background: primary
     left:
       - href: index.qmd

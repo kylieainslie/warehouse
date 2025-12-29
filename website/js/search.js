@@ -70,6 +70,9 @@ async function initSearch() {
     if (statusEl) statusEl.textContent = '';
     console.log(`Search ready: ${searchIndex.packages.length} packages indexed`);
 
+    // Update package count display
+    updatePackageCount(searchIndex.packages.length);
+
   } catch (error) {
     console.error('Search initialization failed:', error);
     if (statusEl) {
@@ -362,6 +365,14 @@ function formatNumber(num) {
   if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
   if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
   return num.toString();
+}
+
+// Update package count display on homepage
+function updatePackageCount(count) {
+  const el = document.getElementById('package-count');
+  if (el && count > 0) {
+    el.textContent = `Discover ${count.toLocaleString()}+ R packages`;
+  }
 }
 
 // Escape HTML to prevent XSS
