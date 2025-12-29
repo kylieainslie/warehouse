@@ -26,16 +26,20 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("httr2", "jsonlite", "dplyr"))'
+          Rscript -e 'install.packages(c("httr2", "jsonlite", "dplyr", "stringr", "purrr"))'
 
       - name: Fetch discover data
         run: |
           Rscript -e 'source("R/fetch_discover.R"); run_discover_fetch()'
 
+      - name: Fetch R Weekly packages
+        run: |
+          Rscript -e 'source("R/scrape_rweekly.R"); scrape_rweekly()'
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet data/discover.json; then
+          if git diff --quiet data/discover.json data/rweekly-packages.json 2>/dev/null; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -46,8 +50,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/discover.json
-          git commit -m "Update discover section
+          git add data/discover.json data/rweekly-packages.json
+          git commit -m "Update discover section and R Weekly packages
 
-          Daily update of trending, new, and rising packages."
+          Daily update of trending, new, rising, and R Weekly featured packages."
           git push

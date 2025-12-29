@@ -1611,16 +1611,21 @@ tr:hover {
 
 .discover-card-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .discover-card-name {
   font-weight: 600;
   color: #667eea;
   font-size: 1rem;
-  word-break: break-word;
+}
+
+.discover-card-tags {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .discover-card-version {
@@ -1630,6 +1635,24 @@ tr:hover {
   padding: 0.1rem 0.4rem;
   border-radius: 3px;
   white-space: nowrap;
+}
+
+.discover-card-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.discover-card-badge.badge-new {
+  background: #d4edda;
+  color: #155724;
+}
+
+.discover-card-badge.badge-updated {
+  background: #cce5ff;
+  color: #004085;
 }
 
 .discover-card-title {

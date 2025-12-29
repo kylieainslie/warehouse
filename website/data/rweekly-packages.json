@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "scraped_at": "2025-12-29T18:09:39Z",
+    "weeks_included": 4,
+    "total_packages": 37,
+    "new_packages": 13,
+    "updated_packages": 24
+  },
+  "packages": [
+    {
+      "package_name": "PMwR",
+      "version": "1.2-0",
+      "type": "updated",
+      "description": "Portfolio Management with R - [diffify](https://diffify.com/R/PMwR)",
+      "url": "https://cran.r-project.org/package=PMwR",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "dbscan",
+      "version": "1.2.4",
+      "type": "updated",
+      "description": "Density-Based Spatial Clustering of Applications with Noise",
+      "url": "https://cran.r-project.org/package=dbscan",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "e1071",
+      "version": "1.7-17",
+      "type": "updated",
+      "description": "Misc Functions of the Department of Statistics, Probability",
+      "url": "https://cran.r-project.org/package=e1071",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "fImport",
+      "version": "4052.89",
+      "type": "updated",
+      "description": "Rmetrics - Importing Economic and Financial Data - [diffify](https://diffify.com/R/fImport)",
+      "url": "https://cran.r-project.org/package=fImport",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "futureverse",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Install 'Futureverse' in One Go - [diffify](https://diffify.com/R/futureverse)",
+      "url": "https://cran.r-project.org/package=futureverse",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "ganttify",
+      "version": "0.1.8",
+      "type": "updated",
+      "description": "Create Interactive Gantt Charts with Work Breakdown Structure - [diffify](https://diffify.com/R/ganttify)",
+      "url": "https://cran.r-project.org/package=ganttify",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "ggsci",
+      "version": "4.2.0",
+      "type": "updated",
+      "description": "Scientific Journal and Sci-Fi Themed Color Palettes for",
+      "url": "https://cran.r-project.org/package=ggsci",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "havel",
+      "version": "0.1.2",
+      "type": "new",
+      "description": "Visualize and Tabulate 'R' Package Dependencies",
+      "url": "https://cran.r-project.org/package=havel",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "impectR",
+      "version": "2.5.3",
+      "type": "updated",
+      "description": "Access Data from the 'Impect' API - [diffify](https://diffify.com/R/impectR)",
+      "url": "https://cran.r-project.org/package=impectR",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "insetplot",
+      "version": "1.3.0",
+      "type": "new",
+      "description": "Inset Plots for Spatial Data Visualization",
+      "url": "https://cran.r-project.org/package=insetplot",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "knitr",
+      "version": "1.51",
+      "type": "updated",
+      "description": "A General-Purpose Package for Dynamic Report Generation in R - [diffify](https://diffify.com/R/knitr)",
+      "url": "https://cran.r-project.org/package=knitr",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "mindr",
+      "version": "1.4.1",
+      "type": "updated",
+      "description": "Generate Mind Maps - [diffify](https://diffify.com/R/mindr)",
+      "url": "https://cran.r-project.org/package=mindr",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "modeltime",
+      "version": "1.3.3",
+      "type": "updated",
+      "description": "The Tidymodels Extension for Time Series Modeling - [diffify](https://diffify.com/R/modeltime)",
+      "url": "https://cran.r-project.org/package=modeltime",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "nhlscraper",
+      "version": "0.4.1",
+      "type": "updated",
+      "description": "Scraper for National Hockey League Data - [diffify](https://diffify.com/R/nhlscraper)",
+      "url": "https://cran.r-project.org/package=nhlscraper",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "readmit",
+      "version": "0.0.1",
+      "type": "new",
+      "description": "Tools for Working with Hospital Readmissions Data",
+      "url": "https://cran.r-project.org/package=readmit",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "selectr",
+      "version": "0.5-1",
+      "type": "updated",
+      "description": "Translate CSS Selectors to XPath Expressions - [diffify](https://diffify.com/R/selectr)",
+      "url": "https://cran.r-project.org/package=selectr",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "shinyfilters",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Use Shiny Inputs on Vectors, data.frames, or any R Object",
+      "url": "https://cran.r-project.org/package=shinyfilters",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "tidyr",
+      "version": "1.3.2",
+      "type": "updated",
+      "description": "Tidy Messy Data - [diffify](https://diffify.com/R/tidyr)",
+      "url": "https://cran.r-project.org/package=tidyr",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "ukc19",
+      "version": "0.0.3",
+      "type": "new",
+      "description": "Datasets from the UK COVID-19 Outbreak",
+      "url": "https://cran.r-project.org/package=ukc19",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "waysign",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Multi-Purpose and High-Performance Routing",
+      "url": "https://cran.r-project.org/package=waysign",
+      "post_date": "2025-12-22",
+      "week": "2025-W52"
+    },
+    {
+      "package_name": "AdaptiveBoxplot",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "FDR(BH) Boxplot and FWER(Holm) Boxplot",
+      "url": "https://cran.r-project.org/package=AdaptiveBoxplot",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "Bchron",
+      "version": "4.7.8",
+      "type": "updated",
+      "description": "Age-Depth Radiocarbon Modelling - [diffify](https://diffify.com/R/Bchron)",
+      "url": "https://cran.r-project.org/package=Bchron",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "SeuratObject",
+      "version": "5.3.0",
+      "type": "updated",
+      "description": "Data Structures for Single Cell Data - [diffify](https://diffify.com/R/SeuratObject)",
+      "url": "https://cran.r-project.org/package=SeuratObject",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "aNCA",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "(Pre-)Clinical NCA in a Dynamic Shiny App",
+      "url": "https://cran.r-project.org/package=aNCA",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "charisma",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Reproducible Color Characterization of Digital Images for",
+      "url": "https://cran.r-project.org/package=charisma",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "distplyr",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Manipulate and Combine Probability Distributions",
+      "url": "https://cran.r-project.org/package=distplyr",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "geoflow",
+      "version": "1.1.0",
+      "type": "updated",
+      "description": "Orchestrate Geospatial (Meta)Data Management Workflows and Manage FAIR Services - [diffify](https://diffify.com/R/geoflow)",
+      "url": "https://cran.r-project.org/package=geoflow",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "maptiles",
+      "version": "0.11.0",
+      "type": "updated",
+      "description": "Download and Display Map Tiles - [diffify](https://diffify.com/R/maptiles)",
+      "url": "https://cran.r-project.org/package=maptiles",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "mutagen",
+      "version": "0.5.0",
+      "type": "new",
+      "description": "Extensions to dplyr's mutate",
+      "url": "https://github.com/gvelasq/mutagen",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "plumber",
+      "version": "1.3.1",
+      "type": "updated",
+      "description": "An API Generator for R - [diffify](https://diffify.com/R/plumber)",
+      "url": "https://cran.r-project.org/package=plumber",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "pubchem.bio",
+      "version": "1.0.3",
+      "type": "updated",
+      "description": "Biologically Informed Metabolomic Libraries from 'PubChem' - [diffify](https://diffify.com/R/pubchem.bio)",
+      "url": "https://cran.r-project.org/package=pubchem.bio",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "qol",
+      "version": "1.1.1",
+      "type": "updated",
+      "description": "Powerful 'SAS' Inspired Concepts for more Efficient Bigger Outputs - [diffify](https://diffify.com/R/qol)",
+      "url": "https://cran.r-project.org/package=qol",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "rde",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Reproducible Data Embedding - [diffify](https://diffify.com/R/rde)",
+      "url": "https://cran.r-project.org/package=rde",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "tidypredict",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Run Predictions Inside the Database - [diffify](https://diffify.com/R/tidypredict)",
+      "url": "https://cran.r-project.org/package=tidypredict",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "tidytab",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Create tidyverse-friendly tables of frequencies",
+      "url": "https://github.com/gvelasq/tidytab",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "vetiver",
+      "version": "0.2.7",
+      "type": "updated",
+      "description": "Version, Share, Deploy, and Monitor Models - [diffify](https://diffify.com/R/vetiver)",
+      "url": "https://cran.r-project.org/package=vetiver",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    },
+    {
+      "package_name": "yaml12",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Fast 'YAML' 1.2 Parser and Formatter",
+      "url": "https://cran.r-project.org/package=yaml12",
+      "post_date": "2025-12-15",
+      "week": "2025-W51"
+    }
+  ]
+}

@@ -34,10 +34,13 @@ include-in-header:
 <i class="bi bi-fire"></i> Trending
 </button>
 <button class="discover-tab" data-tab="new" onclick="switchDiscoverTab('new')">
-<i class="bi bi-clock"></i> New
+<i class="bi bi-clock"></i> Recent
 </button>
 <button class="discover-tab" data-tab="rising" onclick="switchDiscoverTab('rising')">
 <i class="bi bi-star"></i> Rising Stars
+</button>
+<button class="discover-tab" data-tab="rweekly" onclick="switchDiscoverTab('rweekly')">
+<i class="bi bi-newspaper"></i> R Weekly
 </button>
 </div>
 <div id="discover-packages"></div>

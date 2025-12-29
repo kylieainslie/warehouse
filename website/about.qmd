@@ -37,6 +37,7 @@ The Warehouse doesn't aim to reinvent the wheel. The R ecosystem already has exc
 | [CRAN](https://cran.r-project.org) | The official R package repository with 20,000+ packages |
 | [Bioconductor](https://bioconductor.org) | Curated packages for bioinformatics and computational biology |
 | [rOpenSci](https://ropensci.org) | Peer-reviewed packages for reproducible research |
+| [R Weekly](https://rweekly.org) | Weekly highlights of new and updated R packages |
 
 **What The Warehouse adds:**
 
@@ -48,16 +49,11 @@ The Warehouse doesn't aim to reinvent the wheel. The R ecosystem already has exc
 
 We're grateful to the maintainers of these resources and the broader R community for making package discovery possible.
 
-## How We Calculate Quality Scores
+## Quality Scores
 
-Quality scores (0-100) are calculated from:
+Quality scores displayed on packages come from [R-Universe](https://r-universe.dev), which calculates them based on factors like documentation, testing, dependencies, and maintenance activity.
 
-- **Documentation (30%)**: README, vignettes, pkgdown site
-- **Testing (20%)**: Test coverage and CI status  
-- **Maintenance (25%)**: Update frequency and active development
-- **Community (25%)**: GitHub stars, downloads, user ratings
-
-[Learn more about our methodology →](#methodology)
+[Learn more about R-Universe scoring →](https://ropensci.org/blog/2024/07/08/runiverse-scoring-system/)
 
 ## Open Source & Free
 

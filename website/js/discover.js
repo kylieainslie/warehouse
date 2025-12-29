@@ -2,16 +2,47 @@
 // Discover section UI for featuring trending, new, and rising packages
 
 let discoverData = null;
+let rweeklyData = null;
 let currentTab = 'trending';
 
 // Load discover data on page load
 async function loadDiscoverData() {
   try {
-    const response = await fetch('/data/discover.json');
-    if (!response.ok) {
-      throw new Error(`Failed to load discover data: ${response.status}`);
+    // Load both discover.json and rweekly-packages.json in parallel
+    const [discoverResponse, rweeklyResponse] = await Promise.all([
+      fetch('/data/discover.json'),
+      fetch('/data/rweekly-packages.json').catch(() => ({ ok: false }))
+    ]);
+
+    if (!discoverResponse.ok) {
+      throw new Error(`Failed to load discover data: ${discoverResponse.status}`);
     }
-    discoverData = await response.json();
+    discoverData = await discoverResponse.json();
+
+    // Load R Weekly data if available
+    if (rweeklyResponse.ok) {
+      try {
+        const rweeklyJson = await rweeklyResponse.json();
+        // Transform R Weekly packages to match discover format
+        rweeklyData = (rweeklyJson.packages || []).map(pkg => ({
+          name: pkg.package_name,
+          version: pkg.version,
+          title: pkg.description ? pkg.description.split(' - ')[0] : pkg.package_name,
+          description: pkg.description || '',
+          url: pkg.url,
+          week: pkg.week,
+          type: pkg.type, // 'new' or 'updated'
+          stars: 0,
+          downloads: 0
+        }));
+        console.log(`Loaded ${rweeklyData.length} R Weekly packages`);
+      } catch (e) {
+        console.warn('Failed to parse R Weekly data:', e);
+        rweeklyData = [];
+      }
+    } else {
+      rweeklyData = [];
+    }
 
     // Deduplicate packages by name within each category
     if (discoverData.trending) {
@@ -50,9 +81,15 @@ function deduplicatePackages(packages) {
 // Render the discover section
 function renderDiscoverSection() {
   const container = document.getElementById('discover-packages');
-  if (!container || !discoverData) return;
+  if (!container) return;
 
-  const packages = discoverData[currentTab] || [];
+  // Get packages based on current tab
+  let packages;
+  if (currentTab === 'rweekly') {
+    packages = rweeklyData || [];
+  } else {
+    packages = (discoverData && discoverData[currentTab]) || [];
+  }
 
   if (packages.length === 0) {
     container.innerHTML = '<p class="discover-empty">No packages available</p>';
@@ -92,17 +129,29 @@ function createDiscoverCard(pkg) {
 
   const packagePageUrl = `/packages/${encodeURIComponent(pkg.name)}`;
 
+  // R Weekly badge for rweekly tab
+  const rweeklyBadge = pkg.week ?
+    `<span class="discover-card-badge ${pkg.type === 'new' ? 'badge-new' : 'badge-updated'}">${pkg.type === 'new' ? 'New' : 'Updated'}</span>` : '';
+
+  // Stats - show week for R Weekly, otherwise stars/downloads
+  const statsHtml = pkg.week ?
+    `<span class="discover-stat"><i class="bi bi-calendar"></i> ${escapeHtml(pkg.week)}</span>` :
+    `<span class="discover-stat"><i class="bi bi-star-fill"></i> ${stars}</span>
+     <span class="discover-stat"><i class="bi bi-download"></i> ${downloads}</span>`;
+
   return `
     <a href="${packagePageUrl}" class="discover-card">
       <div class="discover-card-header">
+        <div class="discover-card-tags">
+          ${rweeklyBadge}
+          <span class="discover-card-version">${escapeHtml(pkg.version || '')}</span>
+        </div>
         <span class="discover-card-name">${escapeHtml(pkg.name)}</span>
-        <span class="discover-card-version">${escapeHtml(pkg.version || '')}</span>
       </div>
       <div class="discover-card-title">${escapeHtml(title)}</div>
       <div class="discover-card-desc">${escapeHtml(description)}</div>
       <div class="discover-card-stats">
-        <span class="discover-stat"><i class="bi bi-star-fill"></i> ${stars}</span>
-        <span class="discover-stat"><i class="bi bi-download"></i> ${downloads}</span>
+        ${statsHtml}
       </div>
     </a>
   `;
@@ -129,7 +178,12 @@ function escapeHtml(text) {
 
 // Switch between tabs
 function switchDiscoverTab(tab) {
-  if (!discoverData || !discoverData[tab]) return;
+  // Validate tab exists (either in discoverData or is rweekly)
+  if (tab === 'rweekly') {
+    if (!rweeklyData || rweeklyData.length === 0) return;
+  } else {
+    if (!discoverData || !discoverData[tab]) return;
+  }
 
   currentTab = tab;
 
