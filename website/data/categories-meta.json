@@ -93,8 +93,22 @@
           "id": "pharmacometrics",
           "name": "Pharmacometrics",
           "emoji": "💊",
-          "description": "PK/PD modeling, drug development, and clinical trials",
+          "description": "PK/PD modeling, drug development, and dosing",
           "featured": ["nlmixr2", "mrgsolve", "PKPDsim"]
+        },
+        {
+          "id": "bioinformatics",
+          "name": "Bioinformatics",
+          "emoji": "🧬",
+          "description": "Computational biology, sequence analysis, and molecular data",
+          "featured": ["Biostrings", "GenomicRanges", "DESeq2"]
+        },
+        {
+          "id": "clinical-trials",
+          "name": "Clinical Trials",
+          "emoji": "🏥",
+          "description": "Trial design, analysis, and regulatory submissions",
+          "featured": ["gsDesign", "rpact", "simsurv"]
         },
         {
           "id": "psychology",

@@ -98,6 +98,7 @@ GITHUB_ORGS <- c(
 # ============================================================================
 
 # Topics to search across R-universe (searches ALL universes, not just priority ones)
+# NOTE: Category IDs use kebab-case to match browse page and URL conventions
 DISCOVERY_TOPICS <- list(
   epidemiology = c("epidemic", "outbreak", "infectious-disease", "disease-modeling",
                    "surveillance", "nowcasting", "forecasting", "serology", "public-health"),
@@ -105,33 +106,36 @@ DISCOVERY_TOPICS <- list(
   statistics = c("bayesian", "causal-inference", "time-series", "survival-analysis", "regression"),
   tidyverse = c("tidyverse", "dplyr", "tidyr", "ggplot2", "data-wrangling"),
   visualization = c("data-visualization", "plotting", "shiny", "interactive", "dashboard"),
-  machine_learning = c("machine-learning", "deep-learning", "neural-network", "classification"),
+  `machine-learning` = c("machine-learning", "deep-learning", "neural-network", "classification"),
   bioinformatics = c("genomics", "bioinformatics", "sequencing", "proteomics")
 )
 
 # Topics to search on GitHub (for packages not on R-universe)
+# NOTE: Category IDs use kebab-case to match browse page and URL conventions
 GITHUB_TOPICS <- list(
   epidemiology = c("epidemiology", "infectious-disease", "public-health", "disease-modeling"),
   spatial = c("geospatial", "gis", "spatial-analysis", "r-spatial"),
   statistics = c("bayesian", "statistics", "time-series"),
   tidyverse = c("tidyverse", "rstats", "r-package"),
   visualization = c("shiny", "ggplot2", "data-visualization"),
-  machine_learning = c("machine-learning", "r-machine-learning"),
+  `machine-learning` = c("machine-learning", "r-machine-learning"),
   bioinformatics = c("bioinformatics", "genomics", "rnaseq")
 )
 
 # CRAN Task Views to parse for category assignment
+# NOTE: Category IDs use kebab-case to match browse page and URL conventions
 CRAN_TASK_VIEWS <- list(
   epidemiology = "Epidemiology",
   spatial = "Spatial",
   statistics = c("Bayesian", "TimeSeries", "Survival", "CausalInference"),
-  machine_learning = "MachineLearning",
+  `machine-learning` = "MachineLearning",
   visualization = "Graphics",
   bioinformatics = c("Genetics", "Phylogenetics"),
-  clinical_trials = "ClinicalTrials"
+  `clinical-trials` = "ClinicalTrials"
 )
 
 # Keywords for auto-categorizing CRAN packages by content
+# NOTE: Category IDs use kebab-case to match browse page and URL conventions
 CATEGORY_KEYWORDS <- list(
   epidemiology = c("epidemic", "outbreak", "infectious", "disease", "incidence",
                    "prevalence", "reproduction number", "serial interval",
@@ -142,8 +146,8 @@ CATEGORY_KEYWORDS <- list(
                  "survival", "hazard", "time series", "arima", "forecast"),
   tidyverse = c("tidy data", "tibble", "pipe", "dplyr", "tidyr", "ggplot"),
   visualization = c("plot", "chart", "graph", "dashboard", "shiny", "interactive"),
-  machine_learning = c("machine learning", "neural", "deep learning", "classification",
-                       "clustering", "random forest", "xgboost", "keras", "tensorflow"),
+  `machine-learning` = c("machine learning", "neural", "deep learning", "classification",
+                         "clustering", "random forest", "xgboost", "keras", "tensorflow"),
   bioinformatics = c("genome", "sequencing", "gene expression", "protein", "dna", "rna", "variant")
 )
 
@@ -651,6 +655,7 @@ categorize_by_keywords <- function(packages) {
         sep = " "
       )),
       # Check each category's keywords
+      # NOTE: Category IDs use kebab-case to match browse page and URL conventions
       primary_category = case_when(
         # Only re-categorize packages that are currently "general"
         primary_category != "general" ~ primary_category,
@@ -661,7 +666,7 @@ categorize_by_keywords <- function(packages) {
         # Check for spatial keywords
         grepl(paste(CATEGORY_KEYWORDS$spatial, collapse = "|"), search_text, ignore.case = TRUE) ~ "spatial",
         # Check for machine learning keywords
-        grepl(paste(CATEGORY_KEYWORDS$machine_learning, collapse = "|"), search_text, ignore.case = TRUE) ~ "machine_learning",
+        grepl(paste(CATEGORY_KEYWORDS[["machine-learning"]], collapse = "|"), search_text, ignore.case = TRUE) ~ "machine-learning",
         # Check for statistics keywords
         grepl(paste(CATEGORY_KEYWORDS$statistics, collapse = "|"), search_text, ignore.case = TRUE) ~ "statistics",
         # Check for visualization keywords
