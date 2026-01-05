@@ -536,31 +536,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const searchInput = document.getElementById('package-search');
   if (searchInput) {
-    // Debounced search on input (local search for instant feedback)
-    let timeout;
+    // Clear results when input is emptied
     searchInput.addEventListener('input', function() {
-      clearTimeout(timeout);
-      // Use local search for typing (faster feedback)
-      timeout = setTimeout(() => {
-        const query = searchInput.value.trim();
-        if (query.length >= 2) {
-          const localResults = searchPackages(query);
-          renderSearchResults(localResults);
-        } else {
-          document.getElementById('search-results').innerHTML = '';
-          // Show discover section when search is cleared
-          if (typeof showDiscoverSection === 'function') {
-            showDiscoverSection();
-          }
+      const query = searchInput.value.trim();
+      if (query.length === 0) {
+        document.getElementById('search-results').innerHTML = '';
+        // Show discover section when search is cleared
+        if (typeof showDiscoverSection === 'function') {
+          showDiscoverSection();
         }
-      }, 300);
+      }
     });
 
     // AI search on Enter
     searchInput.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         e.preventDefault();
-        clearTimeout(timeout);
         handleSearch();  // Uses AI
       }
     });
