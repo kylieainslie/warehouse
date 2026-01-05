@@ -59,7 +59,7 @@
     {
       "id": "domain-specific",
       "name": "Domain-Specific",
-      "expanded": true,
+      "expanded": false,
       "categories": [
         {
           "id": "epidemiology",
