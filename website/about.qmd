@@ -53,7 +53,7 @@ We're grateful to the maintainers of these resources and the broader R community
 
 Quality scores displayed on packages come from [R-Universe](https://r-universe.dev), which calculates them based on factors like documentation, testing, dependencies, and maintenance activity.
 
-[Learn more about R-Universe scoring →](https://ropensci.org/blog/2024/07/08/runiverse-scoring-system/)
+[Learn more about R-Universe scoring →](https://docs.r-universe.dev/browse/search.html)
 
 ## Open Source & Free
 
