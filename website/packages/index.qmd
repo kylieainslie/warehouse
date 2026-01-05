@@ -81,12 +81,6 @@ format:
         .review-tip { background: #f0f9ff; border-left: 3px solid #2563eb; padding: 0.6em 1em; margin-top: 0.75em; font-size: 0.9em; }
         .no-reviews { text-align: center; padding: 2em; color: #64748b; background: #f8fafc; border-radius: 8px; }
 
-        .related-packages { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1em; }
-        .related-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1em; text-decoration: none; color: inherit; transition: all 0.2s; }
-        .related-card:hover { border-color: #2563eb; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1); }
-        .related-card h4 { margin: 0 0 0.3em 0; color: #1e293b; }
-        .related-card p { margin: 0; font-size: 0.85em; color: #64748b; }
-
         .pkg-loading { text-align: center; padding: 4em; color: #64748b; }
         .pkg-not-found { text-align: center; padding: 4em; }
         .pkg-not-found h2 { color: #991b1b; }
@@ -161,14 +155,8 @@ document.addEventListener('DOMContentLoaded', async function() {
       r.package_name.toLowerCase() === pkg.package_name.toLowerCase()
     );
 
-    // Find related packages (same category)
-    const relatedPkgs = packagesData.packages
-      .filter(p => p.primary_category === pkg.primary_category && p.package_name !== pkg.package_name)
-      .sort((a, b) => (b.stars || 0) - (a.stars || 0))
-      .slice(0, 6);
-
     // Render the package page
-    container.innerHTML = renderPackagePage(pkg, pkgReviews, relatedPkgs);
+    container.innerHTML = renderPackagePage(pkg, pkgReviews);
 
   } catch (err) {
     console.error('Error loading package:', err);
@@ -251,7 +239,7 @@ function getLinkType(url) {
   return { icon: '🔗', label: 'Website' };
 }
 
-function renderPackagePage(pkg, reviews, related) {
+function renderPackagePage(pkg, reviews) {
   const logoUrl = getLogoUrl(pkg);
   const urls = parseUrls(pkg.url);
   const bugUrl = pkg.bug_reports || '';
@@ -403,23 +391,6 @@ function renderPackagePage(pkg, reviews, related) {
     });
   }
   html += `</div>`;
-
-  // Related packages section
-  if (related.length > 0) {
-    html += `
-      <div class="pkg-section">
-        <h2>Related Packages</h2>
-        <div class="related-packages">
-          ${related.map(p => `
-            <a href="/packages/${encodeURIComponent(p.package_name)}" class="related-card">
-              <h4>${escapeHtml(p.package_name)}</h4>
-              <p>${escapeHtml((p.title || '').substring(0, 60))}${(p.title || '').length > 60 ? '...' : ''}</p>
-            </a>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  }
 
   return html;
 }
