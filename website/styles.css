@@ -163,7 +163,7 @@
   margin-right: 0.25rem;
 }
 
-/* Responsive - mobile */
+/* Responsive - tablet */
 @media (max-width: 768px) {
   .warehouse-logo-img {
     width: 140px;
@@ -186,18 +186,122 @@
   .quick-links {
     line-height: 2;
   }
-  
+
   .warehouse-logo {
     font-size: 2.5rem;
   }
-  
+
   .search-buttons {
     flex-direction: column;
   }
-  
+
   .search-button-google,
   .browse-button-google {
     width: 100%;
+  }
+
+  .google-style-home {
+    padding: 1rem;
+    min-height: 70vh;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .search-input-google {
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+  }
+}
+
+/* Responsive - mobile phone */
+@media (max-width: 480px) {
+  .google-style-home {
+    padding: 0.75rem;
+    min-height: auto;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .warehouse-logo-img-horizontal {
+    max-width: 220px;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .package-count {
+    font-size: 0.85rem;
+  }
+
+  .search-container-google {
+    padding: 0 0.25rem;
+  }
+
+  .search-input-google {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-button-google,
+  .browse-button-google {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .quick-links {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .quick-links a {
+    padding: 0 0.25rem;
+  }
+
+  .discover-section {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .discover-title {
+    font-size: 1.1rem;
+  }
+
+  .discover-tab {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .discover-card {
+    flex: 0 0 160px;
+    padding: 0.75rem;
+  }
+
+  .discover-card-name {
+    font-size: 0.9rem;
+  }
+
+  .discover-card-title {
+    font-size: 0.8rem;
+  }
+
+  .discover-card-desc {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .discover-card-stats {
+    font-size: 0.7rem;
+  }
+
+  .discover-card-version,
+  .discover-card-badge {
+    font-size: 0.6rem;
   }
 }
 
@@ -461,6 +565,80 @@ tr:hover {
 
   .search-button {
     width: 100%;
+  }
+
+  .package-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .package-card {
+    padding: 1rem;
+  }
+
+  .package-title {
+    font-size: 1.1rem;
+  }
+
+  .package-description {
+    font-size: 0.9rem;
+  }
+
+  .package-meta {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .package-actions {
+    flex-wrap: wrap;
+  }
+
+  .search-results-google {
+    padding: 0 0.5rem;
+  }
+
+  .search-results-box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .package-card {
+    padding: 0.875rem;
+  }
+
+  .package-logo,
+  .package-logo-fallback {
+    width: 40px;
+    height: 40px;
+  }
+
+  .package-title {
+    font-size: 1rem;
+  }
+
+  .package-description {
+    font-size: 0.85rem;
+    margin: 0.35rem 0;
+  }
+
+  .package-meta {
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+  }
+
+  .package-actions {
+    gap: 0.35rem;
+  }
+
+  .btn-feedback, .btn-view, .btn-source, .btn-review {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .topic-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.35rem;
   }
 }
 
