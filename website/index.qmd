@@ -21,7 +21,7 @@ include-in-header:
 <span id="search-status" class="search-status"></span>
 <div class="search-buttons">
 <button class="search-button-google primary" onclick="handleSearch()">Search Packages</button>
-<button class="browse-button-google" onclick="window.location.href='categories/'">Browse Categories</button>
+<button class="browse-button-google" onclick="window.location.href='categories/'" title="Press 'C' to browse categories"><i class="bi bi-grid-3x3-gap"></i> Browse Categories</button>
 </div>
 </div>
 

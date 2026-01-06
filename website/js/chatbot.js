@@ -224,7 +224,28 @@ function clearChat() {
   `;
 }
 
+// Pre-fill chat input with a message (used by search comparison feature)
+function prefillChat(message, autoSend = false) {
+  const chatInput = document.getElementById('chat-input');
+  if (chatInput) {
+    chatInput.value = message;
+    chatInput.focus();
+
+    if (autoSend) {
+      // Trigger send after short delay
+      setTimeout(() => {
+        const form = document.getElementById('chat-form');
+        if (form) {
+          form.dispatchEvent(new Event('submit'));
+        }
+      }, 200);
+    }
+  }
+}
+
 // Export functions for global use
 window.toggleChat = toggleChat;
 window.sendChatMessage = sendChatMessage;
 window.clearChat = clearChat;
+window.prefillChat = prefillChat;
+window.isChatOpen = () => isChatOpen;

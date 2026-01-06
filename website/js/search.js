@@ -6,6 +6,10 @@ let fuse = null;
 let isSearchReady = false;
 let reviewStats = {}; // Package review statistics from Google Reviews-style system
 
+// Track last search for AI comparison feature
+let lastSearchResults = [];
+let lastSearchQuery = '';
+
 // Fuse.js configuration based on Elasticsearch/BM25 field boosting patterns
 // Reference: Elasticsearch best practices use title^3, description^1, keywords^1.5
 // Adapted for functionality-first package discovery
@@ -184,6 +188,10 @@ function renderSearchResults(results, containerId = 'search-results') {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  // Store results for AI comparison feature
+  lastSearchResults = results;
+  lastSearchQuery = document.getElementById('package-search')?.value || '';
+
   // Hide discover section when showing results
   if (typeof hideDiscoverSection === 'function') {
     hideDiscoverSection();
@@ -208,9 +216,19 @@ function renderSearchResults(results, containerId = 'search-results') {
     return;
   }
 
+  // Show compare button when 2+ results
+  const compareButtonHtml = results.length >= 2 ? `
+    <button class="compare-ai-btn" onclick="openCompareChat()">
+      <i class="bi bi-robot"></i> Compare with AI
+    </button>
+  ` : '';
+
   const html = `
     <div class="search-results-box">
-      <p class="results-count">Found ${results.length} package${results.length !== 1 ? 's' : ''}</p>
+      <div class="results-header">
+        <p class="results-count">Found ${results.length} package${results.length !== 1 ? 's' : ''}</p>
+        ${compareButtonHtml}
+      </div>
       <div class="package-list">
         ${results.map(pkg => renderPackageCard(pkg)).join('')}
       </div>
@@ -303,8 +321,8 @@ function renderPackageCard(pkg) {
 function renderReviewSummary(stats, packageName) {
   if (!stats || stats.count === 0) {
     return `
-      <div class="package-review-summary">
-        <span class="review-stars-empty">No reviews yet</span>
+      <div class="package-review-summary package-review-empty" onclick="openFeedback('${escapeHtml(packageName)}')" title="Be the first to review this package">
+        <i class="bi bi-star"></i> <span class="review-cta">Be first to review</span>
       </div>
     `;
   }
@@ -322,7 +340,7 @@ function renderReviewSummary(stats, packageName) {
     '<span class="review-stars-empty">' + '☆'.repeat(emptyStars) + '</span>';
 
   return `
-    <div class="package-review-summary">
+    <div class="package-review-summary" onclick="openFeedback('${escapeHtml(packageName)}')" title="Click to read or write reviews">
       ${starsHtml}
       <span class="review-avg">${avgRating.toFixed(1)}</span>
       <span class="review-count">(${stats.count} review${stats.count !== 1 ? 's' : ''})</span>
@@ -529,6 +547,43 @@ function clearSearch() {
   }
 }
 
+// Open chatbot with AI comparison prompt for search results
+function openCompareChat() {
+  // Build package summary for AI (top 5 results)
+  const packageSummary = lastSearchResults.slice(0, 5).map(pkg => {
+    const rating = pkg.reviewStats?.avg ? `${pkg.reviewStats.avg.toFixed(1)} stars` : 'no reviews';
+    const stars = pkg.stars || 0;
+    return `- **${pkg.package_name}**: ${pkg.title || 'No description'} (${rating}, ${stars} GitHub stars)`;
+  }).join('\n');
+
+  const comparisonPrompt = `I searched for "${lastSearchQuery}" and found these packages:\n\n${packageSummary}\n\nCan you help me compare them and decide which one is best for my needs?`;
+
+  // Open chatbot and pre-fill the message
+  if (typeof toggleChat === 'function') {
+    // Ensure chat is open
+    const chatContainer = document.getElementById('chat-container');
+    if (!chatContainer || chatContainer.style.display === 'none') {
+      toggleChat();
+    }
+
+    // Pre-fill the input
+    setTimeout(() => {
+      if (typeof prefillChat === 'function') {
+        prefillChat(comparisonPrompt, true); // auto-send
+      } else {
+        const chatInput = document.getElementById('chat-input');
+        if (chatInput) {
+          chatInput.value = comparisonPrompt;
+          chatInput.focus();
+        }
+      }
+    }, 100);
+  }
+}
+
+// Export for global use
+window.openCompareChat = openCompareChat;
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize search index
@@ -572,4 +627,14 @@ document.addEventListener('DOMContentLoaded', function() {
       handleSearch();  // Uses AI
     });
   }
+
+  // Keyboard shortcut: 'C' to browse categories (when not in input field)
+  document.addEventListener('keydown', function(e) {
+    if (e.key.toLowerCase() === 'c' &&
+        !e.ctrlKey && !e.metaKey && !e.altKey &&
+        document.activeElement.tagName !== 'INPUT' &&
+        document.activeElement.tagName !== 'TEXTAREA') {
+      window.location.href = 'categories/';
+    }
+  });
 });

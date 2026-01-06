@@ -87,20 +87,34 @@
 .search-button-google,
 .browse-button-google {
   background: #f8f9fa;
-  border: 1px solid #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 4px;
   color: #3c4043;
   font-size: 0.95rem;
   padding: 0.75rem 1.5rem;
   cursor: pointer;
-  transition: border-color 0.1s, box-shadow 0.1s;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.search-button-google:hover,
-.browse-button-google:hover {
+.browse-button-google i {
+  font-size: 1rem;
+}
+
+.search-button-google:hover {
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
   border-color: #dadce0;
   background: #f8f9fa;
+}
+
+.browse-button-google:hover {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  transform: translateY(-1px);
 }
 
 /* Primary search button */
@@ -853,15 +867,62 @@ tr:hover {
   color: #1e293b;
 }
 
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .results-count {
   color: #6a737d;
-  margin-bottom: 1rem;
+  margin: 0;
   font-size: 0.9rem;
+}
+
+.compare-ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.compare-ai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.compare-ai-btn i {
+  font-size: 1rem;
 }
 
 .search-no-results {
   text-align: center;
   padding: 2rem;
+}
+
+/* Mobile adjustments for compare button */
+@media (max-width: 480px) {
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .compare-ai-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .search-status {
@@ -1594,6 +1655,28 @@ tr:hover {
   gap: 0.5rem;
   font-size: 0.85rem;
   margin: 0.5rem 0;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin-left: -0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.package-review-summary:hover {
+  background: #f8f9fa;
+}
+
+.package-review-empty {
+  opacity: 0.7;
+}
+
+.package-review-empty:hover {
+  opacity: 1;
+  background: #fff3cd;
+}
+
+.review-cta {
+  color: #856404;
 }
 
 .review-stars {
