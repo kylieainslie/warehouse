@@ -16,7 +16,7 @@ include-in-header:
 
 <div class="search-container-google">
 <input type="text" id="package-search" class="search-input-google"
-       placeholder="Search packages by function or topic..."
+       placeholder="What do you want to do?"
        autofocus>
 <span id="search-status" class="search-status"></span>
 <div class="search-buttons">
