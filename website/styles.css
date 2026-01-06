@@ -912,6 +912,63 @@ tr:hover {
   padding: 2rem;
 }
 
+/* Category suggestions in search results */
+.category-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.suggestion-label {
+  color: #6a737d;
+  font-size: 0.85rem;
+}
+
+.category-suggestion-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #2d3748;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.category-suggestion-link:hover {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.category-emoji {
+  font-size: 1rem;
+}
+
+.category-name {
+  font-weight: 500;
+}
+
+.category-desc {
+  color: #6a737d;
+  font-size: 0.8rem;
+}
+
+.category-suggestion-link:hover .category-desc {
+  color: rgba(255,255,255,0.8);
+}
+
 /* Mobile adjustments for compare button */
 @media (max-width: 480px) {
   .results-header {
@@ -920,6 +977,16 @@ tr:hover {
   }
 
   .compare-ai-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .category-suggestion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-suggestion-link {
     width: 100%;
     justify-content: center;
   }
@@ -2030,6 +2097,31 @@ tr:hover {
 }
 
 /* Browse Search */
+.browse-search {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.category-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32,33,36,.1);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.category-search-input:hover {
+  box-shadow: 0 2px 8px rgba(32,33,36,.15);
+}
+
+.category-search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
 .browse-search-container {
   max-width: 600px;
   margin: 0 auto 1.5rem;

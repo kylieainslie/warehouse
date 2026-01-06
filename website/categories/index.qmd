@@ -11,6 +11,12 @@ include-in-header:
 <p class="browse-subtitle">Explore R packages organized by category</p>
 </div>
 
+<div class="browse-search">
+<input type="text" id="category-search" class="category-search-input"
+       placeholder="Search categories..."
+       oninput="filterCategories(this.value)">
+</div>
+
 <div class="browse-controls">
 <div class="browse-actions">
 <button class="browse-action-btn" onclick="expandAllSections()">

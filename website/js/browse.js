@@ -369,5 +369,61 @@ function collapseAllSections() {
   saveSectionState();
 }
 
+// Filter categories based on search query
+function filterCategories(query) {
+  const queryLower = query.toLowerCase().trim();
+  const sections = document.querySelectorAll('.browse-section');
+  const categoryCards = document.querySelectorAll('.category-card');
+
+  if (!queryLower) {
+    // Show all sections and categories
+    sections.forEach(section => section.style.display = '');
+    categoryCards.forEach(card => card.style.display = '');
+    return;
+  }
+
+  // Filter each section
+  sections.forEach(section => {
+    const cards = section.querySelectorAll('.category-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const categoryId = card.dataset.category;
+      const name = card.querySelector('.card-name')?.textContent.toLowerCase() || '';
+      const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
+      const featured = Array.from(card.querySelectorAll('.featured-tile-name')).map(el => el.textContent.toLowerCase());
+
+      // Check if query matches name, description, or featured packages
+      const matches = name.includes(queryLower) ||
+                      description.includes(queryLower) ||
+                      featured.some(pkg => pkg.includes(queryLower));
+
+      if (matches) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Hide section if no matching categories
+    if (visibleCount === 0) {
+      section.style.display = 'none';
+    } else {
+      section.style.display = '';
+      // Auto-expand sections with matches
+      const header = section.querySelector('.section-header');
+      const content = section.querySelector('.section-content');
+      if (header && content && !header.classList.contains('expanded')) {
+        header.classList.add('expanded');
+        content.classList.add('expanded');
+      }
+    }
+  });
+}
+
+// Export for global use
+window.filterCategories = filterCategories;
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', initBrowsePage);

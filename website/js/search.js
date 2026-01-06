@@ -10,6 +10,25 @@ let reviewStats = {}; // Package review statistics from Google Reviews-style sys
 let lastSearchResults = [];
 let lastSearchQuery = '';
 
+// Category metadata for suggestions
+let categoriesData = null;
+
+// Keywords that map to specific categories (for better matching)
+const categoryKeywords = {
+  'epidemiology': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'pandemic', 'incidence', 'prevalence', 'transmission', 'infectious', 'disease', 'surveillance', 'contact tracing', 'r0', 'rt'],
+  'epiverse-trace': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'epiestim', 'epinow', 'cfr', 'case fatality'],
+  'genomics': ['dna', 'rna', 'sequence', 'gene', 'genome', 'mutation', 'variant', 'expression', 'sequencing'],
+  'bioinformatics': ['dna', 'rna', 'protein', 'sequence', 'alignment', 'blast', 'fasta', 'phylogenetic'],
+  'visualization': ['plot', 'chart', 'graph', 'visualize', 'ggplot', 'dashboard', 'graphics'],
+  'machine-learning': ['predict', 'classify', 'cluster', 'neural', 'deep learning', 'model', 'training'],
+  'time-series': ['forecast', 'time series', 'temporal', 'trend', 'seasonal', 'arima'],
+  'spatial-analysis': ['spatial', 'geographic', 'gis', 'coordinate', 'polygon', 'raster'],
+  'pharmacometrics': ['pk', 'pd', 'pharmacokinetic', 'pharmacodynamic', 'dosing', 'drug', 'concentration'],
+  'clinical-trials': ['clinical trial', 'randomized', 'placebo', 'endpoint', 'survival analysis'],
+  'statistics': ['regression', 'hypothesis', 'bayesian', 'inference', 'p-value', 'confidence interval'],
+  'shiny': ['interactive', 'web app', 'dashboard', 'reactive', 'ui']
+};
+
 // Fuse.js configuration based on Elasticsearch/BM25 field boosting patterns
 // Reference: Elasticsearch best practices use title^3, description^1, keywords^1.5
 // Adapted for functionality-first package discovery
@@ -38,11 +57,21 @@ async function initSearch() {
   try {
     if (statusEl) statusEl.textContent = 'Loading package index...';
 
-    // Load packages and review stats in parallel
-    const [packagesResponse, reviewsResponse] = await Promise.all([
+    // Load packages, review stats, and categories in parallel
+    const [packagesResponse, reviewsResponse, categoriesResponse] = await Promise.all([
       fetch('/data/packages.json'),
-      fetch('/api/reviews').catch(() => ({ ok: false }))
+      fetch('/api/reviews').catch(() => ({ ok: false })),
+      fetch('/data/categories-meta.json').catch(() => ({ ok: false }))
     ]);
+
+    // Load categories for suggestions
+    if (categoriesResponse.ok) {
+      try {
+        categoriesData = await categoriesResponse.json();
+      } catch (e) {
+        console.warn('Failed to parse categories:', e);
+      }
+    }
 
     if (!packagesResponse.ok) {
       throw new Error(`Failed to load search index: ${packagesResponse.status}`);
@@ -183,6 +212,61 @@ function getReviewRankingScore(stats) {
   return avgRating * Math.log10(reviewCount + 1);
 }
 
+// Find matching categories for a search query
+function findMatchingCategories(query) {
+  if (!categoriesData || !query) return [];
+
+  const queryLower = query.toLowerCase();
+  const matches = [];
+
+  // Flatten all categories from sections
+  const allCategories = [];
+  for (const section of categoriesData.sections || []) {
+    for (const cat of section.categories || []) {
+      allCategories.push(cat);
+    }
+  }
+
+  for (const category of allCategories) {
+    let score = 0;
+
+    // Check keyword mappings (highest priority)
+    const keywords = categoryKeywords[category.id] || [];
+    for (const keyword of keywords) {
+      if (queryLower.includes(keyword)) {
+        score += 10;
+        break;
+      }
+    }
+
+    // Check category name
+    if (queryLower.includes(category.name.toLowerCase()) ||
+        category.name.toLowerCase().includes(queryLower)) {
+      score += 5;
+    }
+
+    // Check description
+    if (category.description && category.description.toLowerCase().includes(queryLower)) {
+      score += 3;
+    }
+
+    // Check featured packages
+    for (const pkg of category.featured || []) {
+      if (queryLower.includes(pkg.toLowerCase())) {
+        score += 2;
+        break;
+      }
+    }
+
+    if (score > 0) {
+      matches.push({ ...category, score });
+    }
+  }
+
+  // Sort by score and return top matches
+  return matches.sort((a, b) => b.score - a.score).slice(0, 2);
+}
+
 // Render search results to DOM
 function renderSearchResults(results, containerId = 'search-results') {
   const container = document.getElementById(containerId);
@@ -223,12 +307,28 @@ function renderSearchResults(results, containerId = 'search-results') {
     </button>
   ` : '';
 
+  // Find matching categories for the query
+  const matchingCategories = findMatchingCategories(lastSearchQuery);
+  const categorySuggestionHtml = matchingCategories.length > 0 ? `
+    <div class="category-suggestion">
+      <span class="suggestion-label">You may be interested in:</span>
+      ${matchingCategories.map(cat => `
+        <a href="categories/${cat.id}.html" class="category-suggestion-link">
+          <span class="category-emoji">${cat.emoji}</span>
+          <span class="category-name">${escapeHtml(cat.name)}</span>
+          <span class="category-desc">collection</span>
+        </a>
+      `).join('')}
+    </div>
+  ` : '';
+
   const html = `
     <div class="search-results-box">
       <div class="results-header">
         <p class="results-count">Found ${results.length} package${results.length !== 1 ? 's' : ''}</p>
         ${compareButtonHtml}
       </div>
+      ${categorySuggestionHtml}
       <div class="package-list">
         ${results.map(pkg => renderPackageCard(pkg)).join('')}
       </div>
