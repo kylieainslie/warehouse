@@ -80,7 +80,7 @@ exports.handler = async function(event, context) {
 
     // Call Claude API for semantic search
     const response = await anthropic.messages.create({
-      model: 'claude-3-haiku-20240307',
+      model: 'claude-haiku-4-20250514',
       max_tokens: 256,
       system: SEARCH_PROMPT,
       messages: [{

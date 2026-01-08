@@ -112,7 +112,7 @@ exports.handler = async function(event, context) {
 
     // Call Claude API
     const response = await anthropic.messages.create({
-      model: 'claude-3-sonnet-20240229',
+      model: 'claude-sonnet-4-20250514',
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: messages
