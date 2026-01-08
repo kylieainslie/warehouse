@@ -32,12 +32,12 @@ function createChatbotUI() {
       <div id="chat-messages" class="chat-messages">
         <div class="chat-message assistant">
           <div class="message-content">
-            <p>Hi! I'm your R package assistant. I can help you find packages for specific tasks.</p>
+            <p>Hi! I'm your R package assistant. I can help you find the right packages for your data science tasks.</p>
             <p>Try asking things like:</p>
             <ul>
-              <li>"What package should I use to estimate serial intervals?"</li>
-              <li>"I need to create interactive plots"</li>
-              <li>"Compare EpiEstim and EpiNow2"</li>
+              <li>"What's the best package for machine learning?"</li>
+              <li>"I need to create interactive visualizations"</li>
+              <li>"Compare dplyr and data.table for data wrangling"</li>
             </ul>
           </div>
         </div>
@@ -218,7 +218,7 @@ function clearChat() {
   messagesContainer.innerHTML = `
     <div class="chat-message assistant">
       <div class="message-content">
-        <p>Hi! I'm your R package assistant. How can I help you find the right package?</p>
+        <p>Hi! I'm your R package assistant. How can I help you with your data science tasks?</p>
       </div>
     </div>
   `;
