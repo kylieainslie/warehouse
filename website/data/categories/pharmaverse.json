@@ -1,6 +1,6 @@
 [
   {
-    "id": 22026,
+    "id": 21984,
     "package_name": "rtables",
     "title": "Reporting Tables",
     "description": "Reporting tables often have structure that goes beyond\nsimple rectangular data. The 'rtables' package provides a\nframework for declaring complex multi-level tabulations and\nthen applying them to data. This framework models both\ntabulation and the resulting tables as hierarchical, tree-like\nobjects which support sibling sub-tables, arbitrary splitting\nor grouping of data in row and column dimensions, cells\ncontaining multiple values, and the concept of contextual\nsummary computations. A convenient pipe-able interface is\nprovided for declaring table layouts and the corresponding\ncomputations, and then applying them to data.",
@@ -245,11 +245,11 @@
     "stars": 246
   },
   {
-    "id": 8300,
+    "id": 8290,
     "package_name": "admiral",
     "title": "ADaM in R Asset Library",
     "description": "A toolbox for programming Clinical Data Interchange\nStandards Consortium (CDISC) compliant Analysis Data Model\n(ADaM) datasets in R. ADaM datasets are a mandatory part of any\nNew Drug or Biologics License Application submitted to the\nUnited States Food and Drug Administration (FDA). Analysis\nderivations are implemented in accordance with the \"Analysis\nData Model Implementation Guide\" (CDISC Analysis Data Model\nTeam, 2021,\n<https://www.cdisc.org/standards/foundational/adam>).",
-    "version": "1.3.1.9032",
+    "version": "1.4.0",
     "maintainer": "Ben Straub <ben.x.straub@gsk.com>",
     "url": "https://pharmaverse.github.io/admiral/,\nhttps://github.com/pharmaverse/admiral",
     "exports": [
@@ -407,15 +407,48 @@
       ["clinical-trials"],
       ["open-source"]
     ],
-    "score": 14.2219,
-    "stars": 264
+    "score": 14.2359,
+    "stars": 266
   },
   {
-    "id": 24407,
+    "id": 17697,
+    "package_name": "mmrm",
+    "title": "Mixed Models for Repeated Measures",
+    "description": "Mixed models for repeated measures (MMRM) are a popular\nchoice for analyzing longitudinal continuous outcomes in\nrandomized clinical trials and beyond; see Cnaan, Laird and\nSlasor (1997)\n<doi:10.1002/(SICI)1097-0258(19971030)16:20%3C2349::AID-SIM667%3E3.0.CO;2-E>\nfor a tutorial and Mallinckrodt, Lane, Schnell, Peng and\nMancuso (2008) <doi:10.1177/009286150804200402> for a review.\nThis package implements MMRM based on the marginal linear model\nwithout random effects using Template Model Builder ('TMB')\nwhich enables fast and robust model fitting. Users can specify\na variety of covariance matrices, weight observations, fit\nmodels with restricted or standard maximum likelihood\ninference, perform hypothesis testing with Satterthwaite or\nKenward-Roger adjustment, and extract least square means\nestimates by using 'emmeans'.",
+    "version": "0.3.17",
+    "maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>",
+    "url": "https://openpharma.github.io/mmrm/",
+    "exports": [
+      ["as.cov_struct"],
+      ["augment"],
+      ["component"],
+      ["cov_struct"],
+      ["cov_types"],
+      ["df_1d"],
+      ["df_md"],
+      ["emp_start"],
+      ["fit_mmrm"],
+      ["fit_single_optimizer"],
+      ["glance"],
+      ["mmrm"],
+      ["mmrm_control"],
+      ["refit_multiple_optimizers"],
+      ["std_start"],
+      ["tidy"],
+      ["VarCorr"]
+    ],
+    "topics": [
+      ["cpp"]
+    ],
+    "score": 13.0536,
+    "stars": 154
+  },
+  {
+    "id": 24363,
     "package_name": "teal",
     "title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
     "description": "A 'shiny' based interactive exploration framework for\nanalyzing clinical trials data. 'teal' currently provides a\ndynamic filtering facility and different data viewers. 'teal'\n'shiny' applications are built using standard 'shiny' modules.",
-    "version": "1.1.0.9015",
+    "version": "1.1.0.9016",
     "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
     "url": "https://insightsengineering.github.io/teal/,\nhttps://github.com/insightsengineering/teal/",
     "exports": [
@@ -460,44 +493,11 @@
       ["shiny"],
       ["webapp"]
     ],
-    "score": 13.0969,
-    "stars": 238
+    "score": 12.9896,
+    "stars": 241
   },
   {
-    "id": 17731,
-    "package_name": "mmrm",
-    "title": "Mixed Models for Repeated Measures",
-    "description": "Mixed models for repeated measures (MMRM) are a popular\nchoice for analyzing longitudinal continuous outcomes in\nrandomized clinical trials and beyond; see Cnaan, Laird and\nSlasor (1997)\n<doi:10.1002/(SICI)1097-0258(19971030)16:20%3C2349::AID-SIM667%3E3.0.CO;2-E>\nfor a tutorial and Mallinckrodt, Lane, Schnell, Peng and\nMancuso (2008) <doi:10.1177/009286150804200402> for a review.\nThis package implements MMRM based on the marginal linear model\nwithout random effects using Template Model Builder ('TMB')\nwhich enables fast and robust model fitting. Users can specify\na variety of covariance matrices, weight observations, fit\nmodels with restricted or standard maximum likelihood\ninference, perform hypothesis testing with Satterthwaite or\nKenward-Roger adjustment, and extract least square means\nestimates by using 'emmeans'.",
-    "version": "0.3.17",
-    "maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>",
-    "url": "https://openpharma.github.io/mmrm/",
-    "exports": [
-      ["as.cov_struct"],
-      ["augment"],
-      ["component"],
-      ["cov_struct"],
-      ["cov_types"],
-      ["df_1d"],
-      ["df_md"],
-      ["emp_start"],
-      ["fit_mmrm"],
-      ["fit_single_optimizer"],
-      ["glance"],
-      ["mmrm"],
-      ["mmrm_control"],
-      ["refit_multiple_optimizers"],
-      ["std_start"],
-      ["tidy"],
-      ["VarCorr"]
-    ],
-    "topics": [
-      ["cpp"]
-    ],
-    "score": 13.0964,
-    "stars": 154
-  },
-  {
-    "id": 24460,
+    "id": 24416,
     "package_name": "tern",
     "title": "Create Common TLGs Used in Clinical Trials",
     "description": "Table, Listings, and Graphs (TLG) library for common\noutputs used in clinical trials.",
@@ -812,7 +812,7 @@
     "stars": 93
   },
   {
-    "id": 9879,
+    "id": 9868,
     "package_name": "cards",
     "title": "Analysis Results Data",
     "description": "Construct CDISC (Clinical Data Interchange Standards\nConsortium) compliant Analysis Results Data objects. These\nobjects are used and re-used to construct summary tables,\nvisualizations, and written reports. The package also exports\nutilities for working with these objects and creating new\nAnalysis Results Data objects.",
@@ -913,11 +913,11 @@
       ["cdisc"],
       ["dataset"]
     ],
-    "score": 12.1622,
-    "stars": 50
+    "score": 12.0405,
+    "stars": 51
   },
   {
-    "id": 14302,
+    "id": 14273,
     "package_name": "ggsurvfit",
     "title": "Flexible Time-to-Event Figures",
     "description": "Ease the creation of time-to-event (i.e. survival)\nendpoint figures. The modular functions create figures ready\nfor publication. Each of the functions that add to or modify\nthe figure are written as proper 'ggplot2' geoms or stat\nmethods, allowing the functions from this package to be\ncombined with any function or customization from 'ggplot2' and\nother 'ggplot2' extension packages.",
@@ -961,7 +961,50 @@
     "stars": 94
   },
   {
-    "id": 9880,
+    "id": 21605,
+    "package_name": "rlistings",
+    "title": "Clinical Trial Style Data Readout Listings",
+    "description": "Listings are often part of the submission of clinical\ntrial data in regulatory settings.  We provide a framework for\nthe specific formatting features often used when displaying\nlarge datasets in that context.",
+    "version": "0.2.13.9002",
+    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
+    "url": "https://insightsengineering.github.io/rlistings/,\nhttps://github.com/insightsengineering/rlistings/",
+    "exports": [
+      ["add_listing_col"],
+      ["add_listing_dispcol"],
+      ["align_colnames"],
+      ["align_colnames<-"],
+      ["as_keycol"],
+      ["as_listing"],
+      ["export_as_txt"],
+      ["get_keycols"],
+      ["is_keycol"],
+      ["listing_dispcols"],
+      ["listing_dispcols<-"],
+      ["main_footer"],
+      ["main_footer<-"],
+      ["main_title"],
+      ["main_title<-"],
+      ["make_row_df"],
+      ["matrix_form"],
+      ["num_rep_cols"],
+      ["obj_round_type"],
+      ["obj_round_type<-"],
+      ["paginate_listing"],
+      ["prov_footer"],
+      ["prov_footer<-"],
+      ["spanning_col_label_df"],
+      ["spanning_col_label_df<-"],
+      ["split_into_pages_by_var"],
+      ["subtitles"],
+      ["subtitles<-"],
+      ["toString"]
+    ],
+    "topics": [],
+    "score": 11.405,
+    "stars": 28
+  },
+  {
+    "id": 9869,
     "package_name": "cardx",
     "title": "Extra Analysis Results Data Utilities",
     "description": "Create extra Analysis Results Data (ARD) summary objects.\nThe package supplements the simple ARD functions from the\n'cards' package, exporting functions to put statistical results\nin the ARD format. These objects are used and re-used to\nconstruct summary tables, visualizations, and written reports.",
@@ -1046,54 +1089,11 @@
       ["where"]
     ],
     "topics": [],
-    "score": 11.4084,
+    "score": 11.2632,
     "stars": 20
   },
   {
-    "id": 21650,
-    "package_name": "rlistings",
-    "title": "Clinical Trial Style Data Readout Listings",
-    "description": "Listings are often part of the submission of clinical\ntrial data in regulatory settings.  We provide a framework for\nthe specific formatting features often used when displaying\nlarge datasets in that context.",
-    "version": "0.2.13.9002",
-    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
-    "url": "https://insightsengineering.github.io/rlistings/,\nhttps://github.com/insightsengineering/rlistings/",
-    "exports": [
-      ["add_listing_col"],
-      ["add_listing_dispcol"],
-      ["align_colnames"],
-      ["align_colnames<-"],
-      ["as_keycol"],
-      ["as_listing"],
-      ["export_as_txt"],
-      ["get_keycols"],
-      ["is_keycol"],
-      ["listing_dispcols"],
-      ["listing_dispcols<-"],
-      ["main_footer"],
-      ["main_footer<-"],
-      ["main_title"],
-      ["main_title<-"],
-      ["make_row_df"],
-      ["matrix_form"],
-      ["num_rep_cols"],
-      ["obj_round_type"],
-      ["obj_round_type<-"],
-      ["paginate_listing"],
-      ["prov_footer"],
-      ["prov_footer<-"],
-      ["spanning_col_label_df"],
-      ["spanning_col_label_df<-"],
-      ["split_into_pages_by_var"],
-      ["subtitles"],
-      ["subtitles<-"],
-      ["toString"]
-    ],
-    "topics": [],
-    "score": 11.405,
-    "stars": 28
-  },
-  {
-    "id": 20719,
+    "id": 20677,
     "package_name": "r2rtf",
     "title": "Easily Create Production-Ready Rich Text Format (RTF) Tables and\nFigures",
     "description": "Create production-ready Rich Text Format (RTF) tables and\nfigures with flexible format.",
@@ -1127,7 +1127,7 @@
     "stars": 82
   },
   {
-    "id": 13463,
+    "id": 13439,
     "package_name": "formatters",
     "title": "ASCII Formatting for Values and Tables",
     "description": "We provide a framework for rendering complex tables to\nASCII, and a set of formatters for transforming values or sets\nof values into ASCII-ready display strings.",
@@ -1264,7 +1264,7 @@
     "stars": 19
   },
   {
-    "id": 24412,
+    "id": 24368,
     "package_name": "teal.modules.clinical",
     "title": "'teal' Modules for Standard Clinical Outputs",
     "description": "Provides user-friendly tools for creating and customizing\nclinical trial reports. By leveraging the 'teal' framework,\nthis package provides 'teal' modules to easily create an\ninteractive panel that allows for seamless adjustments to data\npresentation, thereby streamlining the creation of detailed and\naccurate reports.",
@@ -1340,49 +1340,15 @@
       ["outputs"],
       ["shiny"]
     ],
-    "score": 10.36,
+    "score": 10.3561,
     "stars": 39
   },
   {
-    "id": 24409,
-    "package_name": "teal.data",
-    "title": "Data Model for 'teal' Applications",
-    "description": "Provides a 'teal_data' class as a unified data model for\n'teal' applications focusing on reproducibility and relational\ndata.",
-    "version": "0.8.0.9002",
-    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
-    "url": "https://insightsengineering.github.io/teal.data/,\nhttps://github.com/insightsengineering/teal.data/",
-    "exports": [
-      ["cdisc_data"],
-      ["col_labels"],
-      ["col_labels<-"],
-      ["col_relabel"],
-      ["datanames"],
-      ["datanames<-"],
-      ["example_cdisc_data"],
-      ["get_code"],
-      ["join_key"],
-      ["join_keys"],
-      ["join_keys<-"],
-      ["parent"],
-      ["parents"],
-      ["parents<-"],
-      ["show"],
-      ["teal_data"],
-      ["verify"]
-    ],
-    "topics": [
-      ["data-model"],
-      ["nest"]
-    ],
-    "score": 10.1901,
-    "stars": 11
-  },
-  {
-    "id": 24413,
+    "id": 24369,
     "package_name": "teal.modules.general",
     "title": "General Modules for 'teal' Applications",
     "description": "Prebuilt 'shiny' modules containing tools for viewing\ndata, visualizing data, understanding missing and outlier\nvalues within your data and performing simple data analysis.\nThis extends 'teal' framework that supports reproducible\nresearch and analysis.",
-    "version": "0.6.0.9002",
+    "version": "0.6.0.9004",
     "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
     "url": "https://insightsengineering.github.io/teal.modules.general/,\nhttps://github.com/insightsengineering/teal.modules.general/",
     "exports": [
@@ -1412,11 +1378,87 @@
       ["nest"],
       ["shiny"]
     ],
-    "score": 10.1613,
+    "score": 10.1584,
     "stars": 15
   },
   {
-    "id": 24416,
+    "id": 24365,
+    "package_name": "teal.data",
+    "title": "Data Model for 'teal' Applications",
+    "description": "Provides a 'teal_data' class as a unified data model for\n'teal' applications focusing on reproducibility and relational\ndata.",
+    "version": "0.8.0.9002",
+    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
+    "url": "https://insightsengineering.github.io/teal.data/,\nhttps://github.com/insightsengineering/teal.data/",
+    "exports": [
+      ["cdisc_data"],
+      ["col_labels"],
+      ["col_labels<-"],
+      ["col_relabel"],
+      ["datanames"],
+      ["datanames<-"],
+      ["example_cdisc_data"],
+      ["get_code"],
+      ["join_key"],
+      ["join_keys"],
+      ["join_keys<-"],
+      ["parent"],
+      ["parents"],
+      ["parents<-"],
+      ["show"],
+      ["teal_data"],
+      ["verify"]
+    ],
+    "topics": [
+      ["data-model"],
+      ["nest"]
+    ],
+    "score": 9.743,
+    "stars": 11
+  },
+  {
+    "id": 24375,
+    "package_name": "teal.widgets",
+    "title": "'shiny' Widgets for 'teal' Applications",
+    "description": "Collection of 'shiny' widgets to support 'teal'\napplications. Enables the manipulation of application layout\nand plot or table settings.",
+    "version": "0.5.1.9005",
+    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
+    "url": "https://insightsengineering.github.io/teal.widgets/,\nhttps://github.com/insightsengineering/teal.widgets",
+    "exports": [
+      ["basic_table_args"],
+      ["clean_brushedPoints"],
+      ["draggable_buckets"],
+      ["get_dt_rows"],
+      ["ggplot2_args"],
+      ["nested_closeable_modal"],
+      ["optionalSelectInput"],
+      ["optionalSliderInput"],
+      ["optionalSliderInputValMinMax"],
+      ["panel_group"],
+      ["panel_item"],
+      ["parse_basic_table_args"],
+      ["parse_ggplot2_args"],
+      ["plot_with_settings_srv"],
+      ["plot_with_settings_ui"],
+      ["resolve_basic_table_args"],
+      ["resolve_ggplot2_args"],
+      ["standard_layout"],
+      ["table_with_settings_srv"],
+      ["table_with_settings_ui"],
+      ["updateOptionalSelectInput"],
+      ["verbatim_popup_srv"],
+      ["verbatim_popup_ui"],
+      ["white_small_well"]
+    ],
+    "topics": [
+      ["nest"],
+      ["shiny"],
+      ["widgets"]
+    ],
+    "score": 9.6168,
+    "stars": 6
+  },
+  {
+    "id": 24372,
     "package_name": "teal.reporter",
     "title": "Reporting Tools for 'shiny' Modules",
     "description": "Prebuilt 'shiny' modules containing tools for the\ngeneration of 'rmarkdown' reports, supporting reproducible\nresearch and analysis.",
@@ -1461,82 +1503,11 @@
       ["reporting"],
       ["shiny"]
     ],
-    "score": 9.6317,
+    "score": 9.5949,
     "stars": 9
   },
   {
-    "id": 24419,
-    "package_name": "teal.widgets",
-    "title": "'shiny' Widgets for 'teal' Applications",
-    "description": "Collection of 'shiny' widgets to support 'teal'\napplications. Enables the manipulation of application layout\nand plot or table settings.",
-    "version": "0.5.1.9005",
-    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
-    "url": "https://insightsengineering.github.io/teal.widgets/,\nhttps://github.com/insightsengineering/teal.widgets",
-    "exports": [
-      ["basic_table_args"],
-      ["clean_brushedPoints"],
-      ["draggable_buckets"],
-      ["get_dt_rows"],
-      ["ggplot2_args"],
-      ["nested_closeable_modal"],
-      ["optionalSelectInput"],
-      ["optionalSliderInput"],
-      ["optionalSliderInputValMinMax"],
-      ["panel_group"],
-      ["panel_item"],
-      ["parse_basic_table_args"],
-      ["parse_ggplot2_args"],
-      ["plot_with_settings_srv"],
-      ["plot_with_settings_ui"],
-      ["resolve_basic_table_args"],
-      ["resolve_ggplot2_args"],
-      ["standard_layout"],
-      ["table_with_settings_srv"],
-      ["table_with_settings_ui"],
-      ["updateOptionalSelectInput"],
-      ["verbatim_popup_srv"],
-      ["verbatim_popup_ui"],
-      ["white_small_well"]
-    ],
-    "topics": [
-      ["nest"],
-      ["shiny"],
-      ["widgets"]
-    ],
-    "score": 9.6168,
-    "stars": 6
-  },
-  {
-    "id": 24408,
-    "package_name": "teal.code",
-    "title": "Code Storage and Execution Class for 'teal' Applications",
-    "description": "Introduction of 'qenv' S4 class, that facilitates code\nexecution and reproducibility in 'teal' applications.",
-    "version": "0.7.0.9006",
-    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
-    "url": "https://insightsengineering.github.io/teal.code/,\nhttps://github.com/insightsengineering/teal.code",
-    "exports": [
-      ["concat"],
-      ["dev_suppress"],
-      ["eval_code"],
-      ["get_code"],
-      ["get_env"],
-      ["get_messages"],
-      ["get_outputs"],
-      ["get_var"],
-      ["get_warnings"],
-      ["join"],
-      ["qenv"],
-      ["show"]
-    ],
-    "topics": [
-      ["nest"],
-      ["shiny"]
-    ],
-    "score": 9.5414,
-    "stars": 12
-  },
-  {
-    "id": 7711,
+    "id": 7703,
     "package_name": "Tplyr",
     "title": "A Traceability Focused Grammar of Clinical Data Summary",
     "description": "A traceability focused tool created to simplify the data\nmanipulation necessary to create clinical summaries.",
@@ -1648,41 +1619,7 @@
     "stars": 100
   },
   {
-    "id": 24417,
-    "package_name": "teal.slice",
-    "title": "Filter Module for 'teal' Applications",
-    "description": "Data filtering module for 'teal' applications.  Allows for\ninteractive filtering of data stored in 'data.frame' and\n'MultiAssayExperiment' objects. Also displays filtered and\nunfiltered observation counts.",
-    "version": "0.7.1.9002",
-    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
-    "url": "https://insightsengineering.github.io/teal.slice/,\nhttps://github.com/insightsengineering/teal.slice/",
-    "exports": [
-      ["as.teal_slice"],
-      ["as.teal_slices"],
-      ["clear_filter_states"],
-      ["FilterPanelAPI"],
-      ["get_filter_expr"],
-      ["get_filter_state"],
-      ["get_supported_filter_varnames"],
-      ["init_filter_states"],
-      ["init_filtered_data"],
-      ["init_filtered_dataset"],
-      ["is.teal_slice"],
-      ["is.teal_slices"],
-      ["remove_filter_state"],
-      ["set_filter_state"],
-      ["teal_slice"],
-      ["teal_slices"]
-    ],
-    "topics": [
-      ["modules"],
-      ["nest"],
-      ["slice"]
-    ],
-    "score": 9.4922,
-    "stars": 12
-  },
-  {
-    "id": 21033,
+    "id": 20991,
     "package_name": "rbmi",
     "title": "Reference Based Multiple Imputation",
     "description": "Implements standard and reference based multiple\nimputation methods for continuous longitudinal endpoints\n(Gower-Page et al. (2022) <doi:10.21105/joss.04251>). In\nparticular, this package supports deterministic conditional\nmean imputation and jackknifing as described in Wolbers et al.\n(2022) <doi:10.1002/pst.2234>, Bayesian multiple imputation as\ndescribed in Carpenter et al. (2013)\n<doi:10.1080/10543406.2013.834911>, and bootstrapped maximum\nlikelihood imputation as described in von Hippel and Bartlett\n(2021) <doi: 10.1214/20-STS793>.",
@@ -1736,7 +1673,7 @@
     "stars": 20
   },
   {
-    "id": 8305,
+    "id": 8295,
     "package_name": "admiralonco",
     "title": "Oncology Extension Package for ADaM in 'R' Asset Library",
     "description": "Programming oncology specific Clinical Data Interchange\nStandards Consortium (CDISC) compliant Analysis Data Model\n(ADaM) datasets in 'R'. ADaM datasets are a mandatory part of\nany New Drug or Biologics License Application submitted to the\nUnited States Food and Drug Administration (FDA). Analysis\nderivations are implemented in accordance with the \"Analysis\nData Model Implementation Guide\" (CDISC Analysis Data Model\nTeam (2021),\n<https://www.cdisc.org/standards/foundational/adam>). The\npackage is an extension package of the 'admiral' package.",
@@ -1776,11 +1713,154 @@
       ["trts_censor"]
     ],
     "topics": [],
-    "score": 9.293,
+    "score": 9.2516,
     "stars": 34
   },
   {
-    "id": 17264,
+    "id": 24663,
+    "package_name": "tidytlg",
+    "title": "Create TLGs using the 'tidyverse'",
+    "description": "Generate tables, listings, and graphs (TLG) using\n'tidyverse'. Tables can be created functionally, using a\nstandard TLG process, or by specifying table and column\nmetadata to create generic analysis summaries. The 'envsetup'\npackage can also be leveraged to create environments for table\ncreation.",
+    "version": "0.11.0.9000",
+    "maintainer": "Konrad Pagacz <kpagacz@its.jnj.com>",
+    "url": "https://pharmaverse.github.io/tidytlg/main/,\nhttps://github.com/pharmaverse/tidytlg",
+    "exports": [
+      ["add_bottom_borders"],
+      ["add_format"],
+      ["add_indent"],
+      ["add_newrows"],
+      ["bind_table"],
+      ["char2factor"],
+      ["col_borders"],
+      ["freq"],
+      ["generate_results"],
+      ["gentlg"],
+      ["nested_freq"],
+      ["no_borders"],
+      ["replace_na_with_blank"],
+      ["rmdpstitle"],
+      ["roundSAS"],
+      ["row_border"],
+      ["single_border"],
+      ["spanning_borders"],
+      ["spanning_headers"],
+      ["statlist"],
+      ["tidytlg_metadata"],
+      ["tidytlg_titles"],
+      ["tlgsetup"],
+      ["univar"]
+    ],
+    "topics": [],
+    "score": 9.1661,
+    "stars": 36
+  },
+  {
+    "id": 24364,
+    "package_name": "teal.code",
+    "title": "Code Storage and Execution Class for 'teal' Applications",
+    "description": "Introduction of 'qenv' S4 class, that facilitates code\nexecution and reproducibility in 'teal' applications.",
+    "version": "0.7.0.9006",
+    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
+    "url": "https://insightsengineering.github.io/teal.code/,\nhttps://github.com/insightsengineering/teal.code",
+    "exports": [
+      ["concat"],
+      ["dev_suppress"],
+      ["eval_code"],
+      ["get_code"],
+      ["get_env"],
+      ["get_messages"],
+      ["get_outputs"],
+      ["get_var"],
+      ["get_warnings"],
+      ["join"],
+      ["qenv"],
+      ["show"]
+    ],
+    "topics": [
+      ["nest"],
+      ["shiny"]
+    ],
+    "score": 9.1126,
+    "stars": 12
+  },
+  {
+    "id": 24373,
+    "package_name": "teal.slice",
+    "title": "Filter Module for 'teal' Applications",
+    "description": "Data filtering module for 'teal' applications.  Allows for\ninteractive filtering of data stored in 'data.frame' and\n'MultiAssayExperiment' objects. Also displays filtered and\nunfiltered observation counts.",
+    "version": "0.7.1.9002",
+    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
+    "url": "https://insightsengineering.github.io/teal.slice/,\nhttps://github.com/insightsengineering/teal.slice/",
+    "exports": [
+      ["as.teal_slice"],
+      ["as.teal_slices"],
+      ["clear_filter_states"],
+      ["FilterPanelAPI"],
+      ["get_filter_expr"],
+      ["get_filter_state"],
+      ["get_supported_filter_varnames"],
+      ["init_filter_states"],
+      ["init_filtered_data"],
+      ["init_filtered_dataset"],
+      ["is.teal_slice"],
+      ["is.teal_slices"],
+      ["remove_filter_state"],
+      ["set_filter_state"],
+      ["teal_slice"],
+      ["teal_slices"]
+    ],
+    "topics": [
+      ["modules"],
+      ["nest"],
+      ["slice"]
+    ],
+    "score": 9.1082,
+    "stars": 12
+  },
+  {
+    "id": 26009,
+    "package_name": "xportr",
+    "title": "Utilities to Output CDISC SDTM/ADaM XPT Files",
+    "description": "Tools to build CDISC compliant data sets and check for\nCDISC compliance.",
+    "version": "0.5.0.9000",
+    "maintainer": "Eli Miller <Eli.Miller@AtorusResearch.com>",
+    "url": "https://atorus-research.github.io/xportr/,\nhttps://github.com/atorus-research/xportr",
+    "exports": [
+      ["xportr"],
+      ["xportr_df_label"],
+      ["xportr_format"],
+      ["xportr_label"],
+      ["xportr_length"],
+      ["xportr_metadata"],
+      ["xportr_options"],
+      ["xportr_order"],
+      ["xportr_split"],
+      ["xportr_type"],
+      ["xportr_write"],
+      ["xpt_validate"]
+    ],
+    "topics": [
+      ["clinical-programmers"],
+      ["xpt"]
+    ],
+    "score": 9.0574,
+    "stars": 46
+  },
+  {
+    "id": 19559,
+    "package_name": "pharmaversesdtm",
+    "title": "SDTM Test Data for the 'Pharmaverse' Family of Packages",
+    "description": "A set of Study Data Tabulation Model (SDTM) datasets from\nthe Clinical Data Interchange Standards Consortium (CDISC)\npilot project used for testing and developing Analysis Data\nModel (ADaM) datasets inside the pharmaverse family of\npackages. SDTM dataset specifications are described in the\nCDISC SDTM implementation guide, accessible by creating a free\naccount on <https://www.cdisc.org/>.",
+    "version": "1.4.0",
+    "maintainer": "Lina Patil <lina.patil@cytel.com>",
+    "url": "https://pharmaverse.github.io/pharmaversesdtm/,\nhttps://github.com/pharmaverse/pharmaversesdtm/",
+    "exports": [],
+    "topics": [],
+    "score": 9.0305,
+    "stars": 21
+  },
+  {
+    "id": 17233,
     "package_name": "metacore",
     "title": "A Centralized Metadata Object Focus on Clinical Trial Data\nProgramming Workflows",
     "description": "Create an immutable container holding metadata for the\npurpose of better enabling programming activities and\nfunctionality of other packages within the clinical programming\nworkflow.",
@@ -1821,91 +1901,11 @@
       ["xml_to_var_spec"]
     ],
     "topics": [],
-    "score": 9.2815,
+    "score": 8.9703,
     "stars": 41
   },
   {
-    "id": 24706,
-    "package_name": "tidytlg",
-    "title": "Create TLGs using the 'tidyverse'",
-    "description": "Generate tables, listings, and graphs (TLG) using\n'tidyverse'. Tables can be created functionally, using a\nstandard TLG process, or by specifying table and column\nmetadata to create generic analysis summaries. The 'envsetup'\npackage can also be leveraged to create environments for table\ncreation.",
-    "version": "0.11.0.9000",
-    "maintainer": "Konrad Pagacz <kpagacz@its.jnj.com>",
-    "url": "https://pharmaverse.github.io/tidytlg/main/,\nhttps://github.com/pharmaverse/tidytlg",
-    "exports": [
-      ["add_bottom_borders"],
-      ["add_format"],
-      ["add_indent"],
-      ["add_newrows"],
-      ["bind_table"],
-      ["char2factor"],
-      ["col_borders"],
-      ["freq"],
-      ["generate_results"],
-      ["gentlg"],
-      ["nested_freq"],
-      ["no_borders"],
-      ["replace_na_with_blank"],
-      ["rmdpstitle"],
-      ["roundSAS"],
-      ["row_border"],
-      ["single_border"],
-      ["spanning_borders"],
-      ["spanning_headers"],
-      ["statlist"],
-      ["tidytlg_metadata"],
-      ["tidytlg_titles"],
-      ["tlgsetup"],
-      ["univar"]
-    ],
-    "topics": [],
-    "score": 9.1661,
-    "stars": 36
-  },
-  {
-    "id": 19597,
-    "package_name": "pharmaversesdtm",
-    "title": "SDTM Test Data for the 'Pharmaverse' Family of Packages",
-    "description": "A set of Study Data Tabulation Model (SDTM) datasets from\nthe Clinical Data Interchange Standards Consortium (CDISC)\npilot project used for testing and developing Analysis Data\nModel (ADaM) datasets inside the pharmaverse family of\npackages. SDTM dataset specifications are described in the\nCDISC SDTM implementation guide, accessible by creating a free\naccount on <https://www.cdisc.org/>.",
-    "version": "1.3.1.9015",
-    "maintainer": "Lina Patil <lina.patil@cytel.com>",
-    "url": "https://pharmaverse.github.io/pharmaversesdtm/,\nhttps://github.com/pharmaverse/pharmaversesdtm/",
-    "exports": [],
-    "topics": [],
-    "score": 9.1348,
-    "stars": 21
-  },
-  {
-    "id": 26051,
-    "package_name": "xportr",
-    "title": "Utilities to Output CDISC SDTM/ADaM XPT Files",
-    "description": "Tools to build CDISC compliant data sets and check for\nCDISC compliance.",
-    "version": "0.4.3.9008",
-    "maintainer": "Eli Miller <Eli.Miller@AtorusResearch.com>",
-    "url": "https://atorus-research.github.io/xportr/,\nhttps://github.com/atorus-research/xportr",
-    "exports": [
-      ["xportr"],
-      ["xportr_df_label"],
-      ["xportr_format"],
-      ["xportr_label"],
-      ["xportr_length"],
-      ["xportr_metadata"],
-      ["xportr_options"],
-      ["xportr_order"],
-      ["xportr_split"],
-      ["xportr_type"],
-      ["xportr_write"],
-      ["xpt_validate"]
-    ],
-    "topics": [
-      ["clinical-programmers"],
-      ["xpt"]
-    ],
-    "score": 9.0629,
-    "stars": 46
-  },
-  {
-    "id": 11044,
+    "id": 11029,
     "package_name": "crmPack",
     "title": "Object-Oriented Implementation of Dose Escalation Designs",
     "description": "Implements a wide range of dose escalation designs. The\nfocus is on model-based designs, ranging from classical and\nmodern continual reassessment methods (CRMs) based on\ndose-limiting toxicity endpoints to dual-endpoint designs\ntaking into account a biomarker/efficacy outcome. Bayesian\ninference is performed via MCMC sampling in JAGS, and it is\neasy to setup a new design with custom JAGS code. However, it\nis also possible to implement 3+3 designs for comparison or\nmodels with non-Bayesian estimation. The whole package is\nwritten in a modular form in the S4 class system, making it\nvery flexible for adaptation to new models, escalation or\nstopping rules. Further details are presented in Sabanes Bove\net al. (2019) <doi:10.18637/jss.v089.i10>.",
@@ -2370,30 +2370,53 @@
     "stars": 22
   },
   {
-    "id": 24411,
-    "package_name": "teal.logger",
-    "title": "Logging Setup for the 'teal' Family of Packages",
-    "description": "Utilizing the 'logger' framework to record events within a\npackage, specific to 'teal' family of packages.  Supports\nlogging namespaces, hierarchical logging, various log\ndestinations, vectorization, and more.",
-    "version": "0.4.1.9002",
-    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
-    "url": "https://insightsengineering.github.io/teal.logger/,\nhttps://github.com/insightsengineering/teal.logger/",
+    "id": 20867,
+    "package_name": "random.cdisc.data",
+    "title": "Create Random ADaM Datasets",
+    "description": "A set of functions to create random Analysis Data Model\n(ADaM) datasets and cached dataset.  ADaM dataset\nspecifications are described by the Clinical Data Interchange\nStandards Consortium (CDISC) Analysis Data Model Team.",
+    "version": "0.3.16.9007",
+    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
+    "url": "https://insightsengineering.github.io/random.cdisc.data/,\nhttps://github.com/insightsengineering/random.cdisc.data/",
     "exports": [
-      ["log_shiny_input_changes"],
-      ["log_system_info"],
-      ["register_handlers"],
-      ["register_logger"],
-      ["suppress_logs"]
+      ["apply_metadata"],
+      ["mutate_na"],
+      ["radab"],
+      ["radae"],
+      ["radaette"],
+      ["radcm"],
+      ["raddv"],
+      ["radeg"],
+      ["radex"],
+      ["radhy"],
+      ["radlb"],
+      ["radmh"],
+      ["radpc"],
+      ["radpp"],
+      ["radqlqc"],
+      ["radqs"],
+      ["radrs"],
+      ["radsaftte"],
+      ["radsl"],
+      ["radsub"],
+      ["radtr"],
+      ["radtte"],
+      ["radvs"],
+      ["rel_var"],
+      ["replace_na"],
+      ["rtexp"],
+      ["rtpois"],
+      ["sample_fct"],
+      ["visit_schedule"]
     ],
     "topics": [
-      ["logging"],
-      ["nest"],
-      ["utilities"]
+      ["cdisc"],
+      ["dataset"]
     ],
-    "score": 8.4844,
-    "stars": 6
+    "score": 8.4496,
+    "stars": 44
   },
   {
-    "id": 24418,
+    "id": 24374,
     "package_name": "teal.transform",
     "title": "Functions for Extracting and Merging Data in the 'teal'\nFramework",
     "description": "A standardized user interface for column selection, that\nfacilitates dataset merging in 'teal' framework.",
@@ -2445,57 +2468,11 @@
       ["nest"],
       ["transform"]
     ],
-    "score": 8.4754,
+    "score": 8.4371,
     "stars": 2
   },
   {
-    "id": 20908,
-    "package_name": "random.cdisc.data",
-    "title": "Create Random ADaM Datasets",
-    "description": "A set of functions to create random Analysis Data Model\n(ADaM) datasets and cached dataset.  ADaM dataset\nspecifications are described by the Clinical Data Interchange\nStandards Consortium (CDISC) Analysis Data Model Team.",
-    "version": "0.3.16.9007",
-    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
-    "url": "https://insightsengineering.github.io/random.cdisc.data/,\nhttps://github.com/insightsengineering/random.cdisc.data/",
-    "exports": [
-      ["apply_metadata"],
-      ["mutate_na"],
-      ["radab"],
-      ["radae"],
-      ["radaette"],
-      ["radcm"],
-      ["raddv"],
-      ["radeg"],
-      ["radex"],
-      ["radhy"],
-      ["radlb"],
-      ["radmh"],
-      ["radpc"],
-      ["radpp"],
-      ["radqlqc"],
-      ["radqs"],
-      ["radrs"],
-      ["radsaftte"],
-      ["radsl"],
-      ["radsub"],
-      ["radtr"],
-      ["radtte"],
-      ["radvs"],
-      ["rel_var"],
-      ["replace_na"],
-      ["rtexp"],
-      ["rtpois"],
-      ["sample_fct"],
-      ["visit_schedule"]
-    ],
-    "topics": [
-      ["cdisc"],
-      ["dataset"]
-    ],
-    "score": 8.4464,
-    "stars": 43
-  },
-  {
-    "id": 24546,
+    "id": 24502,
     "package_name": "tfrmt",
     "title": "Applies Display Metadata to Analysis Results Datasets",
     "description": "Creates a framework to store and apply display metadata to\nAnalysis Results Datasets (ARDs). The use of 'tfrmt' allows\nusers to define table format and styling without the data, and\nlater apply the format to the data.",
@@ -2551,11 +2528,11 @@
       ["update_group"]
     ],
     "topics": [],
-    "score": 8.403,
+    "score": 8.433,
     "stars": 85
   },
   {
-    "id": 16647,
+    "id": 16614,
     "package_name": "logrx",
     "title": "A Logging Utility Focus on Clinical Trial Programming Workflows",
     "description": "A utility to facilitate the logging and review of R\nprograms in clinical trial programming workflows.",
@@ -2579,7 +2556,7 @@
     "stars": 48
   },
   {
-    "id": 18361,
+    "id": 18327,
     "package_name": "nestcolor",
     "title": "Colors for NEST Graphs",
     "description": "Clinical reporting figures require to use consistent\ncolors and configurations. As a part of the Roche open-source\nclinical reporting project, namely the NEST project, the\n'nestcolor' package specifies the color code and default theme\nwith specifying 'ggplot2' theme parameters. Users can easily\ncustomize color and theme settings before using the reset of\nNEST packages to ensure consistent settings in both static and\ninteractive output at the downstream.",
@@ -2595,11 +2572,11 @@
     "stars": 5
   },
   {
-    "id": 10171,
+    "id": 10161,
     "package_name": "chevron",
     "title": "Standard TLGs for Clinical Trials Reporting",
     "description": "Provide standard tables, listings, and graphs (TLGs)\nlibraries used in clinical trials. This package implements a\nstructure to reformat the data with 'dunlin', create reporting\ntables using 'rtables' and 'tern' with standardized input\narguments to enable quick generation of standard outputs.  In\naddition, it also provides comprehensive data checks and script\ngeneration functionality.",
-    "version": "0.2.12.9002",
+    "version": "0.2.12.9003",
     "maintainer": "Joe Zhu <joe.zhu@roche.com>",
     "url": "https://insightsengineering.github.io/chevron/,\nhttps://github.com/insightsengineering/chevron/",
     "exports": [
@@ -2842,11 +2819,11 @@
     "stars": 19
   },
   {
-    "id": 8306,
+    "id": 8296,
     "package_name": "admiralophtha",
     "title": "ADaM in R Asset Library - Ophthalmology",
     "description": "Aids the programming of Clinical Data Standards\nInterchange Consortium (CDISC) compliant Ophthalmology Analysis\nData Model (ADaM) datasets in R. ADaM datasets are a mandatory\npart of any New Drug or Biologics License Application submitted\nto the United States Food and Drug Administration (FDA).\nAnalysis derivations are implemented in accordance with the\n\"Analysis Data Model Implementation Guide\" (CDISC Analysis Data\nModel Team, 2021,\n<https://www.cdisc.org/standards/foundational/adam/adamig-v1-3-release-package>).",
-    "version": "1.3.0.9008",
+    "version": "1.4.0",
     "maintainer": "Edoardo Mancini <edoardo.mancini@roche.com>",
     "url": "https://pharmaverse.github.io/admiralophtha/,\nhttps://github.com/pharmaverse/admiralophtha/",
     "exports": [
@@ -2857,11 +2834,11 @@
       ["derive_var_studyeye"]
     ],
     "topics": [],
-    "score": 8.1785,
+    "score": 8.1895,
     "stars": 17
   },
   {
-    "id": 19594,
+    "id": 19556,
     "package_name": "pharmaverseadam",
     "title": "ADaM Test Data for the 'Pharmaverse' Family of Packages",
     "description": "A set of Analysis Data Model (ADaM) datasets constructed\nusing the Study Data Tabulation Model (SDTM) datasets contained\nin the 'pharmaversesdtm' package and the template scripts from\nthe 'admiral' family of packages. ADaM dataset specifications\nare described in the CDISC ADaM implementation guide,\naccessible by creating a free account on\n<https://www.cdisc.org/>.",
@@ -2874,7 +2851,30 @@
     "stars": 19
   },
   {
-    "id": 19592,
+    "id": 24367,
+    "package_name": "teal.logger",
+    "title": "Logging Setup for the 'teal' Family of Packages",
+    "description": "Utilizing the 'logger' framework to record events within a\npackage, specific to 'teal' family of packages.  Supports\nlogging namespaces, hierarchical logging, various log\ndestinations, vectorization, and more.",
+    "version": "0.4.1.9002",
+    "maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
+    "url": "https://insightsengineering.github.io/teal.logger/,\nhttps://github.com/insightsengineering/teal.logger/",
+    "exports": [
+      ["log_shiny_input_changes"],
+      ["log_system_info"],
+      ["register_handlers"],
+      ["register_logger"],
+      ["suppress_logs"]
+    ],
+    "topics": [
+      ["logging"],
+      ["nest"],
+      ["utilities"]
+    ],
+    "score": 8.1292,
+    "stars": 6
+  },
+  {
+    "id": 19554,
     "package_name": "pharmaRTF",
     "title": "Enhanced RTF Wrapper for Use with Existing Table Packages",
     "description": "Enhanced RTF wrapper written in R for use with existing R\ntables packages such as 'Huxtable' or 'GT'. This package fills\na gap where tables in certain packages can be written out to\nRTF, but cannot add certain metadata or features to the\ndocument that are required/expected in a report for a\nregulatory submission, such as multiple levels of titles and\nfootnotes, making the document landscape, and controlling\nproperties such as margins.",
@@ -2941,7 +2941,7 @@
     "stars": 34
   },
   {
-    "id": 12503,
+    "id": 12484,
     "package_name": "envsetup",
     "title": "Support the Setup of the R Environment for Clinical Trial\nProgramming Workflows",
     "description": "The purpose of this package is to support the setup the R\nenvironment. The two main features are 'autos', to\nautomatically source files and/or directories into your\nenvironment, and 'paths' to consistently set path objects\nacross projects for input and output. Both are implemented\nusing a configuration file to allow easy, custom configurations\nthat can be used for multiple or all projects.",
@@ -2960,11 +2960,11 @@
       ["write_path"]
     ],
     "topics": [],
-    "score": 8.0238,
+    "score": 7.9269,
     "stars": 9
   },
   {
-    "id": 14991,
+    "id": 14962,
     "package_name": "hermes",
     "title": "Preprocessing, analyzing, and reporting of RNA-seq data",
     "description": "Provides classes and functions for quality control,\nfiltering, normalization and differential expression analysis\nof pre-processed `RNA-seq` data. Data can be imported from\n`SummarizedExperiment` as well as `matrix` objects and can be\nannotated from `BioMart`. Filtering for genes without too low\nexpression or containing required annotations, as well as\nfiltering for samples with sufficient correlation to other\nsamples or total number of reads is supported. The standard\nnormalization methods including cpm, rpkm and tpm can be used,\nand 'DESeq2` as well as voom differential expression analyses\nare available.",
@@ -3078,56 +3078,7 @@
     "stars": 12
   },
   {
-    "id": 21597,
-    "package_name": "riskmetric",
-    "title": "Risk Metrics to Evaluating R Packages",
-    "description": "Facilities for assessing R packages against a number of\nmetrics to help quantify their robustness.",
-    "version": "0.2.5",
-    "maintainer": "Eli Miller <eli.miller@atorusresearch.com>",
-    "url": "https://pharmar.github.io/riskmetric/,\nhttps://github.com/pharmaR/riskmetric",
-    "exports": [
-      ["all_assessments"],
-      ["as_pkg_metric"],
-      ["as_pkg_ref"],
-      ["assess_covr_coverage"],
-      ["assess_dependencies"],
-      ["assess_downloads_1yr"],
-      ["assess_export_help"],
-      ["assess_exported_namespace"],
-      ["assess_has_bug_reports_url"],
-      ["assess_has_examples"],
-      ["assess_has_maintainer"],
-      ["assess_has_news"],
-      ["assess_has_source_control"],
-      ["assess_has_vignettes"],
-      ["assess_has_website"],
-      ["assess_last_30_bugs_status"],
-      ["assess_license"],
-      ["assess_news_current"],
-      ["assess_r_cmd_check"],
-      ["assess_remote_checks"],
-      ["assess_reverse_dependencies"],
-      ["assess_size_codebase"],
-      ["assessment_error_as_warning"],
-      ["assessment_error_empty"],
-      ["assessment_error_throw"],
-      ["get_assessments"],
-      ["metric_score"],
-      ["pkg_assess"],
-      ["pkg_metric"],
-      ["pkg_ref"],
-      ["pkg_score"],
-      ["score_error_default"],
-      ["score_error_NA"],
-      ["score_error_zero"],
-      ["summarize_scores"]
-    ],
-    "topics": [],
-    "score": 7.9196,
-    "stars": 171
-  },
-  {
-    "id": 22027,
+    "id": 21985,
     "package_name": "rtables.officer",
     "title": "Exporting Tools for 'rtables'",
     "description": "Designed to create and display complex tables with R, the\n'rtables' R package allows cells in an 'rtables' object to\ncontain any high-dimensional data structure, which can then be\ndisplayed with cell-specific formatting instructions.\nAdditionally, the 'rtables.officer' package supports export\nformats related to the Microsoft Office software suite,\nincluding Microsoft Word ('docx') and Microsoft PowerPoint\n('pptx').",
@@ -3153,7 +3104,7 @@
     "stars": 4
   },
   {
-    "id": 12090,
+    "id": 12070,
     "package_name": "dunlin",
     "title": "Preprocessing Tools for Clinical Trial Data",
     "description": "A collection of functions to preprocess data and organize\nthem in a format amenable to use by chevron.",
@@ -3194,35 +3145,11 @@
     "stars": 5
   },
   {
-    "id": 11338,
-    "package_name": "datacutr",
-    "title": "SDTM Datacut",
-    "description": "Supports the process of applying a cut to Standard Data\nTabulation Model (SDTM), as part of the analysis of specific\npoints in time of the data, normally as part of investigation\ninto clinical trials. The functions support different\napproaches of cutting to the different domains of SDTM normally\nobserved.",
-    "version": "0.2.4",
-    "maintainer": "Tim Barnett <timothy.barnett@roche.com>",
-    "url": "https://pharmaverse.github.io/datacutr/,\nhttps://github.com/pharmaverse/datacutr",
-    "exports": [
-      ["apply_cut"],
-      ["create_dcut"],
-      ["date_cut"],
-      ["drop_temp_vars"],
-      ["impute_dcutdtc"],
-      ["impute_sdtm"],
-      ["process_cut"],
-      ["pt_cut"],
-      ["read_out"],
-      ["special_dm_cut"]
-    ],
-    "topics": [],
-    "score": 7.6981,
-    "stars": 16
-  },
-  {
-    "id": 8867,
+    "id": 8859,
     "package_name": "autoslider.core",
     "title": "Slide Automation for Tables, Listings and Figures",
     "description": "The normal process of creating clinical study slides is\nthat a statistician manually type in the numbers from outputs\nand a separate statistician to double check the typed in\nnumbers. This process is time consuming, resource intensive,\nand error prone. Automatic slide generation is a solution to\naddress these issues. It reduces the amount of work and the\nrequired time when creating slides, and reduces the risk of\nerrors from manually typing or copying numbers from the output\nto slides. It also helps users to avoid unnecessary stress when\ncreating large amounts of slide decks in a short time window.",
-    "version": "0.3.1.9002",
+    "version": "0.3.2.9000",
     "maintainer": "Joe Zhu <joe.zhu@roche.com>",
     "url": "https://github.com/insightsengineering/autoslider.core",
     "exports": [
@@ -3308,11 +3235,35 @@
       ["use_template"]
     ],
     "topics": [],
-    "score": 7.5807,
+    "score": 7.5933,
     "stars": 7
   },
   {
-    "id": 17313,
+    "id": 11323,
+    "package_name": "datacutr",
+    "title": "SDTM Datacut",
+    "description": "Supports the process of applying a cut to Standard Data\nTabulation Model (SDTM), as part of the analysis of specific\npoints in time of the data, normally as part of investigation\ninto clinical trials. The functions support different\napproaches of cutting to the different domains of SDTM normally\nobserved.",
+    "version": "0.2.4",
+    "maintainer": "Tim Barnett <timothy.barnett@roche.com>",
+    "url": "https://pharmaverse.github.io/datacutr/,\nhttps://github.com/pharmaverse/datacutr",
+    "exports": [
+      ["apply_cut"],
+      ["create_dcut"],
+      ["date_cut"],
+      ["drop_temp_vars"],
+      ["impute_dcutdtc"],
+      ["impute_sdtm"],
+      ["process_cut"],
+      ["pt_cut"],
+      ["read_out"],
+      ["special_dm_cut"]
+    ],
+    "topics": [],
+    "score": 7.4708,
+    "stars": 16
+  },
+  {
+    "id": 17282,
     "package_name": "metatools",
     "title": "Enable the Use of 'metacore' to Help Create and Check Dataset",
     "description": "Uses the metadata information stored in 'metacore' objects\nto check and build metadata associated columns.",
@@ -3348,7 +3299,7 @@
     "stars": 16
   },
   {
-    "id": 8308,
+    "id": 8298,
     "package_name": "admiralvaccine",
     "title": "Vaccine Extension Package for ADaM in 'R' Asset Library",
     "description": "Programming vaccine specific Clinical Data Interchange\nStandards Consortium (CDISC) compliant Analysis Data Model\n(ADaM) datasets in 'R'. Flat model is followed as per Center\nfor Biologics Evaluation and Research (CBER) guidelines for\ncreating vaccine specific domains. ADaM datasets are a\nmandatory part of any New Drug or Biologics License Application\nsubmitted to the United States Food and Drug Administration\n(FDA). Analysis derivations are implemented in accordance with\nthe \"Analysis Data Model Implementation Guide\" (CDISC Analysis\nData Model Team (2021),\n<https://www.cdisc.org/standards/foundational/adam/adamig-v1-3-release-package>).\nThe package is an extension package of the 'admiral' package.",
@@ -3371,11 +3322,11 @@
     "topics": [
       ["cdisc"]
     ],
-    "score": 7.2516,
+    "score": 7.2253,
     "stars": 6
   },
   {
-    "id": 24462,
+    "id": 24418,
     "package_name": "tern.mmrm",
     "title": "Tables and Graphs for Mixed Models for Repeated Measures (MMRM)",
     "description": "Mixed models for repeated measures (MMRM) are a popular\nchoice for analyzing longitudinal continuous outcomes in\nrandomized clinical trials and beyond; see for example Cnaan,\nLaird and Slasor (1997)\n<doi:10.1002/(SICI)1097-0258(19971030)16:20%3C2349::AID-SIM667%3E3.0.CO;2-E>.\nThis package provides an interface for fitting MMRM within the\n'tern' <https://cran.r-project.org/package=tern> framework by\nZhu et al. (2023) and tabulate results easily using 'rtables'\n<https://cran.r-project.org/package=rtables> by Becker et al.\n(2023). It builds on 'mmrm'\n<https://cran.r-project.org/package=mmrm> by Sabanés Bové et\nal. (2023) for the actual MMRM computations.",
@@ -3412,7 +3363,7 @@
     "stars": 7
   },
   {
-    "id": 21594,
+    "id": 21549,
     "package_name": "riskassessment",
     "title": "A web app designed to interface with the `riskmetric` package",
     "description": "A shiny application that allows users to define a list of\nR packages to assess metrics engineered by the `riskmetric`\npackage. In general, those metrics evaluate package development\nbest practices, code documentation, community engagement, and\nsustainability that culminate in a quantitative risk score. The\napp allows users to select and review one package at a time to\nconsume interactive visuals, download reports for sharing,\nsubmit comments for group collaboration, and even tweak metric\nweights used to calculate the packages' risk scores. When\ndeployed in the context of an organization, the app serves as a\nplatform for package validation, offering an authentication\nwall where roles are assigned to various users and 'final\ndecisions' can be made at the package level manually or through\npre-defined automation rules.",
@@ -3436,7 +3387,7 @@
     "stars": 109
   },
   {
-    "id": 24599,
+    "id": 24556,
     "package_name": "tidyCDISC",
     "title": "Quick Table Generation & Exploratory Analyses on ADaM-Ish\nDatasets",
     "description": "Provides users a quick exploratory dive into common\nvisualizations without writing a single line of code given the\nusers data follows the Analysis Data Model (ADaM) standards put\nforth by the Clinical Data Interchange Standards Consortium\n(CDISC) <https://www.cdisc.org>. Prominent modules/ features of\nthe application are the Table Generator, Population Explorer,\nand the Individual Explorer. The Table Generator allows users\nto drag and drop variables and desired statistics (frequencies,\nmeans, ANOVA, t-test, and other summary statistics) into bins\nthat automagically create stunning tables with validated\ninformation. The Population Explorer offers various plots to\nvisualize general trends in the population from various vantage\npoints. Plot modules currently include scatter plot, spaghetti\nplot, box plot, histogram, means plot, and bar plot. Each plot\ntype allows the user to plot uploaded variables against one\nanother, and dissect the population by filtering out certain\nsubjects. Last, the Individual Explorer establishes a cohesive\npatient narrative, allowing the user to interact with patient\nmetrics (params) by visit or plotting important patient events\non a timeline. All modules allow for concise filtering &\ndownloading bulk outputs into html or pdf formats to save for\nlater.",
@@ -3467,7 +3418,7 @@
     "stars": 117
   },
   {
-    "id": 22532,
+    "id": 22489,
     "package_name": "sdtmchecks",
     "title": "Data Quality Checks for Study Data Tabulation Model (SDTM)\nDatasets",
     "description": "A series of checks to identify common issues in Study Data\nTabulation Model (SDTM) datasets. These checks are intended to\nbe generalizable, actionable, and meaningful for analysis.",
@@ -3609,7 +3560,7 @@
     "stars": 25
   },
   {
-    "id": 24414,
+    "id": 24370,
     "package_name": "teal.modules.hermes",
     "title": "RNA-Seq Analysis Modules to Add to a Teal Application",
     "description": "RNA-seq analysis teal modules based on the `hermes`\npackage.",
@@ -3692,7 +3643,7 @@
     "stars": 7
   },
   {
-    "id": 24461,
+    "id": 24417,
     "package_name": "tern.gee",
     "title": "Tables and Graphs for Generalized Estimating Equations (GEE)\nModel Fits",
     "description": "Generalized estimating equations (GEE) are a popular\nchoice for analyzing longitudinal binary outcomes. This package\nprovides an interface for fitting GEE, currently for logistic\nregression, within the 'tern'\n<https://cran.r-project.org/package=tern> framework (Zhu,\nSabanés Bové et al., 2023) and tabulate results easily using\n'rtables' <https://cran.r-project.org/package=rtables> (Becker,\nWaddell et al., 2023).  It builds on 'geepack'\n<doi:10.18637/jss.v015.i02> (Højsgaard, Halekoh and Yan, 2006)\nfor the actual GEE model fitting.",
@@ -3713,7 +3664,7 @@
     "stars": 8
   },
   {
-    "id": 24410,
+    "id": 24366,
     "package_name": "teal.goshawk",
     "title": "Longitudinal Visualization `teal` Modules",
     "description": "Modules that produce web interfaces through which\nlongitudinal visualizations can be dynamically modified and\ndisplayed. These included box plot, correlation plot, density\ndistribution plot, line plot, scatter plot and spaghetti plot\nwith accompanying summary. Data are expected in ADaM structure.\nRequires analysis subject level (ADSL) and analysis laboratory\n(ADLB) data sets. Beyond core variables, Limit of\nQuantification flag variable (LOQFL) is expected with levels\n'Y', 'N' or NA.",
@@ -3736,7 +3687,7 @@
     "stars": 3
   },
   {
-    "id": 23022,
+    "id": 22979,
     "package_name": "simIDM",
     "title": "Simulating Oncology Trials using an Illness-Death Model",
     "description": "Based on the illness-death model a large number of\nclinical trials with oncology endpoints progression-free\nsurvival (PFS) and overall survival (OS) can be simulated, see\nMeller, Beyersmann and Rufibach (2019) <doi:10.1002/sim.8295>.\nThe simulation set-up allows for random and event-driven\ncensoring, an arbitrary number of treatment arms, staggered\nstudy entry and drop-out.  Exponentially, Weibull and piecewise\nexponentially distributed survival times can be generated. The\ncorrelation between PFS and OS can be calculated.",
@@ -3805,29 +3756,7 @@
     "stars": 14
   },
   {
-    "id": 24463,
-    "package_name": "tern.rbmi",
-    "title": "Create Interface for 'RBMI' and 'tern'",
-    "description": "'RBMI' implements standard and reference based multiple\nimputation methods for continuous longitudinal endpoints\n(Gower-Page et al. (2022) <doi:10.21105/joss.04251>). This\npackage provides an interface for 'RBMI' uses the 'tern'\n<https://cran.r-project.org/package=tern> framework by Zhu et\nal. (2023) and tabulate results easily using 'rtables'\n<https://cran.r-project.org/package=rtables> by Becker et al.\n(2023).",
-    "version": "0.1.6.9005",
-    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
-    "url": "https://github.com/insightsengineering/tern.rbmi,\nhttps://insightsengineering.github.io/tern.rbmi/",
-    "exports": [
-      ["a_rbmi_lsmeans"],
-      ["h_tidy_pool"],
-      ["s_rbmi_lsmeans"],
-      ["summarize_rbmi"]
-    ],
-    "topics": [
-      ["graphs"],
-      ["listings"],
-      ["tables"]
-    ],
-    "score": 6.2253,
-    "stars": 4
-  },
-  {
-    "id": 25599,
+    "id": 25559,
     "package_name": "visR",
     "title": "Clinical Graphs and Tables Adhering to Graphical Principles",
     "description": "To enable fit-for-purpose, reusable clinical and medical\nresearch focused visualizations and tables with sensible\ndefaults and based on graphical principles as described in:\n\"Vandemeulebroecke et al. (2018)\" <doi:10.1002/pst.1912>,\n\"Vandemeulebroecke et al. (2019)\" <doi:10.1002/psp4.12455>, and\n\"Morris et al. (2019)\" <doi:10.1136/bmjopen-2019-030215>.",
@@ -3868,11 +3797,33 @@
       ["visr"]
     ],
     "topics": [],
-    "score": 6.2166,
-    "stars": 185
+    "score": 6.2286,
+    "stars": 186
   },
   {
-    "id": 25448,
+    "id": 24419,
+    "package_name": "tern.rbmi",
+    "title": "Create Interface for 'RBMI' and 'tern'",
+    "description": "'RBMI' implements standard and reference based multiple\nimputation methods for continuous longitudinal endpoints\n(Gower-Page et al. (2022) <doi:10.21105/joss.04251>). This\npackage provides an interface for 'RBMI' uses the 'tern'\n<https://cran.r-project.org/package=tern> framework by Zhu et\nal. (2023) and tabulate results easily using 'rtables'\n<https://cran.r-project.org/package=rtables> by Becker et al.\n(2023).",
+    "version": "0.1.6.9005",
+    "maintainer": "Joe Zhu <joe.zhu@roche.com>",
+    "url": "https://github.com/insightsengineering/tern.rbmi,\nhttps://insightsengineering.github.io/tern.rbmi/",
+    "exports": [
+      ["a_rbmi_lsmeans"],
+      ["h_tidy_pool"],
+      ["s_rbmi_lsmeans"],
+      ["summarize_rbmi"]
+    ],
+    "topics": [
+      ["graphs"],
+      ["listings"],
+      ["tables"]
+    ],
+    "score": 6.2253,
+    "stars": 4
+  },
+  {
+    "id": 25407,
     "package_name": "valtools",
     "title": "Automate Validated Package Creation",
     "description": "Automate the steps necessary to create a validation ready\npackage to make the process of validation simple. This includes\nsetting up the specifications, test cases, test code, and\nvalidation report. Also provides tools to be able to execute\nthe validation report from a variety of situations to provide\ndocumentation for validation.",
@@ -3937,7 +3888,7 @@
     "stars": 55
   },
   {
-    "id": 14234,
+    "id": 14205,
     "package_name": "ggplot2.utils",
     "title": "Selected Utilities Extending 'ggplot2'",
     "description": "Selected utilities, in particular 'geoms' and 'stats'\nfunctions, extending the 'ggplot2' package. This package\nimports functions from 'EnvStats'\n<doi:10.1007/978-1-4614-8456-1> by Millard (2013), 'ggpp'\n<https://CRAN.R-project.org/package=ggpp> by Aphalo et al.\n(2023) and 'ggstats' <doi:10.5281/zenodo.10183964> by\nLarmarange (2023), and then exports them. This package also\ncontains modified code from 'ggquickeda'\n<https://CRAN.R-project.org/package=ggquickeda> by Mouksassi et\nal. (2023) for Kaplan-Meier lines and ticks additions to plots.\nAll functions are tested to make sure that they work reliably.",
@@ -3973,7 +3924,7 @@
     "stars": 8
   },
   {
-    "id": 10946,
+    "id": 10931,
     "package_name": "covtracer",
     "title": "Contextualizing Tests",
     "description": "Dissects a package environment or 'covr' coverage object\nin order to cross reference tested code with the lines that are\nevaluated, as well as linking those evaluated lines to the\ndocumentation that they are described within. Connecting these\nthree pieces of information provides a mechanism of linking\ntests to documented behaviors.",
@@ -3997,7 +3948,7 @@
     "stars": 23
   },
   {
-    "id": 14567,
+    "id": 14536,
     "package_name": "goshawk",
     "title": "Longitudinal Visualization Functions",
     "description": "Functions that plot and summarize biomarkers/labs of\ninterest. Visualizations include: box plot, correlation plot,\ndensity distribution, line plot and spaghetti plot.  Data are\nexpected in ADaM structure. Requires analysis subject level\n(ADSL) and analysis laboratory (ADLB) data sets. Beyond core\nvariables, Limit of Quantification flag variable (LOQFL) is\nexpected with levels 'Y', 'N' or NA.",
@@ -4021,7 +3972,7 @@
     "stars": 5
   },
   {
-    "id": 20699,
+    "id": 20657,
     "package_name": "r.pkg.template",
     "title": "R Package Template",
     "description": "R package template with GitHub Actions workflows included.",
@@ -4042,7 +3993,7 @@
     "stars": 43
   },
   {
-    "id": 23034,
+    "id": 22991,
     "package_name": "simaerep",
     "title": "Detect Clinical Trial Sites Over- or Under-Reporting Clinical\nEvents",
     "description": "Monitoring reporting rates of subject-level clinical\nevents (e.g. adverse events, protocol deviations) reported by\nclinical trial sites is an important aspect of risk-based\nquality monitoring strategy. Sites that are under-reporting or\nover-reporting events can be detected using bootstrap\nsimulations during which patients are redistributed between\nsites. Site-specific distributions of event reporting rates are\ngenerated that are used to assign probabilities to the observed\nreporting rates. (Koneswarakantha 2024\n<doi:10.1007/s43441-024-00631-8>).",
@@ -4081,7 +4032,7 @@
     "stars": 25
   },
   {
-    "id": 24415,
+    "id": 24371,
     "package_name": "teal.osprey",
     "title": "'teal' Modules for TLG Functions in Osprey",
     "description": "Community efforts to collect 'teal' modules for TLGs\ndefined in 'osprey' package.  Enables 'teal' app developers to\ncreate 'shiny' applications with a use of 'osprey' analysis\nfunctions.",
@@ -4112,7 +4063,7 @@
     "stars": 5
   },
   {
-    "id": 19090,
+    "id": 19055,
     "package_name": "osprey",
     "title": "R Package to Create TLGs",
     "description": "Community effort to collect TLG code and create a\ncatalogue.",
@@ -4149,7 +4100,7 @@
     "stars": 5
   },
   {
-    "id": 21859,
+    "id": 21817,
     "package_name": "roxy.shinylive",
     "title": "A 'roxygen2' Extension for 'Shinylive'",
     "description": "An extension for 'roxygen2' to embed 'Shinylive'\napplications in the package documentation.",
@@ -4170,7 +4121,7 @@
     "stars": 13
   },
   {
-    "id": 8301,
+    "id": 8291,
     "package_name": "admiral.test",
     "title": "Test Data for the 'admiral' Package",
     "description": "A set of Study Data Tabulation Model (SDTM) datasets from\nthe Clinical Data Interchange Standards Consortium (CDISC)\npilot project used for testing and developing Analysis Data\nModel (ADaM) derivations inside the 'admiral' package.",
@@ -4183,7 +4134,7 @@
     "stars": 2
   },
   {
-    "id": 22411,
+    "id": 22368,
     "package_name": "scda",
     "title": "Package to Access Synthetic CDISC Archive Data",
     "description": "Access Synthetic CDISC Data from Archive Packages.",
@@ -4204,7 +4155,7 @@
     "stars": 13
   },
   {
-    "id": 21420,
+    "id": 21377,
     "package_name": "respectables",
     "title": "Create Relationally-Specified Multi-Table Datasets",
     "description": "This package provides a general framework and utility\nfunctions for simulating or synthesizing database-like\nmultiple-table datasets. This is done by defining and then\napplying data recipes, which support the simulation or\nderivation of multiple variables jointly and/or conditional on\nthe value of other already existing or recipe-specified\nvariables. It also supports the simulation or augmentation of\ndata which encodes a 1-to-many relationship with a foreign-key\nin an existing table.",
@@ -4243,7 +4194,7 @@
     "stars": 8
   },
   {
-    "id": 20350,
+    "id": 20308,
     "package_name": "psborrow",
     "title": "Bayesian Dynamic Borrowing with Propensity Score",
     "description": "A tool which aims to help evaluate the effect of external\nborrowing using an integrated approach described in Lewis et\nal., (2019) <doi:10.1080/19466315.2018.1497533> that combines\npropensity score and Bayesian dynamic borrowing methods.",
@@ -4278,7 +4229,7 @@
     "stars": 0
   },
   {
-    "id": 13310,
+    "id": 13287,
     "package_name": "flexsurvPlus",
     "title": "Provides Functions to Perform Survival Analysis for Economic\nmodels",
     "description": "A group of functions designed to perform survival\nanalyses.",
@@ -4305,7 +4256,7 @@
     "stars": 2
   },
   {
-    "id": 22413,
+    "id": 22370,
     "package_name": "scda.2022",
     "title": "Synthetic CDISC Data Archive 2022",
     "description": "An archive of synthetic CDISC data for 2022.",
@@ -4322,7 +4273,7 @@
     "stars": 10
   },
   {
-    "id": 3858,
+    "id": 3847,
     "package_name": "MAIC",
     "title": "Package to Perform Matched-adjusted Indirect Comparisons",
     "description": "A group of functions designed to perform matched-adjusted\nindirect comparisons as per NICE TSD 18 and summarise the\nresults for survival data (using hazard ratios) and binary data\n(using odds ratios.)",
@@ -4344,11 +4295,11 @@
       ["health-economic-evaluation"],
       ["hta"]
     ],
-    "score": 3.9201,
+    "score": 3.9117,
     "stars": 8
   },
   {
-    "id": 23791,
+    "id": 23748,
     "package_name": "staged.dependencies",
     "title": "Install R packages from Particular Git Branches",
     "description": "When developing multiple dependent packages, it is often\nuseful to introduce development stages (devel, pre-release,\nrelease) that synchronize these packages. This package provides\nan implementation of development stages via branch naming\nrules. It defines RStudio addins that allow to install the\nmatching upstream and downstream dependencies.",
@@ -4378,7 +4329,7 @@
     "stars": 12
   },
   {
-    "id": 22412,
+    "id": 22369,
     "package_name": "scda.2021",
     "title": "Synthetic CDISC Data Archive 2021",
     "description": "An archive of synthetic CDISC data for 2021.",
@@ -4395,7 +4346,7 @@
     "stars": 4
   },
   {
-    "id": 18011,
+    "id": 17977,
     "package_name": "mtdesign",
     "title": "Mander and Thompson Designs",
     "description": "Implements Mander & Thompson's (2010)\n<doi:10.1016/j.cct.2010.07.008> methods for two-stage designs\noptimal under the alternative hypothesis for phase II [cancer]\ntrials.  Also provides an implementation of Simon's (1989)\n<doi:10.1016/0197-2456(89)90015-9> original methodology and\nallows exploration of the operating characteristics of\nsub-optimal designs.",
@@ -4417,7 +4368,7 @@
     "stars": 3
   },
   {
-    "id": 13866,
+    "id": 13839,
     "package_name": "gemtcPlus",
     "title": "Provides a suite of extension functions for NMA using the\n`gemtc` package",
     "description": "Functions for generating outputs: tables and plots for NMA\nreports.",
@@ -4508,7 +4459,7 @@
     "stars": 1
   },
   {
-    "id": 5723,
+    "id": 5715,
     "package_name": "RDO",
     "title": "Reproducible Data Objects",
     "description": "A Reproducible Data Object (RDO) encapsulates both data\nand R code needed to reproduce those data. Each RDO can have\nother RDOs as dependencies. RDOs can be composed into complex\ntree hierarchies. Interacting with an RDO tree is similar to\ninteracting with a single RDO. You can (re)run the code and\nrefresh the cache, check status, validate if the code still\ngives the same cached data, clear data cache, access code and\ndata cache of any of the dependencies. RDOs can be cloned and\ncode of cloned dependencies can be modified.",
@@ -4523,7 +4474,7 @@
     "stars": 10
   },
   {
-    "id": 18367,
+    "id": 18333,
     "package_name": "nesttemplate",
     "title": "`pkgdown` Template for NEST Packages",
     "description": "This is a private template for use by core NEST packages.\nPlease don't use for your own code.",
@@ -4540,7 +4491,7 @@
     "stars": 2
   },
   {
-    "id": 12907,
+    "id": 12886,
     "package_name": "facetsr",
     "title": "facets R wrapper",
     "description": "The goal of facetsr is to create an R wrapper for facets.\nSo use facets to explore your dataset.",
@@ -4560,7 +4511,7 @@
     "stars": 4
   },
   {
-    "id": 11603,
+    "id": 11584,
     "package_name": "descem",
     "title": "Discrete Event Simulation for Cost-Effectiveness Modelling",
     "description": "A package designed to perform discrete event simulation\nfor cost-effectiveness modelling.",
@@ -4597,7 +4548,7 @@
     "stars": 2
   },
   {
-    "id": 21902,
+    "id": 21860,
     "package_name": "rpsftmPlus",
     "title": "Extensions To Rpsftm Package",
     "description": "A collection of extenstions to the rpsftm package to\nenable descriptive analysis of trials affected by treatment\nswitching and enable additional analysis of rpsft models.",
@@ -4625,7 +4576,7 @@
     "stars": 2
   },
   {
-    "id": 24258,
+    "id": 24213,
     "package_name": "syntrial",
     "title": "synthesize data from real clinical trial",
     "description": "Syntrial takes as input the data of a clinical trial in\nSDTM format\n(https://www.cdisc.org/standards/foundational/sdtm). For each\nsynthesized patient a number of source patients is selected.\nFrom the source patients' data randomly weighted numeric values\nor, for categorical variables, one value is selected in a\nmodification of classical bootstrap.",
