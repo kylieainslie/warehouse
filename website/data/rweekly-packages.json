@@ -1,12 +1,174 @@
 {
   "metadata": {
-    "scraped_at": "2026-01-20T05:27:13Z",
+    "scraped_at": "2026-01-21T05:27:05Z",
     "weeks_included": 12,
-    "total_packages": 306,
-    "new_packages": 95,
-    "updated_packages": 211
+    "total_packages": 323,
+    "new_packages": 103,
+    "updated_packages": 220
   },
   "packages": [
+    {
+      "package_name": "AddiVortes",
+      "version": "0.4.8",
+      "type": "new",
+      "description": "(Bayesian) Additive Voronoi Tessellations",
+      "url": "https://cran.r-project.org/package=AddiVortes",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "RcppAnnoy",
+      "version": "0.0.23",
+      "type": "updated",
+      "description": "'Rcpp' Bindings for 'Annoy', a Library for Approximate Nearest Neighbors - [diffify](https://diffify.com/R/RcppAnnoy)",
+      "url": "http://dirk.eddelbuettel.com/blog/2026/01/12#rcppannoy_0.0.23",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "admiral",
+      "version": "1.4",
+      "type": "updated",
+      "description": "ADaM in R Asset Library - [diffify](https://diffify.com/R/admiral)",
+      "url": "https://pharmaverse.github.io/blog/posts/2026-01-15_admiral_14/admiral_1.4_release.html",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "blastar",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "BLAST and Sequence Analysis Tools",
+      "url": "https://cran.r-project.org/package=blastar",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "blockr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A Block-Based Framework for Data Manipulation and Visualization",
+      "url": "https://cran.r-project.org/package=blockr",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "blvim",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Boltzmann–Lotka–Volterra Interaction Model",
+      "url": "https://cran.r-project.org/package=blvim",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "distributional",
+      "version": "0.6.0",
+      "type": "updated",
+      "description": "Vectorised Probability Distributions - [diffify](https://diffify.com/R/distributional)",
+      "url": "https://cran.r-project.org/package=distributional",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "frontmatter",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Parse Front Matter from Documents",
+      "url": "https://cran.r-project.org/package=frontmatter",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "future",
+      "version": "1.69.0",
+      "type": "updated",
+      "description": "Unified Parallel and Distributed Processing in R for Everyone - [diffify](https://diffify.com/R/future)",
+      "url": "https://cran.r-project.org/package=future",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "mapSpain",
+      "version": "1.0.0",
+      "type": "updated",
+      "description": "Administrative Boundaries of Spain - [diffify](https://diffify.com/R/mapSpain)",
+      "url": "https://cran.r-project.org/package=mapSpain",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "mascarade",
+      "version": "0.3.0",
+      "type": "new",
+      "description": "Generating Cluster Masks for Single-Cell Dimensional Reduction",
+      "url": "https://cran.r-project.org/package=mascarade",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "qol",
+      "version": "1.2.0",
+      "type": "updated",
+      "description": "Powerful 'SAS' Inspired Concepts for more Efficient Bigger Outputs - [diffify](https://diffify.com/R/qol)",
+      "url": "https://cran.r-project.org/package=qol",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "querychat",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Filter and Query Data Frames in 'shiny' Using an LLM Chat",
+      "url": "https://cran.r-project.org/package=querychat",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "ranger",
+      "version": "0.18.0",
+      "type": "updated",
+      "description": "A Fast Implementation of Random Forests - [diffify](https://diffify.com/R/ranger)",
+      "url": "https://cran.r-project.org/package=ranger",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "renv",
+      "version": "1.1.6",
+      "type": "updated",
+      "description": "Project Environments - [diffify](https://diffify.com/R/renv)",
+      "url": "https://cran.r-project.org/package=renv",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "rjd3toolkit",
+      "version": "3.6.0",
+      "type": "new",
+      "description": "Utility Functions Around 'JDemetra+ 3.0'",
+      "url": "https://cran.r-project.org/package=rjd3toolkit",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "survival",
+      "version": "3.8-6",
+      "type": "updated",
+      "description": "Survival Analysis - [diffify](https://diffify.com/R/survival)",
+      "url": "https://cran.r-project.org/package=survival",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
+    {
+      "package_name": "vctrs",
+      "version": "0.7.0",
+      "type": "updated",
+      "description": "Vector Helpers - [diffify](https://diffify.com/R/vctrs)",
+      "url": "https://cran.r-project.org/package=vctrs",
+      "post_date": "2026-01-20",
+      "week": "2026-W04"
+    },
     {
       "package_name": "AssociationExplorer2",
       "version": "0.1.4",
@@ -1030,15 +1192,6 @@
       "type": "updated",
       "description": "Biologically Informed Metabolomic Libraries from 'PubChem' - [diffify](https://diffify.com/R/pubchem.bio)",
       "url": "https://cran.r-project.org/package=pubchem.bio",
-      "post_date": "2025-12-15",
-      "week": "2025-W51"
-    },
-    {
-      "package_name": "qol",
-      "version": "1.1.1",
-      "type": "updated",
-      "description": "Powerful 'SAS' Inspired Concepts for more Efficient Bigger Outputs - [diffify](https://diffify.com/R/qol)",
-      "url": "https://cran.r-project.org/package=qol",
       "post_date": "2025-12-15",
       "week": "2025-W51"
     },
