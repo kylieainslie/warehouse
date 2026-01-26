@@ -20,3 +20,6 @@ Thumbs.db
 # Secrets
 .Renviron
 .env
+
+# Local Netlify folder
+.netlify

@@ -1,28 +1,165 @@
 // search.js
 // Netlify serverless function for AI-powered semantic search
+// Uses real package data from packages.json for accurate results
 
 const Anthropic = require('@anthropic-ai/sdk');
+const fs = require('fs');
+const path = require('path');
 
-// System prompt for semantic search
-const SEARCH_PROMPT = `You are a search engine for R packages. Given a user's search query, return the most relevant R package names.
+// Cache for package data (loaded once per cold start)
+let packagesCache = null;
+
+// Query expansion: map abbreviations/synonyms to expanded terms
+const QUERY_EXPANSIONS = {
+  'llm': ['llm', 'large language model', 'chatgpt', 'gpt', 'openai', 'anthropic', 'ollama', 'chat'],
+  'llms': ['llm', 'large language model', 'chatgpt', 'gpt', 'openai', 'anthropic', 'ollama', 'chat'],
+  'ai': ['ai', 'artificial intelligence', 'machine learning', 'deep learning', 'neural'],
+  'ml': ['ml', 'machine learning', 'predictive', 'classification', 'regression'],
+  'nlp': ['nlp', 'natural language', 'text mining', 'sentiment', 'tokenization'],
+  'viz': ['visualization', 'plot', 'chart', 'graph', 'ggplot'],
+  'api': ['api', 'http', 'rest', 'request', 'httr'],
+  'db': ['database', 'sql', 'sqlite', 'postgres', 'mysql'],
+  'stats': ['statistics', 'statistical', 'regression', 'hypothesis', 'inference'],
+  'epi': ['epidemiology', 'epidemic', 'outbreak', 'disease', 'transmission'],
+  'ts': ['time series', 'forecast', 'temporal', 'arima'],
+  'geo': ['geographic', 'spatial', 'gis', 'coordinate', 'map']
+};
+
+// Expand query terms using synonyms
+function expandQueryTerms(terms) {
+  const expanded = new Set(terms);
+  for (const term of terms) {
+    const expansions = QUERY_EXPANSIONS[term];
+    if (expansions) {
+      for (const exp of expansions) {
+        expanded.add(exp);
+      }
+    }
+  }
+  return Array.from(expanded);
+}
+
+// Load packages.json from the site's data directory
+function loadPackages() {
+  if (packagesCache) return packagesCache;
+
+  try {
+    // In Netlify, the site root is available at process.cwd() during build
+    // but we need to look in the published _site/data directory
+    const possiblePaths = [
+      path.join(process.cwd(), '_site', 'data', 'packages.json'),
+      path.join(process.cwd(), 'data', 'packages.json'),
+      path.join(__dirname, '..', '..', 'data', 'packages.json'),
+      path.join(__dirname, '..', '..', '_site', 'data', 'packages.json')
+    ];
+
+    for (const p of possiblePaths) {
+      if (fs.existsSync(p)) {
+        const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+        packagesCache = data.packages || data;
+        console.log(`Loaded ${packagesCache.length} packages from ${p}`);
+        return packagesCache;
+      }
+    }
+
+    console.warn('packages.json not found in any expected location');
+    return [];
+  } catch (err) {
+    console.error('Failed to load packages.json:', err.message);
+    return [];
+  }
+}
+
+// Simple text search to find candidate packages
+function findCandidates(packages, query, limit = 75) {
+  const queryLower = query.toLowerCase();
+  const baseTerms = queryLower.split(/\s+/).filter(t => t.length > 2);
+  const queryTerms = expandQueryTerms(baseTerms);
+
+  // Helper: check if two strings match (either direction, min 3 chars)
+  const fuzzyMatch = (a, b) => {
+    if (a.length < 3 || b.length < 3) return false;
+    return a.includes(b) || b.includes(a);
+  };
+
+  // Score each package based on query match
+  const scored = packages.map(pkg => {
+    const name = (pkg.package_name || '').toLowerCase();
+    const title = (pkg.title || '').toLowerCase();
+    const description = (pkg.description || '').toLowerCase();
+    const topics = Array.isArray(pkg.topics)
+      ? pkg.topics.flat().join(' ').toLowerCase()
+      : '';
+
+    let score = 0;
+
+    // Exact name match
+    if (name === queryLower) score += 100;
+    // Name contains query or query contains name
+    else if (fuzzyMatch(name, queryLower)) score += 50;
+
+    // Check each query term against fields (both directions)
+    for (const term of queryTerms) {
+      // Check name - high value
+      if (fuzzyMatch(name, term)) score += 25;
+
+      // Check title words
+      const titleWords = title.split(/\s+/);
+      for (const word of titleWords) {
+        if (fuzzyMatch(word, term)) {
+          score += 15;
+          break;
+        }
+      }
+
+      // Check if term appears in full title
+      if (title.includes(term)) score += 10;
+
+      // Check description
+      if (description.includes(term)) score += 5;
+
+      // Check topics
+      if (topics.includes(term) || fuzzyMatch(topics, term)) score += 12;
+    }
+
+    // Boost by quality score if available
+    const quality = parseFloat(pkg.score);
+    if (!isNaN(quality) && quality > 0) score += quality / 20;
+
+    return { pkg, score };
+  });
+
+  // Return top candidates with score > 0
+  return scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(s => s.pkg);
+}
+
+// Format candidates for the AI prompt
+function formatCandidatesForPrompt(candidates) {
+  return candidates.map(pkg => {
+    const name = pkg.package_name || 'unknown';
+    const title = pkg.title || '';
+    const topics = Array.isArray(pkg.topics)
+      ? pkg.topics.flat().slice(0, 3).join(', ')
+      : '';
+    return `- ${name}: ${title}${topics ? ` [${topics}]` : ''}`;
+  }).join('\n');
+}
+
+// System prompt for semantic search (now uses real data)
+const SEARCH_PROMPT = `You are a search engine for R packages. You will be given a search query and a list of candidate packages from the database.
 
 Your task:
-1. Understand what the user wants to DO (not just keyword matching)
-2. Return package names that best accomplish that task
+1. Understand what the user wants to DO (the intent behind their query)
+2. Select the packages from the candidates that best accomplish that task
 3. Order by relevance (most relevant first)
+4. You may also include well-known R packages not in the candidates if highly relevant
 
 IMPORTANT: Return ONLY a JSON array of package names, nothing else. Example:
-["EpiEstim", "incidence2", "epicontacts"]
-
-If the query is about:
-- "serial interval" or "reproduction number" → Include EpiEstim, epiparameter
-- "epidemic curves" or "incidence" → Include incidence2, epicontacts
-- "plotting" or "visualization" → Include ggplot2, plotly
-- "data manipulation" → Include dplyr, tidyr, data.table
-- "time series" → Include forecast, tseries
-- "spatial analysis" → Include sf, terra, leaflet
-- "web scraping" → Include rvest, httr2
-- "machine learning" → Include tidymodels, caret, mlr3
+["ggplot2", "dplyr", "tidyr"]
 
 Return 5-15 package names. Return ONLY the JSON array.`;
 
@@ -78,14 +215,23 @@ exports.handler = async function(event, context) {
       };
     }
 
-    // Call Claude API for semantic search
+    // Load packages and find candidates using text search
+    const packages = loadPackages();
+    const candidates = findCandidates(packages, query.trim());
+
+    // If no candidates found, let AI use general knowledge
+    const candidatesText = candidates.length > 0
+      ? `\n\nCandidate packages from the database:\n${formatCandidatesForPrompt(candidates)}`
+      : '\n\nNo direct matches found in database. Use your knowledge of popular R packages.';
+
+    // Call Claude API for semantic ranking
     const response = await anthropic.messages.create({
       model: 'claude-3-5-haiku-20241022',
       max_tokens: 256,
       system: SEARCH_PROMPT,
       messages: [{
         role: 'user',
-        content: `Search query: "${query.trim()}"`
+        content: `Search query: "${query.trim()}"${candidatesText}`
       }]
     });
 
@@ -114,6 +260,7 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({
         packages: packageNames,
         query: query.trim(),
+        candidates_found: candidates.length,
         usage: {
           input_tokens: response.usage.input_tokens,
           output_tokens: response.usage.output_tokens
