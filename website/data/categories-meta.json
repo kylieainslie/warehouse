@@ -48,6 +48,13 @@
           "featured": ["tidytext", "quanteda", "text2vec", "tokenizers", "tm", "hunspell"]
         },
         {
+          "id": "ai",
+          "name": "AI & LLMs",
+          "emoji": "🤖",
+          "description": "Large language models, ChatGPT, Claude, and generative AI",
+          "featured": ["ellmer", "openai", "tidyllm", "ollamar", "gptstudio", "mall"]
+        },
+        {
           "id": "databases",
           "name": "Databases",
           "emoji": "🗄️",

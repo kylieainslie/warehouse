@@ -15,6 +15,7 @@ let categoriesData = null;
 
 // Keywords that map to specific categories (for better matching)
 const categoryKeywords = {
+  'ai': ['llm', 'llms', 'large language model', 'chatgpt', 'openai', 'claude', 'gemini', 'gpt', 'chatbot', 'generative ai', 'artificial intelligence', 'ollama', 'prompt', 'chat with ai'],
   'epidemiology': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'pandemic', 'incidence', 'prevalence', 'transmission', 'infectious', 'disease', 'surveillance', 'contact tracing', 'r0', 'rt'],
   'epiverse-trace': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'epiestim', 'epinow', 'cfr', 'case fatality'],
   'genomics': ['dna', 'rna', 'sequence', 'gene', 'genome', 'mutation', 'variant', 'expression', 'sequencing'],
