@@ -2,7 +2,13 @@
   "name": "warehouse-functions",
   "version": "1.0.0",
   "description": "Netlify functions for The Warehouse",
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

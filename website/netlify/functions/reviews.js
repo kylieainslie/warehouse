@@ -17,6 +17,11 @@ function sanitizeHtml(text) {
     .replace(/'/g, '&#039;');
 }
 
+// Export for testing
+if (typeof module !== 'undefined') {
+  module.exports.sanitizeHtml = sanitizeHtml;
+}
+
 // Main handler
 exports.handler = async function(event, context) {
   // CORS headers
