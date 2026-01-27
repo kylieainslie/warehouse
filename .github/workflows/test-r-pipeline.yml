@@ -1,0 +1,94 @@
+name: Test R Pipeline
+
+on:
+  push:
+    paths:
+      - 'website/R/**'
+      - 'website/tests/**'
+      - 'DESCRIPTION'
+    branches:
+      - main
+      - develop
+  pull_request:
+    paths:
+      - 'website/R/**'
+      - 'website/tests/**'
+      - 'DESCRIPTION'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3'
+          use-public-rspm: true
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+
+      - name: Install R dependencies
+        run: |
+          install.packages(c(
+            "testthat",
+            "DBI",
+            "RSQLite",
+            "dplyr",
+            "tibble",
+            "httr2",
+            "jsonlite",
+            "purrr",
+            "stringr",
+            "withr"
+          ))
+        shell: Rscript {0}
+
+      - name: Run tests
+        run: |
+          cd website
+          Rscript tests/testthat.R
+        env:
+          TESTTHAT_MAX_FAILS: 10
+
+      - name: Run tests with JUnit reporter
+        if: always()
+        run: |
+          cd website
+          Rscript -e '
+            library(testthat)
+            source("tests/setup.R")
+
+            # Create output directory
+            dir.create("test-results", showWarnings = FALSE)
+
+            # Run with JUnit reporter
+            results <- test_dir(
+              "tests/testthat",
+              reporter = JunitReporter$new(file = "test-results/junit.xml"),
+              stop_on_failure = FALSE
+            )
+          '
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: website/test-results/
+          retention-days: 30
+
+      - name: Test Report Summary
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: R Tests
+          path: website/test-results/junit.xml
+          reporter: java-junit
+          fail-on-error: false
