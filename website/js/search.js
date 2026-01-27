@@ -30,6 +30,32 @@ const categoryKeywords = {
   'shiny': ['interactive', 'web app', 'dashboard', 'reactive', 'ui']
 };
 
+// Query expansion: map abbreviations to full terms for better matching
+const queryExpansions = {
+  'llm': 'large language model',
+  'llms': 'large language models',
+  'ml': 'machine learning',
+  'ai': 'artificial intelligence',
+  'nlp': 'natural language processing',
+  'pk': 'pharmacokinetic',
+  'pd': 'pharmacodynamic',
+  'gis': 'geographic information system'
+};
+
+// Expand abbreviations in search query
+function expandQuery(query) {
+  let expanded = query;
+  for (const [abbrev, full] of Object.entries(queryExpansions)) {
+    // Match whole words only (case-insensitive)
+    const regex = new RegExp(`\\b${abbrev}\\b`, 'gi');
+    if (regex.test(expanded)) {
+      // Add both the abbreviation and expansion for broader matching
+      expanded = expanded.replace(regex, `${abbrev} ${full}`);
+    }
+  }
+  return expanded;
+}
+
 // Fuse.js configuration based on Elasticsearch/BM25 field boosting patterns
 // Reference: Elasticsearch best practices use title^3, description^1, keywords^1.5
 // Adapted for functionality-first package discovery
@@ -162,9 +188,11 @@ function searchPackages(query) {
   }
 
   // For general queries, use Fuse.js fuzzy search
+  // Expand abbreviations (e.g., "LLM" -> "LLM large language model") for better matching
+  const expandedQuery = expandQuery(query.trim());
   let fuseResults = [];
   if (fuse) {
-    fuseResults = fuse.search(query.trim(), { limit: 50 });
+    fuseResults = fuse.search(expandedQuery, { limit: 50 });
   }
 
   // Combine: direct matches first, then fuse results (avoiding duplicates)
