@@ -50,6 +50,14 @@
   margin: 0.25rem 0 0 0;
 }
 
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: #868e96;
+  margin: 0.75rem 0 0 0;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
 .search-container-google {
   width: 100%;
   max-width: 600px;
@@ -221,6 +229,10 @@
     font-size: 1rem;
   }
 
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
   .search-input-google {
     font-size: 1rem;
     padding: 0.875rem 1rem;
@@ -243,6 +255,10 @@
 
   .tagline {
     font-size: 0.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
   }
 
   .package-count {
