@@ -80,3 +80,7 @@ Questions or feedback? Reach out:
 ---
 
 *The Warehouse is a prototype project demonstrating function-first package discovery for R and beyond.*
+
+---
+
+<small>This website was built with [Quarto](https://quarto.org) and created with the help of [Claude Code](https://claude.ai/code).</small>
