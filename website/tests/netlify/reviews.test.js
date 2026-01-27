@@ -1,7 +1,7 @@
 // reviews.test.js
 // Tests for reviews.js sanitization and validation
 
-const { sanitizeHtml } = require('./reviews');
+const { sanitizeHtml } = require('../../netlify/functions/reviews');
 
 describe('sanitizeHtml', () => {
   // Basic XSS prevention

@@ -5,6 +5,9 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "roots": ["<rootDir>", "<rootDir>/../../tests/netlify"]
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0"
   },
