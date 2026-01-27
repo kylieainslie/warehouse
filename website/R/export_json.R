@@ -235,10 +235,105 @@ export_chatbot_context <- function(db_path = DB_PATH,
 #' Null coalescing operator
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0 || is.na(x)) y else x
 
+#' Export a lightweight search index for client-side use
+#' This version is optimized for size - only includes fields needed for search/display
+#' @param db_path Path to the SQLite database file
+#' @param json_path Path for the output JSON file
+export_lightweight_index <- function(db_path = DB_PATH,
+                                     json_path = file.path(getwd(), "data", "packages-search.json")) {
+  con <- dbConnect(RSQLite::SQLite(), db_path)
+  on.exit(dbDisconnect(con))
+
+  message("Exporting lightweight search index...")
+
+  # Get packages with only essential fields
+
+  packages <- dbGetQuery(con, "
+    SELECT
+      id,
+      package_name,
+      title,
+      description,
+      version,
+      url,
+      bug_reports,
+      repository,
+      exports,
+      topics,
+      score,
+      stars,
+      primary_category,
+      source_universe
+    FROM packages
+    ORDER BY score DESC
+  ")
+
+  # Create compact package objects
+  packages_list <- lapply(seq_len(nrow(packages)), function(i) {
+    row <- packages[i, ]
+
+    # Parse JSON and limit array sizes
+    exports <- tryCatch(fromJSON(row$exports), error = function(e) character(0))
+    topics <- tryCatch(fromJSON(row$topics), error = function(e) character(0))
+
+    # Ensure they're character vectors
+    if (!is.character(exports)) exports <- character(0)
+    if (!is.character(topics)) topics <- character(0)
+
+    # Limit exports to first 15 (enough for search, saves space)
+    if (length(exports) > 15) exports <- exports[1:15]
+
+    # Limit topics to first 8
+    if (length(topics) > 8) topics <- topics[1:8]
+
+    # Truncate description to 300 chars
+    desc <- row$description %||% ""
+    if (nchar(desc) > 300) desc <- paste0(substr(desc, 1, 297), "...")
+
+    list(
+      id = row$id,
+      package_name = row$package_name,
+      title = row$title %||% "",
+      description = desc,
+      version = row$version %||% "",
+      url = row$url %||% "",
+      bug_reports = row$bug_reports %||% "",
+      repository = row$repository %||% "",
+      exports = exports,
+      topics = topics,
+      score = row$score,
+      stars = row$stars %||% 0,
+      primary_category = row$primary_category %||% "",
+      source_universe = row$source_universe %||% ""
+    )
+  })
+
+  # Create the search index structure
+  search_index <- list(
+    packages = packages_list,
+    metadata = list(
+      generated_at = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ"),
+      total_packages = length(packages_list),
+      version = "2.0",
+      type = "lightweight"
+    )
+  )
+
+  # Write JSON (not pretty - saves ~30% space)
+  write_json(search_index, json_path, pretty = FALSE, auto_unbox = TRUE)
+
+  file_size_mb <- file.size(json_path) / (1024 * 1024)
+  message(sprintf("Exported %d packages to %s", length(packages_list), json_path))
+  message(sprintf("File size: %.2f MB", file_size_mb))
+
+  invisible(json_path)
+}
+
 #' Main function to export all JSON files
 #' @param db_path Path to the SQLite database file
 export_all <- function(db_path = DB_PATH) {
-  export_search_index(db_path)
+  export_search_index(db_path)        # Full index (for detail pages)
+  export_lightweight_index(db_path)   # Lightweight index (for client-side search)
   export_category_json(db_path)
   export_chatbot_context(db_path)
 

@@ -58,8 +58,9 @@ async function initSearch() {
     if (statusEl) statusEl.textContent = 'Loading package index...';
 
     // Load packages, review stats, and categories in parallel
+    // Use lightweight index (14MB) instead of full packages.json (42MB)
     const [packagesResponse, reviewsResponse, categoriesResponse] = await Promise.all([
-      fetch('/data/packages.json'),
+      fetch('/data/packages-search.json'),
       fetch('/api/reviews').catch(() => ({ ok: false })),
       fetch('/data/categories-meta.json').catch(() => ({ ok: false }))
     ]);

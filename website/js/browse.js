@@ -49,10 +49,11 @@ async function loadSubcategories(categoryId) {
   }
 }
 
-// Load package data from main packages.json
+// Load package data from lightweight search index
 async function loadPackageData() {
   try {
-    const response = await fetch('/data/packages.json');
+    // Use lightweight index (14MB) instead of full packages.json (42MB)
+    const response = await fetch('/data/packages-search.json');
     if (response.ok) {
       const data = await response.json();
       packagesData = {};
