@@ -3,6 +3,7 @@
 
 const Anthropic = require('@anthropic-ai/sdk');
 const config = require('./config');
+const { rateLimitMiddleware } = require('./rate-limiter');
 
 // System prompt for the package recommendation assistant
 const SYSTEM_PROMPT = `You are The Warehouse's R package assistant, helping users find the right R packages for their data analysis tasks.
@@ -51,18 +52,41 @@ async function loadPackageContext() {
 
 // Main handler
 exports.handler = async function(event, context) {
+  // Base headers
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS'
+  };
+
+  // Handle preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers, body: '' };
+  }
+
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers,
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
+
+  // Check rate limit
+  const rateLimit = rateLimitMiddleware(event, 'chat', headers);
+  if (!rateLimit.allowed) {
+    return rateLimit; // Returns 429 response
+  }
+  // Merge rate limit headers
+  Object.assign(headers, rateLimit.headers);
 
   // Check for API key
   if (!process.env.ANTHROPIC_API_KEY) {
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({
         error: 'Chat service not configured',
         response: 'The chat assistant is not yet configured. Please set up your Anthropic API key in Netlify environment variables.'
@@ -127,10 +151,7 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
+      headers,
       body: JSON.stringify({
         response: responseText,
         usage: {

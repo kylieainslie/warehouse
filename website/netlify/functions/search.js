@@ -6,6 +6,7 @@ const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
 const config = require('./config');
+const { rateLimitMiddleware } = require('./rate-limiter');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
@@ -187,6 +188,14 @@ exports.handler = async function(event, context) {
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
+
+  // Check rate limit
+  const rateLimit = rateLimitMiddleware(event, 'search', headers);
+  if (!rateLimit.allowed) {
+    return rateLimit; // Returns 429 response
+  }
+  // Merge rate limit headers
+  Object.assign(headers, rateLimit.headers);
 
   // Check for API key
   if (!process.env.ANTHROPIC_API_KEY) {
