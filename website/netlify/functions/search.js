@@ -5,6 +5,7 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
+const config = require('./config');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
@@ -226,8 +227,8 @@ exports.handler = async function(event, context) {
 
     // Call Claude API for semantic ranking
     const response = await anthropic.messages.create({
-      model: 'claude-3-5-haiku-20241022',
-      max_tokens: 256,
+      model: config.models.fast,
+      max_tokens: config.limits.maxTokens.search,
       system: SEARCH_PROMPT,
       messages: [{
         role: 'user',

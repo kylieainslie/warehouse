@@ -2,6 +2,7 @@
 // Netlify serverless function to proxy Claude API requests
 
 const Anthropic = require('@anthropic-ai/sdk');
+const config = require('./config');
 
 // System prompt for the package recommendation assistant
 const SYSTEM_PROMPT = `You are The Warehouse's R package assistant, helping users find the right R packages for their data analysis tasks.
@@ -112,8 +113,8 @@ exports.handler = async function(event, context) {
 
     // Call Claude API
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1024,
+      model: config.models.balanced,
+      max_tokens: config.limits.maxTokens.chat,
       system: SYSTEM_PROMPT,
       messages: messages
     });
