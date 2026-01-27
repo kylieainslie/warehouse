@@ -6,6 +6,17 @@ const GITHUB_OWNER = 'kylieainslie';
 const GITHUB_REPO = 'warehouse';
 const REVIEWS_PATH = 'website/data/reviews.json';
 
+// Sanitize user input to prevent XSS - escape HTML special characters
+function sanitizeHtml(text) {
+  if (!text || typeof text !== 'string') return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 // Main handler
 exports.handler = async function(event, context) {
   // CORS headers
@@ -136,15 +147,15 @@ async function submitReview(event, headers) {
       };
     }
 
-    // Create review object
+    // Create review object with sanitized user input
     const review = {
       id: Date.now().toString(36) + Math.random().toString(36).substr(2, 5),
-      package_name: body.package_name.trim(),
+      package_name: sanitizeHtml(body.package_name.trim()),
       rating: rating || null,
-      title: (body.title || '').trim().slice(0, 100),
-      comment: body.comment.trim().slice(0, 1000),
-      use_case: (body.use_case || '').trim().slice(0, 200),
-      author: (body.author || 'Anonymous').trim().slice(0, 50),
+      title: sanitizeHtml((body.title || '').trim().slice(0, 100)),
+      comment: sanitizeHtml(body.comment.trim().slice(0, 1000)),
+      use_case: sanitizeHtml((body.use_case || '').trim().slice(0, 200)),
+      author: sanitizeHtml((body.author || 'Anonymous').trim().slice(0, 50)),
       created_at: new Date().toISOString(),
       helpful_count: 0,
       verified: false
