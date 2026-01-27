@@ -12,7 +12,6 @@ include-in-header:
 <img src="images/warehouse-logo-horizontal.png" alt="The Warehouse" class="warehouse-logo-img-horizontal">
 <p class="tagline">Find R packages by what they do</p>
 <p class="hero-subtitle">Search 23,000+ packages from CRAN, Bioconductor, and GitHub.<br>Describe your task — we'll find the right tools.</p>
-<p class="package-count" id="package-count"></p>
 </div>
 
 <div class="search-container-google">
