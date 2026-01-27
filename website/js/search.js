@@ -95,7 +95,11 @@ async function initSearch() {
     const searchablePackages = searchIndex.packages.map(pkg => ({
       ...pkg,
       exports: Array.isArray(pkg.exports) ? pkg.exports.join(' ') : '',
-      topics: Array.isArray(pkg.topics) ? pkg.topics.join(' ') : ''
+      // Flatten nested arrays and convert hyphens to spaces for better matching
+      // e.g., [["reproduction-number"]] -> "reproduction number"
+      topics: Array.isArray(pkg.topics)
+        ? pkg.topics.flat().join(' ').replace(/-/g, ' ')
+        : ''
     }));
 
     fuse = new Fuse(searchablePackages, fuseOptions);
