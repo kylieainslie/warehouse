@@ -31,7 +31,7 @@ const QUERY_EXPANSIONS = {
   // Statistics
   'stats': ['statistics', 'statistical', 'regression', 'hypothesis', 'inference'],
   'ols': ['ols', 'ordinary least squares', 'linear regression', 'lm'],
-  'gee': ['gee', 'generalized estimating equations', 'generalised estimating equations', 'marginal', 'clustered', 'longitudinal', 'geepack'],
+  'gee': ['gee', 'generalized estimating equations', 'generalised estimating equations', 'marginal model', 'clustered data', 'longitudinal', 'geepack', 'working correlation', 'sandwich', 'cluster-robust', 'robust standard error', 'correlated data'],
   'glm': ['glm', 'generalized linear model', 'generalised linear model', 'logistic', 'poisson', 'binomial'],
   'gam': ['gam', 'generalized additive model', 'spline', 'smooth', 'mgcv'],
   'lmm': ['lmm', 'linear mixed model', 'mixed effects', 'random effects', 'lme4', 'nlme', 'multilevel'],

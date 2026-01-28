@@ -50,7 +50,7 @@ const queryExpansions = {
 
   // Statistics
   'ols': 'ordinary least squares linear regression',
-  'gee': 'generalized estimating equations geepack',
+  'gee': 'generalized estimating equations geepack clustered data sandwich cluster-robust marginal model longitudinal',
   'glm': 'generalized linear model logistic poisson',
   'gam': 'generalized additive model spline mgcv',
   'lmm': 'linear mixed model mixed effects lme4',
