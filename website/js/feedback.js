@@ -6,11 +6,11 @@ const REVIEWS_API = '/api/reviews';
 // Cache for review stats
 let reviewStatsCache = null;
 let reviewStatsCacheTime = 0;
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const REVIEW_CACHE_TTL = 5 * 60 * 1000; // 5 minutes
 
 // Load review stats for all packages (for search ranking)
 async function loadReviewStats() {
-  if (reviewStatsCache && Date.now() - reviewStatsCacheTime < CACHE_TTL) {
+  if (reviewStatsCache && Date.now() - reviewStatsCacheTime < REVIEW_CACHE_TTL) {
     return reviewStatsCache;
   }
 

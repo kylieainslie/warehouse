@@ -621,16 +621,16 @@ function escapeHtml(text) {
 
 // Search cache (localStorage only - no pre-seeded results to ensure new packages are discoverable)
 // v2: invalidate cache after switching to pure AI semantic search
-const CACHE_KEY = 'warehouse_search_cache_v2';
-const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+const SEARCH_CACHE_KEY = 'warehouse_search_cache_v2';
+const SEARCH_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
 function getSearchCache() {
   try {
-    const cached = localStorage.getItem(CACHE_KEY);
+    const cached = localStorage.getItem(SEARCH_CACHE_KEY);
     if (cached) {
       const data = JSON.parse(cached);
       // Check if cache is still valid
-      if (Date.now() - data.timestamp < CACHE_TTL) {
+      if (Date.now() - data.timestamp < SEARCH_CACHE_TTL) {
         return data.searches || {};
       }
     }
@@ -642,7 +642,7 @@ function setSearchCache(query, packageNames) {
   try {
     const cache = getSearchCache();
     cache[query.toLowerCase()] = packageNames;
-    localStorage.setItem(CACHE_KEY, JSON.stringify({
+    localStorage.setItem(SEARCH_CACHE_KEY, JSON.stringify({
       timestamp: Date.now(),
       searches: cache
     }));
