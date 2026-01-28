@@ -1,6 +1,6 @@
 // search.js
 // Netlify serverless function for AI-powered semantic search
-// Uses Claude to understand query intent and match against all package names
+// Uses Claude to expand queries, then searches package metadata
 
 const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
@@ -10,15 +10,12 @@ const { rateLimitMiddleware } = require('./rate-limiter');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
-let packageNamesCache = null;
 
 // Load packages.json from the site's data directory
 function loadPackages() {
-  if (packagesCache) return { packages: packagesCache, names: packageNamesCache };
+  if (packagesCache) return packagesCache;
 
   try {
-    // In Netlify, the site root is available at process.cwd() during build
-    // but we need to look in the published _site/data directory
     const possiblePaths = [
       path.join(process.cwd(), '_site', 'data', 'packages.json'),
       path.join(process.cwd(), 'data', 'packages.json'),
@@ -30,48 +27,77 @@ function loadPackages() {
       if (fs.existsSync(p)) {
         const data = JSON.parse(fs.readFileSync(p, 'utf8'));
         packagesCache = data.packages || data;
-        // Create a map of package names for quick lookup
-        packageNamesCache = packagesCache.map(pkg => pkg.package_name).filter(Boolean);
         console.log(`Loaded ${packagesCache.length} packages from ${p}`);
-        return { packages: packagesCache, names: packageNamesCache };
+        return packagesCache;
       }
     }
 
     console.warn('packages.json not found in any expected location');
-    return { packages: [], names: [] };
+    return [];
   } catch (err) {
     console.error('Failed to load packages.json:', err.message);
-    return { packages: [], names: [] };
+    return [];
   }
 }
 
-// Get package details by name
-function getPackagesByNames(packages, names) {
-  const nameSet = new Set(names.map(n => n.toLowerCase()));
-  return packages.filter(pkg =>
-    nameSet.has((pkg.package_name || '').toLowerCase())
-  );
+// Search packages using expanded terms
+function searchPackages(packages, searchTerms, limit = 50) {
+  const terms = searchTerms.map(t => t.toLowerCase());
+
+  const scored = packages.map(pkg => {
+    const name = (pkg.package_name || '').toLowerCase();
+    const title = (pkg.title || '').toLowerCase();
+    const description = (pkg.description || '').toLowerCase();
+    const topics = Array.isArray(pkg.topics) ? pkg.topics.flat().join(' ').toLowerCase() : '';
+    const allText = `${name} ${title} ${description} ${topics}`;
+
+    let score = 0;
+    for (const term of terms) {
+      // Exact name match - highest priority
+      if (name === term) score += 100;
+      // Name contains term
+      else if (name.includes(term)) score += 40;
+      // Title contains term
+      if (title.includes(term)) score += 25;
+      // Description contains term
+      if (description.includes(term)) score += 10;
+      // Topics contain term
+      if (topics.includes(term)) score += 20;
+    }
+
+    // Boost by quality score
+    const quality = parseFloat(pkg.score);
+    if (!isNaN(quality) && quality > 0) score += quality / 10;
+
+    return { pkg, score };
+  });
+
+  return scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(s => s.pkg.package_name);
 }
 
-// System prompt for semantic search - receives ALL package names
-const SEARCH_PROMPT = `You are an expert R package search engine. You will receive a search query and a complete list of all available R package names.
+// System prompt - Claude recommends packages based on its knowledge
+const SEARCH_PROMPT = `You are an expert R programmer. A user wants to find R packages for a specific task.
 
-Your task:
-1. Understand what the user wants to DO (the intent behind their query)
-2. Use your knowledge of R packages to identify which packages accomplish that task
-3. Match packages from the provided list that are relevant
-4. Order by relevance (most relevant first)
+Based on your knowledge of R packages, suggest packages that can accomplish their goal. Think about:
+- What methodology or functionality they need
+- Which R packages implement that functionality
+- Both specialized packages AND general-purpose packages that include the feature
 
-IMPORTANT GUIDELINES:
-- Understand abbreviations: GEE = generalized estimating equations, GLM = generalized linear models, LMM = linear mixed models, etc.
-- Think about what methods/functions each package provides, not just its name
-- Include packages that implement the methodology even if the package name doesn't contain the search term
-- For statistical methods, include both specialized packages AND general packages that provide the functionality
+Return a JSON object with:
+- "packages": array of R package names (most relevant first, up to 20)
+- "terms": array of search keywords to find more packages (method names, synonyms, related concepts)
 
-Return ONLY a JSON array of package names from the provided list. Example:
-["ggplot2", "dplyr", "tidyr"]
+Example for "gee":
+{
+  "packages": ["geepack", "gee", "geeM", "multgee", "sandwich", "clubSandwich", "lme4", "nlme"],
+  "terms": ["generalized estimating equations", "marginal model", "clustered data", "longitudinal", "robust standard error", "working correlation"]
+}
 
-Return 10-20 relevant package names. Return ONLY the JSON array.`;
+Return ONLY the JSON object.`;
 
 // Main handler
 exports.handler = async function(event, context) {
@@ -133,10 +159,10 @@ exports.handler = async function(event, context) {
       };
     }
 
-    // Load all packages and their names
-    const { packages, names } = loadPackages();
+    // Load all packages
+    const packages = loadPackages();
 
-    if (names.length === 0) {
+    if (packages.length === 0) {
       console.error('No packages loaded - check data file paths');
       return {
         statusCode: 500,
@@ -148,20 +174,16 @@ exports.handler = async function(event, context) {
       };
     }
 
-    console.log(`Sending ${names.length} package names to Claude for query: "${query.trim()}"`);
+    console.log(`Processing search query: "${query.trim()}"`);
 
-    // Send ALL package names to Claude for semantic matching
-    // Names are compact (~200KB for 23k packages) so this is feasible
-    const packageListText = names.join(', ');
-
-    // Call Claude API for semantic search
+    // Ask Claude what packages can do this task
     const response = await anthropic.messages.create({
       model: config.models.fast,
       max_tokens: config.limits.maxTokens.search,
       system: SEARCH_PROMPT,
       messages: [{
         role: 'user',
-        content: `Search query: "${query.trim()}"\n\nAvailable R packages:\n${packageListText}`
+        content: `Find R packages that can: ${query.trim()}`
       }]
     });
 
@@ -171,26 +193,58 @@ exports.handler = async function(event, context) {
       .map(block => block.text)
       .join('');
 
-    // Parse JSON array from response
-    let packageNames = [];
+    // Parse JSON response
+    let aiPackages = [];
+    let searchTerms = [];
     try {
-      // Try to extract JSON array from response
-      const jsonMatch = responseText.match(/\[[\s\S]*\]/);
+      const jsonMatch = responseText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
-        packageNames = JSON.parse(jsonMatch[0]);
+        const parsed = JSON.parse(jsonMatch[0]);
+        aiPackages = parsed.packages || [];
+        searchTerms = parsed.terms || [];
       }
     } catch (parseError) {
       console.error('Failed to parse AI response:', responseText);
-      packageNames = [];
+    }
+
+    console.log(`Claude suggested: ${aiPackages.join(', ')}`);
+    console.log(`Search terms: ${searchTerms.join(', ')}`);
+
+    // Search database using Claude's suggested terms + original query
+    const allTerms = [query.trim(), ...searchTerms];
+    const dbMatches = searchPackages(packages, allTerms, 30);
+
+    // Combine: Claude's suggestions first (if they exist in our DB), then DB matches
+    const packageSet = new Set();
+    const finalResults = [];
+
+    // Add Claude's suggestions that exist in our database
+    for (const name of aiPackages) {
+      const found = packages.find(p =>
+        p.package_name.toLowerCase() === name.toLowerCase()
+      );
+      if (found && !packageSet.has(found.package_name)) {
+        packageSet.add(found.package_name);
+        finalResults.push(found.package_name);
+      }
+    }
+
+    // Add database search results
+    for (const name of dbMatches) {
+      if (!packageSet.has(name)) {
+        packageSet.add(name);
+        finalResults.push(name);
+      }
     }
 
     return {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        packages: packageNames,
+        packages: finalResults.slice(0, 20),
         query: query.trim(),
-        total_packages: names.length,
+        ai_suggestions: aiPackages.length,
+        db_matches: dbMatches.length,
         usage: {
           input_tokens: response.usage.input_tokens,
           output_tokens: response.usage.output_tokens
