@@ -16,6 +16,7 @@ let categoriesData = null;
 // Keywords that map to specific categories (for better matching)
 const categoryKeywords = {
   'ai': ['llm', 'llms', 'large language model', 'chatgpt', 'openai', 'claude', 'gemini', 'gpt', 'chatbot', 'generative ai', 'artificial intelligence', 'ollama', 'prompt', 'chat with ai'],
+  'data-wrangling': ['table', 'tables', 'data frame', 'dataframe', 'data.table', 'tidytable', 'wrangle', 'reshape', 'pivot', 'join', 'merge'],
   'epidemiology': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'pandemic', 'incidence', 'prevalence', 'transmission', 'infectious', 'disease', 'surveillance', 'contact tracing', 'r0', 'rt'],
   'epiverse-trace': ['serial interval', 'reproduction number', 'outbreak', 'epidemic', 'epiestim', 'epinow', 'cfr', 'case fatality'],
   'genomics': ['dna', 'rna', 'sequence', 'gene', 'genome', 'mutation', 'variant', 'expression', 'sequencing'],
@@ -30,16 +31,99 @@ const categoryKeywords = {
   'shiny': ['interactive', 'web app', 'dashboard', 'reactive', 'ui']
 };
 
-// Query expansion: map abbreviations to full terms for better matching
+// Query expansion: map abbreviations and plurals to full terms for better matching
 const queryExpansions = {
-  'llm': 'large language model',
-  'llms': 'large language models',
-  'ml': 'machine learning',
-  'ai': 'artificial intelligence',
-  'nlp': 'natural language processing',
-  'pk': 'pharmacokinetic',
-  'pd': 'pharmacodynamic',
-  'gis': 'geographic information system'
+  // AI/ML
+  'llm': 'large language model chatgpt openai',
+  'llms': 'large language models chatgpt openai',
+  'ml': 'machine learning predictive classification',
+  'ai': 'artificial intelligence machine learning',
+  'dl': 'deep learning neural network torch keras',
+  'nn': 'neural network deep learning',
+  'nlp': 'natural language processing text mining',
+  'cv': 'cross validation resampling',
+  'rf': 'random forest randomforest ranger',
+  'xgb': 'xgboost gradient boosting',
+  'svm': 'support vector machine',
+  'pca': 'principal component analysis dimensionality',
+  'kmeans': 'k-means clustering cluster',
+
+  // Statistics
+  'ols': 'ordinary least squares linear regression',
+  'gee': 'generalized estimating equations geepack',
+  'glm': 'generalized linear model logistic poisson',
+  'gam': 'generalized additive model spline mgcv',
+  'lmm': 'linear mixed model mixed effects lme4',
+  'glmm': 'generalized linear mixed model mixed effects',
+  'anova': 'analysis of variance aov',
+  'sem': 'structural equation modeling lavaan',
+  'irt': 'item response theory psychometric',
+  'cfa': 'confirmatory factor analysis lavaan',
+  'efa': 'exploratory factor analysis',
+  'roc': 'receiver operating characteristic auc',
+  'mcmc': 'markov chain monte carlo bayesian stan',
+
+  // Epidemiology/Biostatistics
+  'epi': 'epidemiology epidemic outbreak',
+  'rr': 'relative risk risk ratio',
+  'or': 'odds ratio logistic',
+  'hr': 'hazard ratio survival cox',
+  'r0': 'basic reproduction number reproductive',
+  'rt': 'effective reproduction number epinow',
+  've': 'vaccine effectiveness efficacy',
+  'pk': 'pharmacokinetic drug concentration',
+  'pd': 'pharmacodynamic drug effect',
+  'pkpd': 'pharmacokinetic pharmacodynamic nlmixr',
+  'km': 'kaplan meier survival curve',
+  'cox': 'proportional hazards survival',
+  'rct': 'randomized controlled trial clinical',
+  'gwas': 'genome wide association snp',
+
+  // Time series
+  'ts': 'time series forecast temporal',
+  'arima': 'autoregressive time series forecast',
+  'var': 'vector autoregression multivariate',
+  'garch': 'volatility heteroskedasticity',
+  'ets': 'exponential smoothing forecast',
+
+  // Spatial
+  'gis': 'geographic information system spatial',
+  'crs': 'coordinate reference system projection',
+  'osm': 'openstreetmap mapping',
+
+  // Data manipulation
+  'tables': 'table data.table tidytable',
+  'dataframe': 'data frame data.table tibble',
+  'dataframes': 'data frame data.table tibble',
+  'etl': 'extract transform load pipeline',
+  'regex': 'regular expression pattern stringr',
+  'json': 'jsonlite parse api',
+  'xml': 'xml2 parse html',
+  'csv': 'read write readr fread',
+  'xlsx': 'excel spreadsheet readxl openxlsx',
+
+  // Web/API
+  'api': 'http rest request httr',
+  'sql': 'database query dbi dbplyr',
+  'html': 'web scrape rvest',
+  'pdf': 'document pdftools extract',
+
+  // Reporting
+  'rmd': 'rmarkdown markdown knitr',
+  'qmd': 'quarto markdown document',
+  'latex': 'tex pdf tinytex',
+
+  // Development
+  'pkg': 'package devtools usethis',
+  'tdd': 'test driven testthat',
+  'oop': 'object oriented r6 s4',
+
+  // Frequency/contingency tables
+  'frequency': 'freq count tabulate tabyl crosstab contingency vcd',
+  'crosstab': 'cross tabulation contingency two-way frequency',
+  'contingency': 'crosstab categorical frequency table vcd',
+  'mosaic': 'mosaic plot vcd ggmosaic categorical',
+  'categorical': 'factor discrete nominal ordinal contingency frequency'
 };
 
 // Expand abbreviations in search query

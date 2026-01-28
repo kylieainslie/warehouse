@@ -13,18 +13,110 @@ let packagesCache = null;
 
 // Query expansion: map abbreviations/synonyms to expanded terms
 const QUERY_EXPANSIONS = {
+  // AI/ML
   'llm': ['llm', 'large language model', 'chatgpt', 'gpt', 'openai', 'anthropic', 'ollama', 'chat'],
   'llms': ['llm', 'large language model', 'chatgpt', 'gpt', 'openai', 'anthropic', 'ollama', 'chat'],
   'ai': ['ai', 'artificial intelligence', 'machine learning', 'deep learning', 'neural'],
-  'ml': ['ml', 'machine learning', 'predictive', 'classification', 'regression'],
-  'nlp': ['nlp', 'natural language', 'text mining', 'sentiment', 'tokenization'],
-  'viz': ['visualization', 'plot', 'chart', 'graph', 'ggplot'],
-  'api': ['api', 'http', 'rest', 'request', 'httr'],
-  'db': ['database', 'sql', 'sqlite', 'postgres', 'mysql'],
+  'ml': ['ml', 'machine learning', 'predictive', 'classification', 'regression', 'caret', 'tidymodels'],
+  'dl': ['dl', 'deep learning', 'neural network', 'torch', 'keras', 'tensorflow'],
+  'nn': ['nn', 'neural network', 'deep learning', 'torch', 'keras'],
+  'nlp': ['nlp', 'natural language', 'text mining', 'sentiment', 'tokenization', 'tidytext'],
+  'cv': ['cv', 'cross validation', 'cross-validation', 'resampling', 'bootstrap'],
+  'rf': ['rf', 'random forest', 'randomforest', 'ranger', 'decision tree'],
+  'xgb': ['xgb', 'xgboost', 'gradient boosting', 'boosted trees', 'lightgbm'],
+  'svm': ['svm', 'support vector machine', 'kernel', 'classification'],
+  'pca': ['pca', 'principal component', 'dimensionality reduction', 'factor analysis'],
+  'kmeans': ['kmeans', 'k-means', 'clustering', 'cluster analysis'],
+
+  // Statistics
   'stats': ['statistics', 'statistical', 'regression', 'hypothesis', 'inference'],
+  'ols': ['ols', 'ordinary least squares', 'linear regression', 'lm'],
+  'gee': ['gee', 'generalized estimating equations', 'generalised estimating equations', 'marginal', 'clustered', 'longitudinal', 'geepack'],
+  'glm': ['glm', 'generalized linear model', 'generalised linear model', 'logistic', 'poisson', 'binomial'],
+  'gam': ['gam', 'generalized additive model', 'spline', 'smooth', 'mgcv'],
+  'lmm': ['lmm', 'linear mixed model', 'mixed effects', 'random effects', 'lme4', 'nlme', 'multilevel'],
+  'glmm': ['glmm', 'generalized linear mixed model', 'mixed effects', 'random effects', 'lme4'],
+  'anova': ['anova', 'analysis of variance', 'aov', 'f-test'],
+  'ancova': ['ancova', 'analysis of covariance'],
+  'manova': ['manova', 'multivariate analysis of variance'],
+  'sem': ['sem', 'structural equation', 'lavaan', 'path analysis', 'latent variable'],
+  'irt': ['irt', 'item response theory', 'psychometric', 'mirt', 'ltm'],
+  'cfa': ['cfa', 'confirmatory factor analysis', 'lavaan', 'factor'],
+  'efa': ['efa', 'exploratory factor analysis', 'factor analysis', 'psych'],
+  'roc': ['roc', 'receiver operating', 'auc', 'sensitivity', 'specificity', 'proc'],
+  'ci': ['ci', 'confidence interval', 'standard error', 'bootstrap'],
+  'mcmc': ['mcmc', 'markov chain monte carlo', 'bayesian', 'stan', 'jags', 'gibbs'],
+  'hmc': ['hmc', 'hamiltonian monte carlo', 'stan', 'bayesian'],
+
+  // Epidemiology/Biostatistics
   'epi': ['epidemiology', 'epidemic', 'outbreak', 'disease', 'transmission'],
+  'rr': ['rr', 'relative risk', 'risk ratio', 'hazard ratio'],
+  'or': ['or', 'odds ratio', 'logistic regression', 'case control'],
+  'hr': ['hr', 'hazard ratio', 'survival', 'cox', 'proportional hazards'],
+  'irr': ['irr', 'incidence rate ratio', 'poisson', 'rate'],
+  'nnt': ['nnt', 'number needed to treat', 'treatment effect'],
+  'r0': ['r0', 'basic reproduction number', 'reproductive number', 'transmission'],
+  'rt': ['rt', 'effective reproduction number', 'reproductive number', 'epinow', 'epiestim'],
+  've': ['ve', 'vaccine effectiveness', 'vaccine efficacy', 'immunization'],
+  'pk': ['pk', 'pharmacokinetic', 'drug concentration', 'adme', 'nlmixr'],
+  'pd': ['pd', 'pharmacodynamic', 'drug effect', 'dose response'],
+  'pkpd': ['pkpd', 'pk/pd', 'pharmacokinetic', 'pharmacodynamic', 'nlmixr', 'mrgsolve'],
+  'km': ['km', 'kaplan meier', 'kaplan-meier', 'survival curve', 'survfit'],
+  'cox': ['cox', 'proportional hazards', 'survival', 'coxph', 'hazard'],
+  'rct': ['rct', 'randomized controlled trial', 'clinical trial', 'randomization'],
+  'itt': ['itt', 'intention to treat', 'intent to treat', 'clinical trial'],
+  'gwas': ['gwas', 'genome wide association', 'snp', 'genetic association'],
+
+  // Time series
   'ts': ['time series', 'forecast', 'temporal', 'arima'],
-  'geo': ['geographic', 'spatial', 'gis', 'coordinate', 'map']
+  'arima': ['arima', 'autoregressive', 'time series', 'forecast', 'sarima'],
+  'var': ['var', 'vector autoregression', 'multivariate time series', 'vars'],
+  'garch': ['garch', 'volatility', 'heteroskedasticity', 'rugarch', 'financial'],
+  'ets': ['ets', 'exponential smoothing', 'forecast', 'state space'],
+
+  // Spatial/Geographic
+  'geo': ['geographic', 'spatial', 'gis', 'coordinate', 'map'],
+  'gis': ['gis', 'geographic information', 'spatial', 'sf', 'terra', 'raster'],
+  'crs': ['crs', 'coordinate reference system', 'projection', 'epsg', 'sf'],
+  'osm': ['osm', 'openstreetmap', 'mapping', 'osmdata'],
+
+  // Data manipulation
+  'tables': ['table', 'data.table', 'tidytable', 'datatable', 'dataframe', 'data frame'],
+  'table': ['table', 'data.table', 'tidytable', 'datatable', 'dataframe', 'data frame'],
+  'dataframe': ['dataframe', 'data frame', 'data.table', 'tibble', 'table'],
+  'dataframes': ['dataframe', 'data frame', 'data.table', 'tibble', 'table'],
+  'etl': ['etl', 'extract transform load', 'data pipeline', 'data processing'],
+  'regex': ['regex', 'regular expression', 'pattern matching', 'stringr', 'grep'],
+  'json': ['json', 'jsonlite', 'parse', 'api', 'web'],
+  'xml': ['xml', 'xml2', 'parse', 'html', 'rvest'],
+  'csv': ['csv', 'read', 'write', 'readr', 'data.table', 'fread'],
+  'xlsx': ['xlsx', 'excel', 'spreadsheet', 'readxl', 'openxlsx', 'writexl'],
+
+  // Web/API
+  'api': ['api', 'http', 'rest', 'request', 'httr', 'httr2', 'curl'],
+  'db': ['database', 'sql', 'sqlite', 'postgres', 'mysql', 'dbi'],
+  'sql': ['sql', 'database', 'query', 'dbi', 'dbplyr', 'duckdb'],
+  'viz': ['visualization', 'plot', 'chart', 'graph', 'ggplot'],
+  'html': ['html', 'web', 'scrape', 'rvest', 'xml2'],
+  'pdf': ['pdf', 'document', 'pdftools', 'tabulizer', 'extract'],
+
+  // Reporting/Documents
+  'rmd': ['rmd', 'rmarkdown', 'markdown', 'knitr', 'report'],
+  'qmd': ['qmd', 'quarto', 'markdown', 'report', 'document'],
+  'latex': ['latex', 'tex', 'pdf', 'tinytex', 'typeset'],
+
+  // Development
+  'pkg': ['pkg', 'package', 'devtools', 'usethis', 'roxygen'],
+  'ci': ['ci', 'continuous integration', 'github actions', 'testing'],
+  'tdd': ['tdd', 'test driven', 'testthat', 'unit test'],
+  'oop': ['oop', 'object oriented', 'r6', 's4', 'class'],
+
+  // Frequency/contingency tables
+  'frequency': ['frequency', 'freq', 'count', 'tabulate', 'tabyl', 'crosstab', 'contingency'],
+  'crosstab': ['crosstab', 'cross tabulation', 'contingency', 'two-way table', 'frequency'],
+  'contingency': ['contingency', 'crosstab', 'two-way', 'categorical', 'frequency table', 'vcd'],
+  'mosaic': ['mosaic', 'mosaic plot', 'vcd', 'ggmosaic', 'categorical', 'contingency'],
+  'categorical': ['categorical', 'factor', 'discrete', 'nominal', 'ordinal', 'contingency', 'frequency']
 };
 
 // Expand query terms using synonyms
@@ -73,14 +165,14 @@ function loadPackages() {
 }
 
 // Simple text search to find candidate packages
-function findCandidates(packages, query, limit = 75) {
+function findCandidates(packages, query, limit = 200) {
   const queryLower = query.toLowerCase();
-  const baseTerms = queryLower.split(/\s+/).filter(t => t.length > 2);
+  const baseTerms = queryLower.split(/\s+/).filter(t => t.length > 1);
   const queryTerms = expandQueryTerms(baseTerms);
 
-  // Helper: check if two strings match (either direction, min 3 chars)
+  // Helper: check if two strings match (either direction, min 2 chars)
   const fuzzyMatch = (a, b) => {
-    if (a.length < 3 || b.length < 3) return false;
+    if (a.length < 2 || b.length < 2) return false;
     return a.includes(b) || b.includes(a);
   };
 
