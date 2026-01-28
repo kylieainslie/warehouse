@@ -223,7 +223,7 @@ exports.handler = async function(event, context) {
 
     // Search database using Claude's suggested terms + original query
     const allTerms = [query.trim(), ...searchTerms];
-    const dbMatches = searchPackages(packages, allTerms, 30);
+    const dbMatches = searchPackages(packages, allTerms, 200);
 
     // Combine: Claude's suggestions first (if they exist in our DB), then DB matches
     const packageSet = new Set();
