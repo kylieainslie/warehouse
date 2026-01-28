@@ -4,89 +4,84 @@
 
 Find R packages by what they do, not what they're called.
 
-## 🚀 Quick Start
+**Live site:** [rwarehouse.netlify.app](https://rwarehouse.netlify.app)
+
+## Features
+
+- **Semantic search** - Describe what you want to do, find relevant packages
+- **23,000+ packages** - CRAN, Bioconductor, and GitHub packages indexed
+- **AI-powered search** - Uses Claude for intelligent query understanding
+- **Quality scores** - R-Universe quality metrics for every package
+- **Browse by category** - Epidemiology, machine learning, visualization, AI/LLMs, and more
+- **Community reviews** - Share experiences and tips for packages
+
+## Tech Stack
+
+- **Frontend:** [Quarto](https://quarto.org) static site
+- **Search:** [Fuse.js](https://fusejs.io) + Claude API
+- **Hosting:** Netlify (with serverless functions)
+- **Data:** R-Universe API, CRAN, Bioconductor
+
+## Local Development
 
 ### Prerequisites
 
-```r
-# Install required packages
-install.packages(c(
-  "tidyverse",
-  "DBI",
-  "RSQLite",
-  "httr",
-  "jsonlite",
-  "rvest",
-  "gh",
-  "quarto"
-))
-```
+- [Quarto](https://quarto.org/docs/get-started/)
+- [Node.js](https://nodejs.org/) 18+
+- R with packages: `tidyverse`, `jsonlite`, `httr`
 
 ### Setup
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/warehouse.git
-cd warehouse
+git clone https://github.com/kylieainslie/warehouse.git
+cd warehouse/website
 
-# Open in RStudio
-open warehouse.Rproj
+# Install function dependencies
+cd netlify/functions && npm install && cd ../..
 
 # Preview website
-cd website
 quarto preview
 ```
 
-## 📁 Project Structure
+### Environment Variables
+
+For AI search to work locally, set in Netlify dashboard or `.env`:
+
+```
+ANTHROPIC_API_KEY=your_key_here
+```
+
+## Project Structure
 
 ```
 warehouse/
-├── data/
-│   ├── raw/              # Scraped data
-│   ├── processed/        # Cleaned data
-│   └── warehouse.db      # SQLite database (will be created)
-├── scripts/
-│   ├── 01_scrape_cran.R
-│   ├── 02_scrape_github.R
-│   └── ...
 ├── website/
-│   ├── _quarto.yml       # Website config
-│   ├── index.qmd         # Homepage
-│   ├── categories/       # Category pages
-│   └── styles.css        # Custom CSS
-├── warehouse.Rproj       # RStudio project
+│   ├── _quarto.yml           # Site config
+│   ├── index.qmd             # Homepage
+│   ├── categories/           # Category pages
+│   ├── data/                 # Package JSON data
+│   ├── js/search.js          # Search logic
+│   ├── netlify/functions/    # Serverless API
+│   └── styles.css
+├── scripts/                  # Data pipeline scripts
 └── README.md
 ```
 
-## 🔍 How It Works
+## Contributing
 
-1. **Data Collection:** Scrape CRAN, GitHub, Bioconductor
-2. **Quality Scoring:** Calculate 0-100 scores based on tests, docs, maintenance
-3. **Categorization:** Organize by function (epidemiology, data manipulation, etc.)
-4. **Search:** Function-first search across all metadata
-5. **Reviews:** Community feedback system
+Contributions welcome! You can:
 
-## 🎯 Goals
+- **Submit packages** - [Add a package](https://rwarehouse.netlify.app/submit.html)
+- **Write reviews** - [Share your experience](https://rwarehouse.netlify.app/submit-review.html)
+- **Report issues** - [GitHub Issues](https://github.com/kylieainslie/warehouse/issues)
+- **Contribute code** - PRs welcome
 
-- Make R package discovery easier
-- Highlight quality packages regardless of source
-- Enable function-first search ("estimate serial interval")
-- Build community knowledge through reviews
-- Extend to Python/Julia if successful
+## License
 
-## 📝 License
+MIT License
 
-MIT License - see LICENSE file
+## Credits
 
-## 🤝 Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## 📧 Contact
-
-- GitHub Issues: [Report bugs or request features](https://github.com/YOUR_USERNAME/warehouse/issues)
-- Email: your.email@example.com
-
----
-
-*Built with [Quarto](https://quarto.org) and ❤️*
+- Data from [R-Universe](https://r-universe.dev), [CRAN](https://cran.r-project.org), [Bioconductor](https://bioconductor.org)
+- Built with [Quarto](https://quarto.org) and [Claude Code](https://claude.ai/code)
