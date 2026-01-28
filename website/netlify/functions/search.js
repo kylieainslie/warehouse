@@ -136,6 +136,20 @@ exports.handler = async function(event, context) {
     // Load all packages and their names
     const { packages, names } = loadPackages();
 
+    if (names.length === 0) {
+      console.error('No packages loaded - check data file paths');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({
+          error: 'Package data not available',
+          packages: []
+        })
+      };
+    }
+
+    console.log(`Sending ${names.length} package names to Claude for query: "${query.trim()}"`);
+
     // Send ALL package names to Claude for semantic matching
     // Names are compact (~200KB for 23k packages) so this is feasible
     const packageListText = names.join(', ');
