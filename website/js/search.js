@@ -385,12 +385,19 @@ function findMatchingCategories(query) {
   return matches.sort((a, b) => b.score - a.score).slice(0, 2);
 }
 
+// Pagination state
+const RESULTS_PER_PAGE = 20;
+let currentResultsShown = 0;
+let allSearchResults = [];
+
 // Render search results to DOM
 function renderSearchResults(results, containerId = 'search-results') {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  // Store results for AI comparison feature
+  // Store all results
+  allSearchResults = results;
+  currentResultsShown = 0;
   lastSearchResults = results;
   lastSearchQuery = document.getElementById('package-search')?.value || '';
 
@@ -440,6 +447,16 @@ function renderSearchResults(results, containerId = 'search-results') {
     </div>
   ` : '';
 
+  // Show first batch of results
+  const initialResults = results.slice(0, RESULTS_PER_PAGE);
+  currentResultsShown = initialResults.length;
+
+  const showMoreHtml = results.length > RESULTS_PER_PAGE ? `
+    <button class="show-more-btn" onclick="showMoreResults()">
+      Show more (${results.length - RESULTS_PER_PAGE} remaining)
+    </button>
+  ` : '';
+
   const html = `
     <div class="search-results-box">
       <div class="results-header">
@@ -447,14 +464,45 @@ function renderSearchResults(results, containerId = 'search-results') {
         ${compareButtonHtml}
       </div>
       ${categorySuggestionHtml}
-      <div class="package-list">
-        ${results.map(pkg => renderPackageCard(pkg)).join('')}
+      <div class="package-list" id="package-list">
+        ${initialResults.map(pkg => renderPackageCard(pkg)).join('')}
+      </div>
+      <div id="show-more-container">
+        ${showMoreHtml}
       </div>
     </div>
   `;
 
   container.innerHTML = html;
 }
+
+// Show more results
+function showMoreResults() {
+  const packageList = document.getElementById('package-list');
+  const showMoreContainer = document.getElementById('show-more-container');
+  if (!packageList || !showMoreContainer) return;
+
+  const nextBatch = allSearchResults.slice(currentResultsShown, currentResultsShown + RESULTS_PER_PAGE);
+  currentResultsShown += nextBatch.length;
+
+  // Append new results
+  packageList.insertAdjacentHTML('beforeend', nextBatch.map(pkg => renderPackageCard(pkg)).join(''));
+
+  // Update or remove show more button
+  const remaining = allSearchResults.length - currentResultsShown;
+  if (remaining > 0) {
+    showMoreContainer.innerHTML = `
+      <button class="show-more-btn" onclick="showMoreResults()">
+        Show more (${remaining} remaining)
+      </button>
+    `;
+  } else {
+    showMoreContainer.innerHTML = '';
+  }
+}
+
+// Export for global use
+window.showMoreResults = showMoreResults;
 
 // Get package logo URL from GitHub
 function getPackageLogoUrl(pkg) {

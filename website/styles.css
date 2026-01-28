@@ -920,6 +920,32 @@ tr:hover {
   font-size: 1rem;
 }
 
+/* Show more button */
+#show-more-container {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
 .search-no-results {
   text-align: center;
   padding: 2rem;

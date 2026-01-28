@@ -252,7 +252,7 @@ exports.handler = async function(event, context) {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        packages: finalResults.slice(0, 20),
+        packages: finalResults,
         query: query.trim(),
         ai_suggestions: aiPackages.length,
         db_matches: dbMatches.length,
