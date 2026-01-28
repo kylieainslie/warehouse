@@ -32,9 +32,28 @@ async function loadPackages() {
   }
 }
 
+// Simple stemming: remove common suffixes for better matching
+function stemTerm(term) {
+  const t = term.toLowerCase();
+  // Remove trailing 's', 'es', 'ing', 'ed' for basic matching
+  if (t.endsWith('ies')) return t.slice(0, -3) + 'y';
+  if (t.endsWith('es') && t.length > 3) return t.slice(0, -2);
+  if (t.endsWith('s') && t.length > 2) return t.slice(0, -1);
+  if (t.endsWith('ing') && t.length > 5) return t.slice(0, -3);
+  if (t.endsWith('ed') && t.length > 4) return t.slice(0, -2);
+  return t;
+}
+
 // Search packages using expanded terms
 function searchPackages(packages, searchTerms, limit = 50) {
-  const terms = searchTerms.map(t => t.toLowerCase());
+  // Include both original terms and stemmed versions
+  const terms = [];
+  for (const t of searchTerms) {
+    const lower = t.toLowerCase();
+    terms.push(lower);
+    const stemmed = stemTerm(lower);
+    if (stemmed !== lower) terms.push(stemmed);
+  }
 
   const scored = packages.map(pkg => {
     const name = (pkg.package_name || '').toLowerCase();
