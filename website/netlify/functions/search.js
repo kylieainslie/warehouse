@@ -3,39 +3,31 @@
 // Uses Claude to expand queries, then searches package metadata
 
 const Anthropic = require('@anthropic-ai/sdk');
-const fs = require('fs');
-const path = require('path');
 const config = require('./config');
 const { rateLimitMiddleware } = require('./rate-limiter');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
 
-// Load packages.json from the site's data directory
-function loadPackages() {
+// Load packages from the deployed site (functions can't access site files directly)
+async function loadPackages() {
   if (packagesCache) return packagesCache;
 
   try {
-    const possiblePaths = [
-      path.join(process.cwd(), '_site', 'data', 'packages.json'),
-      path.join(process.cwd(), 'data', 'packages.json'),
-      path.join(__dirname, '..', '..', 'data', 'packages.json'),
-      path.join(__dirname, '..', '..', '_site', 'data', 'packages.json')
-    ];
+    // Fetch from the deployed site - use lightweight search index
+    const siteUrl = process.env.URL || 'https://rwarehouse.netlify.app';
+    const response = await fetch(`${siteUrl}/data/packages-search.json`);
 
-    for (const p of possiblePaths) {
-      if (fs.existsSync(p)) {
-        const data = JSON.parse(fs.readFileSync(p, 'utf8'));
-        packagesCache = data.packages || data;
-        console.log(`Loaded ${packagesCache.length} packages from ${p}`);
-        return packagesCache;
-      }
+    if (!response.ok) {
+      throw new Error(`Failed to fetch packages: ${response.status}`);
     }
 
-    console.warn('packages.json not found in any expected location');
-    return [];
+    const data = await response.json();
+    packagesCache = data.packages || data;
+    console.log(`Loaded ${packagesCache.length} packages from ${siteUrl}`);
+    return packagesCache;
   } catch (err) {
-    console.error('Failed to load packages.json:', err.message);
+    console.error('Failed to load packages:', err.message);
     return [];
   }
 }
@@ -160,7 +152,7 @@ exports.handler = async function(event, context) {
     }
 
     // Load all packages
-    const packages = loadPackages();
+    const packages = await loadPackages();
 
     if (packages.length === 0) {
       console.error('No packages loaded - check data file paths');
