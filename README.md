@@ -58,28 +58,6 @@ warehouse/
 └── README.md
 ```
 
-## 🛠️ Development Roadmap
-
-### Phase 1: Data Collection (Week 1)
-- [ ] Scrape CRAN packages
-- [ ] Scrape GitHub packages
-- [ ] Calculate quality scores
-- [ ] Auto-categorize packages
-
-### Phase 2: Website (Week 2)
-- [x] Basic website structure
-- [x] Homepage with search
-- [x] Category pages
-- [x] Submission form
-- [ ] Search functionality
-- [ ] Package detail pages
-
-### Phase 3: Features (Week 3)
-- [ ] Review system
-- [ ] Database integration
-- [ ] Auto-updates
-- [ ] Deployment
-
 ## 🔍 How It Works
 
 1. **Data Collection:** Scrape CRAN, GitHub, Bioconductor
