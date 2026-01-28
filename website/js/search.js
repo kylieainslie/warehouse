@@ -620,7 +620,8 @@ function escapeHtml(text) {
 }
 
 // Search cache (localStorage only - no pre-seeded results to ensure new packages are discoverable)
-const CACHE_KEY = 'warehouse_search_cache';
+// v2: invalidate cache after switching to pure AI semantic search
+const CACHE_KEY = 'warehouse_search_cache_v2';
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
 function getSearchCache() {
@@ -663,26 +664,44 @@ async function aiSearch(query) {
     return lookupPackages(cached);
   }
 
-  // Call API
-  const response = await fetch('/api/search', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query })
-  });
+  // Call API with timeout (Netlify functions have 10s limit)
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-  if (!response.ok) {
-    throw new Error('AI search failed');
+  try {
+    console.log('Calling AI search API for:', query);
+    const response = await fetch('/api/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query }),
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('AI search returned error:', response.status, errorData);
+      throw new Error(`AI search failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('AI search response:', data);
+    const packageNames = data.packages || [];
+
+    // Cache the results
+    if (packageNames.length > 0) {
+      setSearchCache(query, packageNames);
+    }
+
+    return lookupPackages(packageNames);
+  } catch (error) {
+    clearTimeout(timeoutId);
+    if (error.name === 'AbortError') {
+      console.warn('AI search timed out');
+    }
+    throw error;
   }
-
-  const data = await response.json();
-  const packageNames = data.packages || [];
-
-  // Cache the results
-  if (packageNames.length > 0) {
-    setSearchCache(query, packageNames);
-  }
-
-  return lookupPackages(packageNames);
 }
 
 // Look up full package data from searchIndex
