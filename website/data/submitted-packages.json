@@ -1,4 +1,37 @@
 {
-  "packages": [],
-  "updated_at": null
+  "packages": [
+    {
+      "id": "submitted-2",
+      "package_name": "WARDEN",
+      "title": "Discrete event stimulation toolset to perform cost effectiveness analysis for health economics",
+      "description": "WARDEN is a user-friendly package that facilitates the use of discrete event simulations with or without resource constraints for cost-effectiveness analysis. The package supports a flexible, transparent, practical approach to discrete event simulation while keeping an acceptable performance.\n\nThe current version supports:\n\nDiscrete event simulation models, Markov/semi-Markov models and hybrid models using parallel and non-parallel engines\nConstrained and unconstrained models (with or without interactivity between patients)\nSeamlessly integrating data.frames and other objects into the model\nDelayed execution of the main inputs to facilitate readability of the model\nImplementation of structural and parameter uncertainty\nHelper functions to facilitate drawing of time to events and the use of hazard ratios, as well as other functions to facilitate transparency\nPerforming cost-effectiveness and uncertainty analysis",
+      "url": "https://cran.r-project.org/web/packages/WARDEN/index.html",
+      "primary_category": "epidemiology",
+      "keywords": [
+        "Discrete event stimulation",
+        "cost effectiveness",
+        "health economics"
+      ],
+      "use_cases": "Perform resource constrained and unconstrained discrete event stimulation cost effectiveness models",
+      "docs_url": "https://jsanchezalv.github.io/WARDEN/",
+      "paper_doi": "",
+      "install_command": "Install.packages(\"WARDEN\")",
+      "quality_indicators": [
+        "Has automated tests",
+        "Has CI/CD (GitHub Actions, etc.)",
+        "Has vignettes or tutorials",
+        "Has pkgdown documentation site"
+      ],
+      "submitter_relationship": "Package author/maintainer",
+      "submitter_name": "Javier Sánchez Álvarez",
+      "similar_packages": "microsimulation \nhesim\nsimmer",
+      "unique_features": "User friendly, many helper functions, easy to implement and debug",
+      "source_universe": "submitted",
+      "github_issue": 2,
+      "submitted_at": "2026-02-01T13:34:16.518Z",
+      "score": null,
+      "stars": 0
+    }
+  ],
+  "updated_at": "2026-02-01T13:34:16.519Z"
 }
