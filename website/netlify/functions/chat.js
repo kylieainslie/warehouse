@@ -50,12 +50,24 @@ async function loadPackageContext() {
   }
 }
 
+// Allowed origins for CORS
+const ALLOWED_ORIGINS = [
+  'https://rwarehouse.netlify.app',
+  'http://localhost:8888',
+  'http://localhost:3000'
+];
+
+function getCorsOrigin(event) {
+  const origin = event.headers?.origin || event.headers?.Origin || '';
+  return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+}
+
 // Main handler
 exports.handler = async function(event, context) {
   // Base headers
   const headers = {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': getCorsOrigin(event),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS'
   };
@@ -103,10 +115,12 @@ exports.handler = async function(event, context) {
     const body = JSON.parse(event.body);
     const { message, history = [] } = body;
 
-    if (!message || typeof message !== 'string') {
+    const MAX_MESSAGE_LENGTH = 1000;
+    if (!message || typeof message !== 'string' || message.trim().length < 1 || message.trim().length > MAX_MESSAGE_LENGTH) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: 'Message is required' })
+        headers,
+        body: JSON.stringify({ error: 'Message must be between 1 and 1000 characters' })
       };
     }
 
@@ -171,9 +185,10 @@ exports.handler = async function(event, context) {
     if (error.status === 401) {
       return {
         statusCode: 500,
+        headers,
         body: JSON.stringify({
-          error: 'Invalid API key',
-          response: 'The chat service has an authentication issue. Please check the API key configuration.'
+          error: 'Service configuration error',
+          response: 'The chat service is temporarily unavailable. Please try again later.'
         })
       };
     }
@@ -181,6 +196,7 @@ exports.handler = async function(event, context) {
     if (error.status === 429) {
       return {
         statusCode: 429,
+        headers,
         body: JSON.stringify({
           error: 'Rate limited',
           response: 'Too many requests. Please wait a moment and try again.'
@@ -192,6 +208,7 @@ exports.handler = async function(event, context) {
     if (error.status === 400 && error.message && error.message.includes('credit balance')) {
       return {
         statusCode: 503,
+        headers,
         body: JSON.stringify({
           error: 'Service temporarily unavailable',
           response: 'The chat assistant is temporarily unavailable. Please use the search bar above to find packages.'
@@ -199,13 +216,12 @@ exports.handler = async function(event, context) {
       };
     }
 
-    // Return more detailed error for debugging
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({
-        error: error.name || 'Internal server error',
-        response: 'Sorry, something went wrong. Please try again later.',
-        debug: error.message
+        error: 'Internal server error',
+        response: 'Sorry, something went wrong. Please try again later.'
       })
     };
   }

@@ -22,11 +22,23 @@ if (typeof module !== 'undefined') {
   module.exports.sanitizeHtml = sanitizeHtml;
 }
 
+// Allowed origins for CORS
+const ALLOWED_ORIGINS = [
+  'https://rwarehouse.netlify.app',
+  'http://localhost:8888',
+  'http://localhost:3000'
+];
+
+function getCorsOrigin(event) {
+  const origin = event.headers?.origin || event.headers?.Origin || '';
+  return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+}
+
 // Main handler
 exports.handler = async function(event, context) {
   // CORS headers
   const headers = {
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': getCorsOrigin(event),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Content-Type': 'application/json'
