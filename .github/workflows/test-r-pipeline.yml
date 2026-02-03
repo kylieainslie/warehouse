@@ -66,13 +66,15 @@ jobs:
             library(testthat)
             source("tests/setup.R")
 
-            # Create output directory
-            dir.create("test-results", showWarnings = FALSE)
+            # Create output directory (use absolute path so test_dir cwd change does not break it)
+            out_dir <- file.path(getwd(), "test-results")
+            dir.create(out_dir, showWarnings = FALSE)
+            out_file <- file.path(out_dir, "junit.xml")
 
             # Run with JUnit reporter
             results <- test_dir(
               "tests/testthat",
-              reporter = JunitReporter$new(file = "test-results/junit.xml"),
+              reporter = JunitReporter$new(file = out_file),
               stop_on_failure = FALSE
             )
           '
