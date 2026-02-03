@@ -33,6 +33,11 @@ If you don't know about a specific package or the question is outside R packages
 // Load package context (cached)
 let packageContext = null;
 
+/**
+ * Load contextual package information for the chat assistant.
+ * Results are cached in memory for the lifetime of the function instance.
+ * @returns {Promise<{loaded: boolean, summary: string}>} Package context object
+ */
 async function loadPackageContext() {
   if (packageContext) return packageContext;
 
@@ -57,12 +62,25 @@ const ALLOWED_ORIGINS = [
   'http://localhost:3000'
 ];
 
+/**
+ * Resolve the CORS origin from the request against the allowlist.
+ * Returns the production origin for unrecognized origins.
+ * @param {Object} event - Netlify function event
+ * @returns {string} Allowed origin URL
+ */
 function getCorsOrigin(event) {
   const origin = event.headers?.origin || event.headers?.Origin || '';
   return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
 }
 
-// Main handler
+/**
+ * Netlify handler for the R package chat assistant.
+ * Accepts a POST with { message, history } and returns a conversational
+ * response from Claude with package recommendations.
+ * @param {Object} event - Netlify function event
+ * @param {Object} context - Netlify function context
+ * @returns {Promise<Object>} HTTP response with assistant reply
+ */
 exports.handler = async function(event, context) {
   // Base headers
   const headers = {

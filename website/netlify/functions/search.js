@@ -9,7 +9,11 @@ const { rateLimitMiddleware } = require('./rate-limiter');
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
 
-// Load packages from the deployed site (functions can't access site files directly)
+/**
+ * Load the package search index from the deployed site.
+ * Results are cached in memory for the lifetime of the function instance.
+ * @returns {Promise<Array<Object>>} Array of package objects
+ */
 async function loadPackages() {
   if (packagesCache) return packagesCache;
 
@@ -32,7 +36,11 @@ async function loadPackages() {
   }
 }
 
-// Simple stemming: remove common suffixes for better matching
+/**
+ * Apply basic stemming by removing common English suffixes.
+ * @param {string} term - Lowercase search term to stem
+ * @returns {string} Stemmed term
+ */
 function stemTerm(term) {
   const t = term.toLowerCase();
   // Remove trailing 's', 'es', 'ing', 'ed' for basic matching
@@ -44,7 +52,14 @@ function stemTerm(term) {
   return t;
 }
 
-// Search packages using expanded terms
+/**
+ * Score and rank packages against a set of search terms.
+ * Scores are based on matches in package name, title, description, and topics.
+ * @param {Array<Object>} packages - Array of package objects to search
+ * @param {string[]} searchTerms - Terms to match against package metadata
+ * @param {number} [limit=50] - Maximum number of results to return
+ * @returns {string[]} Ranked array of matching package names
+ */
 function searchPackages(packages, searchTerms, limit = 50) {
   // Include both original terms and stemmed versions
   const terms = [];
@@ -117,12 +132,25 @@ const ALLOWED_ORIGINS = [
   'http://localhost:3000'
 ];
 
+/**
+ * Resolve the CORS origin from the request against the allowlist.
+ * Returns the production origin for unrecognized origins.
+ * @param {Object} event - Netlify function event
+ * @returns {string} Allowed origin URL
+ */
 function getCorsOrigin(event) {
   const origin = event.headers?.origin || event.headers?.Origin || '';
   return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
 }
 
-// Main handler
+/**
+ * Netlify handler for AI-powered package search.
+ * Accepts a POST with { query } and returns ranked package names using
+ * Claude for query expansion combined with local text matching.
+ * @param {Object} event - Netlify function event
+ * @param {Object} context - Netlify function context
+ * @returns {Promise<Object>} HTTP response with matched packages
+ */
 exports.handler = async function(event, context) {
   // CORS headers
   const headers = {
