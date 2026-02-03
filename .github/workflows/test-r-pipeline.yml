@@ -46,7 +46,8 @@ jobs:
             "jsonlite",
             "purrr",
             "stringr",
-            "withr"
+            "withr",
+            "xml2"
           ))
         shell: Rscript {0}
 
