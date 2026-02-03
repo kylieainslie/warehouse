@@ -31,7 +31,38 @@
       "submitted_at": "2026-02-01T13:34:16.518Z",
       "score": null,
       "stars": 0
+    },
+    {
+      "id": "submitted-3",
+      "package_name": "fitdistcp",
+      "title": "Fitting distributions with parameter uncertainty using the objective Bayesian method of calibrating priors",
+      "description": "This package is to help climate scientists, actuaries and other risk modellers fit distributions and regression models, but including parameter uncertainty. Including parameter uncertainty gives predictive distributions that give well calibrated probabilities and return levels of future data points.\nThis compares with standard methods for fitting distributions, such as maxlik, which ignore parameter uncertainty, and underestimate the probabilities of future extremes. \nThe methods in this package either eliminate this underestimation, or greatly reduce it (depending on the model).\n\nThe package provides the usual methods (d for density, p for probability, q for quantiles and r for random deviates).\nIt’s fast and straightforward to use.\nIt’s the only package that provides such easy-to-use functionality for fitting predictive distributions, and the only package that provides routines for testing the calibration of fitted distributions.\n\nThere are 3 related journal papers, in climate, actuarial and statistical journals:\n\nhttps://doi.org/10.5194/ascmo-11-1-2025\nhttps://doi.org/10.1017/S1748499525100237\nhttps://doi.org/10.3390/stats8040109",
+      "url": "https://cran.r-project.org/web/packages/fitdistcp/index.html",
+      "primary_category": "statistical-modeling",
+      "keywords": [
+        "distribution fitting",
+        "predictive distributions",
+        "parameter uncertainty",
+        "objective Bayesian",
+        "calibrating prior",
+        "reliability",
+        "calibration"
+      ],
+      "use_cases": "In climate science: modelling the probability distribution of annual maximum temperatures in London based on data from the last 70 years, with the goal of understanding the probabilities of what might happen next year\n\nIn actuarial science: modelling the probability distribution of losses to an insurance portfolio based on losses from the last 20 years, with the goal of understanding the probabilities of what might happen next year",
+      "docs_url": "https://fitdistcp.info",
+      "paper_doi": "https://doi.org/10.5194/ascmo-11-1-2025",
+      "install_command": "install.packages(\"fitdistcp\")",
+      "quality_indicators": [],
+      "submitter_relationship": "Package author/maintainer",
+      "submitter_name": "Stephen Jewson",
+      "similar_packages": "Similar to fitdistrplus, but includes parameter uncertainty, and so produces predictive distributions, not just best fit distributions.\n\nSimilar to the various other extreme value packages in R (such as extRemes, evd, evir, climextRemes, extremeStat, fExtremes) but makes it possible (or at least easier) to include objective parameter uncertainty, which is necessary for well calibrated probabilities. \n\nSimilar to the various Bayesian packages in R (such as extRemes, MCMC4Extremes, revdbayes, texmex) but faster because it uses asymptotic expansions, and easier because you don't have to specify a prior, or burn-in or convergence criteria.  \n\nA slightly simplified version of fitdistcp is also available in Python.",
+      "unique_features": "This is the only package that provides straightforward commands for fitting distributions with parameter uncertainty, i.e. predictive distributions.\nIncluding parameter uncertainty is essential when distributions are being for risk assessment.",
+      "source_universe": "submitted",
+      "github_issue": 3,
+      "submitted_at": "2026-02-03T17:46:56.158Z",
+      "score": null,
+      "stars": 0
     }
   ],
-  "updated_at": "2026-02-01T13:34:16.519Z"
+  "updated_at": "2026-02-03T17:46:56.159Z"
 }
