@@ -110,12 +110,24 @@ Example for "gee":
 
 Return ONLY the JSON object.`;
 
+// Allowed origins for CORS
+const ALLOWED_ORIGINS = [
+  'https://rwarehouse.netlify.app',
+  'http://localhost:8888',
+  'http://localhost:3000'
+];
+
+function getCorsOrigin(event) {
+  const origin = event.headers?.origin || event.headers?.Origin || '';
+  return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+}
+
 // Main handler
 exports.handler = async function(event, context) {
   // CORS headers
   const headers = {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': getCorsOrigin(event),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS'
   };
@@ -162,11 +174,12 @@ exports.handler = async function(event, context) {
     const body = JSON.parse(event.body);
     const { query } = body;
 
-    if (!query || typeof query !== 'string' || query.trim().length < 2) {
+    const MAX_QUERY_LENGTH = 500;
+    if (!query || typeof query !== 'string' || query.trim().length < 2 || query.trim().length > MAX_QUERY_LENGTH) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ error: 'Query is required', packages: [] })
+        body: JSON.stringify({ error: 'Query must be between 2 and 500 characters', packages: [] })
       };
     }
 
@@ -271,8 +284,7 @@ exports.handler = async function(event, context) {
       headers,
       body: JSON.stringify({
         error: 'Search failed',
-        packages: [],
-        debug: error.message
+        packages: []
       })
     };
   }
