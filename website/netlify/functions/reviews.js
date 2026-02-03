@@ -6,7 +6,11 @@ const GITHUB_OWNER = 'kylieainslie';
 const GITHUB_REPO = 'warehouse';
 const REVIEWS_PATH = 'website/data/reviews.json';
 
-// Sanitize user input to prevent XSS - escape HTML special characters
+/**
+ * Sanitize user input by escaping HTML special characters to prevent XSS.
+ * @param {string} text - Raw user input
+ * @returns {string} Escaped string safe for HTML rendering
+ */
 function sanitizeHtml(text) {
   if (!text || typeof text !== 'string') return '';
   return text
@@ -29,12 +33,25 @@ const ALLOWED_ORIGINS = [
   'http://localhost:3000'
 ];
 
+/**
+ * Resolve the CORS origin from the request against the allowlist.
+ * Returns the production origin for unrecognized origins.
+ * @param {Object} event - Netlify function event
+ * @returns {string} Allowed origin URL
+ */
 function getCorsOrigin(event) {
   const origin = event.headers?.origin || event.headers?.Origin || '';
   return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
 }
 
-// Main handler
+/**
+ * Netlify handler for package reviews.
+ * GET: Fetch reviews, optionally filtered by package name.
+ * POST: Submit a new review (stored via GitHub API).
+ * @param {Object} event - Netlify function event
+ * @param {Object} context - Netlify function context
+ * @returns {Promise<Object>} HTTP response
+ */
 exports.handler = async function(event, context) {
   // CORS headers
   const headers = {
@@ -66,7 +83,12 @@ exports.handler = async function(event, context) {
   };
 };
 
-// Fetch reviews from GitHub
+/**
+ * Fetch reviews from the GitHub-hosted reviews.json file.
+ * @param {Object} event - Netlify function event
+ * @param {Object} headers - CORS response headers
+ * @returns {Promise<Object>} HTTP response with reviews and stats
+ */
 async function getReviews(event, headers) {
   const packageName = event.queryStringParameters?.package;
 
@@ -127,7 +149,13 @@ async function getReviews(event, headers) {
   }
 }
 
-// Submit a new review
+/**
+ * Submit a new package review. Sanitizes input, appends to the
+ * reviews.json file in the GitHub repository via the Contents API.
+ * @param {Object} event - Netlify function event
+ * @param {Object} headers - CORS response headers
+ * @returns {Promise<Object>} HTTP response with created review
+ */
 async function submitReview(event, headers) {
   // Check for GitHub token
   const githubToken = process.env.GITHUB_TOKEN;
