@@ -121,7 +121,7 @@ fetch_and_update_reviews <- function(
 
   # Handle append/replace
   if (append && file.exists(output_path)) {
-    existing <- fromJSON(output_path)
+    existing <- fromJSON(output_path, simplifyVector = FALSE)
     existing_reviews <- existing$reviews
 
     existing_ids <- sapply(existing_reviews, function(r) r$id)
