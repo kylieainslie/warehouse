@@ -112,18 +112,16 @@ function buildDocumentIndex(packages) {
     const tokens = tokenize(allText);
     totalLength += tokens.length;
 
-    // Count unique terms in this document
+    // Collect unique terms including stemmed versions in a single Set
+    // This prevents double-counting when a document contains both a word and its stem
     const uniqueTerms = new Set(tokens);
+    const allTerms = new Set(uniqueTerms);
     for (const term of uniqueTerms) {
-      docFreq.set(term, (docFreq.get(term) || 0) + 1);
+      allTerms.add(stemTerm(term));
     }
-
-    // Also add stemmed versions
-    for (const term of uniqueTerms) {
-      const stemmed = stemTerm(term);
-      if (stemmed !== term) {
-        docFreq.set(stemmed, (docFreq.get(stemmed) || 0) + 1);
-      }
+    // Increment document frequency once per unique term per document
+    for (const term of allTerms) {
+      docFreq.set(term, (docFreq.get(term) || 0) + 1);
     }
   }
 
@@ -196,8 +194,10 @@ function searchPackages(packages, searchTerms, limit = 50) {
 
   // Prepare query terms (include stemmed versions)
   const queryTerms = [];
+  const rawQueryTerms = []; // Preserve untokenized terms for exact-name matching
   for (const t of searchTerms) {
     const lower = t.toLowerCase();
+    rawQueryTerms.push(lower); // Keep original for exact match (e.g., "data.table")
     const tokens = tokenize(lower);
     for (const token of tokens) {
       queryTerms.push(token);
@@ -208,6 +208,7 @@ function searchPackages(packages, searchTerms, limit = 50) {
 
   // Remove duplicate terms
   const uniqueQueryTerms = [...new Set(queryTerms)];
+  const uniqueRawTerms = [...new Set(rawQueryTerms)];
 
   const scored = packages.map(pkg => {
     const name = (pkg.package_name || '').toLowerCase();
@@ -229,7 +230,8 @@ function searchPackages(packages, searchTerms, limit = 50) {
     score += calculateFieldBM25(topicTokens, uniqueQueryTerms, docFreq, totalDocs, avgDocLength, FIELD_WEIGHTS.topics);
 
     // Bonus for exact package name match (important for direct lookups)
-    for (const term of uniqueQueryTerms) {
+    // Use raw terms to match dotted names like "data.table"
+    for (const term of uniqueRawTerms) {
       if (name === term) {
         score += 50; // Strong boost for exact name match
         break;
