@@ -490,25 +490,34 @@ exports.handler = async function(event, context) {
     const queryLower = query.trim().toLowerCase();
     const exactMatch = packages.find(p => p.package_name.toLowerCase() === queryLower);
 
-    // If exact match found, limit results further
-    const isExactPackageSearch = !!exactMatch;
-    const MAX_RESULTS = isExactPackageSearch ? 20 : 100;
-    const dbLimit = isExactPackageSearch ? 20 : 100;
+    // If exact match found, return just that package
+    // No need to add AI suggestions or DB matches for direct package lookups
+    if (exactMatch) {
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          packages: [exactMatch.package_name],
+          query: query.trim(),
+          ai_suggestions: aiPackages.length,
+          db_matches: 0,
+          exact_match: true,
+          usage: {
+            input_tokens: response.usage.input_tokens,
+            output_tokens: response.usage.output_tokens
+          }
+        })
+      };
+    }
 
-    // Search database using filtered terms + original query
+    // For non-exact matches, search database and combine results
+    const MAX_RESULTS = 100;
     const allTerms = [query.trim(), ...filteredTerms];
-    const dbMatches = searchPackages(packages, allTerms, dbLimit);
+    const dbMatches = searchPackages(packages, allTerms, MAX_RESULTS);
 
-    // Combine: exact match first, then Claude's suggestions, then DB matches
-    // Cap total results based on whether this is an exact package search
+    // Combine: Claude's suggestions first, then DB matches
     const packageSet = new Set();
     const finalResults = [];
-
-    // If exact package match, add it first
-    if (exactMatch) {
-      packageSet.add(exactMatch.package_name);
-      finalResults.push(exactMatch.package_name);
-    }
 
     // Add Claude's suggestions that exist in our database
     for (const name of aiPackages) {
