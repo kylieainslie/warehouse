@@ -94,13 +94,23 @@ function countTermFrequencies(tokens) {
 }
 
 /**
+ * Stem all tokens in an array.
+ * @param {string[]} tokens - Array of tokens to stem
+ * @returns {string[]} Array of stemmed tokens
+ */
+function stemTokens(tokens) {
+  return tokens.map(stemTerm);
+}
+
+/**
  * Build document frequency index for IDF calculation.
+ * Computes per-field average lengths for proper BM25F normalization.
  * @param {Array<Object>} packages - Array of package objects
- * @returns {{docFreq: Map<string, number>, avgDocLength: number, totalDocs: number}}
+ * @returns {{docFreq: Map<string, number>, avgFieldLengths: Object, totalDocs: number}}
  */
 function buildDocumentIndex(packages) {
   const docFreq = new Map();
-  let totalLength = 0;
+  const fieldLengths = { name: 0, title: 0, description: 0, topics: 0 };
 
   for (const pkg of packages) {
     const name = (pkg.package_name || '').toLowerCase();
@@ -108,26 +118,36 @@ function buildDocumentIndex(packages) {
     const description = (pkg.description || '').toLowerCase();
     const topics = Array.isArray(pkg.topics) ? pkg.topics.flat().join(' ').toLowerCase() : '';
 
-    const allText = `${name} ${title} ${description} ${topics}`;
-    const tokens = tokenize(allText);
-    totalLength += tokens.length;
+    // Track per-field lengths for BM25F normalization
+    const nameTokens = stemTokens(tokenize(name));
+    const titleTokens = stemTokens(tokenize(title));
+    const descTokens = stemTokens(tokenize(description));
+    const topicTokens = stemTokens(tokenize(topics));
 
-    // Collect unique terms including stemmed versions in a single Set
-    // This prevents double-counting when a document contains both a word and its stem
-    const uniqueTerms = new Set(tokens);
-    const allTerms = new Set(uniqueTerms);
-    for (const term of uniqueTerms) {
-      allTerms.add(stemTerm(term));
-    }
+    fieldLengths.name += nameTokens.length;
+    fieldLengths.title += titleTokens.length;
+    fieldLengths.description += descTokens.length;
+    fieldLengths.topics += topicTokens.length;
+
+    // Collect unique stemmed terms for document frequency
+    const allTokens = [...nameTokens, ...titleTokens, ...descTokens, ...topicTokens];
+    const uniqueTerms = new Set(allTokens);
+
     // Increment document frequency once per unique term per document
-    for (const term of allTerms) {
+    for (const term of uniqueTerms) {
       docFreq.set(term, (docFreq.get(term) || 0) + 1);
     }
   }
 
+  const n = packages.length || 1;
   return {
     docFreq,
-    avgDocLength: packages.length > 0 ? totalLength / packages.length : 1,
+    avgFieldLengths: {
+      name: fieldLengths.name / n,
+      title: fieldLengths.title / n,
+      description: fieldLengths.description / n,
+      topics: fieldLengths.topics / n
+    },
     totalDocs: packages.length
   };
 }
@@ -146,19 +166,21 @@ function calculateIDF(docFreq, totalDocs) {
 
 /**
  * Calculate BM25 score for a single field.
- * @param {string[]} fieldTokens - Tokens from the field
- * @param {string[]} queryTerms - Query terms to match
+ * @param {string[]} fieldTokens - Stemmed tokens from the field
+ * @param {string[]} queryTerms - Stemmed query terms to match
  * @param {Map<string, number>} docFreqMap - Document frequency for each term
  * @param {number} totalDocs - Total number of documents
- * @param {number} avgDocLength - Average document length
+ * @param {number} avgFieldLength - Average length for this specific field
  * @param {number} fieldWeight - Weight multiplier for this field
  * @returns {number} BM25 score for this field
  */
-function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgDocLength, fieldWeight) {
+function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgFieldLength, fieldWeight) {
   if (fieldTokens.length === 0) return 0;
 
   const termFreq = countTermFrequencies(fieldTokens);
   const docLength = fieldTokens.length;
+  // Use at least 1 for avgFieldLength to avoid division issues
+  const avgLen = avgFieldLength > 0 ? avgFieldLength : 1;
   let score = 0;
 
   for (const term of queryTerms) {
@@ -170,7 +192,7 @@ function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgD
 
     // BM25 term frequency saturation formula
     const tfSaturated = (tf * (BM25_K1 + 1)) /
-      (tf + BM25_K1 * (1 - BM25_B + BM25_B * (docLength / avgDocLength)));
+      (tf + BM25_K1 * (1 - BM25_B + BM25_B * (docLength / avgLen)));
 
     score += idf * tfSaturated;
   }
@@ -190,9 +212,9 @@ function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgD
  */
 function searchPackages(packages, searchTerms, limit = 50) {
   // Build document index for IDF calculation (cached per request)
-  const { docFreq, avgDocLength, totalDocs } = buildDocumentIndex(packages);
+  const { docFreq, avgFieldLengths, totalDocs } = buildDocumentIndex(packages);
 
-  // Prepare query terms (include stemmed versions)
+  // Prepare stemmed query terms for consistent matching with IDF
   const queryTerms = [];
   const rawQueryTerms = []; // Preserve untokenized terms for exact-name matching
   for (const t of searchTerms) {
@@ -200,9 +222,8 @@ function searchPackages(packages, searchTerms, limit = 50) {
     rawQueryTerms.push(lower); // Keep original for exact match (e.g., "data.table")
     const tokens = tokenize(lower);
     for (const token of tokens) {
-      queryTerms.push(token);
-      const stemmed = stemTerm(token);
-      if (stemmed !== token) queryTerms.push(stemmed);
+      // Only add stemmed versions - matches how IDF was computed
+      queryTerms.push(stemTerm(token));
     }
   }
 
@@ -216,18 +237,18 @@ function searchPackages(packages, searchTerms, limit = 50) {
     const description = (pkg.description || '').toLowerCase();
     const topics = Array.isArray(pkg.topics) ? pkg.topics.flat().join(' ').toLowerCase() : '';
 
-    // Tokenize each field
-    const nameTokens = tokenize(name);
-    const titleTokens = tokenize(title);
-    const descTokens = tokenize(description);
-    const topicTokens = tokenize(topics);
+    // Tokenize and stem each field (matches how IDF was computed)
+    const nameTokens = stemTokens(tokenize(name));
+    const titleTokens = stemTokens(tokenize(title));
+    const descTokens = stemTokens(tokenize(description));
+    const topicTokens = stemTokens(tokenize(topics));
 
-    // Calculate BM25 score for each field with weights
+    // Calculate BM25 score for each field with per-field average lengths
     let score = 0;
-    score += calculateFieldBM25(nameTokens, uniqueQueryTerms, docFreq, totalDocs, avgDocLength, FIELD_WEIGHTS.name);
-    score += calculateFieldBM25(titleTokens, uniqueQueryTerms, docFreq, totalDocs, avgDocLength, FIELD_WEIGHTS.title);
-    score += calculateFieldBM25(descTokens, uniqueQueryTerms, docFreq, totalDocs, avgDocLength, FIELD_WEIGHTS.description);
-    score += calculateFieldBM25(topicTokens, uniqueQueryTerms, docFreq, totalDocs, avgDocLength, FIELD_WEIGHTS.topics);
+    score += calculateFieldBM25(nameTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.name, FIELD_WEIGHTS.name);
+    score += calculateFieldBM25(titleTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.title, FIELD_WEIGHTS.title);
+    score += calculateFieldBM25(descTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.description, FIELD_WEIGHTS.description);
+    score += calculateFieldBM25(topicTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.topics, FIELD_WEIGHTS.topics);
 
     // Bonus for exact package name match (important for direct lookups)
     // Use raw terms to match dotted names like "data.table"
