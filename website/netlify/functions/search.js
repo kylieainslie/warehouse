@@ -424,6 +424,29 @@ exports.handler = async function(event, context) {
 
     console.log(`Processing search query: "${query.trim()}"`);
 
+    // Check for exact package name match BEFORE calling Claude API
+    // This saves API tokens for direct package lookups like "ggplot2" or "dplyr"
+    const queryLower = query.trim().toLowerCase();
+    const exactMatch = packages.find(p => p.package_name.toLowerCase() === queryLower);
+
+    if (exactMatch) {
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          packages: [exactMatch.package_name],
+          query: query.trim(),
+          ai_suggestions: 0,
+          db_matches: 0,
+          exact_match: true,
+          usage: {
+            input_tokens: 0,
+            output_tokens: 0
+          }
+        })
+      };
+    }
+
     // Ask Claude what packages can do this task
     const response = await anthropic.messages.create({
       model: config.models.fast,
@@ -491,31 +514,7 @@ exports.handler = async function(event, context) {
 
     console.log(`Filtered to ${filteredTerms.length} specific terms: ${filteredTerms.join(', ')}`);
 
-    // Check if query is an exact package name match
-    const queryLower = query.trim().toLowerCase();
-    const exactMatch = packages.find(p => p.package_name.toLowerCase() === queryLower);
-
-    // If exact match found, return just that package
-    // No need to add AI suggestions or DB matches for direct package lookups
-    if (exactMatch) {
-      return {
-        statusCode: 200,
-        headers,
-        body: JSON.stringify({
-          packages: [exactMatch.package_name],
-          query: query.trim(),
-          ai_suggestions: aiPackages.length,
-          db_matches: 0,
-          exact_match: true,
-          usage: {
-            input_tokens: response.usage.input_tokens,
-            output_tokens: response.usage.output_tokens
-          }
-        })
-      };
-    }
-
-    // For non-exact matches, search database and combine results
+    // Search database and combine results with Claude suggestions
     const MAX_RESULTS = 100;
     const allTerms = [query.trim(), ...filteredTerms];
     const dbMatches = searchPackages(packages, allTerms, MAX_RESULTS);
