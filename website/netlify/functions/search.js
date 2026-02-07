@@ -8,6 +8,10 @@ const { rateLimitMiddleware } = require('./rate-limiter');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
+// Cache for document index (computed once per cold start)
+// Structure: { docFreq, avgFieldLengths, totalDocs, packagesRef }
+// packagesRef stores array identity to detect when rebuild is needed
+let docIndexCache = null;
 
 /**
  * Load the package search index from the deployed site.
@@ -36,6 +40,18 @@ async function loadPackages() {
   }
 }
 
+// Words ending in -ing that should not be stemmed (not verb forms)
+const STEM_EXCEPTIONS = new Set([
+  // Common nouns
+  'string', 'ring', 'thing', 'something', 'nothing', 'everything', 'anything',
+  'king', 'spring', 'swing', 'bring', 'bling', 'sting', 'fling', 'wing',
+  'cling', 'sling', 'wring', 'offspring', 'underlying', 'during',
+  // Technical/domain terms
+  'warning', 'ceiling', 'lightning', 'sibling', 'building', 'ping',
+  // Package names that are nouns
+  'starling', 'viking', 'keyring', 'pudding', 'sterling'
+]);
+
 /**
  * Apply basic stemming by removing common English suffixes.
  * @param {string} term - Lowercase search term to stem
@@ -43,6 +59,8 @@ async function loadPackages() {
  */
 function stemTerm(term) {
   const t = term.toLowerCase();
+  // Check exception list for words that shouldn't be stemmed
+  if (STEM_EXCEPTIONS.has(t)) return t;
   // Remove trailing 's', 'es', 'ing', 'ed' for basic matching
   if (t.endsWith('ies')) return t.slice(0, -3) + 'y';
   if (t.endsWith('es') && t.length > 3) return t.slice(0, -2);
@@ -52,54 +70,232 @@ function stemTerm(term) {
   return t;
 }
 
+// BM25 parameters
+const BM25_K1 = 1.2;  // Term frequency saturation (1.2-2.0 typical)
+const BM25_B = 0.75;  // Document length normalization (0.75 typical)
+
+// Field weights for BM25 scoring
+const FIELD_WEIGHTS = {
+  name: 10.0,      // Package name matches are most important
+  title: 5.0,      // Title is highly relevant
+  topics: 3.0,     // Topics indicate functionality
+  description: 1.0 // Description provides context
+};
+
+// Minimum BM25 score threshold for inclusion in results
+// Higher threshold = fewer but more relevant results
+// With field weights (name:10, title:5, topics:3, desc:1), a score of 3.0
+// means at least a moderate match in title or multiple matches in description
+const MIN_SCORE_THRESHOLD = 3.0;
+
 /**
- * Score and rank packages against a set of search terms.
- * Scores are based on matches in package name, title, description, and topics.
+ * Tokenize text into lowercase words for BM25 scoring.
+ * @param {string} text - Text to tokenize
+ * @returns {string[]} Array of lowercase word tokens
+ */
+function tokenize(text) {
+  if (!text || typeof text !== 'string') return [];
+  return text.toLowerCase()
+    .replace(/[^\w\s]/g, ' ')
+    .split(/\s+/)
+    .filter(t => t.length > 0);
+}
+
+/**
+ * Count term frequencies in a token array.
+ * @param {string[]} tokens - Array of tokens
+ * @returns {Map<string, number>} Map of term to frequency count
+ */
+function countTermFrequencies(tokens) {
+  const freq = new Map();
+  for (const token of tokens) {
+    freq.set(token, (freq.get(token) || 0) + 1);
+  }
+  return freq;
+}
+
+/**
+ * Stem all tokens in an array.
+ * @param {string[]} tokens - Array of tokens to stem
+ * @returns {string[]} Array of stemmed tokens
+ */
+function stemTokens(tokens) {
+  return tokens.map(stemTerm);
+}
+
+/**
+ * Build document frequency index for IDF calculation.
+ * Computes per-field average lengths for proper BM25F normalization.
+ * @param {Array<Object>} packages - Array of package objects
+ * @returns {{docFreq: Map<string, number>, avgFieldLengths: Object, totalDocs: number}}
+ */
+function buildDocumentIndex(packages) {
+  const docFreq = new Map();
+  const fieldLengths = { name: 0, title: 0, description: 0, topics: 0 };
+
+  for (const pkg of packages) {
+    const name = (pkg.package_name || '').toLowerCase();
+    const title = (pkg.title || '').toLowerCase();
+    const description = (pkg.description || '').toLowerCase();
+    const topics = Array.isArray(pkg.topics) ? pkg.topics.flat().join(' ').toLowerCase() : '';
+
+    // Track per-field lengths for BM25F normalization
+    const nameTokens = stemTokens(tokenize(name));
+    const titleTokens = stemTokens(tokenize(title));
+    const descTokens = stemTokens(tokenize(description));
+    const topicTokens = stemTokens(tokenize(topics));
+
+    fieldLengths.name += nameTokens.length;
+    fieldLengths.title += titleTokens.length;
+    fieldLengths.description += descTokens.length;
+    fieldLengths.topics += topicTokens.length;
+
+    // Collect unique stemmed terms for document frequency
+    const allTokens = [...nameTokens, ...titleTokens, ...descTokens, ...topicTokens];
+    const uniqueTerms = new Set(allTokens);
+
+    // Increment document frequency once per unique term per document
+    for (const term of uniqueTerms) {
+      docFreq.set(term, (docFreq.get(term) || 0) + 1);
+    }
+  }
+
+  const n = packages.length || 1;
+  return {
+    docFreq,
+    avgFieldLengths: {
+      name: fieldLengths.name / n,
+      title: fieldLengths.title / n,
+      description: fieldLengths.description / n,
+      topics: fieldLengths.topics / n
+    },
+    totalDocs: packages.length
+  };
+}
+
+/**
+ * Calculate BM25 IDF (Inverse Document Frequency) for a term.
+ * Uses the Robertson-Sparck Jones IDF formula with smoothing.
+ * @param {number} docFreq - Number of documents containing the term
+ * @param {number} totalDocs - Total number of documents
+ * @returns {number} IDF score
+ */
+function calculateIDF(docFreq, totalDocs) {
+  // BM25 IDF formula with smoothing to avoid negative values
+  return Math.log(1 + (totalDocs - docFreq + 0.5) / (docFreq + 0.5));
+}
+
+/**
+ * Calculate BM25 score for a single field.
+ * @param {string[]} fieldTokens - Stemmed tokens from the field
+ * @param {string[]} queryTerms - Stemmed query terms to match
+ * @param {Map<string, number>} docFreqMap - Document frequency for each term
+ * @param {number} totalDocs - Total number of documents
+ * @param {number} avgFieldLength - Average length for this specific field
+ * @param {number} fieldWeight - Weight multiplier for this field
+ * @returns {number} BM25 score for this field
+ */
+function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgFieldLength, fieldWeight) {
+  if (fieldTokens.length === 0) return 0;
+
+  const termFreq = countTermFrequencies(fieldTokens);
+  const docLength = fieldTokens.length;
+  // Use at least 1 for avgFieldLength to avoid division issues
+  const avgLen = avgFieldLength > 0 ? avgFieldLength : 1;
+  let score = 0;
+
+  for (const term of queryTerms) {
+    const tf = termFreq.get(term) || 0;
+    if (tf === 0) continue;
+
+    const df = docFreqMap.get(term) || 0;
+    const idf = calculateIDF(df, totalDocs);
+
+    // BM25 term frequency saturation formula
+    const tfSaturated = (tf * (BM25_K1 + 1)) /
+      (tf + BM25_K1 * (1 - BM25_B + BM25_B * (docLength / avgLen)));
+
+    score += idf * tfSaturated;
+  }
+
+  return score * fieldWeight;
+}
+
+/**
+ * Score and rank packages using BM25 algorithm.
+ * BM25 provides better relevance ranking than simple term matching by
+ * considering term frequency saturation, inverse document frequency,
+ * and document length normalization.
  * @param {Array<Object>} packages - Array of package objects to search
  * @param {string[]} searchTerms - Terms to match against package metadata
  * @param {number} [limit=50] - Maximum number of results to return
  * @returns {string[]} Ranked array of matching package names
  */
 function searchPackages(packages, searchTerms, limit = 50) {
-  // Include both original terms and stemmed versions
-  const terms = [];
+  // Build document index for IDF calculation (cached across warm invocations)
+  // Check array identity, not just length, to avoid reusing stale index
+  if (!docIndexCache || docIndexCache.packagesRef !== packages) {
+    const index = buildDocumentIndex(packages);
+    docIndexCache = { ...index, packagesRef: packages };
+  }
+  const { docFreq, avgFieldLengths, totalDocs } = docIndexCache;
+
+  // Prepare stemmed query terms for consistent matching with IDF
+  const queryTerms = [];
+  const rawQueryTerms = []; // Preserve untokenized terms for exact-name matching
   for (const t of searchTerms) {
     const lower = t.toLowerCase();
-    terms.push(lower);
-    const stemmed = stemTerm(lower);
-    if (stemmed !== lower) terms.push(stemmed);
+    rawQueryTerms.push(lower); // Keep original for exact match (e.g., "data.table")
+    const tokens = tokenize(lower);
+    for (const token of tokens) {
+      // Only add stemmed versions - matches how IDF was computed
+      queryTerms.push(stemTerm(token));
+    }
   }
+
+  // Remove duplicate terms
+  const uniqueQueryTerms = [...new Set(queryTerms)];
+  const uniqueRawTerms = [...new Set(rawQueryTerms)];
 
   const scored = packages.map(pkg => {
     const name = (pkg.package_name || '').toLowerCase();
     const title = (pkg.title || '').toLowerCase();
     const description = (pkg.description || '').toLowerCase();
     const topics = Array.isArray(pkg.topics) ? pkg.topics.flat().join(' ').toLowerCase() : '';
-    const allText = `${name} ${title} ${description} ${topics}`;
 
+    // Tokenize and stem each field (matches how IDF was computed)
+    const nameTokens = stemTokens(tokenize(name));
+    const titleTokens = stemTokens(tokenize(title));
+    const descTokens = stemTokens(tokenize(description));
+    const topicTokens = stemTokens(tokenize(topics));
+
+    // Calculate BM25 score for each field with per-field average lengths
     let score = 0;
-    for (const term of terms) {
-      // Exact name match - highest priority
-      if (name === term) score += 100;
-      // Name contains term
-      else if (name.includes(term)) score += 40;
-      // Title contains term
-      if (title.includes(term)) score += 25;
-      // Description contains term
-      if (description.includes(term)) score += 10;
-      // Topics contain term
-      if (topics.includes(term)) score += 20;
+    score += calculateFieldBM25(nameTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.name, FIELD_WEIGHTS.name);
+    score += calculateFieldBM25(titleTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.title, FIELD_WEIGHTS.title);
+    score += calculateFieldBM25(descTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.description, FIELD_WEIGHTS.description);
+    score += calculateFieldBM25(topicTokens, uniqueQueryTerms, docFreq, totalDocs, avgFieldLengths.topics, FIELD_WEIGHTS.topics);
+
+    // Bonus for exact package name match (important for direct lookups)
+    // Use raw terms to match dotted names like "data.table"
+    for (const term of uniqueRawTerms) {
+      if (name === term) {
+        score += 50; // Strong boost for exact name match
+        break;
+      }
     }
 
-    // Boost by quality score
-    const quality = parseFloat(pkg.score);
-    if (!isNaN(quality) && quality > 0) score += quality / 10;
+    // Small boost from package quality score (clamped to 0-1 range)
+    const quality = Math.max(0, Math.min(1, parseFloat(pkg.score) || 0));
+    if (quality > 0) {
+      score += quality * 0.1;
+    }
 
     return { pkg, score };
   });
 
   return scored
-    .filter(s => s.score > 0)
+    .filter(s => s.score >= MIN_SCORE_THRESHOLD)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
     .map(s => s.pkg.package_name);
@@ -228,6 +424,29 @@ exports.handler = async function(event, context) {
 
     console.log(`Processing search query: "${query.trim()}"`);
 
+    // Check for exact package name match BEFORE calling Claude API
+    // This saves API tokens for direct package lookups like "ggplot2" or "dplyr"
+    const queryLower = query.trim().toLowerCase();
+    const exactMatch = packages.find(p => p.package_name.toLowerCase() === queryLower);
+
+    if (exactMatch) {
+      return {
+        statusCode: 200,
+        headers,
+        body: JSON.stringify({
+          packages: [exactMatch.package_name],
+          query: query.trim(),
+          ai_suggestions: 0,
+          db_matches: 0,
+          exact_match: true,
+          usage: {
+            input_tokens: 0,
+            output_tokens: 0
+          }
+        })
+      };
+    }
+
     // Ask Claude what packages can do this task
     const response = await anthropic.messages.create({
       model: config.models.fast,
@@ -260,18 +479,53 @@ exports.handler = async function(event, context) {
     }
 
     console.log(`Claude suggested: ${aiPackages.join(', ')}`);
-    console.log(`Search terms: ${searchTerms.join(', ')}`);
+    console.log(`Claude search terms: ${searchTerms.join(', ')}`);
 
-    // Search database using Claude's suggested terms + original query
-    const allTerms = [query.trim(), ...searchTerms];
-    const dbMatches = searchPackages(packages, allTerms, 200);
+    // Filter search terms to only the most specific ones using IDF
+    // Build document index if not cached (check array identity, not just length)
+    if (!docIndexCache || docIndexCache.packagesRef !== packages) {
+      const index = buildDocumentIndex(packages);
+      docIndexCache = { ...index, packagesRef: packages };
+    }
+    const { docFreq, totalDocs } = docIndexCache;
 
-    // Combine: Claude's suggestions first (if they exist in our DB), then DB matches
+    // Score each search term by average IDF of its tokens (higher = more specific)
+    const scoredTerms = searchTerms.map(term => {
+      const tokens = stemTokens(tokenize(term.toLowerCase()));
+      if (tokens.length === 0) return { term, score: 0 };
+
+      let totalIDF = 0;
+      for (const token of tokens) {
+        const df = docFreq.get(token) || 0;
+        totalIDF += calculateIDF(df, totalDocs);
+      }
+      // Average IDF per token - penalizes overly broad multi-word terms
+      return { term, score: totalIDF / tokens.length };
+    });
+
+    // Sort by specificity (highest IDF first) and take top 5 most specific terms
+    const MAX_SEARCH_TERMS = 5;
+    const MIN_IDF_THRESHOLD = 1.0; // Filter out very common terms
+    const filteredTerms = scoredTerms
+      .filter(t => t.score >= MIN_IDF_THRESHOLD)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, MAX_SEARCH_TERMS)
+      .map(t => t.term);
+
+    console.log(`Filtered to ${filteredTerms.length} specific terms: ${filteredTerms.join(', ')}`);
+
+    // Search database and combine results with Claude suggestions
+    const MAX_RESULTS = 100;
+    const allTerms = [query.trim(), ...filteredTerms];
+    const dbMatches = searchPackages(packages, allTerms, MAX_RESULTS);
+
+    // Combine: Claude's suggestions first, then DB matches
     const packageSet = new Set();
     const finalResults = [];
 
     // Add Claude's suggestions that exist in our database
     for (const name of aiPackages) {
+      if (finalResults.length >= MAX_RESULTS) break;
       const found = packages.find(p =>
         p.package_name.toLowerCase() === name.toLowerCase()
       );
@@ -283,6 +537,7 @@ exports.handler = async function(event, context) {
 
     // Add database search results
     for (const name of dbMatches) {
+      if (finalResults.length >= MAX_RESULTS) break;
       if (!packageSet.has(name)) {
         packageSet.add(name);
         finalResults.push(name);
@@ -317,3 +572,17 @@ exports.handler = async function(event, context) {
     };
   }
 };
+
+// Export helper functions and constants for testing
+module.exports.tokenize = tokenize;
+module.exports.stemTerm = stemTerm;
+module.exports.stemTokens = stemTokens;
+module.exports.countTermFrequencies = countTermFrequencies;
+module.exports.calculateIDF = calculateIDF;
+module.exports.buildDocumentIndex = buildDocumentIndex;
+module.exports.calculateFieldBM25 = calculateFieldBM25;
+module.exports.searchPackages = searchPackages;
+module.exports.BM25_K1 = BM25_K1;
+module.exports.BM25_B = BM25_B;
+module.exports.FIELD_WEIGHTS = FIELD_WEIGHTS;
+module.exports.MIN_SCORE_THRESHOLD = MIN_SCORE_THRESHOLD;
