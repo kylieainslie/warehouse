@@ -452,17 +452,63 @@ exports.handler = async function(event, context) {
     }
 
     console.log(`Claude suggested: ${aiPackages.join(', ')}`);
-    console.log(`Search terms: ${searchTerms.join(', ')}`);
+    console.log(`Claude search terms: ${searchTerms.join(', ')}`);
 
-    // Search database using Claude's suggested terms + original query
-    const allTerms = [query.trim(), ...searchTerms];
-    const dbMatches = searchPackages(packages, allTerms, 200);
+    // Filter search terms to only the most specific ones using IDF
+    // Build document index if not cached
+    if (!docIndexCache || docIndexCache.totalDocs !== packages.length) {
+      docIndexCache = buildDocumentIndex(packages);
+    }
+    const { docFreq, totalDocs } = docIndexCache;
 
-    // Combine: Claude's suggestions first (if they exist in our DB), then DB matches
-    // Cap total results at 200 to limit response size
-    const MAX_RESULTS = 200;
+    // Score each search term by average IDF of its tokens (higher = more specific)
+    const scoredTerms = searchTerms.map(term => {
+      const tokens = stemTokens(tokenize(term.toLowerCase()));
+      if (tokens.length === 0) return { term, score: 0 };
+
+      let totalIDF = 0;
+      for (const token of tokens) {
+        const df = docFreq.get(token) || 0;
+        totalIDF += calculateIDF(df, totalDocs);
+      }
+      // Average IDF per token - penalizes overly broad multi-word terms
+      return { term, score: totalIDF / tokens.length };
+    });
+
+    // Sort by specificity (highest IDF first) and take top 5 most specific terms
+    const MAX_SEARCH_TERMS = 5;
+    const MIN_IDF_THRESHOLD = 1.0; // Filter out very common terms
+    const filteredTerms = scoredTerms
+      .filter(t => t.score >= MIN_IDF_THRESHOLD)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, MAX_SEARCH_TERMS)
+      .map(t => t.term);
+
+    console.log(`Filtered to ${filteredTerms.length} specific terms: ${filteredTerms.join(', ')}`);
+
+    // Check if query is an exact package name match
+    const queryLower = query.trim().toLowerCase();
+    const exactMatch = packages.find(p => p.package_name.toLowerCase() === queryLower);
+
+    // If exact match found, limit results further
+    const isExactPackageSearch = !!exactMatch;
+    const MAX_RESULTS = isExactPackageSearch ? 20 : 100;
+    const dbLimit = isExactPackageSearch ? 20 : 100;
+
+    // Search database using filtered terms + original query
+    const allTerms = [query.trim(), ...filteredTerms];
+    const dbMatches = searchPackages(packages, allTerms, dbLimit);
+
+    // Combine: exact match first, then Claude's suggestions, then DB matches
+    // Cap total results based on whether this is an exact package search
     const packageSet = new Set();
     const finalResults = [];
+
+    // If exact package match, add it first
+    if (exactMatch) {
+      packageSet.add(exactMatch.package_name);
+      finalResults.push(exactMatch.package_name);
+    }
 
     // Add Claude's suggestions that exist in our database
     for (const name of aiPackages) {
