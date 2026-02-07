@@ -65,7 +65,10 @@ const FIELD_WEIGHTS = {
 };
 
 // Minimum BM25 score threshold for inclusion in results
-const MIN_SCORE_THRESHOLD = 0.5;
+// Higher threshold = fewer but more relevant results
+// With field weights (name:10, title:5, topics:3, desc:1), a score of 3.0
+// means at least a moderate match in title or multiple matches in description
+const MIN_SCORE_THRESHOLD = 3.0;
 
 /**
  * Tokenize text into lowercase words for BM25 scoring.
