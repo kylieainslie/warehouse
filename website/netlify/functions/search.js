@@ -9,6 +9,8 @@ const { rateLimitMiddleware } = require('./rate-limiter');
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
 // Cache for document index (computed once per cold start)
+// Structure: { docFreq, avgFieldLengths, totalDocs, packagesRef }
+// packagesRef stores array identity to detect when rebuild is needed
 let docIndexCache = null;
 
 /**
@@ -231,8 +233,10 @@ function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgF
  */
 function searchPackages(packages, searchTerms, limit = 50) {
   // Build document index for IDF calculation (cached across warm invocations)
-  if (!docIndexCache || docIndexCache.totalDocs !== packages.length) {
-    docIndexCache = buildDocumentIndex(packages);
+  // Check array identity, not just length, to avoid reusing stale index
+  if (!docIndexCache || docIndexCache.packagesRef !== packages) {
+    const index = buildDocumentIndex(packages);
+    docIndexCache = { ...index, packagesRef: packages };
   }
   const { docFreq, avgFieldLengths, totalDocs } = docIndexCache;
 
@@ -455,9 +459,10 @@ exports.handler = async function(event, context) {
     console.log(`Claude search terms: ${searchTerms.join(', ')}`);
 
     // Filter search terms to only the most specific ones using IDF
-    // Build document index if not cached
-    if (!docIndexCache || docIndexCache.totalDocs !== packages.length) {
-      docIndexCache = buildDocumentIndex(packages);
+    // Build document index if not cached (check array identity, not just length)
+    if (!docIndexCache || docIndexCache.packagesRef !== packages) {
+      const index = buildDocumentIndex(packages);
+      docIndexCache = { ...index, packagesRef: packages };
     }
     const { docFreq, totalDocs } = docIndexCache;
 
