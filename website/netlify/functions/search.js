@@ -40,9 +40,14 @@ async function loadPackages() {
 
 // Words ending in -ing that should not be stemmed (not verb forms)
 const STEM_EXCEPTIONS = new Set([
-  'string', 'ring', 'thing', 'something', 'nothing', 'everything',
-  'king', 'spring', 'swing', 'bring', 'bling', 'sting', 'fling',
-  'cling', 'sling', 'wring', 'offspring', 'underlying'
+  // Common nouns
+  'string', 'ring', 'thing', 'something', 'nothing', 'everything', 'anything',
+  'king', 'spring', 'swing', 'bring', 'bling', 'sting', 'fling', 'wing',
+  'cling', 'sling', 'wring', 'offspring', 'underlying', 'during',
+  // Technical/domain terms
+  'warning', 'ceiling', 'lightning', 'sibling', 'building', 'ping',
+  // Package names that are nouns
+  'starling', 'viking', 'keyring', 'pudding', 'sterling'
 ]);
 
 /**
