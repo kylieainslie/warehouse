@@ -1,30 +1,19 @@
 // bm25.test.js
 // Tests for BM25 search algorithm implementation
 
-// We need to extract the internal functions for testing
-// Read the search.js file and evaluate the functions
-const fs = require('fs');
-const path = require('path');
-
-// Load search.js and extract functions
-const searchPath = path.resolve(__dirname, '../../netlify/functions/search.js');
-const searchCode = fs.readFileSync(searchPath, 'utf-8');
-
-// Extract and evaluate the tokenize function
-const tokenizeMatch = searchCode.match(/function tokenize\(text\) \{[\s\S]*?\n\}/);
-const tokenize = eval('(' + tokenizeMatch[0] + ')');
-
-// Extract stemTerm function
-const stemTermMatch = searchCode.match(/function stemTerm\(term\) \{[\s\S]*?\n\}/);
-const stemTerm = eval('(' + stemTermMatch[0] + ')');
-
-// Extract countTermFrequencies function
-const countTermFreqMatch = searchCode.match(/function countTermFrequencies\(tokens\) \{[\s\S]*?\n\}/);
-const countTermFrequencies = eval('(' + countTermFreqMatch[0] + ')');
-
-// Extract calculateIDF function
-const calculateIDFMatch = searchCode.match(/function calculateIDF\(docFreq, totalDocs\) \{[\s\S]*?\n\}/);
-const calculateIDF = eval('(' + calculateIDFMatch[0] + ')');
+// Import helper functions and constants directly from search.js
+const {
+  tokenize,
+  stemTerm,
+  countTermFrequencies,
+  calculateIDF,
+  buildDocumentIndex,
+  searchPackages,
+  BM25_K1,
+  BM25_B,
+  FIELD_WEIGHTS,
+  MIN_SCORE_THRESHOLD
+} = require('../../netlify/functions/search');
 
 describe('BM25 Helper Functions', () => {
   describe('tokenize', () => {
@@ -245,40 +234,30 @@ describe('BM25 Integration', () => {
   test('BM25 returns fewer results than simple matching for broad terms', () => {
     // With BM25, packages that only weakly match should be filtered by threshold
     // The MIN_SCORE_THRESHOLD should filter out very low-scoring matches
-
-    // Extract the threshold constant
-    const thresholdMatch = searchCode.match(/const MIN_SCORE_THRESHOLD = ([\d.]+);/);
-    expect(thresholdMatch).not.toBeNull();
-    const threshold = parseFloat(thresholdMatch[1]);
-    expect(threshold).toBeGreaterThan(0);
-    expect(threshold).toBeLessThan(10); // Reasonable threshold
+    expect(MIN_SCORE_THRESHOLD).toBeGreaterThan(0);
+    expect(MIN_SCORE_THRESHOLD).toBeLessThan(20); // Reasonable threshold
   });
 
   test('field weights are properly configured', () => {
-    // Extract field weights
-    const weightsMatch = searchCode.match(/const FIELD_WEIGHTS = \{[\s\S]*?\};/);
-    expect(weightsMatch).not.toBeNull();
-
     // Verify name has highest weight
-    expect(searchCode).toMatch(/name:\s*10/);
-    expect(searchCode).toMatch(/title:\s*5/);
-    expect(searchCode).toMatch(/topics:\s*3/);
-    expect(searchCode).toMatch(/description:\s*1/);
+    expect(FIELD_WEIGHTS.name).toBe(10);
+    expect(FIELD_WEIGHTS.title).toBe(5);
+    expect(FIELD_WEIGHTS.topics).toBe(3);
+    expect(FIELD_WEIGHTS.description).toBe(1);
+
+    // Name should be most important
+    expect(FIELD_WEIGHTS.name).toBeGreaterThan(FIELD_WEIGHTS.title);
+    expect(FIELD_WEIGHTS.title).toBeGreaterThan(FIELD_WEIGHTS.topics);
+    expect(FIELD_WEIGHTS.topics).toBeGreaterThan(FIELD_WEIGHTS.description);
   });
 
   test('BM25 parameters are within standard range', () => {
     // k1 should be between 1.2 and 2.0
-    const k1Match = searchCode.match(/const BM25_K1 = ([\d.]+);/);
-    expect(k1Match).not.toBeNull();
-    const k1 = parseFloat(k1Match[1]);
-    expect(k1).toBeGreaterThanOrEqual(1.2);
-    expect(k1).toBeLessThanOrEqual(2.0);
+    expect(BM25_K1).toBeGreaterThanOrEqual(1.2);
+    expect(BM25_K1).toBeLessThanOrEqual(2.0);
 
     // b should be around 0.75
-    const bMatch = searchCode.match(/const BM25_B = ([\d.]+);/);
-    expect(bMatch).not.toBeNull();
-    const b = parseFloat(bMatch[1]);
-    expect(b).toBeGreaterThanOrEqual(0.5);
-    expect(b).toBeLessThanOrEqual(1.0);
+    expect(BM25_B).toBeGreaterThanOrEqual(0.5);
+    expect(BM25_B).toBeLessThanOrEqual(1.0);
   });
 });

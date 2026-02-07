@@ -8,6 +8,8 @@ const { rateLimitMiddleware } = require('./rate-limiter');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
+// Cache for document index (computed once per cold start)
+let docIndexCache = null;
 
 /**
  * Load the package search index from the deployed site.
@@ -36,6 +38,13 @@ async function loadPackages() {
   }
 }
 
+// Words ending in -ing that should not be stemmed (not verb forms)
+const STEM_EXCEPTIONS = new Set([
+  'string', 'ring', 'thing', 'something', 'nothing', 'everything',
+  'king', 'spring', 'swing', 'bring', 'bling', 'sting', 'fling',
+  'cling', 'sling', 'wring', 'offspring', 'underlying'
+]);
+
 /**
  * Apply basic stemming by removing common English suffixes.
  * @param {string} term - Lowercase search term to stem
@@ -43,6 +52,8 @@ async function loadPackages() {
  */
 function stemTerm(term) {
   const t = term.toLowerCase();
+  // Check exception list for words that shouldn't be stemmed
+  if (STEM_EXCEPTIONS.has(t)) return t;
   // Remove trailing 's', 'es', 'ing', 'ed' for basic matching
   if (t.endsWith('ies')) return t.slice(0, -3) + 'y';
   if (t.endsWith('es') && t.length > 3) return t.slice(0, -2);
@@ -214,8 +225,11 @@ function calculateFieldBM25(fieldTokens, queryTerms, docFreqMap, totalDocs, avgF
  * @returns {string[]} Ranked array of matching package names
  */
 function searchPackages(packages, searchTerms, limit = 50) {
-  // Build document index for IDF calculation (cached per request)
-  const { docFreq, avgFieldLengths, totalDocs } = buildDocumentIndex(packages);
+  // Build document index for IDF calculation (cached across warm invocations)
+  if (!docIndexCache || docIndexCache.totalDocs !== packages.length) {
+    docIndexCache = buildDocumentIndex(packages);
+  }
+  const { docFreq, avgFieldLengths, totalDocs } = docIndexCache;
 
   // Prepare stemmed query terms for consistent matching with IDF
   const queryTerms = [];
@@ -262,9 +276,9 @@ function searchPackages(packages, searchTerms, limit = 50) {
       }
     }
 
-    // Small boost from package quality score
-    const quality = parseFloat(pkg.score);
-    if (!isNaN(quality) && quality > 0) {
+    // Small boost from package quality score (clamped to 0-1 range)
+    const quality = Math.max(0, Math.min(1, parseFloat(pkg.score) || 0));
+    if (quality > 0) {
       score += quality * 0.1;
     }
 
@@ -440,11 +454,14 @@ exports.handler = async function(event, context) {
     const dbMatches = searchPackages(packages, allTerms, 200);
 
     // Combine: Claude's suggestions first (if they exist in our DB), then DB matches
+    // Cap total results at 200 to limit response size
+    const MAX_RESULTS = 200;
     const packageSet = new Set();
     const finalResults = [];
 
     // Add Claude's suggestions that exist in our database
     for (const name of aiPackages) {
+      if (finalResults.length >= MAX_RESULTS) break;
       const found = packages.find(p =>
         p.package_name.toLowerCase() === name.toLowerCase()
       );
@@ -456,6 +473,7 @@ exports.handler = async function(event, context) {
 
     // Add database search results
     for (const name of dbMatches) {
+      if (finalResults.length >= MAX_RESULTS) break;
       if (!packageSet.has(name)) {
         packageSet.add(name);
         finalResults.push(name);
@@ -490,3 +508,17 @@ exports.handler = async function(event, context) {
     };
   }
 };
+
+// Export helper functions and constants for testing
+module.exports.tokenize = tokenize;
+module.exports.stemTerm = stemTerm;
+module.exports.stemTokens = stemTokens;
+module.exports.countTermFrequencies = countTermFrequencies;
+module.exports.calculateIDF = calculateIDF;
+module.exports.buildDocumentIndex = buildDocumentIndex;
+module.exports.calculateFieldBM25 = calculateFieldBM25;
+module.exports.searchPackages = searchPackages;
+module.exports.BM25_K1 = BM25_K1;
+module.exports.BM25_B = BM25_B;
+module.exports.FIELD_WEIGHTS = FIELD_WEIGHTS;
+module.exports.MIN_SCORE_THRESHOLD = MIN_SCORE_THRESHOLD;
