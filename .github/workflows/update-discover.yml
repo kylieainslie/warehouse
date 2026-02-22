@@ -2,8 +2,8 @@ name: Update Discover Section
 
 on:
   schedule:
-    # Run daily at 5 AM UTC
-    - cron: '0 5 * * *'
+    # Run weekly on Wednesday at 5 AM UTC
+    - cron: '0 5 * * 3'
   workflow_dispatch:
     # Allow manual trigger
 
