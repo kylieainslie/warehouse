@@ -1,0 +1,49 @@
+name: Update Node.js LTS version
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'  # Monthly on the 1st
+  workflow_dispatch:
+
+jobs:
+  update-node:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get latest Node.js LTS major version
+        id: lts
+        run: |
+          VERSION=$(curl -s https://nodejs.org/dist/index.json | \
+            jq -r '[.[] | select(.lts != false)] | max_by(.date) | .version' | \
+            sed 's/v\([0-9]*\).*/\1/')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Get current Node.js version from netlify.toml
+        id: current
+        run: |
+          VERSION=$(grep 'NODE_VERSION' website/netlify.toml | grep -oE '"[0-9]+"' | tr -d '"')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Update netlify.toml
+        if: steps.lts.outputs.version != steps.current.outputs.version
+        run: |
+          sed -i 's/NODE_VERSION = "[0-9]*"/NODE_VERSION = "${{ steps.lts.outputs.version }}"/' website/netlify.toml
+
+      - name: Open pull request
+        if: steps.lts.outputs.version != steps.current.outputs.version
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/node-v${{ steps.lts.outputs.version }}
+          commit-message: "chore: update Node.js to v${{ steps.lts.outputs.version }} LTS"
+          title: "chore: update Node.js to v${{ steps.lts.outputs.version }} LTS"
+          body: |
+            Updates `NODE_VERSION` in `website/netlify.toml` from v${{ steps.current.outputs.version }} to v${{ steps.lts.outputs.version }} (latest LTS).
+
+            Check the [Node.js release schedule](https://nodejs.org/en/about/previous-releases) for details.
+          labels: dependencies

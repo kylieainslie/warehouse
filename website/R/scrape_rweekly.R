@@ -13,8 +13,8 @@ RWEEKLY_BRANCH <- "gh-pages"
 POSTS_PATH <- "_posts"
 OUTPUT_FILE <- "data/rweekly-packages.json"
 
-# Number of recent weeks to fetch
-NUM_WEEKS <- 12
+# Number of recent weeks to fetch (2 = current + 1 safety buffer in case R Weekly publishes late)
+NUM_WEEKS <- 2
 
 #' Get list of recent R Weekly post files from GitHub
 get_post_files <- function(num_posts = NUM_WEEKS) {
