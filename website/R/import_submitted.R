@@ -23,12 +23,19 @@ import_submitted_packages <- function(
 
   submitted <- fromJSON(submitted_path)
 
-  if (length(submitted$packages) == 0) {
+  # fromJSON returns a data frame when parsing an array of objects; convert to
+  # a list of rows so that pkg$field access works correctly in the loop below.
+  packages <- submitted$packages
+  if (is.data.frame(packages)) {
+    packages <- lapply(seq_len(nrow(packages)), function(i) as.list(packages[i, ]))
+  }
+
+  if (length(packages) == 0) {
     message("No submitted packages to import")
     return(invisible(0))
   }
 
-  message(sprintf("Importing %d submitted packages...", length(submitted$packages)))
+  message(sprintf("Importing %d submitted packages...", length(packages)))
 
   con <- dbConnect(RSQLite::SQLite(), db_path)
   on.exit(dbDisconnect(con))
@@ -36,7 +43,7 @@ import_submitted_packages <- function(
   inserted <- 0
   updated <- 0
 
-  for (pkg in submitted$packages) {
+  for (pkg in packages) {
     # Check if package exists
     existing <- dbGetQuery(con, "SELECT id FROM packages WHERE package_name = ?",
                            params = list(pkg$package_name))

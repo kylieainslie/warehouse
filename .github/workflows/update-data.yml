@@ -1,16 +1,15 @@
-name: Update Packages
+name: Update Data
 
 on:
   schedule:
     # Run weekly on Sunday at 2 AM UTC
     - cron: '0 2 * * 0'
   workflow_dispatch:
-    # Allow manual trigger
 
 jobs:
-  update-packages:
+  update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 120  # Allow 2 hours for comprehensive scraping
+    timeout-minutes: 150
 
     defaults:
       run:
@@ -32,7 +31,9 @@ jobs:
 
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("httr2", "jsonlite", "dplyr", "purrr", "DBI", "RSQLite", "tibble"))'
+          Rscript -e 'install.packages(c("httr2", "jsonlite", "dplyr", "purrr", "DBI", "RSQLite", "tibble", "stringr", "googlesheets4", "gargle"))'
+
+      # --- Packages ---
 
       - name: Scrape packages from all sources
         env:
@@ -52,6 +53,36 @@ jobs:
         run: |
           Rscript -e 'source("R/export_json.R"); export_all()'
 
+      # --- Discover ---
+
+      - name: Fetch discover data
+        run: |
+          Rscript -e 'source("R/fetch_discover.R"); run_discover_fetch()'
+
+      - name: Fetch R Weekly packages
+        run: |
+          Rscript -e 'source("R/scrape_rweekly.R"); scrape_rweekly()'
+
+      # --- Reviews ---
+
+      - name: Create service account credentials file
+        env:
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+        run: |
+          echo "$GOOGLE_SERVICE_ACCOUNT_KEY" > /tmp/service-account.json
+
+      - name: Fetch reviews from Google Sheets
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/service-account.json
+        run: |
+          Rscript scripts/fetch_reviews.R "${{ secrets.GOOGLE_SHEET_ID }}"
+
+      - name: Clean up credentials
+        if: always()
+        run: rm -f /tmp/service-account.json
+
+      # --- Commit everything at once ---
+
       - name: Check for changes
         id: changes
         run: |
@@ -67,11 +98,9 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "Update packages from scraped sources
+          git commit -m "Weekly data update
 
-          Weekly automated update with discovery-based scraping:
-          - R-universe priority universes + topic search
-          - GitHub topic search + organization search
-          - CRAN Task Views + keyword categorization
-          - Bioconductor packages"
+          - Scraped packages from all sources
+          - Updated discover section and R Weekly packages
+          - Updated reviews from Google Sheets"
           git push
