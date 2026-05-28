@@ -1,0 +1,99 @@
+name: Update Claude model versions
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'  # Monthly on the 1st
+  workflow_dispatch:
+
+jobs:
+  update-models:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get current models from config.js
+        id: current
+        run: |
+          FAST=$(sed -n "s/.*fast: '\([^']*\)'.*/\1/p" website/netlify/functions/config.js)
+          BALANCED=$(sed -n "s/.*balanced: '\([^']*\)'.*/\1/p" website/netlify/functions/config.js | head -1)
+          echo "fast=$FAST" >> "$GITHUB_OUTPUT"
+          echo "balanced=$BALANCED" >> "$GITHUB_OUTPUT"
+
+      - name: Get latest models from Anthropic API
+        id: latest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          MODELS=$(curl -sf https://api.anthropic.com/v1/models \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01")
+
+          # Latest Haiku: most recently created, excluding aliases/previews
+          LATEST_HAIKU=$(echo "$MODELS" | jq -r '
+            [.data[]
+              | select(.id | test("haiku"; "i"))
+              | select(.id | test("latest|preview"; "i") | not)]
+            | sort_by(.created_at) | last | .id // empty')
+
+          # Latest Sonnet: same approach
+          LATEST_SONNET=$(echo "$MODELS" | jq -r '
+            [.data[]
+              | select(.id | test("sonnet"; "i"))
+              | select(.id | test("latest|preview"; "i") | not)]
+            | sort_by(.created_at) | last | .id // empty')
+
+          if [ -z "$LATEST_HAIKU" ] || [ -z "$LATEST_SONNET" ]; then
+            echo "ERROR: Could not determine latest models from API response:"
+            echo "$MODELS"
+            exit 1
+          fi
+
+          echo "haiku=$LATEST_HAIKU" >> "$GITHUB_OUTPUT"
+          echo "sonnet=$LATEST_SONNET" >> "$GITHUB_OUTPUT"
+
+      - name: Check if update is needed
+        id: check
+        run: |
+          if [ "${{ steps.current.outputs.fast }}" != "${{ steps.latest.outputs.haiku }}" ] || \
+             [ "${{ steps.current.outputs.balanced }}" != "${{ steps.latest.outputs.sonnet }}" ]; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+            echo "Models are already up to date — no PR needed."
+          fi
+
+      - name: Update config.js
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          sed -i "s|fast: '[^']*'|fast: '${{ steps.latest.outputs.haiku }}'|" \
+            website/netlify/functions/config.js
+          sed -i "s|balanced: '[^']*'|balanced: '${{ steps.latest.outputs.sonnet }}'|" \
+            website/netlify/functions/config.js
+          sed -i "s|powerful: '[^']*'|powerful: '${{ steps.latest.outputs.sonnet }}'|" \
+            website/netlify/functions/config.js
+
+      - name: Open pull request
+        if: steps.check.outputs.needed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/claude-models
+          commit-message: "chore: update Claude model versions to latest"
+          title: "chore: update Claude model versions"
+          body: |
+            Updates model versions in `website/netlify/functions/config.js`:
+
+            | Role | Before | After |
+            |------|--------|-------|
+            | `fast` (search) | `${{ steps.current.outputs.fast }}` | `${{ steps.latest.outputs.haiku }}` |
+            | `balanced` / `powerful` (chat) | `${{ steps.current.outputs.balanced }}` | `${{ steps.latest.outputs.sonnet }}` |
+
+            Source: [Anthropic models API](https://docs.anthropic.com/en/api/models-list)
+
+            ---
+            > **Note:** Review the [model deprecation page](https://docs.anthropic.com/en/docs/resources/model-deprecations) and check for any breaking changes before merging.
+          labels: dependencies
