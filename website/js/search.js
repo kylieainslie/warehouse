@@ -132,7 +132,29 @@ const queryExpansions = {
   'visualization': 'ggplot2 plotly highcharter ggiraph',
   'visualisation': 'ggplot2 plotly highcharter ggiraph',
   'chart': 'ggplot2 plotly highcharter echarts4r',
-  'ggplot': 'ggplot2'
+  'ggplot': 'ggplot2',
+
+  // Multi-word phrases — matched as phrases before single-word keys apply
+  'random forest': 'randomForest ranger caret tidymodels',
+  'time series': 'forecast fable xts zoo tseries tsibble',
+  'mixed effects': 'lme4 nlme lmerTest brms glmmTMB',
+  'linear regression': 'lm broom tidymodels glm',
+  'logistic regression': 'glm broom tidymodels logistf',
+  'principal component': 'FactoMineR factoextra prcomp stats',
+  'data wrangling': 'dplyr tidyr data.table dtplyr',
+  'neural network': 'torch keras tensorflow nnet neuralnet',
+  'natural language': 'tidytext quanteda tm text2vec',
+  'missing data': 'mice Amelia missForest naniar VIM',
+
+  // Single-word vocabulary gaps
+  'wrangling': 'dplyr tidyr data.table dtplyr',
+  'forecasting': 'forecast fable xts zoo tsibble',
+  'bayesian': 'brms rstan rstanarm cmdstanr bayesplot',
+  'clustering': 'cluster factoextra mclust dbscan kmeans',
+  'regression': 'lm glm broom tidymodels lme4',
+  'imputation': 'mice Amelia missForest VIM',
+  'survival': 'survminer flexsurv KMsurv survcomp',
+  'network': 'igraph ggraph visNetwork networkD3'
 };
 
 // Expand abbreviations in search query
@@ -296,7 +318,7 @@ function searchPackages(query) {
   const scoreMap = new Map();
   if (fuse) {
     for (const token of searchTokens) {
-      for (const r of fuse.search(token, { limit: 30 })) {
+      for (const r of fuse.search(token, { limit: 50 })) {
         const id = r.item.id;
         if (!scoreMap.has(id) || r.score < scoreMap.get(id).score) {
           scoreMap.set(id, r);
