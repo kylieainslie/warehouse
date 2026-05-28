@@ -123,7 +123,16 @@ const queryExpansions = {
   'crosstab': 'cross tabulation contingency two-way frequency',
   'contingency': 'crosstab categorical frequency table vcd',
   'mosaic': 'mosaic plot vcd ggmosaic categorical',
-  'categorical': 'factor discrete nominal ordinal contingency frequency'
+  'categorical': 'factor discrete nominal ordinal contingency frequency',
+
+  // Visualization
+  'interactive': 'plotly ggiraph highcharter echarts4r dygraphs',
+  'plotting': 'ggplot2 ggvis lattice',
+  'plot': 'ggplot2 ggvis lattice',
+  'visualization': 'ggplot2 plotly highcharter ggiraph',
+  'visualisation': 'ggplot2 plotly highcharter ggiraph',
+  'chart': 'ggplot2 plotly highcharter echarts4r',
+  'ggplot': 'ggplot2'
 };
 
 // Expand abbreviations in search query
@@ -271,13 +280,31 @@ function searchPackages(query) {
     });
   }
 
-  // For general queries, use Fuse.js fuzzy search
-  // Expand abbreviations (e.g., "LLM" -> "LLM large language model") for better matching
+  // For general queries, expand abbreviations then search one token at a time.
+  // Fuse.js uses AND matching for multi-word queries, so splitting into tokens
+  // gives OR-style behaviour: packages matching any term are included.
   const expandedQuery = expandQuery(query.trim());
-  let fuseResults = [];
+  const originalTokens = query.trim().toLowerCase().split(/\s+/).filter(t => t.length >= 2);
+  const allExpandedTokens = expandedQuery.toLowerCase().split(/\s+/).filter(t => t.length >= 2);
+  // Original tokens first, then expansion tokens (deduped), capped at 12 total
+  const searchTokens = [
+    ...originalTokens,
+    ...allExpandedTokens.filter(t => !originalTokens.includes(t))
+  ].filter((t, i, arr) => arr.indexOf(t) === i).slice(0, 12);
+
+  // Run one Fuse.js search per token; keep the best (lowest) score per package
+  const scoreMap = new Map();
   if (fuse) {
-    fuseResults = fuse.search(expandedQuery, { limit: 50 });
+    for (const token of searchTokens) {
+      for (const r of fuse.search(token, { limit: 30 })) {
+        const id = r.item.id;
+        if (!scoreMap.has(id) || r.score < scoreMap.get(id).score) {
+          scoreMap.set(id, r);
+        }
+      }
+    }
   }
+  let fuseResults = [...scoreMap.values()].sort((a, b) => a.score - b.score);
 
   // Combine: direct matches first, then fuse results (avoiding duplicates)
   const directIds = new Set(directMatches.map(p => p.id));
@@ -391,7 +418,7 @@ let currentResultsShown = 0;
 let allSearchResults = [];
 
 // Render search results to DOM
-function renderSearchResults(results, containerId = 'search-results') {
+function renderSearchResults(results, containerId = 'search-results', notice = '') {
   const container = document.getElementById(containerId);
   if (!container) return;
 
@@ -463,6 +490,7 @@ function renderSearchResults(results, containerId = 'search-results') {
         <p class="results-count">Found ${results.length} package${results.length !== 1 ? 's' : ''}</p>
         ${compareButtonHtml}
       </div>
+      ${notice ? `<p class="search-fallback-notice"><i class="bi bi-exclamation-circle"></i> ${escapeHtml(notice)}</p>` : ''}
       ${categorySuggestionHtml}
       <div class="package-list" id="package-list">
         ${initialResults.map(pkg => renderPackageCard(pkg)).join('')}
@@ -806,13 +834,12 @@ async function handleSearch() {
     } else {
       // Fall back to local search if AI returns nothing
       const localResults = searchPackages(query);
-      renderSearchResults(localResults);
+      renderSearchResults(localResults, 'search-results', 'AI search unavailable — showing local results');
     }
   } catch (error) {
     console.warn('AI search failed, using local search:', error);
-    // Fall back to local Fuse.js search
     const localResults = searchPackages(query);
-    renderSearchResults(localResults);
+    renderSearchResults(localResults, 'search-results', 'AI search unavailable — showing local results');
   } finally {
     isSearching = false;
   }
