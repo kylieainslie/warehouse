@@ -36,7 +36,8 @@ const queryExpansions = {
   // AI/ML
   'llm': 'large language model chatgpt openai',
   'llms': 'large language models chatgpt openai',
-  'ml': 'machine learning predictive classification',
+  'ml': 'caret tidymodels machine learning predictive classification',
+  'machine learning': 'caret tidymodels mlr3 xgboost ranger',
   'ai': 'artificial intelligence machine learning',
   'dl': 'deep learning neural network torch keras',
   'nn': 'neural network deep learning',
@@ -65,6 +66,8 @@ const queryExpansions = {
 
   // Epidemiology/Biostatistics
   'epi': 'epidemiology epidemic outbreak',
+  'reproduction': 'EpiEstim EpiNow2 epitools R0',
+  'reproduction number': 'EpiEstim EpiNow2 epitools incidence2',
   'rr': 'relative risk risk ratio',
   'or': 'odds ratio logistic',
   'hr': 'hazard ratio survival cox',
@@ -154,7 +157,32 @@ const queryExpansions = {
   'regression': 'lm glm broom tidymodels lme4',
   'imputation': 'mice Amelia missForest VIM',
   'survival': 'survminer flexsurv KMsurv survcomp',
-  'network': 'igraph ggraph visNetwork networkD3'
+  'network': 'igraph ggraph visNetwork networkD3',
+
+  // Visualization vocabulary gaps
+  'charts': 'ggplot2 plotly highcharter echarts4r',
+  'graphs': 'ggplot2 plotly igraph networkD3',
+
+  // ML vocabulary gaps
+  'gradient boosting': 'xgboost gbm lightgbm catboost',
+  'boosting': 'xgboost gbm lightgbm catboost',
+  'support vector machine': 'e1071 kernlab svmpath',
+  'deep learning': 'torch keras tensorflow reticulate',
+
+  // Spatial/geographic vocabulary gaps
+  'spatial analysis': 'sf terra raster tmap stars',
+  'spatial': 'sf terra raster tmap stars',
+  'geographic': 'leaflet tmap sf terra maps',
+  'static': 'ggplot2 lattice graphics',
+
+  // Genomics/bioinformatics vocabulary gaps
+  'rna sequencing': 'DESeq2 edgeR limma Seurat',
+  'rna': 'DESeq2 edgeR limma Seurat',
+  'sequencing': 'DESeq2 edgeR Bioconductor',
+
+  // Clinical vocabulary gaps
+  'clinical trials': 'survival lme4 survminer coxme',
+  'clinical': 'survival survminer lme4 coxme'
 };
 
 // Expand abbreviations in search query
@@ -270,28 +298,19 @@ function searchPackages(query) {
 
   const queryLower = query.trim().toLowerCase();
 
-  // Check for exact name match first
-  const exactMatch = searchIndex.packages.find(pkg =>
-    (pkg.package_name || '').toLowerCase() === queryLower
-  );
-
-  // If exact match found, return just that package
-  if (exactMatch) {
-    return [{
-      ...exactMatch,
-      searchScore: 0,
-      reviewStats: reviewStats[exactMatch.package_name] || null
-    }];
-  }
-
-  // Find partial name matches (query is part of name or name is part of query)
+  // Find packages whose name contains the query as a substring.
+  // Only use name.includes(query), not the reverse — queryLower.includes(name) catches
+  // false positives (e.g. 2-letter packages "ca", "la" appear inside "ml classification").
   const directMatches = searchIndex.packages.filter(pkg => {
     const name = (pkg.package_name || '').toLowerCase();
-    return name.includes(queryLower) || queryLower.includes(name);
+    return name.includes(queryLower);
   });
 
-  // If we have direct name matches, return only those (limited)
-  if (directMatches.length > 0 && directMatches.length <= 10) {
+  // For single-word queries with 1–10 name matches, return those directly.
+  // For multi-word queries (e.g. "maps geographic"), skip this shortcut: a package
+  // named "maps" is not what the user wants when asking about geographic mapping.
+  const queryWordCount = query.trim().split(/\s+/).filter(t => t.length >= 2).length;
+  if (directMatches.length > 0 && directMatches.length <= 10 && queryWordCount === 1) {
     return directMatches.map(pkg => ({
       ...pkg,
       searchScore: 0,
@@ -314,10 +333,13 @@ function searchPackages(query) {
     ...allExpandedTokens.filter(t => !originalTokens.includes(t))
   ].filter((t, i, arr) => arr.indexOf(t) === i).slice(0, 12);
 
-  // Run one Fuse.js search per token; keep the best (lowest) score per package
+  // Run one Fuse.js search per token; keep the best (lowest) score per package.
+  // Skip 2-char tokens — "ml", "ts" etc. produce too many false positives by
+  // matching substrings inside package names (xml2, yaml). Expansions handle them.
   const scoreMap = new Map();
   if (fuse) {
     for (const token of searchTokens) {
+      if (token.length < 3) continue;
       for (const r of fuse.search(token, { limit: 50 })) {
         const id = r.item.id;
         if (!scoreMap.has(id) || r.score < scoreMap.get(id).score) {
@@ -328,16 +350,17 @@ function searchPackages(query) {
   }
   let fuseResults = [...scoreMap.values()].sort((a, b) => a.score - b.score);
 
-  // Combine: direct matches first, then fuse results (avoiding duplicates)
+  // Combine: for single-word queries, prepend direct name matches; for multi-word
+  // queries let Fuse results speak for themselves (directMatches may include noise).
   const directIds = new Set(directMatches.map(p => p.id));
   const combined = [
-    ...directMatches.slice(0, 5).map(pkg => ({
+    ...(queryWordCount === 1 ? directMatches.slice(0, 5).map(pkg => ({
       ...pkg,
       searchScore: 0,
       reviewStats: reviewStats[pkg.package_name] || null
-    })),
+    })) : []),
     ...fuseResults
-      .filter(r => !directIds.has(r.item.id))
+      .filter(r => queryWordCount === 1 ? !directIds.has(r.item.id) : true)
       .map(r => {
         const original = searchIndex.packages.find(p => p.id === r.item.id) || r.item;
         return {
