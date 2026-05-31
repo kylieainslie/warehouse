@@ -1,9 +1,9 @@
 // discover.js
-// Discover section UI for featuring trending, new, and rising packages
+// Discover section UI for hidden gems and R Weekly packages
 
 let discoverData = null;
 let rweeklyData = null;
-let currentTab = 'trending';
+let currentTab = 'hidden_gems';
 
 // Load discover data on page load
 async function loadDiscoverData() {
@@ -44,15 +44,9 @@ async function loadDiscoverData() {
       rweeklyData = [];
     }
 
-    // Deduplicate packages by name within each category
-    if (discoverData.trending) {
-      discoverData.trending = deduplicatePackages(discoverData.trending);
-    }
-    if (discoverData.new) {
-      discoverData.new = deduplicatePackages(discoverData.new);
-    }
-    if (discoverData.rising) {
-      discoverData.rising = deduplicatePackages(discoverData.rising);
+    // Deduplicate packages by name
+    if (discoverData.hidden_gems) {
+      discoverData.hidden_gems = deduplicatePackages(discoverData.hidden_gems);
     }
 
     renderDiscoverSection();
@@ -87,8 +81,10 @@ function renderDiscoverSection() {
   let packages;
   if (currentTab === 'rweekly') {
     packages = rweeklyData || [];
+  } else if (currentTab === 'hidden_gems') {
+    packages = (discoverData && discoverData.hidden_gems) || [];
   } else {
-    packages = (discoverData && discoverData[currentTab]) || [];
+    packages = [];
   }
 
   if (packages.length === 0) {
@@ -178,11 +174,12 @@ function escapeHtml(text) {
 
 // Switch between tabs
 function switchDiscoverTab(tab) {
-  // Validate tab exists (either in discoverData or is rweekly)
   if (tab === 'rweekly') {
     if (!rweeklyData || rweeklyData.length === 0) return;
+  } else if (tab === 'hidden_gems') {
+    if (!discoverData || !discoverData.hidden_gems) return;
   } else {
-    if (!discoverData || !discoverData[tab]) return;
+    return;
   }
 
   currentTab = tab;

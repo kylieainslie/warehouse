@@ -30,14 +30,8 @@ include-in-header:
 <div id="discover-section" class="discover-section">
 <h2 class="discover-title">Discover</h2>
 <div class="discover-tabs">
-<button class="discover-tab active" data-tab="trending" onclick="switchDiscoverTab('trending')">
-<i class="bi bi-fire"></i> Trending
-</button>
-<button class="discover-tab" data-tab="new" onclick="switchDiscoverTab('new')">
-<i class="bi bi-clock"></i> Recent
-</button>
-<button class="discover-tab" data-tab="rising" onclick="switchDiscoverTab('rising')">
-<i class="bi bi-star"></i> Rising Stars
+<button class="discover-tab active" data-tab="hidden_gems" onclick="switchDiscoverTab('hidden_gems')">
+<i class="bi bi-gem"></i> Hidden Gems
 </button>
 <button class="discover-tab" data-tab="rweekly" onclick="switchDiscoverTab('rweekly')">
 <i class="bi bi-newspaper"></i> R Weekly

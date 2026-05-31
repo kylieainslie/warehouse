@@ -1,5 +1,5 @@
 # fetch_discover.R
-# Fetch trending, new, and rising packages from R-universe for the Discover section
+# Fetch hidden gem packages from R-universe for the Discover section
 
 library(httr2)
 library(jsonlite)
@@ -92,95 +92,33 @@ extract_package_info <- function(pkg) {
   )
 }
 
-#' Parse date string to POSIXct for sorting
-#' @param date_str Date string in various formats
-#' @return POSIXct or NA
-parse_date_safe <- function(date_str) {
-  if (is.null(date_str) || is.na(date_str) || date_str == "") {
-    return(as.POSIXct(NA))
-  }
 
-  # Try common date formats
-  formats <- c(
-    "%Y-%m-%d %H:%M:%S",
-    "%Y-%m-%d",
-    "%Y-%m-%dT%H:%M:%SZ",
-    "%Y-%m-%dT%H:%M:%S"
-  )
-
-  for (fmt in formats) {
-    result <- tryCatch(
-      as.POSIXct(date_str, format = fmt, tz = "UTC"),
-      error = function(e) NA
-    )
-    if (!is.na(result)) return(result)
-  }
-
-  as.POSIXct(NA)
-}
-
-#' Get trending packages (highest downloads)
+#' Get hidden gem packages (high quality score relative to download count)
 #' @param packages List of package data
 #' @param n Number to return
-#' @return List of top packages
-get_trending <- function(packages, n = 12) {
-  message("  Computing trending packages (by downloads)...")
+#' @return List of hidden gem packages
+get_hidden_gems <- function(packages, n = 20) {
+  message("  Computing hidden gems (score / log10(downloads + 10))...")
 
-  # Sort by downloads
-  downloads <- sapply(packages, function(p) safe_int(p$`_downloads`, 0L))
-  top_indices <- order(downloads, decreasing = TRUE)[1:min(n * 2, length(packages))]
+  # Extract info for all packages
+  pkg_info <- Filter(Negate(is.null), lapply(packages, extract_package_info))
 
-  # Extract info and filter out NULLs
-  results <- lapply(packages[top_indices], extract_package_info)
-  results <- Filter(Negate(is.null), results)
-  head(results, n)
-}
+  # Require a minimum quality score to exclude low-quality obscure packages
+  pkg_info <- Filter(function(p) p$score >= 30, pkg_info)
 
-#' Get new packages (most recently published)
-#' @param packages List of package data
-#' @param n Number to return
-#' @return List of newest packages
-get_new <- function(packages, n = 12) {
-  message("  Computing new packages (by publish date)...")
+  if (length(pkg_info) == 0) {
+    message("    Warning: no packages met score threshold")
+    return(list())
+  }
 
-  # Parse dates and sort
-  dates <- sapply(packages, function(p) {
-    date_str <- p$`Date/Publication` %||% p$`_published` %||% ""
-    as.numeric(parse_date_safe(date_str))
+  # gem_score = quality / log10(downloads + 10)
+  # High ratio means high quality but low discovery — the ideal hidden gem
+  gem_scores <- sapply(pkg_info, function(p) {
+    p$score / log10(p$downloads + 10)
   })
 
-  # Filter out NA dates and sort
-  valid_indices <- which(!is.na(dates))
-  if (length(valid_indices) == 0) {
-    message("    Warning: No valid dates found, falling back to first packages")
-    results <- lapply(packages[1:min(n * 2, length(packages))], extract_package_info)
-    results <- Filter(Negate(is.null), results)
-    return(head(results, n))
-  }
-
-  sorted_valid <- valid_indices[order(dates[valid_indices], decreasing = TRUE)]
-  top_indices <- sorted_valid[1:min(n * 2, length(sorted_valid))]
-
-  # Extract info and filter out NULLs
-  results <- lapply(packages[top_indices], extract_package_info)
-  results <- Filter(Negate(is.null), results)
-  head(results, n)
-}
-
-#' Get rising stars (highest stars)
-#' @param packages List of package data
-#' @param n Number to return
-#' @return List of top starred packages
-get_rising <- function(packages, n = 12) {
-  message("  Computing rising stars (by GitHub stars)...")
-
-  # Sort by stars
-  stars <- sapply(packages, function(p) safe_int(p$`_stars`, 0L))
-  top_indices <- order(stars, decreasing = TRUE)[1:min(n * 2, length(packages))]
-
-  # Extract info and filter out NULLs
-  results <- lapply(packages[top_indices], extract_package_info)
-  results <- Filter(Negate(is.null), results)
+  sorted_indices <- order(gem_scores, decreasing = TRUE)
+  results <- pkg_info[sorted_indices]
   head(results, n)
 }
 
@@ -190,8 +128,8 @@ get_rising <- function(packages, n = 12) {
 run_discover_fetch <- function(output_path = file.path(getwd(), "data", "discover.json")) {
   message("Starting discover data fetch...")
 
-  # Fetch package stats
-  packages <- fetch_package_stats(limit = 200)
+  # Fetch a large pool so hidden gems (high score, low downloads) are reachable
+  packages <- fetch_package_stats(limit = 1000)
 
   if (length(packages) == 0) {
     warning("No packages fetched, aborting")
@@ -201,9 +139,7 @@ run_discover_fetch <- function(output_path = file.path(getwd(), "data", "discove
   # Build discover data
   discover <- list(
     updated = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
-    trending = get_trending(packages, n = 12),
-    new = get_new(packages, n = 12),
-    rising = get_rising(packages, n = 12)
+    hidden_gems = get_hidden_gems(packages, n = 20)
   )
 
   # Export to JSON
@@ -213,9 +149,7 @@ run_discover_fetch <- function(output_path = file.path(getwd(), "data", "discove
   writeLines(json_output, output_path)
 
   message(sprintf("\nExported discover data to %s", output_path))
-  message(sprintf("  - %d trending packages", length(discover$trending)))
-  message(sprintf("  - %d new packages", length(discover$new)))
-  message(sprintf("  - %d rising packages", length(discover$rising)))
+  message(sprintf("  - %d hidden gems", length(discover$hidden_gems)))
 
   invisible(discover)
 }

@@ -2098,6 +2098,28 @@ tr:hover {
   display: none;
 }
 
+/* You might also like strip */
+.you-might-also-like {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+}
+
+.suggestion-strip-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3c4043;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.suggestion-strip-label i {
+  color: #667eea;
+}
+
 /* Mobile adjustments for discover */
 @media (max-width: 768px) {
   .discover-section {

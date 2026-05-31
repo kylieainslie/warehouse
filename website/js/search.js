@@ -547,6 +547,125 @@ function renderSearchResults(results, containerId = 'search-results', notice = '
   `;
 
   container.innerHTML = html;
+
+  renderYouMightAlsoLike(results);
+}
+
+// Render "You might also like" package strip below search results
+function renderYouMightAlsoLike(results) {
+  if (!searchIndex || results.length === 0) return;
+
+  const resultIds = new Set(results.map(p => p.id));
+  const topResults = results.slice(0, 5);
+
+  // Collect topics and categories from top results, counting frequency
+  const topicWeights = new Map();
+  const categoryWeights = new Map();
+
+  for (const pkg of topResults) {
+    const topics = Array.isArray(pkg.topics)
+      ? pkg.topics.flat().map(t => t.replace(/-/g, ' ').toLowerCase())
+      : [];
+    for (const topic of topics) {
+      topicWeights.set(topic, (topicWeights.get(topic) || 0) + 1);
+    }
+    if (pkg.primary_category) {
+      categoryWeights.set(pkg.primary_category, (categoryWeights.get(pkg.primary_category) || 0) + 1);
+    }
+  }
+
+  // Score every package not already in results
+  const candidates = [];
+  for (const pkg of searchIndex.packages) {
+    if (resultIds.has(pkg.id)) continue;
+
+    let score = 0;
+
+    // Topic overlap weighted ×2 per shared topic, scaled by how common it was in results
+    if (topicWeights.size > 0 && Array.isArray(pkg.topics)) {
+      const pkgTopics = pkg.topics.flat().map(t => t.replace(/-/g, ' ').toLowerCase());
+      for (const topic of pkgTopics) {
+        if (topicWeights.has(topic)) {
+          score += 2 * topicWeights.get(topic);
+        }
+      }
+    }
+
+    // Category match weighted ×1
+    if (pkg.primary_category && categoryWeights.has(pkg.primary_category)) {
+      score += categoryWeights.get(pkg.primary_category);
+    }
+
+    if (score === 0) continue;
+
+    // Multiply by package quality so suggestions surface good packages first
+    const quality = 1 + (parseFloat(pkg.score) || 0) / 100;
+    candidates.push({ pkg, score: score * quality });
+  }
+
+  if (candidates.length === 0) return;
+
+  candidates.sort((a, b) => b.score - a.score);
+  const suggestions = candidates.slice(0, 8).map(c => c.pkg);
+
+  const container = document.getElementById('search-results');
+  if (!container) return;
+
+  const cardsHtml = suggestions.map(pkg => createSuggestionCard(pkg)).join('');
+
+  const strip = document.createElement('div');
+  strip.id = 'you-might-also-like';
+  strip.className = 'you-might-also-like';
+  strip.innerHTML = `
+    <div class="suggestion-strip-label"><i class="bi bi-lightbulb"></i> You might also like</div>
+    <div class="discover-scroll-container">
+      <button class="discover-scroll-btn discover-scroll-left" onclick="scrollSuggestions(-1)" aria-label="Scroll left">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <div class="discover-cards" id="suggestion-cards">
+        ${cardsHtml}
+      </div>
+      <button class="discover-scroll-btn discover-scroll-right" onclick="scrollSuggestions(1)" aria-label="Scroll right">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  `;
+
+  container.appendChild(strip);
+}
+
+// Scroll the suggestion cards strip
+function scrollSuggestions(direction) {
+  const container = document.getElementById('suggestion-cards');
+  if (!container) return;
+  container.scrollBy({ left: direction * 440, behavior: 'smooth' });
+}
+
+// Create a suggestion card from a search-index package (uses package_name, not name)
+function createSuggestionCard(pkg) {
+  const name = pkg.package_name || '';
+  const title = pkg.title || name;
+  const description = pkg.description
+    ? (pkg.description.length > 100 ? pkg.description.substring(0, 100) + '...' : pkg.description)
+    : 'No description available';
+  const pageUrl = `/packages/${encodeURIComponent(name)}`;
+  const stars = formatNumber(pkg.stars || 0);
+
+  return `
+    <a href="${pageUrl}" class="discover-card">
+      <div class="discover-card-header">
+        <div class="discover-card-tags">
+          <span class="discover-card-version">${escapeHtml(pkg.version || '')}</span>
+        </div>
+        <span class="discover-card-name">${escapeHtml(name)}</span>
+      </div>
+      <div class="discover-card-title">${escapeHtml(title)}</div>
+      <div class="discover-card-desc">${escapeHtml(description)}</div>
+      <div class="discover-card-stats">
+        <span class="discover-stat"><i class="bi bi-star-fill"></i> ${stars}</span>
+      </div>
+    </a>
+  `;
 }
 
 // Show more results
@@ -940,6 +1059,7 @@ function openCompareChat() {
 
 // Export for global use
 window.openCompareChat = openCompareChat;
+window.scrollSuggestions = scrollSuggestions;
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
