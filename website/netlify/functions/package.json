@@ -9,7 +9,7 @@
     "roots": ["<rootDir>", "<rootDir>/../../tests/netlify"]
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.97.1"
+    "@anthropic-ai/sdk": "^0.100.1"
   },
   "devDependencies": {
     "jest": "^29.7.0"
