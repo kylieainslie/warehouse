@@ -19,6 +19,10 @@ Find R packages by what they do, not what they're called.
 
 ![The Warehouse — How It Works](architecture.png)
 
+## Search Strategy
+
+![The Warehouse — Search Strategy](search-strategy.png)
+
 ## Tech Stack
 
 - **Frontend:** [Quarto](https://quarto.org) static site

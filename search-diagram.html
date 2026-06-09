@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Warehouse — Search Strategy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+    }
+    h1 { font-size: 1.5rem; color: #1a1a2e; font-weight: 700; margin-bottom: 0.3rem; }
+    p.subtitle { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+
+    .diagram {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.09);
+      padding: 2rem 2rem 2rem;
+      width: 100%;
+      max-width: 1100px;
+      overflow: visible;
+    }
+
+    /* Extra top space for exact-match arch, extra bottom for fallback */
+    .flow-wrapper {
+      position: relative;
+      padding-top: 38px;
+      padding-bottom: 80px;
+    }
+
+    .flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    /* ── Steps ── */
+    .step {
+      flex: 1;
+      min-width: 140px;
+      border-radius: 10px;
+      padding: 0.85rem 0.75rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.55rem;
+    }
+    .step-title  { font-size: 0.82rem; font-weight: 700; line-height: 1.25; }
+    .step-detail { font-size: 0.71rem; line-height: 1.4; opacity: 0.75; }
+
+    .s1 { background: #f1f5f9; border: 1.5px solid #cbd5e1; color: #1e293b; }
+    .s2 { background: #fef9c3; border: 1.5px solid #f59e0b; color: #78350f; }
+    .s3 { background: #eff6ff; border: 1.5px solid #93c5fd; color: #1e3a5f; }
+    .s4 { background: #f5f3ff; border: 1.5px solid #c4b5fd; color: #2e1065; }
+    .s5 { background: #f0fdf4; border: 1.5px solid #86efac; color: #14532d; }
+
+    .arrow { flex-shrink: 0; display: flex; align-items: center; padding: 0 0.25rem; }
+    .arrow svg { width: 22px; height: 14px; display: block; }
+
+    /* ── Fuse.js box (positioned by JS) ── */
+    .fuse-box {
+      position: absolute;
+      background: #fff7ed;
+      border: 1.5px dashed #fb923c;
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      text-align: center;
+    }
+    .fuse-title  { font-size: 0.8rem; font-weight: 700; color: #7c2d12; }
+    .fuse-detail { font-size: 0.7rem; color: #9a3412; margin-top: 0.1rem; }
+
+    /* ── Mini visualisations ── */
+    .viz-search { background: white; border: 1.5px solid #cbd5e1; border-radius: 20px; padding: 0.3rem 0.6rem; font-size: 0.7rem; color: #475569; display: flex; align-items: center; gap: 0.3rem; width: 100%; max-width: 160px; }
+    .cursor { display: inline-block; width: 1px; height: 10px; background: #64748b; animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .viz-expand { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; width: 100%; }
+    .q-pill { background: #fde68a; border: 1px solid #f59e0b; border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.67rem; color: #92400e; }
+    .expand-arrow { font-size: 0.7rem; color: #b45309; }
+    .pkg-pills { display: flex; flex-wrap: wrap; gap: 0.2rem; justify-content: center; }
+    .pkg-pill { background: white; border: 1px solid #f59e0b; border-radius: 3px; padding: 0.1rem 0.35rem; font-size: 0.63rem; color: #92400e; }
+    .pkg-pill.more { background: #fef3c7; border-style: dashed; color: #b45309; }
+
+    .viz-bars { display: flex; flex-direction: column; gap: 0.28rem; width: 100%; }
+    .bar-row { display: flex; align-items: center; gap: 0.3rem; }
+    .bar-label { font-size: 0.62rem; color: #1e40af; width: 52px; text-align: right; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { flex: 1; height: 7px; background: #dbeafe; border-radius: 4px; overflow: hidden; }
+    .bar-fill  { height: 100%; background: #3b82f6; border-radius: 4px; }
+
+    .viz-merge { display: flex; align-items: center; gap: 0.3rem; width: 100%; justify-content: center; }
+    .merge-list { display: flex; flex-direction: column; gap: 0.18rem; }
+    .merge-item { font-size: 0.62rem; padding: 0.1rem 0.35rem; border-radius: 3px; white-space: nowrap; }
+    .merge-item.ai     { background: #fef9c3; border: 1px solid #f59e0b; color: #92400e; }
+    .merge-item.bm25   { background: #dbeafe; border: 1px solid #93c5fd; color: #1e40af; }
+    .merge-item.merged { background: #ede9fe; border: 1px solid #c4b5fd; color: #4c1d95; }
+    .merge-arrow { font-size: 0.85rem; color: #7c3aed; }
+
+    .viz-cards { display: flex; gap: 0.3rem; justify-content: center; width: 100%; }
+    .result-card { background: white; border: 1.5px solid #86efac; border-radius: 6px; padding: 0.25rem 0.4rem; flex: 1; max-width: 72px; }
+    .card-name  { font-weight: 700; font-size: 0.65rem; color: #166534; }
+    .card-score { color: #16a34a; font-size: 0.6rem; margin-top: 0.1rem; }
+  </style>
+</head>
+<body>
+
+<h1>The Warehouse — Search Strategy</h1>
+<p class="subtitle">How a query becomes results</p>
+
+<div class="diagram">
+ <div class="flow-wrapper" id="fw">
+
+  <div class="flow">
+
+   <div class="step s1" id="s1">
+    <div class="viz-search"><span>🔍</span><span>survival analysis</span><span class="cursor"></span></div>
+    <div class="step-title">User query</div>
+    <div class="step-detail">Submitted to /api/search</div>
+   </div>
+
+   <div class="arrow"><svg viewBox="0 0 22 14" fill="none"><line x1="0" y1="7" x2="15" y2="7" stroke="#94a3b8" stroke-width="1.8"/><polyline points="9,2 17,7 9,12" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+
+   <div class="step s2" id="s2">
+    <div class="viz-expand">
+     <div class="q-pill">"survival analysis"</div>
+     <div class="expand-arrow">↓</div>
+     <div class="pkg-pills">
+      <div class="pkg-pill">survival</div>
+      <div class="pkg-pill">survminer</div>
+      <div class="pkg-pill">rstpm2</div>
+      <div class="pkg-pill more">+terms…</div>
+     </div>
+    </div>
+    <div class="step-title">🤖 Claude</div>
+    <div class="step-detail">Suggest packages + expand into related terms</div>
+   </div>
+
+   <div class="arrow"><svg viewBox="0 0 22 14" fill="none"><line x1="0" y1="7" x2="15" y2="7" stroke="#94a3b8" stroke-width="1.8"/><polyline points="9,2 17,7 9,12" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+
+   <div class="step s3" id="s3">
+    <div class="viz-bars">
+     <div class="bar-row"><div class="bar-label">survival</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+     <div class="bar-row"><div class="bar-label">survminer</div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div>
+     <div class="bar-row"><div class="bar-label">prodlim</div><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div></div>
+     <div class="bar-row"><div class="bar-label">flexsurv</div><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div></div>
+    </div>
+    <div class="step-title">BM25 search</div>
+    <div class="step-detail">Scored across name, title, topics &amp; description</div>
+   </div>
+
+   <div class="arrow"><svg viewBox="0 0 22 14" fill="none"><line x1="0" y1="7" x2="15" y2="7" stroke="#94a3b8" stroke-width="1.8"/><polyline points="9,2 17,7 9,12" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+
+   <div class="step s4" id="s4">
+    <div class="viz-merge">
+     <div class="merge-list">
+      <div class="merge-item ai">survival</div>
+      <div class="merge-item ai">survminer</div>
+      <div class="merge-item bm25">prodlim</div>
+      <div class="merge-item bm25">flexsurv</div>
+     </div>
+     <div class="merge-arrow">→</div>
+     <div class="merge-list">
+      <div class="merge-item merged">1. survival</div>
+      <div class="merge-item merged">2. survminer</div>
+      <div class="merge-item merged">3. prodlim</div>
+      <div class="merge-item merged">4. flexsurv</div>
+     </div>
+    </div>
+    <div class="step-title">Merge results</div>
+    <div class="step-detail">Claude's packages first, then BM25 matches</div>
+   </div>
+
+   <div class="arrow"><svg viewBox="0 0 22 14" fill="none"><line x1="0" y1="7" x2="15" y2="7" stroke="#94a3b8" stroke-width="1.8"/><polyline points="9,2 17,7 9,12" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+
+   <div class="step s5" id="s5">
+    <div class="viz-cards">
+     <div class="result-card"><div class="card-name">survival</div><div class="card-score">★ 9.2</div></div>
+     <div class="result-card"><div class="card-name">survminer</div><div class="card-score">★ 8.7</div></div>
+    </div>
+    <div class="step-title">Render results</div>
+    <div class="step-detail">Hydrated from local packages.json</div>
+   </div>
+
+  </div><!-- /flow -->
+
+  <!-- Fuse.js fallback box, positioned by JS -->
+  <div class="fuse-box" id="fuse-box">
+   <div class="fuse-title">Fuse.js</div>
+   <div class="fuse-detail">local fuzzy search</div>
+  </div>
+
+ </div><!-- /flow-wrapper -->
+</div><!-- /diagram -->
+
+<script>
+window.addEventListener('load', () => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const wrapper = document.getElementById('fw');
+  const fuseBox = document.getElementById('fuse-box');
+
+  const ids = ['s1','s2','s3','s4','s5'];
+  const els = ids.reduce((m, id) => { m[id] = document.getElementById(id); return m; }, {});
+
+  function measure(el) {
+    const r = el.getBoundingClientRect();
+    const w = wrapper.getBoundingClientRect();
+    return {
+      left:  r.left   - w.left,
+      right: r.right  - w.left,
+      top:   r.top    - w.top,
+      bottom:r.bottom - w.top,
+      cx: (r.left + r.right)  / 2 - w.left,
+      cy: (r.top  + r.bottom) / 2 - w.top,
+    };
+  }
+
+  const R = {};
+  ids.forEach(id => { R[id] = measure(els[id]); });
+
+  // Position fuse box below the flow, centred under steps 2–4
+  const fuseCx  = (R.s2.cx + R.s4.cx) / 2;
+  const fuseTop = R.s1.bottom + 22;
+  fuseBox.style.top  = fuseTop + 'px';
+  fuseBox.style.left = (fuseCx - fuseBox.offsetWidth / 2) + 'px';
+
+  const RF = measure(fuseBox);
+
+  // Build SVG overlay
+  const wRect = wrapper.getBoundingClientRect();
+  const svgW = wRect.width;
+  const svgH = RF.bottom + 18;
+  wrapper.style.paddingBottom = '0';
+  wrapper.style.height = svgH + 'px';
+
+  const svg = document.createElementNS(NS, 'svg');
+  svg.style.cssText = `position:absolute;top:0;left:0;width:${svgW}px;height:${svgH}px;pointer-events:none;overflow:visible;`;
+
+  // ── Arrow marker defs ──
+  const defs = document.createElementNS(NS, 'defs');
+  function marker(id, color) {
+    const m = document.createElementNS(NS, 'marker');
+    m.setAttribute('id', id);
+    m.setAttribute('markerWidth',  '8');
+    m.setAttribute('markerHeight', '8');
+    m.setAttribute('refX', '6');
+    m.setAttribute('refY', '3');
+    m.setAttribute('orient', 'auto');
+    const p = document.createElementNS(NS, 'polyline');
+    p.setAttribute('points', '0,0 6,3 0,6');
+    p.setAttribute('stroke', color);
+    p.setAttribute('stroke-width', '1.5');
+    p.setAttribute('fill', 'none');
+    p.setAttribute('stroke-linejoin', 'round');
+    m.appendChild(p);
+    return m;
+  }
+  const exactCol    = '#64748b';
+  const fallbackCol = '#f97316';
+  defs.appendChild(marker('mx', exactCol));
+  defs.appendChild(marker('mf', fallbackCol));
+  svg.appendChild(defs);
+
+  function addPath(d, color, dashed, mid) {
+    const el = document.createElementNS(NS, 'path');
+    el.setAttribute('d', d);
+    el.setAttribute('stroke', color);
+    el.setAttribute('stroke-width', '1.6');
+    el.setAttribute('fill', 'none');
+    el.setAttribute('stroke-linecap', 'round');
+    el.setAttribute('stroke-linejoin', 'round');
+    if (dashed) el.setAttribute('stroke-dasharray', '5,3');
+    if (mid) el.setAttribute('marker-end', `url(#${mid})`);
+    svg.appendChild(el);
+  }
+
+  function addText(x, y, str, color, size, anchor) {
+    const el = document.createElementNS(NS, 'text');
+    el.setAttribute('x', x);
+    el.setAttribute('y', y);
+    el.setAttribute('text-anchor', anchor || 'middle');
+    el.setAttribute('font-size',   size  || 11);
+    el.setAttribute('fill',        color);
+    el.setAttribute('font-family', '-apple-system, BlinkMacSystemFont, system-ui, sans-serif');
+    el.textContent = str;
+    svg.appendChild(el);
+  }
+
+  // ── Exact-match bypass (above the flow) ──
+  // Right-angle arch: up from s1 → across → down into s5 top
+  const archY = 8;
+  addPath(
+    `M ${R.s1.cx} ${R.s1.top} L ${R.s1.cx} ${archY} L ${R.s5.cx} ${archY} L ${R.s5.cx} ${R.s5.top}`,
+    exactCol, false, 'mx'
+  );
+  addText((R.s1.cx + R.s5.cx) / 2, archY - 3, 'exact name match — skip to render', exactCol, 10.5);
+
+  // ── Fallback path (below the flow) ──
+  // s1 bottom → across to fuse box left (entering from left)
+  addPath(
+    `M ${R.s1.cx} ${R.s1.bottom} L ${R.s1.cx} ${RF.cy} L ${RF.left} ${RF.cy}`,
+    fallbackCol, true, 'mf'
+  );
+  // fuse box right → across and up into s5 bottom
+  addPath(
+    `M ${RF.right} ${RF.cy} L ${R.s5.cx} ${RF.cy} L ${R.s5.cx} ${R.s5.bottom}`,
+    fallbackCol, true, 'mf'
+  );
+
+  addText(R.s1.cx - 8, (R.s1.bottom + RF.cy) / 2 + 4, 'API fails', fallbackCol, 9.5, 'end');
+
+  wrapper.appendChild(svg);
+});
+</script>
+
+</body>
+</html>
