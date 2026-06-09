@@ -66,8 +66,9 @@ The Warehouse doesn't aim to reinvent the wheel. The R ecosystem already has exc
 
 | Resource | What it provides |
 |----------|------------------|
-| [R-Universe](https://r-universe.dev) | Package metadata, binaries, and quality metrics for CRAN and GitHub packages |
+| [R-Universe](https://r-universe.dev) | Package metadata, binaries, and quality metrics |
 | [CRAN](https://cran.r-project.org) | The official R package repository with 23,000+ packages |
+| [GitHub](https://github.com) | R packages hosted on GitHub, discovered via the GitHub API |
 | [Bioconductor](https://bioconductor.org) | Curated packages for bioinformatics and computational biology |
 | [rOpenSci](https://ropensci.org) | Peer-reviewed packages for reproducible research |
 | [R Weekly](https://rweekly.org) | Weekly highlights of new and updated R packages |
