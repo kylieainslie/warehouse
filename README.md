@@ -19,6 +19,17 @@ Find R packages by what they do, not what they're called.
 
 ![The Warehouse — How It Works](architecture.png)
 
+The Warehouse is built around a weekly automated pipeline and a static website, with AI used at two points in the process.
+
+**Data pipeline (weekly, automated)**
+A GitHub Actions workflow runs every week and scrapes package metadata from the [R-Universe API](https://r-universe.dev), which indexes packages from CRAN, Bioconductor, and GitHub. Metadata — name, title, description, topics, quality scores, and author information — is stored in a local SQLite database. Community-submitted packages and user reviews (collected via Google Sheets) are merged in at this stage. Claude then reads each package description and automatically assigns it to one or more categories (e.g. *epidemiology*, *spatial analysis*, *machine learning*). Finally, everything is exported to a flat JSON file that the website reads directly.
+
+**Website**
+The site is a static [Quarto](https://quarto.org) site hosted on Netlify. Because the full package index is exported as a JSON file and loaded in the browser, basic search works instantly without any server round-trip. The site also has a Discover section that surfaces hidden gems (high-quality packages with low download counts) and packages featured in [R Weekly](https://rweekly.org).
+
+**AI**
+Claude is used in two places: during the pipeline to auto-label packages with categories, and at search time to expand queries and power the chatbot. See the [Search Strategy](#search-strategy) section for details on how search works.
+
 ## Search Strategy
 
 ![The Warehouse — Search Strategy](search-strategy.png)
