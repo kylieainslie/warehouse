@@ -22,9 +22,11 @@ Find R packages by what they do, not what they're called.
 ## Tech Stack
 
 - **Frontend:** [Quarto](https://quarto.org) static site
-- **Search:** [Fuse.js](https://fusejs.io) + Claude API
+- **Search:** [Fuse.js](https://fusejs.io) (client-side) + Claude API (query expansion)
+- **AI:** Claude (auto-tagging + chatbot recommendations)
+- **Data pipeline:** R (httr2, dplyr, DBI, RSQLite) + GitHub Actions
+- **Database:** SQLite
 - **Hosting:** Netlify (with serverless functions)
-- **Data:** R-Universe API, CRAN, Bioconductor
 
 ## Local Development
 
@@ -32,7 +34,7 @@ Find R packages by what they do, not what they're called.
 
 - [Quarto](https://quarto.org/docs/get-started/)
 - [Node.js](https://nodejs.org/) 18+
-- R with packages: `tidyverse`, `jsonlite`, `httr`
+- R with packages: `httr2`, `jsonlite`, `dplyr`, `purrr`, `DBI`, `RSQLite`, `tibble`, `stringr`
 
 ### Setup
 
@@ -50,7 +52,7 @@ quarto preview
 
 ### Environment Variables
 
-For AI search to work locally, set in Netlify dashboard or `.env`:
+For AI features to work locally, set in Netlify dashboard or `.env`:
 
 ```
 ANTHROPIC_API_KEY=your_key_here
@@ -63,12 +65,18 @@ warehouse/
 ├── website/
 │   ├── _quarto.yml           # Site config
 │   ├── index.qmd             # Homepage
-│   ├── categories/           # Category pages
-│   ├── data/                 # Package JSON data
-│   ├── js/search.js          # Search logic
-│   ├── netlify/functions/    # Serverless API
+│   ├── categories/           # One page per package category
+│   ├── R/                    # Data pipeline scripts
+│   │   ├── scrape_packages.R
+│   │   ├── build_database.R
+│   │   ├── export_json.R
+│   │   └── fetch_discover.R
+│   ├── scripts/              # Utility scripts (reviews, tagging)
+│   ├── data/                 # SQLite database + exported JSON
+│   ├── js/                   # Client-side JS (search, chatbot, discover)
+│   ├── netlify/functions/    # Serverless API (search, chat, reviews)
+│   ├── tests/                # R (testthat) and JS (Jest) tests
 │   └── styles.css
-├── scripts/                  # Data pipeline scripts
 └── README.md
 ```
 
