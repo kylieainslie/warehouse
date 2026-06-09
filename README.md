@@ -23,6 +23,20 @@ Find R packages by what they do, not what they're called.
 
 ![The Warehouse — Search Strategy](search-strategy.png)
 
+Every search is handled by a Netlify serverless function that combines Claude with a BM25 ranking engine.
+
+**1. Query expansion via Claude**
+The raw query is sent to Claude, which returns two things: a list of R packages likely to match, and a set of related search terms (synonyms, method names, related concepts). For example, "fit a mixed model" might expand to terms like *random effects*, *lme4*, *repeated measures*, and *REML*.
+
+**2. BM25 search**
+The original query and Claude's expanded terms are run through a BM25 scoring engine over the full package index. BM25 (Best Match 25) is a standard information retrieval algorithm that ranks documents by term frequency — how often a search term appears — while penalising two things that naive term-counting gets wrong: (1) diminishing returns from repeated terms (finding a word 20 times isn't 20× better than finding it twice), and (2) long documents that mention a term incidentally. Fields are weighted so a match in the package name counts far more than a match in the description.
+
+**3. Merge**
+Claude's suggested packages are placed first in the results (verified against the database), followed by the BM25-ranked matches. This means well-known packages Claude directly identifies appear at the top, while the BM25 search catches relevant packages Claude may not have named explicitly.
+
+**Shortcuts and fallbacks**
+If the query exactly matches a package name, Claude is skipped and the result is returned immediately. If the API call fails or times out, the client falls back to a local [Fuse.js](https://fusejs.io) fuzzy search over the same package data.
+
 ## Tech Stack
 
 - **Frontend:** [Quarto](https://quarto.org) static site
