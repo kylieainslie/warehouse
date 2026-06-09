@@ -15,6 +15,10 @@ Find R packages by what they do, not what they're called.
 - **Browse by category** - Epidemiology, machine learning, visualization, AI/LLMs, and more
 - **Community reviews** - Share experiences and tips for packages
 
+## How It Works
+
+![The Warehouse — How It Works](architecture.png)
+
 ## Tech Stack
 
 - **Frontend:** [Quarto](https://quarto.org) static site
