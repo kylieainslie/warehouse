@@ -62,7 +62,40 @@
       "submitted_at": "2026-02-03T17:46:56.158Z",
       "score": null,
       "stars": 0
+    },
+    {
+      "id": "submitted-40",
+      "package_name": "mutator",
+      "title": "Perform mutation testing on test suites of packages to assess the test suite's effectiveness",
+      "description": "mutator is an automated mutation testing tool for the R language. It applies mutation testing principles to help developers improve test suite quality by introducing small, systematic changes (mutations) to source code, creating mutants, and verifying if tests can detect these changes. It can then compute the mutation score, i.e the number of mutants detected by the test suite over the total number of mutants.\nIt is fast, detect semantically equivalent mutants that would skew the scores, and honour covr annotations.",
+      "url": "https://github.com/PRL-PRG/mutator",
+      "primary_category": "package-development",
+      "keywords": [
+        "mutation testing",
+        "testing",
+        "package quality",
+        "validation"
+      ],
+      "use_cases": "- assess the effectiveness of a package test suite\n- participate to the validation of a package\n- adds a mutation testing workflow for your package CI/CD",
+      "docs_url": "https://prl-prg.github.io/mutator/",
+      "paper_doi": "",
+      "install_command": "remotes::install_package(\"PRL-PRG/mutator\")",
+      "quality_indicators": [
+        "Has automated tests",
+        "Has CI/CD (GitHub Actions, etc.)",
+        "Has vignettes or tutorials",
+        "Has pkgdown documentation site"
+      ],
+      "submitter_relationship": "Package author/maintainer",
+      "submitter_name": "Pierre Donat-Bouillud",
+      "similar_packages": "muttest",
+      "unique_features": "Compared to muttest, mutator is faster, supports equivalent mutant detection, test suites that do not use testthat, and covr annotations.",
+      "source_universe": "submitted",
+      "github_issue": 40,
+      "submitted_at": "2026-07-09T22:11:16.094Z",
+      "score": null,
+      "stars": 0
     }
   ],
-  "updated_at": "2026-02-03T17:46:56.159Z"
+  "updated_at": "2026-07-09T22:11:16.095Z"
 }
