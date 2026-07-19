@@ -1,6 +1,6 @@
 [
   {
-    "id": 9392,
+    "id": 9393,
     "package_name": "bbr",
     "title": "R package for bbi",
     "description": "R package for making calls to bbi for running",
@@ -13,7 +13,7 @@
     "stars": 25
   },
   {
-    "id": 9393,
+    "id": 9394,
     "package_name": "bbr.bayes",
     "title": "Bayesian modeling with BBR",
     "description": "This package extends the BBR package for Bayesian modeling.",
@@ -26,7 +26,7 @@
     "stars": 6
   },
   {
-    "id": 14907,
+    "id": 14920,
     "package_name": "ghpm",
     "title": "GHPM",
     "description": "Github Project Manager",
@@ -39,7 +39,7 @@
     "stars": 2
   },
   {
-    "id": 18065,
+    "id": 18086,
     "package_name": "metrumrg",
     "title": "Pharmacometric Tools for Data Preparation, Modeling, Simulation,",
     "description": "",
@@ -52,7 +52,7 @@
     "stars": 3
   },
   {
-    "id": 18666,
+    "id": 18688,
     "package_name": "mpn.scorecard",
     "title": "Generate a scorecard with various measures of R package quality and risk",
     "description": "Collects various measures of quality and risk-of-use for an R package",
@@ -65,7 +65,7 @@
     "stars": 3
   },
   {
-    "id": 18701,
+    "id": 18723,
     "package_name": "mrgda",
     "title": "Tools for Data Assembly",
     "description": "Run various tests on an NMTRAN dataset to validate it prior to modeling.",
@@ -78,7 +78,7 @@
     "stars": 4
   },
   {
-    "id": 18702,
+    "id": 18724,
     "package_name": "mrggsave",
     "title": "Save and Arrange Annotated Plots",
     "description": "Plots are annotated with the name of the generating",
@@ -91,7 +91,7 @@
     "stars": 0
   },
   {
-    "id": 18703,
+    "id": 18725,
     "package_name": "mrgmisc",
     "title": "MRG Helpers",
     "description": "Metrum Research Group Helper Functions.",
@@ -104,7 +104,7 @@
     "stars": 4
   },
   {
-    "id": 18704,
+    "id": 18726,
     "package_name": "mrgsim.ds",
     "title": "'Apache' 'Arrow' Dataset-Backed Simulation Outputs for 'mrgsolve'",
     "description": "Provides tools for creating and managing file streams in support",
@@ -117,7 +117,7 @@
     "stars": 0
   },
   {
-    "id": 18707,
+    "id": 18729,
     "package_name": "mrgsolve",
     "title": "Simulate from ODE-Based Models",
     "description": "Fast simulation from ordinary differential equation",
@@ -127,10 +127,10 @@
     "exports": [],
     "topics": ["mrgsolve", "ode", "r", "rstats"],
     "score": "NA",
-    "stars": 165
+    "stars": 166
   },
   {
-    "id": 18708,
+    "id": 18730,
     "package_name": "mrgvalidate",
     "title": "Create Validation Docs For R Packages",
     "description": "R package for generating validation documents for other R packages developed by Metrum.",
@@ -143,7 +143,7 @@
     "stars": 2
   },
   {
-    "id": 18709,
+    "id": 18731,
     "package_name": "mrgvalidatetestreference",
     "title": "Test reference for mrgvalidate",
     "description": "Frozen clone of rbabylon at",
@@ -156,7 +156,7 @@
     "stars": 0
   },
   {
-    "id": 18710,
+    "id": 18732,
     "package_name": "mrgvalprep",
     "title": "Preprocessing for mrgvalidate",
     "description": "Helpers for gathering, formatting, and preprocessing inputs to mrgvalidate.",
@@ -169,7 +169,7 @@
     "stars": 1
   },
   {
-    "id": 19353,
+    "id": 19379,
     "package_name": "nmrec",
     "title": "Read, Parse, and Modify NONMEM Control Records",
     "description": "An interface reading records from a NONMEM control",
@@ -182,7 +182,7 @@
     "stars": 1
   },
   {
-    "id": 20110,
+    "id": 20139,
     "package_name": "paquet",
     "title": "File Streams for Big Data",
     "description": "Provides tools for creating and managing file streams in support",
@@ -195,7 +195,7 @@
     "stars": 1
   },
   {
-    "id": 20773,
+    "id": 20802,
     "package_name": "pmforest",
     "title": "Create forest plots",
     "description": "Create forest plots.",
@@ -208,7 +208,7 @@
     "stars": 2
   },
   {
-    "id": 20781,
+    "id": 20810,
     "package_name": "pmparams",
     "title": "R package for parameter tables",
     "description": "`pmparams` is a library written in R that generates clear, well-formatted parameter tables to report NONMEM model results.",
@@ -221,7 +221,7 @@
     "stars": 1
   },
   {
-    "id": 20783,
+    "id": 20812,
     "package_name": "pmplots",
     "title": "Plots for Pharmacometrics",
     "description": "Very light wrappers around 'ggplot2' plotting code tailored for",
@@ -234,7 +234,7 @@
     "stars": 10
   },
   {
-    "id": 20788,
+    "id": 20817,
     "package_name": "pmtables",
     "title": "Tables for Pharmacometrics",
     "description": "Summarize data sets and create publication-quality tables for",
@@ -247,7 +247,7 @@
     "stars": 11
   },
   {
-    "id": 21421,
+    "id": 21449,
     "package_name": "qctools",
     "title": "QC Management and Helpers",
     "description": "Create, append and review the QC log. Provides helper functions for completing QC tasks.",
@@ -260,11 +260,11 @@
     "stars": 1
   },
   {
-    "id": 22417,
+    "id": 22446,
     "package_name": "review",
     "title": "QC Management and Helpers",
     "description": "Functions for managing logs of reviews of subversioned",
-    "version": "3.14.0.9000",
+    "version": "3.14.0.9002",
     "maintainer": "",
     "url": "https://github.com/metrumresearchgroup/review",
     "exports": [],
@@ -273,7 +273,7 @@
     "stars": 2
   },
   {
-    "id": 22950,
+    "id": 22983,
     "package_name": "rrsq",
     "title": "R interface to r simple queue (rsq)",
     "description": "An R interface to r simple queue (rsq).",
@@ -286,7 +286,7 @@
     "stars": 1
   },
   {
-    "id": 24131,
+    "id": 24164,
     "package_name": "simpar",
     "title": "Create Parameters for Simulation with Uncertainty",
     "description": "Given the parameter estimates of a mixed effect model, this",
@@ -299,7 +299,7 @@
     "stars": 3
   },
   {
-    "id": 27386,
+    "id": 27431,
     "package_name": "yspec",
     "title": "Data Specification for Pharmacometrics",
     "description": "Generate Define.pdf from yaml specification.",
