@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-26T05:41:57Z",
+    "scraped_at": "2026-08-02T05:36:53Z",
     "weeks_included": 2,
-    "total_packages": 70,
-    "new_packages": 53,
+    "total_packages": 69,
+    "new_packages": 52,
     "updated_packages": 17
   },
   "packages": [
@@ -627,15 +627,6 @@
       "url": "https://cran.r-project.org/package=wcc",
       "post_date": "2026-07-20",
       "week": "2026-W30"
-    },
-    {
-      "package_name": "honestlm",
-      "version": ": Guardrails for teaching and visualizing linear models in R",
-      "type": "new",
-      "description": "+ [The lt Package: Lightweight HTML Tables for R (and Beyond)](https://yihui.org/en/2026/07/lt-package/)",
-      "url": "https://yanivjb.github.io/honestlm/",
-      "post_date": "2026-07-13",
-      "week": "2026-W29"
     }
   ]
 }

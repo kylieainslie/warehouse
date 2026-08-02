@@ -1,6 +1,6 @@
 [
   {
-    "id": 25999,
+    "id": 27698,
     "package_name": "mutator",
     "title": "Perform mutation testing on test suites of packages to assess the test suite's effectiveness",
     "description": "mutator is an automated mutation testing tool for the R language. It applies mutation testing principles to help developers improve test suite quality by introducing small, systematic changes (mutations) to source code, creating mutants, and verifying if tests can detect these changes. It can then compute the mutation score, i.e the number of mutants detected by the test suite over the total number of mutants.\nIt is fast, detect semantically equivalent mutants that would skew the scores, and honour covr annotations.\n\nUse cases: - assess the effectiveness of a package test suite\n- participate to the validation of a package\n- adds a mutation testing workflow for your package CI/CD\n\nUnique features: Compared to muttest, mutator is faster, supports equivalent mutant detection, test suites that do not use testthat, and covr annotations.",
