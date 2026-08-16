@@ -1,12 +1,3072 @@
 {
   "metadata": {
-    "scraped_at": "2026-08-09T03:50:45Z",
+    "scraped_at": "2026-08-16T03:07:45Z",
     "weeks_included": 2,
-    "total_packages": 23,
-    "new_packages": 10,
-    "updated_packages": 13
+    "total_packages": 363,
+    "new_packages": 204,
+    "updated_packages": 159
   },
   "packages": [
+    {
+      "package_name": "ALSBinary",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "'ALS-Binary': Allele Size to Binary Converter",
+      "url": "https://cran.r-project.org/package=ALSBinary",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "APD",
+      "version": "1.0.1",
+      "type": "new",
+      "description": "Average Proportional Distance",
+      "url": "https://cran.r-project.org/package=APD",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "AdaptHyCensor",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Inference and Data Generation for Adaptive Progressive Hybrid Censoring Schemes",
+      "url": "https://cran.r-project.org/package=AdaptHyCensor",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "AddiVortes",
+      "version": "0.6.9",
+      "type": "updated",
+      "description": "(Bayesian) Additive Voronoi Tessellations - [diffify](https://diffify.com/R/AddiVortes)",
+      "url": "https://cran.r-project.org/package=AddiVortes",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "AgriDataTools",
+      "version": "0.1.2",
+      "type": "new",
+      "description": "Automated Statistical Analysis and Tools for Agricultural Research",
+      "url": "https://cran.r-project.org/package=AgriDataTools",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BCGcalc",
+      "version": "2.3.1",
+      "type": "new",
+      "description": "Biological Condition Gradient, Calculator",
+      "url": "https://cran.r-project.org/package=BCGcalc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BCT",
+      "version": "1.3",
+      "type": "updated",
+      "description": "Bayesian Context Trees for Discrete Time Series - [diffify](https://diffify.com/R/BCT)",
+      "url": "https://cran.r-project.org/package=BCT",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BCodifSIS",
+      "version": "0.3.2",
+      "type": "new",
+      "description": "Ball-Codifference Sure Independence Screening",
+      "url": "https://cran.r-project.org/package=BCodifSIS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BDPTobitQR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Bayesian Double-Penalty Tobit Quantile Regression for Longitudinal Interval-Censored Data",
+      "url": "https://cran.r-project.org/package=BDPTobitQR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BIDistances",
+      "version": "0.1.5",
+      "type": "updated",
+      "description": "Bioinformatic Distances - [diffify](https://diffify.com/R/BIDistances)",
+      "url": "https://cran.r-project.org/package=BIDistances",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BKMutate",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Statistical Analysis of Induced Mutagenesis Experiments in Crop Plants",
+      "url": "https://cran.r-project.org/package=BKMutate",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BKQualit",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Analysis of Qualitative Traits, Segregation and Genetic Linkage",
+      "url": "https://cran.r-project.org/package=BKQualit",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BNPmix",
+      "version": "1.2.3",
+      "type": "updated",
+      "description": "Bayesian Nonparametric Mixture Models - [diffify](https://diffify.com/R/BNPmix)",
+      "url": "https://cran.r-project.org/package=BNPmix",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BayesPanelUR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Bayesian Unit Root Test for Panel Data Models",
+      "url": "https://cran.r-project.org/package=BayesPanelUR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BayesQRCount",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Adaptive Bayesian Quantile Regression for Count Data",
+      "url": "https://cran.r-project.org/package=BayesQRCount",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BayesSplineUR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Bayesian Unit Root Test for AR(1) Model with Trend Approximated by Linear Spline Function",
+      "url": "https://cran.r-project.org/package=BayesSplineUR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BayesURTrend",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Bayesian Unit Root Test for Model with Maintained Trend",
+      "url": "https://cran.r-project.org/package=BayesURTrend",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BayesianFitForecast",
+      "version": "1.1.1",
+      "type": "updated",
+      "description": "Bayesian Parameter Estimation and Forecasting for Epidemiological Models - [diffify](https://diffify.com/R/BayesianFitForecast)",
+      "url": "https://cran.r-project.org/package=BayesianFitForecast",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BiMaUmisc",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "BiMaU Miscellaneous",
+      "url": "https://cran.r-project.org/package=BiMaUmisc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BioMonTools",
+      "version": "1.3.2",
+      "type": "updated",
+      "description": "Biomonitoring and Bioassessment Calculations - [diffify](https://diffify.com/R/BioMonTools)",
+      "url": "https://cran.r-project.org/package=BioMonTools",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "BorderEffect",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Detection of Edge Effects in Field Trials via Besag-Kempton Competition",
+      "url": "https://cran.r-project.org/package=BorderEffect",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "CLDedgelister",
+      "version": "1.0.2",
+      "type": "new",
+      "description": "Import System-Dynamics Models and Convert Them to Edge Lists",
+      "url": "https://cran.r-project.org/package=CLDedgelister",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "CRAFT",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Conditional Regime Analog Forecasting with Trajectories",
+      "url": "https://cran.r-project.org/package=CRAFT",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "CauMedi",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Cell Type-Specific Causal Mediation Models for Single-Cell Data",
+      "url": "https://cran.r-project.org/package=CauMedi",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "CompRiskRel",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Reliability and Competing Risks Analysis under Hybrid Censoring",
+      "url": "https://cran.r-project.org/package=CompRiskRel",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Compositionalzerocens",
+      "version": "1.0",
+      "type": "new",
+      "description": "Modelling Zero Values in Compositional Data Using a Censored Model",
+      "url": "https://cran.r-project.org/package=Compositionalzerocens",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "D4TAlink.light",
+      "version": "2.1.23",
+      "type": "updated",
+      "description": "GDP - Workflow Management - [diffify](https://diffify.com/R/D4TAlink.light)",
+      "url": "https://cran.r-project.org/package=D4TAlink.light",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DEmixR",
+      "version": "0.2.0",
+      "type": "updated",
+      "description": "Fit Two-Component Normal and Lognormal Mixture Models - [diffify](https://diffify.com/R/DEmixR)",
+      "url": "https://cran.r-project.org/package=DEmixR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DLCA",
+      "version": "1.0",
+      "type": "new",
+      "description": "Divisive Latent Class Analysis",
+      "url": "https://cran.r-project.org/package=DLCA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DMSTAr",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Dynamic Model for Stormwater Treatment Areas",
+      "url": "https://cran.r-project.org/package=DMSTAr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DOEpro",
+      "version": "2.0.1",
+      "type": "new",
+      "description": "Analysis of Designed Agricultural Experiments",
+      "url": "https://cran.r-project.org/package=DOEpro",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DasGuptR",
+      "version": "2.2.0",
+      "type": "updated",
+      "description": "Das Gupta Standardisation and Decomposition - [diffify](https://diffify.com/R/DasGuptR)",
+      "url": "https://cran.r-project.org/package=DasGuptR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DataAudit",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Comprehensive Data Quality Auditing and Validation",
+      "url": "https://cran.r-project.org/package=DataAudit",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DataSpaceR",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Interface to 'the CAVD DataSpace' - [diffify](https://diffify.com/R/DataSpaceR)",
+      "url": "https://cran.r-project.org/package=DataSpaceR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DendroFlux",
+      "version": "1.0.3",
+      "type": "new",
+      "description": "Processing and Analyzing Dendrometer and Sap Flux Data",
+      "url": "https://cran.r-project.org/package=DendroFlux",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "DepDoubleTruncKS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Kolmogorov-Smirnov Test for Dependently Double-Truncated Durations",
+      "url": "https://cran.r-project.org/package=DepDoubleTruncKS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "EBASS",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Expected Value of Information Based Sample Size Calculation - [diffify](https://diffify.com/R/EBASS)",
+      "url": "https://cran.r-project.org/package=EBASS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "EDAForge",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Automatic Exploratory Data Analysis",
+      "url": "https://cran.r-project.org/package=EDAForge",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "EDE",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Extinction Date Estimation from Sighting Records",
+      "url": "https://cran.r-project.org/package=EDE",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "EWAScaller",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Query and Analyse the 'EWAS Atlas' Database",
+      "url": "https://cran.r-project.org/package=EWAScaller",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Epi",
+      "version": "2.66",
+      "type": "updated",
+      "description": "Statistical Analysis in Epidemiology - [diffify](https://diffify.com/R/Epi)",
+      "url": "https://cran.r-project.org/package=Epi",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ExactTree",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Exact Tree",
+      "url": "https://cran.r-project.org/package=ExactTree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "FAfA",
+      "version": "1.2",
+      "type": "updated",
+      "description": "Factor Analysis for All - [diffify](https://diffify.com/R/FAfA)",
+      "url": "https://cran.r-project.org/package=FAfA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "FESta",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Fishing Effort Standardization - [diffify](https://diffify.com/R/FESta)",
+      "url": "https://cran.r-project.org/package=FESta",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "FinancialInstrument",
+      "version": "1.4.1",
+      "type": "updated",
+      "description": "Financial Instrument Modeling Infrastructure - [diffify](https://diffify.com/R/FinancialInstrument)",
+      "url": "https://cran.r-project.org/package=FinancialInstrument",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Formula",
+      "version": "1.2-6",
+      "type": "updated",
+      "description": "Extended Model Formulas - [diffify](https://diffify.com/R/Formula)",
+      "url": "https://cran.r-project.org/package=Formula",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "FunctionalCalibration",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "Aggregated Functional Data Calibration using Splines and Wavelets - [diffify](https://diffify.com/R/FunctionalCalibration)",
+      "url": "https://cran.r-project.org/package=FunctionalCalibration",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "GPArotation",
+      "version": "2026.8-1",
+      "type": "updated",
+      "description": "Gradient Projection Factor Rotation - [diffify](https://diffify.com/R/GPArotation)",
+      "url": "https://cran.r-project.org/package=GPArotation",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "GammaFrailtySPC",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Statistical Process Control Based on Gamma-Frailty AFT Models",
+      "url": "https://cran.r-project.org/package=GammaFrailtySPC",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Gofpt2",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Goodness-of-Fit Test for Progressive Type-II Censored Data",
+      "url": "https://cran.r-project.org/package=Gofpt2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "HeatStressR",
+      "version": "2.2.1",
+      "type": "new",
+      "description": "Calculate Heat Stress Indices",
+      "url": "https://cran.r-project.org/package=HeatStressR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ICEHmeasures",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "The Equiplot Graph and Complex Inequality Measures - [diffify](https://diffify.com/R/ICEHmeasures)",
+      "url": "https://cran.r-project.org/package=ICEHmeasures",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ImpAdaptType2Censor",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Data Generation and Statistical Inference for Improved Adaptive Type-II Progressive Censoring Schemes",
+      "url": "https://cran.r-project.org/package=ImpAdaptType2Censor",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "IncrementalityTEST",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Analyze Incrementality Experiments",
+      "url": "https://cran.r-project.org/package=IncrementalityTEST",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "IntervalCensoredMultistateR2",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Regression Analysis in Interval-Censored Multistate Models",
+      "url": "https://cran.r-project.org/package=IntervalCensoredMultistateR2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "K4Rumah",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Home Context Data Files for TIMSS 2023 Grade 4",
+      "url": "https://cran.r-project.org/package=K4Rumah",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "K4Siswa",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Student Context Data Files for TIMSS 2023 Grade 4",
+      "url": "https://cran.r-project.org/package=K4Siswa",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "KLINK",
+      "version": "1.2.2",
+      "type": "updated",
+      "description": "Kinship Analysis with Linked Markers - [diffify](https://diffify.com/R/KLINK)",
+      "url": "https://cran.r-project.org/package=KLINK",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "KernelICA",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "Kernel Independent Component Analysis - [diffify](https://diffify.com/R/KernelICA)",
+      "url": "https://cran.r-project.org/package=KernelICA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "LLMR.shiny",
+      "version": "0.1.2",
+      "type": "updated",
+      "description": "Shared 'Shiny' Components for 'LLMR' Family Applications - [diffify](https://diffify.com/R/LLMR.shiny)",
+      "url": "https://cran.r-project.org/package=LLMR.shiny",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "LRErdd",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Regression Discontinuity Designs as Local Randomized Experiments",
+      "url": "https://cran.r-project.org/package=LRErdd",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "LSJM",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Estimate Location-Scale Joint Models",
+      "url": "https://cran.r-project.org/package=LSJM",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "LongitudinalEvalue",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Sensitivity Analysis for Unmeasured Confounding in Longitudinal Studies",
+      "url": "https://cran.r-project.org/package=LongitudinalEvalue",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "LugsailGR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Gelman-Rubin Diagnostic and Effective Sample Size for MCMC",
+      "url": "https://cran.r-project.org/package=LugsailGR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MALDIassist",
+      "version": "1.0.2",
+      "type": "new",
+      "description": "Mathematical Utilities for MALDI-TOF Mass Spectrometry",
+      "url": "https://cran.r-project.org/package=MALDIassist",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MD2sample",
+      "version": "1.3.0",
+      "type": "updated",
+      "description": "Various Methods for the Two Sample Problem in D>1 Dimensions - [diffify](https://diffify.com/R/MD2sample)",
+      "url": "https://cran.r-project.org/package=MD2sample",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MDgof",
+      "version": "1.1.0",
+      "type": "updated",
+      "description": "Various Methods for the Goodness-of-Fit Problem in D>1 Dimensions - [diffify](https://diffify.com/R/MDgof)",
+      "url": "https://cran.r-project.org/package=MDgof",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MEMWAS",
+      "version": "0.9.3",
+      "type": "new",
+      "description": "Mixed-Effects Models with Autocorrelation Structures",
+      "url": "https://cran.r-project.org/package=MEMWAS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MYIS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "'Moreau-Yosida' Importance Sampling for Statistical Inference",
+      "url": "https://cran.r-project.org/package=MYIS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MineSDG",
+      "version": "0.4.0",
+      "type": "new",
+      "description": "Mining Industry SDG Impact Calculator",
+      "url": "https://cran.r-project.org/package=MineSDG",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MultiEFM",
+      "version": "0.1.4",
+      "type": "updated",
+      "description": "Robust Estimation for Multi-Study High-Dimensional Elliptical Factor Analytics - [diffify](https://diffify.com/R/MultiEFM)",
+      "url": "https://cran.r-project.org/package=MultiEFM",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MultiFrailty",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Shared Frailty Regression Models with Inverse Gaussian, Generalized Lindley, and Gamma Frailty Distributions",
+      "url": "https://cran.r-project.org/package=MultiFrailty",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "MultiStepSSAD",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Multiple-Steps Step-Stress Accelerated Degradation Modeling",
+      "url": "https://cran.r-project.org/package=MultiStepSSAD",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "NSTempRFA",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Adapts the Regional Frequency Analysis to Air Temperature",
+      "url": "https://cran.r-project.org/package=NSTempRFA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "OhdsiReportGenerator",
+      "version": "2.3.1",
+      "type": "updated",
+      "description": "Observational Health Data Sciences and Informatics Report Generator - [diffify](https://diffify.com/R/OhdsiReportGenerator)",
+      "url": "https://cran.r-project.org/package=OhdsiReportGenerator",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "OncoBayes2",
+      "version": "0.10-0",
+      "type": "updated",
+      "description": "Bayesian Logistic Regression for Oncology Dose-Escalation Trials - [diffify](https://diffify.com/R/OncoBayes2)",
+      "url": "https://cran.r-project.org/package=OncoBayes2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "OutbreakR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Epidemiological Tools for Outbreak Investigation and Analysis",
+      "url": "https://cran.r-project.org/package=OutbreakR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "PTSDdiag",
+      "version": "0.5.0",
+      "type": "updated",
+      "description": "Optimize PTSD Diagnostic Criteria - [diffify](https://diffify.com/R/PTSDdiag)",
+      "url": "https://cran.r-project.org/package=PTSDdiag",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "PeerPerformance",
+      "version": "2.4.0",
+      "type": "updated",
+      "description": "Luck-Corrected Peer Performance Analysis in R - [diffify](https://diffify.com/R/PeerPerformance)",
+      "url": "https://cran.r-project.org/package=PeerPerformance",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "PhysMove",
+      "version": "1.2.4",
+      "type": "new",
+      "description": "Quantifying Animal Movement and Space-Use Patterns with Statistical Physics",
+      "url": "https://cran.r-project.org/package=PhysMove",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "PoultryEconR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Poultry Economic Analysis Tools",
+      "url": "https://cran.r-project.org/package=PoultryEconR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ProcessCapabilityR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Classical and Generalized Process Capability Indices",
+      "url": "https://cran.r-project.org/package=ProcessCapabilityR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "PsyMetricTools",
+      "version": "1.2.2",
+      "type": "new",
+      "description": "Psychometric and Statistical Analysis Tools",
+      "url": "https://cran.r-project.org/package=PsyMetricTools",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RCppAD",
+      "version": "1.20260000.0",
+      "type": "new",
+      "description": "'CppAD' C++ Header Files for Automatic Differentiation",
+      "url": "https://cran.r-project.org/package=RCppAD",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RGDrivers",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Analysis of Stream Network Topology and Order",
+      "url": "https://cran.r-project.org/package=RGDrivers",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RIFanalysis",
+      "version": "0.9.1",
+      "type": "new",
+      "description": "Relative Importance Factor Analysis",
+      "url": "https://cran.r-project.org/package=RIFanalysis",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RNetCDF",
+      "version": "2.11-2",
+      "type": "updated",
+      "description": "Interface to 'NetCDF' Datasets - [diffify](https://diffify.com/R/RNetCDF)",
+      "url": "https://cran.r-project.org/package=RNetCDF",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RPesto",
+      "version": "0.1.5",
+      "type": "updated",
+      "description": "Phylogenetic Estimation of Shifts in the Tempo of Origination - [diffify](https://diffify.com/R/RPesto)",
+      "url": "https://cran.r-project.org/package=RPesto",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RSDC",
+      "version": "1.7-0",
+      "type": "updated",
+      "description": "Regime-Switching Dynamic Correlation Models - [diffify](https://diffify.com/R/RSDC)",
+      "url": "https://cran.r-project.org/package=RSDC",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RaCE.NMA",
+      "version": "1.2.0",
+      "type": "updated",
+      "description": "Rank-Clustered Estimation for Network Meta-Analysis - [diffify](https://diffify.com/R/RaCE.NMA)",
+      "url": "https://cran.r-project.org/package=RaCE.NMA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RegCalib",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Regression Calibration for Measurement Error Correction",
+      "url": "https://cran.r-project.org/package=RegCalib",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Rhobots",
+      "version": "0.1.10",
+      "type": "new",
+      "description": "'BERTopic'-Style Topic Modeling Without 'Python'",
+      "url": "https://cran.r-project.org/package=Rhobots",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Rhpc",
+      "version": "0.26.5",
+      "type": "updated",
+      "description": "Apply-Style Dispatch for High-Performance Computing - [diffify](https://diffify.com/R/Rhpc)",
+      "url": "https://cran.r-project.org/package=Rhpc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "RougeLM",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Data Accompanying the Book \"The Rogue's Guide to Linear Models\"",
+      "url": "https://cran.r-project.org/package=RougeLM",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SMOARIMA",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Automatic ARIMA Order Selection Using Spider Monkey Optimization",
+      "url": "https://cran.r-project.org/package=SMOARIMA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SampleSizeR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Sample Size Calculations for Epidemiological, Clinical, and Diagnostic Studies",
+      "url": "https://cran.r-project.org/package=SampleSizeR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SeattleOpenData",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A Lightweight Interface to Seattle Open Data APIs",
+      "url": "https://cran.r-project.org/package=SeattleOpenData",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SemiParamBernsteinDepCS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Semiparametric Bayesian Regression for Dependent Current Status",
+      "url": "https://cran.r-project.org/package=SemiParamBernsteinDepCS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SingRegKrig",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Singularity Regression Kriging for Spatial Prediction",
+      "url": "https://cran.r-project.org/package=SingRegKrig",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SporeLag",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Lagged and Moving-Average Exposure Features for Aeroallergen Epidemiology",
+      "url": "https://cran.r-project.org/package=SporeLag",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "StressCensoR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Stress-Strength Reliability Estimation Under",
+      "url": "https://cran.r-project.org/package=StressCensoR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "SurvDisc",
+      "version": "0.1.2",
+      "type": "updated",
+      "description": "Discrete Time Survival and Longitudinal Data Analysis - [diffify](https://diffify.com/R/SurvDisc)",
+      "url": "https://cran.r-project.org/package=SurvDisc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "TH",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Educational Hypothesis Tests in R",
+      "url": "https://cran.r-project.org/package=TH",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "TKApprox",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A General Framework for Bayesian Estimation Using the 'Tierney'-'Kadane' Approximation",
+      "url": "https://cran.r-project.org/package=TKApprox",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "TTE",
+      "version": "1.1.1",
+      "type": "new",
+      "description": "Design and Analysis Tools for Target Trial Emulation",
+      "url": "https://cran.r-project.org/package=TTE",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "UniIS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Importance Sampling Inference for Censored Univariate Data",
+      "url": "https://cran.r-project.org/package=UniIS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "UniLindleyApprox",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Bayesian Point Estimation Using Lindley's Approximation Under Censoring Schemes",
+      "url": "https://cran.r-project.org/package=UniLindleyApprox",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "Usmile",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Threshold-Free Class-Specific Comparison of Binary Classifiers",
+      "url": "https://cran.r-project.org/package=Usmile",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "WFC",
+      "version": "2.0.1",
+      "type": "new",
+      "description": "Workflow-Oriented Survey Weight Calibration",
+      "url": "https://cran.r-project.org/package=WFC",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "WebGestaltR",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Gene Set Analysis Toolkit WebGestaltR - [diffify](https://diffify.com/R/WebGestaltR)",
+      "url": "https://cran.r-project.org/package=WebGestaltR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "WeightIt",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "Weighting for Covariate Balance in Observational Studies - [diffify](https://diffify.com/R/WeightIt)",
+      "url": "https://cran.r-project.org/package=WeightIt",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "acR",
+      "version": "0.3.2",
+      "type": "new",
+      "description": "Content Analysis in R: Integrated Qualitative (LLMs) and Quantitative Pipeline",
+      "url": "https://cran.r-project.org/package=acR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "actinet",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Estimate Human Activity from 'Accelerometry' Data",
+      "url": "https://cran.r-project.org/package=actinet",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "agecrypt",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "File Encryption with the 'age' Format",
+      "url": "https://cran.r-project.org/package=agecrypt",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "agridatasets",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A Comprehensive Collection of Agricultural and Agronomic Datasets",
+      "url": "https://cran.r-project.org/package=agridatasets",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "amregtest",
+      "version": "1.3.2",
+      "type": "updated",
+      "description": "Runs Allelematch Regression Tests - [diffify](https://diffify.com/R/amregtest)",
+      "url": "https://cran.r-project.org/package=amregtest",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "apache.sedona",
+      "version": "1.9.1",
+      "type": "updated",
+      "description": "R Interface for Apache Sedona - [diffify](https://diffify.com/R/apache.sedona)",
+      "url": "https://cran.r-project.org/package=apache.sedona",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "aplotExtra",
+      "version": "0.0.6",
+      "type": "updated",
+      "description": "Creating Composite Plots using 'aplot' - [diffify](https://diffify.com/R/aplotExtra)",
+      "url": "https://cran.r-project.org/package=aplotExtra",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ascribe",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Static Detection and Citation of R Package and Function Usage",
+      "url": "https://cran.r-project.org/package=ascribe",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "asleep",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Estimate Sleep from 'Accelerometry' Data",
+      "url": "https://cran.r-project.org/package=asleep",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "astgrepr",
+      "version": "0.1.2",
+      "type": "updated",
+      "description": "Parse and Manipulate R Code - [diffify](https://diffify.com/R/astgrepr)",
+      "url": "https://cran.r-project.org/package=astgrepr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "autodb",
+      "version": "3.3.0",
+      "type": "updated",
+      "description": "Automatic Database Normalisation for Data Frames - [diffify](https://diffify.com/R/autodb)",
+      "url": "https://cran.r-project.org/package=autodb",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bases",
+      "version": "0.2.1",
+      "type": "updated",
+      "description": "Basis Expansions for Regression Modeling - [diffify](https://diffify.com/R/bases)",
+      "url": "https://cran.r-project.org/package=bases",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bayesRecon",
+      "version": "1.0.2",
+      "type": "updated",
+      "description": "Probabilistic Reconciliation via Conditioning - [diffify](https://diffify.com/R/bayesRecon)",
+      "url": "https://cran.r-project.org/package=bayesRecon",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bgms",
+      "version": "0.2.0.0",
+      "type": "updated",
+      "description": "Bayesian Analysis of Graphical Models - [diffify](https://diffify.com/R/bgms)",
+      "url": "https://cran.r-project.org/package=bgms",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bigbang",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Build 'Tidyverse'-Style Meta-Packages from Local Package Files",
+      "url": "https://cran.r-project.org/package=bigbang",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "binxr",
+      "version": "0.1.2",
+      "type": "updated",
+      "description": "'Binance' REST API Client - [diffify](https://diffify.com/R/binxr)",
+      "url": "https://cran.r-project.org/package=binxr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "blockr.session",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Session Management for 'blockr'",
+      "url": "https://cran.r-project.org/package=blockr.session",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bluertopo",
+      "version": "0.0.1",
+      "type": "new",
+      "description": "Download and Extract BlueTopo Bathymetry with Terra",
+      "url": "https://cran.r-project.org/package=bluertopo",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "brazilmaps",
+      "version": "1.0.0",
+      "type": "updated",
+      "description": "Brazilian Maps from Different Geographic Levels - [diffify](https://diffify.com/R/brazilmaps)",
+      "url": "https://cran.r-project.org/package=brazilmaps",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bslib",
+      "version": "0.12.0",
+      "type": "updated",
+      "description": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown' - [diffify](https://diffify.com/R/bslib)",
+      "url": "https://cran.r-project.org/package=bslib",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "bufferscape",
+      "version": "1.0.3",
+      "type": "new",
+      "description": "Distance-Weighted Landscape Composition in Buffers Around Point Locations",
+      "url": "https://cran.r-project.org/package=bufferscape",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "campsis",
+      "version": "1.9.0",
+      "type": "updated",
+      "description": "Generic PK/PD Simulation Platform Campsis - [diffify](https://diffify.com/R/campsis)",
+      "url": "https://cran.r-project.org/package=campsis",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "cardinalfda",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "FDA Safety Tables and Figures",
+      "url": "https://cran.r-project.org/package=cardinalfda",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "castor",
+      "version": "1.8.7",
+      "type": "updated",
+      "description": "Efficient Phylogenetics on Large Trees - [diffify](https://diffify.com/R/castor)",
+      "url": "https://cran.r-project.org/package=castor",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "causalgenerics",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Shared Generics for the 'r-causal' Ecosystem",
+      "url": "https://cran.r-project.org/package=causalgenerics",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "censosbo",
+      "version": "2.0.0",
+      "type": "new",
+      "description": "Access and Analysis of Bolivian Census Microdata",
+      "url": "https://cran.r-project.org/package=censosbo",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "chaidr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "CHAID and Exhaustive CHAID Decision Trees",
+      "url": "https://cran.r-project.org/package=chaidr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "cincinnatiOpenData",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A Lightweight Interface to Cincinnati Open Data APIs",
+      "url": "https://cran.r-project.org/package=cincinnatiOpenData",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "class",
+      "version": "7.3-24",
+      "type": "updated",
+      "description": "Functions for Classification - [diffify](https://diffify.com/R/class)",
+      "url": "https://cran.r-project.org/package=class",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "climateBR",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Download Rainfall, Temperature, and Wind Data from Brazil",
+      "url": "https://cran.r-project.org/package=climateBR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "closecity",
+      "version": "1.5.0",
+      "type": "new",
+      "description": "Client for the 'Close' API",
+      "url": "https://cran.r-project.org/package=closecity",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "cmrdesign",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Conditional Minimax Regret Design Rules",
+      "url": "https://cran.r-project.org/package=cmrdesign",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "cochranSize",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Sample Size Calculation Using Cochran's Formula",
+      "url": "https://cran.r-project.org/package=cochranSize",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "codriver",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Context-Aware AI Assistant for 'RStudio'",
+      "url": "https://cran.r-project.org/package=codriver",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "commons",
+      "version": "0.0.1",
+      "type": "new",
+      "description": "AI Agents for Data Analysis",
+      "url": "https://cran.r-project.org/package=commons",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "compost",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Video Compositing via 'FFmpeg'",
+      "url": "https://cran.r-project.org/package=compost",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "compstatslib",
+      "version": "0.8.0",
+      "type": "new",
+      "description": "Interactive 2D and 3D Visualization of Data and Statistical Concepts",
+      "url": "https://cran.r-project.org/package=compstatslib",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "controlcharts",
+      "version": "0.0.19",
+      "type": "new",
+      "description": "Interactive Plotting for Funnel Plots and Statistical Process Control Charts",
+      "url": "https://cran.r-project.org/package=controlcharts",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "cpge",
+      "version": "1.0.1",
+      "type": "new",
+      "description": "Career Possibilities after French Selective Engineering Schools in France",
+      "url": "https://cran.r-project.org/package=cpge",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "crbcc",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "C R Bytecode Compiler",
+      "url": "https://cran.r-project.org/package=crbcc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "dashboardapi",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Access Japan's Statistics Dashboard API",
+      "url": "https://cran.r-project.org/package=dashboardapi",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "densemlp",
+      "version": "0.5.0",
+      "type": "new",
+      "description": "Dense Neural Networks for Tabular Classification and Regression",
+      "url": "https://cran.r-project.org/package=densemlp",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "deriva",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Tidy Drift Detection for Monitored Machine Learning Models",
+      "url": "https://cran.r-project.org/package=deriva",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "diffuseR",
+      "version": "0.2.2",
+      "type": "new",
+      "description": "Functional Interface to Diffusion Models in R",
+      "url": "https://cran.r-project.org/package=diffuseR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "dispersionIndicators",
+      "version": "0.1.6",
+      "type": "updated",
+      "description": "Indicators for the Analysis of Dispersion of Datasets with Batched and Ordered Samples - [diffify](https://diffify.com/R/dispersionIndicators)",
+      "url": "https://cran.r-project.org/package=dispersionIndicators",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "distspec",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Probability Distributions with Certain or Uncertain Parameters",
+      "url": "https://cran.r-project.org/package=distspec",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "dlmtree",
+      "version": "1.2.0",
+      "type": "updated",
+      "description": "Bayesian Treed Distributed Lag Models - [diffify](https://diffify.com/R/dlmtree)",
+      "url": "https://cran.r-project.org/package=dlmtree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "dwg2geo",
+      "version": "0.2.4",
+      "type": "updated",
+      "description": "Convert Engineering 'DWG' Drawings to Auditable 'GeoJSON' - [diffify](https://diffify.com/R/dwg2geo)",
+      "url": "https://cran.r-project.org/package=dwg2geo",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "dynamicmultiplex",
+      "version": "1.1.0",
+      "type": "new",
+      "description": "Community Detection for Evolving Multiplex Networks",
+      "url": "https://cran.r-project.org/package=dynamicmultiplex",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "easyPSID",
+      "version": "0.1.3",
+      "type": "updated",
+      "description": "Reading, Formatting, and Organizing the Panel Study of Income Dynamics (PSID) - [diffify](https://diffify.com/R/easyPSID)",
+      "url": "https://cran.r-project.org/package=easyPSID",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ecoregime",
+      "version": "0.4.1",
+      "type": "updated",
+      "description": "Analysis of Ecological Dynamic Regimes - [diffify](https://diffify.com/R/ecoregime)",
+      "url": "https://cran.r-project.org/package=ecoregime",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "epiR",
+      "version": "2.0.96",
+      "type": "updated",
+      "description": "Tools for the Analysis of Epidemiological Data - [diffify](https://diffify.com/R/epiR)",
+      "url": "https://cran.r-project.org/package=epiR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "epibyhand",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Worked Derivations for Classical Epidemiological Measures",
+      "url": "https://cran.r-project.org/package=epibyhand",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "epidesc",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Calculation of Epidemiological Descriptors",
+      "url": "https://cran.r-project.org/package=epidesc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "erglm",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Exposure-Response Tools for GLM-Based Models",
+      "url": "https://cran.r-project.org/package=erglm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "falsifyr",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Adversarial Robustness Attacks for Statistical Claims",
+      "url": "https://cran.r-project.org/package=falsifyr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "fastrda",
+      "version": "0.1.2",
+      "type": "new",
+      "description": "Fast Redundancy Analysis (RDA) with High-Performance 'C++' Backend",
+      "url": "https://cran.r-project.org/package=fastrda",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "fipp",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Induced Priors in Bayesian Mixture Models - [diffify](https://diffify.com/R/fipp)",
+      "url": "https://cran.r-project.org/package=fipp",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "fitVARMxID",
+      "version": "1.0.5",
+      "type": "updated",
+      "description": "Fit the Vector Autoregressive Model for Multiple Individuals - [diffify](https://diffify.com/R/fitVARMxID)",
+      "url": "https://cran.r-project.org/package=fitVARMxID",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "fitdistrBayes",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Objective Bayesian Distribution Fitting",
+      "url": "https://cran.r-project.org/package=fitdistrBayes",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "fracreg",
+      "version": "1.0.1",
+      "type": "new",
+      "description": "Fractional Response Regressions",
+      "url": "https://cran.r-project.org/package=fracreg",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ftsspec",
+      "version": "1.0.1",
+      "type": "updated",
+      "description": "Spectral Density Estimation and Comparison for Functional Time Series - [diffify](https://diffify.com/R/ftsspec)",
+      "url": "https://cran.r-project.org/package=ftsspec",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gamm4",
+      "version": "0.3-0",
+      "type": "updated",
+      "description": "Generalized Additive Mixed Models using 'mgcv' and 'lme4' - [diffify](https://diffify.com/R/gamm4)",
+      "url": "https://cran.r-project.org/package=gamm4",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gbif.range",
+      "version": "1.9.1",
+      "type": "new",
+      "description": "Species Range Mapping from GBIF Using Ecoregion Constraints",
+      "url": "https://cran.r-project.org/package=gbif.range",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gconsensus",
+      "version": "0.3.2.1",
+      "type": "updated",
+      "description": "Consensus Value Constructor - [diffify](https://diffify.com/R/gconsensus)",
+      "url": "https://cran.r-project.org/package=gconsensus",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gee",
+      "version": "4.13-30",
+      "type": "updated",
+      "description": "Generalized Estimation Equation Solver - [diffify](https://diffify.com/R/gee)",
+      "url": "https://cran.r-project.org/package=gee",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ggm",
+      "version": "2.5.4",
+      "type": "updated",
+      "description": "Graphical Markov Models with Mixed Graphs - [diffify](https://diffify.com/R/ggm)",
+      "url": "https://cran.r-project.org/package=ggm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ggmultiglyph",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Multivariate Data Visualization using Glyphs",
+      "url": "https://cran.r-project.org/package=ggmultiglyph",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ggpalettes",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Curated Colour Palettes and Scales for 'ggplot2'",
+      "url": "https://cran.r-project.org/package=ggpalettes",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ghcclm",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Hybrid Contrast Coding in Linear Models",
+      "url": "https://cran.r-project.org/package=ghcclm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "glcdp",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Discover, Access, and Import Global Light Commons Data Packages",
+      "url": "https://cran.r-project.org/package=glcdp",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "glmbayes",
+      "version": "0.9.75",
+      "type": "updated",
+      "description": "Bayesian Generalized Linear Models (IID Samples) - [diffify](https://diffify.com/R/glmbayes)",
+      "url": "https://cran.r-project.org/package=glmbayes",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "glmbayesCore",
+      "version": "0.5.3",
+      "type": "new",
+      "description": "Core C++ Sampling Engine for 'glmbayes'",
+      "url": "https://cran.r-project.org/package=glmbayesCore",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gmeans",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "G-means Clustering",
+      "url": "https://cran.r-project.org/package=gmeans",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gmvarkit",
+      "version": "2.2.2",
+      "type": "updated",
+      "description": "Estimate Gaussian and Student's t Mixture Vector Autoregressive Models - [diffify](https://diffify.com/R/gmvarkit)",
+      "url": "https://cran.r-project.org/package=gmvarkit",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gofPHCS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Goodness-of-Fit Tests for Complete, Progressively Type-II, Type-I Hybrid, and Type-II Hybrid Censored Data",
+      "url": "https://cran.r-project.org/package=gofPHCS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gpciEMprogII",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Process Capability Indices via EM Algorithm under Progressive Type-II Censoring",
+      "url": "https://cran.r-project.org/package=gpciEMprogII",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gpciImpSam",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Importance Sampling Estimation of Generalized Process Capability Indices",
+      "url": "https://cran.r-project.org/package=gpciImpSam",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gpciIntCensor",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Process Capability Indices for Interval-Censored Data",
+      "url": "https://cran.r-project.org/package=gpciIntCensor",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gpciProgTyII",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Process Capability Indices under Progressive Type-II Censoring",
+      "url": "https://cran.r-project.org/package=gpciProgTyII",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "gpciProgTyIIImpSam",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Generalized Process Capability Indices for Progressive Type-II Censored Data using Importance Sampling",
+      "url": "https://cran.r-project.org/package=gpciProgTyIIImpSam",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "grangers",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Inference on Granger-Causality in the Frequency Domain - [diffify](https://diffify.com/R/grangers)",
+      "url": "https://cran.r-project.org/package=grangers",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "grip",
+      "version": "0.1.2",
+      "type": "new",
+      "description": "Graph Drawing with Intelligent Placement (GRIP)",
+      "url": "https://cran.r-project.org/package=grip",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "guess",
+      "version": "0.7.0",
+      "type": "updated",
+      "description": "Adjust Estimates of Learning for Guessing - [diffify](https://diffify.com/R/guess)",
+      "url": "https://cran.r-project.org/package=guess",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "guideR",
+      "version": "0.11.0",
+      "type": "updated",
+      "description": "Miscellaneous Statistical Functions Used in 'guide-R' - [diffify](https://diffify.com/R/guideR)",
+      "url": "https://cran.r-project.org/package=guideR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "hdd",
+      "version": "0.1.2",
+      "type": "updated",
+      "description": "Easy Manipulation of Out of Memory Data Sets - [diffify](https://diffify.com/R/hdd)",
+      "url": "https://cran.r-project.org/package=hdd",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "huge",
+      "version": "2.0.1",
+      "type": "updated",
+      "description": "High-Dimensional Undirected Graph Estimation - [diffify](https://diffify.com/R/huge)",
+      "url": "https://cran.r-project.org/package=huge",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "hydroloom",
+      "version": "1.2.1",
+      "type": "updated",
+      "description": "Utilities to Weave Hydrologic Fabrics - [diffify](https://diffify.com/R/hydroloom)",
+      "url": "https://cran.r-project.org/package=hydroloom",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "iC10",
+      "version": "2.0.3",
+      "type": "updated",
+      "description": "A Copy Number and Expression-Based Classifier for Breast Tumours - [diffify](https://diffify.com/R/iC10)",
+      "url": "https://cran.r-project.org/package=iC10",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ibdsim2",
+      "version": "2.3.3",
+      "type": "updated",
+      "description": "Simulation of Chromosomal Regions Shared by Family Members - [diffify](https://diffify.com/R/ibdsim2)",
+      "url": "https://cran.r-project.org/package=ibdsim2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "idiographic",
+      "version": "0.3.2",
+      "type": "new",
+      "description": "Person-Specific (Idiographic) and Heterogeneous Complex Networks",
+      "url": "https://cran.r-project.org/package=idiographic",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "inferstat",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Publication-Ready Inferential Statistics and Visualization",
+      "url": "https://cran.r-project.org/package=inferstat",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "invasible",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Predicting Invasion Probabilities from Phylogenetic Data and Species Traits - [diffify](https://diffify.com/R/invasible)",
+      "url": "https://cran.r-project.org/package=invasible",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ip2location",
+      "version": "8.1.4",
+      "type": "updated",
+      "description": "Lookup for IP Address Information - [diffify](https://diffify.com/R/ip2location)",
+      "url": "https://cran.r-project.org/package=ip2location",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ipwCoxCSV",
+      "version": "1.1",
+      "type": "updated",
+      "description": "Corrected Sandwich Inference for Inverse Probability Weighted Cox Models - [diffify](https://diffify.com/R/ipwCoxCSV)",
+      "url": "https://cran.r-project.org/package=ipwCoxCSV",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "irid",
+      "version": "0.3.0",
+      "type": "new",
+      "description": "Component-Based 'Shiny' UI with Fine-Grained Reactivity",
+      "url": "https://cran.r-project.org/package=irid",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "jiebaRS",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Chinese Text Segmentation, POS Tagging, and Keyword Extraction",
+      "url": "https://cran.r-project.org/package=jiebaRS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ks",
+      "version": "1.15.3",
+      "type": "updated",
+      "description": "Kernel Smoothing - [diffify](https://diffify.com/R/ks)",
+      "url": "https://cran.r-project.org/package=ks",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "lame",
+      "version": "1.3.4",
+      "type": "new",
+      "description": "Longitudinal Additive and Multiplicative Effects Models for Networks",
+      "url": "https://cran.r-project.org/package=lame",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "lgspline",
+      "version": "1.2.1",
+      "type": "updated",
+      "description": "Lagrangian Multiplier Smoothing Splines for Smooth Function Estimation - [diffify](https://diffify.com/R/lgspline)",
+      "url": "https://cran.r-project.org/package=lgspline",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "libcmaesr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "R Interface to 'libcmaes'",
+      "url": "https://cran.r-project.org/package=libcmaesr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "libr",
+      "version": "1.4.2",
+      "type": "updated",
+      "description": "Libraries, Data Dictionaries, and a Data Step for R - [diffify](https://diffify.com/R/libr)",
+      "url": "https://cran.r-project.org/package=libr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "linf",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "L-Infinity Normalization and Dominant Community State Types",
+      "url": "https://cran.r-project.org/package=linf",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "litReview",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Summarizing Graphs for Literature Reviews",
+      "url": "https://cran.r-project.org/package=litReview",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "liteformats",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Lightweight Output Formats for 'litedown'",
+      "url": "https://cran.r-project.org/package=liteformats",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "llm.api",
+      "version": "0.1.9",
+      "type": "updated",
+      "description": "Minimal LLM Chat Interface - [diffify](https://diffify.com/R/llm.api)",
+      "url": "https://cran.r-project.org/package=llm.api",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "loclm",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Local Linear Regression",
+      "url": "https://cran.r-project.org/package=loclm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "log4r",
+      "version": "0.5.0",
+      "type": "updated",
+      "description": "A Fast and Lightweight Logging System for R, Based on 'log4j' - [diffify](https://diffify.com/R/log4r)",
+      "url": "https://cran.r-project.org/package=log4r",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "logtree",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Tree-Style Console Logger for Nested Processes",
+      "url": "https://cran.r-project.org/package=logtree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "lonelyr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Scoring for Common Loneliness Scales",
+      "url": "https://cran.r-project.org/package=lonelyr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "lstar",
+      "version": "0.2.2",
+      "type": "updated",
+      "description": "Uniform Data Model and 'Zarr' Interchange for Single-Cell Omics - [diffify](https://diffify.com/R/lstar)",
+      "url": "https://cran.r-project.org/package=lstar",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "malp",
+      "version": "1.1-0",
+      "type": "new",
+      "description": "Maximum Agreement Linear Prediction",
+      "url": "https://cran.r-project.org/package=malp",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "maq",
+      "version": "0.6.1",
+      "type": "updated",
+      "description": "Multi-Armed Qini - [diffify](https://diffify.com/R/maq)",
+      "url": "https://cran.r-project.org/package=maq",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mcplite",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Lightweight Stdio MCP Server for R",
+      "url": "https://cran.r-project.org/package=mcplite",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "misty",
+      "version": "0.8.3",
+      "type": "updated",
+      "description": "Miscellaneous Functions 'T. Yanagida' - [diffify](https://diffify.com/R/misty)",
+      "url": "https://cran.r-project.org/package=misty",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mixedBayes",
+      "version": "0.2.6",
+      "type": "updated",
+      "description": "Bayesian Longitudinal Regularized Quantile Mixed Model - [diffify](https://diffify.com/R/mixedBayes)",
+      "url": "https://cran.r-project.org/package=mixedBayes",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mizer",
+      "version": "3.2.1",
+      "type": "updated",
+      "description": "Dynamic Multi-Species Size Spectrum Modelling - [diffify](https://diffify.com/R/mizer)",
+      "url": "https://cran.r-project.org/package=mizer",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mlr3spatiotempcv",
+      "version": "2.3.5",
+      "type": "updated",
+      "description": "Spatiotemporal Resampling Methods for 'mlr3' - [diffify](https://diffify.com/R/mlr3spatiotempcv)",
+      "url": "https://cran.r-project.org/package=mlr3spatiotempcv",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mobdb",
+      "version": "1.0.1",
+      "type": "new",
+      "description": "Access the 'Mobility Database' API to Discover Transit Feeds",
+      "url": "https://cran.r-project.org/package=mobdb",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mochita",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Test R Web Applications",
+      "url": "https://cran.r-project.org/package=mochita",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "moderndive",
+      "version": "0.8.0",
+      "type": "updated",
+      "description": "Tidyverse-Friendly Introductory Linear Regression - [diffify](https://diffify.com/R/moderndive)",
+      "url": "https://cran.r-project.org/package=moderndive",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "moranajp",
+      "version": "0.9.8",
+      "type": "updated",
+      "description": "Morphological Analysis for Japanese - [diffify](https://diffify.com/R/moranajp)",
+      "url": "https://cran.r-project.org/package=moranajp",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mritc",
+      "version": "0.6.1",
+      "type": "updated",
+      "description": "MRI Tissue Classification - [diffify](https://diffify.com/R/mritc)",
+      "url": "https://cran.r-project.org/package=mritc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "multichainr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "R Interface to the 'MultiChain' Blockchain RPC API",
+      "url": "https://cran.r-project.org/package=multichainr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "mutator",
+      "version": "0.2.1",
+      "type": "new",
+      "description": "Mutation Testing",
+      "url": "https://cran.r-project.org/package=mutator",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nanoarrow",
+      "version": "0.9.0",
+      "type": "updated",
+      "description": "Interface to the 'nanoarrow' 'C' Library - [diffify](https://diffify.com/R/nanoarrow)",
+      "url": "https://cran.r-project.org/package=nanoarrow",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nat",
+      "version": "1.8.26",
+      "type": "updated",
+      "description": "NeuroAnatomy Toolbox for Analysis of 3D Image Data - [diffify](https://diffify.com/R/nat)",
+      "url": "https://cran.r-project.org/package=nat",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "needenv",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Validate Required Environment Variables with Defaults",
+      "url": "https://cran.r-project.org/package=needenv",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "neo2R",
+      "version": "3.1.1",
+      "type": "updated",
+      "description": "Neo4j to R - [diffify](https://diffify.com/R/neo2R)",
+      "url": "https://cran.r-project.org/package=neo2R",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "neuralsbi",
+      "version": "0.3.2",
+      "type": "new",
+      "description": "Neural Simulation-Based Inference",
+      "url": "https://cran.r-project.org/package=neuralsbi",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nhsbsa",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Client for the NHS Business Services Authority Open Data Portal",
+      "url": "https://cran.r-project.org/package=nhsbsa",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nimbleExtra",
+      "version": "0.1.15",
+      "type": "new",
+      "description": "Interoperating with 'NIMBLE' for Generic Analysis of MCMC Samples",
+      "url": "https://cran.r-project.org/package=nimbleExtra",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nlmixr2",
+      "version": "7.0.1",
+      "type": "updated",
+      "description": "Nonlinear Mixed Effects Models in Population PK/PD - [diffify](https://diffify.com/R/nlmixr2)",
+      "url": "https://cran.r-project.org/package=nlmixr2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nlmixr2est",
+      "version": "7.0.2",
+      "type": "updated",
+      "description": "Nonlinear Mixed Effects Models in Population PK/PD, Estimation Routines - [diffify](https://diffify.com/R/nlmixr2est)",
+      "url": "https://cran.r-project.org/package=nlmixr2est",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nlmixr2extra",
+      "version": "5.2.0",
+      "type": "updated",
+      "description": "Nonlinear Mixed Effects Models in Population PK/PD, Extra Support Functions - [diffify](https://diffify.com/R/nlmixr2extra)",
+      "url": "https://cran.r-project.org/package=nlmixr2extra",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nnet",
+      "version": "7.3-21",
+      "type": "updated",
+      "description": "Feed-Forward Neural Networks and Multinomial Log-Linear Models - [diffify](https://diffify.com/R/nnet)",
+      "url": "https://cran.r-project.org/package=nnet",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "nof1kit",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Design, Monitor, and Analyze Single-Case (N-of-1) Intensive Longitudinal Studies",
+      "url": "https://cran.r-project.org/package=nof1kit",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "npwbs",
+      "version": "0.5.0",
+      "type": "updated",
+      "description": "Nonparametric Multiple Change Point Detection Using Wild Binary Segmentation - [diffify](https://diffify.com/R/npwbs)",
+      "url": "https://cran.r-project.org/package=npwbs",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "oddsapiio",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Client for the 'Odds-API.io' Sports Betting Odds API",
+      "url": "https://cran.r-project.org/package=oddsapiio",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "openesm",
+      "version": "0.2.1",
+      "type": "updated",
+      "description": "Access the Open Experience Sampling Method Database - [diffify](https://diffify.com/R/openesm)",
+      "url": "https://cran.r-project.org/package=openesm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "orbis",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Interactive and High-Resolution Layered Graphics with Built-in World Maps",
+      "url": "https://cran.r-project.org/package=orbis",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "packageRankWrapperDriver",
+      "version": "1.0",
+      "type": "new",
+      "description": "Wrapper to Facilitate Tabulating the Daily Quartile Ranking of Downloads of your Packages",
+      "url": "https://cran.r-project.org/package=packageRankWrapperDriver",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "paintr",
+      "version": "0.0.1",
+      "type": "new",
+      "description": "Create Graphics of 'R' Data Structures",
+      "url": "https://cran.r-project.org/package=paintr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "palr",
+      "version": "0.5.0",
+      "type": "updated",
+      "description": "Colour Palettes for Data - [diffify](https://diffify.com/R/palr)",
+      "url": "https://cran.r-project.org/package=palr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "panelTool",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Build Regularly Spaced Panels from Irregularly Spaced Longitudinal Data",
+      "url": "https://cran.r-project.org/package=panelTool",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "pathintdid",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Path-Integrated Difference-in-Differences",
+      "url": "https://cran.r-project.org/package=pathintdid",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "persuasio",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Causal Inference on Persuasion Effects",
+      "url": "https://cran.r-project.org/package=persuasio",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "pkgmd",
+      "version": "0.1",
+      "type": "new",
+      "description": "Generate Markdown Reference Documentation for R Packages",
+      "url": "https://cran.r-project.org/package=pkgmd",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "policytree",
+      "version": "1.2.5",
+      "type": "updated",
+      "description": "Policy Learning via Doubly Robust Empirical Welfare Maximization over Trees - [diffify](https://diffify.com/R/policytree)",
+      "url": "https://cran.r-project.org/package=policytree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "polyglotSQL",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "SQL Parsing, Analysis and Dialect Translation",
+      "url": "https://cran.r-project.org/package=polyglotSQL",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "predHCS",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Point and Interval Prediction for Censored Data under Various Hybrid Censoring Schemes",
+      "url": "https://cran.r-project.org/package=predHCS",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "psreplicate",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Access the Political Science Replication Index from R",
+      "url": "https://cran.r-project.org/package=psreplicate",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "psychonetrics",
+      "version": "0.17.8",
+      "type": "updated",
+      "description": "Structural Equation Modeling and Confirmatory Network Analysis - [diffify](https://diffify.com/R/psychonetrics)",
+      "url": "https://cran.r-project.org/package=psychonetrics",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "psychotree",
+      "version": "0.16-3",
+      "type": "updated",
+      "description": "Recursive Partitioning Based on Psychometric Models - [diffify](https://diffify.com/R/psychotree)",
+      "url": "https://cran.r-project.org/package=psychotree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "qtsa",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Quantum Time Series Analysis: Drift, Noise Spectroscopy and Calibration Forecasting",
+      "url": "https://cran.r-project.org/package=qtsa",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "quanteda",
+      "version": "4.5.0",
+      "type": "updated",
+      "description": "Quantitative Analysis of Textual Data - [diffify](https://diffify.com/R/quanteda)",
+      "url": "https://cran.r-project.org/package=quanteda",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "quickcode",
+      "version": "1.1.0",
+      "type": "updated",
+      "description": "Quick and Essential 'R' Tricks for Better Scripts - [diffify](https://diffify.com/R/quickcode)",
+      "url": "https://cran.r-project.org/package=quickcode",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rKraken",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "'Kraken API'",
+      "url": "https://cran.r-project.org/package=rKraken",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ravel",
+      "version": "0.1.4",
+      "type": "updated",
+      "description": "AI Copilot for R Analysis Workflows in 'RStudio' - [diffify](https://diffify.com/R/ravel)",
+      "url": "https://cran.r-project.org/package=ravel",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rbcmodel",
+      "version": "1.0.1",
+      "type": "new",
+      "description": "Model Rubisco Carboxylation Rate Across Temperature, CO2, and O2",
+      "url": "https://cran.r-project.org/package=rbcmodel",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rcontroll",
+      "version": "0.1.3",
+      "type": "updated",
+      "description": "Individual-Based Forest Growth Simulator 'TROLL' - [diffify](https://diffify.com/R/rcontroll)",
+      "url": "https://cran.r-project.org/package=rcontroll",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rdomains",
+      "version": "0.5.0",
+      "type": "updated",
+      "description": "Get the Category of Content Hosted by a Domain - [diffify](https://diffify.com/R/rdomains)",
+      "url": "https://cran.r-project.org/package=rdomains",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "readaec",
+      "version": "0.2.0",
+      "type": "updated",
+      "description": "Access Australian Electoral Commission Data - [diffify](https://diffify.com/R/readaec)",
+      "url": "https://cran.r-project.org/package=readaec",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "repo",
+      "version": "2.1.7",
+      "type": "updated",
+      "description": "A Data-Centered Data Flow Manager - [diffify](https://diffify.com/R/repo)",
+      "url": "https://cran.r-project.org/package=repo",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "resourcecode",
+      "version": "0.5.5",
+      "type": "updated",
+      "description": "Access to the 'RESOURCECODE' Hindcast Database - [diffify](https://diffify.com/R/resourcecode)",
+      "url": "https://cran.r-project.org/package=resourcecode",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ribd",
+      "version": "1.7.2",
+      "type": "updated",
+      "description": "Pedigree-based Relatedness Coefficients - [diffify](https://diffify.com/R/ribd)",
+      "url": "https://cran.r-project.org/package=ribd",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rjd3qr",
+      "version": "0.4.2",
+      "type": "new",
+      "description": "'JDemetra+' Quality Report Generator",
+      "url": "https://cran.r-project.org/package=rjd3qr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rmoriebricklayer",
+      "version": "0.3.7",
+      "type": "new",
+      "description": "Reproducible Data Capsules with Provenance and Fallback",
+      "url": "https://cran.r-project.org/package=rmoriebricklayer",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rncl",
+      "version": "0.8.10",
+      "type": "updated",
+      "description": "An Interface to the Nexus Class Library - [diffify](https://diffify.com/R/rncl)",
+      "url": "https://cran.r-project.org/package=rncl",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rpanelauto",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Perform Automatic Estimation on Time Series in Multidimensional Panels",
+      "url": "https://cran.r-project.org/package=rpanelauto",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rtreeoflife",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Access Tree of Life Data Releases",
+      "url": "https://cran.r-project.org/package=rtreeoflife",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "rxode2",
+      "version": "5.1.6",
+      "type": "updated",
+      "description": "Facilities for Simulating from ODE-Based Models - [diffify](https://diffify.com/R/rxode2)",
+      "url": "https://cran.r-project.org/package=rxode2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sandwich",
+      "version": "3.1-3",
+      "type": "updated",
+      "description": "Robust Covariance Matrix Estimators - [diffify](https://diffify.com/R/sandwich)",
+      "url": "https://cran.r-project.org/package=sandwich",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sappviz",
+      "version": "1.0.16",
+      "type": "new",
+      "description": "Sector-Adjusted Points Plot for Feature Dominance",
+      "url": "https://cran.r-project.org/package=sappviz",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "scTenifoldNet",
+      "version": "1.4",
+      "type": "updated",
+      "description": "Construct and Compare scGRN from Single-Cell Transcriptomic Data - [diffify](https://diffify.com/R/scTenifoldNet)",
+      "url": "https://cran.r-project.org/package=scTenifoldNet",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sca",
+      "version": "0.9-3",
+      "type": "updated",
+      "description": "Simple Component Analysis - [diffify](https://diffify.com/R/sca)",
+      "url": "https://cran.r-project.org/package=sca",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "secfile",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "SEC 'EDGAR' APIs",
+      "url": "https://cran.r-project.org/package=secfile",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "secrfunc",
+      "version": "1.1.4",
+      "type": "updated",
+      "description": "Helper Functions for Package 'secr' - [diffify](https://diffify.com/R/secrfunc)",
+      "url": "https://cran.r-project.org/package=secrfunc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sfsmisc",
+      "version": "1.1-25",
+      "type": "updated",
+      "description": "Utilities from 'Seminar fuer Statistik' ETH Zurich - [diffify](https://diffify.com/R/sfsmisc)",
+      "url": "https://cran.r-project.org/package=sfsmisc",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "shinyelectron",
+      "version": "0.2.1",
+      "type": "new",
+      "description": "Export 'Shiny' Applications as Desktop Apps using 'Electron'",
+      "url": "https://cran.r-project.org/package=shinyelectron",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "shinyglass",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Liquid Glass Design Themes for 'shiny' Applications - [diffify](https://diffify.com/R/shinyglass)",
+      "url": "https://cran.r-project.org/package=shinyglass",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sigPCA",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Statistical Significance Testing for Principal Components",
+      "url": "https://cran.r-project.org/package=sigPCA",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "smoothROC",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Kernel-Smoothed ROC and AUC with Bandwidth Selection",
+      "url": "https://cran.r-project.org/package=smoothROC",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sondage",
+      "version": "0.9.1",
+      "type": "updated",
+      "description": "Survey Sampling Algorithms - [diffify](https://diffify.com/R/sondage)",
+      "url": "https://cran.r-project.org/package=sondage",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "spatial",
+      "version": "7.3-19",
+      "type": "updated",
+      "description": "Functions for Kriging and Point Pattern Analysis - [diffify](https://diffify.com/R/spatial)",
+      "url": "https://cran.r-project.org/package=spatial",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "spatialkit",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Spatial Tessellation, Modeling, and Cross-Validation Toolkit",
+      "url": "https://cran.r-project.org/package=spatialkit",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "specmine",
+      "version": "3.1.8",
+      "type": "updated",
+      "description": "Metabolomics and Spectral Data Analysis and Mining - [diffify](https://diffify.com/R/specmine)",
+      "url": "https://cran.r-project.org/package=specmine",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "spliv",
+      "version": "0.2.1",
+      "type": "updated",
+      "description": "Patterned Sensitivity Analysis for IV with Fixed Effects - [diffify](https://diffify.com/R/spliv)",
+      "url": "https://cran.r-project.org/package=spliv",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "ssddata",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "Species Sensitivity Distribution Data - [diffify](https://diffify.com/R/ssddata)",
+      "url": "https://cran.r-project.org/package=ssddata",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sstvars",
+      "version": "1.2.5",
+      "type": "updated",
+      "description": "Toolkit for Reduced Form and Structural Smooth Transition Vector Autoregressive Models - [diffify](https://diffify.com/R/sstvars)",
+      "url": "https://cran.r-project.org/package=sstvars",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "statim",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "A Declarative Interface for Statistical Inference",
+      "url": "https://cran.r-project.org/package=statim",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "stringfish",
+      "version": "0.19.2",
+      "type": "updated",
+      "description": "Alt String Implementation - [diffify](https://diffify.com/R/stringfish)",
+      "url": "https://cran.r-project.org/package=stringfish",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "stringi",
+      "version": "1.8.9",
+      "type": "updated",
+      "description": "Fast and Portable Character String Processing Facilities - [diffify](https://diffify.com/R/stringi)",
+      "url": "https://cran.r-project.org/package=stringi",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "stringmagic",
+      "version": "1.3.0",
+      "type": "updated",
+      "description": "Character String Operations and Interpolation, Magic Edition - [diffify](https://diffify.com/R/stringmagic)",
+      "url": "https://cran.r-project.org/package=stringmagic",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "strucchange",
+      "version": "1.6-0",
+      "type": "updated",
+      "description": "Testing, Monitoring, and Dating Structural Changes - [diffify](https://diffify.com/R/strucchange)",
+      "url": "https://cran.r-project.org/package=strucchange",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "sundialr",
+      "version": "0.2.0",
+      "type": "updated",
+      "description": "An Interface to 'SUNDIALS' Ordinary Differential Equation (ODE) Solvers - [diffify](https://diffify.com/R/sundialr)",
+      "url": "https://cran.r-project.org/package=sundialr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "swelex",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Access the Swedish Code of Statutes via Riksdagen's Open Data",
+      "url": "https://cran.r-project.org/package=swelex",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "syncons",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Efficient and Low-Cost Construction of Synthetic Communities",
+      "url": "https://cran.r-project.org/package=syncons",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tanner",
+      "version": "1.8.0",
+      "type": "new",
+      "description": "Puberty Stage Line Diagrams and SDS for Tanner Pubertal Stages",
+      "url": "https://cran.r-project.org/package=tanner",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tarpolyglot",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "Run Python, Julia, and Rust Inside 'targets' Pipeline Steps",
+      "url": "https://cran.r-project.org/package=tarpolyglot",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tejoR",
+      "version": "0.2.2",
+      "type": "new",
+      "description": "Statistical Harmonization of Territorial Series Across Changing Geographies",
+      "url": "https://cran.r-project.org/package=tejoR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "themis",
+      "version": "1.1.0",
+      "type": "updated",
+      "description": "Extra Recipes Steps for Dealing with Unbalanced Data - [diffify](https://diffify.com/R/themis)",
+      "url": "https://cran.r-project.org/package=themis",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tidyprf",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Tidy Access to Brazilian Federal Highway Police ('PRF') Data",
+      "url": "https://cran.r-project.org/package=tidyprf",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tinyarray",
+      "version": "3.0.0",
+      "type": "updated",
+      "description": "Expression Data Analysis and Visualization - [diffify](https://diffify.com/R/tinyarray)",
+      "url": "https://cran.r-project.org/package=tinyarray",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tinycache",
+      "version": "0.1",
+      "type": "new",
+      "description": "Cache Objects in Disk or Memory",
+      "url": "https://cran.r-project.org/package=tinycache",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tinyroxygen",
+      "version": "0.1",
+      "type": "new",
+      "description": "A Tiny 'Roxygen'-Style Documentation Generator",
+      "url": "https://cran.r-project.org/package=tinyroxygen",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "topocast",
+      "version": "0.0.5",
+      "type": "new",
+      "description": "Moving-Window Regression Downscaling of Raster Data",
+      "url": "https://cran.r-project.org/package=topocast",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tplyr2",
+      "version": "0.2.0",
+      "type": "new",
+      "description": "A Grammar of Clinical Summary Tables",
+      "url": "https://cran.r-project.org/package=tplyr2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "trajeR",
+      "version": "1.0",
+      "type": "updated",
+      "description": "Group Based Modeling Trajectory - [diffify](https://diffify.com/R/trajeR)",
+      "url": "https://cran.r-project.org/package=trajeR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "transferegovr",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Access the 'TransfereGov' Open Data APIs",
+      "url": "https://cran.r-project.org/package=transferegovr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tree",
+      "version": "1.0-47",
+      "type": "updated",
+      "description": "Classification and Regression Trees - [diffify](https://diffify.com/R/tree)",
+      "url": "https://cran.r-project.org/package=tree",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "triageR",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Automated Machine Learning and AI Agent Tools for Clinical Prediction Modelling - [diffify](https://diffify.com/R/triageR)",
+      "url": "https://cran.r-project.org/package=triageR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "trialSizing",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Tools for Experimental Design Sizing",
+      "url": "https://cran.r-project.org/package=trialSizing",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "tubern",
+      "version": "0.5.1",
+      "type": "updated",
+      "description": "R Client for the YouTube Analytics and Reporting API - [diffify](https://diffify.com/R/tubern)",
+      "url": "https://cran.r-project.org/package=tubern",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "uGMAR",
+      "version": "3.6.1",
+      "type": "updated",
+      "description": "Estimate Univariate Gaussian and Student's t Mixture Autoregressive Models - [diffify](https://diffify.com/R/uGMAR)",
+      "url": "https://cran.r-project.org/package=uGMAR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "upsetly",
+      "version": "0.1.1",
+      "type": "new",
+      "description": "Interactive UpSet Plots Using 'plotly'",
+      "url": "https://cran.r-project.org/package=upsetly",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "vcdExtra",
+      "version": "0.9.7",
+      "type": "updated",
+      "description": "'vcd' Extensions and Additions - [diffify](https://diffify.com/R/vcdExtra)",
+      "url": "https://cran.r-project.org/package=vcdExtra",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "vcfppR",
+      "version": "0.8.4",
+      "type": "updated",
+      "description": "Rapid Manipulation of the Variant Call Format (VCF) - [diffify](https://diffify.com/R/vcfppR)",
+      "url": "https://cran.r-project.org/package=vcfppR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "verifyr2",
+      "version": "1.3.0",
+      "type": "updated",
+      "description": "Compare and Verify File Contents - [diffify](https://diffify.com/R/verifyr2)",
+      "url": "https://cran.r-project.org/package=verifyr2",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "walking",
+      "version": "0.7.0",
+      "type": "new",
+      "description": "Segments Accelerometry Data into Walking Bouts using Open Source Methods",
+      "url": "https://cran.r-project.org/package=walking",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "whisper",
+      "version": "0.5.1",
+      "type": "updated",
+      "description": "Native R 'torch' Implementation of 'OpenAI' 'Whisper' - [diffify](https://diffify.com/R/whisper)",
+      "url": "https://cran.r-project.org/package=whisper",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "wordorientation",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Detect Attraction and Repulsion Between Words in Text",
+      "url": "https://cran.r-project.org/package=wordorientation",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "writexl",
+      "version": "2.0.0",
+      "type": "updated",
+      "description": "Export Data Frames to Excel 'xlsx' Format - [diffify](https://diffify.com/R/writexl)",
+      "url": "https://cran.r-project.org/package=writexl",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "xactonomial",
+      "version": "1.2.2",
+      "type": "updated",
+      "description": "Inference for Functions of Multinomial Parameters - [diffify](https://diffify.com/R/xactonomial)",
+      "url": "https://cran.r-project.org/package=xactonomial",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "xegaMigration",
+      "version": "0.5.0.4",
+      "type": "new",
+      "description": "'Xega' Island Models",
+      "url": "https://cran.r-project.org/package=xegaMigration",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "xgxr",
+      "version": "1.1.6",
+      "type": "updated",
+      "description": "Exploratory Graphics for Pharmacometrics - [diffify](https://diffify.com/R/xgxr)",
+      "url": "https://cran.r-project.org/package=xgxr",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "xsdm",
+      "version": "1.0.2",
+      "type": "new",
+      "description": "Demographic Approach to Species Distribution Model",
+      "url": "https://cran.r-project.org/package=xsdm",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "zentraR",
+      "version": "0.1.3",
+      "type": "new",
+      "description": "R Client for the ZENTRA Cloud V5 API",
+      "url": "https://cran.r-project.org/package=zentraR",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
+    {
+      "package_name": "zmij",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Round-Trip-Safe Double-Precision Formatting",
+      "url": "https://cran.r-project.org/package=zmij",
+      "post_date": "2026-08-10",
+      "week": "2026-W33"
+    },
     {
       "package_name": "BKBreed",
       "version": "0.3.2",
