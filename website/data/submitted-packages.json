@@ -95,7 +95,45 @@
       "submitted_at": "2026-07-09T22:11:16.094Z",
       "score": null,
       "stars": 0
+    },
+    {
+      "id": "submitted-50",
+      "package_name": "brfssdata",
+      "title": "Download, cache, and analyze 40 years of CDC BRFSS survey microdata with era-correct survey weights",
+      "description": "BRFSS is the largest continuously conducted health telephone survey in the world, but getting it into R has never been easy. CDC publishes each year as a SAS Transport file inside a ZIP archive, 300-plus columns wide, with variable names that drift across years, value labels that live only in PDF codebooks, and a weighting methodology break at 2011 that makes earlier and later estimates non-comparable. The usual workflow is to hand-download a ZIP, read it with haven, guess which weight column applies, and rebuild the survey design code from scratch every project.\n\nbrfssdata replaces that with three lines. Every survey year from 1985 through 2024 is processed once into a compact parquet file, hosted as a public GitHub release asset, and downloaded a single time into a local cache after verification against a published SHA-256 checksum. Queries run through DuckDB, so pulling a handful of variables from a 300-plus column file is fast and repeat analyses never re-transfer data. read_brfss() returns a tibble; brfss_design() returns a ready-made srvyr design object carrying the correct weight, strata, and primary sampling units for that survey era.\n\nDesign correctness is the default. brfss_design() selects _FINALWT before 2011 and _LLCPWT after, and refuses to pool years across the 2011 boundary unless you opt in explicitly. The codes CDC uses for \"don't know\" and \"refused\" arrive as NA, so proportions cover substantive answers. A variable crosswalk resolves CDC's renames across years, and the value-label codebook is bundled from 1998 onward, so question wording and factor levels are available without opening a PDF.\n\nThe hosted files are plain parquet at stable URLs, so the data are not locked inside R. Python, Julia, Stata, and DuckDB users can read the same files directly, and every year ships the design columns needed for weighted analysis elsewhere.",
+      "url": "https://github.com/muntasirmasum/brfssdata",
+      "primary_category": "epidemiology",
+      "keywords": [
+        "BRFSS",
+        "CDC",
+        "public health",
+        "survey data",
+        "complex survey design",
+        "survey weights",
+        "chronic disease",
+        "health behavior",
+        "microdata",
+        "population health",
+        "surveillance",
+        "parquet",
+        "DuckDB",
+        "srvyr"
+      ],
+      "use_cases": "- Pull respondent-level BRFSS records for one or many survey years without hand-downloading CDC ZIP archives\n- Produce national or state-level prevalence estimates with correct weights, strata, and primary sampling units\n- Track a health behavior or outcome across years, with the 2011 methodology break flagged rather than silently crossed\n- Find which years carry a variable and what CDC renamed it to, via brfss_vars() and brfss_crosswalk()\n- Look up value labels and question wording without opening a PDF codebook, via brfss_labels() and brfss_codebook()\n- Restrict to specific states inside the query rather than after loading the full year\n- Teach complex survey analysis on a real, large, public dataset that loads in seconds\n- Read the same hosted parquet files from Python, Julia, Stata, or DuckDB with no R involved",
+      "docs_url": "https://muntasirmasum.github.io/brfssdata/",
+      "paper_doi": "",
+      "install_command": "install.packages(\"brfssdata\")\n\n# development version\n# install.packages(\"pak\")\npak::pak(\"muntasirmasum/brfssdata\")",
+      "quality_indicators": [],
+      "submitter_relationship": "Package author/maintainer",
+      "submitter_name": "Muntasir Masum",
+      "similar_packages": "nhanesA and nhanesdata do for NHANES what brfssdata does for BRFSS: bring a CDC survey's microdata into R. Different survey, different design, no overlap in coverage.\n\ntidycensus and censusapi follow the same access pattern for Census and ACS data.\n\ncdcfluview and epidatr surface CDC and Delphi surveillance data, but as aggregate indicators rather than respondent-level microdata.\n\nsurvey and srvyr are the analysis layer brfssdata hands off to, not alternatives to it. brfssdata builds the design object; srvyr runs the estimate.\n\nNo other CRAN package provides BRFSS access. A name search across the full CRAN index returns brfssdata alone.",
+      "unique_features": "It is the only CRAN package for BRFSS, and coverage is complete: all 40 published survey years, 1985 through 2024. CDC no longer serves the 1984 file, so the collection begins where the available data begin.\n\nThree things separate it from a download-and-read script:\n\nSurvey-design correctness is built in. Weights, strata, and PSUs are applied automatically per survey era, the 2011 methodology break is a guard rather than a footnote, and CDC's missing-type codes become NA by default. Getting these wrong is the most common error in published BRFSS analyses, and here it takes deliberate effort to get wrong.\n\nTransfers happen once. A year downloads a single time, is checksum-verified, and is cached under tools::R_user_dir(). DuckDB handles column selection and state filtering inside the query, so a two-variable extract from a 300-column survey does not move 300 columns. One cache directory can serve a whole lab or cluster, and the workflow runs fully offline after a prefetch.\n\nThe data stay open. Files are plain parquet at stable public URLs, readable from Python, Julia, Stata, or DuckDB without R. The conversion is faithful to CDC's source: no rows dropped, no columns dropped, no values recoded. The only changes are re-encoding legacy Windows-1252 text to UTF-8, storing blank SAS character fields as nulls, adding a year column, and giving the handful of variables CDC stored as numeric in some years and text in others one consistent storage type. The full processing pipeline is public in data-raw/, and every artifact is checksummed.",
+      "source_universe": "submitted",
+      "github_issue": 50,
+      "submitted_at": "2026-08-27T00:27:34.718Z",
+      "score": null,
+      "stars": 0
     }
   ],
-  "updated_at": "2026-07-09T22:11:16.095Z"
+  "updated_at": "2026-08-27T00:27:34.719Z"
 }
