@@ -1,6 +1,6 @@
 [
   {
-    "id": 9578,
+    "id": 9610,
     "package_name": "bbr",
     "title": "R package for bbi",
     "description": "R package for making calls to bbi for running",
@@ -13,7 +13,7 @@
     "stars": 26
   },
   {
-    "id": 9579,
+    "id": 9611,
     "package_name": "bbr.bayes",
     "title": "Bayesian modeling with BBR",
     "description": "This package extends the BBR package for Bayesian modeling.",
@@ -26,7 +26,7 @@
     "stars": 6
   },
   {
-    "id": 15215,
+    "id": 15268,
     "package_name": "ghpm",
     "title": "GHPM",
     "description": "Github Project Manager",
@@ -39,7 +39,7 @@
     "stars": 2
   },
   {
-    "id": 18451,
+    "id": 18512,
     "package_name": "metrumrg",
     "title": "Pharmacometric Tools for Data Preparation, Modeling, Simulation,",
     "description": "",
@@ -52,7 +52,7 @@
     "stars": 3
   },
   {
-    "id": 19060,
+    "id": 19124,
     "package_name": "mpn.scorecard",
     "title": "Generate a scorecard with various measures of R package quality and risk",
     "description": "Collects various measures of quality and risk-of-use for an R package",
@@ -65,7 +65,7 @@
     "stars": 3
   },
   {
-    "id": 19095,
+    "id": 19159,
     "package_name": "mrgda",
     "title": "Tools for Data Assembly",
     "description": "Run various tests on an NMTRAN dataset to validate it prior to modeling.",
@@ -78,7 +78,7 @@
     "stars": 4
   },
   {
-    "id": 19096,
+    "id": 19160,
     "package_name": "mrggsave",
     "title": "Save and Arrange Annotated Plots",
     "description": "Plots are annotated with the name of the generating",
@@ -91,7 +91,7 @@
     "stars": 0
   },
   {
-    "id": 19097,
+    "id": 19161,
     "package_name": "mrgmisc",
     "title": "MRG Helpers",
     "description": "Metrum Research Group Helper Functions.",
@@ -104,7 +104,7 @@
     "stars": 4
   },
   {
-    "id": 19098,
+    "id": 19162,
     "package_name": "mrgsim.ds",
     "title": "'Apache' 'Arrow' Dataset-Backed Simulation Outputs for 'mrgsolve'",
     "description": "Provides an 'Apache' 'Arrow'-backed simulation output",
@@ -117,7 +117,7 @@
     "stars": 0
   },
   {
-    "id": 19101,
+    "id": 19165,
     "package_name": "mrgsolve",
     "title": "Simulate from ODE-Based Models",
     "description": "Fast simulation from ordinary differential equation",
@@ -127,10 +127,10 @@
     "exports": [],
     "topics": ["mrgsolve", "ode", "r", "rstats"],
     "score": "NA",
-    "stars": 169
+    "stars": 170
   },
   {
-    "id": 19102,
+    "id": 19166,
     "package_name": "mrgvalidate",
     "title": "Create Validation Docs For R Packages",
     "description": "R package for generating validation documents for other R packages developed by Metrum.",
@@ -143,7 +143,7 @@
     "stars": 2
   },
   {
-    "id": 19103,
+    "id": 19167,
     "package_name": "mrgvalidatetestreference",
     "title": "Test reference for mrgvalidate",
     "description": "Frozen clone of rbabylon at",
@@ -156,7 +156,7 @@
     "stars": 0
   },
   {
-    "id": 19104,
+    "id": 19168,
     "package_name": "mrgvalprep",
     "title": "Preprocessing for mrgvalidate",
     "description": "Helpers for gathering, formatting, and preprocessing inputs to mrgvalidate.",
@@ -169,7 +169,7 @@
     "stars": 1
   },
   {
-    "id": 19764,
+    "id": 19831,
     "package_name": "nmrec",
     "title": "Read, Parse, and Modify NONMEM Control Records",
     "description": "An interface for reading records from a NONMEM control",
@@ -182,7 +182,7 @@
     "stars": 1
   },
   {
-    "id": 20541,
+    "id": 20609,
     "package_name": "paquet",
     "title": "File Streams for Big Data",
     "description": "Provides tools for creating and managing file streams in support",
@@ -195,7 +195,7 @@
     "stars": 1
   },
   {
-    "id": 21217,
+    "id": 21285,
     "package_name": "pmforest",
     "title": "Create forest plots",
     "description": "Create forest plots.",
@@ -208,7 +208,7 @@
     "stars": 2
   },
   {
-    "id": 21225,
+    "id": 21293,
     "package_name": "pmparams",
     "title": "R package for parameter tables",
     "description": "`pmparams` is a library written in R that generates clear, well-formatted parameter tables to report NONMEM model results.",
@@ -221,7 +221,7 @@
     "stars": 1
   },
   {
-    "id": 21227,
+    "id": 21295,
     "package_name": "pmplots",
     "title": "Plots for Pharmacometrics",
     "description": "Very light wrappers around 'ggplot2' plotting code tailored for",
@@ -231,10 +231,10 @@
     "exports": [],
     "topics": [],
     "score": "NA",
-    "stars": 10
+    "stars": 11
   },
   {
-    "id": 21232,
+    "id": 21300,
     "package_name": "pmtables",
     "title": "Tables for Pharmacometrics",
     "description": "Summarize data sets and create publication-quality tables for",
@@ -247,7 +247,7 @@
     "stars": 11
   },
   {
-    "id": 21873,
+    "id": 21940,
     "package_name": "qctools",
     "title": "QC Management and Helpers",
     "description": "Create, append and review the QC log. Provides helper functions for completing QC tasks.",
@@ -260,7 +260,7 @@
     "stars": 1
   },
   {
-    "id": 22889,
+    "id": 22959,
     "package_name": "review",
     "title": "QC Management and Helpers",
     "description": "Functions for managing logs of reviews of subversioned",
@@ -273,7 +273,7 @@
     "stars": 2
   },
   {
-    "id": 23434,
+    "id": 23509,
     "package_name": "rrsq",
     "title": "R interface to r simple queue (rsq)",
     "description": "An R interface to r simple queue (rsq).",
@@ -286,7 +286,7 @@
     "stars": 1
   },
   {
-    "id": 24625,
+    "id": 24703,
     "package_name": "simpar",
     "title": "Create Parameters for Simulation with Uncertainty",
     "description": "Given the parameter estimates of a mixed effect model, this",
@@ -299,7 +299,7 @@
     "stars": 3
   },
   {
-    "id": 27935,
+    "id": 28031,
     "package_name": "yspec",
     "title": "Data Specification for Pharmacometrics",
     "description": "Generate Define.pdf from yaml specification.",
@@ -309,6 +309,6 @@
     "exports": [],
     "topics": [],
     "score": "NA",
-    "stars": 6
+    "stars": 7
   }
 ]
