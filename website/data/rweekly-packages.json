@@ -1,452 +1,317 @@
 {
   "metadata": {
-    "scraped_at": "2026-09-27T07:46:19Z",
+    "scraped_at": "2026-10-04T07:56:55Z",
     "weeks_included": 2,
-    "total_packages": 49,
+    "total_packages": 34,
     "new_packages": 13,
-    "updated_packages": 36
+    "updated_packages": 21
   },
   "packages": [
     {
-      "package_name": "AlleloBin",
-      "version": "1.0.0",
-      "type": "new",
-      "description": "A Shiny Application for Allele Binning in Microsatellite Markers",
-      "url": "https://cran.r-project.org/package=AlleloBin",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "HAPTRACE",
-      "version": "0.1.2",
-      "type": "updated",
-      "description": "Haplotype-Based Tracking of Admixed Population for Breed Composition Estimation - [diffify](https://diffify.com/R/HAPTRACE)",
-      "url": "https://cran.r-project.org/package=HAPTRACE",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "R.matlab",
-      "version": "3.8.0",
-      "type": "updated",
-      "description": "Read and Write MAT Files and Call MATLAB from Within R - [diffify](https://diffify.com/R/R.matlab)",
-      "url": "https://cran.r-project.org/package=R.matlab",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "RcppTrust",
+      "package_name": "BasicStatsPlots",
       "version": "0.1.0",
       "type": "new",
-      "description": "Thread-Safe C++ Port of the 'trust' Trust Region Optimizer",
-      "url": "https://cran.r-project.org/package=RcppTrust",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Publication-Ready Data Visualization and Simple Statistical",
+      "url": "https://cran.r-project.org/package=BasicStatsPlots",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "aemo",
-      "version": "0.4.2",
+      "package_name": "ClassDiscovery",
+      "version": "3.4.11",
       "type": "updated",
-      "description": "Download Australian Energy Market Operator Data - [diffify](https://diffify.com/R/aemo)",
-      "url": "https://cran.r-project.org/package=aemo",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Classes and Methods for \"Class Discovery\" with Microarrays or",
+      "url": "https://cran.r-project.org/package=ClassDiscovery",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "bigalgebra",
-      "version": "3.1.1",
-      "type": "updated",
-      "description": "'BLAS' and 'LAPACK' Routines for Native R Matrices and 'big.matrix' Objects - [diffify](https://diffify.com/R/bigalgebra)",
-      "url": "https://cran.r-project.org/package=bigalgebra",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "catfda",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "Statistical Analysis for Categorical Functional Data",
-      "url": "https://cran.r-project.org/package=catfda",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "choroplethr",
-      "version": "5.0.2",
-      "type": "updated",
-      "description": "Create Color-Coded Choropleth Maps in R - [diffify](https://diffify.com/R/choroplethr)",
-      "url": "https://cran.r-project.org/package=choroplethr",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "commons",
-      "version": "0.1.0",
-      "type": "updated",
-      "description": "AI Agents for Data Analysis - [diffify](https://diffify.com/R/commons)",
-      "url": "https://cran.r-project.org/package=commons",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "cooltools",
-      "version": "2.33",
-      "type": "updated",
-      "description": "Practical Tools for Scientific Computation and Visualisation - [diffify](https://diffify.com/R/cooltools)",
-      "url": "https://cran.r-project.org/package=cooltools",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "crmn",
-      "version": "0.0.22",
-      "type": "updated",
-      "description": "CCMN and Other Normalization Methods for Metabolomics Data - [diffify](https://diffify.com/R/crmn)",
-      "url": "https://cran.r-project.org/package=crmn",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "datarobot",
-      "version": "2.18.9",
-      "type": "updated",
-      "description": "'DataRobot' Predictive Modeling API - [diffify](https://diffify.com/R/datarobot)",
-      "url": "https://cran.r-project.org/package=datarobot",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "datawizard",
-      "version": "1.4.0",
-      "type": "updated",
-      "description": "Easy Data Wrangling and Statistical Transformations - [diffify](https://diffify.com/R/datawizard)",
-      "url": "https://cran.r-project.org/package=datawizard",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "diffobj",
-      "version": "0.3.9",
-      "type": "updated",
-      "description": "Diffs for R Objects - [diffify](https://diffify.com/R/diffobj)",
-      "url": "https://cran.r-project.org/package=diffobj",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ducklake",
-      "version": "0.6.0",
-      "type": "new",
-      "description": "Interact with 'DuckLake' from R",
-      "url": "https://cran.r-project.org/package=ducklake",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "flextable",
-      "version": "0.10.1",
-      "type": "updated",
-      "description": "Functions for Tabular Reporting - [diffify](https://diffify.com/R/flextable)",
-      "url": "https://cran.r-project.org/package=flextable",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "foresty",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "Forest Plots and Subgroup Effects from Fitted Regression Models",
-      "url": "https://cran.r-project.org/package=foresty",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ggRandomForests",
-      "version": "3.5.3",
-      "type": "updated",
-      "description": "Visually Exploring Random Forests - [diffify](https://diffify.com/R/ggRandomForests)",
-      "url": "https://cran.r-project.org/package=ggRandomForests",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ggformula",
-      "version": "2.0.0",
-      "type": "updated",
-      "description": "Formula Interface to the Grammar of Graphics - [diffify](https://diffify.com/R/ggformula)",
-      "url": "https://cran.r-project.org/package=ggformula",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ggscribe",
-      "version": "1.0.0",
-      "type": "updated",
-      "description": "Publication-Quality 'ggplot2' Annotation - [diffify](https://diffify.com/R/ggscribe)",
-      "url": "https://cran.r-project.org/package=ggscribe",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ggwidth",
-      "version": "0.2.0",
-      "type": "updated",
-      "description": "Publication-Quality 'ggplot2' Geom Width - [diffify](https://diffify.com/R/ggwidth)",
-      "url": "https://cran.r-project.org/package=ggwidth",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "glasstabs",
-      "version": "0.4.0",
-      "type": "updated",
-      "description": "Animated Glass-Style Tabs and Select Inputs for 'Shiny' - [diffify](https://diffify.com/R/glasstabs)",
-      "url": "https://cran.r-project.org/package=glasstabs",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "gllvm",
-      "version": "2.0.15",
-      "type": "updated",
-      "description": "Generalized Linear Latent Variable Models - [diffify](https://diffify.com/R/gllvm)",
-      "url": "https://cran.r-project.org/package=gllvm",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "grattanInflators",
-      "version": "0.6.0",
-      "type": "updated",
-      "description": "Inflators for Australian Policy Analysis - [diffify](https://diffify.com/R/grattanInflators)",
-      "url": "https://cran.r-project.org/package=grattanInflators",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "hdf5r",
-      "version": "1.3.16",
-      "type": "updated",
-      "description": "Interface to the 'HDF5' Binary Data Format - [diffify](https://diffify.com/R/hdf5r)",
-      "url": "https://cran.r-project.org/package=hdf5r",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "htmlreportR",
-      "version": "2.0.1",
-      "type": "updated",
-      "description": "'HTML' Reporting Made Simple(R) - [diffify](https://diffify.com/R/htmlreportR)",
-      "url": "https://cran.r-project.org/package=htmlreportR",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "icebergr",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "Read and Write 'Apache Iceberg' Tables",
-      "url": "https://cran.r-project.org/package=icebergr",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "mathr",
-      "version": "0.1.3",
-      "type": "new",
-      "description": "Scientific Computation Using R",
-      "url": "https://cran.r-project.org/package=mathr",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "nuggets",
-      "version": "2.2.4",
-      "type": "updated",
-      "description": "Fast and Extensible Pattern Discovery in Tabular Data - [diffify](https://diffify.com/R/nuggets)",
-      "url": "https://cran.r-project.org/package=nuggets",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "r4subpharma",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "'pharmaverse' Adapters for R4SUB Submission Readiness Evidence",
-      "url": "https://cran.r-project.org/package=r4subpharma",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "ragnar",
-      "version": "0.3.1",
-      "type": "updated",
-      "description": "Retrieval-Augmented Generation (RAG) Workflows - [diffify](https://diffify.com/R/ragnar)",
-      "url": "https://cran.r-project.org/package=ragnar",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "rmsfact",
-      "version": "0.0.4",
-      "type": "updated",
-      "description": "Amazing Random Facts About the World's Greatest Hacker - [diffify](https://diffify.com/R/rmsfact)",
-      "url": "https://cran.r-project.org/package=rmsfact",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "rurl",
-      "version": "3.0.1",
-      "type": "updated",
-      "description": "Parse, Clean, and Normalize URLs - [diffify](https://diffify.com/R/rurl)",
-      "url": "https://cran.r-project.org/package=rurl",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "rvisual",
-      "version": "0.1.1",
-      "type": "new",
-      "description": "Visual Data Analysis 'RStudio' 'Addin' with AI Copilot",
-      "url": "https://cran.r-project.org/package=rvisual",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "sf",
-      "version": "1.1-3",
-      "type": "updated",
-      "description": "Simple Features for R - [diffify](https://diffify.com/R/sf)",
-      "url": "https://cran.r-project.org/package=sf",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "shinygenui",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "Generative UI for 'shiny'",
-      "url": "https://cran.r-project.org/package=shinygenui",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "shinyglass",
-      "version": "0.3.0",
-      "type": "updated",
-      "description": "Liquid Glass Design Themes for 'shiny' Applications - [diffify](https://diffify.com/R/shinyglass)",
-      "url": "https://cran.r-project.org/package=shinyglass",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "simplermarkdown",
-      "version": "0.1.0",
-      "type": "updated",
-      "description": "Simple Engine for Generating Reports using R - [diffify](https://diffify.com/R/simplermarkdown)",
-      "url": "https://cran.r-project.org/package=simplermarkdown",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "socketR",
-      "version": "1.0.4",
-      "type": "new",
-      "description": "POSIX Socket Programming for R",
-      "url": "https://cran.r-project.org/package=socketR",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "survival",
-      "version": "3.8-12",
-      "type": "updated",
-      "description": "Survival Analysis - [diffify](https://diffify.com/R/survival)",
-      "url": "https://cran.r-project.org/package=survival",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "tesseract",
-      "version": "5.3.1",
-      "type": "updated",
-      "description": "Open Source OCR Engine - [diffify](https://diffify.com/R/tesseract)",
-      "url": "https://cran.r-project.org/package=tesseract",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "tibblify",
-      "version": "0.4.2",
-      "type": "updated",
-      "description": "Rectangle Nested Lists - [diffify](https://diffify.com/R/tibblify)",
-      "url": "https://cran.r-project.org/package=tibblify",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "tidycjk",
-      "version": "0.1.0",
-      "type": "new",
-      "description": "Tidy Tools for Chinese, Japanese and Korean Text",
-      "url": "https://cran.r-project.org/package=tidycjk",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
-    },
-    {
-      "package_name": "tidypredict",
+      "package_name": "DCC",
       "version": "1.2.1",
-      "type": "updated",
-      "description": "Run Predictions Inside the Database - [diffify](https://diffify.com/R/tidypredict)",
-      "url": "https://cran.r-project.org/package=tidypredict",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "type": "new",
+      "description": "Data Cleaning Center for Survey and Assessment Data",
+      "url": "https://cran.r-project.org/package=DCC",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "tidytuesdayR",
+      "package_name": "DEoptimR",
+      "version": "1.2-2",
+      "type": "updated",
+      "description": "Differential Evolution Optimization in Pure R - [diffify](https://diffify.com/R/DEoptimR)",
+      "url": "https://cran.r-project.org/package=DEoptimR",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "DemographicTable",
+      "version": "0.2.4",
+      "type": "updated",
+      "description": "Create Demographic Table - [diffify](https://diffify.com/R/DemographicTable)",
+      "url": "https://cran.r-project.org/package=DemographicTable",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "FIAstemmap",
+      "version": "2.0.0",
+      "type": "new",
+      "description": "Tree Canopy Modeling for USDA Forest Inventory and Analysis",
+      "url": "https://cran.r-project.org/package=FIAstemmap",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "arity",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Format R Code with Arity",
+      "url": "https://cran.r-project.org/package=arity",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "birp",
+      "version": "0.9.0",
+      "type": "updated",
+      "description": "Testing for Population Trends Using Low-Cost Ecological Count",
+      "url": "https://cran.r-project.org/package=birp",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "boiwsa",
+      "version": "1.1.4",
+      "type": "updated",
+      "description": "Seasonal Adjustment of Weekly Data - [diffify](https://diffify.com/R/boiwsa)",
+      "url": "https://cran.r-project.org/package=boiwsa",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "brar",
+      "version": "0.1.1",
+      "type": "updated",
+      "description": "Null Hypothesis Bayesian Response-Adaptive Randomization - [diffify](https://diffify.com/R/brar)",
+      "url": "https://cran.r-project.org/package=brar",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "cogmod",
+      "version": "0.3.3",
+      "type": "updated",
+      "description": "Cognitive Models for Subjective Scales and Decision Making Tasks - [diffify](https://diffify.com/R/cogmod)",
+      "url": "https://cran.r-project.org/package=cogmod",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "cpfa",
       "version": "1.3.3",
       "type": "updated",
-      "description": "Access the Weekly 'TidyTuesday' Project Dataset - [diffify](https://diffify.com/R/tidytuesdayR)",
-      "url": "https://cran.r-project.org/package=tidytuesdayR",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Classification with Parallel Factor Analysis - [diffify](https://diffify.com/R/cpfa)",
+      "url": "https://cran.r-project.org/package=cpfa",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "tmbstan",
-      "version": "1.2.1",
+      "package_name": "dynamicmultiplex",
+      "version": "1.3.1",
       "type": "updated",
-      "description": "MCMC Sampling from 'TMB' Model Object using 'Stan' - [diffify](https://diffify.com/R/tmbstan)",
-      "url": "https://cran.r-project.org/package=tmbstan",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Community Detection for Evolving Multiplex Networks - [diffify](https://diffify.com/R/dynamicmultiplex)",
+      "url": "https://cran.r-project.org/package=dynamicmultiplex",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "undomanager",
+      "package_name": "ebrahim.gof",
+      "version": "2.7.0",
+      "type": "updated",
+      "description": "Goodness-of-Fit and Calibration Tests for Logistic Regression - [diffify](https://diffify.com/R/ebrahim.gof)",
+      "url": "https://cran.r-project.org/package=ebrahim.gof",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "exametrika",
+      "version": "2.1.0",
+      "type": "updated",
+      "description": "Test Data Engineering - [diffify](https://diffify.com/R/exametrika)",
+      "url": "https://cran.r-project.org/package=exametrika",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "freesurferformats",
+      "version": "1.1.0",
+      "type": "updated",
+      "description": "Read and Write 'FreeSurfer' Neuroimaging File Formats - [diffify](https://diffify.com/R/freesurferformats)",
+      "url": "https://cran.r-project.org/package=freesurferformats",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "funHMM",
       "version": "0.1.0",
       "type": "new",
-      "description": "Manage the History of Any Object with Undo/Redo Operations",
-      "url": "https://cran.r-project.org/package=undomanager",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Hidden Markov Models for Functional Data",
+      "url": "https://cran.r-project.org/package=funHMM",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "usethis",
-      "version": "3.2.2",
-      "type": "updated",
-      "description": "Automate Package and Project Setup - [diffify](https://diffify.com/R/usethis)",
-      "url": "https://cran.r-project.org/package=usethis",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "package_name": "gcemod",
+      "version": "0.3.0",
+      "type": "new",
+      "description": "Generalized Competing Event Models with Lunn-McNeil Testing",
+      "url": "https://cran.r-project.org/package=gcemod",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     },
     {
-      "package_name": "wintime",
+      "package_name": "genoaligner",
       "version": "1.0.0",
+      "type": "new",
+      "description": "GPU-Portable Pairwise Sequence Alignment (WFA + Smith-Waterman)",
+      "url": "https://cran.r-project.org/package=genoaligner",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "ggEDA",
+      "version": "0.3.0",
       "type": "updated",
-      "description": "Win Time Methods for Time-to-Event Data in Clinical Trials - [diffify](https://diffify.com/R/wintime)",
-      "url": "https://cran.r-project.org/package=wintime",
-      "post_date": "2026-09-14",
-      "week": "2026-W38"
+      "description": "Turnkey Visualisations for Exploratory Data Analysis - [diffify](https://diffify.com/R/ggEDA)",
+      "url": "https://cran.r-project.org/package=ggEDA",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "gtstats",
+      "version": "1.0.0",
+      "type": "new",
+      "description": "Beginner-Friendly Statistics and Publication-Ready Tables",
+      "url": "https://cran.r-project.org/package=gtstats",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "landgraph",
+      "version": "0.0.3",
+      "type": "updated",
+      "description": "Graphs and Covariance for Landscape Genetics - [diffify](https://diffify.com/R/landgraph)",
+      "url": "https://cran.r-project.org/package=landgraph",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "mnt",
+      "version": "1.4",
+      "type": "updated",
+      "description": "Affine Invariant Tests of Multivariate Normality - [diffify](https://diffify.com/R/mnt)",
+      "url": "https://cran.r-project.org/package=mnt",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "oompaData",
+      "version": "3.1.7",
+      "type": "updated",
+      "description": "Data to Illustrate OOMPA Algorithms - [diffify](https://diffify.com/R/oompaData)",
+      "url": "https://cran.r-project.org/package=oompaData",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "pdfsigner",
+      "version": "0.3.0",
+      "type": "updated",
+      "description": "Digitally Sign and Verify PDF Documents - [diffify](https://diffify.com/R/pdfsigner)",
+      "url": "https://cran.r-project.org/package=pdfsigner",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "plssem",
+      "version": "0.1.4",
+      "type": "updated",
+      "description": "Complex Partial Least Squares Structural Equation Modeling - [diffify](https://diffify.com/R/plssem)",
+      "url": "https://cran.r-project.org/package=plssem",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "qol",
+      "version": "1.3.5",
+      "type": "updated",
+      "description": "Powerful 'SAS' Inspired Concepts for more Efficient Bigger Outputs + [diffify](https://diffify.com/R/qol)",
+      "url": "https://cran.r-project.org/package=qol",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "rdborrow",
+      "version": "0.0.4.1",
+      "type": "updated",
+      "description": "External Control Borrowing for Rare Disease Trials - [diffify](https://diffify.com/R/rdborrow)",
+      "url": "https://cran.r-project.org/package=rdborrow",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "riskweightedassets",
+      "version": "1.1.1",
+      "type": "new",
+      "description": "Reproducible Risk-Weighted Asset Calculations",
+      "url": "https://cran.r-project.org/package=riskweightedassets",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "risq",
+      "version": "3.0.1",
+      "type": "new",
+      "description": "Representativity Indicators for Survey Quality",
+      "url": "https://cran.r-project.org/package=risq",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "screenllm",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "LLM-Assisted Title/Abstract Screening for Systematic Reviews",
+      "url": "https://cran.r-project.org/package=screenllm",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "shinyreact",
+      "version": "0.1.0",
+      "type": "new",
+      "description": "Client-Side 'React' Interface for 'Shiny'",
+      "url": "https://cran.r-project.org/package=shinyreact",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "spareg",
+      "version": "1.2.0",
+      "type": "updated",
+      "description": "Sparse Projected Averaged Regression - [diffify](https://diffify.com/R/spareg)",
+      "url": "https://cran.r-project.org/package=spareg",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
+    },
+    {
+      "package_name": "zot",
+      "version": "0.1.2",
+      "type": "new",
+      "description": "Access 'Zotero' Libraries",
+      "url": "https://cran.r-project.org/package=zot",
+      "post_date": "2026-09-28",
+      "week": "2026-W40"
     }
   ]
 }
