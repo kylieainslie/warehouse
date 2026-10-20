@@ -18,7 +18,7 @@ RUNIVERSE_SEARCH_URL <- "https://r-universe.dev/api/search"
 #' Fetch package stats from R-universe global search API
 #' @param limit Number of packages to fetch (results are ranked by score, highest first)
 #' @return A list of package data
-fetch_package_stats <- function(limit = 200) {
+fetch_package_stats <- function(limit = 1000) {
   message("Fetching package stats from R-universe...")
 
   url <- sprintf("%s?limit=%d", RUNIVERSE_SEARCH_URL, limit)
@@ -158,7 +158,7 @@ run_discover_fetch <- function(output_path = file.path(getwd(), "data", "discove
   message("Starting discover data fetch...")
 
   # Fetch a large pool so hidden gems (high score, low downloads) are reachable
-  packages <- fetch_package_stats(limit = 1000)
+  packages <- fetch_package_stats()
 
   if (length(packages) == 0) {
     warning("No packages fetched, aborting")
