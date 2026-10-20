@@ -15,7 +15,7 @@ library(RSQLite)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-MODEL         <- "claude-haiku-4-5-20251001"
+MODEL         <- "claude-haiku-5-5"
 MAX_TOKENS    <- 60       # enough for a JSON array of up to 5 short tags
 BATCH_SIZE    <- 10000    # Anthropic Batch API limit per submission
 POLL_INTERVAL <- 30       # seconds between status checks

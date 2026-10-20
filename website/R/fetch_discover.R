@@ -5,8 +5,8 @@ library(httr2)
 library(jsonlite)
 library(dplyr)
 
-# R-universe global stats API
-RUNIVERSE_STATS_URL <- "https://r-universe.dev/stats/descriptions"
+# R-universe global search API (the old /stats/descriptions endpoint was retired)
+RUNIVERSE_SEARCH_URL <- "https://r-universe.dev/api/search"
 
 # Null coalescing operator (handles NA and empty values)
 `%||%` <- function(x, y) {
@@ -15,13 +15,13 @@ RUNIVERSE_STATS_URL <- "https://r-universe.dev/stats/descriptions"
   x
 }
 
-#' Fetch package stats from R-universe global API
-#' @param limit Number of packages to fetch
+#' Fetch package stats from R-universe global search API
+#' @param limit Number of packages to fetch (results are ranked by score, highest first)
 #' @return A list of package data
 fetch_package_stats <- function(limit = 200) {
   message("Fetching package stats from R-universe...")
 
-  url <- sprintf("%s?limit=%d", RUNIVERSE_STATS_URL, limit)
+  url <- sprintf("%s?limit=%d", RUNIVERSE_SEARCH_URL, limit)
 
   tryCatch({
     resp <- request(url) |>
@@ -29,14 +29,8 @@ fetch_package_stats <- function(limit = 200) {
       req_timeout(60) |>
       req_perform()
 
-    # R-universe returns newline-delimited JSON (NDJSON), parse each line
-    body_text <- resp_body_string(resp)
-    lines <- strsplit(body_text, "\n")[[1]]
-    lines <- lines[nchar(trimws(lines)) > 0]  # Remove empty lines
-
-    data <- lapply(lines, function(line) {
-      fromJSON(line, simplifyVector = FALSE)
-    })
+    body <- fromJSON(resp_body_string(resp), simplifyVector = FALSE)
+    data <- body$results
 
     message(sprintf("  Fetched %d packages", length(data)))
     data
@@ -80,46 +74,79 @@ extract_package_info <- function(pkg) {
     title = pkg$Title %||% "",
     description = substr(pkg$Description %||% "", 1, 200),  # Truncate long descriptions
     version = pkg$Version %||% "",
-    stars = safe_int(pkg$`_stars`, 0L),
-    downloads = safe_int(pkg$`_downloads`, 0L),
+    stars = safe_int(pkg$stars, 0L),
     score = as.numeric(pkg$`_score` %||% 0),
     usedby = safe_int(pkg$`_usedby`, 0L),
     published = pkg$`Date/Publication` %||% pkg$`_published` %||% "",
     created = pkg$`_created` %||% "",
-    maintainer = pkg$Maintainer %||% "",
+    maintainer = pkg$maintainer$name %||% "",
     url = sprintf("https://%s.r-universe.dev/%s", user, package_name),
     user = user
   )
 }
 
 
-#' Get hidden gem packages (high quality score relative to download count)
+#' Get hidden gem packages (high quality score relative to star count)
 #' @param packages List of package data
 #' @param n Number to return
 #' @return List of hidden gem packages
 get_hidden_gems <- function(packages, n = 20) {
-  message("  Computing hidden gems (score / log10(downloads + 10))...")
+  message("  Computing hidden gems (score / log10(stars + 10))...")
 
   # Extract info for all packages
   pkg_info <- Filter(Negate(is.null), lapply(packages, extract_package_info))
 
-  # Require a minimum quality score to exclude low-quality obscure packages
-  pkg_info <- Filter(function(p) p$score >= 30, pkg_info)
+  # `packages` is already the top-scored slice of the full R-universe index
+  # (fetch_package_stats pulls results ranked by score), so no extra quality
+  # floor is needed here beyond excluding non-positive scores.
+  pkg_info <- Filter(function(p) p$score > 0, pkg_info)
 
   if (length(pkg_info) == 0) {
     message("    Warning: no packages met score threshold")
     return(list())
   }
 
-  # gem_score = quality / log10(downloads + 10)
-  # High ratio means high quality but low discovery — the ideal hidden gem
+  # gem_score = quality / log10(stars + 10)
+  # High ratio means high quality but low visibility — the ideal hidden gem
   gem_scores <- sapply(pkg_info, function(p) {
-    p$score / log10(p$downloads + 10)
+    p$score / log10(p$stars + 10)
   })
 
   sorted_indices <- order(gem_scores, decreasing = TRUE)
   results <- pkg_info[sorted_indices]
   head(results, n)
+}
+
+#' Fetch a package's current version from its universe's package API
+#' (/api/search doesn't return Version, so this is a small follow-up
+#' request made only for the packages actually selected as hidden gems)
+#' @param user Universe/owner name
+#' @param name Package name
+#' @return Version string, or "" on failure
+fetch_package_version <- function(user, name) {
+  url <- sprintf("https://%s.r-universe.dev/api/packages/%s", user, name)
+
+  tryCatch({
+    resp <- request(url) |>
+      req_headers(Accept = "application/json") |>
+      req_timeout(15) |>
+      req_perform()
+
+    pkg <- fromJSON(resp_body_string(resp), simplifyVector = FALSE)
+    pkg$Version %||% ""
+
+  }, error = function(e) "")
+}
+
+#' Fill in the version field for a list of hidden gem packages
+#' @param gems List of hidden gem packages (from get_hidden_gems)
+#' @return The same list with version fields populated where available
+fill_versions <- function(gems) {
+  message(sprintf("  Fetching versions for %d hidden gems...", length(gems)))
+  lapply(gems, function(gem) {
+    gem$version <- fetch_package_version(gem$user, gem$name)
+    gem
+  })
 }
 
 #' Main function to fetch and export discover data
@@ -139,7 +166,7 @@ run_discover_fetch <- function(output_path = file.path(getwd(), "data", "discove
   # Build discover data
   discover <- list(
     updated = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
-    hidden_gems = get_hidden_gems(packages, n = 20)
+    hidden_gems = fill_versions(get_hidden_gems(packages, n = 20))
   )
 
   # Export to JSON

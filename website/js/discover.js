@@ -120,7 +120,6 @@ function createDiscoverCard(pkg) {
     'No description available';
 
   // Format numbers
-  const downloads = formatNumber(pkg.downloads || 0);
   const stars = formatNumber(pkg.stars || 0);
 
   const packagePageUrl = `/packages/${encodeURIComponent(pkg.name)}`;
@@ -129,11 +128,10 @@ function createDiscoverCard(pkg) {
   const rweeklyBadge = pkg.week ?
     `<span class="discover-card-badge ${pkg.type === 'new' ? 'badge-new' : 'badge-updated'}">${pkg.type === 'new' ? 'New' : 'Updated'}</span>` : '';
 
-  // Stats - show week for R Weekly, otherwise stars/downloads
+  // Stats - show week for R Weekly, otherwise stars (R-universe doesn't expose download counts)
   const statsHtml = pkg.week ?
     `<span class="discover-stat"><i class="bi bi-calendar"></i> ${escapeHtml(pkg.week)}</span>` :
-    `<span class="discover-stat"><i class="bi bi-star-fill"></i> ${stars}</span>
-     <span class="discover-stat"><i class="bi bi-download"></i> ${downloads}</span>`;
+    `<span class="discover-stat"><i class="bi bi-star-fill"></i> ${stars}</span>`;
 
   return `
     <a href="${packagePageUrl}" class="discover-card">
