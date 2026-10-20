@@ -86,12 +86,12 @@ extract_package_info <- function(pkg) {
 }
 
 
-#' Get hidden gem packages (high quality score relative to star count)
+#' Get hidden gem packages (high quality score relative to visibility)
 #' @param packages List of package data
 #' @param n Number to return
 #' @return List of hidden gem packages
 get_hidden_gems <- function(packages, n = 20) {
-  message("  Computing hidden gems (score / log10(stars + 10))...")
+  message("  Computing hidden gems (score / log10(max(stars, usedby) + 10))...")
 
   # Extract info for all packages
   pkg_info <- Filter(Negate(is.null), lapply(packages, extract_package_info))
@@ -106,10 +106,12 @@ get_hidden_gems <- function(packages, n = 20) {
     return(list())
   }
 
-  # gem_score = quality / log10(stars + 10)
+  # gem_score = quality / log10(visibility + 10), where visibility is the larger
+  # of GitHub stars and reverse dependencies. Stars alone are 0 for packages
+  # not hosted on GitHub (e.g. zoo, Matrix), which made them look obscure.
   # High ratio means high quality but low visibility — the ideal hidden gem
   gem_scores <- sapply(pkg_info, function(p) {
-    p$score / log10(p$stars + 10)
+    p$score / log10(max(p$stars, p$usedby) + 10)
   })
 
   sorted_indices <- order(gem_scores, decreasing = TRUE)
