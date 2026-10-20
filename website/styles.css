@@ -1971,6 +1971,8 @@ tr:hover {
 
 .discover-card {
   flex: 0 0 200px;
+  min-width: 0; /* stop long unbreakable text (e.g. URLs) widening the card */
+  overflow-wrap: anywhere;
   padding: 1rem;
   background: white;
   border: 1px solid #e1e4e8;
