@@ -1971,6 +1971,8 @@ tr:hover {
 
 .discover-card {
   flex: 0 0 200px;
+  min-width: 0; /* stop long unbreakable text (e.g. URLs) widening the card */
+  overflow-wrap: anywhere;
   padding: 1rem;
   background: white;
   border: 1px solid #e1e4e8;
@@ -2096,6 +2098,28 @@ tr:hover {
 /* Hide discover when searching */
 .discover-section.hidden {
   display: none;
+}
+
+/* You might also like strip */
+.you-might-also-like {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+}
+
+.suggestion-strip-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3c4043;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.suggestion-strip-label i {
+  color: #667eea;
 }
 
 /* Mobile adjustments for discover */

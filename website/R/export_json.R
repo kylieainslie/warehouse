@@ -7,8 +7,16 @@ library(jsonlite)
 library(dplyr)
 
 # Default paths (relative to working directory)
-DB_PATH <- file.path(getwd(), "data", "warehouse.sqlite")
-JSON_PATH <- file.path(getwd(), "data", "packages.json")
+DB_PATH        <- file.path(getwd(), "data", "warehouse.sqlite")
+JSON_PATH      <- file.path(getwd(), "data", "packages.json")
+AUTO_TAGS_PATH <- file.path(getwd(), "data", "auto-tags.json")
+
+#' Load auto-generated tags from auto-tags.json
+#' Returns a named list: package_name -> character vector of tags
+load_auto_tags <- function(path = AUTO_TAGS_PATH) {
+  if (!file.exists(path)) return(list())
+  tryCatch(as.list(fromJSON(path)), error = function(e) list())
+}
 
 #' Export packages to JSON for client-side search index
 #' @param db_path Path to the SQLite database file
@@ -18,6 +26,7 @@ export_search_index <- function(db_path = DB_PATH, json_path = JSON_PATH) {
   on.exit(dbDisconnect(con))
 
   message("Exporting packages to JSON...")
+  auto_tags <- load_auto_tags()
 
   # Get all packages
   packages <- dbGetQuery(con, "
@@ -47,18 +56,18 @@ export_search_index <- function(db_path = DB_PATH, json_path = JSON_PATH) {
     row <- packages[i, ]
 
     # Parse JSON strings back to arrays
-    exports <- tryCatch(
-      fromJSON(row$exports),
-      error = function(e) character(0)
-    )
-    topics <- tryCatch(
-      fromJSON(row$topics),
-      error = function(e) character(0)
-    )
+    exports <- tryCatch(fromJSON(row$exports), error = function(e) character(0))
+    topics  <- tryCatch(fromJSON(row$topics),  error = function(e) character(0))
 
-    # Ensure they're character vectors
-    if (!is.character(exports)) exports <- character(0)
-    if (!is.character(topics)) topics <- character(0)
+    # Flatten nested arrays (GitHub topics are stored as [["tag"]] not ["tag"])
+    if (!is.character(exports)) exports <- tryCatch(unlist(exports), error = function(e) character(0))
+    if (!is.character(topics))  topics  <- tryCatch(unlist(topics),  error = function(e) character(0))
+
+    # Merge auto-generated tags
+    pkg_auto_tags <- auto_tags[[row$package_name]]
+    if (length(pkg_auto_tags) > 0) {
+      topics <- unique(c(topics, unlist(pkg_auto_tags)))
+    }
 
     # Create searchable text combining all relevant fields
     search_parts <- c(
@@ -245,6 +254,7 @@ export_lightweight_index <- function(db_path = DB_PATH,
   on.exit(dbDisconnect(con))
 
   message("Exporting lightweight search index...")
+  auto_tags <- load_auto_tags()
 
   # Get packages with only essential fields
 
@@ -274,17 +284,23 @@ export_lightweight_index <- function(db_path = DB_PATH,
 
     # Parse JSON and limit array sizes
     exports <- tryCatch(fromJSON(row$exports), error = function(e) character(0))
-    topics <- tryCatch(fromJSON(row$topics), error = function(e) character(0))
+    topics  <- tryCatch(fromJSON(row$topics),  error = function(e) character(0))
 
-    # Ensure they're character vectors
-    if (!is.character(exports)) exports <- character(0)
-    if (!is.character(topics)) topics <- character(0)
+    # Flatten nested arrays (GitHub topics are stored as [["tag"]] not ["tag"])
+    if (!is.character(exports)) exports <- tryCatch(unlist(exports), error = function(e) character(0))
+    if (!is.character(topics))  topics  <- tryCatch(unlist(topics),  error = function(e) character(0))
+
+    # Merge auto-generated tags
+    pkg_auto_tags <- auto_tags[[row$package_name]]
+    if (length(pkg_auto_tags) > 0) {
+      topics <- unique(c(topics, unlist(pkg_auto_tags)))
+    }
 
     # Limit exports to first 15 (enough for search, saves space)
     if (length(exports) > 15) exports <- exports[1:15]
 
-    # Limit topics to first 8
-    if (length(topics) > 8) topics <- topics[1:8]
+    # Limit topics to first 10 (increased from 8 to accommodate auto-tags)
+    if (length(topics) > 10) topics <- topics[1:10]
 
     # Truncate description to 300 chars
     desc <- row$description %||% ""

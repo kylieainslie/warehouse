@@ -50,44 +50,6 @@ test_that("safe_int returns default for unparseable strings", {
 })
 
 # ==============================================================================
-# parse_date_safe() tests
-# ==============================================================================
-
-test_that("parse_date_safe returns NA for NULL input", {
-  result <- parse_date_safe(NULL)
-  expect_true(is.na(result))
-  expect_s3_class(result, "POSIXct")
-})
-
-test_that("parse_date_safe returns NA for NA input", {
-  result <- parse_date_safe(NA)
-  expect_true(is.na(result))
-})
-
-test_that("parse_date_safe returns NA for empty string", {
-  result <- parse_date_safe("")
-  expect_true(is.na(result))
-})
-
-test_that("parse_date_safe parses YYYY-MM-DD format", {
-  result <- parse_date_safe("2024-06-15")
-  expect_false(is.na(result))
-  expect_equal(format(result, "%Y-%m-%d"), "2024-06-15")
-})
-
-test_that("parse_date_safe parses YYYY-MM-DD HH:MM:SS format", {
-  result <- parse_date_safe("2024-06-15 14:30:00")
-  expect_false(is.na(result))
-  expect_equal(format(result, "%Y-%m-%d"), "2024-06-15")
-})
-
-test_that("parse_date_safe parses ISO 8601 format with Z", {
-  result <- parse_date_safe("2024-06-15T14:30:00Z")
-  expect_false(is.na(result))
-  expect_equal(format(result, "%Y-%m-%d"), "2024-06-15")
-})
-
-# ==============================================================================
 # extract_package_info() tests
 # ==============================================================================
 
@@ -116,7 +78,19 @@ test_that("extract_package_info handles missing optional fields", {
   expect_equal(result$name, "minimal")
   expect_equal(result$title, "")
   expect_equal(result$stars, 0L)
-  expect_equal(result$downloads, 0L)
+  expect_equal(result$usedby, 0L)
+  expect_equal(result$score, 0)
+  expect_equal(result$maintainer, "")
+})
+
+test_that("extract_package_info reads search API fields", {
+  pkg <- mock_package_data(name = "testpkg", stars = 42L, usedby = 7L, score = 12.5)
+  result <- extract_package_info(pkg)
+
+  expect_equal(result$stars, 42L)
+  expect_equal(result$usedby, 7L)
+  expect_equal(result$score, 12.5)
+  expect_equal(result$maintainer, "Test Author")
 })
 
 test_that("extract_package_info truncates long descriptions", {
@@ -135,155 +109,78 @@ test_that("extract_package_info uses fallback for user field", {
 })
 
 # ==============================================================================
-# get_trending() tests
+# get_hidden_gems() tests
 # ==============================================================================
 
-test_that("get_trending returns requested number of packages", {
+test_that("get_hidden_gems returns requested number of packages", {
   packages <- lapply(1:20, function(i) {
-    mock_package_data(name = paste0("pkg", i), downloads = i * 100L)
+    mock_package_data(name = paste0("pkg", i), score = i)
   })
 
-  result <- suppressMessages(get_trending(packages, n = 5))
+  result <- suppressMessages(get_hidden_gems(packages, n = 5))
   expect_equal(length(result), 5)
 })
 
-test_that("get_trending sorts by downloads descending", {
+test_that("get_hidden_gems ranks high quality, low visibility packages first", {
   packages <- list(
-    mock_package_data(name = "low", downloads = 10L),
-    mock_package_data(name = "high", downloads = 1000L),
-    mock_package_data(name = "medium", downloads = 100L)
+    mock_package_data(name = "famous", score = 20, stars = 5000L, usedby = 500L),
+    mock_package_data(name = "gem", score = 15, stars = 10L, usedby = 5L),
+    mock_package_data(name = "middling", score = 15, stars = 300L, usedby = 20L)
   )
 
-  result <- suppressMessages(get_trending(packages, n = 3))
+  result <- suppressMessages(get_hidden_gems(packages, n = 3))
 
-  expect_equal(result[[1]]$name, "high")
-  expect_equal(result[[2]]$name, "medium")
-  expect_equal(result[[3]]$name, "low")
+  expect_equal(sapply(result, `[[`, "name"), c("gem", "middling", "famous"))
 })
 
-test_that("get_trending handles empty input", {
-  result <- suppressMessages(get_trending(list(), n = 5))
+test_that("get_hidden_gems uses reverse deps when a package has no stars", {
+  # Packages not hosted on GitHub (e.g. zoo, Matrix) have 0 stars but are
+  # widely used, so they should not rank as hidden gems
+  packages <- list(
+    mock_package_data(name = "widely_used", score = 15, stars = 0L, usedby = 3000L),
+    mock_package_data(name = "gem", score = 15, stars = 10L, usedby = 5L)
+  )
+
+  result <- suppressMessages(get_hidden_gems(packages, n = 2))
+
+  expect_equal(result[[1]]$name, "gem")
+})
+
+test_that("get_hidden_gems excludes packages with non-positive scores", {
+  packages <- list(
+    mock_package_data(name = "zero", score = 0, stars = 0L, usedby = 0L),
+    mock_package_data(name = "valid", score = 5)
+  )
+
+  result <- suppressMessages(get_hidden_gems(packages, n = 5))
+
+  expect_equal(sapply(result, `[[`, "name"), "valid")
+})
+
+test_that("get_hidden_gems filters out packages with missing names", {
+  packages <- list(
+    mock_package_data(name = "valid", score = 5),
+    list(`_score` = 50, Title = "No name")
+  )
+
+  result <- suppressMessages(get_hidden_gems(packages, n = 5))
+
+  expect_equal(sapply(result, `[[`, "name"), "valid")
+})
+
+test_that("get_hidden_gems handles empty input", {
+  result <- suppressMessages(get_hidden_gems(list(), n = 5))
   expect_equal(length(result), 0)
 })
 
-test_that("get_trending handles fewer packages than requested", {
+test_that("get_hidden_gems handles fewer packages than requested", {
   packages <- list(
-    mock_package_data(name = "pkg1", downloads = 100L),
-    mock_package_data(name = "pkg2", downloads = 200L)
+    mock_package_data(name = "pkg1", score = 5),
+    mock_package_data(name = "pkg2", score = 6)
   )
 
-  result <- suppressMessages(get_trending(packages, n = 10))
+  result <- suppressMessages(get_hidden_gems(packages, n = 10))
   expect_equal(length(result), 2)
-})
-
-test_that("get_trending filters out packages with missing names", {
-  packages <- list(
-    mock_package_data(name = "valid", downloads = 100L),
-    list(`_downloads` = 1000L, Title = "No name"),
-    mock_package_data(name = "another", downloads = 50L)
-  )
-
-  result <- suppressMessages(get_trending(packages, n = 5))
-
-  # Should only include packages with valid names
-  names <- sapply(result, function(p) p$name)
-  expect_true(all(names %in% c("valid", "another")))
-})
-
-# ==============================================================================
-# get_new() tests
-# ==============================================================================
-
-test_that("get_new returns requested number of packages", {
-  packages <- lapply(1:20, function(i) {
-    mock_package_data(
-      name = paste0("pkg", i),
-      published = sprintf("2024-%02d-01", i %% 12 + 1)
-    )
-  })
-
-  result <- suppressMessages(get_new(packages, n = 5))
-  expect_equal(length(result), 5)
-})
-
-test_that("get_new sorts by date descending", {
-  packages <- list(
-    mock_package_data(name = "old", published = "2023-01-01"),
-    mock_package_data(name = "new", published = "2024-12-01"),
-    mock_package_data(name = "medium", published = "2024-06-01")
-  )
-
-  result <- suppressMessages(get_new(packages, n = 3))
-
-  expect_equal(result[[1]]$name, "new")
-  expect_equal(result[[2]]$name, "medium")
-  expect_equal(result[[3]]$name, "old")
-})
-
-test_that("get_new handles packages with no valid dates", {
-  packages <- list(
-    mock_package_data(name = "pkg1", published = "invalid"),
-    mock_package_data(name = "pkg2", published = "")
-  )
-  # Override the Date/Publication field
-  packages[[1]]$`Date/Publication` <- "invalid"
-  packages[[1]]$`_published` <- "invalid"
-  packages[[2]]$`Date/Publication` <- ""
-  packages[[2]]$`_published` <- ""
-
-  result <- suppressMessages(get_new(packages, n = 5))
-
-  # Should fall back to first packages when no valid dates
-  expect_true(length(result) >= 0)
-})
-
-test_that("get_new handles empty input", {
-  result <- suppressMessages(get_new(list(), n = 5))
-  expect_equal(length(result), 0)
-})
-
-# ==============================================================================
-# get_rising() tests
-# ==============================================================================
-
-test_that("get_rising returns requested number of packages", {
-  packages <- lapply(1:20, function(i) {
-    mock_package_data(name = paste0("pkg", i), stars = i * 10L)
-  })
-
-  result <- suppressMessages(get_rising(packages, n = 5))
-  expect_equal(length(result), 5)
-})
-
-test_that("get_rising sorts by stars descending", {
-  packages <- list(
-    mock_package_data(name = "low_stars", stars = 10L),
-    mock_package_data(name = "high_stars", stars = 500L),
-    mock_package_data(name = "medium_stars", stars = 100L)
-  )
-
-  result <- suppressMessages(get_rising(packages, n = 3))
-
-  expect_equal(result[[1]]$name, "high_stars")
-  expect_equal(result[[2]]$name, "medium_stars")
-  expect_equal(result[[3]]$name, "low_stars")
-})
-
-test_that("get_rising handles empty input", {
-  result <- suppressMessages(get_rising(list(), n = 5))
-  expect_equal(length(result), 0)
-})
-
-test_that("get_rising handles packages with zero stars", {
-  packages <- list(
-    mock_package_data(name = "nostars", stars = 0L),
-    mock_package_data(name = "somestars", stars = 50L)
-  )
-
-  result <- suppressMessages(get_rising(packages, n = 5))
-
-  expect_equal(result[[1]]$name, "somestars")
-  expect_equal(result[[2]]$name, "nostars")
 })
 
 # ==============================================================================

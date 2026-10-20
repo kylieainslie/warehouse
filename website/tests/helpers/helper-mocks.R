@@ -13,27 +13,21 @@ library(tibble)
 #' @return A list mimicking R-universe API package data
 mock_package_data <- function(
   name = "testpkg",
-  downloads = 100L,
   stars = 50L,
-  published = "2024-01-15",
+  usedby = 10L,
   score = 0.8,
   user = "testuser"
 ) {
+  # Mirrors a result from the R-universe /api/search endpoint
   list(
     Package = name,
     Title = paste("Title for", name),
     Description = paste("Description for package", name),
-    Version = "1.0.0",
-    `_downloads` = downloads,
-    `_stars` = stars,
+    stars = stars,
     `_score` = score,
     `_user` = user,
-    `_owner` = user,
-    `_usedby` = 10L,
-    `Date/Publication` = published,
-    `_published` = published,
-    `_created` = "2023-01-01",
-    Maintainer = "Test Author <test@example.com>"
+    `_usedby` = usedby,
+    maintainer = list(name = "Test Author", email = "test@example.com")
   )
 }
 
