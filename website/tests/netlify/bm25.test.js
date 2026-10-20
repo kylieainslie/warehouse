@@ -47,6 +47,19 @@ describe('BM25 Helper Functions', () => {
       expect(stemTerm('classes')).toBe('class');
     });
 
+    test('keeps ss endings and doubled l/s/z', () => {
+      expect(stemTerm('class')).toBe('class');
+      expect(stemTerm('lasso')).toBe('lasso');
+      expect(stemTerm('falls')).toBe('fall');
+      expect(stemTerm('fall')).toBe('fall');
+    });
+
+    test('stems different forms of a word to the same term', () => {
+      expect(stemTerm('classes')).toBe(stemTerm('class'));
+      expect(stemTerm('plotting')).toBe(stemTerm('plot'));
+      expect(stemTerm('models')).toBe(stemTerm('model'));
+    });
+
     test('converts ies to y', () => {
       expect(stemTerm('epidemies')).toBe('epidemy');
       expect(stemTerm('studies')).toBe('study');
