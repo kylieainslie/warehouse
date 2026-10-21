@@ -18,9 +18,10 @@ jobs:
       - name: Get latest Node.js LTS major version
         id: lts
         run: |
+          # Highest LTS major, not the most recent LTS release: older LTS lines
+          # still get patch releases, which made max_by(.date) flip back to them
           VERSION=$(curl -s https://nodejs.org/dist/index.json | \
-            jq -r '[.[] | select(.lts != false)] | max_by(.date) | .version' | \
-            sed 's/v\([0-9]*\).*/\1/')
+            jq -r '[.[] | select(.lts != false) | .version | ltrimstr("v") | split(".")[0] | tonumber] | max')
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Get current Node.js version from netlify.toml
