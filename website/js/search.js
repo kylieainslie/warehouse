@@ -185,12 +185,18 @@ const queryExpansions = {
   'clinical': 'survival survminer lme4 coxme'
 };
 
+// Whole-word, case-insensitive patterns for each expansion, compiled once
+const queryExpansionPatterns = Object.entries(queryExpansions).map(([abbrev, full]) => ({
+  abbrev,
+  full,
+  regex: new RegExp(`\\b${abbrev}\\b`, 'gi')
+}));
+
 // Expand abbreviations in search query
 function expandQuery(query) {
   let expanded = query;
-  for (const [abbrev, full] of Object.entries(queryExpansions)) {
-    // Match whole words only (case-insensitive)
-    const regex = new RegExp(`\\b${abbrev}\\b`, 'gi');
+  for (const { abbrev, full, regex } of queryExpansionPatterns) {
+    regex.lastIndex = 0;  // test() on a /g regex is stateful
     if (regex.test(expanded)) {
       // Add both the abbreviation and expansion for broader matching
       expanded = expanded.replace(regex, `${abbrev} ${full}`);
