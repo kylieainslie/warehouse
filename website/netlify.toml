@@ -16,7 +16,7 @@ package = "@netlify/plugin-functions-install-core"
 
 [build.environment]
   # Node version for functions
-  NODE_VERSION = "22"
+  NODE_VERSION = "24"
 
 [functions]
   # Directory containing serverless functions
