@@ -1,0 +1,47 @@
+name: Test Netlify Functions
+
+on:
+  push:
+    paths:
+      - 'website/netlify/**'
+      - 'website/tests/netlify/**'
+      - 'website/netlify.toml'
+      - '.github/workflows/test-netlify-functions.yml'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'website/netlify/**'
+      - 'website/tests/netlify/**'
+      - 'website/netlify.toml'
+      - '.github/workflows/test-netlify-functions.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: website/netlify/functions
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Test on the same Node version Netlify deploys with
+      - name: Read Node.js version from netlify.toml
+        id: node
+        run: echo "version=$(grep -oE 'NODE_VERSION = "[0-9]+"' ../../netlify.toml | grep -oE '[0-9]+')" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ steps.node.outputs.version }}
+          cache: npm
+          cache-dependency-path: website/netlify/functions/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test

@@ -63,16 +63,19 @@ function stemTerm(term) {
   if (STEM_EXCEPTIONS.has(t)) return t;
   // Remove trailing 's', 'es', 'ing', 'ed' for basic matching
   let stem;
+  if (t.endsWith('sses')) return t.slice(0, -2);  // "classes" -> "class"
+  if (t.endsWith('ss')) return t;                  // "class", "process" keep their ss
   if (t.endsWith('ies')) return t.slice(0, -3) + 'y';
   else if (t.endsWith('es') && t.length > 3) stem = t.slice(0, -2);
   else if (t.endsWith('s') && t.length > 2) stem = t.slice(0, -1);
   else if (t.endsWith('ing') && t.length > 5) stem = t.slice(0, -3);
   else if (t.endsWith('ed') && t.length > 4) stem = t.slice(0, -2);
   else return t;
-  // Remove doubled final consonant left by suffix removal (e.g. "plott" -> "plot", "runn" -> "run")
+  // Remove doubled final consonant left by suffix removal (e.g. "plott" -> "plot", "runn" -> "run"),
+  // except l/s/z, which are usually part of the word ("falls" -> "fall", not "fal")
   if (stem.length >= 2) {
     const last = stem[stem.length - 1];
-    if (last === stem[stem.length - 2] && !'aeiou'.includes(last)) {
+    if (last === stem[stem.length - 2] && !'aeiouslz'.includes(last)) {
       return stem.slice(0, -1);
     }
   }
