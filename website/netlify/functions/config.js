@@ -7,13 +7,13 @@ module.exports = {
   // See: https://docs.anthropic.com/en/docs/about-claude/models
   models: {
     // Fast, cost-effective model for simple tasks (search, classification)
-    fast: 'claude-haiku-4-5-20251001',
+    fast: 'claude-haiku-5-5',
 
     // Balanced model for complex tasks (chat, analysis)
-    balanced: 'claude-sonnet-5',
+    balanced: 'claude-sonnet-5-5',
 
     // Most capable model for difficult tasks (if needed)
-    powerful: 'claude-sonnet-5'
+    powerful: 'claude-sonnet-5-5'
   },
 
   // Rate limiting defaults (requests per window)
