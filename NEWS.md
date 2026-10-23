@@ -4,6 +4,14 @@ The Warehouse is a website, not a package, so versions are dates
 (`YEAR.MONTH`) and are only tagged for notable changes. Weekly data
 refreshes and dependency updates are not listed.
 
+## Development version
+
+* Package cards and pages now show when a package was last released on
+  CRAN, its monthly downloads, and how many CRAN packages depend on it.
+  Packages with no release in over two years are flagged. GitHub stars are
+  only shown when a package has some, so CRAN packages no longer show
+  "0 stars".
+
 ## v2026.10 — Discovery redesign (October 2026)
 
 * **Hidden Gems** replaces the Trending, New and Rising Stars tabs in the
