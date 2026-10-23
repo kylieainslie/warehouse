@@ -57,6 +57,12 @@ jobs:
         run: |
           Rscript scripts/tag_packages.R
 
+      # Release dates, downloads and reverse deps for package cards; also
+      # baked into the JSON, so it must run before export
+      - name: Fetch package signals from CRAN
+        run: |
+          Rscript -e 'source("R/fetch_signals.R"); run_signals_fetch()'
+
       - name: Export JSON files
         run: |
           Rscript -e 'source("R/export_json.R"); export_all()'
@@ -109,6 +115,7 @@ jobs:
           git commit -m "Weekly data update
 
           - Scraped packages from all sources
+          - Updated release dates, downloads and reverse dependencies
           - Updated discover section and R Weekly packages
           - Updated reviews from Google Sheets"
           git push

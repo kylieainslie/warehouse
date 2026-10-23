@@ -755,9 +755,8 @@ function renderPackageCard(pkg) {
       <p class="package-description">${escapeHtml(pkg.title || pkg.description || 'No description available')}</p>
       ${reviewHtml}
       <div class="package-meta">
-        <span class="meta-item" title="GitHub stars"><i class="bi bi-star"></i> ${pkg.stars || 0}</span>
+        ${renderPackageSignals(pkg)}
         <span class="meta-item" title="Category"><i class="bi bi-folder"></i> ${escapeHtml(pkg.primary_category || 'Uncategorized')}</span>
-        <span class="meta-item" title="Version"><i class="bi bi-tag"></i> ${escapeHtml(pkg.version || '?')}</span>
       </div>
       ${topicsHtml}
       <div class="package-actions">
@@ -773,6 +772,64 @@ function renderPackageCard(pkg) {
       </div>
     </div>
   `;
+}
+
+// Packages with no CRAN release for this long get flagged on their card
+const STALE_RELEASE_YEARS = 2;
+
+// Describe how long ago a YYYY-MM-DD date was, e.g. "3 weeks ago"
+function formatTimeAgo(dateStr, now = new Date()) {
+  const date = new Date(dateStr);
+  if (isNaN(date)) return null;
+  const days = Math.floor((now - date) / (24 * 60 * 60 * 1000));
+  if (days < 1) return 'today';
+  if (days < 14) return `${days} day${days === 1 ? '' : 's'} ago`;
+  if (days < 60) return `${Math.floor(days / 7)} weeks ago`;
+  if (days < 365) return `${Math.floor(days / 30)} months ago`;
+  const years = Math.floor(days / 365);
+  return `${years} year${years === 1 ? '' : 's'} ago`;
+}
+
+function isStaleRelease(dateStr, now = new Date()) {
+  const date = new Date(dateStr);
+  if (isNaN(date)) return false;
+  return (now - date) > STALE_RELEASE_YEARS * 365 * 24 * 60 * 60 * 1000;
+}
+
+// Render maintenance and usage signals (last release, downloads, reverse
+// dependencies, stars) for a package card. Signals that are missing or zero
+// are left out, so CRAN packages don't show a misleading "0 stars".
+function renderPackageSignals(pkg) {
+  const items = [];
+
+  if (pkg.published) {
+    const ago = formatTimeAgo(pkg.published);
+    const stale = isStaleRelease(pkg.published);
+    // The date is the CRAN release, so pair it with the CRAN version rather
+    // than a development version from GitHub or R-universe
+    const cranVersion = pkg.cran_version || pkg.version;
+    const version = cranVersion ? `v${escapeHtml(cranVersion)} · ` : '';
+    const title = stale
+      ? `No CRAN release since ${pkg.published}`
+      : `Last CRAN release ${pkg.published}`;
+    items.push(`<span class="meta-item${stale ? ' meta-stale' : ''}" title="${title}"><i class="bi bi-${stale ? 'exclamation-triangle' : 'clock-history'}"></i> ${version}${ago}</span>`);
+  } else if (pkg.version) {
+    items.push(`<span class="meta-item" title="Version"><i class="bi bi-tag"></i> v${escapeHtml(pkg.version)}</span>`);
+  }
+
+  if (pkg.downloads > 0) {
+    items.push(`<span class="meta-item" title="CRAN downloads in the last month"><i class="bi bi-download"></i> ${formatNumber(pkg.downloads)}/month</span>`);
+  }
+
+  if (pkg.revdeps > 0) {
+    items.push(`<span class="meta-item" title="CRAN packages that depend on this one"><i class="bi bi-diagram-3"></i> used by ${formatNumber(pkg.revdeps)}</span>`);
+  }
+
+  if (pkg.stars > 0) {
+    items.push(`<span class="meta-item" title="GitHub stars"><i class="bi bi-star"></i> ${formatNumber(pkg.stars)}</span>`);
+  }
+
+  return items.join('\n        ');
 }
 
 // Render review summary (stars and count) for package card
