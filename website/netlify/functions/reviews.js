@@ -2,6 +2,8 @@
 // Netlify serverless function to handle package reviews
 // Stores reviews using GitHub API (writes to data/reviews.json in repo)
 
+const { withAuditLog } = require('./audit-log');
+
 const GITHUB_OWNER = 'kylieainslie';
 const GITHUB_REPO = 'warehouse';
 const REVIEWS_PATH = 'website/data/reviews.json';
@@ -52,7 +54,7 @@ function getCorsOrigin(event) {
  * @param {Object} context - Netlify function context
  * @returns {Promise<Object>} HTTP response
  */
-exports.handler = async function(event, context) {
+exports.handler = withAuditLog('reviews', async function(event, context) {
   // CORS headers
   const headers = {
     'Access-Control-Allow-Origin': getCorsOrigin(event),
@@ -81,7 +83,7 @@ exports.handler = async function(event, context) {
     headers,
     body: JSON.stringify({ error: 'Method not allowed' })
   };
-};
+});
 
 /**
  * Fetch reviews from the GitHub-hosted reviews.json file.

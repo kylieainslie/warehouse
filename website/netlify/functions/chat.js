@@ -4,6 +4,7 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const config = require('./config');
 const { rateLimitMiddleware } = require('./rate-limiter');
+const { withAuditLog } = require('./audit-log');
 
 // System prompt for the package recommendation assistant
 const SYSTEM_PROMPT = `You are The Warehouse's R package assistant, helping users find the right R packages for their data analysis tasks.
@@ -81,7 +82,7 @@ function getCorsOrigin(event) {
  * @param {Object} context - Netlify function context
  * @returns {Promise<Object>} HTTP response with assistant reply
  */
-exports.handler = async function(event, context) {
+exports.handler = withAuditLog('chat', async function(event, context) {
   // Base headers
   const headers = {
     'Content-Type': 'application/json',
@@ -243,4 +244,4 @@ exports.handler = async function(event, context) {
       })
     };
   }
-};
+});
