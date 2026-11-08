@@ -1,6 +1,6 @@
 [
   {
-    "id": 28698,
+    "id": 28790,
     "package_name": "xtable",
     "title": "Export Tables to LaTeX or HTML",
     "description": "Coerce data to LaTeX and HTML tables.",
@@ -43,7 +43,7 @@
     "stars": 0
   },
   {
-    "id": 20503,
+    "id": 20555,
     "package_name": "numDeriv",
     "title": "Accurate Numerical Derivatives",
     "description": "Methods for calculating (usually) accurate numerical first\nand second order derivatives. Accurate calculations are done\nusing 'Richardson''s' extrapolation or, when applicable, a\ncomplex step derivative is available. A simple difference\nmethod is also provided. Simple difference is (usually) less\naccurate but is much quicker than 'Richardson''s' extrapolation\nand provides a useful cross-check. Methods are provided for\nreal scalar and vector valued functions.",
@@ -61,7 +61,7 @@
     "stars": 1
   },
   {
-    "id": 26513,
+    "id": 26591,
     "package_name": "survey",
     "title": "Analysis of Complex Survey Samples",
     "description": "Summary statistics, two-sample tests, rank tests,\ngeneralised linear models, cumulative link models, Cox models,\nloglinear models, and general maximum pseudolikelihood\nestimation for multistage stratified, cluster-sampled,\nunequally weighted survey samples. Variances by Taylor series\nlinearisation or replicate weights. Post-stratification,\ncalibration, and raking. Two-phase and multiphase subsampling\ndesigns. Graphics. PPS sampling without replacement. Small-area\nestimation. Dual-frame designs.",
@@ -180,7 +180,7 @@
     "stars": 1
   },
   {
-    "id": 23907,
+    "id": 23972,
     "package_name": "robustbase",
     "title": "Basic Robust Statistics",
     "description": "\"Essential\" Robust Statistics. Tools allowing to analyze\ndata with robust methods.  This includes regression methodology\nincluding model selections and multivariate statistics where we\nstrive to cover the book \"Robust Statistics, Theory and\nMethods\" by 'Maronna, Martin and Yohai'; Wiley 2006.",
@@ -287,7 +287,7 @@
     "stars": 0
   },
   {
-    "id": 27315,
+    "id": 27399,
     "package_name": "tm",
     "title": "Text Mining Package",
     "description": "A framework for text mining applications within R.",
@@ -378,11 +378,11 @@
     "topics": [
       ["cpp"]
     ],
-    "score": 12.6602,
+    "score": 12.725,
     "stars": 0
   },
   {
-    "id": 2963,
+    "id": 2971,
     "package_name": "GPArotation",
     "title": "GPA Factor Rotation",
     "description": "Gradient Projection Algorithm Rotation for Factor\nAnalysis. See '?GPArotation.Intro' for more details.",
@@ -425,7 +425,7 @@
     "stars": 1
   },
   {
-    "id": 13910,
+    "id": 13937,
     "package_name": "expm",
     "title": "Matrix Exponential, Log, 'etc'",
     "description": "Computation of the matrix exponential, logarithm, sqrt,\nand related quantities, using traditional and modern methods.",
@@ -453,7 +453,7 @@
     "stars": 0
   },
   {
-    "id": 11710,
+    "id": 11733,
     "package_name": "copula",
     "title": "Multivariate Dependence with Copulas",
     "description": "Classes (S4) of commonly used elliptical, Archimedean,\nextreme-value and other copula families, as well as their\nrotations, mixtures and asymmetrizations. Nested Archimedean\ncopulas, related tools and special functions. Methods for\ndensity, distribution, random number generation, bivariate\ndependence measures, Rosenblatt transform, Kendall distribution\nfunction, perspective and contour plots. Fitting of copula\nmodels with potentially partly fixed parameters, including\nstandard errors. Serial independence tests, copula\nspecification tests (independence, exchangeability, radial\nsymmetry, extreme-value dependence, goodness-of-fit) and model\nselection based on cross-validation. Empirical copula, smoothed\nversions, and non-parametric estimators of the Pickands\ndependence function.",
@@ -696,7 +696,7 @@
     "stars": 0
   },
   {
-    "id": 10637,
+    "id": 10656,
     "package_name": "carData",
     "title": "Companion to Applied Regression Data Sets",
     "description": "Datasets to Accompany J. Fox and S. Weisberg, An R\nCompanion to Applied Regression, Third Edition, Sage (2019).",
@@ -709,7 +709,7 @@
     "stars": 0
   },
   {
-    "id": 4608,
+    "id": 4619,
     "package_name": "MatrixModels",
     "title": "Modelling with Sparse and Dense Matrices",
     "description": "Generalized Linear Modelling with sparse and dense\n'Matrix' matrices, using modular prediction and response module\nclasses.",
@@ -739,7 +739,7 @@
     "stars": 1
   },
   {
-    "id": 22938,
+    "id": 23002,
     "package_name": "randtoolbox",
     "title": "Toolbox for Pseudo and Quasi Random Number Generation and Random\nGenerator Tests",
     "description": "Provides (1) pseudo random generators - general linear\ncongruential generators, multiple recursive generators and\ngeneralized feedback shift register (SF-Mersenne Twister\nalgorithm (<doi:10.1007/978-3-540-74496-2_36>) and WELL\n(<doi:10.1145/1132973.1132974>) generators); (2) quasi random\ngenerators - the Torus algorithm, the Sobol sequence, the\nHalton sequence (including the Van der Corput sequence) and (3)\nsome generator tests - the gap test, the serial test, the poker\ntest, see, e.g., Gentle (2003) <doi:10.1007/b97336>. Take a\nlook at the Distribution task view of types and tests of random\nnumber generators. The package can be provided without the\n'rngWELL' dependency on demand. Package in Memoriam of Diethelm\nand Barbara Wuertz.",
@@ -782,7 +782,7 @@
     "stars": 1
   },
   {
-    "id": 19145,
+    "id": 19192,
     "package_name": "minqa",
     "title": "Derivative-Free Optimization Algorithms by Quadratic\nApproximation",
     "description": "Derivative-free optimization by quadratic approximation\nbased on an interface to Fortran implementations by M. J. D.\nPowell.",
@@ -797,160 +797,11 @@
     "topics": [
       ["cpp"]
     ],
-    "score": 11.507,
+    "score": 11.5221,
     "stars": 1
   },
   {
-    "id": 6924,
-    "package_name": "Rmpfr",
-    "title": "Interface R to MPFR - Multiple Precision Floating-Point Reliable",
-    "description": "Arithmetic (via S4 classes and methods) for arbitrary\nprecision floating point numbers, including transcendental\n(\"special\") functions.  To this end, the package interfaces to\nthe 'LGPL' licensed 'MPFR' (Multiple Precision Floating-Point\nReliable) Library which itself is based on the 'GMP' (GNU\nMultiple Precision) Library.",
-    "version": "1.1-3",
-    "maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
-    "url": "https://rmpfr.r-forge.r-project.org/",
-    "exports": [
-      ["..bigq2mpfr"],
-      ["..bigz2mpfr"],
-      [".bigq2mpfr"],
-      [".bigz2mpfr"],
-      [".getPrec"],
-      [".getSign"],
-      [".mpfr"],
-      [".mpfr_erange"],
-      [".mpfr_erange_is_int"],
-      [".mpfr_erange_kinds"],
-      [".mpfr_erange_set"],
-      [".mpfr_formatinfo"],
-      [".mpfr_gmp_numbbits"],
-      [".mpfr_maxPrec"],
-      [".mpfr_minPrec"],
-      [".mpfr_negative"],
-      [".mpfr_sign"],
-      [".mpfr."],
-      [".mpfr.is.whole"],
-      [".mpfr2bigq"],
-      [".mpfr2bigz"],
-      [".mpfr2d"],
-      [".mpfr2exp"],
-      [".mpfr2i"],
-      [".mpfr2list"],
-      [".mpfr2str"],
-      [".mpfrSizeof"],
-      [".mpfrVersion"],
-      ["Ai"],
-      ["all.equal"],
-      ["aperm"],
-      ["apply"],
-      ["Arith"],
-      ["asNumeric"],
-      ["atan2"],
-      ["Bernoulli"],
-      ["beta"],
-      ["cbind"],
-      ["chooseMpfr"],
-      ["chooseMpfr.all"],
-      ["coerce"],
-      ["coerce<-"],
-      ["colMeans"],
-      ["colSums"],
-      ["Compare"],
-      ["Const"],
-      ["dbinom"],
-      ["dchisq"],
-      ["dgamma"],
-      ["diag"],
-      ["diag<-"],
-      ["dnbinom"],
-      ["dnorm"],
-      ["dpois"],
-      ["dt"],
-      ["Ei"],
-      ["erf"],
-      ["erfc"],
-      ["factorial"],
-      ["factorialMpfr"],
-      ["format"],
-      ["formatBin"],
-      ["formatDec"],
-      ["formatHex"],
-      ["formatMpfr"],
-      ["frexpMpfr"],
-      ["getD"],
-      ["getPrec"],
-      ["head"],
-      ["hjkMpfr"],
-      ["hypot"],
-      ["igamma"],
-      ["integrateR"],
-      ["is.mpfr"],
-      ["j0"],
-      ["j1"],
-      ["jn"],
-      ["lbeta"],
-      ["ldexpMpfr"],
-      ["Li2"],
-      ["log1mexp"],
-      ["log1pexp"],
-      ["Logic"],
-      ["Math"],
-      ["Math2"],
-      ["matmult"],
-      ["mean"],
-      ["median"],
-      ["mpfr"],
-      ["mpfr_default_prec"],
-      ["mpfr.is.0"],
-      ["mpfr.is.integer"],
-      ["mpfr2array"],
-      ["mpfrArray"],
-      ["mpfrImport"],
-      ["mpfrIs0"],
-      ["mpfrVersion"],
-      ["mpfrXport"],
-      ["norm"],
-      ["num2bigq"],
-      ["Ops"],
-      ["optimizeR"],
-      ["outer"],
-      ["pbetaI"],
-      ["pgamma"],
-      ["pmax"],
-      ["pmin"],
-      ["pnorm"],
-      ["pochMpfr"],
-      ["qnormI"],
-      ["quantile"],
-      ["rbind"],
-      ["roundMpfr"],
-      ["rowMeans"],
-      ["rowSums"],
-      ["sapplyMpfr"],
-      ["seqMpfr"],
-      ["show"],
-      ["sumBinomMpfr"],
-      ["summary"],
-      ["Summary"],
-      ["t"],
-      ["tail"],
-      ["toNum"],
-      ["unique"],
-      ["unirootR"],
-      ["which.max"],
-      ["which.min"],
-      ["y0"],
-      ["y1"],
-      ["yn"],
-      ["zeta"]
-    ],
-    "topics": [
-      ["mpfr4"],
-      ["gmp"]
-    ],
-    "score": 10.74,
-    "stars": 0
-  },
-  {
-    "id": 24274,
+    "id": 24343,
     "package_name": "rversions",
     "title": "Query 'R' Versions, Including 'r-release' and 'r-oldrel'",
     "description": "Query the main 'R' 'SVN' repository to find the versions\n'r-release' and 'r-oldrel' refer to, and also all previous 'R'\nversions and their release dates.",
@@ -975,7 +826,7 @@
     "stars": 43
   },
   {
-    "id": 26509,
+    "id": 26587,
     "package_name": "surveillance",
     "title": "Temporal and Spatio-Temporal Modeling and Monitoring of Epidemic\nPhenomena",
     "description": "Statistical methods for the modeling and monitoring of\ntime series of counts, proportions and categorical data, as\nwell as for the modeling of continuous-time point processes of\nepidemic phenomena. The monitoring methods focus on aberration\ndetection in count data time series from public health\nsurveillance of communicable diseases, but applications could\njust as well originate from environmetrics, reliability\nengineering, econometrics, or social sciences. The package\nimplements many typical outbreak detection procedures such as\nthe (improved) Farrington algorithm, or the negative binomial\nGLR-CUSUM method of Hoehle and Paul (2008)\n<doi:10.1016/j.csda.2008.02.015>. A novel CUSUM approach\ncombining logistic and multinomial logistic modeling is also\nincluded. The package contains several real-world data sets,\nthe ability to simulate outbreak data, and to visualize the\nresults of the monitoring in a temporal, spatial or\nspatio-temporal fashion. A recent overview of the available\nmonitoring procedures is given by Salmon et al. (2016)\n<doi:10.18637/jss.v070.i10>. For the retrospective analysis of\nepidemic spread, the package provides three endemic-epidemic\nmodeling frameworks with tools for visualization, likelihood\ninference, and simulation. hhh4() estimates models for\n(multivariate) count time series following Paul and Held (2011)\n<doi:10.1002/sim.4177> and Meyer and Held (2014)\n<doi:10.1214/14-AOAS743>. twinSIR() models the\nsusceptible-infectious-recovered (SIR) event history of a fixed\npopulation, e.g, epidemics across farms or networks, as a\nmultivariate point process as proposed by Hoehle (2009)\n<doi:10.1002/bimj.200900050>. twinstim() estimates\nself-exciting point process models for a spatio-temporal point\npattern of infective events, e.g., time-stamped geo-referenced\nsurveillance data, as proposed by Meyer et al. (2012)\n<doi:10.1111/j.1541-0420.2011.01684.x>. A recent overview of\nthe implemented space-time modeling frameworks for epidemic\nphenomena is given by Meyer et al. (2017)\n<doi:10.18637/jss.v077.i11>.",
@@ -1207,11 +1058,160 @@
     "topics": [
       ["cpp"]
     ],
-    "score": 10.5143,
+    "score": 10.6291,
     "stars": 2
   },
   {
-    "id": 25257,
+    "id": 6935,
+    "package_name": "Rmpfr",
+    "title": "Interface R to MPFR - Multiple Precision Floating-Point Reliable",
+    "description": "Arithmetic (via S4 classes and methods) for arbitrary\nprecision floating point numbers, including transcendental\n(\"special\") functions.  To this end, the package interfaces to\nthe 'LGPL' licensed 'MPFR' (Multiple Precision Floating-Point\nReliable) Library which itself is based on the 'GMP' (GNU\nMultiple Precision) Library.",
+    "version": "1.1-3",
+    "maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
+    "url": "https://rmpfr.r-forge.r-project.org/",
+    "exports": [
+      ["..bigq2mpfr"],
+      ["..bigz2mpfr"],
+      [".bigq2mpfr"],
+      [".bigz2mpfr"],
+      [".getPrec"],
+      [".getSign"],
+      [".mpfr"],
+      [".mpfr_erange"],
+      [".mpfr_erange_is_int"],
+      [".mpfr_erange_kinds"],
+      [".mpfr_erange_set"],
+      [".mpfr_formatinfo"],
+      [".mpfr_gmp_numbbits"],
+      [".mpfr_maxPrec"],
+      [".mpfr_minPrec"],
+      [".mpfr_negative"],
+      [".mpfr_sign"],
+      [".mpfr."],
+      [".mpfr.is.whole"],
+      [".mpfr2bigq"],
+      [".mpfr2bigz"],
+      [".mpfr2d"],
+      [".mpfr2exp"],
+      [".mpfr2i"],
+      [".mpfr2list"],
+      [".mpfr2str"],
+      [".mpfrSizeof"],
+      [".mpfrVersion"],
+      ["Ai"],
+      ["all.equal"],
+      ["aperm"],
+      ["apply"],
+      ["Arith"],
+      ["asNumeric"],
+      ["atan2"],
+      ["Bernoulli"],
+      ["beta"],
+      ["cbind"],
+      ["chooseMpfr"],
+      ["chooseMpfr.all"],
+      ["coerce"],
+      ["coerce<-"],
+      ["colMeans"],
+      ["colSums"],
+      ["Compare"],
+      ["Const"],
+      ["dbinom"],
+      ["dchisq"],
+      ["dgamma"],
+      ["diag"],
+      ["diag<-"],
+      ["dnbinom"],
+      ["dnorm"],
+      ["dpois"],
+      ["dt"],
+      ["Ei"],
+      ["erf"],
+      ["erfc"],
+      ["factorial"],
+      ["factorialMpfr"],
+      ["format"],
+      ["formatBin"],
+      ["formatDec"],
+      ["formatHex"],
+      ["formatMpfr"],
+      ["frexpMpfr"],
+      ["getD"],
+      ["getPrec"],
+      ["head"],
+      ["hjkMpfr"],
+      ["hypot"],
+      ["igamma"],
+      ["integrateR"],
+      ["is.mpfr"],
+      ["j0"],
+      ["j1"],
+      ["jn"],
+      ["lbeta"],
+      ["ldexpMpfr"],
+      ["Li2"],
+      ["log1mexp"],
+      ["log1pexp"],
+      ["Logic"],
+      ["Math"],
+      ["Math2"],
+      ["matmult"],
+      ["mean"],
+      ["median"],
+      ["mpfr"],
+      ["mpfr_default_prec"],
+      ["mpfr.is.0"],
+      ["mpfr.is.integer"],
+      ["mpfr2array"],
+      ["mpfrArray"],
+      ["mpfrImport"],
+      ["mpfrIs0"],
+      ["mpfrVersion"],
+      ["mpfrXport"],
+      ["norm"],
+      ["num2bigq"],
+      ["Ops"],
+      ["optimizeR"],
+      ["outer"],
+      ["pbetaI"],
+      ["pgamma"],
+      ["pmax"],
+      ["pmin"],
+      ["pnorm"],
+      ["pochMpfr"],
+      ["qnormI"],
+      ["quantile"],
+      ["rbind"],
+      ["roundMpfr"],
+      ["rowMeans"],
+      ["rowSums"],
+      ["sapplyMpfr"],
+      ["seqMpfr"],
+      ["show"],
+      ["sumBinomMpfr"],
+      ["summary"],
+      ["Summary"],
+      ["t"],
+      ["tail"],
+      ["toNum"],
+      ["unique"],
+      ["unirootR"],
+      ["which.max"],
+      ["which.min"],
+      ["y0"],
+      ["y1"],
+      ["yn"],
+      ["zeta"]
+    ],
+    "topics": [
+      ["mpfr4"],
+      ["gmp"]
+    ],
+    "score": 10.4742,
+    "stars": 0
+  },
+  {
+    "id": 25333,
     "package_name": "signal",
     "title": "Signal Processing",
     "description": "A set of signal processing functions originally written\nfor 'Matlab' and 'Octave'. Includes filter generation\nutilities, filtering functions, resampling routines, and\nvisualization of filter models. It also includes interpolation\nfunctions.",
@@ -1286,7 +1286,7 @@
     "stars": 0
   },
   {
-    "id": 5813,
+    "id": 5825,
     "package_name": "Polychrome",
     "title": "Qualitative Palettes with Many Colors",
     "description": "Tools for creating, viewing, and assessing qualitative\npalettes with many (20-30 or more) colors. See Coombes and\ncolleagues (2019) <doi:10.18637/jss.v090.c01>.",
@@ -1331,7 +1331,7 @@
     "stars": 0
   },
   {
-    "id": 26133,
+    "id": 26208,
     "package_name": "stabledist",
     "title": "Stable Distribution Functions",
     "description": "Density, Probability and Quantile functions, and random\nnumber generation for (skew) stable distributions, using the\nparametrizations of Nolan.",
@@ -1350,7 +1350,7 @@
     "stars": 1
   },
   {
-    "id": 21668,
+    "id": 21728,
     "package_name": "pkgsearch",
     "title": "Search and Query CRAN R Packages",
     "description": "Search CRAN metadata about packages by keyword,\npopularity, recent activity, package name and more. Uses the\n'R-hub' search server, see <https://r-pkg.org> and the CRAN\nmetadata database, that contains information about CRAN\npackages. Note that this is _not_ a CRAN project.",
@@ -1379,7 +1379,7 @@
     "stars": 110
   },
   {
-    "id": 1051,
+    "id": 1052,
     "package_name": "CHNOSZ",
     "title": "Thermodynamic Calculations and Diagrams for Geochemistry",
     "description": "An integrated set of tools for thermodynamic calculations\nin aqueous geochemistry and geobiochemistry. Functions are\nprovided for writing balanced reactions to form species from\nuser-selected basis species and for calculating the standard\nmolal properties of species and reactions, including the\nstandard Gibbs energy and equilibrium constant. Calculations of\nthe non-equilibrium chemical affinity and equilibrium chemical\nactivity of species can be portrayed on diagrams as a function\nof temperature, pressure, or activity of basis species; in two\ndimensions, this gives a maximum affinity or predominance\ndiagram. The diagrams have formatted chemical formulas and axis\nlabels, and water stability limits can be added to Eh-pH,\noxygen fugacity- temperature, and other diagrams with a redox\nvariable. The package has been developed to handle common\ncalculations in aqueous geochemistry, such as solubility due to\ncomplexation of metal ions, mineral buffers of redox or pH, and\nchanging the basis species across a diagram (\"mosaic\ndiagrams\"). CHNOSZ also implements a group additivity algorithm\nfor the standard thermodynamic properties of proteins.",
@@ -1518,7 +1518,7 @@
     "stars": 0
   },
   {
-    "id": 11915,
+    "id": 11940,
     "package_name": "cranlogs",
     "title": "Download Logs from the 'RStudio' 'CRAN' Mirror",
     "description": "'API' to the database of 'CRAN' package downloads from the\n'RStudio' 'CRAN mirror'. The database itself is at\n<http://cranlogs.r-pkg.org>, see\n<https://github.com/r-hub/cranlogs.app> for the raw 'API'.",
@@ -1535,7 +1535,7 @@
     "stars": 89
   },
   {
-    "id": 23630,
+    "id": 23695,
     "package_name": "rhub",
     "title": "Tools for R Package Developers",
     "description": "R-hub v2 uses GitHub Actions to run 'R CMD check' and\nsimilar package checks. The 'rhub' package helps you set up\nR-hub v2 for your R package, and start running checks.",
@@ -1582,7 +1582,7 @@
     "stars": 368
   },
   {
-    "id": 21269,
+    "id": 21324,
     "package_name": "pcalg",
     "title": "Methods for Graphical Models and Causal Inference",
     "description": "Functions for causal structure learning and causal\ninference using graphical models. The main algorithms for\ncausal structure learning are PC (for observational data\nwithout hidden variables), FCI and RFCI (for observational data\nwith hidden variables), and GIES (for a mix of data from\nobservational studies (i.e. observational data) and data from\nexperiments involving interventions (i.e. interventional data)\nwithout hidden variables). For causal inference the IDA\nalgorithm, the Generalized Backdoor Criterion (GBC), the\nGeneralized Adjustment Criterion (GAC) and some related\nfunctions are implemented. Functions for incorporating\nbackground knowledge are provided.",
@@ -1694,7 +1694,7 @@
     "stars": 0
   },
   {
-    "id": 26694,
+    "id": 26774,
     "package_name": "systemfit",
     "title": "Estimating Systems of Simultaneous Equations",
     "description": "Econometric estimation of simultaneous systems of linear\nand nonlinear equations using Ordinary Least Squares (OLS),\nWeighted Least Squares (WLS), Seemingly Unrelated Regressions\n(SUR), Two-Stage Least Squares (2SLS), Weighted Two-Stage Least\nSquares (W2SLS), and Three-Stage Least Squares (3SLS) as\nsuggested, e.g., by Zellner (1962) <doi:10.2307/2281644>,\nZellner and Theil (1962) <doi:10.2307/1911287>, and Schmidt\n(1990) <doi:10.1016/0304-4076(90)90127-F>.",
@@ -1711,11 +1711,11 @@
       ["systemfit.control"]
     ],
     "topics": [],
-    "score": 8.9412,
+    "score": 8.9804,
     "stars": 0
   },
   {
-    "id": 1382,
+    "id": 1383,
     "package_name": "ClassDiscovery",
     "title": "Classes and Methods for \"Class Discovery\" with Microarrays or\nProteomics",
     "description": "Defines the classes used for \"class discovery\" problems in\nthe OOMPA project (<http://oompa.r-forge.r-project.org/>).\nClass discovery primarily consists of unsupervised clustering\nmethods with attempts to assess their statistical significance.",
@@ -1759,7 +1759,7 @@
     "stars": 0
   },
   {
-    "id": 24412,
+    "id": 24482,
     "package_name": "sampleSelection",
     "title": "Sample Selection Models",
     "description": "Two-step and maximum likelihood estimation of Heckman-type\nsample selection models: standard sample selection models\n(Tobit-2), endogenous switching regression models (Tobit-5),\nsample selection models with binary dependent outcome variable,\ninterval regression with sample selection (only ML estimation),\nand endogenous treatment effects models. These methods are\ndescribed in the three vignettes that are included in this\npackage and in econometric textbooks such as Greene (2011,\nEconometric Analysis, 7th edition, Pearson).",
@@ -1785,11 +1785,11 @@
       ["treatReg"]
     ],
     "topics": [],
-    "score": 8.7814,
+    "score": 8.8371,
     "stars": 0
   },
   {
-    "id": 2573,
+    "id": 2581,
     "package_name": "FME",
     "title": "A Flexible Modelling Environment for Inverse Modelling,\nSensitivity, Identifiability and Monte Carlo Analysis",
     "description": "Provides functions to help in fitting models to data, to\nperform Monte Carlo, sensitivity and identifiability analysis.\nIt is intended to work with models be written as a set of\ndifferential equations that are solved either by an integration\nroutine from package 'deSolve', or a steady-state solver from\npackage 'rootSolve'. However, the methods can also be used with\nother types of functions.",
@@ -1818,7 +1818,7 @@
     "stars": 0
   },
   {
-    "id": 3114,
+    "id": 3123,
     "package_name": "GeneralizedHyperbolic",
     "title": "The Generalized Hyperbolic Distribution",
     "description": "Functions for the hyperbolic and related distributions.\nDensity, distribution and quantile functions and random number\ngeneration are provided for the hyperbolic distribution, the\ngeneralized hyperbolic distribution, the generalized inverse\nGaussian distribution and the skew-Laplace distribution.\nAdditional functionality is provided for the hyperbolic\ndistribution, normal inverse Gaussian distribution and\ngeneralized inverse Gaussian distribution, including fitting of\nthese distributions to data. Linear models with hyperbolic\nerrors may be fitted using hyperblmFit.",
@@ -1978,7 +1978,7 @@
     "stars": 1
   },
   {
-    "id": 12830,
+    "id": 12856,
     "package_name": "distr",
     "title": "Object Oriented Implementation of Distributions",
     "description": "S4-classes and methods for distributions.",
@@ -2175,7 +2175,7 @@
     "stars": 0
   },
   {
-    "id": 8563,
+    "id": 8578,
     "package_name": "WRS2",
     "title": "A Collection of Robust Statistical Methods",
     "description": "A collection of robust statistical methods based on\nWilcox' WRS functions. It implements robust t-tests\n(independent and dependent samples), robust ANOVA (including\nbetween-within subject designs), quantile ANOVA, robust\ncorrelation, robust mediation, and nonparametric ANCOVA models\nbased on robust location measures.",
@@ -2248,7 +2248,7 @@
     "stars": 0
   },
   {
-    "id": 18035,
+    "id": 18080,
     "package_name": "linprog",
     "title": "Linear Programming / Optimization",
     "description": "Can be used to solve Linear Programming / Linear\nOptimization problems by using the simplex algorithm.",
@@ -2265,7 +2265,7 @@
     "stars": 0
   },
   {
-    "id": 6383,
+    "id": 6395,
     "package_name": "ROI",
     "title": "R Optimization Infrastructure",
     "description": "The R Optimization Infrastructure ('ROI')\n<doi:10.18637/jss.v094.i15> is a sophisticated framework for\nhandling optimization problems in R. Additional information can\nbe found on the 'ROI' homepage\n<http://roi.r-forge.r-project.org/>.",
@@ -2372,7 +2372,7 @@
     "stars": 0
   },
   {
-    "id": 27727,
+    "id": 27813,
     "package_name": "tuneR",
     "title": "Analysis of Music and Speech",
     "description": "Analyze music and speech, extract features like MFCCs,\nhandle wave files and their representation in various ways,\nread mp3, read midi, perform steps of a transcription, ... Also\ncontains functions ported from the 'rastamat' 'Matlab' package.",
@@ -2445,7 +2445,7 @@
     "stars": 0
   },
   {
-    "id": 10870,
+    "id": 10890,
     "package_name": "censReg",
     "title": "Censored Regression (Tobit) Models",
     "description": "Maximum Likelihood estimation of censored regression\n(Tobit) models with cross-sectional and panel data.",
@@ -2456,11 +2456,11 @@
       ["censReg"]
     ],
     "topics": [],
-    "score": 7.8245,
+    "score": 7.8459,
     "stars": 0
   },
   {
-    "id": 5552,
+    "id": 5564,
     "package_name": "POT",
     "title": "Generalized Pareto Distribution and Peaks Over Threshold",
     "description": "Some functions useful to perform a Peak Over Threshold\nanalysis in univariate and bivariate cases, see Beirlant et al.\n(2004) <doi:10.1002/0470012382>. A user guide is available in\nthe vignette.",
@@ -2517,7 +2517,7 @@
     "stars": 0
   },
   {
-    "id": 743,
+    "id": 742,
     "package_name": "Bessel",
     "title": "Computations and Approximations for Bessel Functions",
     "description": "Computations for Bessel function for complex, real and\npartly 'mpfr' (arbitrary precision) numbers; notably\ninterfacing TOMS 644; approximations for large arguments,\nexperiments, etc.",
@@ -2553,7 +2553,39 @@
     "stars": 0
   },
   {
-    "id": 20385,
+    "id": 7656,
+    "package_name": "SkewHyperbolic",
+    "title": "The Skew Hyperbolic Student t-Distribution",
+    "description": "Functions are provided for the density function,\ndistribution function, quantiles and random number generation\nfor the skew hyperbolic t-distribution. There are also\nfunctions that fit the distribution to data. There are\nfunctions for the mean, variance, skewness, kurtosis and mode\nof a given distribution and to calculate moments of any order\nabout any centre. To assess goodness of fit, there are\nfunctions to generate a Q-Q plot, a P-P plot and a tail plot.",
+    "version": "0.4-2",
+    "maintainer": "David Scott <d.scott@auckland.ac.nz>",
+    "url": "https://r-forge.r-project.org/projects/rmetrics/",
+    "exports": [
+      ["ddskewhyp"],
+      ["dskewhyp"],
+      ["ppskewhyp"],
+      ["pskewhyp"],
+      ["qqskewhyp"],
+      ["qskewhyp"],
+      ["rskewhyp"],
+      ["skewhypCalcRange"],
+      ["skewhypCheckPars"],
+      ["skewhypFit"],
+      ["skewhypFitStart"],
+      ["skewhypKurt"],
+      ["skewhypMean"],
+      ["skewhypMode"],
+      ["skewhypMom"],
+      ["skewhypSkew"],
+      ["skewhypTailPlotLine"],
+      ["skewhypVar"]
+    ],
+    "topics": [],
+    "score": 7.6503,
+    "stars": 1
+  },
+  {
+    "id": 20437,
     "package_name": "nor1mix",
     "title": "Normal aka Gaussian 1-d Mixture Models",
     "description": "Onedimensional Normal (i.e. Gaussian) Mixture Models (S3)\nClasses, for, e.g., density estimation or clustering algorithms\nresearch and teaching; providing the widely used Marron-Wand\ndensities.  Efficient random number generation and graphics.\nFitting to data by efficient ML (Maximum Likelihood) or\ntraditional EM estimation.",
@@ -2601,43 +2633,11 @@
       ["var.norMix"]
     ],
     "topics": [],
-    "score": 7.686,
+    "score": 7.5615,
     "stars": 0
   },
   {
-    "id": 7641,
-    "package_name": "SkewHyperbolic",
-    "title": "The Skew Hyperbolic Student t-Distribution",
-    "description": "Functions are provided for the density function,\ndistribution function, quantiles and random number generation\nfor the skew hyperbolic t-distribution. There are also\nfunctions that fit the distribution to data. There are\nfunctions for the mean, variance, skewness, kurtosis and mode\nof a given distribution and to calculate moments of any order\nabout any centre. To assess goodness of fit, there are\nfunctions to generate a Q-Q plot, a P-P plot and a tail plot.",
-    "version": "0.4-2",
-    "maintainer": "David Scott <d.scott@auckland.ac.nz>",
-    "url": "https://r-forge.r-project.org/projects/rmetrics/",
-    "exports": [
-      ["ddskewhyp"],
-      ["dskewhyp"],
-      ["ppskewhyp"],
-      ["pskewhyp"],
-      ["qqskewhyp"],
-      ["qskewhyp"],
-      ["rskewhyp"],
-      ["skewhypCalcRange"],
-      ["skewhypCheckPars"],
-      ["skewhypFit"],
-      ["skewhypFitStart"],
-      ["skewhypKurt"],
-      ["skewhypMean"],
-      ["skewhypMode"],
-      ["skewhypMom"],
-      ["skewhypSkew"],
-      ["skewhypTailPlotLine"],
-      ["skewhypVar"]
-    ],
-    "topics": [],
-    "score": 7.6503,
-    "stars": 1
-  },
-  {
-    "id": 6867,
+    "id": 6878,
     "package_name": "Rglpk",
     "title": "R/GNU Linear Programming Kit Interface",
     "description": "R interface to the GNU Linear Programming Kit. 'GLPK' is\nopen source software for solving large-scale linear programming\n(LP), mixed integer linear programming ('MILP') and other\nrelated problems.",
@@ -2651,11 +2651,11 @@
     "topics": [
       ["glpk"]
     ],
-    "score": 7.5443,
+    "score": 7.5548,
     "stars": 0
   },
   {
-    "id": 17265,
+    "id": 17309,
     "package_name": "isotone",
     "title": "Active Set and Generalized PAVA for Isotone Optimization",
     "description": "Contains two main functions: one for solving general\nisotone regression problems using the pool-adjacent-violators\nalgorithm (PAVA); another one provides a framework for active\nset methods for isotone optimization problems with arbitrary\norder restrictions. Various types of loss functions are\nprespecified.",
@@ -2688,7 +2688,7 @@
     "stars": 0
   },
   {
-    "id": 20708,
+    "id": 20763,
     "package_name": "oompaBase",
     "title": "Class Unions, Matrix Operations, and Color Schemes for OOMPA",
     "description": "Provides the class unions that must be preloaded in order\nfor the basic tools in the OOMPA (Object-Oriented Microarray\nand Proteomics Analysis) project to be defined and loaded. It\nalso includes vectorized operations for row-by-row means,\nvariances, and t-tests. Finally, it provides new color schemes.\nDetails on the packages in the OOMPA project can be found at\n<http://oompa.r-forge.r-project.org/>.",
@@ -2729,7 +2729,7 @@
     "stars": 0
   },
   {
-    "id": 11361,
+    "id": 11383,
     "package_name": "cobs",
     "title": "Constrained B-Splines (Sparse Matrix Based)",
     "description": "Qualitatively Constrained (Regression) Smoothing Splines\nvia Linear Programming and Sparse Matrices.",
@@ -2755,7 +2755,7 @@
     "stars": 0
   },
   {
-    "id": 13980,
+    "id": 14008,
     "package_name": "fExtremes",
     "title": "Rmetrics - Modelling Extreme Events in Finance",
     "description": "Provides functions for analysing and modelling extreme\nevents in financial time Series. The topics include: (i) data\npre-processing, (ii) explorative data analysis, (iii) peak over\nthreshold modelling, (iv) block maxima modelling, (v)\nestimation of VaR and CVaR, and (vi) the computation of the\nextreme index.",
@@ -2836,7 +2836,7 @@
     "stars": 1
   },
   {
-    "id": 15949,
+    "id": 15986,
     "package_name": "grImport",
     "title": "Importing Vector Graphics",
     "description": "Functions for converting, importing, and drawing\nPostScript pictures in R plots.",
@@ -2859,11 +2859,11 @@
       ["symbolsGrob"]
     ],
     "topics": [],
-    "score": 6.7269,
+    "score": 6.7124,
     "stars": 0
   },
   {
-    "id": 13990,
+    "id": 14018,
     "package_name": "fPortfolio",
     "title": "Rmetrics - Portfolio Selection and Optimization",
     "description": "A collection of functions to optimize portfolios and to\nanalyze them from different points of view. If the suggested\npackage 'bcp' is not availble from CRAN, it can be installed\nfrom the archive, e.g.\n<https://cran.r-project.org/src/contrib/Archive/bcp/bcp_4.0.3.tar.gz>.",
@@ -3254,7 +3254,7 @@
     "stars": 1
   },
   {
-    "id": 15722,
+    "id": 15753,
     "package_name": "glmertree",
     "title": "Generalized Linear Mixed Model Trees",
     "description": "Recursive partitioning based on (generalized) linear mixed\nmodels (GLMMs) combining lmer()/glmer() from 'lme4' and\nlmtree()/glmtree() from 'partykit'. The fitting algorithm is\ndescribed in more detail in Fokkema, Smits, Zeileis, Hothorn &\nKelderman (2018; <DOI:10.3758/s13428-017-0971-x>). For\ndetecting and modeling subgroups in growth curves with GLMM\ntrees see Fokkema & Zeileis (2024;\n<DOI:10.3758/s13428-024-02389-1>).",
@@ -3273,7 +3273,7 @@
     "stars": 0
   },
   {
-    "id": 28791,
+    "id": 28883,
     "package_name": "zipfR",
     "title": "Statistical Models for Word Frequency Distributions",
     "description": "Statistical models and utilities for the analysis of word\nfrequency distributions. The utilities include functions for\nloading, manipulating and visualizing word frequency data and\nvocabulary growth curves.  The package also implements several\nstatistical models for the distribution of word frequencies in\na population.  (The name of this package derives from the most\nfamous word frequency distribution, Zipf's law.)",
@@ -3353,7 +3353,7 @@
     "stars": 0
   },
   {
-    "id": 7645,
+    "id": 7660,
     "package_name": "Sleuth3",
     "title": "Data Sets from Ramsey and Schafer's \"Statistical Sleuth (3rd\nEd)\"",
     "description": "Data sets from Ramsey, F.L. and Schafer, D.W. (2013), \"The\nStatistical Sleuth: A Course in Methods of Data Analysis (3rd\ned)\", Cengage Learning.",
@@ -3364,11 +3364,11 @@
       ["Sleuth3Manual"]
     ],
     "topics": [],
-    "score": 6.5728,
+    "score": 6.5127,
     "stars": 0
   },
   {
-    "id": 18379,
+    "id": 18425,
     "package_name": "mada",
     "title": "Meta-Analysis of Diagnostic Accuracy",
     "description": "Provides functions for diagnostic meta-analysis. Next to\nbasic analysis and visualization the bivariate Model of Reitsma\net al. (2005) that is equivalent to the HSROC of Rutter &\nGatsonis (2001) can be fitted. A new approach based to\ndiagnostic meta-analysis of Holling et al. (2012) is also\navailable. Standard methods like summary, plot and so on are\nprovided.",
@@ -3413,7 +3413,7 @@
     "stars": 0
   },
   {
-    "id": 1381,
+    "id": 1382,
     "package_name": "ClassComparison",
     "title": "Classes and Methods for \"Class Comparison\" Problems on\nMicroarrays",
     "description": "Defines the classes used for \"class comparison\" problems\nin the OOMPA project (<http://oompa.r-forge.r-project.org/>).\nClass comparison includes tests for differential expression;\nsee Simon's book for details on typical problem types.",
@@ -3459,7 +3459,7 @@
     "stars": 0
   },
   {
-    "id": 6256,
+    "id": 6268,
     "package_name": "RHRV",
     "title": "Heart Rate Variability Analysis of ECG Data",
     "description": "Allows users to import data files containing heartbeat\npositions in the most broadly used formats, to remove outliers\nor points with unacceptable physiological values present in the\ntime series, to plot HRV data, and to perform time domain,\nfrequency domain and nonlinear HRV analysis. See Garcia et al.\n(2017) <DOI:10.1007/978-3-319-65355-6>.",
@@ -3553,7 +3553,7 @@
     "stars": 0
   },
   {
-    "id": 12833,
+    "id": 12859,
     "package_name": "distrEx",
     "title": "Extensions of Package 'distr'",
     "description": "Extends package 'distr' by functionals, distances, and\nconditional distributions.",
@@ -3627,7 +3627,7 @@
     "stars": 0
   },
   {
-    "id": 8135,
+    "id": 8150,
     "package_name": "TailRank",
     "title": "The Tail-Rank Statistic",
     "description": "Implements the tail-rank statistic for selecting\nbiomarkers from a microarray data set, an efficient\nnonparametric test focused on the distributional tails. See\n<https://gitlab.com/krcoombes/coombeslab/-/blob/master/doc/papers/tolstoy-new.pdf>.",
@@ -3655,7 +3655,7 @@
     "stars": 0
   },
   {
-    "id": 12834,
+    "id": 12860,
     "package_name": "distrMod",
     "title": "Object Oriented Implementation of Probability Models",
     "description": "Implements S4 classes for probability models based on\npackages 'distr' and 'distrEx'.",
@@ -3839,7 +3839,7 @@
     "stars": 0
   },
   {
-    "id": 27642,
+    "id": 27728,
     "package_name": "tscount",
     "title": "Analysis of Count Time Series",
     "description": "Likelihood-based methods for model fitting and assessment,\nprediction and intervention analysis of count time series\nfollowing generalized linear models are provided, see Liboschik\net al. (2017) <doi:10.18637/jss.v082.i05>. Models with the\nidentity and with the logarithmic link function are allowed.\nThe conditional distribution can be Poisson or Negative\nBinomial.",
@@ -3876,7 +3876,7 @@
     "stars": 0
   },
   {
-    "id": 7644,
+    "id": 7659,
     "package_name": "Sleuth2",
     "title": "Data Sets from Ramsey and Schafer's \"Statistical Sleuth (2nd\nEd)\"",
     "description": "Data sets from Ramsey, F.L. and Schafer, D.W. (2002), \"The\nStatistical Sleuth: A Course in Methods of Data Analysis (2nd\ned)\", Duxbury.",
@@ -3891,7 +3891,7 @@
     "stars": 0
   },
   {
-    "id": 1847,
+    "id": 1851,
     "package_name": "DPQ",
     "title": "Density, Probability, Quantile ('DPQ') Computations",
     "description": "Computations for approximations and alternatives for the\n'DPQ' (Density (pdf), Probability (cdf) and Quantile) functions\nfor probability distributions in R. Primary focus is on\n(central and non-central) beta, gamma and related distributions\nsuch as the chi-squared, F, and t. -- For several distribution\nfunctions, provide functions implementing formulas from\nJohnson, Kotz, and Kemp (1992) <doi:10.1002/bimj.4710360207>\nand Johnson, Kotz, and Balakrishnan (1995) for discrete or\ncontinuous distributions respectively. This is for the use of\nresearchers in these numerical approximation implementations,\nnotably for my own use in order to improve standard R pbeta(),\nqgamma(), ..., etc: {'\"dpq\"'-functions}.",
@@ -4161,7 +4161,7 @@
     "stars": 0
   },
   {
-    "id": 3173,
+    "id": 3182,
     "package_name": "Gifi",
     "title": "Multivariate Analysis with Optimal Scaling",
     "description": "Implements various Gifi methods in a user-friendly way:\ncategorical principal component analysis (princals), multiple\ncorrespondence analysis (homals), monotone regression analysis\n(morals).",
@@ -4181,7 +4181,7 @@
     "stars": 0
   },
   {
-    "id": 24955,
+    "id": 25029,
     "package_name": "setRNG",
     "title": "Set (Normal) Random Number Generator and Seed",
     "description": "Provides utilities to help set and record the setting of\nthe seed and the uniform and normal generators used when a\nrandom experiment is run. The utilities can be used in other\nfunctions that do random experiments to simplify recording\nand/or setting all the necessary information for\nreproducibility. See the vignette and reference manual for\nexamples.",
@@ -4198,7 +4198,7 @@
     "stars": 0
   },
   {
-    "id": 6578,
+    "id": 6591,
     "package_name": "RandVar",
     "title": "Implementation of Random Variables",
     "description": "Implements random variables by means of S4 classes and\nmethods.",
@@ -4239,7 +4239,7 @@
     "stars": 0
   },
   {
-    "id": 13971,
+    "id": 13999,
     "package_name": "fAssets",
     "title": "Rmetrics - Analysing and Modelling Financial Assets",
     "description": "A collection of functions to manage, to investigate and to\nanalyze data sets of financial assets from different points of\nview.",
@@ -4320,7 +4320,25 @@
     "stars": 1
   },
   {
-    "id": 6045,
+    "id": 18249,
+    "package_name": "lokern",
+    "title": "Kernel Regression Smoothing with Local or Global Plug-in\nBandwidth",
+    "description": "Kernel regression smoothing with adaptive local or global\nplug-in bandwidth selection.",
+    "version": "1.1-12",
+    "maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
+    "url": "https://curves-etc.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/R/?group_id=846,\nhttps://r-forge.r-project.org/scm/viewvc.php/pkg/lokern/?root=curves-etc,\nsvn://svn.r-forge.r-project.org/svnroot/curves-etc/pkg/lokern",
+    "exports": [
+      ["glkerns"],
+      ["lokerns"],
+      ["varest"],
+      ["varNPreg"]
+    ],
+    "topics": [],
+    "score": 5.7349,
+    "stars": 0
+  },
+  {
+    "id": 6057,
     "package_name": "R2MLwiN",
     "title": "Running 'MLwiN' from Within R",
     "description": "An R command interface to the 'MLwiN' multilevel modelling\nsoftware package.",
@@ -4354,25 +4372,7 @@
     "stars": 0
   },
   {
-    "id": 18204,
-    "package_name": "lokern",
-    "title": "Kernel Regression Smoothing with Local or Global Plug-in\nBandwidth",
-    "description": "Kernel regression smoothing with adaptive local or global\nplug-in bandwidth selection.",
-    "version": "1.1-12",
-    "maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
-    "url": "https://curves-etc.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/R/?group_id=846,\nhttps://r-forge.r-project.org/scm/viewvc.php/pkg/lokern/?root=curves-etc,\nsvn://svn.r-forge.r-project.org/svnroot/curves-etc/pkg/lokern",
-    "exports": [
-      ["glkerns"],
-      ["lokerns"],
-      ["varest"],
-      ["varNPreg"]
-    ],
-    "topics": [],
-    "score": 5.683,
-    "stars": 0
-  },
-  {
-    "id": 15950,
+    "id": 15987,
     "package_name": "grImport2",
     "title": "Importing 'SVG' Graphics",
     "description": "Functions for importing external vector images and drawing\nthem as part of 'R' plots.  This package is different from the\n'grImport' package because, where that package imports\n'PostScript' format images, this package imports 'SVG' format\nimages.  Furthermore, this package imports a specific subset of\n'SVG', so external images must be preprocessed using a package\nlike 'rsvg' to produce 'SVG' that this package can import.\n'SVG' features that are not supported by 'R' graphics, e.g.,\ngradient fills, can be imported and then exported via the\n'gridSVG' package.",
@@ -4395,11 +4395,11 @@
       ["symbolsGrob"]
     ],
     "topics": [],
-    "score": 5.6753,
+    "score": 5.6792,
     "stars": 0
   },
   {
-    "id": 28043,
+    "id": 28130,
     "package_name": "variables",
     "title": "Variable Descriptions",
     "description": "Abstract descriptions of (yet) unobserved variables.",
@@ -4424,7 +4424,7 @@
     "stars": 0
   },
   {
-    "id": 6361,
+    "id": 6373,
     "package_name": "RNetLogo",
     "title": "Provides an Interface to the Agent-Based Modelling Platform\n'NetLogo'",
     "description": "Interface to use and access Wilensky's 'NetLogo' (Wilensky\n1999) from R using either headless (no GUI) or interactive GUI\nmode. Provides functions to load models, execute commands, and\nget values from reporters. Mostly analogous to the 'NetLogo'\n'Mathematica' Link\n<https://github.com/NetLogo/Mathematica-Link>.",
@@ -4457,7 +4457,7 @@
     "stars": 0
   },
   {
-    "id": 11794,
+    "id": 11817,
     "package_name": "cotram",
     "title": "Count Transformation Models",
     "description": "Count transformation models featuring parameters\ninterpretable as discrete hazard ratios, odds ratios,\nreverse-time discrete hazard ratios, or transformed\nexpectations. An appropriate data transformation for a count\noutcome and regression coefficients are simultaneously\nestimated by maximising the exact discrete log-likelihood using\nthe computational framework provided in package 'mlt',\ntechnical details are given in Siegfried & Hothorn (2020)\n<DOI:10.1111/2041-210X.13383>. The package also contains an\nexperimental implementation of multivariate count\ntransformation models with an application to multi-species\ndistribution models <DOI:10.48550/arXiv.2201.13095>.",
@@ -4473,7 +4473,7 @@
     "stars": 0
   },
   {
-    "id": 20709,
+    "id": 20764,
     "package_name": "oompaData",
     "title": "Data to Illustrate OOMPA Algorithms",
     "description": "This is a data-only package to provide example data for\nother packages that are part of the \"Object-Oriented Microrray\nand Proteomics Analysis\" suite of packages. These are described\nin more detail at the package URL.",
@@ -4486,7 +4486,7 @@
     "stars": 0
   },
   {
-    "id": 27622,
+    "id": 27707,
     "package_name": "truncreg",
     "title": "Truncated Gaussian Regression Models",
     "description": "Estimation of models for truncated Gaussian variables by\nmaximum likelihood.",
@@ -4501,20 +4501,7 @@
     "stars": 0
   },
   {
-    "id": 6394,
-    "package_name": "ROI.plugin.glpk",
-    "title": "'ROI' Plug-in 'GLPK'",
-    "description": "Enhances the 'R' Optimization Infrastructure ('ROI')\npackage by registering the free 'GLPK' solver. It allows for\nsolving mixed integer linear programming ('MILP') problems as\nwell as all variants/combinations of 'LP', 'IP'.",
-    "version": "1.0-0",
-    "maintainer": "Stefan Theussl <Stefan.Theussl@R-Project.org>",
-    "url": "http://roi.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/projects/roi/",
-    "exports": [],
-    "topics": [],
-    "score": 5.5666,
-    "stars": 0
-  },
-  {
-    "id": 7738,
+    "id": 7754,
     "package_name": "SpatialExtremes",
     "title": "Modelling Spatial Extremes",
     "description": "Tools for the statistical modelling of spatial extremes\nusing max-stable processes, copula or Bayesian hierarchical\nmodels. More precisely, this package allows (conditional)\nsimulations from various parametric max-stable models, analysis\nof the extremal spatial dependence, the fitting of such\nprocesses using composite likelihoods or least square (simple\nmax-stable processes only), model checking and selection and\nprediction. Other approaches (although not completely in\nagreement with the extreme value theory) are available such as\nthe use of (spatial) copula and Bayesian hierarchical models\nassuming the so-called conditional assumptions. The latter\napproaches is handled through an (efficient) Gibbs sampler.\nSome key references: Davison et al. (2012)\n<doi:10.1214/11-STS376>, Padoan et al. (2010)\n<doi:10.1198/jasa.2009.tm08577>, Dombry et al. (2013)\n<doi:10.1093/biomet/ass067>.",
@@ -4617,7 +4604,20 @@
     "stars": 0
   },
   {
-    "id": 9380,
+    "id": 6406,
+    "package_name": "ROI.plugin.glpk",
+    "title": "'ROI' Plug-in 'GLPK'",
+    "description": "Enhances the 'R' Optimization Infrastructure ('ROI')\npackage by registering the free 'GLPK' solver. It allows for\nsolving mixed integer linear programming ('MILP') problems as\nwell as all variants/combinations of 'LP', 'IP'.",
+    "version": "1.0-0",
+    "maintainer": "Stefan Theussl <Stefan.Theussl@R-Project.org>",
+    "url": "http://roi.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/projects/roi/",
+    "exports": [],
+    "topics": [],
+    "score": 5.4827,
+    "stars": 0
+  },
+  {
+    "id": 9397,
     "package_name": "arrayhelpers",
     "title": "Convenience Functions for Arrays",
     "description": "Some convenient functions to work with arrays.",
@@ -4657,7 +4657,7 @@
     "stars": 0
   },
   {
-    "id": 15150,
+    "id": 15181,
     "package_name": "genoPlotR",
     "title": "Plot Publication-Grade Gene and Genome Maps",
     "description": "Draws gene or genome maps and comparisons between these,\nin a publication-grade manner. Starting from simple, common\nfiles, it will draw postscript or PDF files that can be sent as\nsuch to journals.",
@@ -4702,11 +4702,11 @@
       ["trim.seg_plot"]
     ],
     "topics": [],
-    "score": 5.4533,
+    "score": 5.444,
     "stars": 0
   },
   {
-    "id": 28545,
+    "id": 28636,
     "package_name": "wordspace",
     "title": "Distributional Semantic Models in R",
     "description": "An interactive laboratory for research on distributional\nsemantic models ('DSM', see\n<https://en.wikipedia.org/wiki/Distributional_semantics> for\nmore information).",
@@ -4748,11 +4748,11 @@
       ["cpp"],
       ["openmp"]
     ],
-    "score": 5.4344,
+    "score": 5.4176,
     "stars": 0
   },
   {
-    "id": 13992,
+    "id": 14020,
     "package_name": "fRegression",
     "title": "Rmetrics - Regression Based Decision and Prediction",
     "description": "A collection of functions for linear and non-linear\nregression modelling. It implements a wrapper for several\nregression models available in the base and contributed\npackages of R.",
@@ -4789,45 +4789,7 @@
     "stars": 1
   },
   {
-    "id": 21694,
-    "package_name": "plasma",
-    "title": "Partial LeAst Squares for Multiomic Analysis",
-    "description": "Contains tools for supervised analyses of incomplete,\noverlapping multiomics datasets. Applies partial least squares\nin multiple steps to find models that predict survival\noutcomes. See Yamaguchi et al. (2023)\n<doi:10.1101/2023.03.10.532096>.",
-    "version": "1.1.5",
-    "maintainer": "Kevin R. Coombes <krc@silicovore.com>",
-    "url": "http://oompa.r-forge.r-project.org/",
-    "exports": [
-      ["barplot"],
-      ["combineAllWeights"],
-      ["fitCoxModels"],
-      ["fitSingleModel"],
-      ["getAllWeights"],
-      ["getCompositeWeights"],
-      ["getFinalWeights"],
-      ["getSizes"],
-      ["getTop"],
-      ["heat"],
-      ["image"],
-      ["interpret"],
-      ["loadESCAdata"],
-      ["loadLUSCdata"],
-      ["meanModeImputer"],
-      ["pickSignificant"],
-      ["plasma"],
-      ["plasmaEnv"],
-      ["plot"],
-      ["predict"],
-      ["prepareMultiOmics"],
-      ["samplingImputer"],
-      ["stdize"],
-      ["summary"]
-    ],
-    "topics": [],
-    "score": 5.1998,
-    "stars": 0
-  },
-  {
-    "id": 2944,
+    "id": 2952,
     "package_name": "GNE",
     "title": "Computation of Generalized Nash Equilibria",
     "description": "Compute standard and generalized Nash Equilibria of\nnon-cooperative games. Optimization methods available are\nnonsmooth reformulation, fixed-point formulation, minimization\nproblem and constrained-equation reformulation. See e.g. Kanzow\nand Facchinei (2010), <doi:10.1007/s10479-009-0653-x>.",
@@ -4892,7 +4854,7 @@
     "stars": 1
   },
   {
-    "id": 18260,
+    "id": 18306,
     "package_name": "lpridge",
     "title": "Local Polynomial (Ridge) Regression",
     "description": "Local Polynomial Regression with Ridging.",
@@ -4908,7 +4870,7 @@
     "stars": 0
   },
   {
-    "id": 5854,
+    "id": 5866,
     "package_name": "PreProcess",
     "title": "Basic Functions for Pre-Processing Microarrays",
     "description": "Provides classes to pre-process microarray gene expression\ndata as part of the OOMPA collection of packages described at\n<http://oompa.r-forge.r-project.org/>.",
@@ -4957,7 +4919,7 @@
     "stars": 0
   },
   {
-    "id": 22587,
+    "id": 22649,
     "package_name": "qualV",
     "title": "Qualitative Validation Methods",
     "description": "Qualitative methods for the validation of dynamic models.\nIt contains (i) an orthogonal set of deviance measures for\nabsolute, relative and ordinal scale and (ii) approaches\naccounting for time shifts. The first approach transforms time\nto take time delays and speed differences into account. The\nsecond divides the time series into interval units according to\ntheir main features and finds the longest common subsequence\n(LCS) using a dynamic programming algorithm.",
@@ -5016,7 +4978,7 @@
     "stars": 1
   },
   {
-    "id": 7030,
+    "id": 7042,
     "package_name": "Rsymphony",
     "title": "SYMPHONY in R",
     "description": "An R interface to the SYMPHONY solver for mixed-integer\nlinear programs.",
@@ -5033,7 +4995,7 @@
     "stars": 0
   },
   {
-    "id": 15254,
+    "id": 15285,
     "package_name": "geostatsp",
     "title": "Geostatistical Modelling with Likelihood and Bayes",
     "description": "Geostatistical modelling facilities using 'SpatRaster' and\n'SpatVector' objects are provided. Non-Gaussian models are fit\nusing 'INLA', and Gaussian geostatistical models use Maximum\nLikelihood Estimation.  For details see Brown (2015)\n<doi:10.18637/jss.v063.i12>. The 'RandomFields' package is\navailable at\n<https://web.archive.org/web/20250719184025/https://www.wim.uni-mannheim.de/schlather/publications/software>\nand <https://github.com/cran/RandomFields>.",
@@ -5079,7 +5041,7 @@
     "stars": 0
   },
   {
-    "id": 2307,
+    "id": 2312,
     "package_name": "EasyABC",
     "title": "Efficient Approximate Bayesian Computation Sampling Schemes",
     "description": "Enables launching a series of simulations of a computer\ncode from the R session, and to retrieve the simulation outputs\nin an appropriate format for post-processing treatments. Five\nsequential sampling schemes and three coupled-to-MCMC schemes\nare implemented.",
@@ -5100,7 +5062,7 @@
     "stars": 0
   },
   {
-    "id": 8474,
+    "id": 8489,
     "package_name": "VarSelLCM",
     "title": "Variable Selection for Model-Based Clustering of Mixed-Type Data\nSet with Missing Values",
     "description": "Full model selection (detection of the relevant features\nand estimation of the number of clusters) for model-based\nclustering (see reference here\n<doi:10.1007/s11222-016-9670-1>). Data to analyze can be\ncontinuous, categorical, integer or mixed. Moreover, missing\nvalues can occur and do not necessitate any pre-processing.\nShiny application permits an easy interpretation of the\nresults.",
@@ -5133,7 +5095,7 @@
     "stars": 0
   },
   {
-    "id": 23905,
+    "id": 23970,
     "package_name": "robustX",
     "title": "'eXtra' / 'eXperimental' Functionality for Robust Statistics",
     "description": "Robustness -- 'eXperimental', 'eXtraneous', or\n'eXtraordinary' Functionality for Robust Statistics.  Hence\nmethods which are not well established, often related to\nmethods in package 'robustbase'.  Amazingly, 'BACON()',\noriginally by Billor, Hadi, and Velleman (2000)\n<doi:10.1016/S0167-9473(99)00101-2> has become established in\nplaces.  The \"barrow wheel\" `rbwheel()` is from Stahel and\nMächler (2009) <doi:10.1111/j.1467-9868.2009.00706.x>.",
@@ -5157,7 +5119,7 @@
     "stars": 0
   },
   {
-    "id": 9008,
+    "id": 9024,
     "package_name": "agrmt",
     "title": "Calculate Concentration and Dispersion in Ordered Rating Scales",
     "description": "Calculates concentration and dispersion in ordered rating\nscales. It implements various measures of concentration and\ndispersion to describe what researchers variably call\nagreement, concentration, consensus, dispersion, or\npolarization among respondents in ordered data. It also\nimplements other related measures to classify distributions. In\naddition to a generic city-block based concentration measure\nand a generic dispersion measure, the package implements\nvarious measures, including van der Eijk's (2001) <DOI:\n10.1023/A:1010374114305> measure of agreement A, measures of\nconcentration by Leik, Tatsle and Wierman, Blair and Lacy,\nKvalseth, Berry and Mielke, Reardon, and Garcia-Montalvo and\nReynal-Querol. Furthermore, the package provides an\nimplementation of Galtungs AJUS-system to classify\ndistributions, as well as a function to identify the position\nof multiple modes.",
@@ -5209,7 +5171,7 @@
     "stars": 0
   },
   {
-    "id": 6942,
+    "id": 6953,
     "package_name": "RobAStBase",
     "title": "Robust Asymptotic Statistics",
     "description": "Base S4-classes and functions for robust asymptotic\nstatistics.",
@@ -5337,7 +5299,22 @@
     "stars": 0
   },
   {
-    "id": 11914,
+    "id": 11750,
+    "package_name": "cordillera",
+    "title": "Calculation of the OPTICS Cordillera",
+    "description": "Functions for calculating the OPTICS Cordillera. The\nOPTICS Cordillera measures the amount of 'clusteredness' in a\nnumeric data matrix within a distance-density based framework\nfor a given minimum number of points comprising a cluster, as\ndescribed in Rusch, Hornik, Mair (2018)\n<doi:10.1080/10618600.2017.1349664>. We provide an R native\nversion with methods for printing, summarizing, and plotting\nthe result.",
+    "version": "1.0-3",
+    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
+    "url": "https://r-forge.r-project.org/projects/stops/",
+    "exports": [
+      ["cordillera"]
+    ],
+    "topics": [],
+    "score": 4.4771,
+    "stars": 1
+  },
+  {
+    "id": 11939,
     "package_name": "cranlike",
     "title": "Tools for 'CRAN'-Like Repositories",
     "description": "A set of functions to manage 'CRAN'-like repositories\nefficiently.",
@@ -5359,22 +5336,7 @@
     "stars": 26
   },
   {
-    "id": 11727,
-    "package_name": "cordillera",
-    "title": "Calculation of the OPTICS Cordillera",
-    "description": "Functions for calculating the OPTICS Cordillera. The\nOPTICS Cordillera measures the amount of 'clusteredness' in a\nnumeric data matrix within a distance-density based framework\nfor a given minimum number of points comprising a cluster, as\ndescribed in Rusch, Hornik, Mair (2018)\n<doi:10.1080/10618600.2017.1349664>. We provide an R native\nversion with methods for printing, summarizing, and plotting\nthe result.",
-    "version": "1.0-3",
-    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
-    "url": "https://r-forge.r-project.org/projects/stops/",
-    "exports": [
-      ["cordillera"]
-    ],
-    "topics": [],
-    "score": 4.3802,
-    "stars": 1
-  },
-  {
-    "id": 1484,
+    "id": 1485,
     "package_name": "CommonJavaJars",
     "title": "Useful libraries for building a Java based GUI under R",
     "description": "Useful libraries for building a Java based GUI under R",
@@ -5390,7 +5352,7 @@
     "stars": 0
   },
   {
-    "id": 2537,
+    "id": 2545,
     "package_name": "FFD",
     "title": "Freedom from Disease",
     "description": "Functions, S4 classes/methods and a graphical user\ninterface (GUI) to design surveys to substantiate freedom from\ndisease using a modified hypergeometric function (see Cameron\nand Baldock, 1997, <doi:10.1016/s0167-5877(97)00081-0>). Herd\nsensitivities are computed according to sampling strategies\n\"individual sampling\" or \"limited sampling\" (see M. Ziller, T.\nSelhorst, J. Teuffert, M. Kramer and H. Schlueter, 2002,\n<doi:10.1016/S0167-5877(01)00245-8>). Methods to compute the\na-posteriori alpha-error are implemented. Risk-based targeted\nsampling is supported.",
@@ -5424,7 +5386,7 @@
     "stars": 0
   },
   {
-    "id": 5116,
+    "id": 5127,
     "package_name": "NormalLaplace",
     "title": "The Normal Laplace Distribution",
     "description": "Functions for the normal Laplace distribution.  Currently,\nit provides limited functionality.  Density, distribution and\nquantile functions, random number generation, and moments are\nprovided.",
@@ -5459,7 +5421,7 @@
     "stars": 1
   },
   {
-    "id": 27609,
+    "id": 27694,
     "package_name": "trtf",
     "title": "Transformation Trees and Forests",
     "description": "Recursive partytioning of transformation models with\ncorresponding random forest for conditional transformation\nmodels as described in 'Transformation Forests' (Hothorn and\nZeileis, 2021, <doi:10.1080/10618600.2021.1872581>) and\n'Top-Down Transformation Choice' (Hothorn, 2018,\n<DOI:10.1177/1471082X17748081>).",
@@ -5475,7 +5437,7 @@
     "stars": 0
   },
   {
-    "id": 8234,
+    "id": 8249,
     "package_name": "TopKLists",
     "title": "Inference, Aggregation and Visualization for Top-K Ranked Lists",
     "description": "For multiple ranked input lists (full or partial)\nrepresenting the same set of N objects, the package TopKLists\noffers (1) statistical inference on the lengths of informative\ntop-k lists, (2) stochastic aggregation of full or partial\nlists, and (3) graphical tools for the statistical exploration\nof input lists, and for the visualization of aggregation\nresults.",
@@ -5513,7 +5475,71 @@
     "stars": 0
   },
   {
-    "id": 6420,
+    "id": 26394,
+    "package_name": "stops",
+    "title": "Structure Optimized Proximity Scaling",
+    "description": "Methods that use flexible variants of multidimensional\nscaling (MDS) which incorporate parametric nonlinear distance\ntransformations and trade-off the goodness-of-fit fit with\nstructure considerations to find optimal hyperparameters, also\nknown as structure optimized proximity scaling (STOPS) (Rusch,\nMair & Hornik, 2023,<doi:10.1007/s11222-022-10197-w>). The\npackage contains various functions, wrappers, methods and\nclasses for fitting, plotting and displaying different 1-way\nMDS models with ratio, interval, ordinal optimal scaling in a\nSTOPS framework. These cover essentially the functionality of\nthe package smacofx, including Torgerson (classical) scaling\nwith power transformations of dissimilarities, SMACOF MDS with\npowers of dissimilarities, Sammon mapping with powers of\ndissimilarities, elastic scaling with powers of\ndissimilarities, spherical SMACOF with powers of\ndissimilarities, (ALSCAL) s-stress MDS with powers of\ndissimilarities, r-stress MDS, MDS with powers of\ndissimilarities and configuration distances, elastic scaling\npowers of dissimilarities and configuration distances, Sammon\nmapping powers of dissimilarities and configuration distances,\npower stress MDS (POST-MDS), approximate power stress, Box-Cox\nMDS, local MDS, Isomap, curvilinear component analysis (CLCA),\ncurvilinear distance analysis (CLDA) and sparsified (power)\nmultidimensional scaling and (power) multidimensional distance\nanalysis (experimental models from smacofx influenced by CLCA).\nAll of these models can also be fit by optimizing over\nhyperparameters based on goodness-of-fit fit only (i.e., no\nstructure considerations). The package further contains\nfunctions for optimization, specifically the adaptive\nLuus-Jaakola algorithm and a wrapper for Bayesian optimization\nwith treed Gaussian process with jumps to linear models, and\nfunctions for various c-structuredness indices. Hyperparameter\noptimization can be done with a number of techniques but we\nrecommend either Bayesian optimization or particle swarm. For\nusing \"Kriging\", users need to install a version of the\narchived 'DiceOptim' R package.",
+    "version": "1.10-1",
+    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
+    "url": "https://r-forge.r-project.org/projects/stops/",
+    "exports": [
+      ["c_association"],
+      ["c_clumpiness"],
+      ["c_clusteredness"],
+      ["c_complexity"],
+      ["c_convexity"],
+      ["c_dependence"],
+      ["c_faithfulness"],
+      ["c_functionality"],
+      ["c_hierarchy"],
+      ["c_inequality"],
+      ["c_linearity"],
+      ["c_manifoldness"],
+      ["c_nonmonotonicity"],
+      ["c_outlying"],
+      ["c_regularity"],
+      ["c_shepardness"],
+      ["c_skinniness"],
+      ["c_sparsity"],
+      ["c_striatedness"],
+      ["c_stringiness"],
+      ["ljoptim"],
+      ["stop_bcmds"],
+      ["stop_clca"],
+      ["stop_cldae"],
+      ["stop_cldak"],
+      ["stop_elastic"],
+      ["stop_isomap1"],
+      ["stop_isomap2"],
+      ["stop_lmds"],
+      ["stop_powerelastic"],
+      ["stop_powermds"],
+      ["stop_powersammon"],
+      ["stop_powerstress"],
+      ["stop_rstress"],
+      ["stop_sammon"],
+      ["stop_sammon2"],
+      ["stop_smacofSphere"],
+      ["stop_smacofSym"],
+      ["stop_smddae"],
+      ["stop_smddak"],
+      ["stop_smds"],
+      ["stop_spmddae"],
+      ["stop_spmddak"],
+      ["stop_spmds"],
+      ["stop_sstress"],
+      ["stoploss"],
+      ["stops"],
+      ["tgpoptim"]
+    ],
+    "topics": [
+      ["openjdk"]
+    ],
+    "score": 4.0969,
+    "stars": 1
+  },
+  {
+    "id": 6432,
     "package_name": "ROptEst",
     "title": "Optimally Robust Estimation",
     "description": "R infrastructure for optimally robust estimation in\ngeneral smoothly parameterized models using S4 classes and\nmethods as described Kohl, M., Ruckdeschel, P., and Rieder, H.\n(2010), <doi:10.1007/s10260-010-0133-0>, and in Rieder, H.,\nKohl, M., and Ruckdeschel, P. (2008),\n<doi:10.1007/s10260-007-0047-7>.",
@@ -5591,71 +5617,7 @@
     "stars": 0
   },
   {
-    "id": 26318,
-    "package_name": "stops",
-    "title": "Structure Optimized Proximity Scaling",
-    "description": "Methods that use flexible variants of multidimensional\nscaling (MDS) which incorporate parametric nonlinear distance\ntransformations and trade-off the goodness-of-fit fit with\nstructure considerations to find optimal hyperparameters, also\nknown as structure optimized proximity scaling (STOPS) (Rusch,\nMair & Hornik, 2023,<doi:10.1007/s11222-022-10197-w>). The\npackage contains various functions, wrappers, methods and\nclasses for fitting, plotting and displaying different 1-way\nMDS models with ratio, interval, ordinal optimal scaling in a\nSTOPS framework. These cover essentially the functionality of\nthe package smacofx, including Torgerson (classical) scaling\nwith power transformations of dissimilarities, SMACOF MDS with\npowers of dissimilarities, Sammon mapping with powers of\ndissimilarities, elastic scaling with powers of\ndissimilarities, spherical SMACOF with powers of\ndissimilarities, (ALSCAL) s-stress MDS with powers of\ndissimilarities, r-stress MDS, MDS with powers of\ndissimilarities and configuration distances, elastic scaling\npowers of dissimilarities and configuration distances, Sammon\nmapping powers of dissimilarities and configuration distances,\npower stress MDS (POST-MDS), approximate power stress, Box-Cox\nMDS, local MDS, Isomap, curvilinear component analysis (CLCA),\ncurvilinear distance analysis (CLDA) and sparsified (power)\nmultidimensional scaling and (power) multidimensional distance\nanalysis (experimental models from smacofx influenced by CLCA).\nAll of these models can also be fit by optimizing over\nhyperparameters based on goodness-of-fit fit only (i.e., no\nstructure considerations). The package further contains\nfunctions for optimization, specifically the adaptive\nLuus-Jaakola algorithm and a wrapper for Bayesian optimization\nwith treed Gaussian process with jumps to linear models, and\nfunctions for various c-structuredness indices. Hyperparameter\noptimization can be done with a number of techniques but we\nrecommend either Bayesian optimization or particle swarm. For\nusing \"Kriging\", users need to install a version of the\narchived 'DiceOptim' R package.",
-    "version": "1.10-1",
-    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
-    "url": "https://r-forge.r-project.org/projects/stops/",
-    "exports": [
-      ["c_association"],
-      ["c_clumpiness"],
-      ["c_clusteredness"],
-      ["c_complexity"],
-      ["c_convexity"],
-      ["c_dependence"],
-      ["c_faithfulness"],
-      ["c_functionality"],
-      ["c_hierarchy"],
-      ["c_inequality"],
-      ["c_linearity"],
-      ["c_manifoldness"],
-      ["c_nonmonotonicity"],
-      ["c_outlying"],
-      ["c_regularity"],
-      ["c_shepardness"],
-      ["c_skinniness"],
-      ["c_sparsity"],
-      ["c_striatedness"],
-      ["c_stringiness"],
-      ["ljoptim"],
-      ["stop_bcmds"],
-      ["stop_clca"],
-      ["stop_cldae"],
-      ["stop_cldak"],
-      ["stop_elastic"],
-      ["stop_isomap1"],
-      ["stop_isomap2"],
-      ["stop_lmds"],
-      ["stop_powerelastic"],
-      ["stop_powermds"],
-      ["stop_powersammon"],
-      ["stop_powerstress"],
-      ["stop_rstress"],
-      ["stop_sammon"],
-      ["stop_sammon2"],
-      ["stop_smacofSphere"],
-      ["stop_smacofSym"],
-      ["stop_smddae"],
-      ["stop_smddak"],
-      ["stop_smds"],
-      ["stop_spmddae"],
-      ["stop_spmddak"],
-      ["stop_spmds"],
-      ["stop_sstress"],
-      ["stoploss"],
-      ["stops"],
-      ["tgpoptim"]
-    ],
-    "topics": [
-      ["openjdk"]
-    ],
-    "score": 4.0334,
-    "stars": 1
-  },
-  {
-    "id": 11709,
+    "id": 11732,
     "package_name": "cops",
     "title": "Cluster Optimized Proximity Scaling",
     "description": "Multidimensional scaling (MDS) methods that aim at\npronouncing the clustered appearance of the configuration\n(Rusch, Mair & Hornik, 2021,\n<doi:10.1080/10618600.2020.1869027>). They achieve this by\ntransforming proximities/distances with explicit power\nfunctions and penalizing the fitting criterion with a\nclusteredness index, the OPTICS Cordillera (Rusch, Hornik &\nMair, 2018, <doi:10.1080/10618600.2017.1349664>). There are two\nvariants: One for finding the configuration directly (COPS-C)\nfor any Minkowski distance with given explicit power\ntransformations and implicit ratio, interval and nonmetric\noptimal scaling transformations (Borg & Groenen, 2005,\nISBN:978-0-387-28981-6), and one for using the augmented\nfitting criterion to find optimal hyperparameters for the\nexplicit transformations (P-COPS). The package contains various\nfunctions, wrappers, methods and classes for fitting, plotting\nand displaying a large number of different MDS models (most of\nthe functionality in smacofx) in the COPS framework. The\npackage further contains a function for pattern search\noptimization, the ``Adaptive Luus-Jaakola Algorithm'' (Rusch,\nMair & Hornik, 2021,<doi:10.1080/10618600.2020.1869027>) and a\nfunctions to calculate the phi-distances for count data or\nhistograms.",
@@ -5676,7 +5638,7 @@
     "stars": 1
   },
   {
-    "id": 21713,
+    "id": 21773,
     "package_name": "plgraphics",
     "title": "User Oriented Plotting Functions",
     "description": "Plots with high flexibility and easy handling, including\ninformative regression diagnostics for many models.",
@@ -5805,7 +5767,7 @@
     "stars": 0
   },
   {
-    "id": 6404,
+    "id": 6416,
     "package_name": "ROI.plugin.quadprog",
     "title": "'quadprog' Plug-in for the 'R' Optimization Infrastructure",
     "description": "Enhances the R Optimization Infrastructure ('ROI') package\nby registering the 'quadprog' solver. It allows for solving\nquadratic programming (QP) sproblems.",
@@ -5818,7 +5780,7 @@
     "stars": 0
   },
   {
-    "id": 14755,
+    "id": 14786,
     "package_name": "frontier",
     "title": "Stochastic Frontier Analysis",
     "description": "Maximum Likelihood Estimation of Stochastic Frontier\nProduction and Cost Functions. Two specifications are\navailable: the error components specification with time-varying\nefficiencies (Battese and Coelli, 1992,\n<doi:10.1007/BF00158774>) and a model specification in which\nthe firm effects are directly influenced by a number of\nvariables (Battese and Coelli, 1995, <doi:10.1007/BF01205442>).",
@@ -5843,7 +5805,7 @@
     "stars": 0
   },
   {
-    "id": 12836,
+    "id": 12862,
     "package_name": "distrSim",
     "title": "Simulation Classes Based on Package 'distr'",
     "description": "S4-classes for setting up a coherent framework for\nsimulation within the distr family of packages.",
@@ -5901,7 +5863,7 @@
     "stars": 0
   },
   {
-    "id": 19869,
+    "id": 19917,
     "package_name": "mvProbit",
     "title": "Multivariate Probit Models",
     "description": "Tools for estimating multivariate probit models,\ncalculating conditional and unconditional expectations, and\ncalculating marginal effects on conditional and unconditional\nexpectations.",
@@ -5919,7 +5881,7 @@
     "stars": 0
   },
   {
-    "id": 27480,
+    "id": 27564,
     "package_name": "tramME",
     "title": "Transformation Models with Mixed Effects",
     "description": "Likelihood-based estimation of mixed-effects\ntransformation models using the Template Model Builder ('TMB',\nKristensen et al., 2016) <doi:10.18637/jss.v070.i05>. The\ntechnical details of transformation models are given in Hothorn\net al. (2018) <doi:10.1111/sjos.12291>. Likelihood\ncontributions of exact, randomly censored (left, right,\ninterval) and truncated observations are supported. The random\neffects are assumed to be normally distributed on the scale of\nthe transformation function, the marginal likelihood is\nevaluated using the Laplace approximation, and the gradients\nare calculated with automatic differentiation (Tamasi &\nHothorn, 2021) <doi:10.32614/RJ-2021-075>. Penalized smooth\nshift terms can be defined using 'mgcv'.",
@@ -5956,33 +5918,7 @@
     "stars": 0
   },
   {
-    "id": 12831,
-    "package_name": "distrDoc",
-    "title": "Documentation for 'distr' Family of R Packages",
-    "description": "Provides documentation in form of a common vignette to\npackages 'distr', 'distrEx', 'distrMod', 'distrSim',\n'distrTEst', 'distrTeach', and 'distrEllipse'.",
-    "version": "2.8.5",
-    "maintainer": "Peter Ruckdeschel <peter.ruckdeschel@uni-oldenburg.de>",
-    "url": "http://distr.r-forge.r-project.org/",
-    "exports": [],
-    "topics": [],
-    "score": 3.7782,
-    "stars": 0
-  },
-  {
-    "id": 6406,
-    "package_name": "ROI.plugin.symphony",
-    "title": "'SYMPHONY' Plug-in for the 'R' Optimization Interface",
-    "description": "Enhances the R Optimization Infrastructure ('ROI') package\nby registering the 'SYMPHONY' open-source solver from the\nCOIN-OR suite. It allows for solving mixed integer linear\nprogramming (MILP) problems as well as all\nvariants/combinations of LP, IP.",
-    "version": "1.0-0",
-    "maintainer": "Stefan Theussl <Stefan.Theussl@R-Project.org>",
-    "url": "http://roi.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/projects/roi/",
-    "exports": [],
-    "topics": [],
-    "score": 3.7726,
-    "stars": 0
-  },
-  {
-    "id": 6947,
+    "id": 6958,
     "package_name": "RobLox",
     "title": "Optimally Robust Influence Curves and Estimators for Location\nand Scale",
     "description": "Functions for the determination of optimally robust\ninfluence curves and estimators in case of normal location\nand/or scale (see Chapter 8 in Kohl (2005)\n<https://epub.uni-bayreuth.de/839/2/DissMKohl.pdf>).",
@@ -6017,11 +5953,37 @@
       ["showdown"]
     ],
     "topics": [],
-    "score": 3.7109,
+    "score": 3.7897,
     "stars": 0
   },
   {
-    "id": 19581,
+    "id": 12857,
+    "package_name": "distrDoc",
+    "title": "Documentation for 'distr' Family of R Packages",
+    "description": "Provides documentation in form of a common vignette to\npackages 'distr', 'distrEx', 'distrMod', 'distrSim',\n'distrTEst', 'distrTeach', and 'distrEllipse'.",
+    "version": "2.8.5",
+    "maintainer": "Peter Ruckdeschel <peter.ruckdeschel@uni-oldenburg.de>",
+    "url": "http://distr.r-forge.r-project.org/",
+    "exports": [],
+    "topics": [],
+    "score": 3.7782,
+    "stars": 0
+  },
+  {
+    "id": 6418,
+    "package_name": "ROI.plugin.symphony",
+    "title": "'SYMPHONY' Plug-in for the 'R' Optimization Interface",
+    "description": "Enhances the R Optimization Infrastructure ('ROI') package\nby registering the 'SYMPHONY' open-source solver from the\nCOIN-OR suite. It allows for solving mixed integer linear\nprogramming (MILP) problems as well as all\nvariants/combinations of LP, IP.",
+    "version": "1.0-0",
+    "maintainer": "Stefan Theussl <Stefan.Theussl@R-Project.org>",
+    "url": "http://roi.r-forge.r-project.org/,\nhttps://r-forge.r-project.org/projects/roi/",
+    "exports": [],
+    "topics": [],
+    "score": 3.7719,
+    "stars": 0
+  },
+  {
+    "id": 19629,
     "package_name": "mpmi",
     "title": "Mixed-pair mutual information estimators",
     "description": "Uses a kernel smoothing approach to calculate Mutual\nInformation for comparisons between all types of variables\nincluding continuous vs continuous, continuous vs discrete and\ndiscrete vs discrete. Uses a nonparametric bias correction\ngiving Bias Corrected Mutual Information (BCMI). Implemented\nefficiently in Fortran 95 with OpenMP and suited to large\ngenomic datasets.",
@@ -6050,7 +6012,7 @@
     "stars": 0
   },
   {
-    "id": 12832,
+    "id": 12858,
     "package_name": "distrEllipse",
     "title": "S4 Classes for Elliptically Contoured Distributions",
     "description": "Distribution (S4-)classes for elliptically contoured\ndistributions (based on package 'distr').",
@@ -6095,7 +6057,7 @@
     "stars": 0
   },
   {
-    "id": 2305,
+    "id": 2310,
     "package_name": "Eagle",
     "title": "Multiple Locus Association Mapping on a Genome-Wide Scale",
     "description": "An implementation of multiple-locus association mapping on\na genome-wide scale. 'Eagle' can handle inbred or outbred study\npopulations, populations of arbitrary unknown complexity, and\ndata larger than the memory capacity of the computer. Since\n'Eagle' is based on linear mixed models, it is best suited to\nthe analysis of data on continuous traits. However, it can\ntolerate non-normal data. 'Eagle' reports, as its findings, the\nbest set of snp in strongest association with a trait. To\nperform an analysis, run 'OpenGUI()'. This opens a web browser\nto the menu-driven user interface for the input of data, and\nfor performing genome-wide analysis.",
@@ -6118,7 +6080,88 @@
     "stars": 0
   },
   {
-    "id": 27005,
+    "id": 25573,
+    "package_name": "smacofx",
+    "title": "Flexible Multidimensional Scaling and 'smacof' Extensions",
+    "description": "Flexible multidimensional scaling (MDS) methods and\nextensions to the package 'smacof' as described in Rusch, De\nLeeuw, Mair & Hornik (2026) <doi:10.18637/jss.v117.i07>. This\npackage contains various functions, wrappers, methods and\nclasses for fitting, plotting and displaying a large number of\ndifferent flexible MDS models. These are: Torgerson scaling\n(Torgerson, 1958, ISBN:978-0471879459) with powers, Sammon\nmapping (Sammon, 1969, <doi:10.1109/T-C.1969.222678>) with\nratio and interval optimal scaling, Multiscale MDS (Ramsay,\n1977, <doi:10.1007/BF02294052>) with ratio and interval optimal\nscaling, s-stress MDS (ALSCAL; Takane, Young & De Leeuw, 1977,\n<doi:10.1007/BF02293745>) with ratio and interval optimal\nscaling, elastic scaling (McGee, 1966,\n<doi:10.1111/j.2044-8317.1966.tb00367.x>) with ratio and\ninterval optimal scaling, r-stress MDS (De Leeuw, Groenen &\nMair, 2016, <https://rpubs.com/deleeuw/142619>) with ratio,\ninterval, splines and nonmetric optimal scaling, power-stress\nMDS (POST-MDS; Buja & Swayne, 2002\n<doi:10.1007/s00357-001-0031-0>) with ratio and interval\noptimal scaling, restricted power-stress (Rusch, Mair & Hornik,\n2021, <doi:10.1080/10618600.2020.1869027>) with ratio and\ninterval optimal scaling, approximate power-stress with ratio\noptimal scaling (Rusch, Mair & Hornik, 2021,\n<doi:10.1080/10618600.2020.1869027>), Box-Cox MDS (Chen & Buja,\n2013, <https://jmlr.org/papers/v14/chen13a.html>), local MDS\n(Chen & Buja, 2009, <doi:10.1198/jasa.2009.0111>), curvilinear\ncomponent analysis (Demartines & Herault, 1997,\n<doi:10.1109/72.554199>), curvilinear distance analysis (Lee,\nLendasse & Verleysen, 2004,\n<doi:10.1016/j.neucom.2004.01.007>), nonlinear MDS with optimal\ndissimilarity powers functions (De Leeuw, 2024,\n<https://github.com/deleeuw/smacofManual/blob/main/smacofPO(power)/smacofPO.pdf>),\nsparsified (power) MDS and sparsified multidimensional (power)\ndistance analysis aka extended curvilinear (power) component\nanalysis and extended curvilinear (power) distance analysis\n(Rusch, 2025, <doi:10.1002/sta4.70086>). Some functions are\nsuitably flexible to allow any other sensible combination of\nexplicit power transformations for weights, distances and input\nproximities with implicit ratio, interval, splines or nonmetric\noptimal scaling of the input proximities. Most functions use a\nMajorization-Minimization algorithm. Currently the methods are\nonly available for one-mode two-way data (symmetric\ndissimilarity matrices).",
+    "version": "1.27-0",
+    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
+    "url": "https://r-forge.r-project.org/projects/stops/",
+    "exports": [
+      ["alignplot"],
+      ["alscal"],
+      ["apostmds"],
+      ["apowerstressMin"],
+      ["apstressmds"],
+      ["apstressMin"],
+      ["apStressMin"],
+      ["bcmds"],
+      ["bcsdistance"],
+      ["clca"],
+      ["clda"],
+      ["cmdscale"],
+      ["conf_adjust"],
+      ["eclca"],
+      ["eCLCA"],
+      ["eclda"],
+      ["eCLDA"],
+      ["eclpca"],
+      ["eCLPCA"],
+      ["eclpda"],
+      ["eCLPDA"],
+      ["elscal"],
+      ["elscalmds"],
+      ["icExploreGen"],
+      ["lmds"],
+      ["mlmds"],
+      ["multiscale"],
+      ["multiscalemds"],
+      ["multistart"],
+      ["opmds"],
+      ["postmds"],
+      ["powerStressFast"],
+      ["powerstressMin"],
+      ["powerStressMin"],
+      ["pstressmds"],
+      ["pstressMin"],
+      ["pStressMin"],
+      ["rpostmds"],
+      ["rpowerstressMin"],
+      ["rpowerStressMin"],
+      ["rpstressmds"],
+      ["rpstressMin"],
+      ["rpStressMin"],
+      ["rstress"],
+      ["rstressmds"],
+      ["rstressMin"],
+      ["rStressMin"],
+      ["sammon"],
+      ["sammonmap"],
+      ["scale_adjust"],
+      ["smdda"],
+      ["smds"],
+      ["so_eclca"],
+      ["so_eCLCA"],
+      ["so_eclda"],
+      ["so_eCLDA"],
+      ["so_eclpca"],
+      ["so_eCLPCA"],
+      ["so_eclpda"],
+      ["so_eCLPDA"],
+      ["so_smdda"],
+      ["so_smds"],
+      ["so_spmdda"],
+      ["so_spmds"],
+      ["spmdda"],
+      ["spmds"],
+      ["spp"]
+    ],
+    "topics": [],
+    "score": 3.4771,
+    "stars": 1
+  },
+  {
+    "id": 27086,
     "package_name": "tframe",
     "title": "Time Frame Coding Kernel",
     "description": "A kernel of functions for programming time series methods\nin a way that is relatively independently of the representation\nof time. Also provides plotting, time windowing, and some other\nutility functions which are specifically intended for time\nseries. See the Guide distributed as a vignette, or\n'?tframe.Intro' for more details. (User utilities are in\npackage 'tfplot'.)",
@@ -6170,84 +6213,7 @@
     "stars": 0
   },
   {
-    "id": 25497,
-    "package_name": "smacofx",
-    "title": "Flexible Multidimensional Scaling and 'smacof' Extensions",
-    "description": "Flexible multidimensional scaling (MDS) methods and\nextensions to the package 'smacof' as described in Rusch, de\nLeeuw, Mair & Hornik (2026) <doi:10.18637/jss.v117.i07>. This\npackage contains various functions, wrappers, methods and\nclasses for fitting, plotting and displaying a large number of\ndifferent flexible MDS models. These are: Torgerson scaling\n(Torgerson, 1958, ISBN:978-0471879459) with powers, Sammon\nmapping (Sammon, 1969, <doi:10.1109/T-C.1969.222678>) with\nratio and interval optimal scaling, Multiscale MDS (Ramsay,\n1977, <doi:10.1007/BF02294052>) with ratio and interval optimal\nscaling, s-stress MDS (ALSCAL; Takane, Young & De Leeuw, 1977,\n<doi:10.1007/BF02293745>) with ratio and interval optimal\nscaling, elastic scaling (McGee, 1966,\n<doi:10.1111/j.2044-8317.1966.tb00367.x>) with ratio and\ninterval optimal scaling, r-stress MDS (De Leeuw, Groenen &\nMair, 2016, <https://rpubs.com/deleeuw/142619>) with ratio,\ninterval, splines and nonmetric optimal scaling, power-stress\nMDS (POST-MDS; Buja & Swayne, 2002\n<doi:10.1007/s00357-001-0031-0>) with ratio and interval\noptimal scaling, restricted power-stress (Rusch, Mair & Hornik,\n2021, <doi:10.1080/10618600.2020.1869027>) with ratio and\ninterval optimal scaling, approximate power-stress with ratio\noptimal scaling (Rusch, Mair & Hornik, 2021,\n<doi:10.1080/10618600.2020.1869027>), Box-Cox MDS (Chen & Buja,\n2013, <https://jmlr.org/papers/v14/chen13a.html>), local MDS\n(Chen & Buja, 2009, <doi:10.1198/jasa.2009.0111>), curvilinear\ncomponent analysis (Demartines & Herault, 1997,\n<doi:10.1109/72.554199>), curvilinear distance analysis (Lee,\nLendasse & Verleysen, 2004,\n<doi:10.1016/j.neucom.2004.01.007>), nonlinear MDS with optimal\ndissimilarity powers functions (De Leeuw, 2024,\n<https://github.com/deleeuw/smacofManual/blob/main/smacofPO(power)/smacofPO.pdf>),\nsparsified (power) MDS and sparsified multidimensional (power)\ndistance analysis aka extended curvilinear (power) component\nanalysis and extended curvilinear (power) distance analysis\n(Rusch, 2025, <doi.org/10.1002/sta4.70086>). Some functions are\nsuitably flexible to allow any other sensible combination of\nexplicit power transformations for weights, distances and input\nproximities with implicit ratio, interval, splines or nonmetric\noptimal scaling of the input proximities. Most functions use a\nMajorization-Minimization algorithm. Currently the methods are\nonly available for one-mode two-way data (symmetric\ndissimilarity matrices).",
-    "version": "1.26-0",
-    "maintainer": "Thomas Rusch <thomas.rusch@wu.ac.at>",
-    "url": "https://r-forge.r-project.org/projects/stops/",
-    "exports": [
-      ["alignplot"],
-      ["alscal"],
-      ["apostmds"],
-      ["apowerstressMin"],
-      ["apstressmds"],
-      ["apstressMin"],
-      ["apStressMin"],
-      ["bcmds"],
-      ["bcsdistance"],
-      ["clca"],
-      ["clda"],
-      ["cmdscale"],
-      ["conf_adjust"],
-      ["eclca"],
-      ["eCLCA"],
-      ["eclda"],
-      ["eCLDA"],
-      ["eclpca"],
-      ["eCLPCA"],
-      ["eclpda"],
-      ["eCLPDA"],
-      ["elscal"],
-      ["icExploreGen"],
-      ["lmds"],
-      ["multiscale"],
-      ["multistart"],
-      ["opmds"],
-      ["postmds"],
-      ["powerStressFast"],
-      ["powerstressMin"],
-      ["powerStressMin"],
-      ["pstressmds"],
-      ["pstressMin"],
-      ["pStressMin"],
-      ["rpostmds"],
-      ["rpowerstressMin"],
-      ["rpowerStressMin"],
-      ["rpstressmds"],
-      ["rpstressMin"],
-      ["rpStressMin"],
-      ["rstress"],
-      ["rstressmds"],
-      ["rstressMin"],
-      ["rStressMin"],
-      ["sammon"],
-      ["sammonmap"],
-      ["smdda"],
-      ["smds"],
-      ["so_eclca"],
-      ["so_eCLCA"],
-      ["so_eclda"],
-      ["so_eCLDA"],
-      ["so_eclpca"],
-      ["so_eCLPCA"],
-      ["so_eclpda"],
-      ["so_eCLPDA"],
-      ["so_smdda"],
-      ["so_smds"],
-      ["so_spmdda"],
-      ["so_spmds"],
-      ["spmdda"],
-      ["spmds"],
-      ["spp"]
-    ],
-    "topics": [],
-    "score": 3.3802,
-    "stars": 1
-  },
-  {
-    "id": 18132,
+    "id": 18177,
     "package_name": "loa",
     "title": "Lattice Options and Add-Ins",
     "description": "Various plots and functions that make use of the\nlattice/trellis plotting framework. The plots, which include\nloaPlot(), loaMapPlot() and trianglePlot(), and use panelPal(),\na function that extends 'lattice' and 'hexbin' package methods\nto automate plot subscript and panel-to-panel and panel-to-key\nsynchronization/management.",
@@ -6370,7 +6336,7 @@
     "stars": 0
   },
   {
-    "id": 10651,
+    "id": 10670,
     "package_name": "cardidates",
     "title": "Identification of Cardinal Dates in Ecological Time Series",
     "description": "Identification of cardinal dates (begin, time of maximum,\nend of mass developments) in ecological time series using\nfitted Weibull functions.",
@@ -6395,7 +6361,7 @@
     "stars": 0
   },
   {
-    "id": 12837,
+    "id": 12863,
     "package_name": "distrTEst",
     "title": "Estimation and Testing Classes Based on Package 'distr'",
     "description": "Evaluation (S4-)classes based on package distr for\nevaluating procedures (estimators/tests) at data/simulation in\na unified way.",
@@ -6426,7 +6392,7 @@
     "stars": 0
   },
   {
-    "id": 12838,
+    "id": 12864,
     "package_name": "distrTeach",
     "title": "Extensions of Package 'distr' for Teaching\nStochastics/Statistics in Secondary School",
     "description": "Provides flexible examples of LLN and CLT for teaching\npurposes in secondary school.",
@@ -6444,7 +6410,7 @@
     "stars": 0
   },
   {
-    "id": 25398,
+    "id": 25474,
     "package_name": "sirad",
     "title": "Functions for Calculating Daily Solar Radiation and\nEvapotranspiration",
     "description": "Calculating daily global solar radiation at horizontal\nsurface using several well-known models (i.e.\nAngstrom-Prescott, Supit-Van Kappel, Hargreaves, Bristow and\nCampbell, and Mahmood-Hubbard), and model calibration based on\nground-truth data, and (3) model auto-calibration. The FAO\nPenmann-Monteith equation to calculate evapotranspiration is\nalso included.",
@@ -6483,7 +6449,7 @@
     "stars": 0
   },
   {
-    "id": 6944,
+    "id": 6955,
     "package_name": "RobExtremes",
     "title": "Optimally Robust Estimation for Extreme Value Distributions",
     "description": "Optimally robust estimation for extreme value\ndistributions using S4 classes and methods (based on packages\n'distr', 'distrEx', 'distrMod', 'RobAStBase', and 'ROptEst');\nthe underlying theoretic results can be found in Ruckdeschel\nand Horbenko, (2013 and 2012),\n\\doi{10.1080/02331888.2011.628022} and\n\\doi{10.1007/s00184-011-0366-4}.",
@@ -6566,11 +6532,11 @@
       ["WeibullFamily"]
     ],
     "topics": [],
-    "score": 3.1818,
+    "score": 3.1931,
     "stars": 0
   },
   {
-    "id": 9422,
+    "id": 9439,
     "package_name": "aspect",
     "title": "A General Framework for Multivariate Analysis with Optimal\nScaling",
     "description": "Contains various functions for optimal scaling. One\nfunction performs optimal scaling by maximizing an aspect (i.e.\na target function such as the sum of eigenvalues, sum of\nsquared correlations, squared multiple correlations, etc.) of\nthe corresponding correlation matrix. Another function performs\nimplements the LINEALS approach for optimal scaling by\nminimization of an aspect based on pairwise correlations and\ncorrelation ratios. The resulting correlation matrix and\ncategory scores can be used for further multivariate methods\nsuch as structural equation models.",
@@ -6586,7 +6552,7 @@
     "stars": 0
   },
   {
-    "id": 1849,
+    "id": 1853,
     "package_name": "DPQmpfr",
     "title": "DPQ (Density, Probability, Quantile) Distribution Computations\nusing MPFR",
     "description": "An extension to the 'DPQ' package with computations for\n'DPQ' (Density (pdf), Probability (cdf) and Quantile)\nfunctions, where the functions here partly use the 'Rmpfr'\npackage and hence the underlying 'MPFR' and 'GMP' C libraries.",
@@ -6621,7 +6587,20 @@
     "stars": 0
   },
   {
-    "id": 11711,
+    "id": 5991,
+    "package_name": "QSARdata",
+    "title": "Quantitative Structure Activity Relationship (QSAR) Data Sets",
+    "description": "Molecular descriptors and outcomes for several public\ndomain data sets",
+    "version": "1.02",
+    "maintainer": "Max Kuhn <mxkuhn@gmail.com>",
+    "url": "http://qsardata.r-forge.r-project.org/",
+    "exports": [],
+    "topics": [],
+    "score": 3.1019,
+    "stars": 0
+  },
+  {
+    "id": 11734,
     "package_name": "copulaData",
     "title": "Data Sets for Copula Modeling",
     "description": "Data sets used for copula modeling in addition to those in\nthe R package 'copula'.  These include a random subsample from\nthe US National Education Longitudinal Study (NELS) of 1988 and\nnursing home data from Wisconsin.",
@@ -6634,7 +6613,7 @@
     "stars": 0
   },
   {
-    "id": 6943,
+    "id": 6954,
     "package_name": "RobAStRDA",
     "title": "Interpolation Grids for Packages of the 'RobASt' - Family of\nPackages",
     "description": "Includes 'sysdata.rda' file for packages of the 'RobASt' -\nfamily of packages; is currently used by package 'RobExtremes'\nonly.",
@@ -6647,20 +6626,7 @@
     "stars": 0
   },
   {
-    "id": 5979,
-    "package_name": "QSARdata",
-    "title": "Quantitative Structure Activity Relationship (QSAR) Data Sets",
-    "description": "Molecular descriptors and outcomes for several public\ndomain data sets",
-    "version": "1.02",
-    "maintainer": "Max Kuhn <mxkuhn@gmail.com>",
-    "url": "http://qsardata.r-forge.r-project.org/",
-    "exports": [],
-    "topics": [],
-    "score": 3.0412,
-    "stars": 0
-  },
-  {
-    "id": 19578,
+    "id": 19626,
     "package_name": "mpm",
     "title": "Multivariate Projection Methods",
     "description": "Exploratory graphical analysis of multivariate data,\nspecifically gene expression data with different projection\nmethods: principal component analysis, correspondence analysis,\nspectral map analysis.",
@@ -6681,7 +6647,7 @@
     "stars": 0
   },
   {
-    "id": 25315,
+    "id": 25391,
     "package_name": "simest",
     "title": "Constrained Single Index Model Estimation",
     "description": "Estimation of function and index vector in single index\nmodel ('sim') with (and w/o) shape constraints including\ndifferent smoothness conditions. See, e.g., Kuchibhotla and\nPatra (2020) <doi:10.3150/19-BEJ1183>.",
@@ -6726,7 +6692,7 @@
     "stars": 0
   },
   {
-    "id": 21774,
+    "id": 21834,
     "package_name": "plugdensity",
     "title": "Plug-in Kernel Density Estimation",
     "description": "Kernel density estimation with global bandwidth selection\nvia \"plug-in\".",
@@ -6742,7 +6708,7 @@
     "stars": 0
   },
   {
-    "id": 12835,
+    "id": 12861,
     "package_name": "distrRmetrics",
     "title": "Distribution Classes for Distributions from Rmetrics",
     "description": "S4-distribution classes based on package distr for\ndistributions from packages 'fBasics' and 'fGarch'.",
@@ -6767,7 +6733,7 @@
     "stars": 0
   },
   {
-    "id": 16035,
+    "id": 16072,
     "package_name": "gridGraphviz",
     "title": "Drawing Graphs with 'grid'",
     "description": "Functions for drawing node-and-edge graphs that have been\nlaid out by 'graphviz'.  This provides an alternative rendering\nto that provided by the 'Rgraphviz' package, with two main\nadvantages: the rendering provided by 'gridGraphviz' should be\nmore similar to what 'graphviz' itself would draw; and\nrendering with 'grid' allows for post-hoc customisations using\nthe named viewports and grobs that 'gridGraphviz' produces.",
@@ -6785,7 +6751,7 @@
     "stars": 0
   },
   {
-    "id": 19729,
+    "id": 19777,
     "package_name": "multiColl",
     "title": "Collinearity Detection in a Multiple Linear Regression Model",
     "description": "The detection of worrying approximate collinearity in a\nmultiple linear regression model is a problem addressed in all\nexisting statistical packages. However, we have detected\ndeficits regarding to the incorrect treatment of qualitative\nindependent variables and the role of the intercept of the\nmodel. The objective of this package is to correct these\ndeficits. In this package will be available detection and\ntreatment techniques traditionally used as the recently\ndeveloped. D.A. Belsley (1982)\n<doi:10.1016/0304-4076(82)90020-3>. D. A. Belsley (1991, ISBN:\n978-0471528890). C. Garcia, R. Salmeron and C.B. Garcia (2019)\n<doi:10.1080/00949655.2018.1543423>. R. Salmeron, C.B. Garcia\nand J. Garcia (2018) <doi:10.1080/00949655.2018.1463376>. G.W.\nStewart (1987) <doi:10.1214/ss/1177013444>.",
@@ -6813,7 +6779,25 @@
     "stars": 0
   },
   {
-    "id": 11747,
+    "id": 9184,
+    "package_name": "anacor",
+    "title": "Simple and Canonical Correspondence Analysis",
+    "description": "Performs simple and canonical CA (covariates on\nrows/columns) on a two-way frequency table (with missings) by\nmeans of SVD. Different scaling methods (standard, centroid,\nBenzecri, Goodman) as well as various plots including\nconfidence ellipsoids are provided.",
+    "version": "1.1-5",
+    "maintainer": "Patrick Mair <mair@fas.harvard.edu>",
+    "url": "https://r-forge.r-project.org/projects/psychor/",
+    "exports": [
+      ["anacor"],
+      ["burtTable"],
+      ["expandFrame"],
+      ["mkIndiList"]
+    ],
+    "topics": [],
+    "score": 2.7324,
+    "stars": 0
+  },
+  {
+    "id": 11770,
     "package_name": "corpora",
     "title": "Statistics and Data Sets for Corpus Frequency Data",
     "description": "Utility functions for the statistical analysis of corpus\nfrequency data. This package is a companion to the open-source\ncourse \"Statistical Inference: A Gentle Introduction for\nComputational Linguists and Similar Creatures\" ('SIGIL').",
@@ -6844,29 +6828,11 @@
       ["z.score.pval"]
     ],
     "topics": [],
-    "score": 2.7243,
+    "score": 2.7324,
     "stars": 0
   },
   {
-    "id": 9168,
-    "package_name": "anacor",
-    "title": "Simple and Canonical Correspondence Analysis",
-    "description": "Performs simple and canonical CA (covariates on\nrows/columns) on a two-way frequency table (with missings) by\nmeans of SVD. Different scaling methods (standard, centroid,\nBenzecri, Goodman) as well as various plots including\nconfidence ellipsoids are provided.",
-    "version": "1.1-5",
-    "maintainer": "Patrick Mair <mair@fas.harvard.edu>",
-    "url": "https://r-forge.r-project.org/projects/psychor/",
-    "exports": [
-      ["anacor"],
-      ["burtTable"],
-      ["expandFrame"],
-      ["mkIndiList"]
-    ],
-    "topics": [],
-    "score": 2.716,
-    "stars": 0
-  },
-  {
-    "id": 6386,
+    "id": 6398,
     "package_name": "ROI.models.miplib",
     "title": "'ROI' Access to 'MIPLIB' 2010 Benchmark Instances",
     "description": "The mixed integer programming library 'MIPLIB' (see\n<http://miplib.zib.de/>) is commonly used to compare the\nperformance of mixed integer optimization solvers. This package\nprovides functions to access 'MIPLIB' from the 'R' Optimization\nInfrastructure ('ROI'). More information about 'MIPLIB' can be\nfound in the paper by Koch et al. available at\n<http://mpc.zib.de/index.php/MPC/article/viewFile/56/28>. The\n'README.md' file illustrates how to use this package.",
@@ -6884,7 +6850,7 @@
     "stars": 0
   },
   {
-    "id": 21360,
+    "id": 21415,
     "package_name": "pems.utils",
     "title": "Portable Emissions (and Other Mobile) Measurement System\nUtilities",
     "description": "Utility functions for the handling, analysis and\nvisualisation of data from portable emissions measurement\nsystems ('PEMS') and other similar mobile activity monitoring\ndevices. The package includes a dedicated 'pems' data class\nthat manages many of the quality control, unit handling and\ndata archiving issues that can hinder efforts to standardise\n'PEMS' research.",
@@ -7027,7 +6993,7 @@
     "stars": 0
   },
   {
-    "id": 6396,
+    "id": 6408,
     "package_name": "ROI.plugin.ipop",
     "title": "'ipop' Plug-in for the 'R' Optimization Interface",
     "description": "Enhances the 'R' Optimization Infrastructure ('ROI')\npackage by registering the 'ipop' solver from package\n'kernlab'.",
@@ -7040,7 +7006,7 @@
     "stars": 0
   },
   {
-    "id": 6391,
+    "id": 6403,
     "package_name": "ROI.plugin.cplex",
     "title": "",
     "description": "",
@@ -7053,7 +7019,7 @@
     "stars": 0
   },
   {
-    "id": 6668,
+    "id": 6680,
     "package_name": "Rcplex",
     "title": "",
     "description": "",
@@ -7066,7 +7032,7 @@
     "stars": 0
   },
   {
-    "id": 7055,
+    "id": 7067,
     "package_name": "Rwave",
     "title": "",
     "description": "",
@@ -7079,12 +7045,25 @@
     "stars": 0
   },
   {
-    "id": 19855,
+    "id": 19903,
     "package_name": "mutossGUI",
     "title": "",
     "description": "",
     "version": "",
     "maintainer": "Kornelius Rohmeyer <rohmeyer@small-projects.de>",
+    "url": "",
+    "exports": [],
+    "topics": [],
+    "score": "NA",
+    "stars": 0
+  },
+  {
+    "id": 21754,
+    "package_name": "plasma",
+    "title": "",
+    "description": "",
+    "version": "",
+    "maintainer": "Kevin R. Coombes <krc@silicovore.com>",
     "url": "",
     "exports": [],
     "topics": [],

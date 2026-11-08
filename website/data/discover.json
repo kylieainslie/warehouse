@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T08:51:24Z",
+  "updated": "2026-11-08T08:44:44Z",
   "hidden_gems": [
     {
       "name": "unmarked",
@@ -28,6 +28,20 @@
       "maintainer": "Susanna Marquez",
       "url": "https://immcantation.r-universe.dev/alakazam",
       "user": "immcantation"
+    },
+    {
+      "name": "variancePartition",
+      "title": "Quantify and interpret drivers of variation in multilevel gene\nexpression experiments",
+      "description": "Quantify and interpret multiple sources of biological and\ntechnical variation in gene expression experiments. Uses a\nlinear mixed model to quantify variation in gene expression\nattributable to individ",
+      "version": "1.43.2",
+      "stars": 17,
+      "score": 12.8706,
+      "usedby": 7,
+      "published": "",
+      "created": "",
+      "maintainer": "Gabriel E. Hoffman",
+      "url": "https://bioc.r-universe.dev/variancePartition",
+      "user": "bioc"
     },
     {
       "name": "heplots",
@@ -89,9 +103,9 @@
       "name": "CDMConnector",
       "title": "Connect to an OMOP Common Data Model",
       "description": "Provides tools for working with observational health data\nin the Observational Medical Outcomes Partnership (OMOP) Common\nData Model format with a pipe friendly syntax. Common data\nmodel database tabl",
-      "version": "2.8.0",
+      "version": "2.8.1",
       "stars": 17,
-      "score": 11.6221,
+      "score": 11.7326,
       "usedby": 9,
       "published": "",
       "created": "",
@@ -156,18 +170,18 @@
       "user": "keaven"
     },
     {
-      "name": "phylobase",
-      "title": "Base Package for Phylogenetic Structures and Comparative Data",
-      "description": "Provides a base S4 class for comparative methods,\nincorporating one or more trees and trait data.",
-      "version": "0.8.12",
-      "stars": 20,
-      "score": 11.6278,
-      "usedby": 18,
+      "name": "msa",
+      "title": "Multiple Sequence Alignment",
+      "description": "The 'msa' package provides a unified R/Bioconductor\ninterface to the multiple sequence alignment algorithms\nClustalW, ClustalOmega, and Muscle. All three algorithms are\nintegrated in the package, ther",
+      "version": "1.45.6",
+      "stars": 26,
+      "score": 12.1933,
+      "usedby": 8,
       "published": "",
       "created": "",
-      "maintainer": "Francois Michonneau",
-      "url": "https://fmichonneau.r-universe.dev/phylobase",
-      "user": "fmichonneau"
+      "maintainer": "Ulrich Bodenhofer",
+      "url": "https://bioc.r-universe.dev/msa",
+      "user": "bioc"
     },
     {
       "name": "imager",
@@ -184,26 +198,12 @@
       "user": "asgr"
     },
     {
-      "name": "msa",
-      "title": "Multiple Sequence Alignment",
-      "description": "The 'msa' package provides a unified R/Bioconductor\ninterface to the multiple sequence alignment algorithms\nClustalW, ClustalOmega, and Muscle. All three algorithms are\nintegrated in the package, ther",
-      "version": "1.45.6",
-      "stars": 26,
-      "score": 12.1516,
-      "usedby": 8,
-      "published": "",
-      "created": "",
-      "maintainer": "Ulrich Bodenhofer",
-      "url": "https://bioc.r-universe.dev/msa",
-      "user": "bioc"
-    },
-    {
       "name": "bsseq",
       "title": "Analyze, manage and store whole-genome methylation data",
       "description": "A collection of tools for analyzing and visualizing\nwhole-genome methylation data from sequencing. This includes\nwhole-genome bisulfite sequencing and Oxford nanopore data.",
       "version": "1.49.2",
       "stars": 38,
-      "score": 13.1022,
+      "score": 13.1307,
       "usedby": 23,
       "published": "",
       "created": "",
@@ -212,18 +212,18 @@
       "user": "bioc"
     },
     {
-      "name": "np",
-      "title": "Nonparametric Kernel Smoothing Methods for Mixed Data Types",
-      "description": "Nonparametric (and semiparametric) kernel methods that\nseamlessly handle a mix of continuous, unordered, and ordered\nfactor data types. We would like to gratefully acknowledge\nsupport from the Natural",
-      "version": "0.80-1",
-      "stars": 54,
-      "score": 14.0654,
-      "usedby": 50,
+      "name": "scran",
+      "title": "Methods for Single-Cell RNA-Seq Data Analysis",
+      "description": "Implements miscellaneous functions for interpretation of\nsingle-cell RNA-seq data. Methods are provided for assignment\nof cell cycle phase, detection of highly variable and\nsignificantly correlated ge",
+      "version": "1.41.1",
+      "stars": 48,
+      "score": 13.7358,
+      "usedby": 45,
       "published": "",
       "created": "",
-      "maintainer": "Jeffrey S. Racine",
-      "url": "https://jeffreyracine.r-universe.dev/np",
-      "user": "jeffreyracine"
+      "maintainer": "Aaron Lun",
+      "url": "https://bioc.r-universe.dev/scran",
+      "user": "bioc"
     },
     {
       "name": "mets",
@@ -240,46 +240,46 @@
       "user": "kkholst"
     },
     {
-      "name": "GEOquery",
-      "title": "Get data from NCBI Gene Expression Omnibus (GEO)",
-      "description": "The NCBI Gene Expression Omnibus (GEO) is a public\nrepository of high-throughput functional genomics data,\nincluding microarray, RNA-seq, and single-cell experiments.\nGEOquery is the bridge between GE",
-      "version": "2.81.36",
-      "stars": 119,
-      "score": 16.34,
-      "usedby": 78,
+      "name": "np",
+      "title": "Nonparametric Kernel Smoothing Methods for Mixed Data Types",
+      "description": "Nonparametric (and semiparametric) kernel methods that\nseamlessly handle a mix of continuous, unordered, and ordered\nfactor data types. We would like to gratefully acknowledge\nsupport from the Natural",
+      "version": "0.80-2",
+      "stars": 54,
+      "score": 14.0284,
+      "usedby": 50,
       "published": "",
       "created": "",
-      "maintainer": "Sean Davis",
-      "url": "https://bioc.r-universe.dev/GEOquery",
-      "user": "bioc"
+      "maintainer": "Jeffrey S. Racine",
+      "url": "https://jeffreyracine.r-universe.dev/np",
+      "user": "jeffreyracine"
     },
     {
-      "name": "regioneR",
-      "title": "Association analysis of genomic regions based on permutation\ntests",
-      "description": "regioneR offers a statistical framework based on\ncustomizable permutation tests to assess the association\nbetween genomic region sets and other genomic features.",
-      "version": "1.45.2",
-      "stars": 16,
-      "score": 11.6204,
+      "name": "VIM",
+      "title": "Visualization and Imputation of Missing Values",
+      "description": "Provides methods for imputation and visualization of\nmissing values. It includes graphical tools to explore the\namount, structure and patterns of missing and/or imputed\nvalues, supporting exploratory ",
+      "version": "7.5.1",
+      "stars": 93,
+      "score": 15.5833,
       "usedby": 22,
       "published": "",
       "created": "",
-      "maintainer": "Bernat Gel",
-      "url": "https://bioc.r-universe.dev/regioneR",
-      "user": "bioc"
+      "maintainer": "Matthias Templ",
+      "url": "https://statistikat.r-universe.dev/VIM",
+      "user": "statistikat"
     },
     {
-      "name": "riskRegression",
-      "title": "Risk Regression Models and Prediction Scores for Survival\nAnalysis with Competing Risks",
-      "description": "Implementation of the following methods for event history\nanalysis. Risk regression models for survival endpoints also in\nthe presence of competing risks are fitted using binomial\nregression based on ",
-      "version": "2026.10.06",
-      "stars": 57,
-      "score": 14.0762,
-      "usedby": 53,
+      "name": "phylobase",
+      "title": "Base Package for Phylogenetic Structures and Comparative Data",
+      "description": "Provides a base S4 class for comparative methods,\nincorporating one or more trees and trait data.",
+      "version": "0.8.12",
+      "stars": 20,
+      "score": 11.42,
+      "usedby": 18,
       "published": "",
       "created": "",
-      "maintainer": "Thomas Alexander Gerds",
-      "url": "https://tagteam.r-universe.dev/riskRegression",
-      "user": "tagteam"
+      "maintainer": "Francois Michonneau",
+      "url": "https://fmichonneau.r-universe.dev/phylobase",
+      "user": "fmichonneau"
     }
   ]
 }
