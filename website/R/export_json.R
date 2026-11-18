@@ -10,12 +10,30 @@ library(dplyr)
 DB_PATH        <- file.path(getwd(), "data", "warehouse.sqlite")
 JSON_PATH      <- file.path(getwd(), "data", "packages.json")
 AUTO_TAGS_PATH <- file.path(getwd(), "data", "auto-tags.json")
+SIGNALS_PATH   <- file.path(getwd(), "data", "signals.json")
 
 #' Load auto-generated tags from auto-tags.json
 #' Returns a named list: package_name -> character vector of tags
 load_auto_tags <- function(path = AUTO_TAGS_PATH) {
   if (!file.exists(path)) return(list())
   tryCatch(as.list(fromJSON(path)), error = function(e) list())
+}
+
+#' Load maintenance/usage signals from signals.json (written by fetch_signals.R)
+#' Returns a named list: package_name -> list(cran_version, published, downloads, revdeps)
+load_signals <- function(path = SIGNALS_PATH) {
+  if (!file.exists(path)) return(list())
+  signals <- tryCatch(fromJSON(path, simplifyVector = FALSE)$packages,
+                      error = function(e) NULL)
+  if (is.null(signals)) list() else signals
+}
+
+#' Append a package's signals (last release, downloads, reverse deps) to its
+#' exported entry. Fields are omitted when unknown rather than written as null.
+add_signals <- function(entry, signals) {
+  sig <- signals[[entry$package_name]]
+  if (is.null(sig)) return(entry)
+  c(entry, sig[intersect(c("cran_version", "published", "downloads", "revdeps"), names(sig))])
 }
 
 #' Export packages to JSON for client-side search index
@@ -27,6 +45,7 @@ export_search_index <- function(db_path = DB_PATH, json_path = JSON_PATH) {
 
   message("Exporting packages to JSON...")
   auto_tags <- load_auto_tags()
+  signals   <- load_signals()
 
   # Get all packages
   packages <- dbGetQuery(con, "
@@ -97,7 +116,7 @@ export_search_index <- function(db_path = DB_PATH, json_path = JSON_PATH) {
       primary_category = row$primary_category %||% "",
       source_universe = row$source_universe %||% "",
       search_text = search_text
-    )
+    ) |> add_signals(signals)
   })
 
   # Create the search index structure
@@ -138,6 +157,7 @@ export_category_json <- function(db_path = DB_PATH,
   ")
 
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+  signals <- load_signals()
 
   for (cat in categories$primary_category) {
     packages <- dbGetQuery(con, "
@@ -168,7 +188,7 @@ export_category_json <- function(db_path = DB_PATH,
         topics = if (is.character(topics)) topics else character(0),
         score = row$score,
         stars = row$stars %||% 0
-      )
+      ) |> add_signals(signals)
     })
 
     json_path <- file.path(output_dir, sprintf("%s.json", cat))
@@ -255,6 +275,7 @@ export_lightweight_index <- function(db_path = DB_PATH,
 
   message("Exporting lightweight search index...")
   auto_tags <- load_auto_tags()
+  signals   <- load_signals()
 
   # Get packages with only essential fields
 
@@ -321,7 +342,7 @@ export_lightweight_index <- function(db_path = DB_PATH,
       stars = row$stars %||% 0,
       primary_category = row$primary_category %||% "",
       source_universe = row$source_universe %||% ""
-    )
+    ) |> add_signals(signals)
   })
 
   # Create the search index structure

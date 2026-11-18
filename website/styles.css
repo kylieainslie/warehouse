@@ -2680,3 +2680,8 @@ tr:hover {
     max-width: 55px;
   }
 }
+
+/* Package card flagged as having no recent CRAN release */
+.meta-stale {
+  color: #b45309;
+}

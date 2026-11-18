@@ -21,7 +21,8 @@ test_results <- test_dir(
 # Print summary
 results_df <- as.data.frame(test_results)
 total_pass <- sum(results_df$passed)
-total_fail <- sum(results_df$failed)
+# Errors (tests that crashed) are counted separately from failed expectations
+total_fail <- sum(results_df$failed) + sum(results_df$error)
 total_skip <- sum(results_df$skipped)
 total_warn <- sum(results_df$warning)
 
@@ -30,6 +31,6 @@ cat(sprintf("Test Summary: %d passed, %d failed, %d skipped, %d warnings\n",
             total_pass, total_fail, total_skip, total_warn))
 
 # Exit with appropriate code
-if (any(as.data.frame(test_results)$failed > 0)) {
+if (total_fail > 0) {
   quit(status = 1)
 }

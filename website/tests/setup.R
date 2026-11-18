@@ -18,6 +18,7 @@ suppressMessages({
   source("R/scrape_rweekly.R")
   source("R/scrape_packages.R")
   source("R/build_database.R")
+  source("R/fetch_signals.R")
 })
 
 # Path to fixtures directory

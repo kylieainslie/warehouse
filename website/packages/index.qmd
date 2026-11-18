@@ -32,6 +32,10 @@ format:
         .badge-stars { background: #fef3c7; color: #92400e; }
         .badge-version { background: #e0e7ff; color: #3730a3; }
         .badge-universe { background: #f3e8ff; color: #6b21a8; }
+        .badge-released { background: #f1f5f9; color: #334155; }
+        .badge-released.stale { background: #ffedd5; color: #9a3412; }
+        .badge-downloads { background: #ecfeff; color: #155e75; }
+        .badge-revdeps { background: #f0fdf4; color: #166534; }
 
         .pkg-actions { display: flex; gap: 0.75em; flex-wrap: wrap; margin: 1.5em 0; }
         .pkg-action-btn { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.6em 1em; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: all 0.2s; }
@@ -203,6 +207,12 @@ function renderStars(rating) {
   return stars;
 }
 
+// No CRAN release in over two years
+function isStale(dateStr) {
+  const date = new Date(dateStr);
+  return !isNaN(date) && (Date.now() - date) > 2 * 365 * 24 * 60 * 60 * 1000;
+}
+
 function getScoreClass(score) {
   if (score >= 70) return '';
   if (score >= 40) return 'medium';
@@ -279,6 +289,9 @@ function renderPackagePage(pkg, reviews) {
           ${pkg.score && pkg.score > 0 ? `<span class="pkg-badge badge-score ${getScoreClass(pkg.score)}">Score: ${pkg.score.toFixed(1)}</span>` : ''}
           ${pkg.stars ? `<span class="pkg-badge badge-stars">⭐ ${pkg.stars.toLocaleString()}</span>` : ''}
           ${pkg.version ? `<span class="pkg-badge badge-version">v${escapeHtml(pkg.version)}</span>` : ''}
+          ${pkg.published ? `<span class="pkg-badge badge-released${isStale(pkg.published) ? ' stale' : ''}" title="Last CRAN release">CRAN ${pkg.cran_version ? 'v' + escapeHtml(pkg.cran_version) + ' ' : ''}released ${escapeHtml(pkg.published)}</span>` : ''}
+          ${pkg.downloads ? `<span class="pkg-badge badge-downloads" title="CRAN downloads in the last month">${pkg.downloads.toLocaleString()} downloads/month</span>` : ''}
+          ${pkg.revdeps ? `<span class="pkg-badge badge-revdeps" title="CRAN packages that depend on this one">Used by ${pkg.revdeps.toLocaleString()} packages</span>` : ''}
           ${pkg.source_universe ? `<span class="pkg-badge badge-universe">${escapeHtml(pkg.source_universe)}</span>` : ''}
         </div>
       </div>
