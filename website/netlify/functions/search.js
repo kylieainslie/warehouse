@@ -5,6 +5,7 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const config = require('./config');
 const { rateLimitMiddleware } = require('./rate-limiter');
+const { withAuditLog } = require('./audit-log');
 
 // Cache for package data (loaded once per cold start)
 let packagesCache = null;
@@ -359,7 +360,7 @@ function getCorsOrigin(event) {
  * @param {Object} context - Netlify function context
  * @returns {Promise<Object>} HTTP response with matched packages
  */
-exports.handler = async function(event, context) {
+exports.handler = withAuditLog('search', async function(event, context) {
   // CORS headers
   const headers = {
     'Content-Type': 'application/json',
@@ -433,8 +434,6 @@ exports.handler = async function(event, context) {
         })
       };
     }
-
-    console.log(`Processing search query: "${query.trim()}"`);
 
     // Check for exact package name match BEFORE calling Claude API
     // This saves API tokens for direct package lookups like "ggplot2" or "dplyr"
@@ -583,7 +582,7 @@ exports.handler = async function(event, context) {
       })
     };
   }
-};
+});
 
 // Export helper functions and constants for testing
 module.exports.tokenize = tokenize;
