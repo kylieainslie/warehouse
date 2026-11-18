@@ -154,70 +154,70 @@ insert_packages <- function(packages_df, db_path = DB_PATH) {
       })
     )
 
-  dbExecute(con, "BEGIN TRANSACTION")
-
   inserted <- 0
   updated <- 0
 
-  for (i in seq_len(nrow(packages_db))) {
-    row <- packages_db[i, ]
+  # Rolls back if any insert/update fails, so the database is never half-written
+  dbWithTransaction(con, {
+    for (i in seq_len(nrow(packages_db))) {
+      row <- packages_db[i, ]
 
-    # Check if package exists
-    existing <- dbGetQuery(con, "SELECT id FROM packages WHERE package_name = ?",
-                          params = list(row$package_name))
+      # Check if package exists
+      existing <- dbGetQuery(con, "SELECT id FROM packages WHERE package_name = ?",
+                            params = list(row$package_name))
 
-    if (nrow(existing) == 0) {
-      # Insert new package
-      dbExecute(con, "
-        INSERT INTO packages (
-          package_name, title, description, version, maintainer, author,
-          license, url, bug_reports, repository, exports, topics, dependencies,
-          score, stars, registered, source_universe, primary_category, scraped_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      ", list(
-        row$package_name, row$title, row$description, row$version,
-        row$maintainer, row$author, row$license, row$url, row$bug_reports,
-        row$repository, row$exports, row$topics, row$dependencies,
-        row$score, row$stars, row$registered, row$source_universe,
-        row$primary_category, as.character(row$scraped_at)
-      ))
-      inserted <- inserted + 1
-    } else {
-      # Update existing package (preserve feedback by not touching that table)
-      dbExecute(con, "
-        UPDATE packages SET
-          title = ?,
-          description = ?,
-          version = ?,
-          maintainer = ?,
-          author = ?,
-          license = ?,
-          url = ?,
-          bug_reports = ?,
-          repository = ?,
-          exports = ?,
-          topics = ?,
-          dependencies = ?,
-          score = ?,
-          stars = ?,
-          registered = ?,
-          source_universe = ?,
-          primary_category = ?,
-          scraped_at = ?,
-          updated_at = CURRENT_TIMESTAMP
-        WHERE package_name = ?
-      ", list(
-        row$title, row$description, row$version, row$maintainer, row$author,
-        row$license, row$url, row$bug_reports, row$repository,
-        row$exports, row$topics, row$dependencies, row$score, row$stars,
-        row$registered, row$source_universe, row$primary_category,
-        as.character(row$scraped_at), row$package_name
-      ))
-      updated <- updated + 1
+      if (nrow(existing) == 0) {
+        # Insert new package
+        dbExecute(con, "
+          INSERT INTO packages (
+            package_name, title, description, version, maintainer, author,
+            license, url, bug_reports, repository, exports, topics, dependencies,
+            score, stars, registered, source_universe, primary_category, scraped_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ", list(
+          row$package_name, row$title, row$description, row$version,
+          row$maintainer, row$author, row$license, row$url, row$bug_reports,
+          row$repository, row$exports, row$topics, row$dependencies,
+          row$score, row$stars, row$registered, row$source_universe,
+          row$primary_category, as.character(row$scraped_at)
+        ))
+        inserted <- inserted + 1
+      } else {
+        # Update existing package (preserve feedback by not touching that table)
+        dbExecute(con, "
+          UPDATE packages SET
+            title = ?,
+            description = ?,
+            version = ?,
+            maintainer = ?,
+            author = ?,
+            license = ?,
+            url = ?,
+            bug_reports = ?,
+            repository = ?,
+            exports = ?,
+            topics = ?,
+            dependencies = ?,
+            score = ?,
+            stars = ?,
+            registered = ?,
+            source_universe = ?,
+            primary_category = ?,
+            scraped_at = ?,
+            updated_at = CURRENT_TIMESTAMP
+          WHERE package_name = ?
+        ", list(
+          row$title, row$description, row$version, row$maintainer, row$author,
+          row$license, row$url, row$bug_reports, row$repository,
+          row$exports, row$topics, row$dependencies, row$score, row$stars,
+          row$registered, row$source_universe, row$primary_category,
+          as.character(row$scraped_at), row$package_name
+        ))
+        updated <- updated + 1
+      }
     }
-  }
 
-  dbExecute(con, "COMMIT")
+  })
 
   message(sprintf("Inserted %d new packages, updated %d existing packages", inserted, updated))
   invisible(list(inserted = inserted, updated = updated))
